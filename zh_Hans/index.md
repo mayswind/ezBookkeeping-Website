@@ -1,8 +1,29 @@
+---
+layout: default
+title: 简体中文
+nav_order: 2
+has_children: true
+has_toc: false
+permalink: /zh_Hans
+---
+
+# ezBookkeeping
+{: .no_toc }
+
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/mayswind/ezbookkeeping/blob/master/LICENSE)
 [![Latest Build](https://img.shields.io/github/workflow/status/mayswind/ezbookkeeping/Docker%20Release?style=flat)](https://github.com/mayswind/ezbookkeeping/actions)
 [![Go Report](https://goreportcard.com/badge/github.com/mayswind/ezbookkeeping)](https://goreportcard.com/report/github.com/mayswind/ezbookkeeping)
 [![Latest Docker Image Size](https://img.shields.io/docker/image-size/mayswind/ezbookkeeping.svg?style=flat)](https://hub.docker.com/r/mayswind/ezbookkeeping)
 [![Latest Release](https://img.shields.io/github/release/mayswind/ezbookkeeping.svg?style=flat)](https://github.com/mayswind/ezbookkeeping/releases)
+
+<details open markdown="block">
+  <summary>
+    目录
+  </summary>
+  {: .text-delta }
+1. TOC
+{:toc}
+</details>
 
 ## 介绍
 ezBookkeeping 是一个自托管 (self-hosted) 的轻量个人账本应用。它可以部署在几乎所有平台上，包括 x86、x64 以及 ARM 架构的 Windows、macOS 和 Linux。您甚至可以将它部署在树莓派 (Raspberry) 设备中。此外，它支持多种不同数据库，包括 Sqlite 和 Mysql 等。借助 Docker，您甚至只需要一条命令即可将其部署，而无需复杂的配置。
@@ -63,10 +84,6 @@ ezBookkeeping 默认将会监听 8080 端口。您可以访问 http://{YOUR_HOST
     $ ./build.sh docker
 
 关于安装 ezBookkeeping 的更多信息，您可以访问我们的文档。
-
-## 文档
-1. [English](/)
-1. [简体中文 (Simplified Chinese)](/zh_Hans)
 
 ## 协议
 [MIT](https://github.com/mayswind/ezbookkeeping/blob/master/LICENSE)
