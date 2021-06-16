@@ -45,15 +45,13 @@ ezBookkeeping 是一个自托管 (self-hosted) 的轻量个人账本应用。它
     $ docker run -p8080:8080 mayswind/ezbookkeeping:latest-snapshot
 
 ### 从二进制包安装
-
 最新发布版本: [https://github.com/mayswind/ezbookkeeping/releases](https://github.com/mayswind/ezbookkeeping/releases)
 
     $ ./ezbookkeeping server run
 
-ezBookkeeping 默认将会监听 8080 端口。您可以访问 http://<YOUR_HOST_ADDRESS>:8080/ 。
+ezBookkeeping 默认将会监听 8080 端口。您可以访问 http://{YOUR_HOST_ADDRESS}:8080/ 。
 
 ### 从源代码构建
-
 请确保您已经安装 [Golang](https://golang.org/), [GCC](http://gcc.gnu.org/), [Node.js](https://nodejs.org/) 和 [NPM](https://www.npmjs.com/)。然后下载源代码并执行以下步骤：
 
     $ ./build.sh package -f ezbookkeeping.tar.gz
@@ -65,6 +63,10 @@ ezBookkeeping 默认将会监听 8080 端口。您可以访问 http://<YOUR_HOST
     $ ./build.sh docker
 
 关于安装 ezBookkeeping 的更多信息，您可以访问我们的文档。
+
+## 文档
+1. [English](/)
+1. [简体中文 (Simplified Chinese)](/zh_Hans)
 
 ## 协议
 [MIT](https://github.com/mayswind/ezbookkeeping/blob/master/LICENSE)
