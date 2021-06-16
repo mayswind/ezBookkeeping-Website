@@ -34,7 +34,7 @@ ezBookkeeping is a lightweight personal bookkeeping app hosted by yourself. It c
     * Multiple database support (sqlite, mysql, etc.)
     * Multiple os & architecture support (Windows, macOS, Linux & x86, amd64, ARM)
 4. User-friendly interface
-    * Almost native app experience (for mobile device)
+    * Close to native app experience (for mobile device)
     * Two-level account & two-level category support
     * Plentiful preset categories
     * Searching & filtering history records
@@ -49,7 +49,7 @@ ezBookkeeping is a lightweight personal bookkeeping app hosted by yourself. It c
 
 ## Screenshots
 ### Mobile Device
-![ezBookkeeping](https://raw.githubusercontent.com/wiki/mayswind/ezbookkeeping/img/en.png)
+[![ezBookkeeping](https://raw.githubusercontent.com/wiki/mayswind/ezbookkeeping/img/en.png)](https://raw.githubusercontent.com/wiki/mayswind/ezbookkeeping/img/en.png)
 
 ## Installation
 ### Ship with docker
