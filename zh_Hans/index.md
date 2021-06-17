@@ -75,7 +75,7 @@ ezBookkeeping 默认将会监听 8080 端口。您可以访问 http://{YOUR_HOST
 ### 从源代码构建
 请确保您已经安装 [Golang](https://golang.org/), [GCC](http://gcc.gnu.org/), [Node.js](https://nodejs.org/) 和 [NPM](https://www.npmjs.com/)。然后下载源代码并执行以下步骤：
 
-    $ ./build.sh package -f ezbookkeeping.tar.gz
+    $ ./build.sh package -o ezbookkeeping.tar.gz
 
 所有的文件将被打包到 `ezbookkeeping.tar.gz`.
 
