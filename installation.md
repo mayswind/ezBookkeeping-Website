@@ -20,41 +20,72 @@ permalink: /installation
 ## Ship with docker
 Visit [Docker Hub](https://hub.docker.com/r/mayswind/ezbookkeeping) to see all images and tags.
 
-### Latest release image
+**Latest release image**
 
-> mayswind/ezbookkeeping:latest
+    mayswind/ezbookkeeping:latest
 
-### Release image with specific version
+**Release image with specific version**
 
-> mayswind/ezbookkeeping:{version}  
+    mayswind/ezbookkeeping:{version}  
 
-### Latest snapshot image
+**Latest snapshot image**
 
-> mayswind/ezbookkeeping:latest-snapshot
+    mayswind/ezbookkeeping:latest-snapshot
 
-### Run docker image via docker command line
+### Run docker image
 
 Example:
 
     $ docker run -d -p8080:8080 --name ezbookkeeping mayswind/ezbookkeeping
 
-After executing this command, ezBookkeeping will use the default configuration to run in backend, and listen on port 8080. The user id (UID) and group id (GID) used for running ezBookkeeping is both 1000, so you should make sure the directories ezBookkeeping use can be read or write by UID/GID 1000 when you want to change directories or mount volumes. 
+After executing this command, ezBookkeeping will use the default configuration to run in backend, and listen on port `8080`. 
 
-The default path in container:
+The default paths in container:
 
 * **Configuration File**: `/ezbookkeeping/conf/ezbookkeeping.ini`
-* **Data (for sqlite3 database)**: `/ezbookkeeping/data`
-* **Log**: `/ezbookkeeping/log`
+* **Database File (for `sqlite3`)**: `/ezbookkeeping/data/ezbookkeeping.db`
+* **Log File**: `/ezbookkeeping/log/ezbookkeeping.log`
+
+### Store data persistently
+
+The default database type is `sqlite3`, and the database file is stored in `/ezbookkeeping/data/ezbookkeeping.db` in container.
+If you want to continue to use `sqlite3` as database and store these data persistently, you can use docker persistent volume or mount a host path to container.
+
+#### Run container with persistent volume
+
+    # Create persistend volume
+    $ docker volume create ezbookkeeping-data
+
+    # Run container with persistent volume
+    $ docker run -d -p8080:8080 --name ezbookkeeping -v ezbookkeeping-data:/ezbookkeeping/data mayswind/ezbookkeeping
+
+#### Run container with mounting host path
+
+    # Create data directory and modify UID/GID in host
+    $ mkdir -p /var/lib/ezbookkeeping
+    $ chown 1000:1000 /var/lib/ezbookkeeping
+
+    # Run container with mounting host path
+    $ docker run -d -p8080:8080 --name ezbookkeeping -v /var/lib/ezbookkeeping:/ezbookkeeping/data mayswind/ezbookkeeping
+
+The user id (UID) and group id (GID) used for running ezBookkeeping is both `1000`, so you should make sure the directories ezBookkeeping use can be read or write by UID/GID `1000` when you want to change directories or mount volumes.
+
+### Customize configuration
 
 If you want to replace the configuration file, you can mount the custom configuration file to `/ezbookkeeping/conf/ezbookkeeping.ini`, or change the configuration path by environment variable `EBK_CONF_PATH`.
 
 If you just want to modify some options, you can just use environment variable to set these value.
+All options in the configuration file can be overridden using environment variables with the following name:
+`EBK_{SECTION_NAME}_{OPTION_NAME}`.
+
+**ATTENTION**:  
+Before you deploy to production, you must generate a random string and set it to `secret_key` to keep your user data safe.
 
 For more information, please visit [Configuration](/configuration).
 
-### Run docker images via docker-compose
+### Use docker-compose
 
-A Full Example (using mysql as database):
+A full production deployment example (using `mysql` as database):
 
 ```
 version: "2"
