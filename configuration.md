@@ -17,10 +17,12 @@ permalink: /configuration
 {:toc}
 </details>
 
-ezBookkeeping uses a ini file as configuration file. The default configuration file path is `%WORKING_DIR%/conf/ezbookkeeping.ini`. You can use `--conf-path` parameter to specify a custom configuration path when use ezBookkeeping command line.
+ezBookkeeping uses a ini file as configuration file.
+The default configuration file path is `%WORKING_DIR%/conf/ezbookkeeping.ini`.
+You can use `--conf-path` parameter to specify a custom configuration path when use ezBookkeeping command line.
 
-In addition, ezBookkeeping also supports setting configuration via environment variables. All options in the configuration file can be overridden using environment variables with the following name:  
-`EBK_{SECTION_NAME}_{OPTION_NAME}`  
+In addition, ezBookkeeping also supports setting configuration via environment variables.
+All options in the configuration file can be overridden using environment variables with the following name: `EBK_{SECTION_NAME}_{OPTION_NAME}`.  
 
 For example, if you want to set database type to `mysql`, you can set environment variable `EBK_DATABASE_TYPE=mysql`.
 
@@ -89,7 +91,7 @@ For example, if you want to set database type to `mysql`, you can set environmen
 | Option Name | Default Value | Description |
 | --- | --- | --- |
 | `generator_type` | `internal` | Uuid generator type, supports `internal` currently. |
-| `server_id` | `0` | Unique uuid server instance id, for `internal` uuid generator. |
+| `server_id` | `0` | Unique uuid server instance id, for `internal` uuid generator. The value should be `0`-`255`. |
 
 ### Security
 
