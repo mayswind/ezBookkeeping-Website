@@ -1,7 +1,7 @@
 ---
 layout: default
 title: 简体中文
-nav_order: 2
+nav_order: 100
 has_children: true
 has_toc: false
 permalink: /zh_Hans
