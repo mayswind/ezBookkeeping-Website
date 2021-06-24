@@ -99,7 +99,7 @@ For example, if you want to set database type to `mysql`, you can set environmen
 
 | Option Name | Default Value | Description |
 | --- | --- | --- |
-| `secret_key` |  | Used for signing, **you must change it to keep your user data safe before you first run ezBookkeeping**. |
+| `secret_key` |  | Used for encryption key, **you must change it to keep your user data safe before you first run ezBookkeeping**. |
 | `enable_two_factor` | `true` | Whether enable two factor authorization. |
 | `token_expired_time` | `2592000` | Token expired time (seconds). |
 | `temporary_token_expired_time` | `300` | Temporary token expired time (seconds). |
