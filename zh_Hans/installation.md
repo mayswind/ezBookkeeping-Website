@@ -81,7 +81,7 @@ permalink: /zh_Hans/installation
 **注意**：
 在部署到生产环境之前，您必须生成一个随机值并将其设置到 `secret_key` 配置中以保证您数据的安全。
 
-更多信息，请访问 [配置](/zh_Hans/configuration).
+更多信息，请访问 [配置](/zh_Hans/configuration)。
 
 ### 使用 docker-compose
 
