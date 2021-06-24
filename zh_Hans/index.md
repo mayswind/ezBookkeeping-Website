@@ -53,16 +53,16 @@ ezBookkeeping 是一个自托管 (self-hosted) 的轻量个人账本应用。它
 ### 使用 Docker 部署
 访问 [Docker Hub](https://hub.docker.com/r/mayswind/ezbookkeeping) 查看所有镜像和标签。
 
-最新发布版本:
+最新发布版本：
 
     $ docker run -p8080:8080 mayswind/ezbookkeeping
 
-最新每日构建:
+最新每日构建：
 
     $ docker run -p8080:8080 mayswind/ezbookkeeping:latest-snapshot
 
 ### 从二进制包安装
-最新发布版本: [https://github.com/mayswind/ezbookkeeping/releases](https://github.com/mayswind/ezbookkeeping/releases)
+最新发布版本：[https://github.com/mayswind/ezbookkeeping/releases](https://github.com/mayswind/ezbookkeeping/releases)
 
     $ ./ezbookkeeping server run
 
