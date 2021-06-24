@@ -1,0 +1,131 @@
+---
+layout: default
+title: 配置
+nav_order: 3
+parent: 简体中文
+permalink: /zh_Hans/configuration
+---
+
+# 配置
+{: .no_toc }
+
+## 目录
+{: .no_toc .text-delta }
+
+1. TOC
+{:toc}
+
+---
+
+ezBookkeeping 使用 ini 文件作为配置文件。
+默认的配置文件路径是 `%WORKING_DIR%/conf/ezbookkeeping.ini`。
+使用 ezBookkeeping 命令行时，你可以使用 `--conf-path` 参数指定自定义的配置文件路径。
+
+除此之外，ezBookkeeping 还支持通过环境变量设置配置。
+配置文件中所有的选项都可以通过如下的环境变量名被覆盖：`EBK_{SECTION_NAME}_{OPTION_NAME}`。  
+
+例如，如果你想将数据库类型设置为 `mysql`，你可以设置环境变量 `EBK_DATABASE_TYPE=mysql`。
+
+## 可用选项
+
+### 全局
+
+> 配置节名称为 `global`
+
+| 选项名 | 默认值 | 描述 |
+| --- | --- | --- |
+| `app_name` | `ezBookkeeping` | 应用实例名称，在两步认证中使用。 |
+| `mode` | `production` | 应用运行模式，影响服务器调试及日志记录。该值可以设置为 `production` 或 `development`。 |
+
+### Web 服务器
+
+> 配置节名称为 `server`
+
+| 选项名 | 默认值 | 描述 |
+| --- | --- | --- |
+| `protocol` | `http` | Web 服务器提供的协议，支持 `http`、`https` 或 `socket`。 |
+| `http_addr` | `0.0.0.0` | `http` 或 `https` 协议下绑定的 IP 地址。 `0.0.0.0` 表示绑定到所有网卡设备。 |
+| `http_port` | `8080` | `http` 或 `https` 协议下绑定的 Http 端口。 |
+| `domain` | `localhost` | 访问 ezBookkeeping 使用的域名。 |
+| `root_url` | `%(protocol)s://%(domain)s:%(http_port)s/` | 在浏览器中访问 ezBookkeeping 的完整路径。 |
+| `cert_file` |  | `https` 协议使用的证书文件路径。 |
+| `cert_key_file` |  | `https` 协议使用的证书私钥文件路径。 |
+| `unix_socket` |  | `unix` 协议使用的 Unix Socket 路径。 |
+| `static_root_path` | `public` | 静态文件根目录。该值可以设置为相对或绝对路径。 |
+| `enable_gzip` | `false` | 是否开启 gzip 压缩。 |
+| `log_request` | `true` | 是否开启日志记录请求和执行时间。 |
+
+### 数据库
+
+> 配置节名称为 `database`
+
+| 选项名 | 默认值 | 描述 |
+| --- | --- | --- |
+| `type` | `sqlite3`| 数据库类型，支持 `mysql`、`postgres` 和 `sqlite3`。 |
+| `host` | `127.0.0.1:3306` | `mysql` 或 `postgres` 数据库的主机地址及端口或 Unix Socket 绝对路径。 |
+| `name` | `ezbookkeeping` | 数据库名。 |
+| `user` | `root` | 数据库用户名。 |
+| `passwd` |  | 数据库用户密码。 |
+| `ssl_mode` | `disable` | 连接 `postgres` 数据库使用的 SSL/TLS 加密模式，支持 `disable`、`require` 或 `verify-full`。 |
+| `db_path` | `data/ezbookkeeping.db` | `sqlite3` 数据库的文件路径。该值可以设置为相对或绝对路径。 |
+| `max_idle_conn` | `2` | 连接池最大空闲连接数。如果该值设置为小于等于 `0`，不会保留空闲连接。 |
+| `max_open_conn` | `0` | 数据库可以打开的最大连接数。设置为 `0` 表示不限制。 |
+| `conn_max_lifetime` | `1440` | 空闲连接最大存活时长（秒）。如果该值设置为小于等于 `0`，连接不会因为时长而关闭。 |
+| `log_query` | `false` | 是否开启日志记录每条 SQL 语句及执行时间。 |
+| `auto_update_database` | `true` | 是否开启当启动 Web 服务器时自动更新数据库结构。 |
+
+### 日志
+
+> 配置节名称为 `log`
+
+| 选项名 | 默认值 | 描述 |
+| --- | --- | --- |
+| `mode` | `console file` | 日志输出类型，支持 `console` 和 `file`。使用空格分隔多个模式，例如 `console file`。 |
+| `level` | `info` | 一般日志级别。该值可以设置为 `debug`、`info`、`warn` 或 `error`。 |
+| `log_path` | `log/ezbookkeeping.log` | 日志文件路径。该值可以设置为相对或绝对路径。 |
+
+### Uuid
+
+> 配置节名称为 `uuid`
+
+| 选项名 | 默认值 | 描述 |
+| --- | --- | --- |
+| `generator_type` | `internal` | Uuid 生成器类型，当前支持 `internal`。 |
+| `server_id` | `0` | 使用 `internal` Uuid 生成器时，服务器唯一的实例ID。该值需要设置为 `0`-`255`。 |
+
+### 安全
+
+> 配置节名称为 `security`
+
+| 选项名 | 默认值 | 描述 |
+| --- | --- | --- |
+| `secret_key` |  | 作为密钥使用，**为了保证您的数据安全，请在第一次运行 ezBookkeeping 前修改该值**。 |
+| `enable_two_factor` | `true` | 是否开启两步认证。 |
+| `token_expired_time` | `2592000` | 令牌过期时间（秒）。 |
+| `temporary_token_expired_time` | `300` | 临时令牌过期时间（秒）。 |
+| `request_id_header` | `true` | 是否开启添加 `X-Request-Id` 响应头以追踪用户请求或错误。 |
+
+### 用户
+
+> 配置节名称为 `user`
+
+| 选项名 | 默认值 | 描述 |
+| --- | --- | --- |
+| `enable_register` | `true` | 是否启用用户注册。 |
+
+### 数据
+
+> 配置节名称为 `data`
+
+| 选项名 | 默认值 | 描述 |
+| --- | --- | --- |
+| `enable_export` | `true` | 是否启用用户数据导出。 |
+
+### 汇率
+
+> 配置节名称为 `exchange_rates`
+
+| 选项名 | 默认值 | 描述 |
+| --- | --- | --- |
+| `data_source` | `euro_central_bank` | 汇率数据源，支持 [`euro_central_bank`](https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html)、[`bank_of_canada`](https://www.bankofcanada.ca/rates/exchange/daily-exchange-rates/)、[`reserve_bank_of_australia`](https://www.rba.gov.au/statistics/frequency/exchange-rates.html)、[`czech_national_bank`](https://www.cnb.cz/en/financial-markets/foreign-exchange-market/central-bank-exchange-rate-fixing/central-bank-exchange-rate-fixing/)、[`national_bank_of_poland`](https://www.nbp.pl/homen.aspx?f=/kursy/kursyen.htm)。 |
+| `request_timeout` | `10000` | 请求汇率数据的超时时间（毫秒）。 |
