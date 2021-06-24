@@ -8,14 +8,13 @@ permalink: /configuration
 # Configuration
 {: .no_toc }
 
-<details open markdown="block">
-  <summary>
-    Table of contents
-  </summary>
-  {: .text-delta }
+## Table of contents
+{: .no_toc .text-delta }
+
 1. TOC
 {:toc}
-</details>
+
+---
 
 ezBookkeeping uses a ini file as configuration file.
 The default configuration file path is `%WORKING_DIR%/conf/ezbookkeeping.ini`.

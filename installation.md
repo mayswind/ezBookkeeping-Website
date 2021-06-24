@@ -8,14 +8,13 @@ permalink: /installation
 # Installation
 {: .no_toc }
 
-<details open markdown="block">
-  <summary>
-    Table of contents
-  </summary>
-  {: .text-delta }
+## Table of contents
+{: .no_toc .text-delta }
+
 1. TOC
 {:toc}
-</details>
+
+---
 
 ## Ship with docker
 Visit [Docker Hub](https://hub.docker.com/r/mayswind/ezbookkeeping) to see all images and tags.
