@@ -77,7 +77,7 @@ You can also build docker image, make sure you have [docker](https://www.docker.
 
     $ ./build.sh docker
 
-For more information about how to install ezBookkeeping, please visit our documentation.
+For more information about how to install ezBookkeeping, please visit our [documentation](/installation).
 
 ## Documents
 1. [English](/)

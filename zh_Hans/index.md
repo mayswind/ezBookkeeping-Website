@@ -79,7 +79,7 @@ ezBookkeeping 默认将会监听 8080 端口。您可以访问 http://{YOUR_HOST
 
     $ ./build.sh docker
 
-关于安装 ezBookkeeping 的更多信息，您可以访问我们的文档。
+关于安装 ezBookkeeping 的更多信息，您可以访问我们的[文档](/zh_Hans/installation)。
 
 ## 协议
 [MIT](https://github.com/mayswind/ezbookkeeping/blob/master/LICENSE)
