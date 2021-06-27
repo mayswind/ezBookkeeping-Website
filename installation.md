@@ -80,7 +80,7 @@ All options in the configuration file can be overridden using environment variab
 `EBK_{SECTION_NAME}_{OPTION_NAME}`.
 
 **ATTENTION**:  
-Before you deploy to production, you must generate a random string and set it to `secret_key` to keep your user data safe.
+Before you deploy to production, you must generate a random string and set it to `secret_key` to keep your user data safe. You can get a random secret key by executing `ezbookkeeping security gen-secret-key`.
 
 For more information, please visit [Configuration](/configuration).
 

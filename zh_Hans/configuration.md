@@ -99,7 +99,7 @@ ezBookkeeping 使用 ini 文件作为配置文件。
 
 | 选项名 | 默认值 | 描述 |
 | --- | --- | --- |
-| `secret_key` |  | 作为密钥使用，**为了保证您的数据安全，请在第一次运行 ezBookkeeping 前修改该值**。 |
+| `secret_key` |  | 作为密钥使用，**为了保证您的数据安全，请在第一次运行 ezBookkeeping 前修改该值**。你可以通过执行 `ezbookkeeping security gen-secret-key` 获取一个随机密钥。 |
 | `enable_two_factor` | `true` | 是否开启两步认证。 |
 | `token_expired_time` | `2592000` | 令牌过期时间（秒）。 |
 | `temporary_token_expired_time` | `300` | 临时令牌过期时间（秒）。 |

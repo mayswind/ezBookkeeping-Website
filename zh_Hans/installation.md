@@ -81,7 +81,7 @@ permalink: /zh_Hans/installation
 `EBK_{SECTION_NAME}_{OPTION_NAME}`。
 
 **注意**：
-在部署到生产环境之前，您必须生成一个随机值并将其设置到 `secret_key` 配置中以保证您数据的安全。
+在部署到生产环境之前，您必须生成一个随机值并将其设置到 `secret_key` 配置中以保证您数据的安全。你可以通过执行 `ezbookkeeping security gen-secret-key` 获取一个随机密钥。
 
 更多信息，请访问 [配置](/zh_Hans/configuration)。
 
