@@ -22,7 +22,7 @@ ezBookkeeping supports updating exchange rates automatically, and supports multi
 
 ### European Central Bank
 
-> Reference: https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html
+> Reference: [https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html](https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html)
 
 The base currency is European euro (`EUR`). The daily exchange rates are usually updated around 16:00 CET on every working day.
 
@@ -67,7 +67,7 @@ Configuration option `data_source` value is `euro_central_bank`
 
 ### Bank of Canada
 
-> Reference: https://www.bankofcanada.ca/rates/exchange/daily-exchange-rates/
+> Reference: [https://www.bankofcanada.ca/rates/exchange/daily-exchange-rates/](https://www.bankofcanada.ca/rates/exchange/daily-exchange-rates/)
 
 The base currency is Canadian dollar (`CAD`). The daily exchange rates are usually updated by 16:30 ET on every working day.
 
@@ -106,7 +106,7 @@ Configuration option `data_source` value is `bank_of_canada`
 
 ### The Reserve Bank of Australia
 
-> Reference: https://www.rba.gov.au/statistics/frequency/exchange-rates.html
+> Reference: [https://www.rba.gov.au/statistics/frequency/exchange-rates.html](https://www.rba.gov.au/statistics/frequency/exchange-rates.html)
 
 The base currency is Australian dollar (`AUD`). The daily exchange rates are usually updated around 16:00 AEST on every working day.
 
@@ -137,7 +137,7 @@ Configuration option `data_source` value is `reserve_bank_of_australia`
 
 ### Czech National Bank
 
-> Reference: https://www.cnb.cz/en/financial-markets/foreign-exchange-market/central-bank-exchange-rate-fixing/central-bank-exchange-rate-fixing/
+> Reference: [https://www.cnb.cz/en/financial-markets/foreign-exchange-market/central-bank-exchange-rate-fixing/central-bank-exchange-rate-fixing/](https://www.cnb.cz/en/financial-markets/foreign-exchange-market/central-bank-exchange-rate-fixing/central-bank-exchange-rate-fixing/)
 
 The base currency is Czech koruna (`CZK`). The daily exchange rates are usually updated after 14:30 CET on every working day. The monthly exchange rates are usually updated on the last working day of the month.
 
@@ -304,7 +304,7 @@ Configuration option `data_source` value is `czech_national_bank`
 
 ### National Bank of Poland
 
-> Reference: https://www.nbp.pl/homen.aspx?f=/kursy/kursyen.htm
+> Reference: [https://www.nbp.pl/homen.aspx?f=/kursy/kursyen.htm](https://www.nbp.pl/homen.aspx?f=/kursy/kursyen.htm)
 
 The base currency is Polish złoty (`PLN`). The daily exchange rates are usually updated between 11:45 CET and 12:15 CET on every working day. The weekly exchange rates are usually updated on Wednesdays.
 

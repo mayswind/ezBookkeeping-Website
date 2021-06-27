@@ -17,13 +17,13 @@ permalink: /zh_Hans/exchange_rates
 
 ---
 
-ezBookkeeping 支持自动更新汇率以及多个不同数据源。您可以根据需要选择数据源。
+ezBookkeeping 支持自动更新汇率以及支持多个不同数据源。您可以根据需要选择数据源。
 
 ## 可用数据源
 
 ### 欧洲中央银行
 
-> 参考：https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html
+> 参考：[https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html](https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html)
 
 基准货币是欧元（`EUR`）。每日汇率通常在工作日的 16:00（欧洲中部时间 CET）左右更新。
 
@@ -68,7 +68,7 @@ ezBookkeeping 支持自动更新汇率以及多个不同数据源。您可以根
 
 ### 加拿大中央银行
 
-> 参考：https://www.bankofcanada.ca/rates/exchange/daily-exchange-rates/
+> 参考：[https://www.bankofcanada.ca/rates/exchange/daily-exchange-rates/](https://www.bankofcanada.ca/rates/exchange/daily-exchange-rates/)
 
 基准货币是加拿大元（`CAD`）。每日汇率通常在工作日的 16:30（东部时间 ET）更新。
 
@@ -107,7 +107,7 @@ ezBookkeeping 支持自动更新汇率以及多个不同数据源。您可以根
 
 ### 澳大利亚储备银行
 
-> 参考：https://www.rba.gov.au/statistics/frequency/exchange-rates.html
+> 参考：[https://www.rba.gov.au/statistics/frequency/exchange-rates.html](https://www.rba.gov.au/statistics/frequency/exchange-rates.html)
 
 基准货币是澳大利亚元（`AUD`）。每日汇率通常在工作日的 16:00（澳大利亚东部标准时间 AEST）左右更新。
 
@@ -138,11 +138,11 @@ ezBookkeeping 支持自动更新汇率以及多个不同数据源。您可以根
 
 ### 捷克国家银行
 
-> 参考：https://www.cnb.cz/en/financial-markets/foreign-exchange-market/central-bank-exchange-rate-fixing/central-bank-exchange-rate-fixing/
+> 参考：[https://www.cnb.cz/en/financial-markets/foreign-exchange-market/central-bank-exchange-rate-fixing/central-bank-exchange-rate-fixing/](https://www.cnb.cz/en/financial-markets/foreign-exchange-market/central-bank-exchange-rate-fixing/central-bank-exchange-rate-fixing/)
 
 基准货币是捷克克朗（`CZK`）。每日汇率通常在工作日的 14:30（欧洲中部时间 CET）后更新。每月汇率通常在每个月最后一个工作日更新。
 
-这个数据源支持 153 种货币，所有货币如下：
+这个数据源支持 154 种货币，所有货币如下：
 
 | 货币 | 货币代码 | 更新频率 |
 | --- | --- | --- |
@@ -305,9 +305,9 @@ ezBookkeeping 支持自动更新汇率以及多个不同数据源。您可以根
 
 ### 波兰国家银行
 
-> 参考：https://www.nbp.pl/homen.aspx?f=/kursy/kursyen.htm
+> 参考：[https://www.nbp.pl/homen.aspx?f=/kursy/kursyen.htm](https://www.nbp.pl/homen.aspx?f=/kursy/kursyen.htm)
 
-基准货币是波兰兹罗提（`PLN`）。每日汇率通常在工作日的 11:45 CET 到 12:15 CET 间更新。每周汇率通常在周三更新。
+基准货币是波兰兹罗提（`PLN`）。每日汇率通常在工作日的 11:45（欧洲中部时间 CET） 到 12:15（欧洲中部时间 CET） 间更新。每周汇率通常在周三更新。
 
 这个数据源支持 149 种货币，所有货币如下：
 
