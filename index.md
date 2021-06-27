@@ -8,12 +8,6 @@ permalink: /
 # ezBookkeeping
 {: .no_toc }
 
-[![License](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/mayswind/ezbookkeeping/blob/master/LICENSE)
-[![Latest Build](https://img.shields.io/github/workflow/status/mayswind/ezbookkeeping/Docker%20Release?style=flat)](https://github.com/mayswind/ezbookkeeping/actions)
-[![Go Report](https://goreportcard.com/badge/github.com/mayswind/ezbookkeeping)](https://goreportcard.com/report/github.com/mayswind/ezbookkeeping)
-[![Latest Docker Image Size](https://img.shields.io/docker/image-size/mayswind/ezbookkeeping.svg?style=flat)](https://hub.docker.com/r/mayswind/ezbookkeeping)
-[![Latest Release](https://img.shields.io/github/release/mayswind/ezbookkeeping.svg?style=flat)](https://github.com/mayswind/ezbookkeeping/releases)
-
 1. TOC
 {:toc}
 
@@ -21,6 +15,8 @@ permalink: /
 
 ## Introduction
 ezBookkeeping is a lightweight personal bookkeeping app hosted by yourself. It can be deployed on almost all platforms, including Windows, macOS and Linux on x86, amd64 and ARM architectures. You can even deploy it on an raspberry device. It also supports many different databases, including sqlite and mysql. With docker, you can just deploy it via one command without complicated configuration.
+
+The project url: [https://github.com/mayswind/ezbookkeeping](https://github.com/mayswind/ezbookkeeping)
 
 ## Features
 1. Open source & Self-hosted
@@ -51,7 +47,7 @@ ezBookkeeping is a lightweight personal bookkeeping app hosted by yourself. It c
 ### Ship with docker
 Visit [Docker Hub](https://hub.docker.com/r/mayswind/ezbookkeeping) to see all images and tags.
 
-Latest Release:
+Latest Release: [![Latest Release](https://img.shields.io/docker/v/mayswind/ezbookkeeping?sort=semver&style=flat-square)](https://hub.docker.com/r/mayswind/ezbookkeeping)
 
     $ docker run -p8080:8080 mayswind/ezbookkeeping
 
@@ -60,7 +56,7 @@ Latest Daily Build:
     $ docker run -p8080:8080 mayswind/ezbookkeeping:latest-snapshot
 
 ### Install from binary
-Latest release: [https://github.com/mayswind/ezbookkeeping/releases](https://github.com/mayswind/ezbookkeeping/releases)
+Latest release: [![Latest Release](https://img.shields.io/github/release/mayswind/ezbookkeeping?sort=semver&style=flat-square)](https://github.com/mayswind/ezbookkeeping/releases)
 
     $ ./ezbookkeeping server run
 

@@ -10,12 +10,6 @@ permalink: /zh_Hans
 # ezBookkeeping
 {: .no_toc }
 
-[![License](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/mayswind/ezbookkeeping/blob/master/LICENSE)
-[![Latest Build](https://img.shields.io/github/workflow/status/mayswind/ezbookkeeping/Docker%20Release?style=flat)](https://github.com/mayswind/ezbookkeeping/actions)
-[![Go Report](https://goreportcard.com/badge/github.com/mayswind/ezbookkeeping)](https://goreportcard.com/report/github.com/mayswind/ezbookkeeping)
-[![Latest Docker Image Size](https://img.shields.io/docker/image-size/mayswind/ezbookkeeping.svg?style=flat)](https://hub.docker.com/r/mayswind/ezbookkeeping)
-[![Latest Release](https://img.shields.io/github/release/mayswind/ezbookkeeping.svg?style=flat)](https://github.com/mayswind/ezbookkeeping/releases)
-
 1. TOC
 {:toc}
 
@@ -23,6 +17,8 @@ permalink: /zh_Hans
 
 ## 介绍
 ezBookkeeping 是一个自托管 (self-hosted) 的轻量个人账本应用。它可以部署在几乎所有平台上，包括 x86、x64 以及 ARM 架构的 Windows、macOS 和 Linux。您甚至可以将它部署在树莓派 (Raspberry) 设备中。此外，它支持多种不同数据库，包括 Sqlite 和 Mysql 等。借助 Docker，您甚至只需要一条命令即可将其部署，而无需复杂的配置。
+
+项目地址：[https://github.com/mayswind/ezbookkeeping](https://github.com/mayswind/ezbookkeeping)
 
 ## 特性
 1. 开源 & 自托管 (self-hosted)
@@ -53,7 +49,7 @@ ezBookkeeping 是一个自托管 (self-hosted) 的轻量个人账本应用。它
 ### 使用 Docker 部署
 访问 [Docker Hub](https://hub.docker.com/r/mayswind/ezbookkeeping) 查看所有镜像和标签。
 
-最新发布版本：
+最新发布版本：[![最新发布版本](https://img.shields.io/docker/v/mayswind/ezbookkeeping?sort=semver&style=flat-square)](https://hub.docker.com/r/mayswind/ezbookkeeping)
 
     $ docker run -p8080:8080 mayswind/ezbookkeeping
 
@@ -62,7 +58,7 @@ ezBookkeeping 是一个自托管 (self-hosted) 的轻量个人账本应用。它
     $ docker run -p8080:8080 mayswind/ezbookkeeping:latest-snapshot
 
 ### 从二进制包安装
-最新发布版本：[https://github.com/mayswind/ezbookkeeping/releases](https://github.com/mayswind/ezbookkeeping/releases)
+最新发布版本：[![最新发布版本](https://img.shields.io/github/release/mayswind/ezbookkeeping?sort=semver&style=flat-square)](https://github.com/mayswind/ezbookkeeping/releases)
 
     $ ./ezbookkeeping server run
 
