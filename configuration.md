@@ -126,5 +126,5 @@ For example, if you want to set database type to `mysql`, you can set environmen
 
 | Option Name | Default Value | Description |
 | --- | --- | --- |
-| `data_source` | `euro_central_bank` | Exchange rates data source, supports [`euro_central_bank`](https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html), [`bank_of_canada`](https://www.bankofcanada.ca/rates/exchange/daily-exchange-rates/), [`reserve_bank_of_australia`](https://www.rba.gov.au/statistics/frequency/exchange-rates.html), [`czech_national_bank`](https://www.cnb.cz/en/financial-markets/foreign-exchange-market/central-bank-exchange-rate-fixing/central-bank-exchange-rate-fixing/), [`national_bank_of_poland`](https://www.nbp.pl/homen.aspx?f=/kursy/kursyen.htm). For more information, please visit [Exchange Rates](/exchange_rates). |
+| `data_source` | `euro_central_bank` | Exchange rates data source, supports `euro_central_bank`, `bank_of_canada`, `reserve_bank_of_australia`, `czech_national_bank`, `national_bank_of_poland`. For more information, please visit [Exchange Rates](/exchange_rates). |
 | `request_timeout` | `10000` | Request timeout for exchange rates data (milliseconds). |
