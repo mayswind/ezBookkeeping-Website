@@ -16,7 +16,7 @@ permalink: /exchange_rates
 
 ---
 
-ezBookkeeping supports updating exchange rates automatically, and supports multiple data sources. You can choose a data source according to your needs.
+ezBookkeeping supports updating exchange rates automatically, and supports multiple data sources. You can choose a data source according to your needs. The information on this page may not be the latest, please refer to the reference link or the actual data.
 
 ## Available Data Source
 
