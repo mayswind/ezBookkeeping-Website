@@ -26,7 +26,7 @@ ezBookkeeping supports updating exchange rates automatically, and supports multi
 
 The base currency is European euro (`EUR`). The daily exchange rates are usually updated around 16:00 CET on every working day.
 
-This data source supports 32 currencies, and all currencies are as follows:
+This data source supports 30 currencies, and all currencies are as follows:
 
 | Currency | Currency Code | Update Frequency |
 | --- | --- | --- |
@@ -40,7 +40,6 @@ This data source supports 32 currencies, and all currencies are as follows:
 | Danish krone | DKK | Daily |
 | Pound sterling | GBP | Daily |
 | Hong Kong dollar | HKD | Daily |
-| Croatian kuna | HRK | Daily |
 | Hungarian forint | HUF | Daily |
 | Indonesian rupiah | IDR | Daily |
 | Israeli new shekel | ILS | Daily |
@@ -55,7 +54,6 @@ This data source supports 32 currencies, and all currencies are as follows:
 | Philippine peso | PHP | Daily |
 | Polish złoty | PLN | Daily |
 | Romanian leu | RON | Daily |
-| Russian ruble | RUB | Daily |
 | Swedish krona/kronor | SEK | Daily |
 | Singapore dollar | SGD | Daily |
 | Thai baht | THB | Daily |
@@ -126,7 +124,7 @@ This data source supports 18 currencies, and all currencies are as follows:
 | South Korean won | KRW | Daily |
 | Malaysian ringgit | MYR | Daily |
 | New Zealand dollar | NZD | Daily |
-| Papua New Guinean kina | PGK | Daily |
+| Philippine Peso | PHP | Daily |
 | Singapore dollar | SGD | Daily |
 | Thai baht | THB | Daily |
 | New Taiwan dollar | TWD | Daily |
@@ -199,7 +197,6 @@ This data source supports 154 currencies, and all currencies are as follows:
 | Guyanese dollar | GYD | Monthly |
 | Hong Kong dollar | HKD | Daily |
 | Honduran lempira | HNL | Monthly |
-| Croatian kuna | HRK | Daily |
 | Haitian gourde | HTG | Monthly |
 | Hungarian forint | HUF | Daily |
 | Indonesian rupiah | IDR | Daily |
@@ -266,7 +263,7 @@ This data source supports 154 currencies, and all currencies are as follows:
 | Swedish krona/kronor | SEK | Daily |
 | Singapore dollar | SGD | Daily |
 | Saint Helena pound | SHP | Monthly |
-| Sierra Leonean leone | SLL | Monthly |
+| Sierra Leonean leone | SLE | Monthly |
 | Somali shilling | SOS | Monthly |
 | Surinamese dollar | SRD | Monthly |
 | South Sudanese pound | SSP | Monthly |
@@ -288,6 +285,7 @@ This data source supports 154 currencies, and all currencies are as follows:
 | United States dollar | USD | Daily |
 | Uruguayan peso | UYU | Monthly |
 | Uzbekistan som | UZS | Monthly |
+| Venezuelan Bolívar Fuerte | VEF | Monthly |
 | Vietnamese đồng | VND | Monthly |
 | Vanuatu vatu | VUV | Monthly |
 | Samoan tala | WST | Monthly |
@@ -308,7 +306,7 @@ Configuration option `data_source` value is `czech_national_bank`
 
 The base currency is Polish złoty (`PLN`). The daily exchange rates are usually updated between 11:45 CET and 12:15 CET on every working day. The weekly exchange rates are usually updated on Wednesdays.
 
-This data source supports 149 currencies, and all currencies are as follows:
+This data source supports 148 currencies, and all currencies are as follows:
 
 | Currency | Currency Code | Update Frequency |
 | --- | --- | --- |
@@ -364,7 +362,6 @@ This data source supports 149 currencies, and all currencies are as follows:
 | Guyanese dollar | GYD | Weekly |
 | Hong Kong dollar | HKD | Daily |
 | Honduran lempira | HNL | Weekly |
-| Croatian kuna | HRK | Daily |
 | Haitian gourde | HTG | Weekly |
 | Hungarian forint | HUF | Daily |
 | Indonesian rupiah | IDR | Daily |
@@ -427,7 +424,7 @@ This data source supports 149 currencies, and all currencies are as follows:
 | Sudanese pound | SDG | Weekly |
 | Swedish krona/kronor | SEK | Daily |
 | Singapore dollar | SGD | Daily |
-| Sierra Leonean leone | SLL | Weekly |
+| Sierra Leonean leone | SLE | Weekly |
 | Somali shilling | SOS | Weekly |
 | Surinamese dollar | SRD | Weekly |
 | South Sudanese pound | SSP | Weekly |
