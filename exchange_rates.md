@@ -460,3 +460,37 @@ This data source supports 148 currencies, and all currencies are as follows:
 | Zimbabwean dollar | ZWL | Weekly |
 
 Configuration option `data_source` value is `national_bank_of_poland`
+
+### Monetary Authority of Singapore
+
+> Reference: [https://eservices.mas.gov.sg/Statistics/msb/ExchangeRates.aspx](https://eservices.mas.gov.sg/Statistics/msb/ExchangeRates.aspx)
+
+The base currency is Singapore dollar (`SGD`). The daily exchange rates are usually updated around midday (SGT) on every working day.
+
+This data source supports 21 currencies, and all currencies are as follows:
+
+| Currency | Currency Code | Update Frequency |
+| --- | --- | --- |
+| United Arab Emirates dirham | AED | Daily |
+| Australian dollar | AUD | Daily |
+| Canadian dollar | CAD | Daily |
+| Swiss franc | CHF | Daily |
+| Chinese yuan | CNY | Daily |
+| Euro | EUR | Daily |
+| Pound sterling | GBP | Daily |
+| Hong Kong dollar | HKD | Daily |
+| Indonesian rupiah | IDR | Daily |
+| Indian rupee | INR | Daily |
+| Japanese yen | JPY | Daily |
+| South Korean won | KRW | Daily |
+| Malaysian ringgit | MYR | Daily |
+| New Zealand dollar | NZD | Daily |
+| Philippine peso | PHP | Daily |
+| Qatari riyal | QAR | Daily |
+| Saudi riyal | SAR | Daily |
+| Thai baht | THB | Daily |
+| New Taiwan dollar | TWD | Daily |
+| United States dollar | USD | Daily |
+| Vietnamese đồng | VND | Daily |
+
+Configuration option `data_source` value is `monetary_authority_of_singapore`

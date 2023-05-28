@@ -127,5 +127,5 @@ ezBookkeeping 使用 ini 文件作为配置文件。
 
 | 选项名 | 默认值 | 描述 |
 | --- | --- | --- |
-| `data_source` | `euro_central_bank` | 汇率数据源，支持 `euro_central_bank`、`bank_of_canada`、`reserve_bank_of_australia`、`czech_national_bank`、`national_bank_of_poland`。更多信息，请访问 [汇率](/zh_Hans/exchange_rates)。 |
+| `data_source` | `euro_central_bank` | 汇率数据源，支持 `euro_central_bank`、`bank_of_canada`、`reserve_bank_of_australia`、`czech_national_bank`、`national_bank_of_poland`, `monetary_authority_of_singapore`。更多信息，请访问 [汇率](/zh_Hans/exchange_rates)。 |
 | `request_timeout` | `10000` | 请求汇率数据的超时时间（毫秒）。 |
