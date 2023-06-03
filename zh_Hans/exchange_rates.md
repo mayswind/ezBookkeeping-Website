@@ -466,7 +466,7 @@ ezBookkeeping 支持自动更新汇率以及支持多个不同数据源。您可
 
 > 参考：[https://eservices.mas.gov.sg/Statistics/msb/ExchangeRates.aspx](https://eservices.mas.gov.sg/Statistics/msb/ExchangeRates.aspx)
 
-基准货币是新加坡元（`SGD`）。每日汇率通常在工作日的中午（SGT）左右更新。
+基准货币是新加坡元（`SGD`）。每日汇率通常在工作日的中午（新加坡时间 SGT）左右更新。
 
 该数据源支持 21 种货币，所有货币如下：
 
