@@ -120,6 +120,15 @@ For example, if you want to set database type to `mysql`, you can set environmen
 | --- | --- | --- |
 | `enable_export` | `true` | Whether enable exporting user data. |
 
+### Map
+
+> Section name is `map`
+
+| Option Name | Default Value | Description |
+| --- | --- | --- |
+| `map_provider` | `openstreetmap` | Map provider, supports `openstreetmap`. |
+| `map_data_fetch_proxy` | `false` | Whether use the ezbookkeeping server to proxy map data requests for `openstreetmap`. |
+
 ### Exchange Rates
 
 > Section name is `exchange_rates`
