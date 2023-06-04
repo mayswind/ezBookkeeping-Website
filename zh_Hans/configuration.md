@@ -68,9 +68,9 @@ ezBookkeeping 使用 ini 文件作为配置文件。
 | `passwd` |  | 数据库用户密码。 |
 | `ssl_mode` | `disable` | 连接 `postgres` 数据库使用的 SSL/TLS 加密模式，支持 `disable`、`require` 或 `verify-full`。 |
 | `db_path` | `data/ezbookkeeping.db` | `sqlite3` 数据库的文件路径。该值可以设置为相对或绝对路径。 |
-| `max_idle_conn` | `2` | 连接池最大空闲连接数。如果该值设置为小于等于 `0`，不会保留空闲连接。 |
-| `max_open_conn` | `0` | 数据库可以打开的最大连接数。设置为 `0` 表示不限制。 |
-| `conn_max_lifetime` | `1440` | 空闲连接最大存活时长（秒）。如果该值设置为小于等于 `0`，连接不会因为时长而关闭。 |
+| `max_idle_conn` | `2` | 连接池最大空闲连接数（0 - 65535）。如果该值设置为小于等于 `0`，不会保留空闲连接。 |
+| `max_open_conn` | `0` | 数据库可以打开的最大连接数（0 - 65535）。设置为 `0` 表示不限制。 |
+| `conn_max_lifetime` | `1440` | 空闲连接最大存活时长（0 - 4294967295 秒）。如果该值设置为小于等于 `0`，连接不会因为时长而关闭。 |
 | `log_query` | `false` | 是否开启日志记录每条 SQL 语句及执行时间。 |
 | `auto_update_database` | `true` | 是否开启当启动 Web 服务器时自动更新数据库结构。 |
 
@@ -101,8 +101,8 @@ ezBookkeeping 使用 ini 文件作为配置文件。
 | --- | --- | --- |
 | `secret_key` |  | 作为密钥使用，**为了保证您的数据安全，请在第一次运行 ezBookkeeping 前修改该值**。你可以通过执行 `ezbookkeeping security gen-secret-key` 获取一个随机密钥。 |
 | `enable_two_factor` | `true` | 是否开启两步认证。 |
-| `token_expired_time` | `2592000` | 令牌过期时间（秒）。 |
-| `temporary_token_expired_time` | `300` | 临时令牌过期时间（秒）。 |
+| `token_expired_time` | `2592000` | 令牌过期时间（0 - 4294967295 秒）。 |
+| `temporary_token_expired_time` | `300` | 临时令牌过期时间（0 - 4294967295 秒）。 |
 | `request_id_header` | `true` | 是否开启添加 `X-Request-Id` 响应头以追踪用户请求或错误。 |
 
 ### 用户
@@ -137,4 +137,4 @@ ezBookkeeping 使用 ini 文件作为配置文件。
 | 选项名 | 默认值 | 描述 |
 | --- | --- | --- |
 | `data_source` | `euro_central_bank` | 汇率数据源，支持 `euro_central_bank`、`bank_of_canada`、`reserve_bank_of_australia`、`czech_national_bank`、`national_bank_of_poland`, `monetary_authority_of_singapore`。更多信息，请访问 [汇率](/zh_Hans/exchange_rates)。 |
-| `request_timeout` | `10000` | 请求汇率数据的超时时间（毫秒）。 |
+| `request_timeout` | `10000` | 请求汇率数据的超时时间（0 - 4294967295 毫秒）。 |

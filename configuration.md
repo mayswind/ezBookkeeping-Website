@@ -67,9 +67,9 @@ For example, if you want to set database type to `mysql`, you can set environmen
 | `passwd` |  | Database user password. |
 | `ssl_mode` | `disable` | SSL/TLS encryption mode for connecting to the `postgres` database, supports `disable`, `require` or `verify-full`. |
 | `db_path` | `data/ezbookkeeping.db` | Database file path for `sqlite3`. The value can be relative or absolute path. |
-| `max_idle_conn` | `2` | Maximum number of connections in the idle connection pool. If value is below than or equals to `0`, no idle connections are retained. |
-| `max_open_conn` | `0` | Maximum number of open connections to the database. The value `0` means unlimited. |
-| `conn_max_lifetime` | `1440` | Maximum amount of time a connection may be reused (seconds). If value is below than or equals to `0`, connections are not closed due to a connection's age. |
+| `max_idle_conn` | `2` | Maximum number of connections in the idle connection pool (0 - 65535). If value is below than or equals to `0`, no idle connections are retained. |
+| `max_open_conn` | `0` | Maximum number of open connections to the database (0 - 65535). The value `0` means unlimited. |
+| `conn_max_lifetime` | `1440` | Maximum amount of time a connection may be reused (0 - 4294967295 seconds). If value is below than or equals to `0`, connections are not closed due to a connection's age. |
 | `log_query` | `false` | Whether enable logging each sql statement and execution time. |
 | `auto_update_database` | `true` | Whether enable updating database structure automatically when starting web server. |
 
@@ -100,8 +100,8 @@ For example, if you want to set database type to `mysql`, you can set environmen
 | --- | --- | --- |
 | `secret_key` |  | Used for encryption key, **you must change it to keep your user data safe before you first run ezBookkeeping**. You can get a random secret key by executing `ezbookkeeping security gen-secret-key`. |
 | `enable_two_factor` | `true` | Whether enable two factor authorization. |
-| `token_expired_time` | `2592000` | Token expired time (seconds). |
-| `temporary_token_expired_time` | `300` | Temporary token expired time (seconds). |
+| `token_expired_time` | `2592000` | Token expired time (0 - 4294967295 seconds). |
+| `temporary_token_expired_time` | `300` | Temporary token expired time (0 - 4294967295 seconds). |
 | `request_id_header` | `true` | Whether enable adding `X-Request-Id` header to response to track user request or error. |
 
 ### User
@@ -136,4 +136,4 @@ For example, if you want to set database type to `mysql`, you can set environmen
 | Option Name | Default Value | Description |
 | --- | --- | --- |
 | `data_source` | `euro_central_bank` | Exchange rates data source, supports `euro_central_bank`, `bank_of_canada`, `reserve_bank_of_australia`, `czech_national_bank`, `national_bank_of_poland`, `monetary_authority_of_singapore`. For more information, please visit [Exchange Rates](/exchange_rates). |
-| `request_timeout` | `10000` | Request timeout for exchange rates data (milliseconds). |
+| `request_timeout` | `10000` | Request timeout for exchange rates data (0 - 4294967295 milliseconds). |
