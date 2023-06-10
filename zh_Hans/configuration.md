@@ -127,7 +127,7 @@ ezBookkeeping 使用 ini 文件作为配置文件。
 
 | 选项名 | 默认值 | 描述 |
 | --- | --- | --- |
-| `map_provider` | `openstreetmap` | 地图提供方，支持 `openstreetmap`。 |
+| `map_provider` | `openstreetmap` | 地图提供方，支持 `openstreetmap`。如果您想禁用地图，留空即可。 |
 | `map_data_fetch_proxy` | `false` | 针对 `openstreetmap` 是否使用 ezbookkeeping 服务端代理地图数据请求。 |
 
 ### 汇率

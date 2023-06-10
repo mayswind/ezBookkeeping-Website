@@ -126,7 +126,7 @@ For example, if you want to set database type to `mysql`, you can set environmen
 
 | Option Name | Default Value | Description |
 | --- | --- | --- |
-| `map_provider` | `openstreetmap` | Map provider, supports `openstreetmap`. |
+| `map_provider` | `openstreetmap` | Map provider, supports `openstreetmap`. Leave blank if you want to disable map. |
 | `map_data_fetch_proxy` | `false` | Whether use the ezbookkeeping server to proxy map data requests for `openstreetmap`. |
 
 ### Exchange Rates
