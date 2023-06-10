@@ -25,12 +25,13 @@ ezBookkeeping 是一个自托管 (self-hosted) 的轻量个人账本应用。它
 2. 轻量 & 快速
 3. 安装简单
     * 支持 Docker
-    * 支持多种数据库 (sqlite、mysql 等)
-    * 支持多种操作系统和架构 (Windows、macOS、Linux & x86、amd64、ARM)
+    * 支持多种数据库 (SQLite、MySQL、PostgreSQL 等)
+    * 支持多种操作系统和硬件 (Windows、macOS、Linux & x86、amd64、ARM)
 4. 用户友好的界面
     * 接近原生应用的体验 (针对移动设备)
     * 支持两级账户及两级分类
     * 丰富的预设分类
+    * 支持地理位置及地图
     * 查找、过滤历史记录
     * 数据统计
     * 深色主题
@@ -38,7 +39,7 @@ ezBookkeeping 是一个自托管 (self-hosted) 的轻量个人账本应用。它
 6. 多时区支持
 7. 多语言支持
 8. 两步认证
-9. 应用锁 (支持 WebAuthn)
+9. 应用锁 (PIN 码 / WebAuthn)
 10. 数据导出
 
 ## 截图
