@@ -126,8 +126,12 @@ For example, if you want to set database type to `mysql`, you can set environmen
 
 | Option Name | Default Value | Description |
 | --- | --- | --- |
-| `map_provider` | `openstreetmap` | Map provider, supports `openstreetmap`. Leave blank if you want to disable map. |
+| `map_provider` | `openstreetmap` | Map provider, `openstreetmap`, `googlemap`, `baidumap`, `amap`. Leave blank if you want to disable map. |
 | `map_data_fetch_proxy` | `false` | Whether use the ezbookkeeping server to proxy map data requests for `openstreetmap`. |
+| `google_map_api_key` |  | Google map JavaScript API key for `googlemap`, please visit https://developers.google.com/maps/get-started for more information |
+| `baidu_map_ak` |  | Baidu map JavaScript API application key for `baidumap`, please visit https://lbsyun.baidu.com/index.php?title=jspopular3.0/guide/getkey for more information |
+| `amap_application_key` |  | Amap JavaScript API application key for `amap`, please visit https://lbs.amap.com/api/javascript-api/guide/abc/prepare for more information |
+| `amap_application_secret` |  | Amap JavaScript API application secret for `amap`, please visit https://lbs.amap.com/api/javascript-api/guide/abc/prepare for more information |
 
 ### Exchange Rates
 

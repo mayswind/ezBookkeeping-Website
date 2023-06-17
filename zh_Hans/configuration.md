@@ -127,8 +127,12 @@ ezBookkeeping 使用 ini 文件作为配置文件。
 
 | 选项名 | 默认值 | 描述 |
 | --- | --- | --- |
-| `map_provider` | `openstreetmap` | 地图提供方，支持 `openstreetmap`。如果您想禁用地图，留空即可。 |
+| `map_provider` | `openstreetmap` | 地图提供方，支持 `openstreetmap`、`googlemap`、`baidumap` 和 `amap`。如果您想禁用地图，留空即可。 |
 | `map_data_fetch_proxy` | `false` | 针对 `openstreetmap` 是否使用 ezbookkeeping 服务端代理地图数据请求。 |
+| `google_map_api_key` |  | 针对 `googlemap`，Google 地图 JavaScript API Key，请访问 https://developers.google.com/maps/get-started 获取更多信息 |
+| `baidu_map_ak` |  | 针对 `baidumap`，百度地图 JavaScript API 访问应用（AK），请访问 https://lbsyun.baidu.com/index.php?title=jspopular3.0/guide/getkey 获取更多信息 |
+| `amap_application_key` |  | 针对 `amap`，高德地图 JavaScript API 应用 Key，请访问 https://lbs.amap.com/api/javascript-api/guide/abc/prepare 获取更多信息 |
+| `amap_application_secret` |  | 针对 `amap`，高德地图 JavaScript API 应用安全密钥，请访问 https://lbs.amap.com/api/javascript-api/guide/abc/prepare 获取更多信息 |
 
 ### 汇率
 
