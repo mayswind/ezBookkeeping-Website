@@ -128,10 +128,12 @@ For example, if you want to set database type to `mysql`, you can set environmen
 | --- | --- | --- |
 | `map_provider` | `openstreetmap` | Map provider, `openstreetmap`, `googlemap`, `baidumap`, `amap`. Leave blank if you want to disable map. |
 | `map_data_fetch_proxy` | `false` | Whether use the ezbookkeeping server to proxy map data requests for `openstreetmap`. |
-| `google_map_api_key` |  | Google map JavaScript API key for `googlemap`, please visit https://developers.google.com/maps/get-started for more information |
-| `baidu_map_ak` |  | Baidu map JavaScript API application key for `baidumap`, please visit https://lbsyun.baidu.com/index.php?title=jspopular3.0/guide/getkey for more information |
-| `amap_application_key` |  | Amap JavaScript API application key for `amap`, please visit https://lbs.amap.com/api/javascript-api/guide/abc/prepare for more information |
-| `amap_application_secret` |  | Amap JavaScript API application secret for `amap`, please visit https://lbs.amap.com/api/javascript-api/guide/abc/prepare for more information |
+| `google_map_api_key` |  | Google map JavaScript API key for `googlemap`, please visit [https://developers.google.com/maps/get-started](https://developers.google.com/maps/get-started) for more information |
+| `baidu_map_ak` |  | Baidu map JavaScript API application key for `baidumap`, please visit [https://lbsyun.baidu.com/index.php?title=jspopular3.0/guide/getkey](https://lbsyun.baidu.com/index.php?title=jspopular3.0/guide/getkey) for more information |
+| `amap_application_key` |  | Amap JavaScript API application key for `amap`, please visit [https://lbs.amap.com/api/javascript-api/guide/abc/prepare](https://lbs.amap.com/api/javascript-api/guide/abc/prepare) for more information |
+| `amap_security_verification_method` | `internal_proxy` | Amap JavaScript API security verification method for `amap`, supports `internal_proxy` (use the internal proxy to request amap api with amap application secret), `external_proxy` (use an external proxy to request amap api, amap application secret should be set by external proxy), `plain_text` (append amap application secret directly to frontend request, insecurity for public network), please visit [https://developer.amap.com/api/jsapi-v2/guide/abc/load](https://developer.amap.com/api/jsapi-v2/guide/abc/load) for more information |
+| `amap_application_secret` |  | Amap JavaScript API application secret for `amap`, this setting must be provided when `amap_security_verification_method` is set to `internal_proxy` or `plain_text`, please visit [https://lbs.amap.com/api/javascript-api/guide/abc/prepare](https://lbs.amap.com/api/javascript-api/guide/abc/prepare) for more information |
+| `amap_api_external_proxy_url` |  | Amap JavaScript API external proxy url for `amap`, this setting must be provided when `amap_security_verification_method` is set to `external_proxy` |
 
 ### Exchange Rates
 
