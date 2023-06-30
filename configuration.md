@@ -111,6 +111,7 @@ For example, if you want to set database type to `mysql`, you can set environmen
 | Option Name | Default Value | Description |
 | --- | --- | --- |
 | `enable_register` | `true` | Whether enable user registration. |
+| `avatar_provider` |  | User avatar provider, supports [`gravatar`](https://gravatar.com). Leave blank if you want to disable user avatar. |
 
 ### Data
 

@@ -112,6 +112,7 @@ ezBookkeeping 使用 ini 文件作为配置文件。
 | 选项名 | 默认值 | 描述 |
 | --- | --- | --- |
 | `enable_register` | `true` | 是否启用用户注册。 |
+| `avatar_provider` |  | 用户头像提供方，支持 [`gravatar`](https://gravatar.com)。如果您想禁用用户头像，留空即可。 |
 
 ### 数据
 
