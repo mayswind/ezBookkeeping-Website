@@ -74,6 +74,19 @@ ezBookkeeping 使用 ini 文件作为配置文件。
 | `log_query` | `false` | 是否开启日志记录每条 SQL 语句及执行时间。 |
 | `auto_update_database` | `true` | 是否开启当启动 Web 服务器时自动更新数据库结构。 |
 
+### 邮件
+
+> 配置节名称为 `mail`
+
+| 选项名 | 默认值 | 描述 |
+| --- | --- | --- |
+| `enable_smtp` | `false` | 是否启用通过 SMTP 服务器发送邮件。 |
+| `smtp_host` | `127.0.0.1:25` | SMTP 主机地址和端口。 |
+| `smtp_user` |  | SMTP 服务器用户名。 |
+| `smtp_passwd` |  | SMTP 服务器用户密码。 |
+| `smtp_skip_tls_verify` | `false` | 是否校验服务器的证书链和主机名称。 |
+| `from_address` |  | 邮件发件人。可以设置为邮件地址，或按 `"发件人" <user@domain.com>` 格式设置。 |
+
 ### 日志
 
 > 配置节名称为 `log`
@@ -103,6 +116,7 @@ ezBookkeeping 使用 ini 文件作为配置文件。
 | `enable_two_factor` | `true` | 是否开启两步认证。 |
 | `token_expired_time` | `2592000` | 令牌过期时间（0 - 4294967295 秒）。 |
 | `temporary_token_expired_time` | `300` | 临时令牌过期时间（0 - 4294967295 秒）。 |
+| `password_reset_token_expired_time` | `3600` | 密码重置令牌过期时间（0 - 4294967295 秒）。 |
 | `request_id_header` | `true` | 是否开启添加 `X-Request-Id` 响应头以追踪用户请求或错误。 |
 
 ### 用户
@@ -112,6 +126,7 @@ ezBookkeeping 使用 ini 文件作为配置文件。
 | 选项名 | 默认值 | 描述 |
 | --- | --- | --- |
 | `enable_register` | `true` | 是否启用用户注册。 |
+| `enable_forget_password` | `true` | 是否启用用户密码重置。（SMTP 服务器必须配置） |
 | `avatar_provider` |  | 用户头像提供方，支持 [`gravatar`](https://gravatar.com)。如果您想禁用用户头像，留空即可。 |
 
 ### 数据

@@ -73,6 +73,19 @@ For example, if you want to set database type to `mysql`, you can set environmen
 | `log_query` | `false` | Whether enable logging each sql statement and execution time. |
 | `auto_update_database` | `true` | Whether enable updating database structure automatically when starting web server. |
 
+### Mail
+
+> Section name is `mail`
+
+| Option Name | Default Value | Description |
+| --- | --- | --- |
+| `enable_smtp` | `false` | Whether enable sending mail by SMTP server. |
+| `smtp_host` | `127.0.0.1:25` | SMTP host address and port. |
+| `smtp_user` |  | SMTP server user name. |
+| `smtp_passwd` |  | SMTP server user password. |
+| `smtp_skip_tls_verify` | `false` | Whether verify the server's certificate chain and host name. |
+| `from_address` |  | Mail from address. This can be just an email address, or the `"Name" <user@domain.com>` format. |
+
 ### Logging
 
 > Section name is `log`
@@ -102,6 +115,7 @@ For example, if you want to set database type to `mysql`, you can set environmen
 | `enable_two_factor` | `true` | Whether enable two factor authorization. |
 | `token_expired_time` | `2592000` | Token expired time (0 - 4294967295 seconds). |
 | `temporary_token_expired_time` | `300` | Temporary token expired time (0 - 4294967295 seconds). |
+| `password_reset_token_expired_time` | `3600` | Password reset token expired time (0 - 4294967295 seconds). |
 | `request_id_header` | `true` | Whether enable adding `X-Request-Id` header to response to track user request or error. |
 
 ### User
@@ -111,6 +125,7 @@ For example, if you want to set database type to `mysql`, you can set environmen
 | Option Name | Default Value | Description |
 | --- | --- | --- |
 | `enable_register` | `true` | Whether enable user registration. |
+| `enable_forget_password` | `true` | Whether enable user password reset. (SMTP server must be configured) |
 | `avatar_provider` |  | User avatar provider, supports [`gravatar`](https://gravatar.com). Leave blank if you want to disable user avatar. |
 
 ### Data
