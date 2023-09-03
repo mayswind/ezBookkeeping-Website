@@ -116,6 +116,7 @@ ezBookkeeping 使用 ini 文件作为配置文件。
 | `enable_two_factor` | `true` | 是否开启两步认证。 |
 | `token_expired_time` | `2592000` | 令牌过期时间（0 - 4294967295 秒）。 |
 | `temporary_token_expired_time` | `300` | 临时令牌过期时间（0 - 4294967295 秒）。 |
+| `email_verify_token_expired_time` | `3600` | 邮箱验证令牌过期时间（0 - 4294967295 秒）。 |
 | `password_reset_token_expired_time` | `3600` | 密码重置令牌过期时间（0 - 4294967295 秒）。 |
 | `request_id_header` | `true` | 是否开启添加 `X-Request-Id` 响应头以追踪用户请求或错误。 |
 
@@ -126,7 +127,10 @@ ezBookkeeping 使用 ini 文件作为配置文件。
 | 选项名 | 默认值 | 描述 |
 | --- | --- | --- |
 | `enable_register` | `true` | 是否启用用户注册。 |
+| `enable_email_verify` | `false` | 是否启用用户邮箱验证。 |
+| `enable_force_email_verify` | `false` | 用户登录时是否要求邮箱必须验证。 |
 | `enable_forget_password` | `true` | 是否启用用户密码重置。（SMTP 服务器必须配置） |
+| `forget_password_require_email_verify` | `false` | 用户使用密码重置时是否要求邮箱必须验证。 |
 | `avatar_provider` |  | 用户头像提供方，支持 [`gravatar`](https://gravatar.com)。如果您想禁用用户头像，留空即可。 |
 
 ### 数据

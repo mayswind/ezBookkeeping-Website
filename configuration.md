@@ -115,6 +115,7 @@ For example, if you want to set database type to `mysql`, you can set environmen
 | `enable_two_factor` | `true` | Whether enable two factor authorization. |
 | `token_expired_time` | `2592000` | Token expired time (0 - 4294967295 seconds). |
 | `temporary_token_expired_time` | `300` | Temporary token expired time (0 - 4294967295 seconds). |
+| `email_verify_token_expired_time` | `3600` | Email verify token expired time (0 - 4294967295 seconds). |
 | `password_reset_token_expired_time` | `3600` | Password reset token expired time (0 - 4294967295 seconds). |
 | `request_id_header` | `true` | Whether enable adding `X-Request-Id` header to response to track user request or error. |
 
@@ -125,7 +126,10 @@ For example, if you want to set database type to `mysql`, you can set environmen
 | Option Name | Default Value | Description |
 | --- | --- | --- |
 | `enable_register` | `true` | Whether enable user registration. |
+| `enable_email_verify` | `false` | Whether enable user email validation. |
+| `enable_force_email_verify` | `false` | Whether require user email must be verified when login. |
 | `enable_forget_password` | `true` | Whether enable user password reset. (SMTP server must be configured) |
+| `forget_password_require_email_verify` | `false` | Whether require user email must be verified when use forget password.  |
 | `avatar_provider` |  | User avatar provider, supports [`gravatar`](https://gravatar.com). Leave blank if you want to disable user avatar. |
 
 ### Data
