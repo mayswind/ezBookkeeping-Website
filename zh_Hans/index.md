@@ -44,7 +44,7 @@ ezBookkeeping 是一个自托管 (self-hosted) 的轻量个人账本应用。它
 
 ## 截图
 ### 移动设备
-[![ezBookkeeping](https://raw.githubusercontent.com/wiki/mayswind/ezbookkeeping/img/zh_Hans.png)](https://raw.githubusercontent.com/wiki/mayswind/ezbookkeeping/img/zh_Hans.png)
+[![ezBookkeeping](https://raw.githubusercontent.com/wiki/mayswind/ezbookkeeping/img/mobile/zh_Hans.png)](https://raw.githubusercontent.com/wiki/mayswind/ezbookkeeping/img/mobile/zh_Hans.png)
 
 ## 安装
 ### 使用 Docker 部署

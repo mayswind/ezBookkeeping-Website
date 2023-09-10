@@ -42,7 +42,7 @@ Project url: [https://github.com/mayswind/ezbookkeeping](https://github.com/mays
 
 ## Screenshots
 ### Mobile Device
-[![ezBookkeeping](https://raw.githubusercontent.com/wiki/mayswind/ezbookkeeping/img/en.png)](https://raw.githubusercontent.com/wiki/mayswind/ezbookkeeping/img/en.png)
+[![ezBookkeeping](https://raw.githubusercontent.com/wiki/mayswind/ezbookkeeping/img/mobile/en.png)](https://raw.githubusercontent.com/wiki/mayswind/ezbookkeeping/img/mobile/en.png)
 
 ## Installation
 ### Ship with docker
