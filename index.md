@@ -26,6 +26,7 @@ Project url: [https://github.com/mayswind/ezbookkeeping](https://github.com/mays
     * Multiple database support (SQLite, MySQL, PostgreSQL, etc.)
     * Multiple operation system & hardware support (Windows, macOS, Linux & x86, amd64, ARM)
 4. User-friendly interface
+    * Both desktop and mobile UI
     * Close to native app experience (for mobile device)
     * Two-level account & two-level category support
     * Plentiful preset categories
@@ -41,7 +42,10 @@ Project url: [https://github.com/mayswind/ezbookkeeping](https://github.com/mays
 10. Data export
 
 ## Screenshots
-### Mobile Device
+### Desktop Version
+[![ezBookkeeping](https://raw.githubusercontent.com/wiki/mayswind/ezbookkeeping/img/desktop/en.png)](https://raw.githubusercontent.com/wiki/mayswind/ezbookkeeping/img/desktop/en.png)
+
+### Mobile Version
 [![ezBookkeeping](https://raw.githubusercontent.com/wiki/mayswind/ezbookkeeping/img/mobile/en.png)](https://raw.githubusercontent.com/wiki/mayswind/ezbookkeeping/img/mobile/en.png)
 
 ## Installation
