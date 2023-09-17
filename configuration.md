@@ -83,7 +83,7 @@ For example, if you want to set database type to `mysql`, you can set environmen
 | `smtp_host` | `127.0.0.1:25` | SMTP host address and port. |
 | `smtp_user` |  | SMTP server user name. |
 | `smtp_passwd` |  | SMTP server user password. |
-| `smtp_skip_tls_verify` | `false` | Whether verify the server's certificate chain and host name. |
+| `smtp_skip_tls_verify` | `false` | Whether verify the SMTP server's certificate chain and host name. |
 | `from_address` |  | Mail from address. This can be just an email address, or the `"Name" <user@domain.com>` format. |
 
 ### Logging
@@ -164,3 +164,4 @@ For example, if you want to set database type to `mysql`, you can set environmen
 | --- | --- | --- |
 | `data_source` | `euro_central_bank` | Exchange rates data source, supports `euro_central_bank`, `bank_of_canada`, `reserve_bank_of_australia`, `czech_national_bank`, `national_bank_of_poland`, `monetary_authority_of_singapore`. For more information, please visit [Exchange Rates](/exchange_rates). |
 | `request_timeout` | `10000` | Request timeout for exchange rates data (0 - 4294967295 milliseconds). |
+| `skip_tls_verify` | `false` | Whether verify the server's certificate chain and host name when request exchange rates data. |

@@ -84,7 +84,7 @@ ezBookkeeping 使用 ini 文件作为配置文件。
 | `smtp_host` | `127.0.0.1:25` | SMTP 主机地址和端口。 |
 | `smtp_user` |  | SMTP 服务器用户名。 |
 | `smtp_passwd` |  | SMTP 服务器用户密码。 |
-| `smtp_skip_tls_verify` | `false` | 是否校验服务器的证书链和主机名称。 |
+| `smtp_skip_tls_verify` | `false` | 是否校验 SMTP 服务器的证书链和主机名称。 |
 | `from_address` |  | 邮件发件人。可以设置为邮件地址，或按 `"发件人" <user@domain.com>` 格式设置。 |
 
 ### 日志
@@ -165,3 +165,4 @@ ezBookkeeping 使用 ini 文件作为配置文件。
 | --- | --- | --- |
 | `data_source` | `euro_central_bank` | 汇率数据源，支持 `euro_central_bank`、`bank_of_canada`、`reserve_bank_of_australia`、`czech_national_bank`、`national_bank_of_poland`, `monetary_authority_of_singapore`。更多信息，请访问 [汇率](/zh_Hans/exchange_rates)。 |
 | `request_timeout` | `10000` | 请求汇率数据的超时时间（0 - 4294967295 毫秒）。 |
+| `skip_tls_verify` | `false` | 请求汇率数据时是否校验服务器的证书链和主机名称。 |
