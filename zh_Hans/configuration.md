@@ -147,8 +147,8 @@ ezBookkeeping 使用 ini 文件作为配置文件。
 
 | 选项名 | 默认值 | 描述 |
 | --- | --- | --- |
-| `map_provider` | `openstreetmap` | 地图提供方，支持 [`openstreetmap`](https://www.openstreetmap.org)、[`openstreetmap_humanitarian`](http://map.hotosm.org)、[`opentopomap`](https://opentopomap.org)、[`opnvkarte`](https://publictransportmap.org)、[`cyclosm`](https://www.cyclosm.org)、[`tomtom`](https://www.tomtom.com)、[`googlemap`](https://map.google.com)、[`baidumap`](https://map.baidu.com) 和 [`amap`](https://amap.com)。如果您想禁用地图，留空即可。 |
-| `map_data_fetch_proxy` | `false` | 针对 `openstreetmap`、`openstreetmap_humanitarian`、`opentopomap`、`opnvkarte`、`cyclosm` 或 `tomtom` 是否使用 ezbookkeeping 服务端代理地图数据请求。 |
+| `map_provider` | `openstreetmap` | 地图提供方，支持 [`openstreetmap`](https://www.openstreetmap.org)、[`openstreetmap_humanitarian`](http://map.hotosm.org)、[`opentopomap`](https://opentopomap.org)、[`opnvkarte`](https://publictransportmap.org)、[`cyclosm`](https://www.cyclosm.org)、[`cartodb`](https://carto.com/basemaps)、[`tomtom`](https://www.tomtom.com)、[`googlemap`](https://map.google.com)、[`baidumap`](https://map.baidu.com)、[`amap`](https://amap.com) 和 `custom`。如果您想禁用地图，留空即可。 |
+| `map_data_fetch_proxy` | `false` | 针对 `openstreetmap`、`openstreetmap_humanitarian`、`opentopomap`、`opnvkarte`、`cyclosm`、`cartodb`、`tomtom` 或 `custom` 是否使用 ezbookkeeping 服务端代理地图数据请求。 |
 | `tomtom_map_api_key` |  | 针对 `tomtom`，TomTom 地图 API Key，请访问 [https://developer.tomtom.com/how-to-get-tomtom-api-key](https://developer.tomtom.com/how-to-get-tomtom-api-key) 获取更多信息。 |
 | `google_map_api_key` |  | 针对 `googlemap`，Google 地图 JavaScript API Key，请访问 [https://developers.google.com/maps/get-started](https://developers.google.com/maps/get-started) 获取更多信息。 |
 | `baidu_map_ak` |  | 针对 `baidumap`，百度地图 JavaScript API 访问应用（AK），请访问 [https://lbsyun.baidu.com/index.php?title=jspopular3.0/guide/getkey](https://lbsyun.baidu.com/index.php?title=jspopular3.0/guide/getkey) 获取更多信息。 |
@@ -156,6 +156,10 @@ ezBookkeeping 使用 ini 文件作为配置文件。
 | `amap_security_verification_method` | `internal_proxy` | 针对 `amap`，高德地图 JavaScript API 安全验证方法， 支持 `internal_proxy` （使用内建代理附加高德应用安全密钥请求高德地图 API）, `external_proxy` （使用外部代理请求高德地图 API，高德应用安全密钥需要被外部代理设置）, `plain_text` （直接将高德应用安全密钥添加到前端请求中，公网使用不安全），请访问 [https://developer.amap.com/api/jsapi-v2/guide/abc/load](https://developer.amap.com/api/jsapi-v2/guide/abc/load) 获取更多信息。 |
 | `amap_application_secret` |  | 针对 `amap`，高德地图 JavaScript API 应用安全密钥，`amap_security_verification_method` 设置为 `internal_proxy` 或 `plain_text` 时该选项必须设置，请访问 [https://lbs.amap.com/api/javascript-api/guide/abc/prepare](https://lbs.amap.com/api/javascript-api/guide/abc/prepare) 获取更多信息。 |
 | `amap_api_external_proxy_url` |  | 针对 `amap`，高德地图 JavaScript API 外部代理地址，`amap_security_verification_method` 设置为 `external_proxy` 时该选项必须设置。 |
+| `custom_map_tile_server_url` |  | 自定义地图贴图服务器地址，支持 {x}、{y}（坐标）、{z}（缩放等级）占位符，例如 `https://tile.openstreetmap.org/{z}/{x}/{y}.png`。 |
+| `custom_map_tile_server_min_zoom_level` | `1` | 自定义地图贴图服务器最小缩放等级（0 - 255）。 |
+| `custom_map_tile_server_max_zoom_level` | `18` | 自定义地图贴图服务器最大缩放等级（0 - 255）。 |
+| `custom_map_tile_server_default_zoom_level` | `14` | 自定义地图贴图服务器默认缩放等级（0 - 255）。 |
 
 ### 汇率
 

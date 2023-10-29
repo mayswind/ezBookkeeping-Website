@@ -146,8 +146,8 @@ For example, if you want to set database type to `mysql`, you can set environmen
 
 | Option Name | Default Value | Description |
 | --- | --- | --- |
-| `map_provider` | `openstreetmap` | Map provider, supports [`openstreetmap`](https://www.openstreetmap.org), [`openstreetmap_humanitarian`](http://map.hotosm.org), [`opentopomap`](https://opentopomap.org), [`opnvkarte`](https://publictransportmap.org), [`cyclosm`](https://www.cyclosm.org), [`tomtom`](https://www.tomtom.com), [`googlemap`](https://map.google.com), [`baidumap`](https://map.baidu.com), [`amap`](https://amap.com). Leave blank if you want to disable map. |
-| `map_data_fetch_proxy` | `false` | Whether use the ezbookkeeping server to proxy map data requests for `openstreetmap`, `openstreetmap_humanitarian`, `opentopomap`, `opnvkarte`, `cyclosm` or `tomtom`. |
+| `map_provider` | `openstreetmap` | Map provider, supports [`openstreetmap`](https://www.openstreetmap.org), [`openstreetmap_humanitarian`](http://map.hotosm.org), [`opentopomap`](https://opentopomap.org), [`opnvkarte`](https://publictransportmap.org), [`cyclosm`](https://www.cyclosm.org), [`cartodb`](https://carto.com/basemaps), [`tomtom`](https://www.tomtom.com), [`googlemap`](https://map.google.com), [`baidumap`](https://map.baidu.com), [`amap`](https://amap.com) and `custom`. Leave blank if you want to disable map. |
+| `map_data_fetch_proxy` | `false` | Whether use the ezbookkeeping server to proxy map data requests for `openstreetmap`, `openstreetmap_humanitarian`, `opentopomap`, `opnvkarte`, `cyclosm`, `cartodb`, `tomtom` or `custom`. |
 | `tomtom_map_api_key` |  | TomTom map API key for `tomtom`, please visit [https://developer.tomtom.com/how-to-get-tomtom-api-key](https://developer.tomtom.com/how-to-get-tomtom-api-key) for more information. |
 | `google_map_api_key` |  | Google map JavaScript API key for `googlemap`, please visit [https://developers.google.com/maps/get-started](https://developers.google.com/maps/get-started) for more information. |
 | `baidu_map_ak` |  | Baidu map JavaScript API application key for `baidumap`, please visit [https://lbsyun.baidu.com/index.php?title=jspopular3.0/guide/getkey](https://lbsyun.baidu.com/index.php?title=jspopular3.0/guide/getkey) for more information. |
@@ -155,6 +155,10 @@ For example, if you want to set database type to `mysql`, you can set environmen
 | `amap_security_verification_method` | `internal_proxy` | Amap JavaScript API security verification method for `amap`, supports `internal_proxy` (use the internal proxy to request amap api with amap application secret), `external_proxy` (use an external proxy to request amap api, amap application secret should be set by external proxy), `plain_text` (append amap application secret to frontend request directly, insecurity for public network), please visit [https://developer.amap.com/api/jsapi-v2/guide/abc/load](https://developer.amap.com/api/jsapi-v2/guide/abc/load) for more information. |
 | `amap_application_secret` |  | Amap JavaScript API application secret for `amap`, this setting must be provided when `amap_security_verification_method` is set to `internal_proxy` or `plain_text`, please visit [https://lbs.amap.com/api/javascript-api/guide/abc/prepare](https://lbs.amap.com/api/javascript-api/guide/abc/prepare) for more information. |
 | `amap_api_external_proxy_url` |  | Amap JavaScript API external proxy url for `amap`, this setting must be provided when `amap_security_verification_method` is set to `external_proxy`. |
+| `custom_map_tile_server_url` |  | Custom map tile server url, supports {x}, {y} (coordinates) and {z} (zoom level) placeholders, like `https://tile.openstreetmap.org/{z}/{x}/{y}.png`. |
+| `custom_map_tile_server_min_zoom_level` | `1` | Custom map tile server min zoom level (0 - 255). |
+| `custom_map_tile_server_max_zoom_level` | `18` | Custom map tile server max zoom level (0 - 255). |
+| `custom_map_tile_server_default_zoom_level` | `14` | Custom map tile server default zoom level (0 - 255). |
 
 ### Exchange Rates
 
