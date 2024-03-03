@@ -148,6 +148,7 @@ For example, if you want to set database type to `mysql`, you can set environmen
 | --- | --- | --- |
 | `map_provider` | `openstreetmap` | Map provider, supports [`openstreetmap`](https://www.openstreetmap.org), [`openstreetmap_humanitarian`](http://map.hotosm.org), [`opentopomap`](https://opentopomap.org), [`opnvkarte`](https://publictransportmap.org), [`cyclosm`](https://www.cyclosm.org), [`cartodb`](https://carto.com/basemaps), [`tomtom`](https://www.tomtom.com), [`googlemap`](https://map.google.com), [`baidumap`](https://map.baidu.com), [`amap`](https://amap.com) and `custom`. Leave blank if you want to disable map. |
 | `map_data_fetch_proxy` | `false` | Whether use the ezbookkeeping server to proxy map data requests for `openstreetmap`, `openstreetmap_humanitarian`, `opentopomap`, `opnvkarte`, `cyclosm`, `cartodb`, `tomtom` or `custom`. |
+| `proxy` | `system` | Proxy to request original map data when `map_data_fetch_proxy` is set to `true`, supports `system` (use system proxy), `none` (do not use proxy), or proxy URL which starts with `http://`, `https://` or `socks5://`, default is `system`. |
 | `tomtom_map_api_key` |  | TomTom map API key for `tomtom`, please visit [https://developer.tomtom.com/how-to-get-tomtom-api-key](https://developer.tomtom.com/how-to-get-tomtom-api-key) for more information. |
 | `google_map_api_key` |  | Google map JavaScript API key for `googlemap`, please visit [https://developers.google.com/maps/get-started](https://developers.google.com/maps/get-started) for more information. |
 | `baidu_map_ak` |  | Baidu map JavaScript API application key for `baidumap`, please visit [https://lbsyun.baidu.com/index.php?title=jspopular3.0/guide/getkey](https://lbsyun.baidu.com/index.php?title=jspopular3.0/guide/getkey) for more information. |
@@ -167,5 +168,6 @@ For example, if you want to set database type to `mysql`, you can set environmen
 | Option Name | Default Value | Description |
 | --- | --- | --- |
 | `data_source` | `euro_central_bank` | Exchange rates data source, supports `euro_central_bank`, `bank_of_canada`, `reserve_bank_of_australia`, `czech_national_bank`, `national_bank_of_poland`, `monetary_authority_of_singapore`. For more information, please visit [Exchange Rates](/exchange_rates). |
+| `proxy` | `system` | Proxy to request exchange rates data, supports `system` (use system proxy), `none` (do not use proxy), or proxy URL which starts with `http://`, `https://` or `socks5://`, default is `system`. |
 | `request_timeout` | `10000` | Request timeout for exchange rates data (0 - 4294967295 milliseconds). |
 | `skip_tls_verify` | `false` | Whether verify the server's certificate chain and host name when request exchange rates data. |
