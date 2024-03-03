@@ -109,12 +109,11 @@ ezBookkeeping 支持自动更新汇率以及支持多个不同数据源。您可
 
 基准货币是澳大利亚元（`AUD`）。每日汇率通常在工作日的 16:00（澳大利亚东部标准时间 AEST）左右更新。
 
-该数据源支持 18 种货币，所有货币如下：
+该数据源支持 17 种货币，所有货币如下：
 
 | 货币 | 货币代码 | 更新频率 |
 | --- | --- | --- |
 | 加拿大元 | CAD | 每日 |
-| 瑞士法郎 | CHF | 每日 |
 | 人民币 | CNY | 每日 |
 | 欧元 | EUR | 每日 |
 | 英镑 | GBP | 每日 |
@@ -140,7 +139,7 @@ ezBookkeeping 支持自动更新汇率以及支持多个不同数据源。您可
 
 基准货币是捷克克朗（`CZK`）。每日汇率通常在工作日的 14:30（欧洲中部时间 CET）后更新。每月汇率通常在每个月最后一个工作日更新。
 
-该数据源支持 154 种货币，所有货币如下：
+该数据源支持 152 种货币，所有货币如下：
 
 | 货币 | 货币代码 | 更新频率 |
 | --- | --- | --- |
@@ -286,7 +285,6 @@ ezBookkeeping 支持自动更新汇率以及支持多个不同数据源。您可
 | 美元 | USD | 每日 |
 | 乌拉圭比索 | UYU | 每月 |
 | 乌兹别克斯坦苏姆 | UZS | 每月 |
-| 委内瑞拉强势玻利瓦尔 | VEF | 每月 |
 | 越南盾 | VND | 每月 |
 | 瓦努阿图瓦图 | VUV | 每月 |
 | 萨摩亚塔拉 | WST | 每月 |
@@ -297,13 +295,12 @@ ezBookkeeping 支持自动更新汇率以及支持多个不同数据源。您可
 | 也门里亚尔 | YER | 每月 |
 | 南非兰特 | ZAR | 每日 |
 | 赞比亚克瓦查 | ZMW | 每月 |
-| 津巴布韦元 | ZWL | 每月 |
 
 配置选项 `data_source` 的值是 `czech_national_bank`
 
 ### 波兰国家银行
 
-> 参考：[https://www.nbp.pl/homen.aspx?f=/kursy/kursyen.htm](https://www.nbp.pl/homen.aspx?f=/kursy/kursyen.htm)
+> 参考：[https://nbp.pl/en/statistic-and-financial-reporting/rates/](https://nbp.pl/en/statistic-and-financial-reporting/rates/)
 
 基准货币是波兰兹罗提（`PLN`）。每日汇率通常在工作日的 11:45（欧洲中部时间 CET） 到 12:15（欧洲中部时间 CET） 间更新。每周汇率通常在周三更新。
 

@@ -108,12 +108,11 @@ Configuration option `data_source` value is `bank_of_canada`
 
 The base currency is Australian dollar (`AUD`). The daily exchange rates are usually updated around 16:00 AEST on every working day.
 
-This data source supports 18 currencies, and all currencies are as follows:
+This data source supports 17 currencies, and all currencies are as follows:
 
 | Currency | Currency Code | Update Frequency |
 | --- | --- | --- |
 | Canadian dollar | CAD | Daily |
-| Swiss franc | CHF | Daily |
 | Chinese yuan | CNY | Daily |
 | Euro | EUR | Daily |
 | Pound sterling | GBP | Daily |
@@ -139,7 +138,7 @@ Configuration option `data_source` value is `reserve_bank_of_australia`
 
 The base currency is Czech koruna (`CZK`). The daily exchange rates are usually updated after 14:30 CET on every working day. The monthly exchange rates are usually updated on the last working day of the month.
 
-This data source supports 154 currencies, and all currencies are as follows:
+This data source supports 152 currencies, and all currencies are as follows:
 
 | Currency | Currency Code | Update Frequency |
 | --- | --- | --- |
@@ -285,7 +284,6 @@ This data source supports 154 currencies, and all currencies are as follows:
 | United States dollar | USD | Daily |
 | Uruguayan peso | UYU | Monthly |
 | Uzbekistan som | UZS | Monthly |
-| Venezuelan Bolívar Fuerte | VEF | Monthly |
 | Vietnamese đồng | VND | Monthly |
 | Vanuatu vatu | VUV | Monthly |
 | Samoan tala | WST | Monthly |
@@ -296,13 +294,12 @@ This data source supports 154 currencies, and all currencies are as follows:
 | Yemeni rial | YER | Monthly |
 | South African rand | ZAR | Daily |
 | Zambian kwacha | ZMW | Monthly |
-| Zimbabwean dollar | ZWL | Monthly |
 
 Configuration option `data_source` value is `czech_national_bank`
 
 ### National Bank of Poland
 
-> Reference: [https://www.nbp.pl/homen.aspx?f=/kursy/kursyen.htm](https://www.nbp.pl/homen.aspx?f=/kursy/kursyen.htm)
+> Reference: [https://nbp.pl/en/statistic-and-financial-reporting/rates/](https://nbp.pl/en/statistic-and-financial-reporting/rates/)
 
 The base currency is Polish złoty (`PLN`). The daily exchange rates are usually updated between 11:45 CET and 12:15 CET on every working day. The weekly exchange rates are usually updated on Wednesdays.
 
