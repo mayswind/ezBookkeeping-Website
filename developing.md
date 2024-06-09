@@ -18,7 +18,7 @@ permalink: /developing
 
 ## Preparation
 
-ezBookkeeping is written in Golang and JavaScript. You should install [Git](https://git-scm.com/), [Golang](https://golang.org/), [GCC](http://gcc.gnu.org/), [Node.js](https://nodejs.org/) and [NPM](https://www.npmjs.com/) before you start to develop. The release package and docker image of ezBookkeeping is compiled in Golang 1.20 and Node.js 18.x.
+ezBookkeeping is written in Golang and JavaScript. You should install [Git](https://git-scm.com/), [Golang](https://golang.org/), [GCC](http://gcc.gnu.org/), [Node.js](https://nodejs.org/) and [NPM](https://www.npmjs.com/) before you start to develop. The release package and docker image of ezBookkeeping is compiled in Golang 1.21 and Node.js 18.x.
 
 ## Download the source code
 
@@ -36,7 +36,7 @@ After doing the above steps, you can open the url `http://127.0.0.1:8081/` in yo
 
 ## Building
 
-You can use `build.sh` script to build frontend files, backend file, full package or docker image.
+You can use `build.sh` / `build.bat` script to build frontend files, backend file, full package or docker image.
 
 ### Building frontend files
 

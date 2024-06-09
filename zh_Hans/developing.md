@@ -19,7 +19,7 @@ permalink: /zh_Hans/developing
 
 ## 准备
 
-ezBookkeeping 使用 Golang 和 JavaScript 编写。在您开始开发前，你需要安装 [Git](https://git-scm.com/)、[Golang](https://golang.org/)、[GCC](http://gcc.gnu.org/)、[Node.js](https://nodejs.org/) 和 [NPM](https://www.npmjs.com/)。ezBookkeeping 的发布包和 Docker 镜像使用 Golang 1.20 和 Node.js 18.x 进行编译。
+ezBookkeeping 使用 Golang 和 JavaScript 编写。在您开始开发前，你需要安装 [Git](https://git-scm.com/)、[Golang](https://golang.org/)、[GCC](http://gcc.gnu.org/)、[Node.js](https://nodejs.org/) 和 [NPM](https://www.npmjs.com/)。ezBookkeeping 的发布包和 Docker 镜像使用 Golang 1.21 和 Node.js 18.x 进行编译。
 
 ## 下载源代码
 
@@ -37,7 +37,7 @@ ezBookkeeping 使用 Golang 和 JavaScript 编写。在您开始开发前，你�
 
 ## 编译
 
-您可以使用 `build.sh` 脚本构建前端文件、后端文件、完整包以及 Docker 镜像。
+您可以使用 `build.sh` / `build.bat` 脚本构建前端文件、后端文件、完整包以及 Docker 镜像。
 
 ### 构建前端文件
 
