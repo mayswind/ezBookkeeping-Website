@@ -41,23 +41,45 @@ ezBookkeeping 使用 Golang 和 JavaScript 编写。在您开始开发前，你�
 
 ### 构建前端文件
 
+**Linux / macOS**
+
     $ ./build.sh frontend
+
+**Windows**
+
+    > .\build.bat frontend
 
 前端文件将会构建并放置到 `dist` 目录中。
 
 ### 构建后端文件
 
+**Linux / macOS**
+
     $ ./build.sh backend
+
+**Windows**
+
+    > .\build.bat backend
 
 后端文件将会构建并放置到项目目录中，文件名为 `ezbookkeeping`。
 
 ### 构建完整包
 
+**Linux / macOS**
+
     $ ./build.sh package -o ezbookkeeping.tar.gz
 
 所有文件将会构建并打包到 `ezbookkeeping.tar.gz`。
 
+**Windows**
+
+    > .\build.bat package -o ezbookkeeping.zip
+
+所有文件将会构建并打包到 `ezbookkeeping.zip`。
+
 ### 构建 Docker 镜像
+
+**Linux**
 
     $ ./build.sh docker -t ezbookkeeping:release
 

@@ -40,23 +40,45 @@ You can use `build.sh` script to build frontend files, backend file, full packag
 
 ### Building frontend files
 
+**Linux / macOS**
+
     $ ./build.sh frontend
+
+**Windows**
+
+    > .\build.bat frontend
 
 The frontend files will be built and be placed in the `dist` directory.
 
 ### Building backend file
 
+**Linux / macOS**
+
     $ ./build.sh backend
+
+**Windows**
+
+    > .\build.bat backend
 
 The backend file will be built and be placed in the project directory and the file name is `ezbookkeeping`.
 
 ### Building full package
 
+**Linux / macOS**
+
     $ ./build.sh package -o ezbookkeeping.tar.gz
 
 All the files will be built and be packaged in `ezbookkeeping.tar.gz`.
 
+**Windows**
+
+    > .\build.bat package -o ezbookkeeping.zip
+
+All the files will be packaged in `ezbookkeeping.zip`.
+
 ### Building docker image
+
+**Linux**
 
     $ ./build.sh docker -t ezbookkeeping:release
 
