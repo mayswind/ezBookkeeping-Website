@@ -106,6 +106,15 @@ ezBookkeeping 使用 ini 文件作为配置文件。
 | `generator_type` | `internal` | Uuid 生成器类型，当前支持 `internal`。 |
 | `server_id` | `0` | 使用 `internal` Uuid 生成器时，服务器唯一的实例ID。该值需要设置为 `0`-`255`。 |
 
+### 重复检查器
+
+> 配置节名称为 `duplicate_checker`
+
+| 选项名 | 默认值 | 描述 |
+| --- | --- | --- |
+| `checker_type` | `in_memory` | 重复检查器类型，当前支持 `in_memory`。 |
+| `check_new_transaction_submissions` | `true` | 是否使用重复检查器以防止新交易记录的重复提交。 |
+
 ### 安全
 
 > 配置节名称为 `security`

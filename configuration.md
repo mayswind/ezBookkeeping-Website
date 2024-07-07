@@ -105,6 +105,15 @@ For example, if you want to set database type to `mysql`, you can set environmen
 | `generator_type` | `internal` | Uuid generator type, supports `internal` currently. |
 | `server_id` | `0` | Unique uuid server instance id, for `internal` uuid generator. The value should be `0`-`255`. |
 
+### Duplicate Checker
+
+> Section name is `duplicate_checker`
+
+| Option Name | Default Value | Description |
+| --- | --- | --- |
+| `checker_type` | `in_memory` | Duplicate checker type, supports `in_memory` currently. |
+| `check_new_transaction_submissions` | `true` | Whether use duplicate checker to prevent duplicate submissions for new transaction record. |
+
 ### Security
 
 > Section name is `security`
