@@ -113,7 +113,8 @@ ezBookkeeping 使用 ini 文件作为配置文件。
 | 选项名 | 默认值 | 描述 |
 | --- | --- | --- |
 | `checker_type` | `in_memory` | 重复检查器类型，当前支持 `in_memory`。 |
-| `check_new_transaction_submissions` | `true` | 是否使用重复检查器以防止新交易记录的重复提交。 |
+| `cleanup_interval` | `60` | 使用 `in_memory` 重复检查器时，清除过期数据的间隔时间（0 - 4294967295 秒）。 |
+| `duplicate_submissions_interval` | `300` | 同一个页面上重复提交的最小间隔时间（0 - 4294967295 秒）（退出并重新进入页面时被视为一次新的会话）。设置为 `0` 时禁用新数据提交的重复检查器。 |
 
 ### 安全
 

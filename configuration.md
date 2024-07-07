@@ -112,7 +112,8 @@ For example, if you want to set database type to `mysql`, you can set environmen
 | Option Name | Default Value | Description |
 | --- | --- | --- |
 | `checker_type` | `in_memory` | Duplicate checker type, supports `in_memory` currently. |
-| `check_new_transaction_submissions` | `true` | Whether use duplicate checker to prevent duplicate submissions for new transaction record. |
+| `cleanup_interval` | `60` | Cleanup expired data interval (0 - 4294967295 seconds), for `in_memory` duplicate checker. |
+| `duplicate_submissions_interval` | `300` | The minimum interval (0 - 4294967295 seconds) between duplicate submissions on the same page (exiting and re-entering the page is considered as a new session). Set to `0` to disable duplicate checker for new data submissions. |
 
 ### Security
 
