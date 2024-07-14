@@ -113,7 +113,7 @@ ezBookkeeping 使用 ini 文件作为配置文件。
 | 选项名 | 默认值 | 描述 |
 | --- | --- | --- |
 | `checker_type` | `in_memory` | 重复检查器类型，当前支持 `in_memory`。 |
-| `cleanup_interval` | `60` | 使用 `in_memory` 重复检查器时，清除过期数据的间隔时间（0 - 4294967295 秒）。 |
+| `cleanup_interval` | `60` | 使用 `in_memory` 重复检查器时，清除过期数据的间隔时间（1 - 4294967295 秒）。 |
 | `duplicate_submissions_interval` | `300` | 同一个页面上重复提交的最小间隔时间（0 - 4294967295 秒）（退出并重新进入页面时被视为一次新的会话）。设置为 `0` 时禁用新数据提交的重复检查器。 |
 
 ### 安全
@@ -124,10 +124,10 @@ ezBookkeeping 使用 ini 文件作为配置文件。
 | --- | --- | --- |
 | `secret_key` |  | 作为密钥使用，**为了保证您的数据安全，请在第一次运行 ezBookkeeping 前修改该值**。你可以通过执行 `ezbookkeeping security gen-secret-key` 获取一个随机密钥。 |
 | `enable_two_factor` | `true` | 是否开启两步认证。 |
-| `token_expired_time` | `2592000` | 令牌过期时间（0 - 4294967295 秒）。 |
-| `temporary_token_expired_time` | `300` | 临时令牌过期时间（0 - 4294967295 秒）。 |
-| `email_verify_token_expired_time` | `3600` | 邮箱验证令牌过期时间（0 - 4294967295 秒）。 |
-| `password_reset_token_expired_time` | `3600` | 密码重置令牌过期时间（0 - 4294967295 秒）。 |
+| `token_expired_time` | `2592000` | 令牌过期时间（60 - 4294967295 秒）。 |
+| `temporary_token_expired_time` | `300` | 临时令牌过期时间（60 - 4294967295 秒）。 |
+| `email_verify_token_expired_time` | `3600` | 邮箱验证令牌过期时间（60 - 4294967295 秒）。 |
+| `password_reset_token_expired_time` | `3600` | 密码重置令牌过期时间（60 - 4294967295 秒）。 |
 | `request_id_header` | `true` | 是否开启添加 `X-Request-Id` 响应头以追踪用户请求或错误。 |
 
 ### 用户
@@ -181,4 +181,4 @@ ezBookkeeping 使用 ini 文件作为配置文件。
 | `data_source` | `euro_central_bank` | 汇率数据源，支持 `euro_central_bank`、`bank_of_canada`、`reserve_bank_of_australia`、`czech_national_bank`、`national_bank_of_poland`, `monetary_authority_of_singapore`。更多信息，请访问 [汇率](/zh_Hans/exchange_rates)。 |
 | `proxy` | `system` | 请求汇率数据使用的代理，支持 `system`（使用系统代理） `none`（不使用代理），或以 `http://`、`https://` 或 `socks5://` 开头的代理服务器地址，默认为 `system`。 |
 | `request_timeout` | `10000` | 请求汇率数据的超时时间（0 - 4294967295 毫秒）。 |
-| `skip_tls_verify` | `false` | 请求汇率数据时是否校验服务器的证书链和主机名称。 |
+| `skip_tls_verify` | `false` | 请求汇率数据时是否校验服务器的证书链和主机名称。设置为 `0` 禁用请求汇率数据超时。 |

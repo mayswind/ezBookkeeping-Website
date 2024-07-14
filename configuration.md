@@ -112,7 +112,7 @@ For example, if you want to set database type to `mysql`, you can set environmen
 | Option Name | Default Value | Description |
 | --- | --- | --- |
 | `checker_type` | `in_memory` | Duplicate checker type, supports `in_memory` currently. |
-| `cleanup_interval` | `60` | Cleanup expired data interval (0 - 4294967295 seconds), for `in_memory` duplicate checker. |
+| `cleanup_interval` | `60` | Cleanup expired data interval (1 - 4294967295 seconds), for `in_memory` duplicate checker. |
 | `duplicate_submissions_interval` | `300` | The minimum interval (0 - 4294967295 seconds) between duplicate submissions on the same page (exiting and re-entering the page is considered as a new session). Set to `0` to disable duplicate checker for new data submissions. |
 
 ### Security
@@ -123,10 +123,10 @@ For example, if you want to set database type to `mysql`, you can set environmen
 | --- | --- | --- |
 | `secret_key` |  | Used for encryption key, **you must change it to keep your user data safe before you first run ezBookkeeping**. You can get a random secret key by executing `ezbookkeeping security gen-secret-key`. |
 | `enable_two_factor` | `true` | Whether enable two factor authorization. |
-| `token_expired_time` | `2592000` | Token expired time (0 - 4294967295 seconds). |
-| `temporary_token_expired_time` | `300` | Temporary token expired time (0 - 4294967295 seconds). |
-| `email_verify_token_expired_time` | `3600` | Email verify token expired time (0 - 4294967295 seconds). |
-| `password_reset_token_expired_time` | `3600` | Password reset token expired time (0 - 4294967295 seconds). |
+| `token_expired_time` | `2592000` | Token expired time (60 - 4294967295 seconds). |
+| `temporary_token_expired_time` | `300` | Temporary token expired time (60 - 4294967295 seconds). |
+| `email_verify_token_expired_time` | `3600` | Email verify token expired time (60 - 4294967295 seconds). |
+| `password_reset_token_expired_time` | `3600` | Password reset token expired time (60 - 4294967295 seconds). |
 | `request_id_header` | `true` | Whether enable adding `X-Request-Id` header to response to track user request or error. |
 
 ### User
@@ -179,5 +179,5 @@ For example, if you want to set database type to `mysql`, you can set environmen
 | --- | --- | --- |
 | `data_source` | `euro_central_bank` | Exchange rates data source, supports `euro_central_bank`, `bank_of_canada`, `reserve_bank_of_australia`, `czech_national_bank`, `national_bank_of_poland`, `monetary_authority_of_singapore`. For more information, please visit [Exchange Rates](/exchange_rates). |
 | `proxy` | `system` | Proxy to request exchange rates data, supports `system` (use system proxy), `none` (do not use proxy), or proxy URL which starts with `http://`, `https://` or `socks5://`, default is `system`. |
-| `request_timeout` | `10000` | Request timeout for exchange rates data (0 - 4294967295 milliseconds). |
+| `request_timeout` | `10000` | Request timeout for exchange rates data (0 - 4294967295 milliseconds). Set to `0` to disable timeout for requesting exchange rates data. |
 | `skip_tls_verify` | `false` | Whether verify the server's certificate chain and host name when request exchange rates data. |
