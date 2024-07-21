@@ -169,7 +169,8 @@ ezBookkeeping 使用 ini 文件作为配置文件。
 | `amap_security_verification_method` | `internal_proxy` | 针对 `amap`，高德地图 JavaScript API 安全验证方法， 支持 `internal_proxy` （使用内建代理附加高德应用安全密钥请求高德地图 API）, `external_proxy` （使用外部代理请求高德地图 API，高德应用安全密钥需要被外部代理设置）, `plain_text` （直接将高德应用安全密钥添加到前端请求中，公网使用不安全），请访问 [https://developer.amap.com/api/jsapi-v2/guide/abc/load](https://developer.amap.com/api/jsapi-v2/guide/abc/load) 获取更多信息。 |
 | `amap_application_secret` |  | 针对 `amap`，高德地图 JavaScript API 应用安全密钥，`amap_security_verification_method` 设置为 `internal_proxy` 或 `plain_text` 时该选项必须设置，请访问 [https://lbs.amap.com/api/javascript-api/guide/abc/prepare](https://lbs.amap.com/api/javascript-api/guide/abc/prepare) 获取更多信息。 |
 | `amap_api_external_proxy_url` |  | 针对 `amap`，高德地图 JavaScript API 外部代理地址，`amap_security_verification_method` 设置为 `external_proxy` 时该选项必须设置。 |
-| `custom_map_tile_server_url` |  | 自定义地图贴图服务器地址，支持 {x}、{y}（坐标）、{z}（缩放等级）占位符，例如 `https://tile.openstreetmap.org/{z}/{x}/{y}.png`。 |
+| `custom_map_tile_server_url` |  | 自定义地图瓦片服务器的瓦片图层 Url，支持 {x}、{y}（坐标）、{z}（缩放等级）占位符，例如 `https://tile.openstreetmap.org/{z}/{x}/{y}.png`。 |
+| `custom_map_tile_server_annotation_url` |  | 自定义地图瓦片服务器的标注图层 Url（可选），支持 {x}、{y}（坐标）、{z}（缩放等级）占位符。 |
 | `custom_map_tile_server_min_zoom_level` | `1` | 自定义地图贴图服务器最小缩放等级（0 - 255）。 |
 | `custom_map_tile_server_max_zoom_level` | `18` | 自定义地图贴图服务器最大缩放等级（0 - 255）。 |
 | `custom_map_tile_server_default_zoom_level` | `14` | 自定义地图贴图服务器默认缩放等级（0 - 255）。 |
