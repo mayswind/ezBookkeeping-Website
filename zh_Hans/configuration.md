@@ -97,6 +97,15 @@ ezBookkeeping 使用 ini 文件作为配置文件。
 | `level` | `info` | 一般日志级别。该值可以设置为 `debug`、`info`、`warn` 或 `error`。 |
 | `log_path` | `log/ezbookkeeping.log` | 日志文件路径。该值可以设置为相对或绝对路径。 |
 
+### 存储
+
+> 配置节名称为 `storage`
+
+| 选项名 | 默认值 | 描述 |
+| --- | --- | --- |
+| `storage_type` | `local_filesystem` | 对象存储类型，当前支持 `local_filesystem`。 |
+| `local_filesystem_path` | `storage/` | 使用 `local_filesystem` 对象存储时，对象文件的根目录。该值可以设置为相对或绝对路径。 |
+
 ### Uuid
 
 > 配置节名称为 `uuid`
@@ -142,7 +151,7 @@ ezBookkeeping 使用 ini 文件作为配置文件。
 | `enable_force_email_verify` | `false` | 用户登录时是否要求邮箱必须验证。 |
 | `enable_forget_password` | `true` | 是否启用用户密码重置。（SMTP 服务器必须配置） |
 | `forget_password_require_email_verify` | `false` | 用户使用密码重置时是否要求邮箱必须验证。 |
-| `avatar_provider` |  | 用户头像提供方，支持 [`gravatar`](https://gravatar.com)。如果您想禁用用户头像，留空即可。 |
+| `avatar_provider` | `internal` | 用户头像提供方，支持 [`internal`](#storage)（使用内部对象存储保存用户头像，支持用户自行更新头像） 和 [`gravatar`](https://gravatar.com)。如果您想禁用用户头像，留空即可。 |
 
 ### 数据
 
