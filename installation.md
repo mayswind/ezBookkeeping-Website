@@ -44,30 +44,35 @@ After executing this command, ezBookkeeping will use the default configuration t
 The default paths in container:
 
 * **Configuration File**: `/ezbookkeeping/conf/ezbookkeeping.ini`
-* **Database File (for `sqlite3`)**: `/ezbookkeeping/data/ezbookkeeping.db`
+* **Database File (for `sqlite3` database)**: `/ezbookkeeping/data/ezbookkeeping.db`
 * **Log File**: `/ezbookkeeping/log/ezbookkeeping.log`
+* **Storage Root Path (for `local_filesystem` object storage)**: `/ezbookkeeping/storage/`
 
 ### Store data persistently
 
 The default database type is `sqlite3`, and the database file is stored in `/ezbookkeeping/data/ezbookkeeping.db` in container.
-If you want to continue to use `sqlite3` as database and store these data persistently, you can use docker persistent volume or mount a host path to container.
+If you want to continue to use `sqlite3` as database and store these data persistently, you can use Docker persistent volume or mount a host path to container.
+In addition, the default object storage uses the local file system, and the default path is `/ezbookkeeping/storage/`. If you use the local file system to store object data, you also need to use Docker persistent volume or mount a host path to container.
 
 #### Run container with persistent volume
 
     # Create persistend volume
     $ docker volume create ezbookkeeping-data
+    $ docker volume create ezbookkeeping-storage
 
     # Run container with persistent volume
-    $ docker run -d -p8080:8080 --name ezbookkeeping -v ezbookkeeping-data:/ezbookkeeping/data mayswind/ezbookkeeping
+    $ docker run -d -p8080:8080 --name ezbookkeeping -v ezbookkeeping-data:/ezbookkeeping/data -v ezbookkeeping-storage:/ezbookkeeping/storage mayswind/ezbookkeeping
 
 #### Run container with mounting host path
 
     # Create data directory and modify UID/GID in host
-    $ mkdir -p /var/lib/ezbookkeeping
-    $ chown 1000:1000 /var/lib/ezbookkeeping
+    $ mkdir -p /var/lib/ezbookkeeping/data
+    $ mkdir -p /var/lib/ezbookkeeping/storage
+    $ chown 1000:1000 /var/lib/ezbookkeeping/data
+    $ chown 1000:1000 /var/lib/ezbookkeeping/storage
 
     # Run container with mounting host path
-    $ docker run -d -p8080:8080 --name ezbookkeeping -v /var/lib/ezbookkeeping:/ezbookkeeping/data mayswind/ezbookkeeping
+    $ docker run -d -p8080:8080 --name ezbookkeeping -v /var/lib/ezbookkeeping/data:/ezbookkeeping/data -v /var/lib/ezbookkeeping/storage:/ezbookkeeping/storage mayswind/ezbookkeeping
 
 The user id (UID) and group id (GID) used for running ezBookkeeping is both `1000`, so you should make sure the directories ezBookkeeping use can be read or write by UID/GID `1000` when you want to change directories or mount volumes.
 
@@ -109,7 +114,8 @@ services:
       - "EBK_SECURITY_SECRET_KEY=its_should_be_a_random_string"
     volumes:
       - "/etc/localtime:/etc/localtime:ro"
-      - "/var/log/ezbookkeeping:/var/log/ezbookkeeping" # make sure the UID:GID is 1000:1000
+      - "/var/lib/ezbookkeeping/storage:/ezbookkeeping/storage" # make sure the UID:GID is 1000:1000
+      - "/var/log/ezbookkeeping:/ezbookkeeping/log" # make sure the UID:GID is 1000:1000
 ```
 
 ## Install from binary
