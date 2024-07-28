@@ -102,8 +102,16 @@ For example, if you want to set database type to `mysql`, you can set environmen
 
 | Option Name | Default Value | Description |
 | --- | --- | --- |
-| `storage_type` | `local_filesystem` | Object storage type, supports `local_filesystem` currently. |
+| `storage_type` | `local_filesystem` | Object storage type, supports `local_filesystem` and `minio` currently. |
 | `local_filesystem_path` | `storage/` | The root path of the object files, for `local_filesystem` object storage. The value can be relative or absolute path. |
+| `minio_endpoint` | `127.0.0.1:9000` | MinIO endpoint address, for `minio` object storage. |
+| `minio_location` |  | MinIO location, for `minio` object storage. |
+| `minio_access_key_id` |  | MinIO Access Key ID, for `minio` object storage. |
+| `minio_secret_access_key` |  | MinIO Secret Access Key, for `minio` object storage. |
+| `minio_use_ssl` | `false` | Whether enable SSL for connection, for `minio` object storage. |
+| `minio_skip_tls_verify` | `false` | Whether verify the MinIO server's certificate chain and host name, for `minio` object storage. |
+| `minio_bucket` | `ezbookkeeping` | MinIO bucket name, for `minio` object storage. |
+| `minio_root_path` | `/` | The root path of the object files in bucket, for `minio` object storage. |
 
 ### Uuid
 
