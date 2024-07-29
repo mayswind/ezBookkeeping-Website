@@ -59,21 +59,21 @@ ezBookkeeping 用户数据维护操作。
     * 选项：
     * `--username value`, `-n value`：用户名。必填。
     * `--password value`, `-p value`：用户密码。必填。
-* `user-enable`: 启用指定用户。
+* `user-enable`：启用指定用户。
     * 选项：
-    * `--username value`, `-n value`: 用户名。必填。
-* `user-disable`: 禁用指定用户。
+    * `--username value`, `-n value`：用户名。必填。
+* `user-disable`：禁用指定用户。
     * 选项：
-    * `--username value`, `-n value`: 用户名。必填。
-* `user-resend-verify-email`: 重新发送用户验证邮件。
+    * `--username value`, `-n value`：用户名。必填。
+* `user-resend-verify-email`：重新发送用户验证邮件。
     * 选项：
-    * `--username value`, `-n value`: 用户名。必填。
-* `user-set-email-verified`: 设置指定用户邮件地址为已验证。
+    * `--username value`, `-n value`：用户名。必填。
+* `user-set-email-verified`：设置指定用户邮件地址为已验证。
     * 选项：
-    * `--username value`, `-n value`: 用户名。必填。
-* `user-set-email-unverified`: 设置指定用户邮件地址为未验证。
+    * `--username value`, `-n value`：用户名。必填。
+* `user-set-email-unverified`：设置指定用户邮件地址为未验证。
     * 选项：
-    * `--username value`, `-n value`: 用户名。必填。
+    * `--username value`, `-n value`：用户名。必填。
 * `user-delete`：删除指定用户。
     * 选项：
     * `--username value`, `-n value`：用户名。必填。
@@ -86,10 +86,13 @@ ezBookkeeping 用户数据维护操作。
 * `user-session-clear`：清除指定用户所有会话。
     * 选项：
     * `--username value`, `-n value`：用户名。必填。
-* `send-password-reset-mail`: 发送密码重置邮件。
+* `send-password-reset-mail`：发送密码重置邮件。
     * 选项：
-    * `--username value`, `-n value`: 用户名。必填。
+    * `--username value`, `-n value`：用户名。必填。
 * `transaction-check`：检查指定用户所有交易和账户数据是否都正确。
+    * 选项：
+    * `--username value`, `-n value`：用户名。必填。
+* `transaction-tag-index-fix-transaction-time`：修复不包含交易时间的交易标签索引数据（v0.5.0 之前的 bug）。
     * 选项：
     * `--username value`, `-n value`：用户名。必填。
 * `transaction-export`：导出指定用户所有交易到 `.csv` 文件。
@@ -109,9 +112,9 @@ ezBookkeeping 安全工具。
 
 ezBookkeeping 通用工具。
 
-* `parse-default-request-id`: 解析使用默认请求ID生成器生成的请求ID，并显示详情。
+* `parse-default-request-id`：解析使用默认请求ID生成器生成的请求ID，并显示详情。
     * 选项：
-    * `--id`: 请求ID。
-* `send-test-mail`: 向指定邮件地址发送测试邮件。
+    * `--id`：请求ID。
+* `send-test-mail`：向指定邮件地址发送测试邮件。
     * 选项：
-    * `--to`: 收件人电子邮件地址。
+    * `--to`：收件人电子邮件地址。

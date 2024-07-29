@@ -91,6 +91,9 @@ ezBookkeeping user data maintenance operation.
 * `transaction-check`: Check whether specified user all transactions and accounts are correct.
     * Options:
     * `--username value`, `-n value`: User name. Required.
+* `transaction-tag-index-fix-transaction-time`: Fix the transaction tag index data which does not have transaction time (bug before v0.5.0).
+    * Options:
+    * `--username value`, `-n value`: User name. Required.
 * `transaction-export`: Export specified user all transactions to `.csv` file.
     * Options:
     * `--username value`, `-n value`: User name. Required.
