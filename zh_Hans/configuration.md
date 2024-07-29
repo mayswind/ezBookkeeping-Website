@@ -22,7 +22,7 @@ ezBookkeeping 使用 ini 文件作为配置文件。
 使用 ezBookkeeping 命令行时，你可以使用 `--conf-path` 参数指定自定义的配置文件路径。
 
 除此之外，ezBookkeeping 还支持通过环境变量设置配置。
-配置文件中所有的选项都可以通过如下的环境变量名被覆盖：`EBK_{SECTION_NAME}_{OPTION_NAME}`。  
+配置文件中所有的选项都可以通过如下的环境变量名（环境变量名需要为大写）被覆盖：`EBK_{SECTION_NAME}_{OPTION_NAME}`。  
 
 例如，如果你想将数据库类型设置为 `mysql`，你可以设置环境变量 `EBK_DATABASE_TYPE=mysql`。
 

@@ -21,7 +21,7 @@ The default configuration file path is `%WORKING_DIR%/conf/ezbookkeeping.ini`.
 You can use `--conf-path` parameter to specify a custom configuration path when use ezBookkeeping command line.
 
 In addition, ezBookkeeping also supports setting configuration via environment variables.
-All options in the configuration file can be overridden using environment variables with the following name: `EBK_{SECTION_NAME}_{OPTION_NAME}`.  
+All options in the configuration file can be overridden using environment variables with the following name (environment variable name should be uppercase): `EBK_{SECTION_NAME}_{OPTION_NAME}`.  
 
 For example, if you want to set database type to `mysql`, you can set environment variable `EBK_DATABASE_TYPE=mysql`.
 

@@ -47,13 +47,13 @@ permalink: /zh_Hans/installation
 * **配置文件**：`/ezbookkeeping/conf/ezbookkeeping.ini`
 * **数据库文件（使用 `sqlite3` 数据库）**：`/ezbookkeeping/data/ezbookkeeping.db`
 * **日志文件**：`/ezbookkeeping/log/ezbookkeeping.log`
-* **存储根路径（使用 `local_filesystem` 对象存储）**: `/ezbookkeeping/storage/`
+* **对象存储根路径（使用 `local_filesystem` 对象存储）**: `/ezbookkeeping/storage/`
 
 ### 持久化存储数据
 
 默认数据库类型是 `sqlite3`，数据库文件存储在容器中的 `/ezbookkeeping/data/ezbookkeeping.db`。  
 如果你想继续使用 `sqlite3` 作为数据库，并持久化保存这些数据，你需要使用 Docker 持久化数据卷或挂载宿主机的路径到容器内。  
-此外，默认对象存储使用本地文件系统，默认路径是 `/ezbookkeeping/storage/`，如果你使用本地文件系统存储对象数据，你也需要使用 Docker 持久化数据卷或挂载宿主机的路径到容器内。  
+此外，默认对象存储使用本地文件系统，默认路径是 `/ezbookkeeping/storage/`，如果你使用本地文件系统存储对象数据（例如用户上传的图片），你也需要使用 Docker 持久化数据卷或挂载宿主机的路径到容器内。  
 
 #### 使用持久化数据卷运行容器
 
