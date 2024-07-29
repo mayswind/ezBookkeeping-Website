@@ -158,7 +158,7 @@ For example, if you want to set database type to `mysql`, you can set environmen
 | `enable_force_email_verify` | `false` | Whether require user email must be verified when login. |
 | `enable_forget_password` | `true` | Whether enable user password reset. (SMTP server must be configured) |
 | `forget_password_require_email_verify` | `false` | Whether require user email must be verified when use forget password.  |
-| `avatar_provider` | `internal` | User avatar provider, supports [`internal`](#object-storage)(Use the internal object storage to store user avatar, supports updating avatar by user self) and [`gravatar`](https://gravatar.com). Leave blank if you want to disable user avatar. |
+| `avatar_provider` | `internal` | User avatar provider, supports [`internal`](#object-storage) (Use the internal object storage to store user avatar, supports updating avatar by user self) and [`gravatar`](https://gravatar.com) (updating avatar on the provider's website and match it by user's email address). Leave blank if you want to disable user avatar. |
 
 ### Data
 
