@@ -96,13 +96,13 @@ For example, if you want to set database type to `mysql`, you can set environmen
 | `level` | `info` | General log level. This level can be set to `debug`, `info`, `warn` or `error`. |
 | `log_path` | `log/ezbookkeeping.log` | Log file path. The value can be relative or absolute path. |
 
-### Storage
+### Object Storage
 
 > Section name is `storage`
 
 | Option Name | Default Value | Description |
 | --- | --- | --- |
-| `storage_type` | `local_filesystem` | Object storage type, supports `local_filesystem` and `minio` currently. |
+| `type` | `local_filesystem` | Object storage type, supports `local_filesystem` and `minio` currently. |
 | `local_filesystem_path` | `storage/` | The root path of the object files, for `local_filesystem` object storage. The value can be relative or absolute path. |
 | `minio_endpoint` | `127.0.0.1:9000` | MinIO endpoint address, for `minio` object storage. |
 | `minio_location` |  | MinIO location, for `minio` object storage. |
@@ -158,7 +158,7 @@ For example, if you want to set database type to `mysql`, you can set environmen
 | `enable_force_email_verify` | `false` | Whether require user email must be verified when login. |
 | `enable_forget_password` | `true` | Whether enable user password reset. (SMTP server must be configured) |
 | `forget_password_require_email_verify` | `false` | Whether require user email must be verified when use forget password.  |
-| `avatar_provider` | `internal` | User avatar provider, supports [`internal`](#storage)(Use the internal object storage to store user avatar, supports updating avatar by user self) and [`gravatar`](https://gravatar.com). Leave blank if you want to disable user avatar. |
+| `avatar_provider` | `internal` | User avatar provider, supports [`internal`](#object-storage)(Use the internal object storage to store user avatar, supports updating avatar by user self) and [`gravatar`](https://gravatar.com). Leave blank if you want to disable user avatar. |
 
 ### Data
 
