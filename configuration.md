@@ -168,6 +168,20 @@ For example, if you want to set database type to `mysql`, you can set environmen
 | --- | --- | --- |
 | `enable_export` | `true` | Whether enable exporting user data. |
 
+### Notification
+
+> Section name is `notification`
+
+> If the setting supports multiple languages, you can add an underscore and a language tag after the setting key to configure the notification content in that language.  
+> For example, `after_login_notification_content_zh_hans` means the notification content in Simplified Chinese.
+
+| Option Name | Default Value | Description |
+| --- | --- | --- |
+| `enable_notification_after_login` | `false` | Whether enable displaying custom notification in home page every time users login. |
+| `after_login_notification_content` |  | The custom notification content displayed each time users log, supporting multi-language configuration. |
+| `enable_notification_after_open` | `false` | Whether enable displaying custom notification in home page every time users open the app. |
+| `after_open_notification_content` |  | The custom notification content displayed each time users open the app, supporting multi-language configuration. |
+
 ### Map
 
 > Section name is `map`

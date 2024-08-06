@@ -169,6 +169,20 @@ ezBookkeeping 使用 ini 文件作为配置文件。
 | --- | --- | --- |
 | `enable_export` | `true` | 是否启用用户数据导出。 |
 
+### 通知
+
+> 配置节名称为 `notification`
+
+> 如果配置项支持多语言，可以在配置项的键名后添加下划线和语言标签，来配置该语言下的通知内容。  
+> 例如，`after_login_notification_content_zh_hans` 表示简体中文的通知内容。
+
+| 选项名 | 默认值 | 描述 |
+| --- | --- | --- |
+| `enable_notification_after_login` | `false` | 是否启用用户每次登录时在主页上显示自定义通知。 |
+| `after_login_notification_content` |  | 用户每次登录时显示的自定义通知内容，支持多语言配置。 |
+| `enable_notification_after_open` | `false` | 是否启用用户每次打开应用时在主页上显示自定义通知。 |
+| `after_open_notification_content` |  | 用户每次打开应用时显示的自定义通知内容，支持多语言配置。 |
+
 ### 地图
 
 > 配置节名称为 `map`
