@@ -96,6 +96,11 @@ ezBookkeeping 使用 ini 文件作为配置文件。
 | `mode` | `console file` | 日志输出类型，支持 `console` 和 `file`。使用空格分隔多个模式，例如 `console file`。 |
 | `level` | `info` | 一般日志级别。该值可以设置为 `debug`、`info`、`warn` 或 `error`。 |
 | `log_path` | `log/ezbookkeeping.log` | 日志文件路径。该值可以设置为相对或绝对路径。 |
+| `request_log_path` |  | 请求日志文件路径。该值可以设置为相对或绝对路径。如果您想将请求日志记录到默认日志文件中，留空即可。 |
+| `query_log_path` |  | 数据库查询日志文件路径。该值可以设置为相对或绝对路径。如果您想将查询日志记录到默认日志文件中，留空即可。 |
+| `log_file_rotate` | `false` | 是否启用轮转日志文件。 |
+| `log_file_max_size` | `104857600` | 日志文件轮转之前最大的大小（1 - 4294967295 字节）。 |
+| `log_file_max_days` | `7` | 保留最早旧日志文件的天数。设置为 `0` 则保留所有日志。 |
 
 ### 对象存储
 
@@ -178,6 +183,8 @@ ezBookkeeping 使用 ini 文件作为配置文件。
 
 | 选项名 | 默认值 | 描述 |
 | --- | --- | --- |
+| `enable_notification_after_register` | `false` | 是否启用用户每次注册时在主页上显示自定义通知。 |
+| `after_register_notification_content` |  | 用户每次注册时显示的自定义通知内容，支持多语言配置。 |
 | `enable_notification_after_login` | `false` | 是否启用用户每次登录时在主页上显示自定义通知。 |
 | `after_login_notification_content` |  | 用户每次登录时显示的自定义通知内容，支持多语言配置。 |
 | `enable_notification_after_open` | `false` | 是否启用用户每次打开应用时在主页上显示自定义通知。 |

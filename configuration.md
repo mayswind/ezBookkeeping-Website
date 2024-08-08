@@ -51,8 +51,8 @@ For example, if you want to set database type to `mysql`, you can set environmen
 | `cert_key_file` |  | The cert key file path used for `https` protocol. |
 | `unix_socket` |  | The unix socket path for `unix` protocol. |
 | `static_root_path` | `public` | Static file root path. The value can be relative or absolute path. |
-| `enable_gzip` | `false` | Whether enable gzip compression. |
-| `log_request` | `true` | Whether enable logging each request and execution time. |
+| `enable_gzip` | `false` | Whether to enable gzip compression. |
+| `log_request` | `true` | Whether to enable logging each request and execution time. |
 
 ### Database
 
@@ -70,8 +70,8 @@ For example, if you want to set database type to `mysql`, you can set environmen
 | `max_idle_conn` | `2` | Maximum number of connections in the idle connection pool (0 - 65535). If value is below than or equals to `0`, no idle connections are retained. |
 | `max_open_conn` | `0` | Maximum number of open connections to the database (0 - 65535). The value `0` means unlimited. |
 | `conn_max_lifetime` | `1440` | Maximum amount of time a connection may be reused (0 - 4294967295 seconds). If value is below than or equals to `0`, connections are not closed due to a connection's age. |
-| `log_query` | `false` | Whether enable logging each sql statement and execution time. |
-| `auto_update_database` | `true` | Whether enable updating database structure automatically when starting web server. |
+| `log_query` | `false` | Whether to enable logging each sql statement and execution time. |
+| `auto_update_database` | `true` | Whether to enable updating database structure automatically when starting web server. |
 
 ### Mail
 
@@ -79,11 +79,11 @@ For example, if you want to set database type to `mysql`, you can set environmen
 
 | Option Name | Default Value | Description |
 | --- | --- | --- |
-| `enable_smtp` | `false` | Whether enable sending mail by SMTP server. |
+| `enable_smtp` | `false` | Whether to enable sending mail by SMTP server. |
 | `smtp_host` | `127.0.0.1:25` | SMTP host address and port. |
 | `smtp_user` |  | SMTP server user name. |
 | `smtp_passwd` |  | SMTP server user password. |
-| `smtp_skip_tls_verify` | `false` | Whether verify the SMTP server's certificate chain and host name. |
+| `smtp_skip_tls_verify` | `false` | Whether to verify the SMTP server's certificate chain and host name. |
 | `from_address` |  | Mail from address. This can be just an email address, or the `"Name" <user@domain.com>` format. |
 
 ### Logging
@@ -95,6 +95,11 @@ For example, if you want to set database type to `mysql`, you can set environmen
 | `mode` | `console file` | Logging output mode, supports `console` and `file`. Use space to separate multiple modes, e.g. `console file`. |
 | `level` | `info` | General log level. This level can be set to `debug`, `info`, `warn` or `error`. |
 | `log_path` | `log/ezbookkeeping.log` | Log file path. The value can be relative or absolute path. |
+| `request_log_path` |  | Request log file path. The value can be relative or absolute path. Leave blank if you want to write request log in default log file. |
+| `query_log_path` |  | Database query log file path. The value can be relative or absolute path. Leave blank if you want to write query log in default log file. |
+| `log_file_rotate` | `false` | Whether to enable rotating log files. |
+| `log_file_max_size` | `104857600` | The maximum size (1 - 4294967295 bytes) of the log file before it gets rotated. |
+| `log_file_max_days` | `7` | The maximum number of days to retain old log files. Set to `0` to retain all logs. |
 
 ### Object Storage
 
@@ -108,8 +113,8 @@ For example, if you want to set database type to `mysql`, you can set environmen
 | `minio_location` |  | MinIO location, for `minio` object storage. |
 | `minio_access_key_id` |  | MinIO Access Key ID, for `minio` object storage. |
 | `minio_secret_access_key` |  | MinIO Secret Access Key, for `minio` object storage. |
-| `minio_use_ssl` | `false` | Whether enable SSL for connection, for `minio` object storage. |
-| `minio_skip_tls_verify` | `false` | Whether verify the MinIO server's certificate chain and host name, for `minio` object storage. |
+| `minio_use_ssl` | `false` | Whether to enable SSL for connection, for `minio` object storage. |
+| `minio_skip_tls_verify` | `false` | Whether to verify the MinIO server's certificate chain and host name, for `minio` object storage. |
 | `minio_bucket` | `ezbookkeeping` | MinIO bucket name, for `minio` object storage. |
 | `minio_root_path` | `/` | The root path of the object files in bucket, for `minio` object storage. |
 
@@ -139,13 +144,13 @@ For example, if you want to set database type to `mysql`, you can set environmen
 | Option Name | Default Value | Description |
 | --- | --- | --- |
 | `secret_key` |  | Used for encryption key, **you must change it to keep your user data safe before you first run ezBookkeeping**. You can get a random secret key by executing `ezbookkeeping security gen-secret-key`. |
-| `enable_two_factor` | `true` | Whether enable two factor authorization. |
+| `enable_two_factor` | `true` | Whether to enable two factor authorization. |
 | `token_expired_time` | `2592000` | Token expired time (60 - 4294967295 seconds). |
 | `token_min_refresh_interval` | `86400` | Token minimum refresh interval (0 - 4294967295 seconds), the value should be less than token expired time. Set to `0` to refresh the token every time when refreshing the front end. |
 | `temporary_token_expired_time` | `300` | Temporary token expired time (60 - 4294967295 seconds). |
 | `email_verify_token_expired_time` | `3600` | Email verify token expired time (60 - 4294967295 seconds). |
 | `password_reset_token_expired_time` | `3600` | Password reset token expired time (60 - 4294967295 seconds). |
-| `request_id_header` | `true` | Whether enable adding `X-Request-Id` header to response to track user request or error. |
+| `request_id_header` | `true` | Whether to enable adding `X-Request-Id` header to response to track user request or error. |
 
 ### User
 
@@ -153,11 +158,11 @@ For example, if you want to set database type to `mysql`, you can set environmen
 
 | Option Name | Default Value | Description |
 | --- | --- | --- |
-| `enable_register` | `true` | Whether enable user registration. |
-| `enable_email_verify` | `false` | Whether enable user email validation. |
-| `enable_force_email_verify` | `false` | Whether require user email must be verified when login. |
-| `enable_forget_password` | `true` | Whether enable user password reset. (SMTP server must be configured) |
-| `forget_password_require_email_verify` | `false` | Whether require user email must be verified when use forget password.  |
+| `enable_register` | `true` | Whether to enable user registration. |
+| `enable_email_verify` | `false` | Whether to enable user email validation. |
+| `enable_force_email_verify` | `false` | Whether to require user email must be verified when login. |
+| `enable_forget_password` | `true` | Whether to enable user password reset. (SMTP server must be configured) |
+| `forget_password_require_email_verify` | `false` | Whether to require user email must be verified when use forget password.  |
 | `avatar_provider` | `internal` | User avatar provider, supports [`internal`](#object-storage) (Use the internal object storage to store user avatar, supports updating avatar by user self) and [`gravatar`](https://gravatar.com) (updating avatar on the provider's website and match it by user's email address). Leave blank if you want to disable user avatar. |
 
 ### Data
@@ -166,7 +171,7 @@ For example, if you want to set database type to `mysql`, you can set environmen
 
 | Option Name | Default Value | Description |
 | --- | --- | --- |
-| `enable_export` | `true` | Whether enable exporting user data. |
+| `enable_export` | `true` | Whether to enable exporting user data. |
 
 ### Notification
 
@@ -177,9 +182,11 @@ For example, if you want to set database type to `mysql`, you can set environmen
 
 | Option Name | Default Value | Description |
 | --- | --- | --- |
-| `enable_notification_after_login` | `false` | Whether enable displaying custom notification in home page every time users login. |
-| `after_login_notification_content` |  | The custom notification content displayed each time users log, supporting multi-language configuration. |
-| `enable_notification_after_open` | `false` | Whether enable displaying custom notification in home page every time users open the app. |
+| `enable_notification_after_register` | `false` | Whether to enable displaying custom notification in home page every time users register. |
+| `after_register_notification_content` |  | The custom notification content displayed each time users register, supporting multi-language configuration. |
+| `enable_notification_after_login` | `false` | Whether to enable displaying custom notification in home page every time users login. |
+| `after_login_notification_content` |  | The custom notification content displayed each time users login, supporting multi-language configuration. |
+| `enable_notification_after_open` | `false` | Whether to enable displaying custom notification in home page every time users open the app. |
 | `after_open_notification_content` |  | The custom notification content displayed each time users open the app, supporting multi-language configuration. |
 
 ### Map
@@ -189,7 +196,7 @@ For example, if you want to set database type to `mysql`, you can set environmen
 | Option Name | Default Value | Description |
 | --- | --- | --- |
 | `map_provider` | `openstreetmap` | Map provider, supports [`openstreetmap`](https://www.openstreetmap.org), [`openstreetmap_humanitarian`](http://map.hotosm.org), [`opentopomap`](https://opentopomap.org), [`opnvkarte`](https://publictransportmap.org), [`cyclosm`](https://www.cyclosm.org), [`cartodb`](https://carto.com/basemaps), [`tomtom`](https://www.tomtom.com), [`tianditu`](https://www.tianditu.gov.cn), [`googlemap`](https://map.google.com), [`baidumap`](https://map.baidu.com), [`amap`](https://amap.com) and `custom`. Leave blank if you want to disable map. |
-| `map_data_fetch_proxy` | `false` | Whether use the ezbookkeeping server to forward map data requests for `openstreetmap`, `openstreetmap_humanitarian`, `opentopomap`, `opnvkarte`, `cyclosm`, `cartodb`, `tomtom`, `tianditu` or `custom` map provider. |
+| `map_data_fetch_proxy` | `false` | Whether to use the ezbookkeeping server to forward map data requests for `openstreetmap`, `openstreetmap_humanitarian`, `opentopomap`, `opnvkarte`, `cyclosm`, `cartodb`, `tomtom`, `tianditu` or `custom` map provider. |
 | `proxy` | `system` | Proxy for ezbookkeeping server requesting original map data when `map_data_fetch_proxy` is set to `true`, supports `system` (use system proxy), `none` (do not use proxy), or proxy URL which starts with `http://`, `https://` or `socks5://`, default is `system`. |
 | `tomtom_map_api_key` |  | TomTom map API key for `tomtom` map provider, please visit [https://developer.tomtom.com/how-to-get-tomtom-api-key](https://developer.tomtom.com/how-to-get-tomtom-api-key) for more information. |
 | `tianditu_map_app_key` |  | TianDiTu map application key for `tianditu` map provider, please visit [https://console.tianditu.gov.cn/api/register](https://console.tianditu.gov.cn/api/register) for more information. |
@@ -214,4 +221,4 @@ For example, if you want to set database type to `mysql`, you can set environmen
 | `data_source` | `euro_central_bank` | Exchange rates data source, supports `euro_central_bank`, `bank_of_canada`, `reserve_bank_of_australia`, `czech_national_bank`, `national_bank_of_poland`, `monetary_authority_of_singapore`. For more information, please visit [Exchange Rates](/exchange_rates). |
 | `proxy` | `system` | Proxy for ezbookkeeping server requesting exchange rates data, supports `system` (use system proxy), `none` (do not use proxy), or proxy URL which starts with `http://`, `https://` or `socks5://`, default is `system`. |
 | `request_timeout` | `10000` | Request timeout for exchange rates data (0 - 4294967295 milliseconds). Set to `0` to disable timeout for requesting exchange rates data. |
-| `skip_tls_verify` | `false` | Whether verify the server's certificate chain and host name when request exchange rates data. |
+| `skip_tls_verify` | `false` | Whether to verify the server's certificate chain and host name when request exchange rates data. |
