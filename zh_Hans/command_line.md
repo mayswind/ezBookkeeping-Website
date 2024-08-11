@@ -100,6 +100,15 @@ ezBookkeeping 用户数据维护操作。
     * `--username value`, `-n value`：用户名。必填。
     * `--file value`, `-f value`：目标文件路径（例如 `transaction.csv`）。必填。
 
+### cron
+
+ezBookkeeping 定时任务工具。
+
+* `list`: 显示所有已启用的定时任务。
+* `run`: 执行指定的定时任务。
+    * 选项：
+    * `--name name`, `-n name`: 定时任务名称。
+
 ### security
 
 ezBookkeeping 安全工具。

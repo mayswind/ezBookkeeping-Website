@@ -99,6 +99,15 @@ ezBookkeeping user data maintenance operation.
     * `--username value`, `-n value`: User name. Required.
     * `--file value`, `-f value`: Target file path (e.g. `transaction.csv`). Required.
 
+### cron
+
+ezBookkeeping cron job utilities.
+
+* `list`: List all enabled cron jobs.
+* `run`: Run specified cron job.
+    * Options:
+    * `--name name`, `-n name`: Cron job name.
+
 ### security
 
 ezBookkeeping security utilities.
