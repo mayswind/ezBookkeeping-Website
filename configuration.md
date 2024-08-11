@@ -137,6 +137,14 @@ For example, if you want to set database type to `mysql`, you can set environmen
 | `cleanup_interval` | `60` | Cleanup expired data interval (1 - 4294967295 seconds), for `in_memory` duplicate checker. |
 | `duplicate_submissions_interval` | `300` | The minimum interval (0 - 4294967295 seconds) between duplicate submissions on the same page (exiting and re-entering the page is considered as a new session). Set to `0` to disable duplicate checker for new data submissions. |
 
+### Cron Job
+
+> Section name is `cron`
+
+| Option Name | Default Value | Description |
+| --- | --- | --- |
+| `enable_remove_expired_tokens` | `true` | Whether to enable periodic cleanup of expired tokens. |
+
 ### Security
 
 > Section name is `security`
