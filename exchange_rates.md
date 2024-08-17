@@ -30,36 +30,36 @@ This data source supports 30 currencies, and all currencies are as follows:
 
 | Currency | Currency Code | Update Frequency |
 | --- | --- | --- |
-| Australian dollar | AUD | Daily |
-| Bulgarian lev | BGN | Daily |
-| Brazilian real | BRL | Daily |
-| Canadian dollar | CAD | Daily |
-| Swiss franc | CHF | Daily |
-| Chinese yuan | CNY | Daily |
-| Czech koruna | CZK | Daily |
-| Danish krone | DKK | Daily |
-| Pound sterling | GBP | Daily |
-| Hong Kong dollar | HKD | Daily |
-| Hungarian forint | HUF | Daily |
-| Indonesian rupiah | IDR | Daily |
-| Israeli new shekel | ILS | Daily |
-| Indian rupee | INR | Daily |
-| Icelandic króna | ISK | Daily |
-| Japanese yen | JPY | Daily |
-| South Korean won | KRW | Daily |
-| Mexican peso | MXN | Daily |
-| Malaysian ringgit | MYR | Daily |
-| Norwegian krone | NOK | Daily |
-| New Zealand dollar | NZD | Daily |
-| Philippine peso | PHP | Daily |
-| Polish złoty | PLN | Daily |
-| Romanian leu | RON | Daily |
-| Swedish krona/kronor | SEK | Daily |
-| Singapore dollar | SGD | Daily |
-| Thai baht | THB | Daily |
-| Turkish lira | TRY | Daily |
-| United States dollar | USD | Daily |
-| South African rand | ZAR | Daily |
+| Australian Dollar | AUD | Daily |
+| Bulgarian Lev | BGN | Daily |
+| Brazilian Real | BRL | Daily |
+| Canadian Dollar | CAD | Daily |
+| Swiss Franc | CHF | Daily |
+| Chinese Yuan | CNY | Daily |
+| Czech Koruna | CZK | Daily |
+| Danish Krone | DKK | Daily |
+| British Pound | GBP | Daily |
+| Hong Kong Dollar | HKD | Daily |
+| Hungarian Forint | HUF | Daily |
+| Indonesian Rupiah | IDR | Daily |
+| Israeli New Shekel | ILS | Daily |
+| Indian Rupee | INR | Daily |
+| Icelandic Krona | ISK | Daily |
+| Japanese Yen | JPY | Daily |
+| South Korean Won | KRW | Daily |
+| Mexican Peso | MXN | Daily |
+| Malaysian Ringgit | MYR | Daily |
+| Norwegian Krone | NOK | Daily |
+| New Zealand Dollar | NZD | Daily |
+| Philippine Peso | PHP | Daily |
+| Polish Zloty | PLN | Daily |
+| Romanian Leu | RON | Daily |
+| Swedish Krona | SEK | Daily |
+| Singapore Dollar | SGD | Daily |
+| Thai Baht | THB | Daily |
+| Turkish Lira | TRY | Daily |
+| United States Dollar | USD | Daily |
+| South African Rand | ZAR | Daily |
 
 Configuration option `data_source` value is `euro_central_bank`
 
@@ -73,32 +73,32 @@ This data source supports 26 currencies, and all currencies are as follows:
 
 | Currency | Currency Code | Update Frequency |
 | --- | --- | --- |
-| Australian dollar | AUD | Daily |
-| Brazilian real | BRL | Daily |
-| Swiss franc | CHF | Daily |
-| Chinese yuan | CNY | Daily |
+| Australian Dollar | AUD | Daily |
+| Brazilian Real | BRL | Daily |
+| Swiss Franc | CHF | Daily |
+| Chinese Yuan | CNY | Daily |
 | Euro | EUR | Daily |
-| Pound sterling | GBP | Daily |
-| Hong Kong dollar | HKD | Daily |
-| Indonesian rupiah | IDR | Daily |
-| Indian rupee | INR | Daily |
-| Japanese yen | JPY | Daily |
-| South Korean won | KRW | Daily |
-| Mexican peso | MXN | Daily |
-| Malaysian ringgit | MYR | Not Daily |
-| Norwegian krone | NOK | Daily |
-| New Zealand dollar | NZD | Daily |
-| Peruvian sol | PEN | Daily |
-| Russian ruble | RUB | Daily |
-| Saudi riyal | SAR | Daily |
-| Swedish krona/kronor | SEK | Daily |
-| Singapore dollar | SGD | Daily |
-| Thai baht | THB | Not Daily |
-| Turkish lira | TRY | Daily |
-| New Taiwan dollar | TWD | Daily |
-| United States dollar | USD | Daily |
-| Vietnamese đồng | VND | Not Daily |
-| South African rand | ZAR | Daily |
+| British Pound | GBP | Daily |
+| Hong Kong Dollar | HKD | Daily |
+| Indonesian Rupiah | IDR | Daily |
+| Indian Rupee | INR | Daily |
+| Japanese Yen | JPY | Daily |
+| South Korean Won | KRW | Daily |
+| Mexican Peso | MXN | Daily |
+| Malaysian Ringgit | MYR | Not Daily |
+| Norwegian Krone | NOK | Daily |
+| New Zealand Dollar | NZD | Daily |
+| Peruvian Sol | PEN | Daily |
+| Russian Ruble | RUB | Daily |
+| Saudi Riyal | SAR | Daily |
+| Swedish Krona | SEK | Daily |
+| Singapore Dollar | SGD | Daily |
+| Thai Baht | THB | Not Daily |
+| Turkish Lira | TRY | Daily |
+| New Taiwan Dollar | TWD | Daily |
+| United States Dollar | USD | Daily |
+| Vietnamese Dong | VND | Not Daily |
+| South African Rand | ZAR | Daily |
 
 Configuration option `data_source` value is `bank_of_canada`
 
@@ -112,23 +112,23 @@ This data source supports 17 currencies, and all currencies are as follows:
 
 | Currency | Currency Code | Update Frequency |
 | --- | --- | --- |
-| Canadian dollar | CAD | Daily |
-| Chinese yuan | CNY | Daily |
+| Canadian Dollar | CAD | Daily |
+| Chinese Yuan | CNY | Daily |
 | Euro | EUR | Daily |
-| Pound sterling | GBP | Daily |
-| Hong Kong dollar | HKD | Daily |
-| Indonesian rupiah | IDR | Daily |
-| Indian rupee | INR | Daily |
-| Japanese yen | JPY | Daily |
-| South Korean won | KRW | Daily |
-| Malaysian ringgit | MYR | Daily |
-| New Zealand dollar | NZD | Daily |
+| British Pound | GBP | Daily |
+| Hong Kong Dollar | HKD | Daily |
+| Indonesian Rupiah | IDR | Daily |
+| Indian Rupee | INR | Daily |
+| Japanese Yen | JPY | Daily |
+| South Korean Won | KRW | Daily |
+| Malaysian Ringgit | MYR | Daily |
+| New Zealand Dollar | NZD | Daily |
 | Philippine Peso | PHP | Daily |
-| Singapore dollar | SGD | Daily |
-| Thai baht | THB | Daily |
-| New Taiwan dollar | TWD | Daily |
-| United States dollar | USD | Daily |
-| Vietnamese đồng | VND | Daily |
+| Singapore Dollar | SGD | Daily |
+| Thai Baht | THB | Daily |
+| New Taiwan Dollar | TWD | Daily |
+| United States Dollar | USD | Daily |
+| Vietnamese Dong | VND | Daily |
 
 Configuration option `data_source` value is `reserve_bank_of_australia`
 
@@ -138,162 +138,163 @@ Configuration option `data_source` value is `reserve_bank_of_australia`
 
 The base currency is Czech koruna (`CZK`). The daily exchange rates are usually updated after 14:30 CET on every working day. The monthly exchange rates are usually updated on the last working day of the month.
 
-This data source supports 152 currencies, and all currencies are as follows:
+This data source supports 153 currencies, and all currencies are as follows:
 
 | Currency | Currency Code | Update Frequency |
 | --- | --- | --- |
-| United Arab Emirates dirham | AED | Monthly |
-| Afghan afghani | AFN | Monthly |
-| Albanian lek | ALL | Monthly |
-| Armenian dram | AMD | Monthly |
-| Netherlands Antillean guilder | ANG | Monthly |
-| Angolan kwanza | AOA | Monthly |
-| Argentine peso | ARS | Monthly |
-| Australian dollar | AUD | Daily |
-| Aruban florin | AWG | Monthly |
-| Azerbaijani manat | AZN | Monthly |
-| Bosnia and Herzegovina convertible mark | BAM | Monthly |
-| Barbados dollar | BBD | Monthly |
-| Bangladeshi taka | BDT | Monthly |
-| Bulgarian lev | BGN | Daily |
-| Bahraini dinar | BHD | Monthly |
-| Burundian franc | BIF | Monthly |
-| Bermudian dollar | BMD | Monthly |
-| Brunei dollar | BND | Monthly |
-| Boliviano | BOB | Monthly |
-| Brazilian real | BRL | Daily |
-| Bahamian dollar | BSD | Monthly |
-| Bhutanese ngultrum | BTN | Monthly |
-| Botswana pula | BWP | Monthly |
-| Belarusian ruble | BYN | Monthly |
-| Belize dollar | BZD | Monthly |
-| Canadian dollar | CAD | Daily |
-| Congolese franc | CDF | Monthly |
-| Swiss franc | CHF | Daily |
-| Chilean peso | CLP | Monthly |
-| Chinese yuan | CNY | Daily |
-| Colombian peso | COP | Monthly |
-| Costa Rican colon | CRC | Monthly |
-| Cuban peso | CUP | Monthly |
-| Cape Verdean escudo | CVE | Monthly |
-| Djiboutian franc | DJF | Monthly |
-| Danish krone | DKK | Daily |
-| Dominican peso | DOP | Monthly |
-| Algerian dinar | DZD | Monthly |
-| Egyptian pound | EGP | Monthly |
-| Eritrean nakfa | ERN | Monthly |
-| Ethiopian birr | ETB | Monthly |
+| United Arab Emirates Dirham | AED | Monthly |
+| Afghan Afghani | AFN | Monthly |
+| Albanian Lek | ALL | Monthly |
+| Armenian Dram | AMD | Monthly |
+| Netherlands Antillean Guilder | ANG | Monthly |
+| Angolan Kwanza | AOA | Monthly |
+| Argentine Peso | ARS | Monthly |
+| Australian Dollar | AUD | Daily |
+| Aruban Florin | AWG | Monthly |
+| Azerbaijan Manat | AZN | Monthly |
+| Bosnia and Herzegovina Convertible Mark | BAM | Monthly |
+| Barbadian Dollar | BBD | Monthly |
+| Bangladeshi Taka | BDT | Monthly |
+| Bulgarian Lev | BGN | Daily |
+| Bahraini Dinar | BHD | Monthly |
+| Burundian Franc | BIF | Monthly |
+| Bermudian Dollar | BMD | Monthly |
+| Brunei Dollar | BND | Monthly |
+| Bolivian Boliviano | BOB | Monthly |
+| Brazilian Real | BRL | Daily |
+| Bahamian Dollar | BSD | Monthly |
+| Bhutanese Ngultrum | BTN | Monthly |
+| Botswana Pula | BWP | Monthly |
+| Belarusian Ruble | BYN | Monthly |
+| Belize Dollar | BZD | Monthly |
+| Canadian Dollar | CAD | Daily |
+| Congolese Franc | CDF | Monthly |
+| Swiss Franc | CHF | Daily |
+| Chilean Peso | CLP | Monthly |
+| Chinese Yuan | CNY | Daily |
+| Colombian Peso | COP | Monthly |
+| Costa Rican Colon | CRC | Monthly |
+| Cuban Peso | CUP | Monthly |
+| Cape Verdean Escudo | CVE | Monthly |
+| Djiboutian Franc | DJF | Monthly |
+| Danish Krone | DKK | Daily |
+| Dominican Peso | DOP | Monthly |
+| Algerian Dinar | DZD | Monthly |
+| Egyptian Pound | EGP | Monthly |
+| Eritrean Nakfa | ERN | Monthly |
+| Ethiopian Birr | ETB | Monthly |
 | Euro | EUR | Daily |
-| Fiji dollar | FJD | Monthly |
-| Falkland Islands pound | FKP | Monthly |
-| Pound sterling | GBP | Daily |
-| Georgian lari | GEL | Monthly |
-| Ghanaian cedi | GHS | Monthly |
-| Gibraltar pound | GIP | Monthly |
-| Gambian dalasi | GMD | Monthly |
-| Guinean franc | GNF | Monthly |
-| Guatemalan quetzal | GTQ | Monthly |
-| Guyanese dollar | GYD | Monthly |
-| Hong Kong dollar | HKD | Daily |
-| Honduran lempira | HNL | Monthly |
-| Haitian gourde | HTG | Monthly |
-| Hungarian forint | HUF | Daily |
-| Indonesian rupiah | IDR | Daily |
-| Israeli new shekel | ILS | Daily |
-| Indian rupee | INR | Daily |
-| Iraqi dinar | IQD | Monthly |
-| Iranian rial | IRR | Monthly |
-| Icelandic króna | ISK | Daily |
-| Jamaican dollar | JMD | Monthly |
-| Jordanian dinar | JOD | Monthly |
-| Japanese yen | JPY | Daily |
-| Kenyan shilling | KES | Monthly |
-| Kyrgyzstani som | KGS | Monthly |
-| Cambodian riel | KHR | Monthly |
-| Comoro franc | KMF | Monthly |
-| North Korean won | KPW | Monthly |
-| South Korean won | KRW | Daily |
-| Kuwaiti dinar | KWD | Monthly |
-| Cayman Islands dollar | KYD | Monthly |
-| Kazakhstani tenge | KZT | Monthly |
-| Lao kip | LAK | Monthly |
-| Lebanese pound | LBP | Monthly |
-| Sri Lankan rupee | LKR | Monthly |
-| Liberian dollar | LRD | Monthly |
-| Lesotho loti | LSL | Monthly |
-| Libyan dinar | LYD | Monthly |
-| Moroccan dirham | MAD | Monthly |
-| Moldovan leu | MDL | Monthly |
-| Malagasy ariary | MGA | Monthly |
-| Macedonian denar | MKD | Monthly |
-| Myanmar kyat | MMK | Monthly |
-| Mongolian tögrög | MNT | Monthly |
-| Macanese pataca | MOP | Monthly |
-| Mauritanian ouguiya | MRU | Monthly |
-| Mauritian rupee | MUR | Monthly |
-| Maldivian rufiyaa | MVR | Monthly |
-| Malawian kwacha | MWK | Monthly |
-| Mexican peso | MXN | Daily |
-| Malaysian ringgit | MYR | Daily |
-| Mozambican metical | MZN | Monthly |
-| Namibian dollar | NAD | Monthly |
-| Nigerian naira | NGN | Monthly |
-| Nicaraguan córdoba | NIO | Monthly |
-| Norwegian krone | NOK | Daily |
-| Nepalese rupee | NPR | Monthly |
-| New Zealand dollar | NZD | Daily |
-| Omani rial | OMR | Monthly |
-| Panamanian balboa | PAB | Monthly |
-| Peruvian sol | PEN | Monthly |
-| Papua New Guinean kina | PGK | Monthly |
-| Philippine peso | PHP | Daily |
-| Pakistani rupee | PKR | Monthly |
-| Polish złoty | PLN | Daily |
-| Paraguayan guaraní | PYG | Monthly |
-| Qatari riyal | QAR | Monthly |
-| Romanian leu | RON | Daily |
-| Serbian dinar | RSD | Monthly |
-| Russian ruble | RUB | Daily |
-| Rwandan franc | RWF | Monthly |
-| Saudi riyal | SAR | Monthly |
-| Solomon Islands dollar | SBD | Monthly |
-| Seychelles rupee | SCR | Monthly |
-| Sudanese pound | SDG | Monthly |
-| Swedish krona/kronor | SEK | Daily |
-| Singapore dollar | SGD | Daily |
-| Saint Helena pound | SHP | Monthly |
-| Sierra Leonean leone | SLE | Monthly |
-| Somali shilling | SOS | Monthly |
-| Surinamese dollar | SRD | Monthly |
-| South Sudanese pound | SSP | Monthly |
-| São Tomé and Príncipe dobra | STN | Monthly |
-| Salvadoran colón | SVC | Monthly |
-| Syrian pound | SYP | Monthly |
-| Swazi lilangeni | SZL | Monthly |
-| Thai baht | THB | Daily |
-| Tajikistani somoni | TJS | Monthly |
-| Turkmenistan manat | TMT | Monthly |
-| Tunisian dinar | TND | Monthly |
-| Tongan paʻanga | TOP | Monthly |
-| Turkish lira | TRY | Daily |
-| Trinidad and Tobago dollar | TTD | Monthly |
-| New Taiwan dollar | TWD | Monthly |
-| Tanzanian shilling | TZS | Monthly |
-| Ukrainian hryvnia | UAH | Monthly |
-| Ugandan shilling | UGX | Monthly |
-| United States dollar | USD | Daily |
-| Uruguayan peso | UYU | Monthly |
-| Uzbekistan som | UZS | Monthly |
-| Vietnamese đồng | VND | Monthly |
-| Vanuatu vatu | VUV | Monthly |
-| Samoan tala | WST | Monthly |
-| CFA franc BEAC | XAF | Monthly |
-| East Caribbean dollar | XCD | Monthly |
-| CFA franc BCEAO | XOF | Monthly |
-| CFP franc | XPF | Monthly |
-| Yemeni rial | YER | Monthly |
-| South African rand | ZAR | Daily |
-| Zambian kwacha | ZMW | Monthly |
+| Fijian Dollar | FJD | Monthly |
+| Falkland Islands Pound | FKP | Monthly |
+| British Pound | GBP | Daily |
+| Georgian Lari | GEL | Monthly |
+| Ghanaian Cedi | GHS | Monthly |
+| Gibraltar Pound | GIP | Monthly |
+| Gambian Dalasi | GMD | Monthly |
+| Guinean Franc | GNF | Monthly |
+| Guatemalan Quetzal | GTQ | Monthly |
+| Guyanese Dollar | GYD | Monthly |
+| Hong Kong Dollar | HKD | Daily |
+| Honduran Lempira | HNL | Monthly |
+| Haitian Gourde | HTG | Monthly |
+| Hungarian Forint | HUF | Daily |
+| Indonesian Rupiah | IDR | Daily |
+| Israeli New Shekel | ILS | Daily |
+| Indian Rupee | INR | Daily |
+| Iraqi Dinar | IQD | Monthly |
+| Iranian Rial | IRR | Monthly |
+| Icelandic Krona | ISK | Daily |
+| Jamaican Dollar | JMD | Monthly |
+| Jordanian Dinar | JOD | Monthly |
+| Japanese Yen | JPY | Daily |
+| Kenyan Shilling | KES | Monthly |
+| Kyrgyzstani Som | KGS | Monthly |
+| Cambodian Riel | KHR | Monthly |
+| Comorian Franc | KMF | Monthly |
+| North Korean Won | KPW | Monthly |
+| South Korean Won | KRW | Daily |
+| Kuwaiti Dinar | KWD | Monthly |
+| Cayman Islands Dollar | KYD | Monthly |
+| Kazakhstani Tenge | KZT | Monthly |
+| Lao Kip | LAK | Monthly |
+| Lebanese Pound | LBP | Monthly |
+| Sri Lankan Rupee | LKR | Monthly |
+| Liberian Dollar | LRD | Monthly |
+| Lesotho Loti | LSL | Monthly |
+| Libyan Dinar | LYD | Monthly |
+| Moroccan Dirham | MAD | Monthly |
+| Moldovan Leu | MDL | Monthly |
+| Malagasy Ariary | MGA | Monthly |
+| Macedonian Denar | MKD | Monthly |
+| Myanmar Kyat | MMK | Monthly |
+| Mongolian Tugrik | MNT | Monthly |
+| Macanese Pataca | MOP | Monthly |
+| Mauritanian Ouguiya | MRU | Monthly |
+| Mauritian Rupee | MUR | Monthly |
+| Maldivian Rufiyaa | MVR | Monthly |
+| Malawian Kwacha | MWK | Monthly |
+| Mexican Peso | MXN | Daily |
+| Malaysian Ringgit | MYR | Daily |
+| Mozambican Metical | MZN | Monthly |
+| Namibian Dollar | NAD | Monthly |
+| Nigerian Naira | NGN | Monthly |
+| Nicaraguan Cordoba | NIO | Monthly |
+| Norwegian Krone | NOK | Daily |
+| Nepalese Rupee | NPR | Monthly |
+| New Zealand Dollar | NZD | Daily |
+| Omani Rial | OMR | Monthly |
+| Panamanian Balboa | PAB | Monthly |
+| Peruvian Sol | PEN | Monthly |
+| Papua New Guinean Kina | PGK | Monthly |
+| Philippine Peso | PHP | Daily |
+| Pakistani Rupee | PKR | Monthly |
+| Polish Zloty | PLN | Daily |
+| Paraguayan Guarani | PYG | Monthly |
+| Qatari Riyal | QAR | Monthly |
+| Romanian Leu | RON | Daily |
+| Serbian Dinar | RSD | Monthly |
+| Russian Ruble | RUB | Daily |
+| Rwandan Franc | RWF | Monthly |
+| Saudi Riyal | SAR | Monthly |
+| Solomon Islands Dollar | SBD | Monthly |
+| Seychelles Rupee | SCR | Monthly |
+| Sudanese Pound | SDG | Monthly |
+| Swedish Krona | SEK | Daily |
+| Singapore Dollar | SGD | Daily |
+| Saint Helena Pound | SHP | Monthly |
+| Sierra Leonean Leone | SLE | Monthly |
+| Somali Shilling | SOS | Monthly |
+| Surinamese Dollar | SRD | Monthly |
+| South Sudanese Pound | SSP | Monthly |
+| Sao Tome Principe Dobra | STN | Monthly |
+| Salvadoran Colon | SVC | Monthly |
+| Syrian Pound | SYP | Monthly |
+| Swazi Lilangeni | SZL | Monthly |
+| Thai Baht | THB | Daily |
+| Tajikistani Somoni | TJS | Monthly |
+| Turkmenistani Manat | TMT | Monthly |
+| Tunisian Dinar | TND | Monthly |
+| Tongan Pa'anga | TOP | Monthly |
+| Turkish Lira | TRY | Daily |
+| Trinidad and Tobago Dollar | TTD | Monthly |
+| New Taiwan Dollar | TWD | Monthly |
+| Tanzanian Shilling | TZS | Monthly |
+| Ukrainian Hryvnia | UAH | Monthly |
+| Ugandan Shilling | UGX | Monthly |
+| United States Dollar | USD | Daily |
+| Uruguayan Peso | UYU | Monthly |
+| Uzbekistani Sum | UZS | Monthly |
+| Vietnamese Dong | VND | Monthly |
+| Vanuatu Vatu | VUV | Monthly |
+| Samoan Tala | WST | Monthly |
+| Central African CFA Franc | XAF | Monthly |
+| East Caribbean Dollar | XCD | Monthly |
+| West African CFA Franc | XOF | Monthly |
+| CFP Franc | XPF | Monthly |
+| Yemeni Rial | YER | Monthly |
+| South African Rand | ZAR | Daily |
+| Zambian Kwacha | ZMW | Monthly |
+| Zimbabwean Dollar | ZWL | Monthly |
 
 Configuration option `data_source` value is `czech_national_bank`
 
@@ -307,187 +308,153 @@ This data source supports 148 currencies, and all currencies are as follows:
 
 | Currency | Currency Code | Update Frequency |
 | --- | --- | --- |
-| United Arab Emirates dirham | AED | Weekly |
-| Afghan afghani | AFN | Weekly |
-| Albanian lek | ALL | Weekly |
-| Armenian dram | AMD | Weekly |
-| Netherlands Antillean guilder | ANG | Weekly |
-| Angolan kwanza | AOA | Weekly |
-| Argentine peso | ARS | Weekly |
-| Australian dollar | AUD | Daily |
-| Aruban florin | AWG | Weekly |
-| Azerbaijani manat | AZN | Weekly |
-| Bosnia and Herzegovina convertible mark | BAM | Weekly |
-| Barbados dollar | BBD | Weekly |
-| Bangladeshi taka | BDT | Weekly |
-| Bulgarian lev | BGN | Daily |
-| Bahraini dinar | BHD | Weekly |
-| Burundian franc | BIF | Weekly |
-| Brunei dollar | BND | Weekly |
-| Boliviano | BOB | Weekly |
-| Brazilian real | BRL | Daily |
-| Bahamian dollar | BSD | Weekly |
-| Botswana pula | BWP | Weekly |
-| Belarusian ruble | BYN | Weekly |
-| Belize dollar | BZD | Weekly |
-| Canadian dollar | CAD | Daily |
-| Congolese franc | CDF | Weekly |
-| Swiss franc | CHF | Daily |
-| Chilean peso | CLP | Daily |
-| Chinese yuan | CNY | Daily |
-| Colombian peso | COP | Weekly |
-| Costa Rican colon | CRC | Weekly |
-| Cuban peso | CUP | Weekly |
-| Cape Verdean escudo | CVE | Weekly |
-| Czech koruna | CZK | Daily |
-| Djiboutian franc | DJF | Weekly |
-| Danish krone | DKK | Daily |
-| Dominican peso | DOP | Weekly |
-| Algerian dinar | DZD | Weekly |
-| Egyptian pound | EGP | Weekly |
-| Eritrean nakfa | ERN | Weekly |
-| Ethiopian birr | ETB | Weekly |
+| United Arab Emirates Dirham | AED | Weekly |
+| Afghan Afghani | AFN | Weekly |
+| Albanian Lek | ALL | Weekly |
+| Armenian Dram | AMD | Weekly |
+| Netherlands Antillean Guilder | ANG | Weekly |
+| Angolan Kwanza | AOA | Weekly |
+| Argentine Peso | ARS | Weekly |
+| Australian Dollar | AUD | Daily |
+| Aruban Florin | AWG | Weekly |
+| Azerbaijan Manat | AZN | Weekly |
+| Bosnia and Herzegovina Convertible Mark | BAM | Weekly |
+| Barbadian Dollar | BBD | Weekly |
+| Bangladeshi Taka | BDT | Weekly |
+| Bulgarian Lev | BGN | Daily |
+| Bahraini Dinar | BHD | Weekly |
+| Burundian Franc | BIF | Weekly |
+| Brunei Dollar | BND | Weekly |
+| Bolivian Boliviano | BOB | Weekly |
+| Brazilian Real | BRL | Daily |
+| Bahamian Dollar | BSD | Weekly |
+| Botswana Pula | BWP | Weekly |
+| Belarusian Ruble | BYN | Weekly |
+| Belize Dollar | BZD | Weekly |
+| Canadian Dollar | CAD | Daily |
+| Congolese Franc | CDF | Weekly |
+| Swiss Franc | CHF | Daily |
+| Chilean Peso | CLP | Daily |
+| Chinese Yuan | CNY | Daily |
+| Colombian Peso | COP | Weekly |
+| Costa Rican Colon | CRC | Weekly |
+| Cuban Peso | CUP | Weekly |
+| Cape Verdean Escudo | CVE | Weekly |
+| Czech Koruna | CZK | Daily |
+| Djiboutian Franc | DJF | Weekly |
+| Danish Krone | DKK | Daily |
+| Dominican Peso | DOP | Weekly |
+| Algerian Dinar | DZD | Weekly |
+| Egyptian Pound | EGP | Weekly |
+| Eritrean Nakfa | ERN | Weekly |
+| Ethiopian Birr | ETB | Weekly |
 | Euro | EUR | Daily |
-| Fiji dollar | FJD | Weekly |
-| Pound sterling | GBP | Daily |
-| Georgian lari | GEL | Weekly |
-| Ghanaian cedi | GHS | Weekly |
-| Gibraltar pound | GIP | Weekly |
-| Gambian dalasi | GMD | Weekly |
-| Guinean franc | GNF | Weekly |
-| Guatemalan quetzal | GTQ | Weekly |
-| Guyanese dollar | GYD | Weekly |
-| Hong Kong dollar | HKD | Daily |
-| Honduran lempira | HNL | Weekly |
-| Haitian gourde | HTG | Weekly |
-| Hungarian forint | HUF | Daily |
-| Indonesian rupiah | IDR | Daily |
-| Israeli new shekel | ILS | Daily |
-| Indian rupee | INR | Daily |
-| Iraqi dinar | IQD | Weekly |
-| Iranian rial | IRR | Weekly |
-| Icelandic króna | ISK | Daily |
-| Jamaican dollar | JMD | Weekly |
-| Jordanian dinar | JOD | Weekly |
-| Japanese yen | JPY | Daily |
-| Kenyan shilling | KES | Weekly |
-| Kyrgyzstani som | KGS | Weekly |
-| Cambodian riel | KHR | Weekly |
-| Comoro franc | KMF | Weekly |
-| South Korean won | KRW | Daily |
-| Kuwaiti dinar | KWD | Weekly |
-| Kazakhstani tenge | KZT | Weekly |
-| Lao kip | LAK | Weekly |
-| Lebanese pound | LBP | Weekly |
-| Sri Lankan rupee | LKR | Weekly |
-| Liberian dollar | LRD | Weekly |
-| Lesotho loti | LSL | Weekly |
-| Libyan dinar | LYD | Weekly |
-| Moroccan dirham | MAD | Weekly |
-| Moldovan leu | MDL | Weekly |
-| Malagasy ariary | MGA | Weekly |
-| Macedonian denar | MKD | Weekly |
-| Myanmar kyat | MMK | Weekly |
-| Mongolian tögrög | MNT | Weekly |
-| Macanese pataca | MOP | Weekly |
-| Mauritanian ouguiya | MRU | Weekly |
-| Mauritian rupee | MUR | Weekly |
-| Maldivian rufiyaa | MVR | Weekly |
-| Malawian kwacha | MWK | Weekly |
-| Mexican peso | MXN | Daily |
-| Malaysian ringgit | MYR | Daily |
-| Mozambican metical | MZN | Weekly |
-| Namibian dollar | NAD | Weekly |
-| Nigerian naira | NGN | Weekly |
-| Nicaraguan córdoba | NIO | Weekly |
-| Norwegian krone | NOK | Daily |
-| Nepalese rupee | NPR | Weekly |
-| New Zealand dollar | NZD | Daily |
-| Omani rial | OMR | Weekly |
-| Panamanian balboa | PAB | Weekly |
-| Peruvian sol | PEN | Weekly |
-| Papua New Guinean kina | PGK | Weekly |
-| Philippine peso | PHP | Daily |
-| Pakistani rupee | PKR | Weekly |
-| Paraguayan guaraní | PYG | Weekly |
-| Qatari riyal | QAR | Weekly |
-| Romanian leu | RON | Daily |
-| Serbian dinar | RSD | Weekly |
-| Russian ruble | RUB | Daily |
-| Rwandan franc | RWF | Weekly |
-| Saudi riyal | SAR | Weekly |
-| Solomon Islands dollar | SBD | Weekly |
-| Seychelles rupee | SCR | Weekly |
-| Sudanese pound | SDG | Weekly |
-| Swedish krona/kronor | SEK | Daily |
-| Singapore dollar | SGD | Daily |
-| Sierra Leonean leone | SLE | Weekly |
-| Somali shilling | SOS | Weekly |
-| Surinamese dollar | SRD | Weekly |
-| South Sudanese pound | SSP | Weekly |
-| São Tomé and Príncipe dobra | STN | Weekly |
-| Salvadoran colón | SVC | Weekly |
-| Syrian pound | SYP | Weekly |
-| Swazi lilangeni | SZL | Weekly |
-| Thai baht | THB | Daily |
-| Tajikistani somoni | TJS | Weekly |
-| Turkmenistan manat | TMT | Weekly |
-| Tunisian dinar | TND | Weekly |
-| Tongan paʻanga | TOP | Weekly |
-| Turkish lira | TRY | Daily |
-| Trinidad and Tobago dollar | TTD | Weekly |
-| New Taiwan dollar | TWD | Weekly |
-| Tanzanian shilling | TZS | Weekly |
-| Ukrainian hryvnia | UAH | Daily |
-| Ugandan shilling | UGX | Weekly |
-| United States dollar | USD | Daily |
-| Uruguayan peso | UYU | Weekly |
-| Uzbekistan som | UZS | Weekly |
-| Venezuelan bolívar soberano | VES | Weekly |
-| Vietnamese đồng | VND | Weekly |
-| Vanuatu vatu | VUV | Weekly |
-| Samoan tala | WST | Weekly |
-| CFA franc BEAC | XAF | Weekly |
-| East Caribbean dollar | XCD | Weekly |
-| CFA franc BCEAO | XOF | Weekly |
-| CFP franc | XPF | Weekly |
-| Yemeni rial | YER | Weekly |
-| South African rand | ZAR | Daily |
-| Zambian kwacha | ZMW | Weekly |
-| Zimbabwean dollar | ZWL | Weekly |
+| Fijian Dollar | FJD | Weekly |
+| British Pound | GBP | Daily |
+| Georgian Lari | GEL | Weekly |
+| Ghanaian Cedi | GHS | Weekly |
+| Gibraltar Pound | GIP | Weekly |
+| Gambian Dalasi | GMD | Weekly |
+| Guinean Franc | GNF | Weekly |
+| Guatemalan Quetzal | GTQ | Weekly |
+| Guyanese Dollar | GYD | Weekly |
+| Hong Kong Dollar | HKD | Daily |
+| Honduran Lempira | HNL | Weekly |
+| Haitian Gourde | HTG | Weekly |
+| Hungarian Forint | HUF | Daily |
+| Indonesian Rupiah | IDR | Daily |
+| Israeli New Shekel | ILS | Daily |
+| Indian Rupee | INR | Daily |
+| Iraqi Dinar | IQD | Weekly |
+| Iranian Rial | IRR | Weekly |
+| Icelandic Krona | ISK | Daily |
+| Jamaican Dollar | JMD | Weekly |
+| Jordanian Dinar | JOD | Weekly |
+| Japanese Yen | JPY | Daily |
+| Kenyan Shilling | KES | Weekly |
+| Kyrgyzstani Som | KGS | Weekly |
+| Cambodian Riel | KHR | Weekly |
+| Comorian Franc | KMF | Weekly |
+| South Korean Won | KRW | Daily |
+| Kuwaiti Dinar | KWD | Weekly |
+| Kazakhstani Tenge | KZT | Weekly |
+| Lao Kip | LAK | Weekly |
+| Lebanese Pound | LBP | Weekly |
+| Sri Lankan Rupee | LKR | Weekly |
+| Liberian Dollar | LRD | Weekly |
+| Lesotho Loti | LSL | Weekly |
+| Libyan Dinar | LYD | Weekly |
+| Moroccan Dirham | MAD | Weekly |
+| Moldovan Leu | MDL | Weekly |
+| Malagasy Ariary | MGA | Weekly |
+| Macedonian Denar | MKD | Weekly |
+| Myanmar Kyat | MMK | Weekly |
+| Mongolian Tugrik | MNT | Weekly |
+| Macanese Pataca | MOP | Weekly |
+| Mauritanian Ouguiya | MRU | Weekly |
+| Mauritian Rupee | MUR | Weekly |
+| Maldivian Rufiyaa | MVR | Weekly |
+| Malawian Kwacha | MWK | Weekly |
+| Mexican Peso | MXN | Daily |
+| Malaysian Ringgit | MYR | Daily |
+| Mozambican Metical | MZN | Weekly |
+| Namibian Dollar | NAD | Weekly |
+| Nigerian Naira | NGN | Weekly |
+| Nicaraguan Cordoba | NIO | Weekly |
+| Norwegian Krone | NOK | Daily |
+| Nepalese Rupee | NPR | Weekly |
+| New Zealand Dollar | NZD | Daily |
+| Omani Rial | OMR | Weekly |
+| Panamanian Balboa | PAB | Weekly |
+| Peruvian Sol | PEN | Weekly |
+| Papua New Guinean Kina | PGK | Weekly |
+| Philippine Peso | PHP | Daily |
+| Pakistani Rupee | PKR | Weekly |
+| Paraguayan Guarani | PYG | Weekly |
+| Qatari Riyal | QAR | Weekly |
+| Romanian Leu | RON | Daily |
+| Serbian Dinar | RSD | Weekly |
+| Russian Ruble | RUB | Daily |
+| Rwandan Franc | RWF | Weekly |
+| Saudi Riyal | SAR | Weekly |
+| Solomon Islands Dollar | SBD | Weekly |
+| Seychelles Rupee | SCR | Weekly |
+| Sudanese Pound | SDG | Weekly |
+| Swedish Krona | SEK | Daily |
+| Singapore Dollar | SGD | Daily |
+| Sierra Leonean Leone | SLE | Weekly |
+| Somali Shilling | SOS | Weekly |
+| Surinamese Dollar | SRD | Weekly |
+| South Sudanese Pound | SSP | Weekly |
+| Sao Tome Principe Dobra | STN | Weekly |
+| Salvadoran Colon | SVC | Weekly |
+| Syrian Pound | SYP | Weekly |
+| Swazi Lilangeni | SZL | Weekly |
+| Thai Baht | THB | Daily |
+| Tajikistani Somoni | TJS | Weekly |
+| Turkmenistani Manat | TMT | Weekly |
+| Tunisian Dinar | TND | Weekly |
+| Tongan Pa'anga | TOP | Weekly |
+| Turkish Lira | TRY | Daily |
+| Trinidad and Tobago Dollar | TTD | Weekly |
+| New Taiwan Dollar | TWD | Weekly |
+| Tanzanian Shilling | TZS | Weekly |
+| Ukrainian Hryvnia | UAH | Daily |
+| Ugandan Shilling | UGX | Weekly |
+| United States Dollar | USD | Daily |
+| Uruguayan Peso | UYU | Weekly |
+| Uzbekistani Sum | UZS | Weekly |
+| Venezuelan Bolívar Soberano | VES | Weekly |
+| Vietnamese Dong | VND | Weekly |
+| Vanuatu Vatu | VUV | Weekly |
+| Samoan Tala | WST | Weekly |
+| Central African CFA Franc | XAF | Weekly |
+| East Caribbean Dollar | XCD | Weekly |
+| West African CFA Franc | XOF | Weekly |
+| CFP Franc | XPF | Weekly |
+| Yemeni Rial | YER | Weekly |
+| South African Rand | ZAR | Daily |
+| Zambian Kwacha | ZMW | Weekly |
+| Zimbabwean Dollar | ZWL | Weekly |
 
 Configuration option `data_source` value is `national_bank_of_poland`
-
-### Monetary Authority of Singapore
-
-> Reference: [https://eservices.mas.gov.sg/Statistics/msb/ExchangeRates.aspx](https://eservices.mas.gov.sg/Statistics/msb/ExchangeRates.aspx)
-
-The base currency is Singapore dollar (`SGD`). The daily exchange rates are usually updated around midday (SGT) on every working day.
-
-This data source supports 21 currencies, and all currencies are as follows:
-
-| Currency | Currency Code | Update Frequency |
-| --- | --- | --- |
-| United Arab Emirates dirham | AED | Daily |
-| Australian dollar | AUD | Daily |
-| Canadian dollar | CAD | Daily |
-| Swiss franc | CHF | Daily |
-| Chinese yuan | CNY | Daily |
-| Euro | EUR | Daily |
-| Pound sterling | GBP | Daily |
-| Hong Kong dollar | HKD | Daily |
-| Indonesian rupiah | IDR | Daily |
-| Indian rupee | INR | Daily |
-| Japanese yen | JPY | Daily |
-| South Korean won | KRW | Daily |
-| Malaysian ringgit | MYR | Daily |
-| New Zealand dollar | NZD | Daily |
-| Philippine peso | PHP | Daily |
-| Qatari riyal | QAR | Daily |
-| Saudi riyal | SAR | Daily |
-| Thai baht | THB | Daily |
-| New Taiwan dollar | TWD | Daily |
-| United States dollar | USD | Daily |
-| Vietnamese đồng | VND | Daily |
-
-Configuration option `data_source` value is `monetary_authority_of_singapore`
