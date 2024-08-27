@@ -135,7 +135,7 @@ For example, if you want to set database type to `mysql`, you can set environmen
 | --- | --- | --- |
 | `checker_type` | `in_memory` | Duplicate checker type, supports `in_memory` currently. |
 | `cleanup_interval` | `60` | Cleanup expired data interval (1 - 4294967295 seconds), for `in_memory` duplicate checker. |
-| `duplicate_submissions_interval` | `300` | The minimum interval (0 - 4294967295 seconds) between duplicate submissions on the same page (exiting and re-entering the page is considered as a new session). Set to `0` to disable duplicate checker for new data submissions. |
+| `duplicate_submissions_interval` | `300` | The minimum interval (0 - 4294967295 seconds) between duplicate submissions on the same page (exiting and re-entering the edit page / edit dialog is considered as a new session). Set to `0` to disable duplicate checker for new data submissions. |
 
 ### Cron Job
 
