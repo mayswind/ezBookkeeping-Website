@@ -459,3 +459,54 @@ ezBookkeeping 支持自动更新汇率以及支持多个不同数据源。您可
 | 津巴布韦元 | ZWL | 每周 |
 
 配置选项 `data_source` 的值是 `national_bank_of_poland`
+
+### 国际货币基金组织
+
+> 参考：[https://www.imf.org/external/np/fin/data/param_rms_mth.aspx](https://www.imf.org/external/np/fin/data/param_rms_mth.aspx)
+
+基准货币是美元（`USD`）。每日汇率通常在工作日的 11:00 至 18:00（美国东部时间 EST）间更新。
+
+该数据源支持 38 种货币，所有货币如下：
+
+| 货币 | 货币代码 | 更新频率 |
+| --- | --- | --- |
+| 阿联酋迪拉姆 | AED | 每日 |
+| 澳大利亚元 | AUD | 每日 |
+| 文莱元 | BND | 每日 |
+| 巴西雷亚尔 | BRL | 每日 |
+| 博茨瓦纳普拉 | BWP | 每日 |
+| 加拿大元 | CAD | 每日 |
+| 瑞士法郎 | CHF | 每日 |
+| 智利比索 | CLP | 每日 |
+| 人民币 | CNY | 每日 |
+| 捷克克朗 | CZK | 每日 |
+| 丹麦克朗 | DKK | 每日 |
+| 阿尔及利亚第纳尔 | DZD | 每日 |
+| 欧元 | EUR | 每日 |
+| 英镑 | GBP | 每日 |
+| 以色列新谢克尔 | ILS | 每日 |
+| 印度卢比 | INR | 每日 |
+| 日元 | JPY | 每日 |
+| 韩元 | KRW | 每日 |
+| 科威特第纳尔 | KWD | 每日 |
+| 毛里求斯卢比 | MUR | 每日 |
+| 墨西哥比索 | MXN | 每日 |
+| 马来西亚林吉特 | MYR | 每日 |
+| 挪威克朗 | NOK | 每日 |
+| 新西兰元 | NZD | 每日 |
+| 阿曼里亚尔 | OMR | 每日 |
+| 秘鲁新索尔 | PEN | 每日 |
+| 菲律宾比索 | PHP | 每日 |
+| 波兰兹罗提 | PLN | 每日 |
+| 卡塔尔里亚尔 | QAR | 每日 |
+| 俄罗斯卢布 | RUB | 每日 |
+| 沙特里亚尔 | SAR | 每日 |
+| 瑞典克朗 | SEK | 每日 |
+| 新加坡元 | SGD | 每日 |
+| 泰铢 | THB | 每日 |
+| 特立尼达和多巴哥元 | TTD | 每日 |
+| 美元 | USD | 每日 |
+| 乌拉圭比索 | UYU | 每日 |
+| 南非兰特 | ZAR | 每日 |
+
+配置选项 `data_source` 的值是 `international_monetary_fund`

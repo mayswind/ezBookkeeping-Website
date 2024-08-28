@@ -458,3 +458,54 @@ This data source supports 148 currencies, and all currencies are as follows:
 | Zimbabwean Dollar | ZWL | Weekly |
 
 Configuration option `data_source` value is `national_bank_of_poland`
+
+### International Monetary Fund
+
+> Reference: [https://www.imf.org/external/np/fin/data/param_rms_mth.aspx](https://www.imf.org/external/np/fin/data/param_rms_mth.aspx)
+
+The base currency is United States dollar (`USD`). The daily exchange rates are usually updated from 11:00 to 18:00 EST on every working day.
+
+This data source supports 38 currencies, and all currencies are as follows:
+
+| Currency | Currency Code | Update Frequency |
+| --- | --- | --- |
+| United Arab Emirates Dirham | AED | Daily |
+| Australian Dollar | AUD | Daily |
+| Brunei Dollar | BND | Daily |
+| Brazilian Real | BRL | Daily |
+| Botswana Pula | BWP | Daily |
+| Canadian Dollar | CAD | Daily |
+| Swiss Franc | CHF | Daily |
+| Chilean Peso | CLP | Daily |
+| Chinese Yuan | CNY | Daily |
+| Czech Koruna | CZK | Daily |
+| Danish Krone | DKK | Daily |
+| Algerian Dinar | DZD | Daily |
+| Euro | EUR | Daily |
+| British Pound | GBP | Daily |
+| Israeli New Shekel | ILS | Daily |
+| Indian Rupee | INR | Daily |
+| Japanese Yen | JPY | Daily |
+| South Korean Won | KRW | Daily |
+| Kuwaiti Dinar | KWD | Daily |
+| Mauritian Rupee | MUR | Daily |
+| Mexican Peso | MXN | Daily |
+| Malaysian Ringgit | MYR | Daily |
+| Norwegian Krone | NOK | Daily |
+| New Zealand Dollar | NZD | Daily |
+| Omani Rial | OMR | Daily |
+| Peruvian Sol | PEN | Daily |
+| Philippine Peso | PHP | Daily |
+| Polish Zloty | PLN | Daily |
+| Qatari Riyal | QAR | Daily |
+| Russian Ruble | RUB | Daily |
+| Saudi Riyal | SAR | Daily |
+| Swedish Krona | SEK | Daily |
+| Singapore Dollar | SGD | Daily |
+| Thai Baht | THB | Daily |
+| Trinidad and Tobago Dollar | TTD | Daily |
+| United States Dollar | USD | Daily |
+| Uruguayan Peso | UYU | Daily |
+| South African Rand | ZAR | Daily |
+
+Configuration option `data_source` value is `international_monetary_fund`
