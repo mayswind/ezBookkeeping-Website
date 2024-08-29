@@ -145,6 +145,7 @@ ezBookkeeping 使用 ini 文件作为配置文件。
 | 选项名 | 默认值 | 描述 |
 | --- | --- | --- |
 | `enable_remove_expired_tokens` | `true` | 是否启用定期清理过期的令牌。 |
+| `enable_create_scheduled_transaction` | `true` | 是否启用根据用户的模板创建定时交易。 |
 
 ### 安全
 
@@ -172,6 +173,8 @@ ezBookkeeping 使用 ini 文件作为配置文件。
 | `enable_force_email_verify` | `false` | 用户登录时是否要求邮箱必须验证。 |
 | `enable_forget_password` | `true` | 是否启用用户密码重置。（SMTP 服务器必须配置） |
 | `forget_password_require_email_verify` | `false` | 用户使用密码重置时是否要求邮箱必须验证。 |
+| `enable_transaction_picture` | `true` | 是否启用交易图片。 |
+| `enable_scheduled_transaction` | `true` | 是否启用定时交易。 |
 | `avatar_provider` | `internal` | 用户头像提供方，支持 [`internal`](#对象存储)（使用内部对象存储保存用户头像，支持用户自行更新头像） 和 [`gravatar`](https://gravatar.com)（在该提供方网站上传头像，根据用户邮箱地址匹配）。如果您想禁用用户头像，留空即可。 |
 
 ### 数据

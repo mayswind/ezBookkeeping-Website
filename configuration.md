@@ -144,6 +144,7 @@ For example, if you want to set database type to `mysql`, you can set environmen
 | Option Name | Default Value | Description |
 | --- | --- | --- |
 | `enable_remove_expired_tokens` | `true` | Whether to enable periodic cleanup of expired tokens. |
+| `enable_create_scheduled_transaction` | `true` | Whether to enable creating scheudled transactions based on the user's templates. |
 
 ### Security
 
@@ -171,6 +172,8 @@ For example, if you want to set database type to `mysql`, you can set environmen
 | `enable_force_email_verify` | `false` | Whether to require user email must be verified when login. |
 | `enable_forget_password` | `true` | Whether to enable user password reset. (SMTP server must be configured) |
 | `forget_password_require_email_verify` | `false` | Whether to require user email must be verified when use forget password.  |
+| `enable_transaction_picture` | `true` | Whether to enable transaction picture. |
+| `enable_scheduled_transaction` | `true` | Whether to enable scheduled transaction. |
 | `avatar_provider` | `internal` | User avatar provider, supports [`internal`](#object-storage) (Use the internal object storage to store user avatar, supports updating avatar by user self) and [`gravatar`](https://gravatar.com) (updating avatar on the provider's website and match it by user's email address). Leave blank if you want to disable user avatar. |
 
 ### Data
