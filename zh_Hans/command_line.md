@@ -95,10 +95,16 @@ ezBookkeeping 用户数据维护操作。
 * `transaction-tag-index-fix-transaction-time`：修复不包含交易时间的交易标签索引数据（v0.5.0 之前的 bug）。
     * 选项：
     * `--username value`, `-n value`：用户名。必填。
+* `transaction-import`：导入交易到指定用户。
+    * 选项：
+    * `--username value`, `-n value`：用户名。必填。
+    * `--file value`, `-f value`：导入文件路径（例如 `transaction.csv`）。必填。
+    * `--type value`, `-t value`: 导入文件类型，支持 `ezbookkeeping_csv` 或 `ezbookkeeping_tsv`。必填。
 * `transaction-export`：导出指定用户所有交易到 `.csv` 文件。
     * 选项：
     * `--username value`, `-n value`：用户名。必填。
     * `--file value`, `-f value`：目标文件路径（例如 `transaction.csv`）。必填。
+    * `--type value`, `-t value`: 导出文件类型，支持 `csv` 或 `tsv`，默认为 `csv`。
 
 ### cron
 

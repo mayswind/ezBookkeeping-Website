@@ -94,10 +94,16 @@ ezBookkeeping user data maintenance operation.
 * `transaction-tag-index-fix-transaction-time`: Fix the transaction tag index data which does not have transaction time (bug before v0.5.0).
     * Options:
     * `--username value`, `-n value`: User name. Required.
+* `transaction-import`: Import transactions to specified user.
+    * Options:
+    * `--username value`, `-n value`: User name. Required.
+    * `--file value`, `-f value`: Import file path (e.g. `transaction.csv`). Required.
+    * `--type value`, `-t value`: Import file type, support `ezbookkeeping_csv` or `ezbookkeeping_tsv`. Required.
 * `transaction-export`: Export specified user all transactions to `.csv` file.
     * Options:
     * `--username value`, `-n value`: User name. Required.
     * `--file value`, `-f value`: Target file path (e.g. `transaction.csv`). Required.
+    * `--type value`, `-t value`: Export file type, support `csv` or `tsv`, default is `csv`.
 
 ### cron
 
