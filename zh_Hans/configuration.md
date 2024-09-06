@@ -174,8 +174,10 @@ ezBookkeeping 使用 ini 文件作为配置文件。
 | `enable_forget_password` | `true` | 是否启用用户密码重置。（SMTP 服务器必须配置） |
 | `forget_password_require_email_verify` | `false` | 用户使用密码重置时是否要求邮箱必须验证。 |
 | `enable_transaction_picture` | `true` | 是否启用交易图片。 |
+| `max_transaction_picture_size` | `10485760` | 最大允许的交易图片文件大小（1 - 4294967295 字节）。 |
 | `enable_scheduled_transaction` | `true` | 是否启用定时交易。 |
 | `avatar_provider` | `internal` | 用户头像提供方，支持 [`internal`](#对象存储)（使用内部对象存储保存用户头像，支持用户自行更新头像） 和 [`gravatar`](https://gravatar.com)（在该提供方网站上传头像，根据用户邮箱地址匹配）。如果您想禁用用户头像，留空即可。 |
+| `max_user_avatar_size` | `1048576` | 使用 `internal` 用户头像提供方时，最大允许的用户头像文件大小（1 - 4294967295 字节）。 |
 
 ### 数据
 
