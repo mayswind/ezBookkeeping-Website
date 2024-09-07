@@ -231,7 +231,7 @@ For example, if you want to set database type to `mysql`, you can set environmen
 
 | Option Name | Default Value | Description |
 | --- | --- | --- |
-| `data_source` | `euro_central_bank` | Exchange rates data source, supports `euro_central_bank`, `bank_of_canada`, `reserve_bank_of_australia`, `czech_national_bank`, `national_bank_of_poland`. For more information, please visit [Exchange Rates](/exchange_rates). |
+| `data_source` | `euro_central_bank` | Exchange rates data source, supports `euro_central_bank`, `bank_of_canada`, `reserve_bank_of_australia`, `czech_national_bank`, `national_bank_of_poland` or `international_monetary_fund`. For more information, please visit [Exchange Rates](/exchange_rates). |
 | `proxy` | `system` | Proxy for ezbookkeeping server requesting exchange rates data, supports `system` (use system proxy), `none` (do not use proxy), or proxy URL which starts with `http://`, `https://` or `socks5://`, default is `system`. |
 | `request_timeout` | `10000` | Request timeout for exchange rates data (0 - 4294967295 milliseconds). Set to `0` to disable timeout for requesting exchange rates data. |
 | `skip_tls_verify` | `false` | Whether to verify the server's certificate chain and host name when request exchange rates data. |
