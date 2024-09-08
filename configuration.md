@@ -185,6 +185,8 @@ For example, if you want to set database type to `mysql`, you can set environmen
 | Option Name | Default Value | Description |
 | --- | --- | --- |
 | `enable_export` | `true` | Whether to enable exporting user data. |
+| `enable_import` | `true` | Whether to enable importing user data. |
+| `max_import_file_size` | `10485760` | Maximum allowed import file size (1 - 4294967295 bytes). |
 
 ### Notification
 

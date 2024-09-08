@@ -186,6 +186,8 @@ ezBookkeeping 使用 ini 文件作为配置文件。
 | 选项名 | 默认值 | 描述 |
 | --- | --- | --- |
 | `enable_export` | `true` | 是否启用用户数据导出。 |
+| `enable_import` | `true` | 是否启用用户数据导入。 |
+| `max_import_file_size` | `10485760` | 最大允许的导入文件大小（1 - 4294967295 字节）。 |
 
 ### 通知
 
