@@ -213,7 +213,7 @@ ezBookkeeping 使用 ini 文件作为配置文件。
 | --- | --- | --- |
 | `map_provider` | `openstreetmap` | 地图提供方，支持 [`openstreetmap`](https://www.openstreetmap.org)、[`openstreetmap_humanitarian`](http://map.hotosm.org)、[`opentopomap`](https://opentopomap.org)、[`opnvkarte`](https://publictransportmap.org)、[`cyclosm`](https://www.cyclosm.org)、[`cartodb`](https://carto.com/basemaps)、[`tomtom`](https://www.tomtom.com)、[`tianditu`](https://www.tianditu.gov.cn)、[`googlemap`](https://map.google.com)、[`baidumap`](https://map.baidu.com)、[`amap`](https://amap.com) 和 `custom`。如果您想禁用地图，留空即可。 |
 | `map_data_fetch_proxy` | `false` | 使用 `openstreetmap`、`openstreetmap_humanitarian`、`opentopomap`、`opnvkarte`、`cyclosm`、`cartodb`、`tomtom`、`tianditu` 或 `custom` 地图提供方时，是否使用 ezbookkeeping 服务端转发地图数据请求。 |
-| `proxy` | `system` | 当 `map_data_fetch_proxy` 设置为 `true` 时 ezbookkeeping 服务端请求原始地图数据使用的代理，支持 `system`（使用系统代理） `none`（不使用代理），或以 `http://`、`https://` 或 `socks5://` 开头的代理服务器地址，默认为 `system`。 |
+| `proxy` | `system` | 当 `map_data_fetch_proxy` 设置为 `true` 时 ezbookkeeping 服务端请求原始地图数据使用的代理，支持 `system`（使用系统代理） `none`（不使用代理），或以 `http://`、`https://` 或 `socks5://` 开头的代理服务器地址。 |
 | `tomtom_map_api_key` |  | 使用 `tomtom` 地图提供方时，TomTom 地图的 API Key，请访问 [https://developer.tomtom.com/how-to-get-tomtom-api-key](https://developer.tomtom.com/how-to-get-tomtom-api-key) 获取更多信息。 |
 | `tianditu_map_app_key` |  | 使用 `tianditu` 地图提供方时，天地图的应用 Key，请访问 [https://console.tianditu.gov.cn/api/register](https://console.tianditu.gov.cn/api/register) 获取更多信息。 |
 | `google_map_api_key` |  | 使用 `googlemap` 地图提供方时，Google 地图的 JavaScript API Key，请访问 [https://developers.google.com/maps/get-started](https://developers.google.com/maps/get-started) 获取更多信息。 |
@@ -235,6 +235,6 @@ ezBookkeeping 使用 ini 文件作为配置文件。
 | 选项名 | 默认值 | 描述 |
 | --- | --- | --- |
 | `data_source` | `euro_central_bank` | 汇率数据源，支持 `euro_central_bank`、`bank_of_canada`、`reserve_bank_of_australia`、`czech_national_bank`、`national_bank_of_poland` 或 `international_monetary_fund`。更多信息，请访问 [汇率](/zh_Hans/exchange_rates)。 |
-| `proxy` | `system` | ezbookkeeping 服务端请求汇率数据使用的代理，支持 `system`（使用系统代理） `none`（不使用代理），或以 `http://`、`https://` 或 `socks5://` 开头的代理服务器地址，默认为 `system`。 |
 | `request_timeout` | `10000` | 请求汇率数据的超时时间（0 - 4294967295 毫秒）。 |
-| `skip_tls_verify` | `false` | 请求汇率数据时是否校验服务器的证书链和主机名称。设置为 `0` 禁用请求汇率数据超时。 |
+| `proxy` | `system` | ezbookkeeping 服务端请求汇率数据使用的代理，支持 `system`（使用系统代理） `none`（不使用代理），或以 `http://`、`https://` 或 `socks5://` 开头的代理服务器地址。 |
+| `skip_tls_verify` | `false` | 请求汇率数据时是否跳过服务器证书链和主机名称的校验。 |
