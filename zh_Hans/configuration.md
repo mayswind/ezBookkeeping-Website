@@ -84,7 +84,7 @@ ezBookkeeping 使用 ini 文件作为配置文件。
 | `smtp_host` | `127.0.0.1:25` | SMTP 主机地址和端口。 |
 | `smtp_user` |  | SMTP 服务器用户名。 |
 | `smtp_passwd` |  | SMTP 服务器用户密码。 |
-| `smtp_skip_tls_verify` | `false` | 是否校验 SMTP 服务器的证书链和主机名称。 |
+| `smtp_skip_tls_verify` | `false` | 是否跳过 SMTP 服务器证书链和主机名称的校验。 |
 | `from_address` |  | 邮件发件人。可以设置为邮件地址，或按 `"发件人" <user@domain.com>` 格式设置。 |
 
 ### 日志

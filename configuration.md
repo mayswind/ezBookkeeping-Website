@@ -83,7 +83,7 @@ For example, if you want to set database type to `mysql`, you can set environmen
 | `smtp_host` | `127.0.0.1:25` | SMTP host address and port. |
 | `smtp_user` |  | SMTP server user name. |
 | `smtp_passwd` |  | SMTP server user password. |
-| `smtp_skip_tls_verify` | `false` | Whether to verify the SMTP server's certificate chain and host name. |
+| `smtp_skip_tls_verify` | `false` | Whether to skip the SMTP server's certificate chain and host name verification. |
 | `from_address` |  | Mail from address. This can be just an email address, or the `"Name" <user@domain.com>` format. |
 
 ### Logging
