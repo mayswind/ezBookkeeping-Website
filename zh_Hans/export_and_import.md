@@ -71,12 +71,24 @@ ezbookkeeping 支持使用命令行导入 ezbookkeeping 导出的文件，或从
 
 > 注意：随手记（Web版）导出的转账交易数据中没有正确处理跨币种的转账交易数据，跨币种的转账交易只有一个金额。如果您要导入的数据中包含跨币种的转账交易，请使用金蝶随手记手机App导出交易数据，然后再导入到 ezbookkeeping。
 
-### 如何获取支付宝网页版数据导出文件
+### 如何获取支付宝（App）数据导出文件
 
-[![](images/how_to_export_feidee_alipay_web_1.png)](images/how_to_export_feidee_alipay_web_1.png)
+[![](images/how_to_export_alipay_app.png)](images/how_to_export_alipay_app.png)
 
-[![](images/how_to_export_feidee_alipay_web_2.png)](images/how_to_export_feidee_alipay_web_2.png)
+1. 在支付宝App选择 `我的`，然后点击 `账单`
+2. 在新的页面中点击右上角打开菜单，然后选择 `开具交易流水证明`
+3. 在新的页面中选择 `用于个人对账`，然后点击 `申请`
+4. 在新的页面中设置导出的交易时间范围，然后点击 `下一步`
+5. 在新的页面中输入要接收导出数据的电子邮箱地址，然后点击 `发送`
+6. 若上一步提交成功，会在新的页面提示申请已提交，然后点击 `完成`
+7. 打开第5步填写的邮箱，下载由支付宝发送的导出数据 zip 压缩文件。然后返回支付宝App首页，选择 `消息`，在 `服务消息` 中可以查看该压缩文件的密码，使用该密码解压缩后即为导出的 csv 格式文件
+
+### 如何获取支付宝（网页版）数据导出文件
+
+[![](images/how_to_export_alipay_web_1.png)](images/how_to_export_alipay_web_1.png)
+
+[![](images/how_to_export_alipay_web_2.png)](images/how_to_export_alipay_web_2.png)
 
 1. 登录网页版支付宝后，点击 `查看所有交易记录`
 2. 选择要导出的时间范围
-3. 点击 `下载查询结果` 即可导出为 csv 格式的文件
+3. 点击 `下载查询结果` 即可导出 zip 格式的压缩文件，解压缩后即为 csv 格式的文件
