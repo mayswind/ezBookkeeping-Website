@@ -57,7 +57,7 @@ ezbookkeeping 支持使用命令行导入 ezbookkeeping 导出的文件，或从
 2. 在新的页面中点击 `备份与同步`
 3. 在新的页面中点击 `备份与恢复`
 4. 在新的页面中点击 `本地备份与恢复`
-5. 在新的页面中点击 `导出Excel文件(CSV)`
+5. 在新的页面中点击 `导出Excel文件(CSV)` 即可导出为 csv 格式的文件
 
 > 注意：随手记 iPhone App 导出的交易数据中没有正确处理交易备注中的换行符，如果交易备注中包含换行符，导入 ezbookkeeping 将会失败。如果存在该问题，可以使用随手记 Android App 导出交易数据，然后再导入到 ezbookkeeping。
 
@@ -70,3 +70,13 @@ ezbookkeeping 支持使用命令行导入 ezbookkeeping 导出的文件，或从
 3. 点击 `数据导出` 下方数据来源的 `随手记 web版`，即可导出为 Excel（.xls）格式的文件
 
 > 注意：随手记（Web版）导出的转账交易数据中没有正确处理跨币种的转账交易数据，跨币种的转账交易只有一个金额。如果您要导入的数据中包含跨币种的转账交易，请使用金蝶随手记手机App导出交易数据，然后再导入到 ezbookkeeping。
+
+### 如何获取支付宝网页版数据导出文件
+
+[![](images/how_to_export_feidee_alipay_web_1.png)](images/how_to_export_feidee_alipay_web_1.png)
+
+[![](images/how_to_export_feidee_alipay_web_2.png)](images/how_to_export_feidee_alipay_web_2.png)
+
+1. 登录网页版支付宝后，点击 `查看所有交易记录`
+2. 选择要导出的时间范围
+3. 点击 `下载查询结果` 即可导出为 csv 格式的文件
