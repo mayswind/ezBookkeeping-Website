@@ -49,9 +49,17 @@ ezbookkeeping 支持使用命令行导入 ezbookkeeping 导出的文件，或从
 2. 选择要导入文件的类型和文件，然后点击 `下一步` 按钮
 3. 检查导入的交易是否映射到已经创建的分类、账户和标签，无效的数据将会标红显示。您可以点击每条记录左侧的笔形状的图标修改这条交易的分类、账户或标签。您还可以点击右上角的菜单，批量替换分类、账户或标签。最后点击交易左侧的复选框，选择最终要导入的交易，然后点击 `导入` 按钮即可
 
+### 如何获取金蝶随手记（App）数据导出文件
+
+[![](images/how_to_export_feidee_mymoney_app.png)](images/how_to_export_feidee_mymoney_app.png)
+
+1. 在随手记App中点击 `设置` -> `高级功能` -> `备份与同步` -> `本地备份与恢复` -> `导出Excel文件(CSV)`
+
+> 注意：随手记 iPhone App 导出的交易数据没有正确处理交易备注中的换行符，如果交易备注中包含换行符，导入 ezbookkeeping 将会失败。如果存在该问题，可以使用随手记 Android App 导出交易数据，然后再导入到 ezbookkeeping。
+
 ### 如何获取金蝶随手记（Web版）数据导出文件
 
-![](images/how_to_export_feidee_mymoney_web.png)
+[![](images/how_to_export_feidee_mymoney_web.png)](images/how_to_export_feidee_mymoney_web.png)
 
 1. 在随手记网页版点击 `新功能` 中的 `导入导出`
 2. 点击 `数据导出` 中的 `随手记 web版`，即可导出为 Excel（.xls）格式的文件
