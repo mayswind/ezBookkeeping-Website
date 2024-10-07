@@ -1,7 +1,7 @@
 ---
 layout: default
 title: 开发
-nav_order: 6
+nav_order: 7
 parent: 简体中文
 permalink: /zh_Hans/developing
 ---
