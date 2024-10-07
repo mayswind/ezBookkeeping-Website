@@ -53,15 +53,20 @@ ezbookkeeping 支持使用命令行导入 ezbookkeeping 导出的文件，或从
 
 [![](images/how_to_export_feidee_mymoney_app.png)](images/how_to_export_feidee_mymoney_app.png)
 
-1. 在随手记App中点击 `设置` -> `高级功能` -> `备份与同步` -> `本地备份与恢复` -> `导出Excel文件(CSV)`
+1. 在随手记App选择账本后点击 `设置`，然后点击 `高级功能`
+2. 在新的页面中点击 `备份与同步`
+3. 在新的页面中点击 `备份与恢复`
+4. 在新的页面中点击 `本地备份与恢复`
+5. 在新的页面中点击 `导出Excel文件(CSV)`
 
-> 注意：随手记 iPhone App 导出的交易数据没有正确处理交易备注中的换行符，如果交易备注中包含换行符，导入 ezbookkeeping 将会失败。如果存在该问题，可以使用随手记 Android App 导出交易数据，然后再导入到 ezbookkeeping。
+> 注意：随手记 iPhone App 导出的交易数据中没有正确处理交易备注中的换行符，如果交易备注中包含换行符，导入 ezbookkeeping 将会失败。如果存在该问题，可以使用随手记 Android App 导出交易数据，然后再导入到 ezbookkeeping。
 
 ### 如何获取金蝶随手记（Web版）数据导出文件
 
 [![](images/how_to_export_feidee_mymoney_web.png)](images/how_to_export_feidee_mymoney_web.png)
 
-1. 在随手记网页版点击 `新功能` 中的 `导入导出`
-2. 点击 `数据导出` 中的 `随手记 web版`，即可导出为 Excel（.xls）格式的文件
+1. 在随手记网页版点击 `新功能` 菜单
+2. 在弹出的菜单中点击 `导入导出`
+3. 点击 `数据导出` 下方数据来源的 `随手记 web版`，即可导出为 Excel（.xls）格式的文件
 
-> 注意：随手记（Web版）导出的转账交易没有处理多币种的转账交易数据，跨币种的转账金额为相同。如果您要导入的数据中包含跨币种的转账交易，请使用金蝶随手记手机App进行导出交易数据。
+> 注意：随手记（Web版）导出的转账交易数据中没有正确处理跨币种的转账交易数据，跨币种的转账交易只有一个金额。如果您要导入的数据中包含跨币种的转账交易，请使用金蝶随手记手机App导出交易数据，然后再导入到 ezbookkeeping。
