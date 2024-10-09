@@ -50,7 +50,7 @@ See [transaction-import](/command_line#userdata)
 
 The following table lists all supported file types and the data contents that can be imported:
 
-| File Type | Income Transaction | Expense Transaction | Transfer Transaction | Transfer Transaction With Different Currencies | Category Name | Account Name | Tag Names | Geographic Location | Comment |
+| File Type | Income Transaction | Expense Transaction | Transfer Transaction | Transfer Transaction With Different Currencies | Category Name | Account Name | Tag Names | Geographic Location | Description |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ezbookkeeping Data Export File (CSV) | √ | √ | √ | √ | √ | √ | √ | √ | √ |
 | ezbookkeeping Data Export File (TSV) | √ | √ | √ | √ | √ | √ | √ | √ | √ |
