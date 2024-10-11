@@ -54,6 +54,7 @@ The following table lists all supported file types and the data contents that ca
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ezbookkeeping Data Export File (CSV) | √ | √ | √ | √ | √ | √ | √ | √ | √ | √ |
 | ezbookkeeping Data Export File (TSV) | √ | √ | √ | √ | √ | √ | √ | √ | √ | √ |
+| Firefly III Data Export File | √ | √ | √ | √ | √ | √ | √ | √ | - | √ |
 | Feidee MyMoney (App) Data Export File | √ | √ | √ | √ | √ | √ | - | - | - | √ |
 | Feidee MyMoney (Web) Data Export File | √ | √ | √ | - | √ | √ | - | - | - | √ |
 | Alipay (App) Data Export File | √ | √ | √ | - | √ | √ | - | - | - | √ |
