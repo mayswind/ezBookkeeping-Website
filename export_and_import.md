@@ -63,3 +63,10 @@ The following table lists all supported file types and the data contents that ca
 * `√` means that the original file contains this data, and it can be imported
 * `-` means that the original file does not contain this data
 * `×` means that the original file contains this data, but it cannot be imported
+
+### How to get Firefly III Data Export File
+
+[![](images/how_to_export_firefly_iii.png)](images/how_to_export_firefly_iii.png)
+
+1. Click "Export data" in the left navigation bar of Firefly III
+2. Click "Export all transactions" to export to a csv file

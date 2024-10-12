@@ -65,6 +65,13 @@ ezbookkeeping 支持使用命令行导入 ezbookkeeping 导出的文件，或从
 * `-` 表示原始文件不包含该数据
 * `×` 表示原始文件包含该数据，但该数据不支持被导入
 
+### 如何获取 Firefly III 数据导出文件
+
+[![](images/how_to_export_firefly_iii.png)](images/how_to_export_firefly_iii.png)
+
+1. 在 Firefly III 左侧导航栏中点击 “导出数据”
+2. 点击 “导出所有交易” 即可导出为 csv 格式的文件
+
 ### 如何获取金蝶随手记（App）数据导出文件
 
 [![](images/how_to_export_feidee_mymoney_app.png)](images/how_to_export_feidee_mymoney_app.png)
