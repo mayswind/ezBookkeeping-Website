@@ -94,7 +94,7 @@ ezbookkeeping 支持使用命令行导入 ezbookkeeping 导出的文件，或从
 
 > 注意：随手记（Web版）导出的转账交易数据中没有正确处理跨币种的转账交易数据，跨币种的转账交易只有一个金额。如果您要导入的数据中包含跨币种的转账交易，请使用金蝶随手记手机App导出交易数据，然后再导入到 ezbookkeeping。
 
-### 如何获取支付宝（App）数据导出文件
+### 如何获取支付宝（App）交易流水文件
 
 [![](images/how_to_export_alipay_app.png)](images/how_to_export_alipay_app.png)
 
@@ -106,7 +106,7 @@ ezbookkeeping 支持使用命令行导入 ezbookkeeping 导出的文件，或从
 6. 若上一步提交成功，会在新的页面提示申请已提交，然后点击 “完成”
 7. 打开第5步填写的邮箱，下载由支付宝发送的导出数据 zip 压缩文件。然后返回支付宝App首页，选择 “消息”，在 “服务消息” 中可以查看该压缩文件的密码，使用该密码解压缩后即为导出的 csv 格式文件
 
-### 如何获取支付宝（网页版）数据导出文件
+### 如何获取支付宝（网页版）交易流水文件
 
 [![](images/how_to_export_alipay_web_1.png)](images/how_to_export_alipay_web_1.png)
 
@@ -116,7 +116,7 @@ ezbookkeeping 支持使用命令行导入 ezbookkeeping 导出的文件，或从
 2. 选择要导出的时间范围
 3. 点击 “下载查询结果” 即可导出 zip 格式的压缩文件，解压缩后即为 csv 格式的文件
 
-### 如何获取微信支付数据导出文件
+### 如何获取微信支付账单文件
 
 [![](images/how_to_export_wechat_pay_app.png)](images/how_to_export_wechat_pay_app.png)
 
