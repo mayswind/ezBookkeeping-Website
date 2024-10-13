@@ -57,8 +57,9 @@ The following table lists all supported file types and the data contents that ca
 | Firefly III Data Export File | √ | √ | √ | √ | √ | √ | √ | √ | - | √ |
 | Feidee MyMoney (App) Data Export File | √ | √ | √ | √ | √ | √ | - | - | - | √ |
 | Feidee MyMoney (Web) Data Export File | √ | √ | √ | - | √ | √ | - | - | - | √ |
-| Alipay (App) Data Export File | √ | √ | √ | - | √ | √ | - | - | - | √ |
-| Alipay (Web) Data Export File | √ | √ | √ | - | - | √ | - | - | - | √ |
+| Alipay (App) Transaction Flow File | √ | √ | √ | - | √ | √ | - | - | - | √ |
+| Alipay (Web) Transaction Flow File | √ | √ | √ | - | - | √ | - | - | - | √ |
+| WeChat Pay Billing File | √ | √ | √ | - | √ | √ | - | - | - | √ |
 
 * "√" means that the original file contains this data, and it can be imported
 * "-" means that the original file does not contain this data
