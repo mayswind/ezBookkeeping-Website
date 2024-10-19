@@ -55,6 +55,9 @@ ezbookkeeping 支持使用命令行导入 ezbookkeeping 导出的文件，或从
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ezbookkeeping 数据导出文件 (CSV) | √ | √ | √ | √ | √ | √ | √ | √ | √ | √ |
 | ezbookkeeping 数据导出文件 (TSV) | √ | √ | √ | √ | √ | √ | √ | √ | √ | √ |
+| Quicken Interchange Format (QIF) 文件 (年-月-日 格式) | √ | √ | √ | - | √ | √ | - | - | - | √ |
+| Quicken Interchange Format (QIF) 文件 (月-日-年 格式) | √ | √ | √ | - | √ | √ | - | - | - | √ |
+| Quicken Interchange Format (QIF) 文件 (日-月-年 格式) | √ | √ | √ | - | √ | √ | - | - | - | √ |
 | Firefly III 数据导出文件 | √ | √ | √ | √ | √ | √ | √ | √ | - | √ |
 | 金蝶随手记 (App) 数据导出文件 | √ | √ | √ | √ | √ | √ | - | - | - | √ |
 | 金蝶随手记 (Web版) 数据导出文件 | √ | √ | √ | - | √ | √ | - | - | - | √ |
