@@ -56,6 +56,7 @@ ezbookkeeping 支持使用命令行导入 ezbookkeeping 导出的文件，或从
 | ezbookkeeping 数据导出文件 (CSV) | √ | √ | √ | √ | √ | √ | √ | √ | √ | √ |
 | ezbookkeeping 数据导出文件 (TSV) | √ | √ | √ | √ | √ | √ | √ | √ | √ | √ |
 | Quicken Interchange Format (QIF) 文件 | √ | √ | √ | - | √ | √ | - | - | - | √ |
+| GnuCash XML 数据库文件 | √ | √ | √ | √ | √ | √ | - | √ | - | √ |
 | Firefly III 数据导出文件 | √ | √ | √ | √ | √ | √ | √ | √ | - | √ |
 | 金蝶随手记 (App) 数据导出文件 | √ | √ | √ | √ | √ | √ | - | - | - | √ |
 | 金蝶随手记 (Web版) 数据导出文件 | √ | √ | √ | - | √ | √ | - | - | - | √ |
@@ -66,6 +67,13 @@ ezbookkeeping 支持使用命令行导入 ezbookkeeping 导出的文件，或从
 * “√” 表示原始文件包含该数据，同时该数据可以被导入
 * “-” 表示原始文件不包含该数据
 * “×” 表示原始文件包含该数据，但该数据不支持被导入
+
+### 如何获取 GnuCash XML 数据库
+
+[![](images/how_to_export_gnucash.png)](images/how_to_export_gnucash.png)
+
+1. 点击 “文件” 菜单，选择 “另存为”
+2. 选择 “数据格式” 中的 “xml”，保存即可导出 XML 格式的 GnuCash 数据库
 
 ### 如何获取 Firefly III 数据导出文件
 

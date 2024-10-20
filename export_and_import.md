@@ -55,6 +55,7 @@ The following table lists all supported file types and the data contents that ca
 | ezbookkeeping Data Export File (CSV) | √ | √ | √ | √ | √ | √ | √ | √ | √ | √ |
 | ezbookkeeping Data Export File (TSV) | √ | √ | √ | √ | √ | √ | √ | √ | √ | √ |
 | Quicken Interchange Format (QIF) File | √ | √ | √ | - | √ | √ | - | - | - | √ |
+| GnuCash XML Database File | √ | √ | √ | √ | √ | √ | - | √ | - | √ |
 | Firefly III Data Export File | √ | √ | √ | √ | √ | √ | √ | √ | - | √ |
 | Feidee MyMoney (App) Data Export File | √ | √ | √ | √ | √ | √ | - | - | - | √ |
 | Feidee MyMoney (Web) Data Export File | √ | √ | √ | - | √ | √ | - | - | - | √ |
@@ -65,6 +66,13 @@ The following table lists all supported file types and the data contents that ca
 * "√" means that the original file contains this data, and it can be imported
 * "-" means that the original file does not contain this data
 * "×" means that the original file contains this data, but it cannot be imported
+
+### How to get GnuCash XML Database
+
+[![](images/how_to_export_gnucash.png)](images/how_to_export_gnucash.png)
+
+1. Click the "File" menu and select "Save As"
+2. Select "xml" in "Data Format", and save to export the GnuCash database in XML format
 
 ### How to get Firefly III Data Export File
 
