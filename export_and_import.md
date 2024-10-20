@@ -54,9 +54,7 @@ The following table lists all supported file types and the data contents that ca
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ezbookkeeping Data Export File (CSV) | √ | √ | √ | √ | √ | √ | √ | √ | √ | √ |
 | ezbookkeeping Data Export File (TSV) | √ | √ | √ | √ | √ | √ | √ | √ | √ | √ |
-| Quicken Interchange Format (QIF) File (Year-month-day format) | √ | √ | √ | - | √ | √ | - | - | - | √ |
-| Quicken Interchange Format (QIF) File (Month-day-year format) | √ | √ | √ | - | √ | √ | - | - | - | √ |
-| Quicken Interchange Format (QIF) File (Day-month-year format) | √ | √ | √ | - | √ | √ | - | - | - | √ |
+| Quicken Interchange Format (QIF) File | √ | √ | √ | - | √ | √ | - | - | - | √ |
 | Firefly III Data Export File | √ | √ | √ | √ | √ | √ | √ | √ | - | √ |
 | Feidee MyMoney (App) Data Export File | √ | √ | √ | √ | √ | √ | - | - | - | √ |
 | Feidee MyMoney (Web) Data Export File | √ | √ | √ | - | √ | √ | - | - | - | √ |
