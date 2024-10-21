@@ -68,7 +68,7 @@ ezbookkeeping 支持使用命令行导入 ezbookkeeping 导出的文件，或从
 * “-” 表示原始文件不包含该数据
 * “×” 表示原始文件包含该数据，但该数据不支持被导入
 
-### 如何获取 GnuCash XML 数据库
+### 如何获取 GnuCash XML 数据库文件
 
 [![](images/how_to_export_gnucash.png)](images/how_to_export_gnucash.png)
 

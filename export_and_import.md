@@ -67,7 +67,7 @@ The following table lists all supported file types and the data contents that ca
 * "-" means that the original file does not contain this data
 * "×" means that the original file contains this data, but it cannot be imported
 
-### How to get GnuCash XML Database
+### How to get GnuCash XML Database File
 
 [![](images/how_to_export_gnucash.png)](images/how_to_export_gnucash.png)
 
