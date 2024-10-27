@@ -58,8 +58,8 @@ ezbookkeeping 支持使用命令行导入 ezbookkeeping 导出的文件，或从
 | Intuit Interchange Format (IIF) 文件 | √ | √ | √ | - | √ | √ | - | - | - | √ |
 | GnuCash XML 数据库文件 | √ | √ | √ | √ | √ | √ | - | √ | - | √ |
 | Firefly III 数据导出文件 | √ | √ | √ | √ | √ | √ | √ | √ | - | √ |
-| 金蝶随手记 (App) 数据导出文件 | √ | √ | √ | √ | √ | √ | - | - | - | √ |
-| 金蝶随手记 (Web版) 数据导出文件 | √ | √ | √ | - | √ | √ | - | - | - | √ |
+| 随手记 (App) 数据导出文件 | √ | √ | √ | √ | √ | √ | - | - | - | √ |
+| 随手记 (Web版) 数据导出文件 | √ | √ | √ | - | √ | √ | - | - | - | √ |
 | 支付宝 (App) 交易流水文件 | √ | √ | √ | - | √ | √ | - | - | - | √ |
 | 支付宝 (网页版) 交易流水文件 | √ | √ | √ | - | - | √ | - | - | - | √ |
 | 微信支付账单文件 | √ | √ | √ | - | √ | √ | - | - | - | √ |
@@ -82,7 +82,7 @@ ezbookkeeping 支持使用命令行导入 ezbookkeeping 导出的文件，或从
 1. 在 Firefly III 左侧导航栏中点击 “导出数据”
 2. 点击 “导出所有交易” 即可导出为 csv 格式的文件
 
-### 如何获取金蝶随手记（App）数据导出文件
+### 如何获取随手记（App）数据导出文件
 
 [![](images/how_to_export_feidee_mymoney_app.png)](images/how_to_export_feidee_mymoney_app.png)
 
@@ -94,7 +94,7 @@ ezbookkeeping 支持使用命令行导入 ezbookkeeping 导出的文件，或从
 
 > 注意：随手记 iPhone App 导出的交易数据中没有正确处理交易备注中的换行符，如果交易备注中包含换行符，导入 ezbookkeeping 将会失败。如果存在该问题，可以使用随手记 Android App 导出交易数据，然后再导入到 ezbookkeeping。
 
-### 如何获取金蝶随手记（Web版）数据导出文件
+### 如何获取随手记（Web版）数据导出文件
 
 [![](images/how_to_export_feidee_mymoney_web.png)](images/how_to_export_feidee_mymoney_web.png)
 
@@ -102,7 +102,7 @@ ezbookkeeping 支持使用命令行导入 ezbookkeeping 导出的文件，或从
 2. 在弹出的菜单中点击 “导入导出”
 3. 点击 “数据导出” 下方数据来源的 “随手记 web版”，即可导出为 Excel（.xls）格式的文件
 
-> 注意：随手记（Web版）导出的转账交易数据中没有正确处理跨币种的转账交易数据，跨币种的转账交易只有一个金额。如果您要导入的数据中包含跨币种的转账交易，请使用金蝶随手记手机App导出交易数据，然后再导入到 ezbookkeeping。
+> 注意：随手记（Web版）导出的转账交易数据中没有正确处理跨币种的转账交易数据，跨币种的转账交易只有一个金额。如果您要导入的数据中包含跨币种的转账交易，请使用随手记手机App导出交易数据，然后再导入到 ezbookkeeping。
 
 ### 如何获取支付宝（App）交易流水文件
 
