@@ -56,6 +56,7 @@ ezbookkeeping 支持使用命令行导入 ezbookkeeping 导出的文件，或从
 | ezbookkeeping 数据导出文件 | √ | √ | √ | √ | √ | √ | √ | √ | √ | √ |
 | Quicken Interchange Format (QIF) 文件 | √ | √ | √ | - | √ | √ | - | - | - | √ |
 | Intuit Interchange Format (IIF) 文件 | √ | √ | √ | - | √ | √ | - | - | - | √ |
+| 开放式金融交换 (OFX) 文件 | √ | √ | √ | - | - | - | - | √ | - | √ |
 | GnuCash XML 数据库文件 | √ | √ | √ | √ | √ | √ | - | √ | - | √ |
 | Firefly III 数据导出文件 | √ | √ | √ | √ | √ | √ | √ | √ | - | √ |
 | 随手记 (App) 数据导出文件 | √ | √ | √ | √ | √ | √ | - | - | - | √ |

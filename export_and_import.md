@@ -55,6 +55,7 @@ The following table lists all supported file types and the data contents that ca
 | ezbookkeeping Data Export File | √ | √ | √ | √ | √ | √ | √ | √ | √ | √ |
 | Quicken Interchange Format (QIF) File | √ | √ | √ | - | √ | √ | - | - | - | √ |
 | Intuit Interchange Format (IIF) File | √ | √ | √ | - | √ | √ | - | - | - | √ |
+| Open Financial Exchange (OFX) File | √ | √ | √ | - | - | - | - | √ | - | √ |
 | GnuCash XML Database File | √ | √ | √ | √ | √ | √ | - | √ | - | √ |
 | Firefly III Data Export File | √ | √ | √ | √ | √ | √ | √ | √ | - | √ |
 | Feidee MyMoney (App) Data Export File | √ | √ | √ | √ | √ | √ | - | - | - | √ |
