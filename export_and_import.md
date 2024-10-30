@@ -53,9 +53,10 @@ The following table lists all supported file types and the data contents that ca
 | File Type | Income Transaction | Expense Transaction | Transfer Transaction | Transfer Transaction With Different Currencies | Category Name | Account Name | Tag Names | Timezone | Geographic Location | Description |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ezbookkeeping Data Export File | √ | √ | √ | √ | √ | √ | √ | √ | √ | √ |
+| Open Financial Exchange (OFX) File | √ | √ | √ | - | - | - | - | √ | - | √ |
+| Quicken Financial Exchange (QFX) File | √ | √ | √ | - | - | - | - | √ | - | √ |
 | Quicken Interchange Format (QIF) File | √ | √ | √ | - | √ | √ | - | - | - | √ |
 | Intuit Interchange Format (IIF) File | √ | √ | √ | - | √ | √ | - | - | - | √ |
-| Open Financial Exchange (OFX) File | √ | √ | √ | - | - | - | - | √ | - | √ |
 | GnuCash XML Database File | √ | √ | √ | √ | √ | √ | - | √ | - | √ |
 | Firefly III Data Export File | √ | √ | √ | √ | √ | √ | √ | √ | - | √ |
 | Feidee MyMoney (App) Data Export File | √ | √ | √ | √ | √ | √ | - | - | - | √ |
