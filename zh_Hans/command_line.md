@@ -83,6 +83,9 @@ ezBookkeeping 用户数据维护操作。
 * `user-session-list`：列出指定用户所有会话。
     * 选项：
     * `--username value`, `-n value`：用户名。必填。
+* `user-session-new`：为用户创建新会话。
+    * 选项：
+    * `--username value`, `-n value`：用户名。必填。
 * `user-session-clear`：清除指定用户所有会话。
     * 选项：
     * `--username value`, `-n value`：用户名。必填。

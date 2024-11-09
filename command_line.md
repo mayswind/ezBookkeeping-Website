@@ -82,6 +82,9 @@ ezBookkeeping user data maintenance operation.
 * `user-session-list`: List specified user all sessions.
     * Options:
     * `--username value`, `-n value`: User name. Required.
+* `user-session-new`: Create new session for user
+    * Options:
+    * `--username value`, `-n value`: User name. Required.
 * `user-session-clear`: Clear specified user all sessions.
     * Options:
     * `--username value`, `-n value`: User name. Required.
