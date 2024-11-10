@@ -189,6 +189,18 @@ For example, if you want to set database type to `mysql`, you can set environmen
 | `enable_import` | `true` | Whether to enable importing user data. |
 | `max_import_file_size` | `10485760` | Maximum allowed import file size (1 - 4294967295 bytes). |
 
+### Tip
+
+> Section name is `tip`
+
+> If the setting supports multiple languages, you can add an underscore and a language tag after the setting key to configure the tips content in that language.  
+> For example, `login_page_tips_content_zh_hans` means the tips content in Simplified Chinese.
+
+| Option Name | Default Value | Description |
+| --- | --- | --- |
+| `enable_tips_in_login_page` | `false` | Whether to enable displaying custom tips in login page. |
+| `login_page_tips_content` |  | The custom tips content displayed in login page, supporting multi-language configuration. |
+
 ### Notification
 
 > Section name is `notification`

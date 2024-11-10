@@ -190,6 +190,18 @@ ezBookkeeping 使用 ini 文件作为配置文件。
 | `enable_import` | `true` | 是否启用用户数据导入。 |
 | `max_import_file_size` | `10485760` | 最大允许的导入文件大小（1 - 4294967295 字节）。 |
 
+### 提示
+
+> 配置节名称为 `tip`
+
+> 如果配置项支持多语言，可以在配置项的键名后添加下划线和语言标签，来配置该语言下的提示内容。  
+> 例如，`login_page_tips_content_zh_hans` 表示简体中文的提示内容。
+
+| 选项名 | 默认值 | 描述 |
+| --- | --- | --- |
+| `enable_tips_in_login_page` | `false` | 是否启用登录页面显示的自定义提示内容。 |
+| `login_page_tips_content` |  | 登录页面显示的自定义提示内容，支持多语言配置。 |
+
 ### 通知
 
 > 配置节名称为 `notification`
