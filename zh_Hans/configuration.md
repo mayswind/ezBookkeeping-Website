@@ -34,7 +34,7 @@ ezBookkeeping 使用 ini 文件作为配置文件。
 
 | 选项名 | 默认值 | 描述 |
 | --- | --- | --- |
-| `app_name` | `ezBookkeeping` | 应用实例名称，在两步认证中使用。 |
+| `app_name` | `ezBookkeeping` | 应用实例名称，在两步验证中使用。 |
 | `mode` | `production` | 应用运行模式，影响服务器调试及日志记录。该值可以设置为 `production` 或 `development`。 |
 
 ### Web 服务器
@@ -154,7 +154,7 @@ ezBookkeeping 使用 ini 文件作为配置文件。
 | 选项名 | 默认值 | 描述 |
 | --- | --- | --- |
 | `secret_key` |  | 作为密钥使用，**为了保证您的数据安全，请在第一次运行 ezBookkeeping 前修改该值**。你可以通过执行 `ezbookkeeping security gen-secret-key` 获取一个随机密钥。 |
-| `enable_two_factor` | `true` | 是否开启两步认证。 |
+| `enable_two_factor` | `true` | 是否开启两步验证。 |
 | `token_expired_time` | `2592000` | 令牌过期时间（60 - 4294967295 秒）。 |
 | `token_min_refresh_interval` | `86400` | 令牌最小刷新间隔（0 - 4294967295 秒)，该值应当小于令牌过期时间。设置为 `0` 时则每次刷新前端时都会刷新令牌。 |
 | `temporary_token_expired_time` | `300` | 临时令牌过期时间（60 - 4294967295 秒）。 |
@@ -178,6 +178,7 @@ ezBookkeeping 使用 ini 文件作为配置文件。
 | `enable_scheduled_transaction` | `true` | 是否启用定时交易。 |
 | `avatar_provider` | `internal` | 用户头像提供方，支持 [`internal`](#对象存储)（使用内部对象存储保存用户头像，支持用户自行更新头像） 和 [`gravatar`](https://gravatar.com)（在该提供方网站上传头像，根据用户邮箱地址匹配）。如果您想禁用用户头像，留空即可。 |
 | `max_user_avatar_size` | `1048576` | 使用 `internal` 用户头像提供方时，最大允许的用户头像文件大小（1 - 4294967295 字节）。 |
+| `default_feature_restrictions` |  | 用户注册后默认的功能限制（功能类型使用逗号分隔），留空表示无限制。<br/>支持以下功能类型：<br/>`1`:  更新密码<br/>`2`:  更新邮箱<br/>`3`:  更新个人基本信息<br/>`4`:  更新头像<br/>`5`:  退出登录其他会话<br/>`6`:  启用两步验证<br/>`7`:  禁用两步验证<br/>`8`:  忘记密码<br/>`9`:  导入交易<br/>`10`:  导出交易<br/>`11`:  清除所有数据 |
 
 ### 数据
 

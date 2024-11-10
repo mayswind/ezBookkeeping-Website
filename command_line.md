@@ -64,6 +64,18 @@ ezBookkeeping user data maintenance operation.
 * `user-disable`: Disable specified user.
     * Options:
     * `--username value`, `-n value`: User name. Required.
+* `user-set-restrict-features`: Set restrictions of user features.
+    * Options:
+    * `--username value`, `-n value`: User name. Required.
+    * `--features value`, `-t value`: Specific feature types (feature types separated by commas). Required. See `default_feature_restrictions` in [Configuration](/configuration#user) for more information.
+* `user-add-restrict-features`: Add restrictions of user features.
+    * Options:
+    * `--username value`, `-n value`: User name. Required.
+    * `--features value`, `-t value`: Specific feature types (feature types separated by commas). Required. See `default_feature_restrictions` in [Configuration](/configuration#user) for more information.
+* `user-remove-restrict-features`: Remove restrictions of user features.
+    * Options:
+    * `--username value`, `-n value`: User name. Required.
+    * `--features value`, `-t value`: Specific feature types (feature types separated by commas). Required. See `default_feature_restrictions` in [Configuration](/configuration#user) for more information.
 * `user-resend-verify-email`: Resend user verify email.
     * Options:
     * `--username value`, `-n value`: User name. Required.

@@ -65,6 +65,18 @@ ezBookkeeping 用户数据维护操作。
 * `user-disable`：禁用指定用户。
     * 选项：
     * `--username value`, `-n value`：用户名。必填。
+* `user-set-restrict-features`: 设置用户指定功能限制。
+    * 选项：
+    * `--username value`, `-n value`：用户名。必填。
+    * `--features value`, `-t value`: 指定功能类型（功能类型使用逗号分隔）。必填。访问 [配置](/zh_Hans/configuration#用户) 中的 `default_feature_restrictions` 查看更多信息。
+* `user-add-restrict-features`: 添加用户指定功能限制。
+    * 选项：
+    * `--username value`, `-n value`：用户名。必填。
+    * `--features value`, `-t value`: 指定功能类型（功能类型使用逗号分隔）。必填。访问 [配置](/zh_Hans/configuration#用户) 中的 `default_feature_restrictions` 查看更多信息。
+* `user-remove-restrict-features`: 移除用户指定功能限制。
+    * 选项：
+    * `--username value`, `-n value`：用户名。必填。
+    * `--features value`, `-t value`: 指定功能类型（功能类型使用逗号分隔）。必填。访问 [配置](/zh_Hans/configuration#用户) 中的 `default_feature_restrictions` 查看更多信息。
 * `user-resend-verify-email`：重新发送用户验证邮件。
     * 选项：
     * `--username value`, `-n value`：用户名。必填。
