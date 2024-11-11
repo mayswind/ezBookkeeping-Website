@@ -460,6 +460,33 @@ ezBookkeeping 支持自动更新汇率以及支持多个不同数据源。您可
 
 配置选项 `data_source` 的值是 `national_bank_of_poland`
 
+### 以色列银行
+
+> 参考：[https://www.boi.org.il/en/economic-roles/financial-markets/exchange-rates/](https://www.boi.org.il/en/economic-roles/financial-markets/exchange-rates/)
+
+基准货币是以色列新谢克尔（`ILS`）。每日汇率通常在工作日的 15:45（以色列标准时间 IST）左右更新。
+
+该数据源支持 15 种货币，所有货币如下：
+
+| 货币 | 货币代码 | 更新频率 |
+| --- | --- | --- |
+| 澳大利亚元 | AUD | 每日 |
+| 加拿大元 | CAD | 每日 |
+| 瑞士法郎 | CHF | 每日 |
+| 丹麦克朗 | DKK | 每日 |
+| 埃及镑 | EGP | 每日 |
+| 欧元 | EUR | 每日 |
+| 英镑 | GBP | 每日 |
+| 约旦第纳尔 | JOD | 每日 |
+| 日元 | JPY | 每日 |
+| 黎巴嫩镑 | LBP | 每日 |
+| 挪威克朗 | NOK | 每日 |
+| 瑞典克朗 | SEK | 每日 |
+| 美元 | USD | 每日 |
+| 南非兰特 | ZAR | 每日 |
+
+配置选项 `data_source` 的值是 `bank_of_israel`
+
 ### 国际货币基金组织
 
 > 参考：[https://www.imf.org/external/np/fin/data/param_rms_mth.aspx](https://www.imf.org/external/np/fin/data/param_rms_mth.aspx)

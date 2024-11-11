@@ -459,6 +459,33 @@ This data source supports 148 currencies, and all currencies are as follows:
 
 Configuration option `data_source` value is `national_bank_of_poland`
 
+### Bank of Israel
+
+> Reference: [https://www.boi.org.il/en/economic-roles/financial-markets/exchange-rates/](https://www.boi.org.il/en/economic-roles/financial-markets/exchange-rates/)
+
+The base currency is Israeli new shekel (`ILS`). The daily exchange rates are usually updated about 15:45 IST on every working day.
+
+This data source supports 15 currencies, and all currencies are as follows:
+
+| Currency | Currency Code | Update Frequency |
+| --- | --- | --- |
+| Australian Dollar | AUD | Daily |
+| Canadian Dollar | CAD | Daily |
+| Swiss Franc | CHF | Daily |
+| Danish Krone | DKK | Daily |
+| Egyptian Pound | EGP | Daily |
+| Euro | EUR | Daily |
+| British Pound | GBP | Daily |
+| Jordanian Dinar | JOD | Daily |
+| Japanese Yen | JPY | Daily |
+| Lebanese Pound | LBP | Daily |
+| Norwegian Krone | NOK | Daily |
+| Swedish Krona | SEK | Daily |
+| United States Dollar | USD | Daily |
+| South African Rand | ZAR | Daily |
+
+Configuration option `data_source` value is `bank_of_israel`
+
 ### International Monetary Fund
 
 > Reference: [https://www.imf.org/external/np/fin/data/param_rms_mth.aspx](https://www.imf.org/external/np/fin/data/param_rms_mth.aspx)

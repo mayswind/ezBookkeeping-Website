@@ -247,7 +247,7 @@ ezBookkeeping 使用 ini 文件作为配置文件。
 
 | 选项名 | 默认值 | 描述 |
 | --- | --- | --- |
-| `data_source` | `euro_central_bank` | 汇率数据源，支持 `euro_central_bank`、`bank_of_canada`、`reserve_bank_of_australia`、`czech_national_bank`、`national_bank_of_poland` 或 `international_monetary_fund`。更多信息，请访问 [汇率](/zh_Hans/exchange_rates)。 |
+| `data_source` | `euro_central_bank` | 汇率数据源，支持 `euro_central_bank`、`bank_of_canada`、`reserve_bank_of_australia`、`czech_national_bank`、`national_bank_of_poland`、`bank_of_israel` 或 `international_monetary_fund`。更多信息，请访问 [汇率](/zh_Hans/exchange_rates)。 |
 | `request_timeout` | `10000` | 请求汇率数据的超时时间（0 - 4294967295 毫秒）。 |
 | `proxy` | `system` | ezbookkeeping 服务端请求汇率数据使用的代理，支持 `system`（使用系统代理） `none`（不使用代理），或以 `http://`、`https://` 或 `socks5://` 开头的代理服务器地址。 |
 | `skip_tls_verify` | `false` | 请求汇率数据时是否跳过服务器证书链和主机名称的校验。 |
