@@ -24,7 +24,7 @@ ezBookkeeping supports updating exchange rates automatically, and supports multi
 
 > Reference: [https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html](https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html)
 
-The base currency is European euro (`EUR`). The daily exchange rates are usually updated around 16:00 CET on every working day.
+The base currency is European euro (`EUR`). The daily exchange rates are usually updated around 16:00 CET (Central European Time) on every working day.
 
 This data source supports 30 currencies, and all currencies are as follows:
 
@@ -67,7 +67,7 @@ Configuration option `data_source` value is `euro_central_bank`
 
 > Reference: [https://www.bankofcanada.ca/rates/exchange/daily-exchange-rates/](https://www.bankofcanada.ca/rates/exchange/daily-exchange-rates/)
 
-The base currency is Canadian dollar (`CAD`). The daily exchange rates are usually updated by 16:30 ET on every working day.
+The base currency is Canadian dollar (`CAD`). The daily exchange rates are usually updated by 16:30 ET (Eastern Time) on every working day.
 
 This data source supports 26 currencies, and all currencies are as follows:
 
@@ -106,7 +106,7 @@ Configuration option `data_source` value is `bank_of_canada`
 
 > Reference: [https://www.rba.gov.au/statistics/frequency/exchange-rates.html](https://www.rba.gov.au/statistics/frequency/exchange-rates.html)
 
-The base currency is Australian dollar (`AUD`). The daily exchange rates are usually updated around 16:00 AEST on every working day.
+The base currency is Australian dollar (`AUD`). The daily exchange rates are usually updated around 16:00 AEST (Australian Eastern Standard Time) on every working day.
 
 This data source supports 17 currencies, and all currencies are as follows:
 
@@ -136,7 +136,7 @@ Configuration option `data_source` value is `reserve_bank_of_australia`
 
 > Reference: [https://www.cnb.cz/en/financial-markets/foreign-exchange-market/central-bank-exchange-rate-fixing/central-bank-exchange-rate-fixing/](https://www.cnb.cz/en/financial-markets/foreign-exchange-market/central-bank-exchange-rate-fixing/central-bank-exchange-rate-fixing/)
 
-The base currency is Czech koruna (`CZK`). The daily exchange rates are usually updated after 14:30 CET on every working day. The monthly exchange rates are usually updated on the last working day of the month.
+The base currency is Czech koruna (`CZK`). The daily exchange rates are usually updated after 14:30 CET (Central European Time) on every working day. The monthly exchange rates are usually updated on the last working day of the month.
 
 This data source supports 153 currencies, and all currencies are as follows:
 
@@ -302,7 +302,7 @@ Configuration option `data_source` value is `czech_national_bank`
 
 > Reference: [https://nbp.pl/en/statistic-and-financial-reporting/rates/](https://nbp.pl/en/statistic-and-financial-reporting/rates/)
 
-The base currency is Polish złoty (`PLN`). The daily exchange rates are usually updated between 11:45 CET and 12:15 CET on every working day. The weekly exchange rates are usually updated on Wednesdays.
+The base currency is Polish złoty (`PLN`). The daily exchange rates are usually updated between 11:45 CET (Central European Time) and 12:15 CET on every working day. The weekly exchange rates are usually updated on Wednesdays.
 
 This data source supports 148 currencies, and all currencies are as follows:
 
@@ -463,7 +463,7 @@ Configuration option `data_source` value is `national_bank_of_poland`
 
 > Reference: [https://www.boi.org.il/en/economic-roles/financial-markets/exchange-rates/](https://www.boi.org.il/en/economic-roles/financial-markets/exchange-rates/)
 
-The base currency is Israeli new shekel (`ILS`). The daily exchange rates are usually updated about 15:45 IST on every working day.
+The base currency is Israeli new shekel (`ILS`). The daily exchange rates are usually updated about 15:45 IST (Israel Standard Time) on every working day.
 
 This data source supports 15 currencies, and all currencies are as follows:
 
@@ -490,7 +490,7 @@ Configuration option `data_source` value is `bank_of_israel`
 
 > Reference: [https://www.snb.ch/en/the-snb/mandates-goals/statistics/statistics-pub/current_interest_exchange_rates](https://www.snb.ch/en/the-snb/mandates-goals/statistics/statistics-pub/current_interest_exchange_rates)
 
-The base currency is Swiss franc (`CHF`). The daily exchange rates are usually updated about 11:00 GMT on every working day.
+The base currency is Swiss franc (`CHF`). The daily exchange rates are usually updated about 11:00 GMT (Greenwich Mean Time) on every working day.
 
 This data source supports 4 currencies, and all currencies are as follows:
 
@@ -507,7 +507,7 @@ Configuration option `data_source` value is `swiss_national_bank`
 
 > Reference: [https://www.imf.org/external/np/fin/data/param_rms_mth.aspx](https://www.imf.org/external/np/fin/data/param_rms_mth.aspx)
 
-The base currency is United States dollar (`USD`). The daily exchange rates are usually updated from 11:00 to 18:00 EST on every working day.
+The base currency is United States dollar (`USD`). The daily exchange rates are usually updated from 11:00 (Eastern Standard Time) to 18:00 EST on every working day.
 
 This data source supports 38 currencies, and all currencies are as follows:
 
