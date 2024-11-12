@@ -487,6 +487,23 @@ ezBookkeeping 支持自动更新汇率以及支持多个不同数据源。您可
 
 配置选项 `data_source` 的值是 `bank_of_israel`
 
+### 瑞士国家银行
+
+> 参考：[https://www.snb.ch/en/the-snb/mandates-goals/statistics/statistics-pub/current_interest_exchange_rates](https://www.snb.ch/en/the-snb/mandates-goals/statistics/statistics-pub/current_interest_exchange_rates)
+
+基准货币是瑞士法郎（`CHF`）。每日汇率通常在工作日的 11:00（格林尼治标准时间 GMT）左右更新。
+
+该数据源支持 4 种货币，所有货币如下：
+
+| 货币 | 货币代码 | 更新频率 |
+| --- | --- | --- |
+| 欧元 | EUR | 每日 |
+| 英镑 | GBP | 每日 |
+| 日元 | JPY | 每日 |
+| 美元 | USD | 每日 |
+
+配置选项 `data_source` 的值是 `swiss_national_bank`
+
 ### 国际货币基金组织
 
 > 参考：[https://www.imf.org/external/np/fin/data/param_rms_mth.aspx](https://www.imf.org/external/np/fin/data/param_rms_mth.aspx)

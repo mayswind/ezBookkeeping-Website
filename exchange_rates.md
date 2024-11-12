@@ -486,6 +486,23 @@ This data source supports 15 currencies, and all currencies are as follows:
 
 Configuration option `data_source` value is `bank_of_israel`
 
+### Swiss National Bank
+
+> Reference: [https://www.snb.ch/en/the-snb/mandates-goals/statistics/statistics-pub/current_interest_exchange_rates](https://www.snb.ch/en/the-snb/mandates-goals/statistics/statistics-pub/current_interest_exchange_rates)
+
+The base currency is Swiss franc (`CHF`). The daily exchange rates are usually updated about 11:00 GMT on every working day.
+
+This data source supports 4 currencies, and all currencies are as follows:
+
+| Currency | Currency Code | Update Frequency |
+| --- | --- | --- |
+| Euro | EUR | Daily |
+| British Pound | GBP | Daily |
+| Japanese Yen | JPY | Daily |
+| United States Dollar | USD | Daily |
+
+Configuration option `data_source` value is `swiss_national_bank`
+
 ### International Monetary Fund
 
 > Reference: [https://www.imf.org/external/np/fin/data/param_rms_mth.aspx](https://www.imf.org/external/np/fin/data/param_rms_mth.aspx)
