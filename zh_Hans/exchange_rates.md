@@ -504,6 +504,49 @@ ezBookkeeping 支持自动更新汇率以及支持多个不同数据源。您可
 
 配置选项 `data_source` 的值是 `swiss_national_bank`
 
+### 丹麦国家银行
+
+> 参考：[https://www.nationalbanken.dk/en/what-we-do/stable-prices-monetary-policy-and-the-danish-economy/exchange-rates](https://www.nationalbanken.dk/en/what-we-do/stable-prices-monetary-policy-and-the-danish-economy/exchange-rates)
+
+基准货币是丹麦克朗（`DKK`）。每日汇率通常在工作日的 16:00（欧洲中部时间 CET）的稍晚更新。
+
+该数据源支持 30 种货币，所有货币如下：
+
+| 货币 | 货币代码 | 更新频率 |
+| --- | --- | --- |
+| 澳大利亚元 | AUD | 每日 |
+| 保加利亚列弗 | BGN | 每日 |
+| 巴西雷亚尔 | BRL | 每日 |
+| 加拿大元 | CAD | 每日 |
+| 瑞士法郎 | CHF | 每日 |
+| 人民币 | CNY | 每日 |
+| 捷克克朗 | CZK | 每日 |
+| 欧元 | EUR | 每日 |
+| 英镑 | GBP | 每日 |
+| 港元 | HKD | 每日 |
+| 匈牙利福林 | HUF | 每日 |
+| 印度尼西亚卢比 | IDR | 每日 |
+| 以色列新谢克尔 | ILS | 每日 |
+| 印度卢比 | INR | 每日 |
+| 冰岛克朗 | ISK | 每日 |
+| 日元 | JPY | 每日 |
+| 韩元 | KRW | 每日 |
+| 墨西哥比索 | MXN | 每日 |
+| 马来西亚林吉特 | MYR | 每日 |
+| 挪威克朗 | NOK | 每日 |
+| 新西兰元 | NZD | 每日 |
+| 菲律宾比索 | PHP | 每日 |
+| 波兰兹罗提 | PLN | 每日 |
+| 罗马尼亚列伊 | RON | 每日 |
+| 瑞典克朗 | SEK | 每日 |
+| 新加坡元 | SGD | 每日 |
+| 泰铢 | THB | 每日 |
+| 土耳其里拉 | TRY | 每日 |
+| 美元 | USD | 每日 |
+| 南非兰特 | ZAR | 每日 |
+
+配置选项 `data_source` 的值是 `danmarks_national_bank`
+
 ### 国际货币基金组织
 
 > 参考：[https://www.imf.org/external/np/fin/data/param_rms_mth.aspx](https://www.imf.org/external/np/fin/data/param_rms_mth.aspx)
