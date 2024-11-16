@@ -424,6 +424,56 @@ This data source supports 15 currencies, and all currencies are as follows:
 
 Configuration option `data_source` value is `bank_of_israel`
 
+### Norges Bank
+
+> Reference: [https://www.norges-bank.no/en/topics/Statistics/exchange_rates/](https://www.norges-bank.no/en/topics/Statistics/exchange_rates/)
+
+The base currency is Norwegian krone (`NOK`). The daily exchange rates are usually updated approximately 16:00 CET (Central European Time) on every working day.
+
+This data source supports 37 currencies, and all currencies are as follows:
+
+| Currency | Currency Code | Update Frequency |
+| --- | --- | --- |
+| Australian Dollar | AUD | Daily |
+| Bangladeshi Taka | BDT | Daily |
+| Bulgarian Lev | BGN | Daily |
+| Brazilian Real | BRL | Daily |
+| Belarusian Ruble | BYN | Daily |
+| Canadian Dollar | CAD | Daily |
+| Swiss Franc | CHF | Daily |
+| Chinese Yuan | CNY | Daily |
+| Czech Koruna | CZK | Daily |
+| Danish Krone | DKK | Daily |
+| Euro | EUR | Daily |
+| British Pound | GBP | Daily |
+| Hong Kong Dollar | HKD | Daily |
+| Hungarian Forint | HUF | Daily |
+| Indonesian Rupiah | IDR | Daily |
+| Israeli New Shekel | ILS | Daily |
+| Indian Rupee | INR | Daily |
+| Icelandic Krona | ISK | Daily |
+| Japanese Yen | JPY | Daily |
+| South Korean Won | KRW | Daily |
+| Myanmar Kyat | MMK | Daily |
+| Mexican Peso | MXN | Daily |
+| Malaysian Ringgit | MYR | Daily |
+| New Zealand Dollar | NZD | Daily |
+| Philippine Peso | PHP | Daily |
+| Pakistani Rupee | PKR | Daily |
+| Polish Zloty | PLN | Daily |
+| Romanian Leu | RON | Daily |
+| Russian Ruble | RUB | Daily |
+| Swedish Krona | SEK | Daily |
+| Singapore Dollar | SGD | Daily |
+| Thai Baht | THB | Daily |
+| Turkish Lira | TRY | Daily |
+| New Taiwan Dollar | TWD | Daily |
+| United States Dollar | USD | Daily |
+| Vietnamese Dong | VND | Daily |
+| South African Rand | ZAR | Daily |
+
+Configuration option `data_source` value is `norges_bank`
+
 ### National Bank of Poland
 
 > Reference: [https://nbp.pl/en/statistic-and-financial-reporting/rates/](https://nbp.pl/en/statistic-and-financial-reporting/rates/)
