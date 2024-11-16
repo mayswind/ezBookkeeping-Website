@@ -20,48 +20,35 @@ ezBookkeeping supports updating exchange rates automatically, and supports multi
 
 ## Available Data Source
 
-### European Central Bank
+### The Reserve Bank of Australia
 
-> Reference: [https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html](https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html)
+> Reference: [https://www.rba.gov.au/statistics/frequency/exchange-rates.html](https://www.rba.gov.au/statistics/frequency/exchange-rates.html)
 
-The base currency is European euro (`EUR`). The daily exchange rates are usually updated around 16:00 CET (Central European Time) on every working day.
+The base currency is Australian dollar (`AUD`). The daily exchange rates are usually updated around 16:00 AEST (Australian Eastern Standard Time) on every working day.
 
-This data source supports 30 currencies, and all currencies are as follows:
+This data source supports 17 currencies, and all currencies are as follows:
 
 | Currency | Currency Code | Update Frequency |
 | --- | --- | --- |
-| Australian Dollar | AUD | Daily |
-| Bulgarian Lev | BGN | Daily |
-| Brazilian Real | BRL | Daily |
 | Canadian Dollar | CAD | Daily |
-| Swiss Franc | CHF | Daily |
 | Chinese Yuan | CNY | Daily |
-| Czech Koruna | CZK | Daily |
-| Danish Krone | DKK | Daily |
+| Euro | EUR | Daily |
 | British Pound | GBP | Daily |
 | Hong Kong Dollar | HKD | Daily |
-| Hungarian Forint | HUF | Daily |
 | Indonesian Rupiah | IDR | Daily |
-| Israeli New Shekel | ILS | Daily |
 | Indian Rupee | INR | Daily |
-| Icelandic Krona | ISK | Daily |
 | Japanese Yen | JPY | Daily |
 | South Korean Won | KRW | Daily |
-| Mexican Peso | MXN | Daily |
 | Malaysian Ringgit | MYR | Daily |
-| Norwegian Krone | NOK | Daily |
 | New Zealand Dollar | NZD | Daily |
 | Philippine Peso | PHP | Daily |
-| Polish Zloty | PLN | Daily |
-| Romanian Leu | RON | Daily |
-| Swedish Krona | SEK | Daily |
 | Singapore Dollar | SGD | Daily |
 | Thai Baht | THB | Daily |
-| Turkish Lira | TRY | Daily |
+| New Taiwan Dollar | TWD | Daily |
 | United States Dollar | USD | Daily |
-| South African Rand | ZAR | Daily |
+| Vietnamese Dong | VND | Daily |
 
-Configuration option `data_source` value is `euro_central_bank`
+Configuration option `data_source` value is `reserve_bank_of_australia`
 
 ### Bank of Canada
 
@@ -101,36 +88,6 @@ This data source supports 26 currencies, and all currencies are as follows:
 | South African Rand | ZAR | Daily |
 
 Configuration option `data_source` value is `bank_of_canada`
-
-### The Reserve Bank of Australia
-
-> Reference: [https://www.rba.gov.au/statistics/frequency/exchange-rates.html](https://www.rba.gov.au/statistics/frequency/exchange-rates.html)
-
-The base currency is Australian dollar (`AUD`). The daily exchange rates are usually updated around 16:00 AEST (Australian Eastern Standard Time) on every working day.
-
-This data source supports 17 currencies, and all currencies are as follows:
-
-| Currency | Currency Code | Update Frequency |
-| --- | --- | --- |
-| Canadian Dollar | CAD | Daily |
-| Chinese Yuan | CNY | Daily |
-| Euro | EUR | Daily |
-| British Pound | GBP | Daily |
-| Hong Kong Dollar | HKD | Daily |
-| Indonesian Rupiah | IDR | Daily |
-| Indian Rupee | INR | Daily |
-| Japanese Yen | JPY | Daily |
-| South Korean Won | KRW | Daily |
-| Malaysian Ringgit | MYR | Daily |
-| New Zealand Dollar | NZD | Daily |
-| Philippine Peso | PHP | Daily |
-| Singapore Dollar | SGD | Daily |
-| Thai Baht | THB | Daily |
-| New Taiwan Dollar | TWD | Daily |
-| United States Dollar | USD | Daily |
-| Vietnamese Dong | VND | Daily |
-
-Configuration option `data_source` value is `reserve_bank_of_australia`
 
 ### Czech National Bank
 
@@ -298,6 +255,175 @@ This data source supports 153 currencies, and all currencies are as follows:
 
 Configuration option `data_source` value is `czech_national_bank`
 
+### Danmarks Nationalbank
+
+> Reference: [https://www.nationalbanken.dk/en/what-we-do/stable-prices-monetary-policy-and-the-danish-economy/exchange-rates](https://www.nationalbanken.dk/en/what-we-do/stable-prices-monetary-policy-and-the-danish-economy/exchange-rates)
+
+The base currency is Danish krone (`DKK`). The daily exchange rates are usually updated shortly after 16:00 CET (Central European Time) on every working day.
+
+This data source supports 30 currencies, and all currencies are as follows:
+
+| Currency | Currency Code | Update Frequency |
+| --- | --- | --- |
+| Australian Dollar | AUD | Daily |
+| Bulgarian Lev | BGN | Daily |
+| Brazilian Real | BRL | Daily |
+| Canadian Dollar | CAD | Daily |
+| Swiss Franc | CHF | Daily |
+| Chinese Yuan | CNY | Daily |
+| Czech Koruna | CZK | Daily |
+| Euro | EUR | Daily |
+| British Pound | GBP | Daily |
+| Hong Kong Dollar | HKD | Daily |
+| Hungarian Forint | HUF | Daily |
+| Indonesian Rupiah | IDR | Daily |
+| Israeli New Shekel | ILS | Daily |
+| Indian Rupee | INR | Daily |
+| Icelandic Krona | ISK | Daily |
+| Japanese Yen | JPY | Daily |
+| South Korean Won | KRW | Daily |
+| Mexican Peso | MXN | Daily |
+| Malaysian Ringgit | MYR | Daily |
+| Norwegian Krone | NOK | Daily |
+| New Zealand Dollar | NZD | Daily |
+| Philippine Peso | PHP | Daily |
+| Polish Zloty | PLN | Daily |
+| Romanian Leu | RON | Daily |
+| Swedish Krona | SEK | Daily |
+| Singapore Dollar | SGD | Daily |
+| Thai Baht | THB | Daily |
+| Turkish Lira | TRY | Daily |
+| United States Dollar | USD | Daily |
+| South African Rand | ZAR | Daily |
+
+Configuration option `data_source` value is `danmarks_national_bank`
+
+### European Central Bank
+
+> Reference: [https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html](https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html)
+
+The base currency is European euro (`EUR`). The daily exchange rates are usually updated around 16:00 CET (Central European Time) on every working day.
+
+This data source supports 30 currencies, and all currencies are as follows:
+
+| Currency | Currency Code | Update Frequency |
+| --- | --- | --- |
+| Australian Dollar | AUD | Daily |
+| Bulgarian Lev | BGN | Daily |
+| Brazilian Real | BRL | Daily |
+| Canadian Dollar | CAD | Daily |
+| Swiss Franc | CHF | Daily |
+| Chinese Yuan | CNY | Daily |
+| Czech Koruna | CZK | Daily |
+| Danish Krone | DKK | Daily |
+| British Pound | GBP | Daily |
+| Hong Kong Dollar | HKD | Daily |
+| Hungarian Forint | HUF | Daily |
+| Indonesian Rupiah | IDR | Daily |
+| Israeli New Shekel | ILS | Daily |
+| Indian Rupee | INR | Daily |
+| Icelandic Krona | ISK | Daily |
+| Japanese Yen | JPY | Daily |
+| South Korean Won | KRW | Daily |
+| Mexican Peso | MXN | Daily |
+| Malaysian Ringgit | MYR | Daily |
+| Norwegian Krone | NOK | Daily |
+| New Zealand Dollar | NZD | Daily |
+| Philippine Peso | PHP | Daily |
+| Polish Zloty | PLN | Daily |
+| Romanian Leu | RON | Daily |
+| Swedish Krona | SEK | Daily |
+| Singapore Dollar | SGD | Daily |
+| Thai Baht | THB | Daily |
+| Turkish Lira | TRY | Daily |
+| United States Dollar | USD | Daily |
+| South African Rand | ZAR | Daily |
+
+Configuration option `data_source` value is `euro_central_bank`
+
+### National Bank of Georgia
+
+> Reference: [https://nbg.gov.ge/en/monetary-policy/currency](https://nbg.gov.ge/en/monetary-policy/currency)
+
+The base currency is Georgian lari (`GEL`). The daily exchange rates are usually updated no later than 17:00 GET (Georgia Standard Time) on every working day.
+
+This data source supports 43 currencies, and all currencies are as follows:
+
+| Currency | Currency Code | Update Frequency |
+| --- | --- | --- |
+| United Arab Emirates Dirham | AED | Daily |
+| Armenian Dram | AMD | Daily |
+| Australian Dollar | AUD | Daily |
+| Azerbaijan Manat | AZN | Daily |
+| Bulgarian Lev | BGN | Daily |
+| Brazilian Real | BRL | Daily |
+| Belarusian Ruble | BYN | Daily |
+| Canadian Dollar | CAD | Daily |
+| Swiss Franc | CHF | Daily |
+| Chinese Yuan | CNY | Daily |
+| Czech Koruna | CZK | Daily |
+| Danish Krone | DKK | Daily |
+| Egyptian Pound | EGP | Daily |
+| Euro | EUR | Daily |
+| British Pound | GBP | Daily |
+| Hong Kong Dollar | HKD | Daily |
+| Hungarian Forint | HUF | Daily |
+| Israeli New Shekel | ILS | Daily |
+| Indian Rupee | INR | Daily |
+| Iranian Rial | IRR | Daily |
+| Icelandic Krona | ISK | Daily |
+| Japanese Yen | JPY | Daily |
+| Kyrgyzstani Som | KGS | Daily |
+| South Korean Won | KRW | Daily |
+| Kuwaiti Dinar | KWD | Daily |
+| Kazakhstani Tenge | KZT | Daily |
+| Moldovan Leu | MDL | Daily |
+| Norwegian Krone | NOK | Daily |
+| New Zealand Dollar | NZD | Daily |
+| Polish Zloty | PLN | Daily |
+| Qatari Riyal | QAR | Daily |
+| Romanian Leu | RON | Daily |
+| Serbian Dinar | RSD | Daily |
+| Russian Ruble | RUB | Daily |
+| Swedish Krona | SEK | Daily |
+| Singapore Dollar | SGD | Daily |
+| Tajikistani Somoni | TJS | Daily |
+| Turkmenistani Manat | TMT | Daily |
+| Turkish Lira | TRY | Daily |
+| Ukrainian Hryvnia | UAH | Daily |
+| United States Dollar | USD | Daily |
+| Uzbekistani Sum | UZS | Daily |
+| South African Rand | ZAR | Daily |
+
+Configuration option `data_source` value is `national_bank_of_georgia`
+
+### Bank of Israel
+
+> Reference: [https://www.boi.org.il/en/economic-roles/financial-markets/exchange-rates/](https://www.boi.org.il/en/economic-roles/financial-markets/exchange-rates/)
+
+The base currency is Israeli new shekel (`ILS`). The daily exchange rates are usually updated about 15:45 IST (Israel Standard Time) on every working day.
+
+This data source supports 15 currencies, and all currencies are as follows:
+
+| Currency | Currency Code | Update Frequency |
+| --- | --- | --- |
+| Australian Dollar | AUD | Daily |
+| Canadian Dollar | CAD | Daily |
+| Swiss Franc | CHF | Daily |
+| Danish Krone | DKK | Daily |
+| Egyptian Pound | EGP | Daily |
+| Euro | EUR | Daily |
+| British Pound | GBP | Daily |
+| Jordanian Dinar | JOD | Daily |
+| Japanese Yen | JPY | Daily |
+| Lebanese Pound | LBP | Daily |
+| Norwegian Krone | NOK | Daily |
+| Swedish Krona | SEK | Daily |
+| United States Dollar | USD | Daily |
+| South African Rand | ZAR | Daily |
+
+Configuration option `data_source` value is `bank_of_israel`
+
 ### National Bank of Poland
 
 > Reference: [https://nbp.pl/en/statistic-and-financial-reporting/rates/](https://nbp.pl/en/statistic-and-financial-reporting/rates/)
@@ -459,93 +585,6 @@ This data source supports 148 currencies, and all currencies are as follows:
 
 Configuration option `data_source` value is `national_bank_of_poland`
 
-### Bank of Israel
-
-> Reference: [https://www.boi.org.il/en/economic-roles/financial-markets/exchange-rates/](https://www.boi.org.il/en/economic-roles/financial-markets/exchange-rates/)
-
-The base currency is Israeli new shekel (`ILS`). The daily exchange rates are usually updated about 15:45 IST (Israel Standard Time) on every working day.
-
-This data source supports 15 currencies, and all currencies are as follows:
-
-| Currency | Currency Code | Update Frequency |
-| --- | --- | --- |
-| Australian Dollar | AUD | Daily |
-| Canadian Dollar | CAD | Daily |
-| Swiss Franc | CHF | Daily |
-| Danish Krone | DKK | Daily |
-| Egyptian Pound | EGP | Daily |
-| Euro | EUR | Daily |
-| British Pound | GBP | Daily |
-| Jordanian Dinar | JOD | Daily |
-| Japanese Yen | JPY | Daily |
-| Lebanese Pound | LBP | Daily |
-| Norwegian Krone | NOK | Daily |
-| Swedish Krona | SEK | Daily |
-| United States Dollar | USD | Daily |
-| South African Rand | ZAR | Daily |
-
-Configuration option `data_source` value is `bank_of_israel`
-
-### Swiss National Bank
-
-> Reference: [https://www.snb.ch/en/the-snb/mandates-goals/statistics/statistics-pub/current_interest_exchange_rates](https://www.snb.ch/en/the-snb/mandates-goals/statistics/statistics-pub/current_interest_exchange_rates)
-
-The base currency is Swiss franc (`CHF`). The daily exchange rates are usually updated about 11:00 GMT (Greenwich Mean Time) on every working day.
-
-This data source supports 4 currencies, and all currencies are as follows:
-
-| Currency | Currency Code | Update Frequency |
-| --- | --- | --- |
-| Euro | EUR | Daily |
-| British Pound | GBP | Daily |
-| Japanese Yen | JPY | Daily |
-| United States Dollar | USD | Daily |
-
-Configuration option `data_source` value is `swiss_national_bank`
-
-### Danmarks Nationalbank
-
-> Reference: [https://www.nationalbanken.dk/en/what-we-do/stable-prices-monetary-policy-and-the-danish-economy/exchange-rates](https://www.nationalbanken.dk/en/what-we-do/stable-prices-monetary-policy-and-the-danish-economy/exchange-rates)
-
-The base currency is Danish krone (`DKK`). The daily exchange rates are usually updated shortly after 16:00 CET (Central European Time) on every working day.
-
-This data source supports 30 currencies, and all currencies are as follows:
-
-| Currency | Currency Code | Update Frequency |
-| --- | --- | --- |
-| Australian Dollar | AUD | Daily |
-| Bulgarian Lev | BGN | Daily |
-| Brazilian Real | BRL | Daily |
-| Canadian Dollar | CAD | Daily |
-| Swiss Franc | CHF | Daily |
-| Chinese Yuan | CNY | Daily |
-| Czech Koruna | CZK | Daily |
-| Euro | EUR | Daily |
-| British Pound | GBP | Daily |
-| Hong Kong Dollar | HKD | Daily |
-| Hungarian Forint | HUF | Daily |
-| Indonesian Rupiah | IDR | Daily |
-| Israeli New Shekel | ILS | Daily |
-| Indian Rupee | INR | Daily |
-| Icelandic Krona | ISK | Daily |
-| Japanese Yen | JPY | Daily |
-| South Korean Won | KRW | Daily |
-| Mexican Peso | MXN | Daily |
-| Malaysian Ringgit | MYR | Daily |
-| Norwegian Krone | NOK | Daily |
-| New Zealand Dollar | NZD | Daily |
-| Philippine Peso | PHP | Daily |
-| Polish Zloty | PLN | Daily |
-| Romanian Leu | RON | Daily |
-| Swedish Krona | SEK | Daily |
-| Singapore Dollar | SGD | Daily |
-| Thai Baht | THB | Daily |
-| Turkish Lira | TRY | Daily |
-| United States Dollar | USD | Daily |
-| South African Rand | ZAR | Daily |
-
-Configuration option `data_source` value is `danmarks_national_bank`
-
 ### National Bank of Romania
 
 > Reference: [https://www.bnr.ro/Exchange-rates-1224.aspx](https://www.bnr.ro/Exchange-rates-1224.aspx)
@@ -595,61 +634,22 @@ This data source supports 36 currencies, and all currencies are as follows:
 
 Configuration option `data_source` value is `national_bank_of_romania`
 
-### National Bank of Georgia
+### Swiss National Bank
 
-> Reference: [https://nbg.gov.ge/en/monetary-policy/currency](https://nbg.gov.ge/en/monetary-policy/currency)
+> Reference: [https://www.snb.ch/en/the-snb/mandates-goals/statistics/statistics-pub/current_interest_exchange_rates](https://www.snb.ch/en/the-snb/mandates-goals/statistics/statistics-pub/current_interest_exchange_rates)
 
-The base currency is Georgian lari (`GEL`). The daily exchange rates are usually updated no later than 17:00 GET (Georgia Standard Time) on every working day.
+The base currency is Swiss franc (`CHF`). The daily exchange rates are usually updated about 11:00 GMT (Greenwich Mean Time) on every working day.
 
-This data source supports 43 currencies, and all currencies are as follows:
+This data source supports 4 currencies, and all currencies are as follows:
 
 | Currency | Currency Code | Update Frequency |
 | --- | --- | --- |
-| United Arab Emirates Dirham | AED | Daily |
-| Armenian Dram | AMD | Daily |
-| Australian Dollar | AUD | Daily |
-| Azerbaijan Manat | AZN | Daily |
-| Bulgarian Lev | BGN | Daily |
-| Brazilian Real | BRL | Daily |
-| Belarusian Ruble | BYN | Daily |
-| Canadian Dollar | CAD | Daily |
-| Swiss Franc | CHF | Daily |
-| Chinese Yuan | CNY | Daily |
-| Czech Koruna | CZK | Daily |
-| Danish Krone | DKK | Daily |
-| Egyptian Pound | EGP | Daily |
 | Euro | EUR | Daily |
 | British Pound | GBP | Daily |
-| Hong Kong Dollar | HKD | Daily |
-| Hungarian Forint | HUF | Daily |
-| Israeli New Shekel | ILS | Daily |
-| Indian Rupee | INR | Daily |
-| Iranian Rial | IRR | Daily |
-| Icelandic Krona | ISK | Daily |
 | Japanese Yen | JPY | Daily |
-| Kyrgyzstani Som | KGS | Daily |
-| South Korean Won | KRW | Daily |
-| Kuwaiti Dinar | KWD | Daily |
-| Kazakhstani Tenge | KZT | Daily |
-| Moldovan Leu | MDL | Daily |
-| Norwegian Krone | NOK | Daily |
-| New Zealand Dollar | NZD | Daily |
-| Polish Zloty | PLN | Daily |
-| Qatari Riyal | QAR | Daily |
-| Romanian Leu | RON | Daily |
-| Serbian Dinar | RSD | Daily |
-| Russian Ruble | RUB | Daily |
-| Swedish Krona | SEK | Daily |
-| Singapore Dollar | SGD | Daily |
-| Tajikistani Somoni | TJS | Daily |
-| Turkmenistani Manat | TMT | Daily |
-| Turkish Lira | TRY | Daily |
-| Ukrainian Hryvnia | UAH | Daily |
 | United States Dollar | USD | Daily |
-| Uzbekistani Sum | UZS | Daily |
-| South African Rand | ZAR | Daily |
 
-Configuration option `data_source` value is `national_bank_of_georgia`
+Configuration option `data_source` value is `swiss_national_bank`
 
 ### International Monetary Fund
 
