@@ -246,7 +246,7 @@ For example, if you want to set database type to `mysql`, you can set environmen
 
 | Option Name | Default Value | Description |
 | --- | --- | --- |
-| `data_source` | `euro_central_bank` | Exchange rates data source, supports `reserve_bank_of_australia`, `bank_of_canada`, `czech_national_bank`, `danmarks_national_bank`, `euro_central_bank`, `national_bank_of_georgia`, `bank_of_israel`, `norges_bank`, `national_bank_of_poland`, `national_bank_of_romania`, `swiss_national_bank` or `international_monetary_fund`. For more information, please visit [Exchange Rates](/exchange_rates). |
+| `data_source` | `euro_central_bank` | Exchange rates data source, supports `reserve_bank_of_australia`, `bank_of_canada`, `czech_national_bank`, `danmarks_national_bank`, `euro_central_bank`, `national_bank_of_georgia`, `bank_of_israel`, `norges_bank`, `national_bank_of_poland`, `national_bank_of_romania`, `bank_of_russia`, `swiss_national_bank` or `international_monetary_fund`. For more information, please visit [Exchange Rates](/exchange_rates). |
 | `request_timeout` | `10000` | Request timeout for exchange rates data (0 - 4294967295 milliseconds). Set to `0` to disable timeout for requesting exchange rates data. |
 | `proxy` | `system` | Proxy for ezbookkeeping server requesting exchange rates data, supports `system` (use system proxy), `none` (do not use proxy), or proxy URL which starts with `http://`, `https://` or `socks5://`. |
 | `skip_tls_verify` | `false` | Whether to skip the server's certificate chain and host name verification when request exchange rates data. |

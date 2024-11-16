@@ -684,6 +684,61 @@ ezBookkeeping 支持自动更新汇率以及支持多个不同数据源。您可
 
 配置选项 `data_source` 的值是 `national_bank_of_romania`
 
+### 俄罗斯银行
+
+> 参考：[https://www.cbr.ru/eng/currency_base/daily/](https://www.cbr.ru/eng/currency_base/daily/)
+
+基准货币是俄罗斯卢布（`RUB`）。每日汇率通常在工作日的 15:30（莫斯科时间 MCK）左右更新。
+
+该数据源支持 42 种货币，所有货币如下：
+
+| 货币 | 货币代码 | 更新频率 |
+| --- | --- | --- |
+| 阿联酋迪拉姆 | AED | 每日 |
+| 亚美尼亚德拉姆 | AMD | 每日 |
+| 澳大利亚元 | AUD | 每日 |
+| 阿塞拜疆马纳特 | AZN | 每日 |
+| 保加利亚列弗 | BGN | 每日 |
+| 巴西雷亚尔 | BRL | 每日 |
+| 白俄罗斯卢布 | BYN | 每日 |
+| 加拿大元 | CAD | 每日 |
+| 瑞士法郎 | CHF | 每日 |
+| 人民币 | CNY | 每日 |
+| 捷克克朗 | CZK | 每日 |
+| 丹麦克朗 | DKK | 每日 |
+| 埃及镑 | EGP | 每日 |
+| 欧元 | EUR | 每日 |
+| 英镑 | GBP | 每日 |
+| 格鲁吉亚拉里 | GEL | 每日 |
+| 港元 | HKD | 每日 |
+| 匈牙利福林 | HUF | 每日 |
+| 印度尼西亚卢比 | IDR | 每日 |
+| 印度卢比 | INR | 每日 |
+| 日元 | JPY | 每日 |
+| 吉尔吉斯斯坦索姆 | KGS | 每日 |
+| 韩元 | KRW | 每日 |
+| 哈萨克斯坦坚戈 | KZT | 每日 |
+| 摩尔多瓦列伊 | MDL | 每日 |
+| 挪威克朗 | NOK | 每日 |
+| 新西兰元 | NZD | 每日 |
+| 波兰兹罗提 | PLN | 每日 |
+| 卡塔尔里亚尔 | QAR | 每日 |
+| 罗马尼亚列伊 | RON | 每日 |
+| 塞尔维亚第纳尔 | RSD | 每日 |
+| 瑞典克朗 | SEK | 每日 |
+| 新加坡元 | SGD | 每日 |
+| 泰铢 | THB | 每日 |
+| 塔吉克斯坦索莫尼 | TJS | 每日 |
+| 土库曼斯坦马纳特 | TMT | 每日 |
+| 土耳其里拉 | TRY | 每日 |
+| 乌克兰格里夫尼亚 | UAH | 每日 |
+| 美元 | USD | 每日 |
+| 乌兹别克斯坦苏姆 | UZS | 每日 |
+| 越南盾 | VND | 每日 |
+| 南非兰特 | ZAR | 每日 |
+
+配置选项 `data_source` 的值是 `bank_of_russia`
+
 ### 瑞士国家银行
 
 > 参考：[https://www.snb.ch/en/the-snb/mandates-goals/statistics/statistics-pub/current_interest_exchange_rates](https://www.snb.ch/en/the-snb/mandates-goals/statistics/statistics-pub/current_interest_exchange_rates)

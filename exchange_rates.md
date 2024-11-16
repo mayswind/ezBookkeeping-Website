@@ -683,6 +683,61 @@ This data source supports 36 currencies, and all currencies are as follows:
 
 Configuration option `data_source` value is `national_bank_of_romania`
 
+### Bank of Russia
+
+> Reference: [https://www.cbr.ru/eng/currency_base/daily/](https://www.cbr.ru/eng/currency_base/daily/)
+
+The base currency is Russian ruble (`RUB`). The daily exchange rates are usually updated around 15:30 MCK (Moscow Time) on every working day.
+
+This data source supports 42 currencies, and all currencies are as follows:
+
+| Currency | Currency Code | Update Frequency |
+| --- | --- | --- |
+| United Arab Emirates Dirham | AED | Daily |
+| Armenian Dram | AMD | Daily |
+| Australian Dollar | AUD | Daily |
+| Azerbaijan Manat | AZN | Daily |
+| Bulgarian Lev | BGN | Daily |
+| Brazilian Real | BRL | Daily |
+| Belarusian Ruble | BYN | Daily |
+| Canadian Dollar | CAD | Daily |
+| Swiss Franc | CHF | Daily |
+| Chinese Yuan | CNY | Daily |
+| Czech Koruna | CZK | Daily |
+| Danish Krone | DKK | Daily |
+| Egyptian Pound | EGP | Daily |
+| Euro | EUR | Daily |
+| British Pound | GBP | Daily |
+| Georgian Lari | GEL | Daily |
+| Hong Kong Dollar | HKD | Daily |
+| Hungarian Forint | HUF | Daily |
+| Indonesian Rupiah | IDR | Daily |
+| Indian Rupee | INR | Daily |
+| Japanese Yen | JPY | Daily |
+| Kyrgyzstani Som | KGS | Daily |
+| South Korean Won | KRW | Daily |
+| Kazakhstani Tenge | KZT | Daily |
+| Moldovan Leu | MDL | Daily |
+| Norwegian Krone | NOK | Daily |
+| New Zealand Dollar | NZD | Daily |
+| Polish Zloty | PLN | Daily |
+| Qatari Riyal | QAR | Daily |
+| Romanian Leu | RON | Daily |
+| Serbian Dinar | RSD | Daily |
+| Swedish Krona | SEK | Daily |
+| Singapore Dollar | SGD | Daily |
+| Thai Baht | THB | Daily |
+| Tajikistani Somoni | TJS | Daily |
+| Turkmenistani Manat | TMT | Daily |
+| Turkish Lira | TRY | Daily |
+| Ukrainian Hryvnia | UAH | Daily |
+| United States Dollar | USD | Daily |
+| Uzbekistani Sum | UZS | Daily |
+| Vietnamese Dong | VND | Daily |
+| South African Rand | ZAR | Daily |
+
+Configuration option `data_source` value is `bank_of_russia`
+
 ### Swiss National Bank
 
 > Reference: [https://www.snb.ch/en/the-snb/mandates-goals/statistics/statistics-pub/current_interest_exchange_rates](https://www.snb.ch/en/the-snb/mandates-goals/statistics/statistics-pub/current_interest_exchange_rates)
