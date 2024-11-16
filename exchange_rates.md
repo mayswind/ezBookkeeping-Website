@@ -595,6 +595,62 @@ This data source supports 36 currencies, and all currencies are as follows:
 
 Configuration option `data_source` value is `national_bank_of_romania`
 
+### National Bank of Georgia
+
+> Reference: [https://nbg.gov.ge/en/monetary-policy/currency](https://nbg.gov.ge/en/monetary-policy/currency)
+
+The base currency is Georgian lari (`GEL`). The daily exchange rates are usually updated no later than 17:00 GET (Georgia Standard Time) on every working day.
+
+This data source supports 43 currencies, and all currencies are as follows:
+
+| Currency | Currency Code | Update Frequency |
+| --- | --- | --- |
+| United Arab Emirates Dirham | AED | Daily |
+| Armenian Dram | AMD | Daily |
+| Australian Dollar | AUD | Daily |
+| Azerbaijan Manat | AZN | Daily |
+| Bulgarian Lev | BGN | Daily |
+| Brazilian Real | BRL | Daily |
+| Belarusian Ruble | BYN | Daily |
+| Canadian Dollar | CAD | Daily |
+| Swiss Franc | CHF | Daily |
+| Chinese Yuan | CNY | Daily |
+| Czech Koruna | CZK | Daily |
+| Danish Krone | DKK | Daily |
+| Egyptian Pound | EGP | Daily |
+| Euro | EUR | Daily |
+| British Pound | GBP | Daily |
+| Hong Kong Dollar | HKD | Daily |
+| Hungarian Forint | HUF | Daily |
+| Israeli New Shekel | ILS | Daily |
+| Indian Rupee | INR | Daily |
+| Iranian Rial | IRR | Daily |
+| Icelandic Krona | ISK | Daily |
+| Japanese Yen | JPY | Daily |
+| Kyrgyzstani Som | KGS | Daily |
+| South Korean Won | KRW | Daily |
+| Kuwaiti Dinar | KWD | Daily |
+| Kazakhstani Tenge | KZT | Daily |
+| Moldovan Leu | MDL | Daily |
+| Norwegian Krone | NOK | Daily |
+| New Zealand Dollar | NZD | Daily |
+| Polish Zloty | PLN | Daily |
+| Qatari Riyal | QAR | Daily |
+| Romanian Leu | RON | Daily |
+| Serbian Dinar | RSD | Daily |
+| Russian Ruble | RUB | Daily |
+| Swedish Krona | SEK | Daily |
+| Singapore Dollar | SGD | Daily |
+| Tajikistani Somoni | TJS | Daily |
+| Turkmenistani Manat | TMT | Daily |
+| Turkish Lira | TRY | Daily |
+| Ukrainian Hryvnia | UAH | Daily |
+| United States Dollar | USD | Daily |
+| Uzbekistani Sum | UZS | Daily |
+| South African Rand | ZAR | Daily |
+
+Configuration option `data_source` value is `national_bank_of_georgia`
+
 ### International Monetary Fund
 
 > Reference: [https://www.imf.org/external/np/fin/data/param_rms_mth.aspx](https://www.imf.org/external/np/fin/data/param_rms_mth.aspx)
