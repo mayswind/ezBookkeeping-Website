@@ -95,7 +95,7 @@ Configuration option `data_source` value is `bank_of_canada`
 
 The base currency is Czech koruna (`CZK`). The daily exchange rates are usually updated after 14:30 CET (Central European Time) on every working day. The monthly exchange rates are usually updated on the last working day of the month.
 
-This data source supports 153 currencies, and all currencies are as follows:
+This data source supports 152 currencies, and all currencies are as follows:
 
 | Currency | Currency Code | Update Frequency |
 | --- | --- | --- |
@@ -251,7 +251,6 @@ This data source supports 153 currencies, and all currencies are as follows:
 | Yemeni Rial | YER | Monthly |
 | South African Rand | ZAR | Daily |
 | Zambian Kwacha | ZMW | Monthly |
-| Zimbabwean Dollar | ZWL | Monthly |
 
 Configuration option `data_source` value is `czech_national_bank`
 
@@ -631,7 +630,7 @@ This data source supports 148 currencies, and all currencies are as follows:
 | Yemeni Rial | YER | Weekly |
 | South African Rand | ZAR | Daily |
 | Zambian Kwacha | ZMW | Weekly |
-| Zimbabwean Dollar | ZWL | Weekly |
+| Zimbabwe Gold | ZWG | Weekly |
 
 Configuration option `data_source` value is `national_bank_of_poland`
 
@@ -707,7 +706,7 @@ Configuration option `data_source` value is `swiss_national_bank`
 
 The base currency is United States dollar (`USD`). The daily exchange rates are usually updated from 11:00 (Eastern Standard Time) to 18:00 EST on every working day.
 
-This data source supports 38 currencies, and all currencies are as follows:
+This data source supports 37 currencies, and all currencies are as follows:
 
 | Currency | Currency Code | Update Frequency |
 | --- | --- | --- |
@@ -746,7 +745,6 @@ This data source supports 38 currencies, and all currencies are as follows:
 | Singapore Dollar | SGD | Daily |
 | Thai Baht | THB | Daily |
 | Trinidad and Tobago Dollar | TTD | Daily |
-| United States Dollar | USD | Daily |
 | Uruguayan Peso | UYU | Daily |
 | South African Rand | ZAR | Daily |
 
