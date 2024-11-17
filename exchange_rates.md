@@ -396,6 +396,52 @@ This data source supports 43 currencies, and all currencies are as follows:
 
 Configuration option `data_source` value is `national_bank_of_georgia`
 
+### Central Bank of Hungary
+
+> Reference: [https://www.mnb.hu/en/arfolyamok](https://www.mnb.hu/en/arfolyamok)
+
+The base currency is Hungarian forint (`HUF`). The daily exchange rates are usually updated around 11:00 CET (Central European Time) on every working day.
+
+This data source supports 33 currencies, and all currencies are as follows:
+
+| Currency | Currency Code | Update Frequency |
+| --- | --- | --- |
+| Australian Dollar | AUD | Daily |
+| Bulgarian Lev | BGN | Daily |
+| Brazilian Real | BRL | Daily |
+| Canadian Dollar | CAD | Daily |
+| Swiss Franc | CHF | Daily |
+| Chinese Yuan | CNY | Daily |
+| Czech Koruna | CZK | Daily |
+| Danish Krone | DKK | Daily |
+| Euro | EUR | Daily |
+| British Pound | GBP | Daily |
+| Hong Kong Dollar | HKD | Daily |
+| Indonesian Rupiah | IDR | Daily |
+| Israeli New Shekel | ILS | Daily |
+| Indian Rupee | INR | Daily |
+| Icelandic Krona | ISK | Daily |
+| Japanese Yen | JPY | Daily |
+| South Korean Won | KRW | Daily |
+| Mexican Peso | MXN | Daily |
+| Malaysian Ringgit | MYR | Daily |
+| Norwegian Krone | NOK | Daily |
+| New Zealand Dollar | NZD | Daily |
+| Philippine Peso | PHP | Daily |
+| Polish Zloty | PLN | Daily |
+| Romanian Leu | RON | Daily |
+| Serbian Dinar | RSD | Daily |
+| Russian Ruble | RUB | Daily |
+| Swedish Krona | SEK | Daily |
+| Singapore Dollar | SGD | Daily |
+| Thai Baht | THB | Daily |
+| Turkish Lira | TRY | Daily |
+| Ukrainian Hryvnia | UAH | Daily |
+| United States Dollar | USD | Daily |
+| South African Rand | ZAR | Daily |
+
+Configuration option `data_source` value is `central_bank_of_hungary`
+
 ### Bank of Israel
 
 > Reference: [https://www.boi.org.il/en/economic-roles/financial-markets/exchange-rates/](https://www.boi.org.il/en/economic-roles/financial-markets/exchange-rates/)
