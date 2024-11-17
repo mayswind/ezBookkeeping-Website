@@ -852,6 +852,93 @@ This data source supports 4 currencies, and all currencies are as follows:
 
 Configuration option `data_source` value is `swiss_national_bank`
 
+### Central Bank of the Republic of Uzbekistan
+
+> Reference: [https://cbu.uz/en/arkhiv-kursov-valyut/](https://cbu.uz/en/arkhiv-kursov-valyut/)
+
+The base currency is Uzbekistani sum (`UZS`).
+
+This data source supports 74 currencies, and all currencies are as follows:
+
+| Currency | Currency Code | Update Frequency |
+| --- | --- | --- |
+| United Arab Emirates Dirham | AED | Daily |
+| Afghan Afghani | AFN | Daily |
+| Armenian Dram | AMD | Daily |
+| Argentine Peso | ARS | Daily |
+| Australian Dollar | AUD | Daily |
+| Azerbaijan Manat | AZN | Daily |
+| Bangladeshi Taka | BDT | Daily |
+| Bulgarian Lev | BGN | Daily |
+| Bahraini Dinar | BHD | Daily |
+| Brunei Dollar | BND | Daily |
+| Brazilian Real | BRL | Daily |
+| Belarusian Ruble | BYN | Daily |
+| Canadian Dollar | CAD | Daily |
+| Swiss Franc | CHF | Daily |
+| Chinese Yuan | CNY | Daily |
+| Cuban Peso | CUP | Daily |
+| Czech Koruna | CZK | Daily |
+| Danish Krone | DKK | Daily |
+| Algerian Dinar | DZD | Daily |
+| Egyptian Pound | EGP | Daily |
+| Euro | EUR | Daily |
+| British Pound | GBP | Daily |
+| Georgian Lari | GEL | Daily |
+| Hong Kong Dollar | HKD | Daily |
+| Hungarian Forint | HUF | Daily |
+| Indonesian Rupiah | IDR | Daily |
+| Israeli New Shekel | ILS | Daily |
+| Indian Rupee | INR | Daily |
+| Iraqi Dinar | IQD | Daily |
+| Iranian Rial | IRR | Daily |
+| Icelandic Krona | ISK | Daily |
+| Jordanian Dinar | JOD | Daily |
+| Japanese Yen | JPY | Daily |
+| Kyrgyzstani Som | KGS | Daily |
+| Cambodian Riel | KHR | Daily |
+| South Korean Won | KRW | Daily |
+| Kuwaiti Dinar | KWD | Daily |
+| Kazakhstani Tenge | KZT | Daily |
+| Lao Kip | LAK | Daily |
+| Lebanese Pound | LBP | Daily |
+| Libyan Dinar | LYD | Daily |
+| Moroccan Dirham | MAD | Daily |
+| Moldovan Leu | MDL | Daily |
+| Myanmar Kyat | MMK | Daily |
+| Mongolian Tugrik | MNT | Daily |
+| Mexican Peso | MXN | Daily |
+| Malaysian Ringgit | MYR | Daily |
+| Norwegian Krone | NOK | Daily |
+| New Zealand Dollar | NZD | Daily |
+| Omani Rial | OMR | Daily |
+| Philippine Peso | PHP | Daily |
+| Pakistani Rupee | PKR | Daily |
+| Polish Zloty | PLN | Daily |
+| Qatari Riyal | QAR | Daily |
+| Romanian Leu | RON | Daily |
+| Serbian Dinar | RSD | Daily |
+| Russian Ruble | RUB | Daily |
+| Saudi Riyal | SAR | Daily |
+| Sudanese Pound | SDG | Daily |
+| Swedish Krona | SEK | Daily |
+| Singapore Dollar | SGD | Daily |
+| Syrian Pound | SYP | Daily |
+| Thai Baht | THB | Daily |
+| Tajikistani Somoni | TJS | Daily |
+| Turkmenistani Manat | TMT | Daily |
+| Tunisian Dinar | TND | Daily |
+| Turkish Lira | TRY | Daily |
+| Ukrainian Hryvnia | UAH | Daily |
+| United States Dollar | USD | Daily |
+| Uruguayan Peso | UYU | Daily |
+| Venezuelan Bolívar Soberano | VES | Daily |
+| Vietnamese Dong | VND | Daily |
+| Yemeni Rial | YER | Daily |
+| South African Rand | ZAR | Daily |
+
+Configuration option `data_source` value is `central_bank_of_uzbekistan`
+
 ### International Monetary Fund
 
 > Reference: [https://www.imf.org/external/np/fin/data/param_rms_mth.aspx](https://www.imf.org/external/np/fin/data/param_rms_mth.aspx)
