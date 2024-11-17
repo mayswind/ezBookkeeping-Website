@@ -470,6 +470,57 @@ ezBookkeeping 支持自动更新汇率以及支持多个不同数据源。您可
 
 配置选项 `data_source` 的值是 `bank_of_israel`
 
+### 缅甸中央银行
+
+> 参考：[https://forex.cbm.gov.mm/index.php/fxrate](https://forex.cbm.gov.mm/index.php/fxrate)
+
+基准货币是缅甸元（`MMK`）。
+
+该数据源支持 38 种货币，所有货币如下：
+
+| 货币 | 货币代码 | 更新频率 |
+| --- | --- | --- |
+| 澳大利亚元 | AUD | 每日 |
+| 孟加拉塔卡 | BDT | 每日 |
+| 文莱元 | BND | 每日 |
+| 巴西雷亚尔 | BRL | 每日 |
+| 加拿大元 | CAD | 每日 |
+| 瑞士法郎 | CHF | 每日 |
+| 人民币 | CNY | 每日 |
+| 捷克克朗 | CZK | 每日 |
+| 丹麦克朗 | DKK | 每日 |
+| 埃及镑 | EGP | 每日 |
+| 欧元 | EUR | 每日 |
+| 英镑 | GBP | 每日 |
+| 港元 | HKD | 每日 |
+| 印度尼西亚卢比 | IDR | 每日 |
+| 以色列新谢克尔 | ILS | 每日 |
+| 印度卢比 | INR | 每日 |
+| 日元 | JPY | 每日 |
+| 肯尼亚先令 | KES | 每日 |
+| 柬埔寨瑞尔 | KHR | 每日 |
+| 韩元 | KRW | 每日 |
+| 科威特第纳尔 | KWD | 每日 |
+| 老挝基普 | LAK | 每日 |
+| 斯里兰卡卢比 | LKR | 每日 |
+| 马来西亚林吉特 | MYR | 每日 |
+| 挪威克朗 | NOK | 每日 |
+| 尼泊尔卢比 | NPR | 每日 |
+| 新西兰元 | NZD | 每日 |
+| 菲律宾比索 | PHP | 每日 |
+| 巴基斯坦卢比 | PKR | 每日 |
+| 塞尔维亚第纳尔 | RSD | 每日 |
+| 俄罗斯卢布 | RUB | 每日 |
+| 沙特里亚尔 | SAR | 每日 |
+| 瑞典克朗 | SEK | 每日 |
+| 新加坡元 | SGD | 每日 |
+| 泰铢 | THB | 每日 |
+| 美元 | USD | 每日 |
+| 越南盾 | VND | 每日 |
+| 南非兰特 | ZAR | 每日 |
+
+配置选项 `data_source` 的值是 `central_bank_of_myanmar`
+
 ### 挪威银行
 
 > 参考：[https://www.norges-bank.no/en/topics/Statistics/exchange_rates/](https://www.norges-bank.no/en/topics/Statistics/exchange_rates/)

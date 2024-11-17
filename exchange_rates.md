@@ -469,6 +469,57 @@ This data source supports 15 currencies, and all currencies are as follows:
 
 Configuration option `data_source` value is `bank_of_israel`
 
+### Central Bank of Myanmar
+
+> Reference: [https://forex.cbm.gov.mm/index.php/fxrate](https://forex.cbm.gov.mm/index.php/fxrate)
+
+The base currency is Myanmar kyat (`MMK`).
+
+This data source supports 38 currencies, and all currencies are as follows:
+
+| Currency | Currency Code | Update Frequency |
+| --- | --- | --- |
+| Australian Dollar | AUD | Daily |
+| Bangladeshi Taka | BDT | Daily |
+| Brunei Dollar | BND | Daily |
+| Brazilian Real | BRL | Daily |
+| Canadian Dollar | CAD | Daily |
+| Swiss Franc | CHF | Daily |
+| Chinese Yuan | CNY | Daily |
+| Czech Koruna | CZK | Daily |
+| Danish Krone | DKK | Daily |
+| Egyptian Pound | EGP | Daily |
+| Euro | EUR | Daily |
+| British Pound | GBP | Daily |
+| Hong Kong Dollar | HKD | Daily |
+| Indonesian Rupiah | IDR | Daily |
+| Israeli New Shekel | ILS | Daily |
+| Indian Rupee | INR | Daily |
+| Japanese Yen | JPY | Daily |
+| Kenyan Shilling | KES | Daily |
+| Cambodian Riel | KHR | Daily |
+| South Korean Won | KRW | Daily |
+| Kuwaiti Dinar | KWD | Daily |
+| Lao Kip | LAK | Daily |
+| Sri Lankan Rupee | LKR | Daily |
+| Malaysian Ringgit | MYR | Daily |
+| Norwegian Krone | NOK | Daily |
+| Nepalese Rupee | NPR | Daily |
+| New Zealand Dollar | NZD | Daily |
+| Philippine Peso | PHP | Daily |
+| Pakistani Rupee | PKR | Daily |
+| Serbian Dinar | RSD | Daily |
+| Russian Ruble | RUB | Daily |
+| Saudi Riyal | SAR | Daily |
+| Swedish Krona | SEK | Daily |
+| Singapore Dollar | SGD | Daily |
+| Thai Baht | THB | Daily |
+| United States Dollar | USD | Daily |
+| Vietnamese Dong | VND | Daily |
+| South African Rand | ZAR | Daily |
+
+Configuration option `data_source` value is `central_bank_of_myanmar`
+
 ### Norges Bank
 
 > Reference: [https://www.norges-bank.no/en/topics/Statistics/exchange_rates/](https://www.norges-bank.no/en/topics/Statistics/exchange_rates/)
