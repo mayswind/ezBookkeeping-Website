@@ -50,20 +50,20 @@ See [transaction-import](/command_line#userdata)
 
 The following table lists all supported file types and the data contents that can be imported:
 
-| File Type | Income Transaction | Expense Transaction | Transfer Transaction | Transfer Transaction With Different Currencies | Category Name | Account Name | Tag Names | Timezone | Geographic Location | Description |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| ezbookkeeping Data Export File | √ | √ | √ | √ | √ | √ | √ | √ | √ | √ |
-| Open Financial Exchange (OFX) File | √ | √ | √ | - | - | - | - | √ | - | √ |
-| Quicken Financial Exchange (QFX) File | √ | √ | √ | - | - | - | - | √ | - | √ |
-| Quicken Interchange Format (QIF) File | √ | √ | √ | - | √ | √ | - | - | - | √ |
-| Intuit Interchange Format (IIF) File | √ | √ | √ | - | √ | √ | - | - | - | √ |
-| GnuCash XML Database File | √ | √ | √ | √ | √ | √ | - | √ | - | √ |
-| Firefly III Data Export File | √ | √ | √ | √ | √ | √ | √ | √ | - | √ |
-| Feidee MyMoney (App) Data Export File | √ | √ | √ | √ | √ | √ | - | - | - | √ |
-| Feidee MyMoney (Web) Data Export File | √ | √ | √ | - | √ | √ | - | - | - | √ |
-| Alipay (App) Transaction Flow File | √ | √ | √ | - | √ | √ | - | - | - | √ |
-| Alipay (Web) Transaction Flow File | √ | √ | √ | - | - | √ | - | - | - | √ |
-| WeChat Pay Billing File | √ | √ | √ | - | √ | √ | - | - | - | √ |
+| File Type | Income Transaction | Expense Transaction | Transfer Transaction | Transfer Transaction With Different Currencies | Split Transaction | Category Name | Account Name | Tag Names | Timezone | Geographic Location | Description |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| ezbookkeeping Data Export File | √ | √ | √ | √ | - | √ | √ | √ | √ | √ | √ |
+| Open Financial Exchange (OFX) File | √ | √ | √ | - | - | - | - | - | √ | - | √ |
+| Quicken Financial Exchange (QFX) File | √ | √ | √ | - | - | - | - | - | √ | - | √ |
+| Quicken Interchange Format (QIF) File | √ | √ | √ | - | × | √ | √ | - | - | - | √ |
+| Intuit Interchange Format (IIF) File | √ | √ | √ | - | × | √ | √ | - | - | - | √ |
+| GnuCash XML Database File | √ | √ | √ | √ | × | √ | √ | - | √ | - | √ |
+| Firefly III Data Export File | √ | √ | √ | √ | - | √ | √ | √ | √ | - | √ |
+| Feidee MyMoney (App) Data Export File | √ | √ | √ | √ | - | √ | √ | - | - | - | √ |
+| Feidee MyMoney (Web) Data Export File | √ | √ | √ | - | - | √ | √ | - | - | - | √ |
+| Alipay (App) Transaction Flow File | √ | √ | √ | - | - | √ | √ | - | - | - | √ |
+| Alipay (Web) Transaction Flow File | √ | √ | √ | - | - | - | √ | - | - | - | √ |
+| WeChat Pay Billing File | √ | √ | √ | - | - | √ | √ | - | - | - | √ |
 
 * "√" means that the original file contains this data, and it can be imported
 * "-" means that the original file does not contain this data
