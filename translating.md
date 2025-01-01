@@ -25,7 +25,7 @@ For more information about language tags, please refer to [RFC5646](https://www.
 ### Add new language for frontend
 
 1. Copy `/src/locales/en.json` and create a new file named with the language tag
-2. Add a key-value pair to the `allLanguages` object in `/src/locales/index.js`. The key should be the language tag, the `name` field in the value object should be the language name in English, the `displayName` field should be the language name in that language, and the `content` field should be the imported new language object. In addition, to be compatible with some third-party services that don't support language tags in the `language-script` format, a language tag in the `language-region` format needs to be set in the `alternativeLanguageTag` field (e.g. `zh-CN`)
+2. Add a key-value pair to the `allLanguages` object in `/src/locales/index.ts`. The key should be the language tag, the `name` field in the value object should be the language name in English, the `displayName` field should be the language name in that language, and the `content` field should be the imported new language object. In addition, to be compatible with some third-party services that don't support language tags in the `language-script` format, a language tag in the `language-region` format needs to be set in the `alternativeLanguageTag` field (e.g. `zh-CN`)
 3. Translate each text item
 
 ### Add new language for backend
@@ -42,16 +42,16 @@ Here are all the settings that require default values and their descriptions:
 
 | Item | All Available Options | Description |
 | --- | --- | --- |
-| `currency` | `allCurrencies` in `/src/consts/currency.js` | The default currency |
-| `firstDayOfWeek` | `allWeekDays` in `/src/consts/datetime.js` | The default first day of the week |
-| `longDateFormat` | `allLongDateFormat` in `/src/consts/datetime.js` | The default long date format |
-| `shortDateFormat` | `allShortDateFormat` in `/src/consts/datetime.js` | The default short date format |
-| `longTimeFormat` | `allLongTimeFormat` in `/src/consts/datetime.js` | The default long time format |
-| `shortTimeFormat` | `allShortTimeFormat` in `/src/consts/datetime.js` | The default short time format |
-| `decimalSeparator` | `allDecimalSeparator` in `/src/consts/numeral.js` | The default decimal separator |
-| `digitGroupingSymbol` | `allDigitGroupingSymbol` in `/src/consts/numeral.js` | The default digit grouping symbol |
-| `digitGrouping` | `allDigitGroupingType` in `/src/consts/numeral.js` | The default digit grouping type |
-| `currencyDisplayType` | `allCurrencyDisplayType` in `/src/consts/currency.js` | The default currency display type |
+| `currency` | `ALL_CURRENCIES` in `/src/consts/currency.ts` | The default currency |
+| `firstDayOfWeek` | `WeekDay` in `/src/core/datetime.ts` | The default first day of the week |
+| `longDateFormat` | `LongDateFormat` in `/src/core/datetime.ts` | The default long date format |
+| `shortDateFormat` | `ShortDateFormat` in `/src/core/datetime.ts` | The default short date format |
+| `longTimeFormat` | `LongTimeFormat` in `/src/core/datetime.ts` | The default long time format |
+| `shortTimeFormat` | `ShortTimeFormat` in `/src/core/datetime.ts` | The default short time format |
+| `decimalSeparator` | `DecimalSeparator` in `/src/core/numeral.ts` | The default decimal separator |
+| `digitGroupingSymbol` | `DigitGroupingSymbol` in `/src/core/numeral.ts` | The default digit grouping symbol |
+| `digitGrouping` | `DigitGroupingType` in `/src/core/numeral.ts` | The default digit grouping type |
+| `currencyDisplayType` | `CurrencyDisplayType` in `/src/core/currency.ts` | The default currency display type |
 
 In addition, the `format` object in the language files contains options for date and time formats for each language. These formats can be configured according to the Moment.js [documentation](https://momentjs.com/docs/#/displaying/). The specific usage scenarios for these formats are as follows:
 
