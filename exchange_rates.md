@@ -26,11 +26,12 @@ ezBookkeeping supports updating exchange rates automatically, and supports multi
 
 The base currency is Australian dollar (`AUD`). The daily exchange rates are usually updated around 16:00 AEST (Australian Eastern Standard Time) on every working day.
 
-This data source supports 17 currencies, and all currencies are as follows:
+This data source supports 18 currencies, and all currencies are as follows:
 
 | Currency | Currency Code | Update Frequency |
 | --- | --- | --- |
 | Canadian Dollar | CAD | Daily |
+| Swiss Franc | CHF | Daily |
 | Chinese Yuan | CNY | Daily |
 | Euro | EUR | Daily |
 | British Pound | GBP | Daily |
