@@ -68,9 +68,7 @@ The following table lists all supported file types and the data contents that ca
 * "√" means that the original file contains this data, and it can be imported
 * "-" means that the original file does not contain this data
 * "×" means that the original file contains this data, but it cannot be imported
-
-
-* *1: Split transactions will be converted into separate transactions
+* \*1: Split transactions will be converted into separate transactions
 
 ### How to get GnuCash XML Database File
 
