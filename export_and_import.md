@@ -51,12 +51,12 @@ See [transaction-import](/command_line#userdata)
 The following table lists all supported file types and the data contents that can be imported:
 
 | File Type | Income Transaction | Expense Transaction | Transfer Transaction | Transfer Transaction With Different Currencies | Split Transaction | Category Name | Account Name | Tag Names | Timezone | Geographic Location | Description |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ezbookkeeping Data Export File | √ | √ | √ | √ | - | √ | √ | √ | √ | √ | √ |
 | Open Financial Exchange (OFX) File | √ | √ | √ | - | - | - | - | - | √ | - | √ |
 | Quicken Financial Exchange (QFX) File | √ | √ | √ | - | - | - | - | - | √ | - | √ |
 | Quicken Interchange Format (QIF) File | √ | √ | √ | - | × | √ | √ | - | - | - | √ |
-| Intuit Interchange Format (IIF) File | √ | √ | √ | - | × | √ | √ | - | - | - | √ |
+| Intuit Interchange Format (IIF) File | √ | √ | √ | - | √ (*1) | √ | √ | - | - | - | √ |
 | GnuCash XML Database File | √ | √ | √ | √ | × | √ | √ | - | √ | - | √ |
 | Firefly III Data Export File | √ | √ | √ | √ | - | √ | √ | √ | √ | - | √ |
 | Feidee MyMoney (App) Data Export File | √ | √ | √ | √ | - | √ | √ | - | - | - | √ |
@@ -68,6 +68,9 @@ The following table lists all supported file types and the data contents that ca
 * "√" means that the original file contains this data, and it can be imported
 * "-" means that the original file does not contain this data
 * "×" means that the original file contains this data, but it cannot be imported
+
+
+* *1: Split transactions will be converted into separate transactions
 
 ### How to get GnuCash XML Database File
 
