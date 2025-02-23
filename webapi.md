@@ -32,7 +32,7 @@ The response of API is JSON object like the following:
 
 **Successful response**
 
-```json
+```javascript
 {
     "result": ..., // The acutal data
     "success": true
@@ -41,7 +41,7 @@ The response of API is JSON object like the following:
 
 **Failure response**
 
-```json
+```javascript
 {
     "errorCode": xxxxxx, // The error code
     "errorMessage": "xxx", // The error message

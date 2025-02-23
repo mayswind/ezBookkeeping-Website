@@ -33,7 +33,7 @@ API 接口的返回结果是 JSON 对象，如下：
 
 **成功返回**
 
-```json
+```javascript
 {
     "result": ..., // 实际数据
     "success": true
@@ -42,7 +42,7 @@ API 接口的返回结果是 JSON 对象，如下：
 
 **失败返回**
 
-```json
+```javascript
 {
     "errorCode": xxxxxx, // 错误码
     "errorMessage": "xxx", // 错误信息
