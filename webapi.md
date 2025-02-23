@@ -45,7 +45,7 @@ The response of API is JSON object like the following:
 {
     "errorCode": xxxxxx, // The error code
     "errorMessage": "xxx", // The error message
-    "path": "/api/v1/${API_PATH}", // The API full path
+    "path": "/api/v1/{API_PATH}", // The API full path
     "success": false
 }
 ```

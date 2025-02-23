@@ -46,7 +46,7 @@ API 接口的返回结果是 JSON 对象，如下：
 {
     "errorCode": xxxxxx, // 错误码
     "errorMessage": "xxx", // 错误信息
-    "path": "/api/v1/${API_PATH}", // API 完整路径
+    "path": "/api/v1/{API_PATH}", // API 完整路径
     "success": false
 }
 ```
