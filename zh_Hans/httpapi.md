@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Web API
+title: HTTP API
 nav_order: 7
 parent: 简体中文
 permalink: /zh_Hans/webapi

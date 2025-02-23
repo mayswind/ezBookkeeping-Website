@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Web API
+title: HTTP API
 nav_order: 7
 permalink: /webapi
 ---
