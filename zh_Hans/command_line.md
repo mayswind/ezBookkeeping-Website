@@ -1,7 +1,7 @@
 ---
 layout: default
 title: 命令行
-nav_order: 5
+nav_order: 6
 parent: 简体中文
 permalink: /zh_Hans/command_line
 ---
