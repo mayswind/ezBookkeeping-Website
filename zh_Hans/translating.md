@@ -1,7 +1,7 @@
 ---
 layout: default
 title: 翻译
-nav_order: 8
+nav_order: 9
 parent: 简体中文
 permalink: /zh_Hans/translating
 ---
