@@ -5,7 +5,7 @@ nav_order: 7
 permalink: /webapi
 ---
 
-# Web API
+# HTTP API
 {: .no_toc }
 
 ## Table of contents

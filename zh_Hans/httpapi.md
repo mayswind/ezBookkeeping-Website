@@ -6,7 +6,7 @@ parent: 简体中文
 permalink: /zh_Hans/webapi
 ---
 
-# Web API
+# HTTP API
 {: .no_toc }
 
 ## 目录
