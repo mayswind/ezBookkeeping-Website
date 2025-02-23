@@ -39,7 +39,7 @@ The response of API is JSON object like the following:
 }
 ```
 
-**Failure response**
+**Failed response**
 
 ```javascript
 {
