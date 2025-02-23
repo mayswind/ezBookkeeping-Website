@@ -2,7 +2,7 @@
 layout: default
 title: HTTP API
 nav_order: 7
-permalink: /webapi
+permalink: /httpapi
 ---
 
 # HTTP API

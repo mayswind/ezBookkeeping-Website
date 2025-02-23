@@ -3,7 +3,7 @@ layout: default
 title: HTTP API
 nav_order: 7
 parent: 简体中文
-permalink: /zh_Hans/webapi
+permalink: /zh_Hans/httpapi
 ---
 
 # HTTP API
