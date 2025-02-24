@@ -17,7 +17,7 @@ permalink: /zh_Hans/httpapi
 
 ---
 
-ezBookkeeping 为前端界面提供 HTTP API 接口，同时这些接口也可以被用户直接使用以实现更多自动化的功能。但请注意，ezBookkeeping 的 Web API 并不是面向普通用户的，本文档中的内容也可能不够详细，更多内容请参考源代码。
+ezBookkeeping 为前端界面提供 HTTP API 接口，同时这些接口也可以被用户直接使用以实现更多自动化的功能。但请注意，ezBookkeeping 的 HTTP API 并不是面向普通用户的，本文档中的内容也可能不够详细，更多内容请参考源代码。
 
 ## 使用
 
