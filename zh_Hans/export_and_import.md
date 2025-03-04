@@ -23,7 +23,7 @@ ezbookkeeping 支持使用命令行或从用户界面中导出交易数据为 CS
 
 ### 通过命令行导出交易
 
-详见 [transaction-export](/command_line#userdata)
+详见 [transaction-export](/zh_Hans/command_line#userdata)
 
 ### 从桌面版用户界面导出交易
 
@@ -41,7 +41,7 @@ ezbookkeeping 支持使用命令行导入 ezbookkeeping 导出的文件，或从
 
 ### 通过命令行导入交易
 
-详见 [transaction-import](/command_line#userdata)
+详见 [transaction-import](/zh_Hans/command_line#userdata)
 
 ### 从桌面版用户界面导入交易
 

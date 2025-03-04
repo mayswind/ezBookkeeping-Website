@@ -21,7 +21,7 @@ ezBookkeeping 为前端界面提供 HTTP API 接口，同时这些接口也可�
 
 ## 使用
 
-ezBookkeeping 的 API 通过令牌来验证用户身份，您可以执行以下命令来生成新的令牌，更多信息可以参考 [命令行](command_line#userdata)。
+ezBookkeeping 的 API 通过令牌来验证用户身份，您可以执行以下命令来生成新的令牌，更多信息可以参考 [命令行](/zh_Hans/command_line#userdata)。
 
     $ TOKEN=$(./ezbookkeeping userdata user-session-new -n ${USER_NAME} | grep 'NewToken' | awk -F ' ' '{print $2}')
 
