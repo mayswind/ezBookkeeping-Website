@@ -2,7 +2,7 @@
 layout: default
 title: HTTP API
 nav_order: 7
-parent: 简体中文
+parent: 中文 (简体)
 permalink: /zh_Hans/httpapi
 ---
 

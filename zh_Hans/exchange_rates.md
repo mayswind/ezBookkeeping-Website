@@ -2,7 +2,7 @@
 layout: default
 title: 汇率
 nav_order: 4
-parent: 简体中文
+parent: 中文 (简体)
 permalink: /zh_Hans/exchange_rates
 ---
 

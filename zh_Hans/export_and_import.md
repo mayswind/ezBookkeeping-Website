@@ -2,7 +2,7 @@
 layout: default
 title: 导出 & 导入
 nav_order: 5
-parent: 简体中文
+parent: 中文 (简体)
 permalink: /zh_Hans/export_and_import
 ---
 

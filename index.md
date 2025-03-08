@@ -99,7 +99,7 @@ For more information about how to install ezBookkeeping, please visit our [docum
 
 ## Documents
 1. [English](/)
-1. [中文 (简体) / Chinese (Simplified)](/zh_Hans)
+1. [中文 (简体)](/zh_Hans)
 
 ## License
 [MIT](https://github.com/mayswind/ezbookkeeping/blob/master/LICENSE)
