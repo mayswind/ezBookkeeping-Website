@@ -159,6 +159,8 @@ For example, if you want to set database type to `mysql`, you can set environmen
 | `temporary_token_expired_time` | `300` | Temporary token expired time (60 - 4294967295 seconds). |
 | `email_verify_token_expired_time` | `3600` | Email verify token expired time (60 - 4294967295 seconds). |
 | `password_reset_token_expired_time` | `3600` | Password reset token expired time (60 - 4294967295 seconds). |
+| `max_failures_per_ip_per_minute` | `5` | Maximum count of password / token check failures (0 - 4294967295) per IP per minute (use the above duplicate checker), default is `5`, set to `0` to disable. |
+| `max_failures_per_user_per_minute` | `5` | Maximum count of password / token check failures (0 - 4294967295) per user per minute (use the above duplicate checker), default is `5`, set to `0` to disable. |
 | `request_id_header` | `true` | Whether to enable adding `X-Request-Id` header to response to track user request or error. |
 
 ### User
