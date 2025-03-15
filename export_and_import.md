@@ -62,6 +62,7 @@ The following table lists all supported file types and the data contents that ca
 | Firefly III Data Export File | √ | √ | √ | √ | - | √ | √ | √ | √ | - | √ |
 | Feidee MyMoney (App) Data Export File | √ | √ | √ | √ | - | √ | √ | - | - | - | √ |
 | Feidee MyMoney (Web) Data Export File | √ | √ | √ | - | - | √ | √ | - | - | - | √ |
+| Feidee MyMoney (Elecloud) Data Export File | √ | √ | √ | - | - | √ | √ | - | - | - | √ |
 | Alipay (App) Transaction Flow File | √ | √ | √ | - | - | √ | √ | - | - | - | √ |
 | Alipay (Web) Transaction Flow File | √ | √ | √ | - | - | - | √ | - | - | - | √ |
 | WeChat Pay Billing File | √ | √ | √ | - | - | √ | √ | - | - | - | √ |

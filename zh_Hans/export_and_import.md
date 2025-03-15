@@ -63,6 +63,7 @@ ezbookkeeping 支持使用命令行导入 ezbookkeeping 导出的文件，或从
 | Firefly III 数据导出文件 | √ | √ | √ | √ | - | √ | √ | √ | √ | - | √ |
 | 随手记 (App) 数据导出文件 | √ | √ | √ | √ | - | √ | √ | - | - | - | √ |
 | 随手记 (Web版) 数据导出文件 | √ | √ | √ | - | - | √ | √ | - | - | - | √ |
+| 随手记 (神象云账本) 数据导出文件 | √ | √ | √ | - | - | √ | √ | - | - | - | √ |
 | 支付宝 (App) 交易流水文件 | √ | √ | √ | - | - | √ | √ | - | - | - | √ |
 | 支付宝 (网页版) 交易流水文件 | √ | √ | √ | - | - | - | √ | - | - | - | √ |
 | 微信支付账单文件 | √ | √ | √ | - | - | √ | √ | - | - | - | √ |
@@ -107,6 +108,27 @@ ezbookkeeping 支持使用命令行导入 ezbookkeeping 导出的文件，或从
 3. 点击 “数据导出” 下方数据来源的 “随手记 web版”，即可导出为 Excel（.xls）格式的文件
 
 > 注意：随手记（Web版）导出的转账交易数据中没有正确处理跨币种的转账交易数据，跨币种的转账交易只有一个金额。如果您要导入的数据中包含跨币种的转账交易，请使用随手记手机App导出交易数据，然后再导入到 ezbookkeeping。
+
+### 如何获取随手记（神象云账本）数据导出文件
+
+**从随手记（App）导出神象云账本**
+
+[![](images/how_to_export_feidee_mymoney_elecloud_app.png)](images/how_to_export_feidee_mymoney_elecloud_app.png)
+
+1. 在随手记App选择账本后点击 “设置”，然后点击 “数据导出”
+2. 设置导出数据的时间范围等
+3. 点击 “导出” 即可导出为 Excel（.xlsx）格式的文件
+
+**从随手记（Web版）导出神象云账本**
+
+[![](images/how_to_export_feidee_mymoney_elecloud_web_1.png)](images/how_to_export_feidee_mymoney_elecloud_web_1.png)
+
+[![](images/how_to_export_feidee_mymoney_elecloud_web_2.png)](images/how_to_export_feidee_mymoney_elecloud_web_2.png)
+
+1. 在随手记网页版的神象云账本菜单中点击 “设置”
+2. 在设置页面中点击 “数据导出”
+3. 设置导出数据的时间范围等
+4. 点击 “确认导出” 即可导出为 Excel（.xlsx）格式的文件
 
 ### 如何获取支付宝（App）交易流水文件
 
