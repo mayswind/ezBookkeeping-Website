@@ -53,13 +53,14 @@ The following table lists all supported file types and the data contents that ca
 | File Type | Income Transaction | Expense Transaction | Transfer Transaction | Transfer Transaction With Different Currencies | Split Transaction | Category Name | Account Name | Tag Names | Timezone | Geographic Location | Description |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ezbookkeeping Data Export File | √ | √ | √ | √ | - | √ | √ | √ | √ | √ | √ |
+| Delimiter-separated Values (DSV) File / Data | √ | √ | √ | √ | - | √ | √ | √ | √ | √ | √ |
 | Open Financial Exchange (OFX) File | √ | √ | √ | - | - | - | - | - | √ | - | √ |
 | Quicken Financial Exchange (QFX) File | √ | √ | √ | - | - | - | - | - | √ | - | √ |
 | Quicken Interchange Format (QIF) File | √ | √ | √ | - | × | √ | √ | - | - | - | √ |
 | Intuit Interchange Format (IIF) File | √ | √ | √ | - | √ (*1) | √ | √ | - | - | - | √ |
-| Delimiter-separated Values (DSV) File / Data | √ | √ | √ | √ | - | √ | √ | √ | √ | √ | √ |
 | GnuCash XML Database File | √ | √ | √ | √ | × | √ | √ | - | √ | - | √ |
 | Firefly III Data Export File | √ | √ | √ | √ | - | √ | √ | √ | √ | - | √ |
+| Beancount Data File | √ | √ | √ | √ | × | √ | √ | √ | - | - | √ |
 | Feidee MyMoney (App) Data Export File | √ | √ | √ | √ | - | √ | √ | - | - | - | √ |
 | Feidee MyMoney (Web) Data Export File | √ | √ | √ | - | - | √ | √ | - | - | - | √ |
 | Feidee MyMoney (Elecloud) Data Export File | √ | √ | √ | - | - | √ | √ | - | - | - | √ |
