@@ -73,6 +73,23 @@ The following table lists all supported file types and the data contents that ca
 * "×" means that the original file contains this data, but it cannot be imported
 * \*1: Split transactions will be converted into separate transactions
 
+### How to import Delimiter-separated Values (DSV) File or Data
+
+ezBookkeeping supports importing custom data formatted with delimiters. You can separate your data using commas or tabs, then save it as a CSV or TSV file, or paste it directly into the text box.
+
+1. Click "Import" in "Transaction Details" page
+2. Select "Delimiter-separated Values (DSV) File" or "Delimiter-separated Values (DSV) Data" as the file type
+    1. For "Delimiter-separated Values (DSV) File", select the file encoding and select the file to import
+    2. For "Delimiter-separated Values (DSV) Data", paste the file content into the text box below
+    3. Then, Select the format: "CSV (Comma-Separated Values) File" or "TSV (Tab-Separated Values) File" and click the "Next" button
+3. ezBookkeeping will display the data in a table. You can click the header of each column to set the corresponding mapping. The imported data must include at least three columns: "Transaction Time", "Transaction Type" and "Amount"
+    1. After setting the "Transaction Type" column, click "Transaction Type Mapping" to match each type with the corresponding transaction type in ezBookkeeping
+    2. After setting the "Transaction Time" column, ezBookkeeping will automatically detects the transaction time format. If it shows as "Unknown", click "Time Format" and select the correct format or modify the transaction time in the import file
+    3. After setting the "Amount" column, ezBookkeeping will automatically detects the amount format. If it shows as "Unknown", click "Amount Format" and select the correct format or modify the amount in the import file
+    4. If you set "Transaction Timezone", "Geographic Location", or "Tags" column, you also need to specify the format for transaction timezone and the delimiters for geographic location and transaction tags
+    5. Once all columns are set completely, click the "Next" button
+4. Check if the imported transactions are mapped to existing transaction categories, accounts, and tags. Invalid data will be highlighted in red. You can click the pen icon on the left side of each record to modify the transaction category, account or tag of this transaction. You can also click the menu in the upper right corner to batch replace transaction categories, accounts or tags. Finally, select the transactions you want to import by checking the box on the left side, then click the "Import" button
+
 ### How to get GnuCash XML Database File
 
 [![](images/how_to_export_gnucash.png)](images/how_to_export_gnucash.png)
