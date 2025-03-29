@@ -210,4 +210,4 @@ server {
 }
 ```
 
-此外，如果你想通过子路径访问 ezBookkeeping，你还需要在 [配置](/zh_Hans/configuration) 中设置 `root_url` 选项，例如上述需要设置为 `%(protocol)s://%(domain)s:{your_nginx_port}/ezbookkeeping/`。
+此外，如果你想通过子路径访问 ezBookkeeping，你还需要在 [配置](/zh_Hans/configuration) 中设置 `root_url` 选项，例如上述需要设置为 `https://%(domain)s:{your_nginx_port}/ezbookkeeping/`。

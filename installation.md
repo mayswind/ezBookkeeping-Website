@@ -209,4 +209,4 @@ server {
 }
 ```
 
-In addition, if you want to access ezBookkeeping via sub path, you also need to set the `root_url` option in the [configuration](/configuration), for example, it needs to be set to `%(protocol)s://%(domain)s:{your_nginx_port}/ezbookkeeping/`.
+In addition, if you want to access ezBookkeeping via sub path, you also need to set the `root_url` option in the [configuration](/configuration), for example, it needs to be set to `https://%(domain)s:{your_nginx_port}/ezbookkeeping/`.
