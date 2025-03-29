@@ -350,7 +350,7 @@ API 接口的返回结果是 JSON 对象，如下：
 
 **TransactionType**
 
-| Value | Type | Description |
+| 值 | 类型 | 描述 |
 | --- | --- | --- |
 | `1` | `integer` | 修改余额 |
 | `2` | `integer` | 收入 |
