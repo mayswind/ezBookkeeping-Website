@@ -16,33 +16,40 @@ permalink: /zh_Hans
 ---
 
 ## 介绍
-ezBookkeeping 是一个自托管 (self-hosted) 的轻量个人账本应用。它可以部署在几乎所有平台上，包括 x86、x64 以及 ARM 架构的 Windows、macOS 和 Linux。您甚至可以将它部署在树莓派 (Raspberry) 设备中。此外，它支持多种不同数据库，包括 SQLite、MySQL 和 PostgreSQL 等。借助 Docker，您甚至只需要一条命令即可将其部署，而无需复杂的配置。
+ezBookkeeping 是一个轻量自托管 (self-hosted) 的个人记账应用，为桌面及移动设备分别提供了友好的用户界面。基于 PWA 技术，可以在移动设备上提供接近原生应用的体验。它易于部署和配置，您只需通过 Docker 的一个命令即可部署它。它支持几乎所有平台，包括 Windows、macOS 和 Linux，以及兼容 x86、amd64 和 ARM 架构。它仅需要很少的系统资源，您甚至可以在 Raspberry Pi 设备上运行它。
 
 项目地址：[https://github.com/mayswind/ezbookkeeping](https://github.com/mayswind/ezbookkeeping)  
 在线演示：[https://ezbookkeeping-demo.mayswind.net](https://ezbookkeeping-demo.mayswind.net)
 
 ## 特性
-1. 开源 & 自托管 (self-hosted)
+1. 开源 & 自托管 (Self-hosted)
 2. 轻量 & 快速
 3. 安装简单
     * 支持 Docker
     * 支持多种数据库 (SQLite、MySQL、PostgreSQL 等)
-    * 支持多种操作系统和硬件 (Windows、macOS、Linux & x86、amd64、ARM)
+    * 支持多种操作系统和硬件架构 (Windows、macOS、Linux & x86、amd64、ARM)
 4. 用户友好的界面
-    * 桌面版和移动版UI
-    * 接近原生应用的体验 (针对移动设备)
-    * 支持两级账户及两级分类
-    * 丰富的预设分类
-    * 支持地理位置及地图
-    * 查找、过滤历史记录
-    * 数据统计
+    * 为桌面和移动设备提供原生UI
+    * 支持 PWA，移动设备体验接近原生应用
     * 深色主题
-5. 多货币支持 & 自动更新汇率
-6. 多时区支持
-7. 多语言支持
-8. 两步认证
-9. 应用锁 (PIN 码 / WebAuthn)
-10. 数据导出 & 导入 (CSV、OFX、QFX、QIF、IIF、GnuCash、FireFly III、Beancount、随手记、支付宝及微信账单等)
+5. 强大的记账功能
+    * 支持两级账户
+    * 支持两级分类及预设分类
+    * 支持交易图片
+    * 支持地理位置记录及地图
+    * 支持周期性交易
+    * 查找、筛选交易记录
+    * 数据可视化及统计分析
+6. 本地化支持
+    * 多语言支持
+    * 多货币支持，支持多家金融机构的汇率自动更新
+    * 多时区支持
+    * 自定义日期、时间、数字、货币显示格式
+7. 安全可靠
+    * 两步认证 (2FA)
+    * 登录频次限制
+    * 应用锁 (PIN 码 / WebAuthn)
+8. 数据导出 & 导入 (CSV、OFX、QFX、QIF、IIF、GnuCash、FireFly III、Beancount、随手记、支付宝及微信账单等)
 
 ## 截图
 ### 桌面版
