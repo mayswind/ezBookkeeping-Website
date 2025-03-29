@@ -88,6 +88,8 @@ permalink: /zh_Hans/installation
 **注意**：
 在部署到生产环境之前，您必须生成一个随机值并将其设置到 `secret_key` 配置中以保证您数据的安全。你可以通过执行 `ezbookkeeping security gen-secret-key` 获取一个随机密钥。
 
+除此之外，您还需要将设置中的 `domain` 设置为实际访问的域名，否则邮件中的链接地址，以及用户头像、交易图片等地址将会不正确。如果你实际访问的协议或端口与 ezBookkeping 配置的不同，还需要将 `root_url` 修改为实际的访问地址（例如使用 Nginx 作为反向代理）。
+
 更多信息，请访问 [配置](/zh_Hans/configuration)。
 
 ### 使用 docker-compose

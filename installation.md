@@ -87,6 +87,8 @@ All options in the configuration file can be overridden using environment variab
 **ATTENTION**:  
 Before you deploy to production, you must generate a random string and set it to `secret_key` to keep your user data safe. You can get a random secret key by executing `ezbookkeeping security gen-secret-key`.
 
+In addition, you also need to set the `domain` in the settings to the domain name you actually access, otherwise the url in the email, as well as the user avatar, transaction picture and other url will be incorrect. If the protocol or port you actually access is different from the ezBookkeping configuration, you also need to modify `root_url` to the actual access address (for example, using Nginx as the reverse proxy).
+
 For more information, please visit [Configuration](/configuration).
 
 ### Use docker-compose
