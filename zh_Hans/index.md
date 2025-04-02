@@ -16,7 +16,7 @@ permalink: /zh_Hans
 ---
 
 ## 介绍
-ezBookkeeping 是一个轻量自托管 (self-hosted) 的个人记账应用，为桌面及移动设备分别提供了友好的用户界面。它支持 PWA，您可以将应用首页添加到移动设备的主屏幕上，使用起来就像原生应用一样。它易于部署和配置，您只需通过 Docker 的一个命令即可部署它。它支持几乎所有平台，包括 Windows、macOS 和 Linux，以及兼容 x86、amd64 和 ARM 硬件架构。它仅需要很少的系统资源，您甚至可以在 Raspberry Pi 设备上运行它。
+ezBookkeeping 是一个轻量自托管 (self-hosted) 的个人记账应用，为桌面及移动设备分别提供了友好的用户界面。它支持 PWA，您可以[将应用首页添加到移动设备的主屏幕](https://raw.githubusercontent.com/wiki/mayswind/ezbookkeeping/img/mobile/add_to_home_screen.gif)上，使用起来就像原生应用一样。它易于部署和配置，您只需通过 Docker 的一个命令即可部署它。它支持几乎所有平台，包括 Windows、macOS 和 Linux，以及兼容 x86、amd64 和 ARM 硬件架构。它仅需要很少的系统资源，您甚至可以在 Raspberry Pi 设备上运行它。
 
 项目地址：[https://github.com/mayswind/ezbookkeeping](https://github.com/mayswind/ezbookkeeping)  
 在线演示：[https://ezbookkeeping-demo.mayswind.net](https://ezbookkeeping-demo.mayswind.net)
