@@ -577,7 +577,7 @@ Configuration option `data_source` value is `norges_bank`
 
 The base currency is Polish złoty (`PLN`). The daily exchange rates are usually updated between 11:45 CET (Central European Time) and 12:15 CET on every working day. The weekly exchange rates are usually updated on Wednesdays.
 
-This data source supports 148 currencies, and all currencies are as follows:
+This data source supports 147 currencies, and all currencies are as follows:
 
 | Currency | Currency Code | Update Frequency |
 | --- | --- | --- |
@@ -585,7 +585,6 @@ This data source supports 148 currencies, and all currencies are as follows:
 | Afghan Afghani | AFN | Weekly |
 | Albanian Lek | ALL | Weekly |
 | Armenian Dram | AMD | Weekly |
-| Netherlands Antillean Guilder | ANG | Weekly |
 | Angolan Kwanza | AOA | Weekly |
 | Argentine Peso | ARS | Weekly |
 | Australian Dollar | AUD | Daily |
