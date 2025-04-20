@@ -852,6 +852,60 @@ This data source supports 4 currencies, and all currencies are as follows:
 
 Configuration option `data_source` value is `swiss_national_bank`
 
+### National Bank of Ukraine
+
+> Reference: [https://bank.gov.ua/ua/markets/exchangerates](https://bank.gov.ua/ua/markets/exchangerates)
+
+The base currency is Ukrainian hryvnia (`UAH`).
+
+This data source supports 41 currencies, and all currencies are as follows:
+
+| Currency | Currency Code | Update Frequency |
+| --- | --- | --- |
+| United Arab Emirates Dirham | AED | Daily |
+| Australian Dollar | AUD | Daily |
+| Azerbaijan Manat | AZN | Daily |
+| Bangladeshi Taka | BDT | Daily |
+| Bulgarian Lev | BGN | Daily |
+| Canadian Dollar | CAD | Daily |
+| Swiss Franc | CHF | Daily |
+| Chinese Yuan | CNY | Daily |
+| Czech Koruna | CZK | Daily |
+| Danish Krone | DKK | Daily |
+| Algerian Dinar | DZD | Daily |
+| Egyptian Pound | EGP | Daily |
+| Euro | EUR | Daily |
+| British Pound | GBP | Daily |
+| Georgian Lari | GEL | Daily |
+| Hong Kong Dollar | HKD | Daily |
+| Hungarian Forint | HUF | Daily |
+| Indonesian Rupiah | IDR | Daily |
+| Israeli New Shekel | ILS | Daily |
+| Indian Rupee | INR | Daily |
+| Japanese Yen | JPY | Daily |
+| South Korean Won | KRW | Daily |
+| Kazakhstani Tenge | KZT | Daily |
+| Lebanese Pound | LBP | Daily |
+| Moldovan Leu | MDL | Daily |
+| Mexican Peso | MXN | Daily |
+| Malaysian Ringgit | MYR | Daily |
+| Norwegian Krone | NOK | Daily |
+| New Zealand Dollar | NZD | Daily |
+| Polish Zloty | PLN | Daily |
+| Romanian Leu | RON | Daily |
+| Serbian Dinar | RSD | Daily |
+| Saudi Riyal | SAR | Daily |
+| Swedish Krona | SEK | Daily |
+| Singapore Dollar | SGD | Daily |
+| Thai Baht | THB | Daily |
+| Tunisian Dinar | TND | Daily |
+| Turkish Lira | TRY | Daily |
+| United States Dollar | USD | Daily |
+| Vietnamese Dong | VND | Daily |
+| South African Rand | ZAR | Daily |
+
+Configuration option `data_source` value is `national_bank_of_ukraine`
+
 ### Central Bank of the Republic of Uzbekistan
 
 > Reference: [https://cbu.uz/en/arkhiv-kursov-valyut/](https://cbu.uz/en/arkhiv-kursov-valyut/)
