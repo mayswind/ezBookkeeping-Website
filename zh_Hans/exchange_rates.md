@@ -734,7 +734,7 @@ ezBookkeeping 支持自动更新汇率以及支持多个不同数据源。您可
 
 ### 罗马尼亚国家银行
 
-> 参考：[https://www.bnr.ro/Exchange-rates-1224.aspx](https://www.bnr.ro/Exchange-rates-1224.aspx)
+> 参考：[https://bnro.ro/Exchange-rates-1224.aspx](https://bnro.ro/Exchange-rates-1224.aspx)
 
 基准货币是罗马尼亚列伊（`RON`）。每日汇率通常在工作日的 13:00（欧洲东部时间 EET）的稍晚更新。
 

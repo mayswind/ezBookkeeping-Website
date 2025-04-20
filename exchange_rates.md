@@ -733,7 +733,7 @@ Configuration option `data_source` value is `national_bank_of_poland`
 
 ### National Bank of Romania
 
-> Reference: [https://www.bnr.ro/Exchange-rates-1224.aspx](https://www.bnr.ro/Exchange-rates-1224.aspx)
+> Reference: [https://bnro.ro/Exchange-rates-1224.aspx](https://bnro.ro/Exchange-rates-1224.aspx)
 
 The base currency is Romanian leu (`RON`). The daily exchange rates are usually updated shortly after 13:00 EET (Eastern European Time) on every working day.
 
