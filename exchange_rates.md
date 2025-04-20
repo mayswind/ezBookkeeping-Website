@@ -854,7 +854,7 @@ Configuration option `data_source` value is `swiss_national_bank`
 
 ### National Bank of Ukraine
 
-> Reference: [https://bank.gov.ua/ua/markets/exchangerates](https://bank.gov.ua/ua/markets/exchangerates)
+> Reference: [https://bank.gov.ua/en/markets/exchangerates](https://bank.gov.ua/en/markets/exchangerates)
 
 The base currency is Ukrainian hryvnia (`UAH`).
 

@@ -855,7 +855,7 @@ ezBookkeeping 支持自动更新汇率以及支持多个不同数据源。您可
 
 ### 乌克兰国家银行
 
-> 参考：[https://bank.gov.ua/ua/markets/exchangerates](https://bank.gov.ua/ua/markets/exchangerates)
+> 参考：[https://bank.gov.ua/en/markets/exchangerates](https://bank.gov.ua/en/markets/exchangerates)
 
 基准货币是乌克兰格里夫尼亚（`UAH`）。
 
