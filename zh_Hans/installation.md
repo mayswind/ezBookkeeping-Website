@@ -94,7 +94,7 @@ permalink: /zh_Hans/installation
 
 ### 使用 docker-compose
 
-一个完整的生产部署示例（使用 `mysql` 作为数据库）：
+一个完整的生产部署示例（使用 `mariadb` 作为数据库，并确保 ezBookkeeping 在数据库就绪后启动）：
 
 ```
 services:
@@ -108,7 +108,7 @@ services:
       - "EBK_SERVER_DOMAIN=ezbookkeeping.yourdomain"
       - "EBK_SERVER_ENABLE_GZIP=true"
       - "EBK_DATABASE_TYPE=mysql"
-      - "EBK_DATABASE_HOST=mysql:3306"
+      - "EBK_DATABASE_HOST=db:3306"
       - "EBK_DATABASE_NAME=ezbookkeeping"
       - "EBK_DATABASE_USER=ezbookkeeping"
       - "EBK_DATABASE_PASSWD=ezbookkeeping"
@@ -118,6 +118,27 @@ services:
       - "/etc/localtime:/etc/localtime:ro"
       - "/var/lib/ezbookkeeping/storage:/ezbookkeeping/storage" # 请确保 UID:GID 是 1000:1000
       - "/var/log/ezbookkeeping:/ezbookkeeping/log" # 请确保 UID:GID 是 1000:1000
+    depends_on:
+      db:
+        condition: service_healthy
+  db:
+    image: mariadb:latest
+    container_name: ezbookkeeping_db
+    hostname: "db"
+    environment:
+      - "MARIADB_ROOT_PASSWORD=replace_with_mariadb_root_password"
+      - "MARIADB_DATABASE=ezbookkeeping"
+      - "MARIADB_USER=ezbookkeeping"
+      - "MARIADB_PASSWORD=ezbookkeeping"
+    volumes:
+      - "/var/lib/ezbookkeeping/mariadb:/var/lib/mysql"
+      - "/etc/localtime:/etc/localtime:ro"
+    healthcheck:
+      test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
+      start_period: 10s
+      interval: 10s
+      timeout: 5s
+      retries: 3
 ```
 
 ## 从二进制包安装

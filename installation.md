@@ -93,7 +93,7 @@ For more information, please visit [Configuration](/configuration).
 
 ### Use docker-compose
 
-A full production deployment example (using `mysql` as database):
+A full production deployment example (using `mariadb` as database and ensuring ezBookkeeping starts after the database is ready):
 
 ```
 services:
@@ -107,7 +107,7 @@ services:
       - "EBK_SERVER_DOMAIN=ezbookkeeping.yourdomain"
       - "EBK_SERVER_ENABLE_GZIP=true"
       - "EBK_DATABASE_TYPE=mysql"
-      - "EBK_DATABASE_HOST=mysql:3306"
+      - "EBK_DATABASE_HOST=db:3306"
       - "EBK_DATABASE_NAME=ezbookkeeping"
       - "EBK_DATABASE_USER=ezbookkeeping"
       - "EBK_DATABASE_PASSWD=ezbookkeeping"
@@ -117,6 +117,27 @@ services:
       - "/etc/localtime:/etc/localtime:ro"
       - "/var/lib/ezbookkeeping/storage:/ezbookkeeping/storage" # make sure the UID:GID is 1000:1000
       - "/var/log/ezbookkeeping:/ezbookkeeping/log" # make sure the UID:GID is 1000:1000
+    depends_on:
+      db:
+        condition: service_healthy
+  db:
+    image: mariadb:latest
+    container_name: ezbookkeeping_db
+    hostname: "db"
+    environment:
+      - "MARIADB_ROOT_PASSWORD=replace_with_mariadb_root_password"
+      - "MARIADB_DATABASE=ezbookkeeping"
+      - "MARIADB_USER=ezbookkeeping"
+      - "MARIADB_PASSWORD=ezbookkeeping"
+    volumes:
+      - "/var/lib/ezbookkeeping/mariadb:/var/lib/mysql"
+      - "/etc/localtime:/etc/localtime:ro"
+    healthcheck:
+      test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
+      start_period: 10s
+      interval: 10s
+      timeout: 5s
+      retries: 3
 ```
 
 ## Install from binary
