@@ -96,7 +96,6 @@ For more information, please visit [Configuration](/configuration).
 A full production deployment example (using `mysql` as database):
 
 ```
-version: "2"
 services:
   ezbookkeeping:
     image: mayswind/ezbookkeeping

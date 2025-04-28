@@ -97,7 +97,6 @@ permalink: /zh_Hans/installation
 一个完整的生产部署示例（使用 `mysql` 作为数据库）：
 
 ```
-version: "2"
 services:
   ezbookkeeping:
     image: mayswind/ezbookkeeping
