@@ -96,7 +96,7 @@ Configuration option `data_source` value is `bank_of_canada`
 
 The base currency is Czech koruna (`CZK`). The daily exchange rates are usually updated after 14:30 CET (Central European Time) on every working day. The monthly exchange rates are usually updated on the last working day of the month.
 
-This data source supports 152 currencies, and all currencies are as follows:
+This data source supports 151 currencies, and all currencies are as follows:
 
 | Currency | Currency Code | Update Frequency |
 | --- | --- | --- |
@@ -104,7 +104,6 @@ This data source supports 152 currencies, and all currencies are as follows:
 | Afghan Afghani | AFN | Monthly |
 | Albanian Lek | ALL | Monthly |
 | Armenian Dram | AMD | Monthly |
-| Netherlands Antillean Guilder | ANG | Monthly |
 | Angolan Kwanza | AOA | Monthly |
 | Argentine Peso | ARS | Monthly |
 | Australian Dollar | AUD | Daily |
