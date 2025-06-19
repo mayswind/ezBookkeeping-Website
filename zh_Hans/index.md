@@ -49,7 +49,7 @@ ezBookkeeping 是一个轻量自托管 (self-hosted) 的个人记账应用，为
     * 两步认证 (2FA)
     * 登录频次限制
     * 应用锁 (PIN 码 / WebAuthn)
-8. 数据导出 & 导入 (CSV、OFX、QFX、QIF、IIF、Camt.053、GnuCash、FireFly III、Beancount、随手记、支付宝及微信账单等)
+8. 数据导出 & 导入 (CSV、OFX、QFX、QIF、IIF、Camt.053、MT940、GnuCash、FireFly III、Beancount、随手记、支付宝及微信账单等)
 
 ## 截图
 ### 桌面版

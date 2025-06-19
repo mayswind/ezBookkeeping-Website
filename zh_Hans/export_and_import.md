@@ -60,6 +60,7 @@ ezbookkeeping 支持使用命令行导入 ezbookkeeping 导出的文件，或从
 | Quicken Interchange Format (QIF) 文件 | √ | √ | √ | - | × | √ | √ | - | - | - | √ |
 | Intuit Interchange Format (IIF) 文件 | √ | √ | √ | - | √ (*1) | √ | √ | - | - | - | √ |
 | Camt.053 银行对账单文件 | √ | √ | - | - | - | - | √ | - | √ | - | √ |
+| MT940 客户对账消息文件 | √ | √ | - | - | - | - | √ | - | - | - | √ |
 | GnuCash XML 数据库文件 | √ | √ | √ | √ | × | √ | √ | - | √ | - | √ |
 | Firefly III 数据导出文件 | √ | √ | √ | √ | - | √ | √ | √ | √ | - | √ |
 | Beancount 数据文件 | √ | √ | √ | √ | × | √ | √ | √ | - | - | √ |
