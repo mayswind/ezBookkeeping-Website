@@ -14,40 +14,44 @@ permalink: /
 ---
 
 ## Introduction
-ezBookkeeping is a lightweight, self-hosted personal finance app with a user-friendly interface and powerful bookkeeping features. It supports PWA, you can [add the app homepage to the home screen](https://raw.githubusercontent.com/wiki/mayswind/ezbookkeeping/img/mobile/add_to_home_screen.gif) of your mobile device and use it just like a native app. It's easily to be deployed and configured, you can just deploy it by a single command via Docker. It supports almost all platforms, including Windows, macOS, and Linux, and is compatible with x86, amd64 and ARM hardware architectures. It only requires very few system resources, and you can even run it on a Raspberry Pi device.
+ezBookkeeping is a lightweight, self-hosted personal finance app with a sleek, user-friendly interface and powerful bookkeeping features. Built with simplicity and portability in mind, it's easy to deploy, easy to use, and requires minimal system resources — perfect for microservers, NAS devices, and even Raspberry Pi.
+
+The app is fully cross-platform and device-friendly — you can use it seamlessly on **mobile, tablet, and desktop devices**. With support for PWA (Progressive Web Apps), you can even [add it to your mobile home screen](https://raw.githubusercontent.com/wiki/mayswind/ezbookkeeping/img/mobile/add_to_home_screen.gif) and use it like a native app.
 
 Project url: [https://github.com/mayswind/ezbookkeeping](https://github.com/mayswind/ezbookkeeping)  
-Online Demo: [https://ezbookkeeping-demo.mayswind.net](https://ezbookkeeping-demo.mayswind.net)
+Live Demo: [https://ezbookkeeping-demo.mayswind.net](https://ezbookkeeping-demo.mayswind.net)
 
 ## Features
-1. Open Source & Self-Hosted
-2. Lightweight & Fast
-3. Easy Installation
-    * Support Docker
-    * Support multiple databases (SQLite, MySQL, PostgreSQL, etc.)
-    * Support multiple operation system & hardware architectures (Windows, macOS, Linux & x86, amd64, ARM)
-4. User-Friendly Interface
-    * Native UI for both desktop and mobile devices
-    * Support PWA, providing near-native experience for mobile devices
-    * Dark theme
-5. Powerful Bookkeeping Features
-    * Support two-level account
-    * Support two-level transaction categories and predefined categories
-    * Support transaction pictures
-    * Support geographic location tracking and map
-    * Support recurring transactions
-    * Search and filter transaction records
-    * Data visualization and statistical analysis
-6. Localization Support
-    * Multi-language support
-    * Multi-currency support with automatic exchange rate updates from various financial institutions
-    * Multi-timezone support
-    * Customizable date, time, number and currency display formats
-7. Security & Reliability
-    * Two-factor authentication (2FA)
-    * Login rate limiting
-    * Application lock (PIN code / WebAuthn)
-8. Data Export & Import (CSV, OFX, QFX, QIF, IIF, Camt.053, MT940, GnuCash, FireFly III, Beancount, etc.)
+- **Open Source & Self-Hosted**
+    - Built for privacy and control
+- **Lightweight & Fast**
+    - Optimized for performance, runs smoothly even on low-resource environments
+- **Easy Installation**
+    - Docker-ready
+    - Supports SQLite, MySQL, PostgreSQL
+    - Cross-platform (Windows, macOS, Linux)
+    - Works on x86, amd64, ARM architectures
+- **User-Friendly Interface**
+    - UI optimized for both mobile and desktop
+    - PWA support for native-like mobile experience
+    - Dark mode
+- **Powerful Bookkeeping**
+    - Two-level accounts and categories
+    - Attach images to transactions
+    - Location tracking with maps
+    - Recurring transactions
+    - Advanced filtering, search, visualization, and analysis
+- **Localization & Globalization**
+    - Multi-language and multi-currency support
+    - Automatic exchange rates
+    - Multi-timezone awareness
+    - Custom formats for dates, numbers, and currencies
+- **Security**
+    - Two-factor authentication (2FA)
+    - Login rate limiting
+    - Application lock (PIN code / WebAuthn)
+- **Data Import/Export**
+    - Supports CSV, OFX, QFX, QIF, IIF, Camt.053, MT940, GnuCash, Firefly III, Beancount, and more
 
 ## Screenshots
 ### Desktop Version
@@ -57,19 +61,19 @@ Online Demo: [https://ezbookkeeping-demo.mayswind.net](https://ezbookkeeping-dem
 [![ezBookkeeping](https://raw.githubusercontent.com/wiki/mayswind/ezbookkeeping/img/mobile/en.png)](https://raw.githubusercontent.com/wiki/mayswind/ezbookkeeping/img/mobile/en.png)
 
 ## Installation
-### Ship with docker
+### Run with Docker
 Visit [Docker Hub](https://hub.docker.com/r/mayswind/ezbookkeeping) to see all images and tags.
 
-Latest Release: [![Latest Release](https://img.shields.io/docker/v/mayswind/ezbookkeeping?sort=semver&style=flat-square)](https://hub.docker.com/r/mayswind/ezbookkeeping)
+**Latest Release:**
 
     $ docker run -p8080:8080 mayswind/ezbookkeeping
 
-Latest Daily Build:
+**Latest Daily Build:**
 
     $ docker run -p8080:8080 mayswind/ezbookkeeping:latest-snapshot
 
-### Install from binary
-Latest release: [![Latest Release](https://img.shields.io/github/release/mayswind/ezbookkeeping?sort=semver&style=flat-square)](https://github.com/mayswind/ezbookkeeping/releases)
+### Install from Binary
+Download the latest release: [https://github.com/mayswind/ezbookkeeping/releases](https://github.com/mayswind/ezbookkeeping/releases)
 
 **Linux / macOS**
 
@@ -79,9 +83,9 @@ Latest release: [![Latest Release](https://img.shields.io/github/release/mayswin
 
     > .\ezbookkeeping.exe server run
 
-ezBookkeeping will listen at port 8080 as default. Then you can visit `http://{YOUR_HOST_ADDRESS}:8080/` .
+By default, ezBookkeeping listens on port 8080. You can then visit `http://{YOUR_HOST_ADDRESS}:8080/` .
 
-### Build from source
+### Build from Source
 Make sure you have [Golang](https://golang.org/), [GCC](http://gcc.gnu.org/), [Node.js](https://nodejs.org/) and [NPM](https://www.npmjs.com/) installed. Then download the source code, and follow these steps:
 
 **Linux / macOS**
@@ -96,7 +100,7 @@ All the files will be packaged in `ezbookkeeping.tar.gz`.
 
 All the files will be packaged in `ezbookkeeping.zip`.
 
-You can also build docker image, make sure you have [docker](https://www.docker.com/) installed, then follow these steps:
+You can also build a Docker image. Make sure you have [Docker](https://www.docker.com/) installed, then follow these steps:
 
 **Linux**
 
@@ -104,7 +108,7 @@ You can also build docker image, make sure you have [docker](https://www.docker.
 
 For more information about how to install ezBookkeeping, please visit our [documentation](/installation).
 
-## Documents
+## Documentation
 1. [English](/)
 1. [中文 (简体)](/zh_Hans)
 
