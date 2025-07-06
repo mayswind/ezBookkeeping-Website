@@ -61,7 +61,7 @@ ezBookkeeping 使用 ini 文件作为配置文件。
 
 | 选项名 | 默认值 | 描述 |
 | --- | --- | --- |
-| `enable_mcp` | `false` | 是否启用 MCP (Model Context Protocol) 服务器 (通过 http / https Web 服务器) 用于 AI/LLM 访问。 |
+| `enable_mcp` | `false` | 是否启用 MCP（Model Context Protocol）服务器（通过 http / https Web 服务器）用于 AI/LLM 访问。 |
 | `mcp_allowed_remote_ips` |  | MCP 服务器允许的远程 IP，使用逗号分隔的允许远程 IP 列表（星号 * 表示任何地址，例如 192.168.1.* 表示 192.168.1.x 子网中的任何 IP），留空则允许所有远程 IP。 |
 
 ### 数据库
