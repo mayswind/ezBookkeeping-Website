@@ -55,13 +55,22 @@ ezBookkeeping 使用 ini 文件作为配置文件。
 | `enable_gzip` | `false` | 是否开启 gzip 压缩。 |
 | `log_request` | `true` | 是否开启日志记录请求和执行时间。 |
 
+### MCP (Model Context Protocol)
+
+> 配置节名称为 `mcp`
+
+| 选项名 | 默认值 | 描述 |
+| --- | --- | --- |
+| `enable_mcp` | `false` | 是否启用 MCP (Model Context Protocol) 服务器 (通过 http / https Web 服务器) 用于 AI/LLM 访问。 |
+| `mcp_allowed_remote_ips` |  | MCP 服务器允许的远程 IP，使用逗号分隔的允许远程 IP 列表（星号 * 表示任何地址，例如 192.168.1.* 表示 192.168.1.x 子网中的任何 IP），留空则允许所有远程 IP。 |
+
 ### 数据库
 
 > 配置节名称为 `database`
 
 | 选项名 | 默认值 | 描述 |
 | --- | --- | --- |
-| `type` | `sqlite3`| 数据库类型，支持 `mysql`、`postgres` 和 `sqlite3`。 |
+| `type` | `sqlite3` | 数据库类型，支持 `mysql`、`postgres` 和 `sqlite3`。 |
 | `host` | `127.0.0.1:3306` | `mysql` 或 `postgres` 数据库的主机地址及端口或 Unix Socket 绝对路径。 |
 | `name` | `ezbookkeeping` | 数据库名。 |
 | `user` | `root` | 数据库用户名。 |

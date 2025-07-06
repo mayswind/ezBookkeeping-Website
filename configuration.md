@@ -54,13 +54,22 @@ For example, if you want to set database type to `mysql`, you can set environmen
 | `enable_gzip` | `false` | Whether to enable gzip compression. |
 | `log_request` | `true` | Whether to enable logging each request and execution time. |
 
+### MCP (Model Context Protocol)
+
+> Section name is `mcp`
+
+| Option Name | Default Value | Description |
+| --- | --- | --- |
+| `enable_mcp` | `false` | Whether to enable MCP (Model Context Protocol) server (via http / https web server) for AI/LLM access. |
+| `mcp_allowed_remote_ips` |  | MCP server allowed remote IPs, a comma-separated list of allowed remote IPs (asterisk * for any addresses, e.g. 192.168.1.* means any IPs in the 192.168.1.x subnet), leave blank to allow all remote IPs. |
+
 ### Database
 
 > Section name is `database`
 
 | Option Name | Default Value | Description |
 | --- | --- | --- |
-| `type` | `sqlite3`| Database type, supports `mysql`, `postgres` and `sqlite3`. |
+| `type` | `sqlite3` | Database type, supports `mysql`, `postgres` and `sqlite3`. |
 | `host` | `127.0.0.1:3306` | Database host address and port or unix socket absolute path for `mysql` or `postgres`. |
 | `name` | `ezbookkeeping` | Database name. |
 | `user` | `root` | Database user name. |
