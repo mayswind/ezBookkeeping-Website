@@ -97,6 +97,7 @@ ezBookkeeping user data maintenance operation.
 * `user-session-new`: Create new session for user
     * Options:
     * `--username value`, `-n value`: User name. Required.
+    * `--type value`, `-t value`: Specific token type, supports `normal` and `mcp`, default is `normal`.
 * `user-session-clear`: Clear specified user all sessions.
     * Options:
     * `--username value`, `-n value`: User name. Required.

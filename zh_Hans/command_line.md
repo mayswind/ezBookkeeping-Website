@@ -98,6 +98,7 @@ ezBookkeeping 用户数据维护操作。
 * `user-session-new`：为用户创建新会话。
     * 选项：
     * `--username value`, `-n value`：用户名。必填。
+    * `--type value`, `-t value`: 令牌类型，支持 `normal` 和 `mcp`，默认为 `normal`。
 * `user-session-clear`：清除指定用户所有会话。
     * 选项：
     * `--username value`, `-n value`：用户名。必填。
