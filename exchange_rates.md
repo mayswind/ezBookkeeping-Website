@@ -785,7 +785,7 @@ Configuration option `data_source` value is `national_bank_of_romania`
 
 The base currency is Russian ruble (`RUB`). The daily exchange rates are usually updated around 15:30 MCK (Moscow Time) on every working day.
 
-This data source supports 42 currencies, and all currencies are as follows:
+This data source supports 54 currencies, and all currencies are as follows:
 
 | Currency | Currency Code | Update Frequency |
 | --- | --- | --- |
@@ -793,15 +793,21 @@ This data source supports 42 currencies, and all currencies are as follows:
 | Armenian Dram | AMD | Daily |
 | Australian Dollar | AUD | Daily |
 | Azerbaijan Manat | AZN | Daily |
+| Bangladeshi Taka | BDT | Daily |
 | Bulgarian Lev | BGN | Daily |
+| Bahraini Dinar | BHD | Daily |
+| Bolivian Boliviano | BOB | Daily |
 | Brazilian Real | BRL | Daily |
 | Belarusian Ruble | BYN | Daily |
 | Canadian Dollar | CAD | Daily |
 | Swiss Franc | CHF | Daily |
 | Chinese Yuan | CNY | Daily |
+| Cuban Peso | CUP | Daily |
 | Czech Koruna | CZK | Daily |
 | Danish Krone | DKK | Daily |
+| Algerian Dinar | DZD | Daily |
 | Egyptian Pound | EGP | Daily |
+| Ethiopian Birr | ETB | Daily |
 | Euro | EUR | Daily |
 | British Pound | GBP | Daily |
 | Georgian Lari | GEL | Daily |
@@ -809,17 +815,23 @@ This data source supports 42 currencies, and all currencies are as follows:
 | Hungarian Forint | HUF | Daily |
 | Indonesian Rupiah | IDR | Daily |
 | Indian Rupee | INR | Daily |
+| Iranian Rial | IRR | Daily |
 | Japanese Yen | JPY | Daily |
 | Kyrgyzstani Som | KGS | Daily |
 | South Korean Won | KRW | Daily |
 | Kazakhstani Tenge | KZT | Daily |
 | Moldovan Leu | MDL | Daily |
+| Myanmar Kyat | MMK | Daily |
+| Mongolian Tugrik | MNT | Daily |
+| Nigerian Naira | NGN | Daily |
 | Norwegian Krone | NOK | Daily |
 | New Zealand Dollar | NZD | Daily |
+| Omani Rial | OMR | Daily |
 | Polish Zloty | PLN | Daily |
 | Qatari Riyal | QAR | Daily |
 | Romanian Leu | RON | Daily |
 | Serbian Dinar | RSD | Daily |
+| Saudi Riyal | SAR | Daily |
 | Swedish Krona | SEK | Daily |
 | Singapore Dollar | SGD | Daily |
 | Thai Baht | THB | Daily |
@@ -998,7 +1010,7 @@ Configuration option `data_source` value is `central_bank_of_uzbekistan`
 
 The base currency is United States dollar (`USD`). The daily exchange rates are usually updated from 11:00 (Eastern Standard Time) to 18:00 EST on every working day.
 
-This data source supports 37 currencies, and all currencies are as follows:
+This data source supports 35 currencies, and all currencies are as follows:
 
 | Currency | Currency Code | Update Frequency |
 | --- | --- | --- |
@@ -1031,13 +1043,11 @@ This data source supports 37 currencies, and all currencies are as follows:
 | Philippine Peso | PHP | Daily |
 | Polish Zloty | PLN | Daily |
 | Qatari Riyal | QAR | Daily |
-| Russian Ruble | RUB | Daily |
 | Saudi Riyal | SAR | Daily |
 | Swedish Krona | SEK | Daily |
 | Singapore Dollar | SGD | Daily |
 | Thai Baht | THB | Daily |
 | Trinidad and Tobago Dollar | TTD | Daily |
 | Uruguayan Peso | UYU | Daily |
-| South African Rand | ZAR | Daily |
 
 Configuration option `data_source` value is `international_monetary_fund`
