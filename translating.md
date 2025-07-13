@@ -43,7 +43,7 @@ Here are all the settings that require default values and their descriptions:
 | Item | All Available Options | Description |
 | --- | --- | --- |
 | `currency` | `ALL_CURRENCIES` in `/src/consts/currency.ts` | The default currency |
-| `firstDayOfWeek` | `WeekDay` in `/src/core/datetime.ts` | The default first day of the week, supports `Sunday`, `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday` |
+| `firstDayOfWeek` | `WeekDay` in `/src/core/datetime.ts` | The default first day of the week, supports `Sunday`, `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday` and `Saturday` |
 | `longDateFormat` | `LongDateFormat` in `/src/core/datetime.ts` | The default long date format, supports `YYYYMMDD` (Year Month Day), `MMDDYYYY` (Month Day Year) and `DDMMYYYY` (Day Month Year) |
 | `shortDateFormat` | `ShortDateFormat` in `/src/core/datetime.ts` | The default short date format, supports `YYYYMMDD` (Year Month Day), `MMDDYYYY` (Month Day Year) and `DDMMYYYY` (Day Month Year) |
 | `longTimeFormat` | `LongTimeFormat` in `/src/core/datetime.ts` | The default long time format, supports `HHMMSS` (24-hour time format), `AHHMMSS` (12-hour time format, AM/PM before the time) and `HHMMSSA` (12-hour time format, AM/PM after the time) |
