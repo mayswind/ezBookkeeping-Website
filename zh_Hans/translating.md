@@ -1,7 +1,7 @@
 ---
 layout: default
 title: 翻译
-nav_order: 9
+nav_order: 10
 parent: 中文 (简体)
 permalink: /zh_Hans/translating
 ---
@@ -44,15 +44,15 @@ ezBookkeeping 允许用户更改多项区域设置，如日期、时间、数字
 | 项目 | 所有可用选项 | 描述 |
 | --- | --- | --- |
 | `currency` | `/src/consts/currency.ts` 中的 `ALL_CURRENCIES` | 默认货币 |
-| `firstDayOfWeek` | `/src/core/datetime.ts` 中的 `WeekDay` | 默认每周第一天 |
-| `longDateFormat` | `/src/core/datetime.ts` 中的 `LongDateFormat` | 默认长日期格式 |
-| `shortDateFormat` | `/src/core/datetime.ts` 中的 `ShortDateFormat` | 默认短日期格式 |
-| `longTimeFormat` | `/src/core/datetime.ts` 中的 `LongTimeFormat` | 默认长时间格式 |
-| `shortTimeFormat` | `/src/core/datetime.ts` 中的 `ShortTimeFormat` | 默认短时间格式 |
-| `decimalSeparator` | `/src/core/numeral.ts` 中的 `DecimalSeparator` | 默认小数点 |
-| `digitGroupingSymbol` | `/src/core/numeral.ts` 中的 `DigitGroupingSymbol` | 默认数字分组符号 |
-| `digitGrouping` | `/src/core/numeral.ts` 中的 `DigitGroupingType` | 默认数字分组类型 |
-| `currencyDisplayType` | `/src/core/currency.ts` 中的 `CurrencyDisplayType` | 默认货币显示类型 |
+| `firstDayOfWeek` | `/src/core/datetime.ts` 中的 `WeekDay` | 默认每周第一天，支持 `Sunday`、`Monday`、`Tuesday`、`Wednesday`、`Thursday`、`Friday` 和 `Saturday` |
+| `longDateFormat` | `/src/core/datetime.ts` 中的 `LongDateFormat` | 默认长日期格式，支持 `YYYYMMDD`（年月日）、`MMDDYYYY`（月日年） 和 `DDMMYYYY`（日月年） |
+| `shortDateFormat` | `/src/core/datetime.ts` 中的 `ShortDateFormat` | 默认短日期格式，支持 `YYYYMMDD`（年月日）、`MMDDYYYY`（月日年） 和 `DDMMYYYY`（日月年） |
+| `longTimeFormat` | `/src/core/datetime.ts` 中的 `LongTimeFormat` | 默认长时间格式，支持 `HHMMSS`（24小时制）、`AHHMMSS`（12小时制，上午/下午标识在前） 和 `HHMMSSA`（12小时制，上午/下午标识在后） |
+| `shortTimeFormat` | `/src/core/datetime.ts` 中的 `ShortTimeFormat` | 默认短时间格式，支持 `HHMMSS`（24小时制）、`AHHMMSS`（12小时制，上午/下午标识在前） 和 `HHMMSSA`（12小时制，上午/下午标识在后） |
+| `decimalSeparator` | `/src/core/numeral.ts` 中的 `DecimalSeparator` | 默认小数点，支持 `Dot` 和 `Comma` |
+| `digitGroupingSymbol` | `/src/core/numeral.ts` 中的 `DigitGroupingSymbol` | 默认数字分组符号，支持 `Dot`、`Comma`、`Space` 和 `Apostrophe` |
+| `digitGrouping` | `/src/core/numeral.ts` 中的 `DigitGroupingType` | 默认数字分组类型，支持 `None` 和 `ThousandsSeparator` |
+| `currencyDisplayType` | `/src/core/currency.ts` 中的 `CurrencyDisplayType` | 默认货币显示类型，支持 `None`、`SymbolBeforeAmount`、`SymbolAfterAmount`、`SymbolBeforeAmountWithoutSpace`、`SymbolAfterAmountWithoutSpace`、`CodeBeforeAmount`、`CodeAfterAmount`、`UnitBeforeAmount`、`UnitAfterAmount`、`NameBeforeAmount` 和 `NameAfterAmount` |
 
 另外，各语言文件的 `format` 对象中有各个语言下日期和时间格式的可选项，这些格式可参考 Moment.js 的[文档](https://momentjs.com/docs/#/displaying/) 设置，具体这些格式的使用场景如下
 

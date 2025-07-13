@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Translating
-nav_order: 9
+nav_order: 10
 permalink: /translating
 ---
 
@@ -43,15 +43,15 @@ Here are all the settings that require default values and their descriptions:
 | Item | All Available Options | Description |
 | --- | --- | --- |
 | `currency` | `ALL_CURRENCIES` in `/src/consts/currency.ts` | The default currency |
-| `firstDayOfWeek` | `WeekDay` in `/src/core/datetime.ts` | The default first day of the week |
-| `longDateFormat` | `LongDateFormat` in `/src/core/datetime.ts` | The default long date format |
-| `shortDateFormat` | `ShortDateFormat` in `/src/core/datetime.ts` | The default short date format |
-| `longTimeFormat` | `LongTimeFormat` in `/src/core/datetime.ts` | The default long time format |
-| `shortTimeFormat` | `ShortTimeFormat` in `/src/core/datetime.ts` | The default short time format |
-| `decimalSeparator` | `DecimalSeparator` in `/src/core/numeral.ts` | The default decimal separator |
-| `digitGroupingSymbol` | `DigitGroupingSymbol` in `/src/core/numeral.ts` | The default digit grouping symbol |
-| `digitGrouping` | `DigitGroupingType` in `/src/core/numeral.ts` | The default digit grouping type |
-| `currencyDisplayType` | `CurrencyDisplayType` in `/src/core/currency.ts` | The default currency display type |
+| `firstDayOfWeek` | `WeekDay` in `/src/core/datetime.ts` | The default first day of the week, supports `Sunday`, `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday` |
+| `longDateFormat` | `LongDateFormat` in `/src/core/datetime.ts` | The default long date format, supports `YYYYMMDD` (Year Month Day), `MMDDYYYY` (Month Day Year) and `DDMMYYYY` (Day Month Year) |
+| `shortDateFormat` | `ShortDateFormat` in `/src/core/datetime.ts` | The default short date format, supports `YYYYMMDD` (Year Month Day), `MMDDYYYY` (Month Day Year) and `DDMMYYYY` (Day Month Year) |
+| `longTimeFormat` | `LongTimeFormat` in `/src/core/datetime.ts` | The default long time format, supports `HHMMSS` (24-hour time format), `AHHMMSS` (12-hour time format, AM/PM before the time) and `HHMMSSA` (12-hour time format, AM/PM after the time) |
+| `shortTimeFormat` | `ShortTimeFormat` in `/src/core/datetime.ts` | The default short time format, supports `HHMMSS` (24-hour time format), `AHHMMSS` (12-hour time format, AM/PM before the time) and `HHMMSSA` (12-hour time format, AM/PM after the time) |
+| `decimalSeparator` | `DecimalSeparator` in `/src/core/numeral.ts` | The default decimal separator, supports `Dot` and `Comma` |
+| `digitGroupingSymbol` | `DigitGroupingSymbol` in `/src/core/numeral.ts` | The default digit grouping symbol, supports `Dot`, `Comma`, `Space` and `Apostrophe` |
+| `digitGrouping` | `DigitGroupingType` in `/src/core/numeral.ts` | The default digit grouping type, supports `None` and `ThousandsSeparator` |
+| `currencyDisplayType` | `CurrencyDisplayType` in `/src/core/currency.ts` | The default currency display type, supports `None`, `SymbolBeforeAmount`, `SymbolAfterAmount`, `SymbolBeforeAmountWithoutSpace`, `SymbolAfterAmountWithoutSpace`, `CodeBeforeAmount`, `CodeAfterAmount`, `UnitBeforeAmount`, `UnitAfterAmount`, `NameBeforeAmount` and `NameAfterAmount` |
 
 In addition, the `format` object in the language files contains options for date and time formats for each language. These formats can be configured according to the Moment.js [documentation](https://momentjs.com/docs/#/displaying/). The specific usage scenarios for these formats are as follows:
 
