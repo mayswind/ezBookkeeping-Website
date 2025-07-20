@@ -1,7 +1,7 @@
 ---
 layout: default
 title: MCP (Model Context Protocol)
-nav_order: 9
+nav_order: 8
 permalink: /mcp
 ---
 
