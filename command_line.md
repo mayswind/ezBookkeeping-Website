@@ -98,6 +98,9 @@ ezBookkeeping user data maintenance operation.
     * Options:
     * `--username value`, `-n value`: User name. Required.
     * `--type value`, `-t value`: Specific token type, supports `normal` and `mcp`, default is `normal`.
+* `user-session-revoke`: Revoke the specified user session.
+    * Options:
+    * `--token value`, `-t value`: Specific token content. Required.
 * `user-session-clear`: Clear specified user all sessions.
     * Options:
     * `--username value`, `-n value`: User name. Required.

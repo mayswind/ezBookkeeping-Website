@@ -99,6 +99,9 @@ ezBookkeeping 用户数据维护操作。
     * 选项：
     * `--username value`, `-n value`：用户名。必填。
     * `--type value`, `-t value`: 令牌类型，支持 `normal` 和 `mcp`，默认为 `normal`。
+* `user-session-revoke`：注销指定用户会话。
+    * 选项：
+    * `--token value`, `-t value`: 令牌内容。必填。
 * `user-session-clear`：清除指定用户所有会话。
     * 选项：
     * `--username value`, `-n value`：用户名。必填。
