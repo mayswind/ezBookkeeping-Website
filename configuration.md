@@ -116,7 +116,7 @@ For example, if you want to set database type to `mysql`, you can set environmen
 
 | Option Name | Default Value | Description |
 | --- | --- | --- |
-| `type` | `local_filesystem` | Object storage type, supports `local_filesystem` and `minio` currently. |
+| `type` | `local_filesystem` | Object storage type, supports `local_filesystem`, `minio` and `webdav` currently. |
 | `local_filesystem_path` | `storage/` | The root path of the object files, for `local_filesystem` object storage. The value can be relative or absolute path. |
 | `minio_endpoint` | `127.0.0.1:9000` | MinIO endpoint address, for `minio` object storage. |
 | `minio_location` |  | MinIO location, for `minio` object storage. |
@@ -126,6 +126,13 @@ For example, if you want to set database type to `mysql`, you can set environmen
 | `minio_skip_tls_verify` | `false` | Whether to verify the MinIO server's certificate chain and host name, for `minio` object storage. |
 | `minio_bucket` | `ezbookkeeping` | MinIO bucket name, for `minio` object storage. |
 | `minio_root_path` | `/` | The root path of the object files in bucket, for `minio` object storage. |
+| `webdav_url` |  | WebDAV URL, for `webdav` object storage. |
+| `webdav_username` |  | WebDAV user name, for `webdav` object storage. |
+| `webdav_password` |  | WebDAV password, for `webdav` object storage. |
+| `webdav_root_path` | `/` | The root path of the object files, for `webdav` object storage. |
+| `webdav_request_timeout` | `10000` | Request timeout for WebDAV url (0 - 4294967295 milliseconds). Set to `0` to disable timeout for requesting WebDAV url. |
+| `webdav_proxy` | `system` | Proxy for requesting WebDAV url, supports `system` (use system proxy), `none` (do not use proxy), or proxy URL which starts with `http://`, `https://` or `socks5://`. |
+| `webdav_skip_tls_verify` | `false` | Whether to skip the server's certificate chain and host name verification when request WebDAV url. |
 
 ### Uuid
 

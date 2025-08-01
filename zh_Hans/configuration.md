@@ -117,7 +117,7 @@ ezBookkeeping 使用 ini 文件作为配置文件。
 
 | 选项名 | 默认值 | 描述 |
 | --- | --- | --- |
-| `type` | `local_filesystem` | 对象存储类型，当前支持 `local_filesystem` 和 `minio`。 |
+| `type` | `local_filesystem` | 对象存储类型，当前支持 `local_filesystem`、`minio` 和 `webdav`。 |
 | `local_filesystem_path` | `storage/` | 使用 `local_filesystem` 对象存储时，对象文件的根目录。该值可以设置为相对或绝对路径。 |
 | `minio_endpoint` | `127.0.0.1:9000` | 使用 `minio` 对象存储时，MinIO 端点地址。 |
 | `minio_location` |  | 使用 `minio` 对象存储时，MinIO 区域。 |
@@ -127,6 +127,13 @@ ezBookkeeping 使用 ini 文件作为配置文件。
 | `minio_skip_tls_verify` | `false` | 使用 `minio` 对象存储时，是否校验 MinIO 服务器的证书链和主机名称。 |
 | `minio_bucket` | `ezbookkeeping` | 使用 `minio` 对象存储时，MinIO Bucket 名称。 |
 | `minio_root_path` | `/` | 使用 `minio` 对象存储时，Bucket 中存储对象文件的根目录。 |
+| `webdav_url` |  | 使用 `webdav` 对象存储时，WebDAV URL 地址。 |
+| `webdav_username` |  | 使用 `webdav` 对象存储时，WebDAV 用户名。 |
+| `webdav_password` |  | 使用 `webdav` 对象存储时，WebDAV 密码。 |
+| `webdav_root_path` | `/` | 使用 `webdav` 对象存储时，对象文件的根目录。 |
+| `webdav_request_timeout` | `10000` | 请求 WebDAV 地址的超时时间（0 - 4294967295 毫秒）。设置为 `0` 时禁用请求 WebDAV 地址超时。 |
+| `webdav_proxy` | `system` | 请求 WebDAV 地址使用的代理，支持 `system`（使用系统代理） `none`（不使用代理），或以 `http://`、`https://` 或 `socks5://` 开头的代理服务器地址。 |
+| `webdav_skip_tls_verify` | `false` | 请求 WebDAV 地址时是否跳过服务器证书链和主机名称的校验。 |
 
 ### Uuid
 
@@ -259,6 +266,6 @@ ezBookkeeping 使用 ini 文件作为配置文件。
 | 选项名 | 默认值 | 描述 |
 | --- | --- | --- |
 | `data_source` | `euro_central_bank` | 汇率数据源，支持 `reserve_bank_of_australia`、`bank_of_canada`、`czech_national_bank`、`danmarks_national_bank`、`euro_central_bank`、`national_bank_of_georgia`、`central_bank_of_hungary`、`bank_of_israel`、`central_bank_of_myanmar`、`norges_bank`、`national_bank_of_poland`、`national_bank_of_romania`、`bank_of_russia`、`swiss_national_bank`、`national_bank_of_ukraine`、`central_bank_of_uzbekistan`、`international_monetary_fund` 或 `user_custom`。如果设置为 `user_custom`，每个用户的汇率数据需要自行设置。更多信息，请访问 [汇率](/zh_Hans/exchange_rates)。 |
-| `request_timeout` | `10000` | 请求汇率数据的超时时间（0 - 4294967295 毫秒）。 |
+| `request_timeout` | `10000` | 请求汇率数据的超时时间（0 - 4294967295 毫秒）。设置为 `0` 时禁用请求汇率数据超时。 |
 | `proxy` | `system` | ezbookkeeping 服务端请求汇率数据使用的代理，支持 `system`（使用系统代理） `none`（不使用代理），或以 `http://`、`https://` 或 `socks5://` 开头的代理服务器地址。 |
 | `skip_tls_verify` | `false` | 请求汇率数据时是否跳过服务器证书链和主机名称的校验。 |
