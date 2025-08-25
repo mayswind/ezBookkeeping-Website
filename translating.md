@@ -60,7 +60,33 @@ Here are all the settings that require default values and their descriptions:
 | `digitGroupingSymbol` | `DigitGroupingSymbol` in [`/src/core/numeral.ts`](https://github.com/mayswind/ezbookkeeping/blob/main/src/core/numeral.ts) | The default digit grouping symbol, supports `Dot`, `Comma`, `Space` and `Apostrophe` |
 | `digitGrouping` | `DigitGroupingType` in [`/src/core/numeral.ts`](https://github.com/mayswind/ezbookkeeping/blob/main/src/core/numeral.ts) | The default digit grouping type, supports `None` and `ThousandsSeparator` |
 
-In addition, the `format` object in the language files contains options for date and time formats for each language. These formats can be configured according to the Moment.js [documentation](https://momentjs.com/docs/#/displaying/). The specific usage scenarios for these formats are as follows:
+In addition, the `format` object in the language files defines date formats (Year–Month–Day, Month–Day–Year and Day–Month–Year) and time formats (24-hour clock, 12-hour clock with AM/PM before the time and 12-hour clock with AM/PM after the time) of various lengths. The following placeholders are supported:
+
+| Placeholder | Description | Example | 
+| --- | --- | --- |
+| `YY` | Two-digit Year | 99, 00, 25 |
+| `YYYY` | Four-digit Year | 1999, 2000, 2025 |
+| `M` | Month | 1, 2, 11 |
+| `MM` | Two-digit Month | 01, 02, 11 |
+| `MMM` | Abbreviated Month Name | Jan, Feb, Nov |
+| `MMMM` | Full Month Name | January, February, November |
+| `D` | Day of Month | 1, 10, 28 |
+| `DD` | Two-digit Day of Month | 01, 10, 28 |
+| `dd` | Shortest Weekday Abbreviation | Su, Mo, Fr |
+| `ddd` | Weekday Abbreviation | Sun, Mon, Fri |
+| `dddd` | Full Weekday Name | Sunday, Monday, Friday |
+| `H` | Hour (24-hour clock) | 0, 13, 23 |
+| `HH` | Two-digit Hour (24-hour clock) | 00, 13, 23 |
+| `h` | Hour (12-hour clock) | 12, 1, 11 |
+| `hh` | Two-digit Hour (12-hour clock) | 12, 01, 11 |
+| `m` | Minutes | 0, 10, 59 |
+| `mm` | Two-digit Minutes | 00, 10, 59 |
+| `s` | Seconds | 0, 10, 59 |
+| `ss` | Two-digit Seconds | 00, 10, 59 |
+| `A` | AM or PM | AM, PM |
+| `Z` | Timezone Offset in Minutes | +08:00, +00:00, -05:00 |
+
+These date and time formats are used in the following scenarios:
 
 | Item | Usage Scenarios |
 | --- | --- |
@@ -76,4 +102,3 @@ In addition, the `format` object in the language files contains options for date
 | `shortTime` | Multiple scenarios |
 
 In addition, the timezone data is sourced from [nodatime](https://github.com/nodatime/nodatime/tree/main/data/cldr), and the localized timezone names are taken from [TimeZoneNames](https://github.com/mattjohnsonpint/TimeZoneNames/blob/main/src/TimeZoneNames.DataBuilder/data/windows-displaynames.json)
-
