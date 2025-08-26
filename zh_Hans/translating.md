@@ -99,6 +99,7 @@ ezBookkeeping 允许用户更改多项区域设置，如日期、时间、数字
 | `shortYearMonth` | 交易和统计分析页面的时间筛选中使用 |
 | `longMonthDay` | 首页总览数据中使用 |
 | `shortMonthDay` | 交易和统计分析页面的时间筛选中使用，显示在 `shortDate` 旁边，格式应该类似于 `shortDate` |
+| `shortDay` | 交易列表显示日期时使用 |
 | `longTime` | 多个场景 |
 | `shortTime` | 多个场景 |
 

@@ -98,6 +98,7 @@ These date and time formats are used in the following scenarios:
 | `shortYearMonth` | Used in the time filters on the transaction and statistics analysis pages |
 | `longMonthDay` | Used in the overview data on the homepage |
 | `shortMonthDay` | Used in the time filters on the transaction and statistics analysis pages. It will be displayed next to the `shortDate` and should have a similar format. |
+| `shortDay` | Used when displaying days in the transaction list |
 | `longTime` | Multiple scenarios |
 | `shortTime` | Multiple scenarios |
 
