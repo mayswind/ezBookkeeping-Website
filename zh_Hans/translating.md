@@ -51,8 +51,8 @@ ezBookkeeping 允许用户更改多项区域设置，如日期、时间、数字
 | `currency` | [`/src/consts/currency.ts`](https://github.com/mayswind/ezbookkeeping/blob/main/src/consts/currency.ts) 中的 `ALL_CURRENCIES` | 默认货币 |
 | `firstDayOfWeek` | [`/src/core/datetime.ts`](https://github.com/mayswind/ezbookkeeping/blob/main/src/core/datetime.ts) 中的 `WeekDay` | 默认每周第一天，支持 `Sunday`、`Monday`、`Tuesday`、`Wednesday`、`Thursday`、`Friday` 和 `Saturday` |
 | `fiscalYearFormat` | `FiscalYearFormat` in [`/src/core/fiscalyear.ts`](https://github.com/mayswind/ezbookkeeping/blob/main/src/core/fiscalyear.ts) | 默认财年格式，支持 `StartYYYY_EndYYYY`、`StartYYYY_EndYY`、`StartYY_EndYY`、`EndYYYY` 和 `EndYY` |
-| `calendarDisplayType` | [`/src/core/calendar.ts`](https://github.com/mayswind/ezbookkeeping/blob/main/src/core/calendar.ts) 中的 `CalendarDisplayType` | 默认日历组件及月份中使用的历法，支持 `Gregorian` 和 `Buddhist` |
-| `dateDisplayType` | [`/src/core/calendar.ts`](https://github.com/mayswind/ezbookkeeping/blob/main/src/core/calendar.ts) 中的 `DateDisplayType` | 默认日期显示时使用的历法，支持 `Gregorian` 和 `Buddhist` |
+| `calendarDisplayType` | [`/src/core/calendar.ts`](https://github.com/mayswind/ezbookkeeping/blob/main/src/core/calendar.ts) 中的 `CalendarDisplayType` | 默认日历组件及月份中使用的历法，支持 `Gregorian`、`Buddhist`、`GregorianWithChinese` 和 `GregorianWithPersian` |
+| `dateDisplayType` | [`/src/core/calendar.ts`](https://github.com/mayswind/ezbookkeeping/blob/main/src/core/calendar.ts) 中的 `DateDisplayType` | 默认日期显示时使用的历法，支持 `Gregorian`、`Buddhist` 和 `Persian` |
 | `longDateFormat` | [`/src/core/datetime.ts`](https://github.com/mayswind/ezbookkeeping/blob/main/src/core/datetime.ts) 中的 `LongDateFormat` | 默认长日期格式，支持 `YYYYMMDD`（年月日）、`MMDDYYYY`（月日年） 和 `DDMMYYYY`（日月年） |
 | `shortDateFormat` | [`/src/core/datetime.ts`](https://github.com/mayswind/ezbookkeeping/blob/main/src/core/datetime.ts) 中的 `ShortDateFormat` | 默认短日期格式，支持 `YYYYMMDD`（年月日）、`MMDDYYYY`（月日年） 和 `DDMMYYYY`（日月年） |
 | `longTimeFormat` | [`/src/core/datetime.ts`](https://github.com/mayswind/ezbookkeeping/blob/main/src/core/datetime.ts) 中的 `LongTimeFormat` | 默认长时间格式，支持 `HHMMSS`（24小时制）、`AHHMMSS`（12小时制，上午/下午标识在前） 和 `HHMMSSA`（12小时制，上午/下午标识在后） |
