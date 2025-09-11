@@ -69,6 +69,7 @@ The following table lists all supported file types and the data contents that ca
 | Alipay (App) Transaction Flow File | √ | √ | √ | - | - | √ | √ | - | - | - | √ |
 | Alipay (Web) Transaction Flow File | √ | √ | √ | - | - | - | √ | - | - | - | √ |
 | WeChat Pay Billing File | √ | √ | √ | - | - | √ | √ | - | - | - | √ |
+| JD.com Finance Billing File | √ | √ | √ | - | - | √ | √ | - | - | - | √ |
 
 * "√" means that the original file contains this data, and it can be imported
 * "-" means that the original file does not contain this data
