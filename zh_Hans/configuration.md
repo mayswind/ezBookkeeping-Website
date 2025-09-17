@@ -54,6 +54,7 @@ ezBookkeeping 使用 ini 文件作为配置文件。
 | `static_root_path` | `public` | 静态文件根目录。该值可以设置为相对或绝对路径。 |
 | `enable_gzip` | `false` | 是否开启 gzip 压缩。 |
 | `log_request` | `true` | 是否开启日志记录请求和执行时间。 |
+| `request_id_header` | `true` | 是否开启添加 `X-Request-Id` 响应头以追踪用户请求或错误。 |
 
 ### MCP (Model Context Protocol)
 
@@ -170,7 +171,6 @@ ezBookkeeping 使用 ini 文件作为配置文件。
 | 选项名 | 默认值 | 描述 |
 | --- | --- | --- |
 | `secret_key` |  | 作为密钥使用，**为了保证您的数据安全，请在第一次运行 ezBookkeeping 前修改该值**。你可以通过执行 `ezbookkeeping security gen-secret-key` 获取一个随机密钥。 |
-| `enable_two_factor` | `true` | 是否开启两步验证。 |
 | `token_expired_time` | `2592000` | 令牌过期时间（60 - 4294967295 秒）。 |
 | `token_min_refresh_interval` | `86400` | 令牌最小刷新间隔（0 - 4294967295 秒)，该值应当小于令牌过期时间。设置为 `0` 时则每次刷新前端时都会刷新令牌。 |
 | `temporary_token_expired_time` | `300` | 临时令牌过期时间（60 - 4294967295 秒）。 |
@@ -178,7 +178,6 @@ ezBookkeeping 使用 ini 文件作为配置文件。
 | `password_reset_token_expired_time` | `3600` | 密码重置令牌过期时间（60 - 4294967295 秒）。 |
 | `max_failures_per_ip_per_minute` | `5` | 每分钟每个 IP 密码/令牌检查失败的最大次数（0 - 4294967295）（使用上述重复检查器），默认为 `5`，设置为 `0` 时禁用。 |
 | `max_failures_per_user_per_minute` | `5` | 每分钟每个用户密码/令牌检查失败的最大次数（0 - 4294967295）（使用上述重复检查器），默认为 `5`，设置为 `0` 时禁用。 |
-| `request_id_header` | `true` | 是否开启添加 `X-Request-Id` 响应头以追踪用户请求或错误。 |
 
 ### 用户
 
@@ -191,6 +190,7 @@ ezBookkeeping 使用 ini 文件作为配置文件。
 | `enable_force_email_verify` | `false` | 用户登录时是否要求邮箱必须验证。 |
 | `enable_forget_password` | `true` | 是否启用用户密码重置。（SMTP 服务器必须配置） |
 | `forget_password_require_email_verify` | `false` | 用户使用密码重置时是否要求邮箱必须验证。 |
+| `enable_two_factor` | `true` | 是否开启两步验证。 |
 | `enable_transaction_picture` | `true` | 是否启用交易图片。 |
 | `max_transaction_picture_size` | `10485760` | 最大允许的交易图片文件大小（1 - 4294967295 字节）。 |
 | `enable_scheduled_transaction` | `true` | 是否启用定时交易。 |

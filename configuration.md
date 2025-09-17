@@ -53,6 +53,7 @@ For example, if you want to set database type to `mysql`, you can set environmen
 | `static_root_path` | `public` | Static file root path. The value can be relative or absolute path. |
 | `enable_gzip` | `false` | Whether to enable gzip compression. |
 | `log_request` | `true` | Whether to enable logging each request and execution time. |
+| `request_id_header` | `true` | Whether to enable adding `X-Request-Id` header to response to track user request or error. |
 
 ### MCP (Model Context Protocol)
 
@@ -169,7 +170,6 @@ For example, if you want to set database type to `mysql`, you can set environmen
 | Option Name | Default Value | Description |
 | --- | --- | --- |
 | `secret_key` |  | Used for encryption key, **you must change it to keep your user data safe before you first run ezBookkeeping**. You can get a random secret key by executing `ezbookkeeping security gen-secret-key`. |
-| `enable_two_factor` | `true` | Whether to enable two factor authorization. |
 | `token_expired_time` | `2592000` | Token expired time (60 - 4294967295 seconds). |
 | `token_min_refresh_interval` | `86400` | Token minimum refresh interval (0 - 4294967295 seconds), the value should be less than token expired time. Set to `0` to refresh the token every time when refreshing the front end. |
 | `temporary_token_expired_time` | `300` | Temporary token expired time (60 - 4294967295 seconds). |
@@ -177,7 +177,6 @@ For example, if you want to set database type to `mysql`, you can set environmen
 | `password_reset_token_expired_time` | `3600` | Password reset token expired time (60 - 4294967295 seconds). |
 | `max_failures_per_ip_per_minute` | `5` | Maximum count of password / token check failures (0 - 4294967295) per IP per minute (use the above duplicate checker), default is `5`, set to `0` to disable. |
 | `max_failures_per_user_per_minute` | `5` | Maximum count of password / token check failures (0 - 4294967295) per user per minute (use the above duplicate checker), default is `5`, set to `0` to disable. |
-| `request_id_header` | `true` | Whether to enable adding `X-Request-Id` header to response to track user request or error. |
 
 ### User
 
@@ -190,6 +189,7 @@ For example, if you want to set database type to `mysql`, you can set environmen
 | `enable_force_email_verify` | `false` | Whether to require user email must be verified when login. |
 | `enable_forget_password` | `true` | Whether to enable user password reset. (SMTP server must be configured) |
 | `forget_password_require_email_verify` | `false` | Whether to require user email must be verified when use forget password.  |
+| `enable_two_factor` | `true` | Whether to enable two factor authorization. |
 | `enable_transaction_picture` | `true` | Whether to enable transaction picture. |
 | `max_transaction_picture_size` | `10485760` | Maximum allowed transaction picture file size (1 - 4294967295 bytes). |
 | `enable_scheduled_transaction` | `true` | Whether to enable scheduled transaction. |
