@@ -55,7 +55,7 @@ ezBookkeeping 为移动端和桌面端提供了各自原生的界面设计。借
     - 登录频次限制
     - 应用锁 (PIN 码 / WebAuthn)
 - **数据导入/导出**
-    - 支持 CSV、OFX、QFX、QIF、IIF、Camt.053、MT940、GnuCash、FireFly III、Beancount、随手记、支付宝以及微信账单 等多种格式
+    - 支持 CSV、OFX、QFX、QIF、IIF、Camt.053、MT940、GnuCash、FireFly III、Beancount、随手记，以及支付宝、微信支付及京东金融的对账单 等多种格式
 
 ## 截图
 ### 桌面版
