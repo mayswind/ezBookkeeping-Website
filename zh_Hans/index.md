@@ -38,6 +38,7 @@ ezBookkeeping 为移动端和桌面端提供了各自原生的界面设计。借
     - 支持 PWA，带来接近原生 App 的使用体验
     - 深色模式
 - **AI驱动的功能**
+    - 收据图片识别
     - 支持 MCP (Model Context Protocol) 用于 AI 集成
 - **强大的记账功能**
     - 二级账户与分类结构
