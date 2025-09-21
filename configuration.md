@@ -150,7 +150,7 @@ For example, if you want to set database type to `mysql`, you can set environmen
 
 | Option Name | Default Value | Description |
 | --- | --- | --- |
-| `llm_provider` |  | Large Language Model (LLM) provider, supports `openai`, `openai_compatible`, `openrouter` and `ollama`. |
+| `llm_provider` |  | Large Language Model (LLM) provider for receipt image recognition, supports `openai`, `openai_compatible`, `openrouter` and `ollama`. |
 | `openai_api_key` |  | OpenAI API Secret Key for `openai` LLM provider, please visit [https://platform.openai.com/api-keys](https://platform.openai.com/api-keys) for more information. |
 | `openai_model_id` |  | Model ID for the `openai` LLM provider, used for receipt image recognition and transaction creation. |
 | `openai_compatible_base_url` |  | OpenAI compatible API base url for `openai_compatible` LLM provider, e.g. `https://api.openai.com/v1/`. |
