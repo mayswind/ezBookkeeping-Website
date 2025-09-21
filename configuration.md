@@ -141,18 +141,25 @@ For example, if you want to set database type to `mysql`, you can set environmen
 
 | Option Name | Default Value | Description |
 | --- | --- | --- |
+| `transaction_from_ai_image_recognition` | `false` | Whether to enable creating transactions from AI image recognition results, requires `llm_provider` and its related model id to be configured properly in `llm_image_recognition` section. |
+| `max_ai_recognition_picture_size` | `10485760` | Maximum allowed AI recognition picture file size (1 - 4294967295 bytes). |
+
+### Large Language Model for receipt image recognition
+
+> Section name is `llm_image_recognition`
+
+| Option Name | Default Value | Description |
+| --- | --- | --- |
 | `llm_provider` |  | Large Language Model (LLM) provider, supports `openai`, `openai_compatible`, `openrouter` and `ollama`. |
 | `openai_api_key` |  | OpenAI API Secret Key for `openai` LLM provider, please visit [https://platform.openai.com/api-keys](https://platform.openai.com/api-keys) for more information. |
-| `openai_receipt_image_recognition_model_id` |  | Model ID for the `openai` LLM provider, used for receipt image recognition and transaction creation. |
+| `openai_model_id` |  | Model ID for the `openai` LLM provider, used for receipt image recognition and transaction creation. |
 | `openai_compatible_base_url` |  | OpenAI compatible API base url for `openai_compatible` LLM provider, e.g. `https://api.openai.com/v1/`. |
 | `openai_compatible_api_key` |  | OpenAI compatible API Key for `openai_compatible` LLM provider. |
-| `openai_compatible_receipt_image_recognition_model_id` |  | Model ID for the `openai_compatible` LLM provider, used for receipt image recognition and transaction creation. |
+| `openai_compatible_model_id` |  | Model ID for the `openai_compatible` LLM provider, used for receipt image recognition and transaction creation. |
 | `openrouter_api_key` |  | OpenAI API secret key for `openrouter` LLM provider, please visit [https://openrouter.ai/settings/keys](https://openrouter.ai/settings/keys) for more information. |
-| `openrouter_receipt_image_recognition_model_id` |  | Model ID for the `openrouter` LLM provider, used for receipt image recognition and transaction creation. |
+| `openrouter_model_id` |  | Model ID for the `openrouter` LLM provider, used for receipt image recognition and transaction creation. |
 | `ollama_server_url` |  | Ollama server url for `openai_compatible` LLM provider, e.g. `http://127.0.0.1:11434/`. |
-| `ollama_receipt_image_recognition_model_id` |  | Model ID for the `ollama` LLM provider, used for receipt image recognition and transaction creation. |
-| `transaction_from_ai_image_recognition` | `false` | Whether to enable creating transactions from AI image recognition results, requires `llm_provider` and its related receipt image recognition model to be configured properly. |
-| `max_ai_recognition_picture_size` | `10485760` | Maximum allowed AI recognition picture file size (1 - 4294967295 bytes). |
+| `ollama_model_id` |  | Model ID for the `ollama` LLM provider, used for receipt image recognition and transaction creation. |
 | `request_timeout` | `60000` | Request timeout for LLM API (0 - 4294967295 milliseconds). Set to `0` to disable timeout for requesting LLM API. |
 | `proxy` | `system` | Proxy for ezbookkeeping server requesting LLM API, supports `system` (use system proxy), `none` (do not use proxy), or proxy URL which starts with `http://`, `https://` or `socks5://`. |
 | `skip_tls_verify` | `false` | Whether to skip the server's certificate chain and host name verification when request LLM API. |
