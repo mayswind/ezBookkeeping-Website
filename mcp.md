@@ -84,7 +84,7 @@ Then, copy the following code into your AI tool's MCP server configuration to en
 | `start_time` | `string` | Required | Start time for the query in RFC 3339 format (e.g. 2023-01-01T12:00:00Z) |
 | `end_time` | `string` | Required | End time for the query in RFC 3339 format or (e.g. 2023-01-01T12:00:00Z) |
 | `type` | `string` | Optional | Transaction type to filter by (income, expense, transfer) |
-| `category_name` | `string` | Optional | Secondary category name to filter transactions by |
+| `category_name` | `string` | Optional | Primary or secondary category name to filter transactions by |
 | `account_name` | `string` | Optional | Account name to filter transactions by |
 | `comment` | `string` | Optional | Keyword to search in transaction description |
 | `count` | `number` | Optional | Maximum number of results to return (default: 100) |
