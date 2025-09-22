@@ -151,7 +151,7 @@ ezBookkeeping 使用 ini 文件作为配置文件。
 
 | 选项名 | 默认值 | 描述 |
 | --- | --- | --- |
-| `llm_provider` |  | 用于收据图片识别的大语言模型 (LLM) 提供方，支持 `openai`、`openai_compatible`、`openrouter` 和 `ollama`。 |
+| `llm_provider` |  | 用于收据图片识别的大语言模型 (LLM) 提供方，支持 `openai`、`openai_compatible`、`openrouter`、`ollama` 和 `google_ai`。 |
 | `openai_api_key` |  | 使用 `openai` 大语言模型提供方时，OpenAI 的 API Secret Key，请访问 [https://platform.openai.com/api-keys](https://platform.openai.com/api-keys) 获取更多信息。 |
 | `openai_model_id` |  | 使用 `openai` 大语言模型提供方时，用于识别收据图片并创建交易的模型ID。 |
 | `openai_compatible_base_url` |  | 使用 `openai_compatible` 大语言模型提供方时，OpenAI 兼容 API 的基础地址，例如 `https://api.openai.com/v1/`。 |
@@ -161,6 +161,8 @@ ezBookkeeping 使用 ini 文件作为配置文件。
 | `openrouter_model_id` |  | 使用 `openrouter` 大语言模型提供方时，用于识别收据图片并创建交易的模型ID。 |
 | `ollama_server_url` |  | 使用 `ollama` 大语言模型提供方时，Ollama 的服务器地址，例如 `http://127.0.0.1:11434/`。 |
 | `ollama_model_id` |  | 使用 `ollama` 大语言模型提供方时，用于识别收据图片并创建交易的模型ID。 |
+| `google_ai_api_key` |  | 使用 `google_ai` 大语言模型提供方时，Google AI 的 API Key，请访问 [https://aistudio.google.com/apikey](https://aistudio.google.com/apikey) 获取更多信息。 |
+| `google_ai_model_id` |  | 使用 `google_ai` 大语言模型提供方时，用于识别收据图片并创建交易的模型ID。 |
 | `request_timeout` | `60000` | 请求大语言模型 API 的超时时间（0 - 4294967295 毫秒）。设置为 `0` 时禁用请求大语言模型 API 超时。 |
 | `proxy` | `system` | ezbookkeeping 服务端请求大语言模型 API 使用的代理，支持 `system`（使用系统代理） `none`（不使用代理），或以 `http://`、`https://` 或 `socks5://` 开头的代理服务器地址。 |
 | `skip_tls_verify` | `false` | 请求大语言模型 API 时是否跳过服务器证书链和主机名称的校验。 |

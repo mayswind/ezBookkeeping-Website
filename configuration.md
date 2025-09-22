@@ -150,7 +150,7 @@ For example, if you want to set database type to `mysql`, you can set environmen
 
 | Option Name | Default Value | Description |
 | --- | --- | --- |
-| `llm_provider` |  | Large Language Model (LLM) provider for receipt image recognition, supports `openai`, `openai_compatible`, `openrouter` and `ollama`. |
+| `llm_provider` |  | Large Language Model (LLM) provider for receipt image recognition, supports `openai`, `openai_compatible`, `openrouter`, `ollama` and `google_ai`. |
 | `openai_api_key` |  | OpenAI API Secret Key for `openai` LLM provider, please visit [https://platform.openai.com/api-keys](https://platform.openai.com/api-keys) for more information. |
 | `openai_model_id` |  | Model ID for the `openai` LLM provider, used for receipt image recognition and transaction creation. |
 | `openai_compatible_base_url` |  | OpenAI compatible API base url for `openai_compatible` LLM provider, e.g. `https://api.openai.com/v1/`. |
@@ -160,6 +160,8 @@ For example, if you want to set database type to `mysql`, you can set environmen
 | `openrouter_model_id` |  | Model ID for the `openrouter` LLM provider, used for receipt image recognition and transaction creation. |
 | `ollama_server_url` |  | Ollama server url for `openai_compatible` LLM provider, e.g. `http://127.0.0.1:11434/`. |
 | `ollama_model_id` |  | Model ID for the `ollama` LLM provider, used for receipt image recognition and transaction creation. |
+| `google_ai_api_key` |  | Google AI API Key for `google_ai` LLM provider, please visit [https://aistudio.google.com/apikey](https://aistudio.google.com/apikey) for more information. |
+| `google_ai_model_id` |  | Model ID for the `google_ai` LLM provider, used for receipt image recognition and transaction creation. |
 | `request_timeout` | `60000` | Request timeout for LLM API (0 - 4294967295 milliseconds). Set to `0` to disable timeout for requesting LLM API. |
 | `proxy` | `system` | Proxy for ezbookkeeping server requesting LLM API, supports `system` (use system proxy), `none` (do not use proxy), or proxy URL which starts with `http://`, `https://` or `socks5://`. |
 | `skip_tls_verify` | `false` | Whether to skip the server's certificate chain and host name verification when request LLM API. |
