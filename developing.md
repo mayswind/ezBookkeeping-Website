@@ -48,6 +48,10 @@ You can use `build.sh` / `build.bat` script to build frontend files, backend fil
 
     > .\build.bat frontend
 
+or
+
+    PS > .\build.ps1 frontend
+
 The frontend files will be built and be placed in the `dist` directory.
 
 ### Building backend file
@@ -59,6 +63,10 @@ The frontend files will be built and be placed in the `dist` directory.
 **Windows**
 
     > .\build.bat backend
+
+or
+
+    PS > .\build.ps1 backend
 
 The backend file will be built and be placed in the project directory and the file name is `ezbookkeeping`.
 
@@ -73,6 +81,10 @@ All the files will be built and be packaged in `ezbookkeeping.tar.gz`.
 **Windows**
 
     > .\build.bat package -o ezbookkeeping.zip
+
+or
+
+    PS > .\build.ps1 package -Output ezbookkeeping.zip
 
 All the files will be packaged in `ezbookkeeping.zip`.
 

@@ -49,6 +49,10 @@ ezBookkeeping 使用 Golang 和 TypeScript 编写。在您开始开发前，你�
 
     > .\build.bat frontend
 
+或
+
+    PS > .\build.ps1 frontend
+
 前端文件将会构建并放置到 `dist` 目录中。
 
 ### 构建后端文件
@@ -60,6 +64,10 @@ ezBookkeeping 使用 Golang 和 TypeScript 编写。在您开始开发前，你�
 **Windows**
 
     > .\build.bat backend
+
+或
+
+    PS > .\build.ps1 backend
 
 后端文件将会构建并放置到项目目录中，文件名为 `ezbookkeeping`。
 
@@ -74,6 +82,10 @@ ezBookkeeping 使用 Golang 和 TypeScript 编写。在您开始开发前，你�
 **Windows**
 
     > .\build.bat package -o ezbookkeeping.zip
+
+或
+
+    PS > .\build.ps1 package -Output ezbookkeeping.zip
 
 所有文件将会构建并打包到 `ezbookkeeping.zip`。
 
