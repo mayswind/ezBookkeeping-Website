@@ -209,6 +209,16 @@ For example, if you want to set database type to `mysql`, you can set environmen
 | `max_failures_per_ip_per_minute` | `5` | Maximum count of password / token check failures (0 - 4294967295) per IP per minute (use the above duplicate checker), default is `5`, set to `0` to disable. |
 | `max_failures_per_user_per_minute` | `5` | Maximum count of password / token check failures (0 - 4294967295) per user per minute (use the above duplicate checker), default is `5`, set to `0` to disable. |
 
+### Authentication
+
+> Section name is `auth`
+
+| Option Name | Default Value | Description |
+| --- | --- | --- |
+| `enable_two_factor` | `true` | Whether to enable two factor authorization. |
+| `enable_forget_password` | `true` | Whether to enable user password reset. (SMTP server must be configured) |
+| `forget_password_require_email_verify` | `false` | Whether to require user email must be verified when use forget password.  |
+
 ### User
 
 > Section name is `user`
@@ -218,9 +228,6 @@ For example, if you want to set database type to `mysql`, you can set environmen
 | `enable_register` | `true` | Whether to enable user registration. |
 | `enable_email_verify` | `false` | Whether to enable user email validation. |
 | `enable_force_email_verify` | `false` | Whether to require user email must be verified when login. |
-| `enable_forget_password` | `true` | Whether to enable user password reset. (SMTP server must be configured) |
-| `forget_password_require_email_verify` | `false` | Whether to require user email must be verified when use forget password.  |
-| `enable_two_factor` | `true` | Whether to enable two factor authorization. |
 | `enable_transaction_picture` | `true` | Whether to enable transaction picture. |
 | `max_transaction_picture_size` | `10485760` | Maximum allowed transaction picture file size (1 - 4294967295 bytes). |
 | `enable_scheduled_transaction` | `true` | Whether to enable scheduled transaction. |

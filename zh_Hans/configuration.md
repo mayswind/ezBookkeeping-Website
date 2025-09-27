@@ -210,6 +210,16 @@ ezBookkeeping 使用 ini 文件作为配置文件。
 | `max_failures_per_ip_per_minute` | `5` | 每分钟每个 IP 密码/令牌检查失败的最大次数（0 - 4294967295）（使用上述重复检查器），默认为 `5`，设置为 `0` 时禁用。 |
 | `max_failures_per_user_per_minute` | `5` | 每分钟每个用户密码/令牌检查失败的最大次数（0 - 4294967295）（使用上述重复检查器），默认为 `5`，设置为 `0` 时禁用。 |
 
+### 身份验证
+
+> 配置节名称为 is `auth`
+
+| 选项名 | 默认值 | 描述 |
+| --- | --- | --- |
+| `enable_two_factor` | `true` | 是否开启两步验证。 |
+| `enable_forget_password` | `true` | 是否启用用户密码重置。（SMTP 服务器必须配置） |
+| `forget_password_require_email_verify` | `false` | 用户使用密码重置时是否要求邮箱必须验证。 |
+
 ### 用户
 
 > 配置节名称为 `user`
@@ -219,9 +229,6 @@ ezBookkeeping 使用 ini 文件作为配置文件。
 | `enable_register` | `true` | 是否启用用户注册。 |
 | `enable_email_verify` | `false` | 是否启用用户邮箱验证。 |
 | `enable_force_email_verify` | `false` | 用户登录时是否要求邮箱必须验证。 |
-| `enable_forget_password` | `true` | 是否启用用户密码重置。（SMTP 服务器必须配置） |
-| `forget_password_require_email_verify` | `false` | 用户使用密码重置时是否要求邮箱必须验证。 |
-| `enable_two_factor` | `true` | 是否开启两步验证。 |
 | `enable_transaction_picture` | `true` | 是否启用交易图片。 |
 | `max_transaction_picture_size` | `10485760` | 最大允许的交易图片文件大小（1 - 4294967295 字节）。 |
 | `enable_scheduled_transaction` | `true` | 是否启用定时交易。 |
