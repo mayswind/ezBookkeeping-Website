@@ -101,6 +101,10 @@ All the files will be packaged in `ezbookkeeping.tar.gz`.
 
     > .\build.bat package -o ezbookkeeping.zip
 
+or
+
+    PS > .\build.ps1 package -Output ezbookkeeping.zip
+
 All the files will be packaged in `ezbookkeeping.zip`.
 
 You can also build a Docker image. Make sure you have [Docker](https://www.docker.com/) installed, then follow these steps:

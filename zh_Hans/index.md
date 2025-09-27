@@ -103,6 +103,10 @@ ezBookkeeping 为移动端和桌面端提供了各自原生的界面设计。借
 
     > .\build.bat package -o ezbookkeeping.zip
 
+或
+
+    PS > .\build.ps1 package -Output ezbookkeeping.zip
+
 所有的文件将被打包到 `ezbookkeeping.zip`.
 
 您还可以构建 Docker 镜像，确保您已经安装 [Docker](https://www.docker.com/)，然后执行以下步骤：
