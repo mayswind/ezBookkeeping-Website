@@ -1,0 +1,118 @@
+networks:
+  nginx-upstream:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.31.1.0/24
+          gateway: 172.31.1.1
+  db-dependency:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.31.2.0/24
+          gateway: 172.31.2.1
+services:
+  # ezbookkeeping-demo.mayswind.net
+  nginx:
+    image: nginx:1.27.0-alpine
+    container_name: nginx
+    hostname: "nginx-server"
+    mem_limit: 128m
+    memswap_limit: 128m
+    mem_swappiness: 0
+    networks:
+      - "nginx-upstream"
+    ports:
+      - "0.0.0.0:443:443/tcp"
+    volumes:
+      - "/etc/localtime:/etc/localtime:ro"
+      - "/var/lib/lxcfs/proc/cpuinfo:/proc/cpuinfo"
+      - "/var/lib/lxcfs/proc/diskstats:/proc/diskstats"
+      - "/var/lib/lxcfs/proc/meminfo:/proc/meminfo"
+      - "/var/lib/lxcfs/proc/stat:/proc/stat"
+      - "/var/lib/lxcfs/proc/swaps:/proc/swaps"
+      - "/var/lib/lxcfs/proc/uptime:/proc/uptime"
+      - "/usr/local/etc/nginx/conf.d:/etc/nginx/conf.d:ro" # chown root:root
+      - "/usr/local/etc/nginx/ssl.crt:/etc/nginx/ssl.crt:ro" # chown root:root
+      - "/var/log/ezbookkeeping:/var/log/nginx" # chown root:root
+    depends_on:
+      - "ezbookkeeping"
+    restart: always
+
+  mariadb:
+    image: mariadb:11.4.2
+    container_name: mariadb
+    hostname: "mariadb-server"
+    mem_limit: 512m
+    memswap_limit: 512m
+    mem_swappiness: 0
+    networks:
+      - "db-dependency"
+    volumes:
+      - "/etc/localtime:/etc/localtime:ro"
+      - "/var/lib/lxcfs/proc/cpuinfo:/proc/cpuinfo"
+      - "/var/lib/lxcfs/proc/diskstats:/proc/diskstats"
+      - "/var/lib/lxcfs/proc/meminfo:/proc/meminfo"
+      - "/var/lib/lxcfs/proc/stat:/proc/stat"
+      - "/var/lib/lxcfs/proc/swaps:/proc/swaps"
+      - "/var/lib/lxcfs/proc/uptime:/proc/uptime"
+      - "/usr/local/etc/mysql/conf.d/99-custom.cnf:/etc/mysql/conf.d/99-custom.cnf" # chown root:root
+      - "/var/lib/mysql:/var/lib/mysql" # chown 999:999
+      - "/var/log/mysql:/var/log/mysql" # chown 999:999
+    restart: always
+
+  ezbookkeeping:
+    image: mayswind/ezbookkeeping:latest-snapshot
+    container_name: ezbookkeeping
+    hostname: "ezbookkeeping-server"
+    mem_limit: 128m
+    memswap_limit: 128m
+    mem_swappiness: 0
+    networks:
+      - "nginx-upstream"
+      - "db-dependency"
+    environment:
+      - "EBK_SERVER_DOMAIN=ezbookkeeping-demo.mayswind.net"
+      - "EBK_SERVER_ROOT_URL=https://ezbookkeeping-demo.mayswind.net/"
+      - "EBK_SERVER_ENABLE_GZIP=true"
+      - "EBK_MCP_ENABLE_MCP=true"
+      - "EBK_DATABASE_TYPE=mysql"
+      - "EBK_DATABASE_HOST=mariadb:3306"
+      - "EBK_DATABASE_NAME=ezbookkeeping"
+      - "EBK_DATABASE_USER=ezbookkeeping"
+      - "EBK_DATABASE_PASSWD=ezbookkeeping"
+      - "EBK_LOG_MODE=file"
+      - "EBK_LLM_TRANSACTION_FROM_AI_IMAGE_RECOGNITION=true"
+      - "EBK_LLM_IMAGE_RECOGNITION_LLM_PROVIDER=openrouter"
+      - "EBK_LLM_IMAGE_RECOGNITION_OPENROUTER_API_KEY=***"
+      - "EBK_LLM_IMAGE_RECOGNITION_OPENROUTER_MODEL_ID=qwen/qwen2.5-vl-72b-instruct:free"
+      - "EBK_SECURITY_SECRET_KEY=***"
+      - "EBK_TIP_ENABLE_TIPS_IN_LOGIN_PAGE=true"
+      - "EBK_TIP_LOGIN_PAGE_TIPS_CONTENT=You can use the demo account (user name \"demo\", password \"ezbookkeeping\"), or register a new user."
+      - "EBK_TIP_LOGIN_PAGE_TIPS_CONTENT_ZH_HANS=您可以使用演示账号（用户名 \"demo\"，密码 \"ezbookkeeping\"），或者注册一个新用户。"
+      - "EBK_TIP_LOGIN_PAGE_TIPS_CONTENT_ZH_HANT=您可以使用示範帳號（使用者名稱 \"demo\"，密碼 \"ezbookkeeping\"），或者註冊一個新使用者。"
+      - "EBK_NOTIFICATION_ENABLE_NOTIFICATION_AFTER_REGISTER=true"
+      - "EBK_NOTIFICATION_AFTER_REGISTER_NOTIFICATION_CONTENT=This is the online demo of ezBookkeeping. All the data in this environment will be cleared at 0:00 UTC every day. Please do not store your important data here."
+      - "EBK_NOTIFICATION_AFTER_REGISTER_NOTIFICATION_CONTENT_ZH_HANS=这是 ezBookkeeping 用于演示的环境，该环境每天UTC 0时都会清空数据，请不要在这里存储您的重要数据。"
+      - "EBK_NOTIFICATION_AFTER_REGISTER_NOTIFICATION_CONTENT_ZH_HANT=這是 ezBookkeeping 用於示範的環境，該環境每天UTC 0時會清除資料，請不要在這裡儲存您的重要資料。"
+      - "EBK_NOTIFICATION_ENABLE_NOTIFICATION_AFTER_LOGIN=true"
+      - "EBK_NOTIFICATION_AFTER_LOGIN_NOTIFICATION_CONTENT=This is the online demo of ezBookkeeping. All the data in this environment will be cleared at 0:00 UTC every day. Please do not store your important data here."
+      - "EBK_NOTIFICATION_AFTER_LOGIN_NOTIFICATION_CONTENT_ZH_HANS=这是 ezBookkeeping 用于演示的环境，该环境每天UTC 0时都会清空数据，请不要在这里存储您的重要数据。"
+      - "EBK_NOTIFICATION_AFTER_LOGIN_NOTIFICATION_CONTENT_ZH_HANT=這是 ezBookkeeping 用於示範的環境，該環境每天UTC 0時會清除資料，請不要在這裡儲存您的重要資料。"
+      - "EBK_NOTIFICATION_ENABLE_NOTIFICATION_AFTER_OPEN=true"
+      - "EBK_NOTIFICATION_AFTER_OPEN_NOTIFICATION_CONTENT=This is the online demo of ezBookkeeping. All the data in this environment will be cleared at 0:00 UTC every day. Please do not store your important data here."
+      - "EBK_NOTIFICATION_AFTER_OPEN_NOTIFICATION_CONTENT_ZH_HANS=这是 ezBookkeeping 用于演示的环境，该环境每天UTC 0时都会清空数据，请不要在这里存储您的重要数据。"
+      - "EBK_NOTIFICATION_AFTER_OPEN_NOTIFICATION_CONTENT_ZH_HANT=這是 ezBookkeeping 用於示範的環境，該環境每天UTC 0時會清除資料，請不要在這裡儲存您的重要資料。"
+    volumes:
+      - "/etc/localtime:/etc/localtime:ro"
+      - "/var/lib/lxcfs/proc/cpuinfo:/proc/cpuinfo"
+      - "/var/lib/lxcfs/proc/diskstats:/proc/diskstats"
+      - "/var/lib/lxcfs/proc/meminfo:/proc/meminfo"
+      - "/var/lib/lxcfs/proc/stat:/proc/stat"
+      - "/var/lib/lxcfs/proc/swaps:/proc/swaps"
+      - "/var/lib/lxcfs/proc/uptime:/proc/uptime"
+      - "/var/lib/ezbookkeeping/storage:/ezbookkeeping/storage" # chown 1000:1000
+      - "/var/log/ezbookkeeping:/ezbookkeeping/log" # chown 1000:1000
+    depends_on:
+      - "mariadb"
+    restart: on-failure
