@@ -37,7 +37,7 @@ ezBookkeeping 使用 Golang 和 TypeScript 编写。在您开始开发前，你�
 
 ## 编译
 
-您可以使用 `build.sh` / `build.bat` 脚本构建前端文件、后端文件、完整包以及 Docker 镜像。
+您可以使用 `build.sh` / `build.bat` / `build.ps1` 脚本构建前端文件、后端文件、完整包以及 Docker 镜像。
 
 ### 构建前端文件
 

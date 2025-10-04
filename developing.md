@@ -36,7 +36,7 @@ After doing the above steps, you can open the url `http://127.0.0.1:8081/` in yo
 
 ## Building
 
-You can use `build.sh` / `build.bat` script to build frontend files, backend file, full package or docker image.
+You can use `build.sh` / `build.bat` / `build.ps1` script to build frontend files, backend file, full package or docker image.
 
 ### Building frontend files
 
