@@ -20,7 +20,21 @@ This page lists some frequently asked questions and their answers.
 
 If you don't find what you're looking for here, you can check out [GitHub Discussions](https://github.com/mayswind/ezbookkeeping/discussions) or [GitHub Issues](https://github.com/mayswind/ezbookkeeping/issues) for more information.
 
+## Why double-clicking `ezbookkeeping.exe` on Windows doesn't launch the application
+
+ezBookkeeping is not a desktop application, and its's a self-hosted server program. You can start the server program by following the steps in the [Installation](/installation) Guide. Once the server is running, you can access ezBookkeeping through any web browsers on any of your devices.
+
+Of course, if you prefer, you can also run the ezBookkeeping server program on your personal computer and access it locally through your web browser.
+
+## ezBookkeeping reports "Permission Denied" on startup
+
+The `data` directory (when using the SQLite database), the `storage` directory (when using the `local_filesystem` object storage type), and the `log` directory must all be readable and writable by the user running the ezBookkeeping process. Additionally, the `conf/ezbookkeeping.ini` file must be readable by that same user.
+
+When running via a Docker image, the ezBookkeeping process inside the container runs as a user with UID **1000** and GID **1000**. When mounting external directories into the container, make sure those directories grant access permissions to this UID/GID.
+
 ## Where ezBookkeeping stores its files
+
+Most of ezBookkeeping's data is stored in the database, while user avatars and transaction pictures are stored in object storage.
 
 ### Database Files
 
@@ -34,12 +48,6 @@ If you're using `local_filesystem` object storage type, object storage files are
 
 If you're using `minio` or `webdav` object storage type, files are managed by the object storage system.
 
-## ezBookkeeping reports "Permission Denied" on startup
-
-The `data` directory (when using the SQLite database), the `storage` directory (when using the `local_filesystem` object storage type), and the `log` directory must all be readable and writable by the user running the ezBookkeeping process. Additionally, the `conf/ezbookkeeping.ini` file must be readable by that same user.
-
-When running via a Docker image, the ezBookkeeping process inside the container runs as a user with UID **1000** and GID **1000**. When mounting external directories into the container, make sure those directories grant access permissions to this UID/GID.
-
 ## How to migrate ezBookkeeping data
 
 ### Migrating the Database
@@ -52,9 +60,55 @@ When running via a Docker image, the ezBookkeeping process inside the container 
 1. `local_filesystem` → `local_filesystem`: Simply copy all files from the object storage directory (default: `storage`) to the new location.
 2. Other combinations (e.g. `local_filesystem` → `minio` / `webdav` or vice versa): After initializing the new object storage with ezBookkeeping, use third-party tools to synchronize the stored files.
 
+## How to add ezBookkeeping to home screen of mobile phone
+
+ezBookkeeping supports PWA (Progressive Web Apps). You can add it to your phone's screen using your system browser. The system will automatically cache the necessary static files. When you open ezBookkeeping directly from your phone's home screen, it will behave like a native app.
+
+For detailed steps, see the [guide](https://raw.githubusercontent.com/wiki/mayswind/ezbookkeeping/img/mobile/add_to_home_screen.gif).
+
+## Why can't add a transaction
+
+In ezBookkeeping, every transaction must set an account and a transaction category. Transaction categories are organized by transaction type, including expense category, income category and transfer category, and each transaction must be assigned a secondary category under one of these types. If you haven't yet created any accounts or secondary categories for the relevant transaction type, you won't be able to create a new transaction.
+
+## How to record a refund
+
+You can create an expense transaction with a negative amount.
+
+## How to record transfer fees
+
+You can create a separate expense transaction with the amount equal to the transfer fee.
+
+## How to record money lent to others
+
+You can create an account which account category is "Receivables", then create a transfer transaction from your expense account to this receivables account. If you've created the default transaction categories in ezBookkeeping, you can select the transaction type "Loan & Debt > Lending Money".
+
+## How to modify an account balance
+
+ezBookkeeping only allows users to set an initial balance when creating a new account. Once the account is created, users cannot directly modify its balance. To adjust an account's balance, you need to record an expense or income transaction.
+
+Alternatively, you can update the ending balance in the Reconciliation Statement page. The system will automatically calculate the difference between the expected ending balance and the actual balance, then populate the amount for you on the new transaction page.
+
 ## Unable to set currency when adding a transaction
 
 In ezBookkeeping, currency is associated with accounts, not with individual transactions. Each account has exactly one currency. If your account in the real-world supports multiple currencies, you can set its account type to "Multiple Sub-accounts", and create a separate sub-account for each currency.
+
+## How to change the default account when adding a transaction
+
+Go to the User Profile page, where you can update the default account used when creating new transactions.
+
+## How to create a transaction using a template
+
+1. Mobile version: Long-press the create transaction button on the bottom navigation bar in the main page. A list of your saved transaction templates will appear, and you can tap a template to create a transaction based on it.
+2. Desktop version: Hover over the "Add" transaction button on the transaction list page. A dropdown menu with your saved templates will appear, and you can click a template to create a transaction based on it.
+
+## How to create a transaction using AI image recognition
+
+First, you need to configure the large language model (LLM) settings. In the `llm` section, enable `transaction_from_ai_image_recognition` to allow creating transactions via AI image recognition. Then, in the `llm_image_recognition` section, set the `llm_provider`, along with the corresponding provider's API key, model ID, and other required settings. Make sure the specified model supports image recognition. For details, see [Configuration - Large Language Model](/configuration#large-language-model).
+
+After setting up the large language model configuration:
+
+1. Mobile version: Long-press the create transaction button on the bottom navigation bar in the main page, then tap "AI Image Recognition" from the list that appears.
+2. Desktop version: Hover over the "Add" transaction button on the transaction list page, then click "AI Image Recognition" from the dropdown menu.
 
 ## Scheduled transaction does not create transaction automatically
 
@@ -77,25 +131,3 @@ To make it easier to recover from accidental deletions, ezBookkeeping uses logic
 ## Why isn't the picture file removed from object storage after deleting a transaction picture
 
 To make it easier to recover from accidental deletions, ezBookkeeping uses logical deletion for transaction pictures. When a transaction picture is deleted, its record in the database is only marked as deleted, and the record itself is not physically removed. Additionally, the transaction picture file in object storage is also retained.
-
-## Why can't add a transaction
-
-In ezBookkeeping, every transaction must set an account and a transaction category. Transaction categories are organized by transaction type, including expense category, income category and transfer category, and each transaction must be assigned a secondary category under one of these types. If you haven't yet created any accounts or secondary categories for the relevant transaction type, you won't be able to create a new transaction.
-
-## How to record a refund
-
-You can create an expense transaction with a negative amount.
-
-## How to create a transaction using a template
-
-1. Mobile version: Long-press the create transaction button on the bottom navigation bar in the main page. A list of your saved transaction templates will appear, and you can tap a template to create a transaction based on it.
-2. Desktop version: Hover over the "Add" transaction button on the transaction list page. A dropdown menu with your saved templates will appear, and you can click a template to create a transaction based on it.
-
-## How to create a transaction using AI image recognition
-
-First, you need to configure the large language model (LLM) settings. In the `llm` section, enable `transaction_from_ai_image_recognition` to allow creating transactions via AI image recognition. Then, in the `llm_image_recognition` section, set the `llm_provider`, along with the corresponding provider's API key, model ID, and other required settings. Make sure the specified model supports image recognition. For details, see [Configuration - Large Language Model](/configuration#large-language-model).
-
-After setting up the large language model configuration:
-
-1. Mobile version: Long-press the create transaction button on the bottom navigation bar in the main page, then tap "AI Image Recognition" from the list that appears.
-2. Desktop version: Hover over the "Add" transaction button on the transaction list page, then click "AI Image Recognition" from the dropdown menu.
