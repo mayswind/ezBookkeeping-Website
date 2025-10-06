@@ -26,15 +26,22 @@ The operating systems that can run the ezBookkeeping server are the same as thos
 
 | ezBookkeeping Version | Golang Version | Minimum Supported OS |
 | --- | --- | --- |
-| v1.1.x ~ v1.2.x | 1.25 | >= Linux Kernel 3.2 <br/> >= Windows 10 / Windows Server 2016 <br/> >= macOS 11 Big Sur |
-| v0.8.x ~ v1.0.x | 1.24 | >= Linux Kernel 3.2 <br/> >= Windows 10 / Windows Server 2016 <br/> >= macOS 11 Big Sur |
-| v0.7.x | 1.23 | >= Linux Kernel 2.6.32 <br/> >= Windows 10 / Windows Server 2016 <br/> >= macOS 11 Big Sur |
-| v0.6.x | 1.22 | >= Linux Kernel 2.6.32 <br/> >= Windows 10 / Windows Server 2016 <br/> >= macOS 10.15 Catalina |
-| v0.5.x | 1.21 | >= Linux Kernel 2.6.32 <br/> >= Windows 10 / Windows Server 2016 <br/> >= macOS 10.15 Catalina |
-| v0.2.x ~ v0.4.x | 1.20 | >= Linux Kernel 2.6.32 <br/> >= Windows 7 / Windows Server 2008 R2 <br/> >= macOS 10.13 High Sierra |
-| v0.1.x | 1.16 | >= Linux Kernel 2.6.32 <br/> >= Windows 7 / Windows Server 2008 R2 <br/> >= macOS 10.12 Sierra |
+| v1.1.x ~ v1.2.x | 1.25 | ≥ Linux Kernel 3.2 <br/> ≥ Windows 10 / Windows Server 2016 <br/> ≥ macOS 11 Big Sur |
+| v0.8.x ~ v1.0.x | 1.24 | ≥ Linux Kernel 3.2 <br/> ≥ Windows 10 / Windows Server 2016 <br/> ≥ macOS 11 Big Sur |
+| v0.7.x | 1.23 | ≥ Linux Kernel 2.6.32 <br/> ≥ Windows 10 / Windows Server 2016 <br/> ≥ macOS 11 Big Sur |
+| v0.6.x | 1.22 | ≥ Linux Kernel 2.6.32 <br/> ≥ Windows 10 / Windows Server 2016 <br/> ≥ macOS 10.15 Catalina |
+| v0.5.x | 1.21 | ≥ Linux Kernel 2.6.32 <br/> ≥ Windows 10 / Windows Server 2016 <br/> ≥ macOS 10.15 Catalina |
+| v0.2.x ~ v0.4.x | 1.20 | ≥ Linux Kernel 2.6.32 <br/> ≥ Windows 7 / Windows Server 2008 R2 <br/> ≥ macOS 10.13 High Sierra |
+| v0.1.x | 1.16 | ≥ Linux Kernel 2.6.32 <br/> ≥ Windows 7 / Windows Server 2008 R2 <br/> ≥ macOS 10.12 Sierra |
 
 The Linux versions listed above apply only to the amd64, arm64, and armv6/v7 architectures. For other architectures, please refer to the official Golang documentation. For more details on supported operating systems, please visit the official Golang documentation: [https://go.dev/wiki/MinimumRequirements](https://go.dev/wiki/MinimumRequirements).
+
+You can access ezBookkeeping directly through your web browser. The table below lists the minimum browser versions required for each ezBookkeeping release.
+
+| ezBookkeeping Version | Minimum Chrome Version | Minimum Edge Version | Minimum Firefox Version | Minimum Safari Version |
+| --- | --- | --- | --- |
+| v1.1.x ~ v1.2.x | ≥ 91 | ≥ 91 | ≥ 91 | ≥ 15.4 |
+| v0.3.x ~ v1.0.x | ≥ 87 | ≥ 88 | ≥ 78 | ≥ 14.0 |
 
 ## How much system resources does ezBookkeeping use?
 
