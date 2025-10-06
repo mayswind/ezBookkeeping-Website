@@ -21,6 +21,26 @@ permalink: /zh_Hans/faq
 
 如果页面中没有您要找的问题，您可以访问 [GitHub Discussions](https://github.com/mayswind/ezbookkeeping/discussions) 或 [GitHub Issues](https://github.com/mayswind/ezbookkeeping/issues) 查找更多内容。
 
+## ezBookkeeping 支持哪些操作系统？
+
+运行 ezBookkeeping 服务端的操作系统与 Golang 支持的操作系统相同，下表列出了 ezBookkeeping 各个版本依赖的 Golang 的版本以及支持操作系统的最低版本。
+
+| ezBookkeeping 版本 | Golang 版本 | 支持的操作系统 |
+| --- | --- | --- |
+| v1.1.x ~ v1.2.x | 1.25 | >= Linux Kernel 3.2 <br/> >= Windows 10 / Windows Server 2016 <br/> >= macOS 11 Big Sur |
+| v0.8.x ~ v1.0.x | 1.24 | >= Linux Kernel 3.2 <br/> >= Windows 10 / Windows Server 2016 <br/> >= macOS 11 Big Sur |
+| v0.7.x | 1.23 | >= Linux Kernel 2.6.32 <br/> >= Windows 10 / Windows Server 2016 <br/> >= macOS 11 Big Sur |
+| v0.6.x | 1.22 | >= Linux Kernel 2.6.32 <br/> >= Windows 10 / Windows Server 2016 <br/> >= macOS 10.15 Catalina |
+| v0.5.x | 1.21 | >= Linux Kernel 2.6.32 <br/> >= Windows 10 / Windows Server 2016 <br/> >= macOS 10.15 Catalina |
+| v0.2.x ~ v0.4.x | 1.20 | >= Linux Kernel 2.6.32 <br/> >= Windows 7 / Windows Server 2008 R2 <br/> >= macOS 10.13 High Sierra |
+| v0.1.x | 1.16 | >= Linux Kernel 2.6.32 <br/> >= Windows 7 / Windows Server 2008 R2 <br/> >= macOS 10.12 Sierra |
+
+上述 Linux 版本仅表示 amd64、arm64 和 armv6/v7 架构下的版本，其他架构下支持的版本请参考 Golang 官方文档。更多 Golang 支持的操作系统的信息，请访问 Golang 官方文档：[https://go.dev/wiki/MinimumRequirements](https://go.dev/wiki/MinimumRequirements)。
+
+## ezBookkeeping 需要使用多少系统资源？
+
+ezBookkeeping 是基于 Golang 编写的轻量软件，需要资源非常少。ezBookkeeping 的二进制文件及依赖的静态文件大约占用 40MB 左右的磁盘空间，在 Linux/amd64 平台运行时只需要使用约 30MB 左右内存。
+
 ## 为什么在 Windows 系统上双击 `ezbookkeeping.exe` 无法打开应用程序
 
 ezBookkeeping 并不是一个桌面应用，而是一个自托管的服务端程序，你可以参考 [安装](/zh_Hans/installation) 文档中的步骤启动该服务端程序。当服务端程序运行后，你就可以使用你各种设备上的各种浏览器访问 ezBookkeeping。
@@ -51,15 +71,23 @@ ezBookkeeping 大部分数据都存储在数据库中，用户的头像、交易
 
 ## 如何迁移 ezBookkeeping 的数据
 
+若您使用 MySQL 或 PostgreSQL 作为数据库，同时使用 `minio` 或 `webdav` 对象存储类型（或不存储用户头像或交易图片文件），则 ezBookkeeping 本身是无状态的，不需要迁移任何数据。
+
 ### 迁移数据库
 
 1. SQLite → SQLite：只需要复制数据库目录下（默认为 `data`）下的 `.db` 文件即可
 2. 其他组合（例如 SQLite → MySQL / PostgreSQL，或相反）：请在使用 ezBookkeeping 初始化新的数据库后，使用第三方工具将之前数据库的数据迁移到新的数据库中
 
+ezBookkeeping 建议仅测试时使用 SQLite 数据库。如果您确定使用 ezBookkeeping，最好使用 MySQL 或 PostgreSQL 数据库，以避免后续迁移的成本。
+
 ### 迁移对象存储
 
 1.  `local_filesystem` → `local_filesystem`：只需要复制对象存储目录下（默认为 `storage`）下所有文件即可
 2. 其他组合（例如 `local_filesystem` → `minio` / `webdav`，或相反），请在使用 ezBookkeeping 初始化新的对象存储目录后，使用第三方工具将存储的文件进行同步
+
+## ezBookkeeping 是否提供电脑桌面应用或手机 App
+
+ezBookkeeping 是一个自托管的软件，通过你的浏览器进行访问，并不提供独立的桌面应用或手机 App。ezBookkeeping 为移动设备和电脑桌面提供了两套原生的用户界面，在手机上你可以将 ezBookkeeping 添加到主屏幕，使用体验如同手机原生应用。
 
 ## 如何将 ezBookkeeping 添加到手机主屏幕
 
@@ -131,4 +159,12 @@ ezBookkeeping 计算不同货币的总金额时依赖汇率数据，你需要确
 
 ## 为什么删除交易图片后对象存储里的图片文件没有删除
 
-为了尽可能减少误删除后数据恢复的难度，ezBookkeeping 中交易图片的删除操作都是逻辑删除，只会对数据库中的交易图片记录标记为删除，并不会从数据库中物理删除交易图片记录，也不会物理删除对象存储中的图片。
+为了尽可能减少误删除后数据恢复的难度，ezBookkeeping 中交易图片的删除操作都是逻辑删除，只会对数据库中的交易图片记录标记为删除，并不会从数据库中物理删除交易图片记录，也不会物理删除对象存储中的图片文件。
+
+## 如何修改验证邮件或密码重置邮件中的内容
+
+你可以直接修改 ezBookkeeping 目录中 `templates/email/` 目录下的 `.tmpl` 文件。如果使用 Docker 部署 ezBookkeeping，也可以直接将修改后的文件挂载到该目录下。需要保证该文件有权限被 ezBookkeeping 的进程启动用户读取。
+
+## 如何修改AI识图等请求大语言模型（LLM）的提示词
+
+你可以直接修改 ezBookkeeping 目录中 `templates/prompt/` 目录下的 `.tmpl` 文件。如果使用 Docker 部署 ezBookkeeping，也可以直接将修改后的文件挂载到该目录下。需要保证该文件有权限被 ezBookkeeping 的进程启动用户读取。

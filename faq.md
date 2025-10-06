@@ -20,13 +20,33 @@ This page lists some frequently asked questions and their answers.
 
 If you don't find what you're looking for here, you can check out [GitHub Discussions](https://github.com/mayswind/ezbookkeeping/discussions) or [GitHub Issues](https://github.com/mayswind/ezbookkeeping/issues) for more information.
 
+## Which operating systems does ezBookkeeping support
+
+The operating systems that can run the ezBookkeeping server are the same as those supported by Golang. The table below lists the Golang versions required by each ezBookkeeping release, along with the minimum supported OS versions.
+
+| ezBookkeeping Version | Golang Version | Minimum Supported OS |
+| --- | --- | --- |
+| v1.1.x ~ v1.2.x | 1.25 | >= Linux Kernel 3.2 <br/> >= Windows 10 / Windows Server 2016 <br/> >= macOS 11 Big Sur |
+| v0.8.x ~ v1.0.x | 1.24 | >= Linux Kernel 3.2 <br/> >= Windows 10 / Windows Server 2016 <br/> >= macOS 11 Big Sur |
+| v0.7.x | 1.23 | >= Linux Kernel 2.6.32 <br/> >= Windows 10 / Windows Server 2016 <br/> >= macOS 11 Big Sur |
+| v0.6.x | 1.22 | >= Linux Kernel 2.6.32 <br/> >= Windows 10 / Windows Server 2016 <br/> >= macOS 10.15 Catalina |
+| v0.5.x | 1.21 | >= Linux Kernel 2.6.32 <br/> >= Windows 10 / Windows Server 2016 <br/> >= macOS 10.15 Catalina |
+| v0.2.x ~ v0.4.x | 1.20 | >= Linux Kernel 2.6.32 <br/> >= Windows 7 / Windows Server 2008 R2 <br/> >= macOS 10.13 High Sierra |
+| v0.1.x | 1.16 | >= Linux Kernel 2.6.32 <br/> >= Windows 7 / Windows Server 2008 R2 <br/> >= macOS 10.12 Sierra |
+
+The Linux versions listed above apply only to the amd64, arm64, and armv6/v7 architectures. For other architectures, please refer to the official Golang documentation. For more details on supported operating systems, please visit the official Golang documentation: [https://go.dev/wiki/MinimumRequirements](https://go.dev/wiki/MinimumRequirements).
+
+## How much system resources does ezBookkeeping use?
+
+ezBookkeeping is a lightweight software written in Golang that needs very few resources. The ezBookkeeping binary file and its dependent static files take up about 40 MB of disk space, and it only requires about 30MB of memory when running on Linux/amd64 platform.
+
 ## Why double-clicking `ezbookkeeping.exe` on Windows doesn't launch the application
 
 ezBookkeeping is not a desktop application, and its's a self-hosted server program. You can start the server program by following the steps in the [Installation](/installation) Guide. Once the server is running, you can access ezBookkeeping through any web browsers on any of your devices.
 
 Of course, if you prefer, you can also run the ezBookkeeping server program on your personal computer and access it locally through your web browser.
 
-## ezBookkeeping reports "Permission Denied" on startup
+## ezBookkeeping reports "permission denied" on startup
 
 The `data` directory (when using the SQLite database), the `storage` directory (when using the `local_filesystem` object storage type), and the `log` directory must all be readable and writable by the user running the ezBookkeeping process. Additionally, the `conf/ezbookkeeping.ini` file must be readable by that same user.
 
@@ -50,15 +70,23 @@ If you're using `minio` or `webdav` object storage type, files are managed by th
 
 ## How to migrate ezBookkeeping data
 
+If you're using MySQL or PostgreSQL as database along with either the `minio` or `webdav` object storage type (or if you're not storing user avatars or transaction pictures), then ezBookkeeping itself is stateless and requires no data migration.
+
 ### Migrating the Database
 
 1. SQLite → SQLite: Simply copy the `.db` file from the database directory (default: `data`) to the new location.
 2. Other combinations (e.g. SQLite → MySQL / PostgreSQL or vice versa): After initializing a new database with ezBookkeeping, use third-party tools to migrate the data from the old database to the new one.
 
+ezBookkeeping recommends using the SQLite database only for testing purposes. If you decide to use ezBookkeeping, it's best to use a MySQL or PostgreSQL database to avoid potential migration costs later.
+
 ### Migrating Object Storage
 
 1. `local_filesystem` → `local_filesystem`: Simply copy all files from the object storage directory (default: `storage`) to the new location.
 2. Other combinations (e.g. `local_filesystem` → `minio` / `webdav` or vice versa): After initializing the new object storage with ezBookkeeping, use third-party tools to synchronize the stored files.
+
+## Does ezBookkeeping provide a desktop or mobile app
+
+ezBookkeeping is a self-hosted software, accessed entirely through your browser. It doesn't offer a standalone desktop or mobile app. ezBookkeeping offers tailored user interfaces for mobile and desktop devices. On your phone, you can add ezBookkeeping to your home screen, and it works and feels just like a native mobile app.
 
 ## How to add ezBookkeeping to home screen of mobile phone
 
@@ -131,3 +159,11 @@ To make it easier to recover from accidental deletions, ezBookkeeping uses logic
 ## Why isn't the picture file removed from object storage after deleting a transaction picture
 
 To make it easier to recover from accidental deletions, ezBookkeeping uses logical deletion for transaction pictures. When a transaction picture is deleted, its record in the database is only marked as deleted, and the record itself is not physically removed. Additionally, the transaction picture file in object storage is also retained.
+
+## How to modify the content of verification or password reset emails
+
+You can directly edit the `.tmpl` files located in the `templates/email/` directory of the ezBookkeeping. If you're deploying ezBookkeeping with Docker, you can mount your modified files to this directory instead. Make sure the files are readable by the user running the ezBookkeeping process.
+
+## How to modify prompts of AI image recognition and other LLM (Large Language Model) requests
+
+You can directly edit the `.tmpl` files located in the `templates/prompt/` directory of the ezBookkeeping. If you're deploying ezBookkeeping with Docker, you can mount your modified files to this directory instead. Make sure the files are readable by the user running the ezBookkeeping process.
