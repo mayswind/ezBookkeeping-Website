@@ -26,7 +26,7 @@ The operating systems that can run the ezBookkeeping server are the same as thos
 
 | ezBookkeeping Version | Golang Version | Minimum Supported OS |
 | --- | --- | --- |
-| v1.1.x ~ v1.2.x | 1.25 | ≥ Linux Kernel 3.2 <br/> ≥ Windows 10 / Windows Server 2016 <br/> ≥ macOS 11 Big Sur |
+| v1.1.x and later | 1.25 | ≥ Linux Kernel 3.2 <br/> ≥ Windows 10 / Windows Server 2016 <br/> ≥ macOS 11 Big Sur |
 | v0.8.x ~ v1.0.x | 1.24 | ≥ Linux Kernel 3.2 <br/> ≥ Windows 10 / Windows Server 2016 <br/> ≥ macOS 11 Big Sur |
 | v0.7.x | 1.23 | ≥ Linux Kernel 2.6.32 <br/> ≥ Windows 10 / Windows Server 2016 <br/> ≥ macOS 11 Big Sur |
 | v0.6.x | 1.22 | ≥ Linux Kernel 2.6.32 <br/> ≥ Windows 10 / Windows Server 2016 <br/> ≥ macOS 10.15 Catalina |
@@ -40,7 +40,7 @@ You can access ezBookkeeping directly through your web browser. The table below 
 
 | ezBookkeeping Version | Minimum Chrome Version | Minimum Edge Version | Minimum Firefox Version | Minimum Safari Version |
 | --- | --- | --- | --- |
-| v1.1.x ~ v1.2.x | ≥ 91 | ≥ 91 | ≥ 91 | ≥ 15.4 |
+| v1.1.x and later | ≥ 91 | ≥ 91 | ≥ 91 | ≥ 15.4 |
 | v0.3.x ~ v1.0.x | ≥ 87 | ≥ 88 | ≥ 78 | ≥ 14.0 |
 
 ## How much system resources does ezBookkeeping use?

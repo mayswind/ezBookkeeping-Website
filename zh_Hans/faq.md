@@ -27,7 +27,7 @@ permalink: /zh_Hans/faq
 
 | ezBookkeeping 版本 | Golang 版本 | 最低支持的操作系统 |
 | --- | --- | --- |
-| v1.1.x ~ v1.2.x | 1.25 | ≥ Linux Kernel 3.2 <br/> ≥ Windows 10 / Windows Server 2016 <br/> ≥ macOS 11 Big Sur |
+| v1.1.x 及更新 | 1.25 | ≥ Linux Kernel 3.2 <br/> ≥ Windows 10 / Windows Server 2016 <br/> ≥ macOS 11 Big Sur |
 | v0.8.x ~ v1.0.x | 1.24 | ≥ Linux Kernel 3.2 <br/> ≥ Windows 10 / Windows Server 2016 <br/> ≥ macOS 11 Big Sur |
 | v0.7.x | 1.23 | ≥ Linux Kernel 2.6.32 <br/> ≥ Windows 10 / Windows Server 2016 <br/> ≥ macOS 11 Big Sur |
 | v0.6.x | 1.22 | ≥ Linux Kernel 2.6.32 <br/> ≥ Windows 10 / Windows Server 2016 <br/> ≥ macOS 10.15 Catalina |
@@ -41,7 +41,7 @@ permalink: /zh_Hans/faq
 
 | ezBookkeeping 版本 | Chrome 最低版本 | Edge 最低版本 | Firefox 最低版本 | Safari 最低版本 |
 | --- | --- | --- | --- |
-| v1.1.x ~ v1.2.x | ≥ 91 | ≥ 91 | ≥ 91 | ≥ 15.4 |
+| v1.1.x 及更新 | ≥ 91 | ≥ 91 | ≥ 91 | ≥ 15.4 |
 | v0.3.x ~ v1.0.x | ≥ 87 | ≥ 88 | ≥ 78 | ≥ 14.0 |
 
 ## ezBookkeeping 需要使用多少系统资源？
