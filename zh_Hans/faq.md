@@ -54,6 +54,21 @@ ezBookkeeping 并不是一个桌面应用，而是一个自托管的服务端程
 
 当然，如果你愿意，你也可以在个人电脑上运行 ezBookkeeping 的服务端程序，并使用本机的浏览器访问它。
 
+## ezBookkeeping 有哪些必须要设置的设置项
+
+ezBookkeeping 是开箱即用的，无需设置任何额外的设置项即可启动运行。但是如果你正式使用它，还需要正确配置以下几个配置项：
+
+1. `security` 节中的 `secret_key`（环境变量 `EBK_SECURITY_SECRET_KEY`）：需要设置为一个随机字符串，随机字符串也可以使用 ezBookkeeping 命令行工具生成 `ezbookkeeping security gen-secret-key`
+2. `server` 节中的 `domain`（环境变量 `EBK_SERVER_DOMAIN`）：需要设置为用户访问的域名或者 IP 地址（例如 `ezbookkeeping-demo.mayswind.net` 或 `192.168.1.2`）。如果设置错误将会导致用户头像或交易图片无法显示，以及 ezBookkeeping 发送的邮件中的链接地址错误
+
+如果你想使用 Nginx 等反向代理，并且暴露给用户的协议、端口号与 ezBookkeeping 的 Web 服务器设置不同，还需要设置 `server` 节中的 `root_url`（环境变量 `EBK_SERVER_ROOT_URL`），例如 `https://ezbookkeeping-demo.mayswind.net/`。
+
+如果你想使用 MySQL 作为数据库，需要设置 `database` 节中的 `type`（环境变量 `EBK_DATABASE_TYPE`） 为 `mysql`，同时设置数据库主机 `host`（例如 `mysql.domain:3306` 或 `/var/run/mysqld/mysqld.sock`）、数据库名 `name`、数据库访问用户 `user`、数据库访问密码 `passwd`。
+
+如果你想使用 PostgreSQL 作为数据库，需要设置 `database` 节中的 `type`（环境变量 `EBK_DATABASE_TYPE`） 为 `postgres`，同时设置数据库主机 `host`（例如 `pg.domain:5432`，或 `/var/run/postgresql`）、数据库名 `name`、数据库访问用户 `user`、数据库访问密码 `passwd`。
+
+如果你想存储用户头像或交易图片，请检查或设置 [配置-对象存储](/zh_Hans/configuration#对象存储) 中的设置。此外，ezBookkeeping 的汇率数据源、地图提供者、大语言模型（LLM）提供者等都可以自定义，具体请参考 [配置](/zh_Hans/configuration)。
+
 ## ezBookkeeping 启动时提示没有权限（“permission denied”）
 
 ezBookkeeping 的 `data` 目录（使用 SQLite 数据库时）、`storage` 目录（使用 `local_filesystem` 对象存储类型时）、`log` 目录都需要有运行 ezBookkeeping 进程用户的读写权限。以及 `conf/ezbookkeeping.ini` 文件需要有运行 ezBookkeeping 进程用户的读权限。

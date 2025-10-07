@@ -53,6 +53,21 @@ ezBookkeeping is not a desktop application, and its's a self-hosted server progr
 
 Of course, if you prefer, you can also run the ezBookkeeping server program on your personal computer and access it locally through your web browser.
 
+## What configuration settings are required for ezBookkeeping?
+
+ezBookkeeping is ready to use out of the box, so it can run without any additional configuration. However, for production use, you should properly configure the following key settings:
+
+1. `secret_key` in `security` section (environment variable `EBK_SECURITY_SECRET_KEY`): Set this to a random string. You can generate one using the ezBookkeeping CLI command `ezbookkeeping security gen-secret-key`
+2. `domain` in `server` section (environment variable `EBK_SERVER_DOMAIN`): Set this to the domain name or IP address users will use to access (e.g. `ezbookkeeping-demo.mayswind.net` or `192.168.1.2`). If this setting is incorrect, user avatars and transaction pictures may fail to display, and links in ezBookkeeping's outgoing emails may be incorrect
+
+If you plan to use a reverse proxy such as Nginx, and the protocol or port exposed to users differs from the ezBookkeeping web server's settings, also configure `root_url` in `server` section (environment variable `EBK_SERVER_ROOT_URL`), e.g. `https://ezbookkeeping-demo.mayswind.net/`.
+
+If you plan to use MySQL as the database, set `type` in `database` section (environment variable `EBK_DATABASE_TYPE`) to `mysql`, and set database host `host` (e.g., `mysql.domain:3306` or `/var/run/mysqld/mysqld.sock`), database name `name`, database user `user` and user password `passwd`.
+
+If you plan to use PostgreSQL as the database, set `type` in `database` section (environment variable `EBK_DATABASE_TYPE`) to `postgres`, and set database host `host` (e.g., `pg.domain:5432` or `/var/run/postgresql`), database name `name`, database user `user` and user password `passwd`.
+
+If you plan to store user avatars or transaction pictures, make sure to configure the settings under [Configuration - Object Storage](/configuration#object-storage). Additionally, ezBookkeeping allows customization of the exchange rate source, map provider, and LLM (Large Language Model) provider. For more details, see [Configuration](/configuration).
+
 ## ezBookkeeping reports "permission denied" on startup
 
 The `data` directory (when using the SQLite database), the `storage` directory (when using the `local_filesystem` object storage type), and the `log` directory must all be readable and writable by the user running the ezBookkeeping process. Additionally, the `conf/ezbookkeeping.ini` file must be readable by that same user.
