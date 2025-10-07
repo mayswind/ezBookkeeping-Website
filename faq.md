@@ -62,9 +62,9 @@ ezBookkeeping is ready to use out of the box, so it can run without any addition
 
 If you plan to use a reverse proxy such as Nginx, and the protocol or port exposed to users differs from the ezBookkeeping web server's settings, also configure `root_url` in `server` section (environment variable `EBK_SERVER_ROOT_URL`), e.g. `https://ezbookkeeping-demo.mayswind.net/`.
 
-If you plan to use MySQL as the database, set `type` in `database` section (environment variable `EBK_DATABASE_TYPE`) to `mysql`, and set database host `host` (e.g., `mysql.domain:3306` or `/var/run/mysqld/mysqld.sock`), database name `name`, database user `user` and user password `passwd`.
+If you plan to use MySQL as the database, set `type` in `database` section (environment variable `EBK_DATABASE_TYPE`) to `mysql`, and set database host `host` (e.g. `mysql.domain:3306` or `/var/run/mysqld/mysqld.sock`), database name `name`, database user `user` and user password `passwd`.
 
-If you plan to use PostgreSQL as the database, set `type` in `database` section (environment variable `EBK_DATABASE_TYPE`) to `postgres`, and set database host `host` (e.g., `pg.domain:5432` or `/var/run/postgresql`), database name `name`, database user `user` and user password `passwd`.
+If you plan to use PostgreSQL as the database, set `type` in `database` section (environment variable `EBK_DATABASE_TYPE`) to `postgres`, and set database host `host` (e.g. `pg.domain:5432` or `/var/run/postgresql`), database name `name`, database user `user` and user password `passwd`.
 
 If you plan to store user avatars or transaction pictures, make sure to configure the settings under [Configuration - Object Storage](/configuration#object-storage). Additionally, ezBookkeeping allows customization of the exchange rate source, map provider, and LLM (Large Language Model) provider. For more details, see [Configuration](/configuration).
 
