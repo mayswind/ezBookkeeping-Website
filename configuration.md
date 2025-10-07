@@ -45,8 +45,8 @@ For example, if you want to set database type to `mysql`, you can set environmen
 | `protocol` | `http` | The protocol that web server provides, supports `http`, `https` or `socket`. |
 | `http_addr` | `0.0.0.0` | The ip address to bind to for `http` or `https` protocol. `0.0.0.0` will bind to all interfaces. |
 | `http_port` | `8080` | The http port to bind to for `http` or `https` protocol. |
-| `domain` | `localhost` | The domain name used to access ezBookkeeping (e.g. `ezbookkeeping.mayswind.net`). |
-| `root_url` | `%(protocol)s://%(domain)s:%(http_port)s/` | The full url used to access ezBookkeeping in browser (e.g. `https://ezbookkeeping.mayswind.net/`). If the protocol and port used to access ezBookkeeping in the browser are the same as the settings above (`protocol` and `http_port`), this option can remain at its default value. |
+| `domain` | `localhost` | The domain name used to access ezBookkeeping (e.g. `ezbookkeeping-demo.mayswind.net`). |
+| `root_url` | `%(protocol)s://%(domain)s:%(http_port)s/` | The full url used to access ezBookkeeping in browser (e.g. `https://ezbookkeeping-demo.mayswind.net/`). If the protocol and port used to access ezBookkeeping in the browser are the same as the settings above (`protocol` and `http_port`), this option can remain at its default value. |
 | `cert_file` |  | The cert file path used for `https` protocol. |
 | `cert_key_file` |  | The cert key file path used for `https` protocol. |
 | `unix_socket` |  | The unix socket path for `unix` protocol. |
