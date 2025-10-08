@@ -190,7 +190,7 @@ You can directly edit the `.tmpl` files located in the `templates/email/` direct
 
 You can directly edit the `.tmpl` files located in the `templates/prompt/` directory of the ezBookkeeping. If you're deploying ezBookkeeping with Docker, you can mount your modified files to this directory instead. Make sure the files are readable by the user running the ezBookkeeping process. Changes will take effect after restarting ezBookkeeping server program.
 
-## What third-party services does ezBookkeeping use, and does it access my personal data?
+## What third-party services does ezBookkeeping use, and does it access my personal data
 
 ezBookkeeping relies on third-party services for features such as exchange rates, maps and LLM (Large Language Model) service. Details are as follows:
 
