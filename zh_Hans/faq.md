@@ -21,7 +21,7 @@ permalink: /zh_Hans/faq
 
 如果页面中没有您要找的问题，您可以访问 [GitHub Discussions](https://github.com/mayswind/ezbookkeeping/discussions) 或 [GitHub Issues](https://github.com/mayswind/ezbookkeeping/issues) 查找更多内容。
 
-## ezBookkeeping 支持哪些操作系统？
+## ezBookkeeping 支持哪些操作系统
 
 运行 ezBookkeeping 服务端的操作系统与 Golang 支持的操作系统相同，下表列出了 ezBookkeeping 各个版本依赖的 Golang 的版本以及支持操作系统的最低版本。
 
@@ -44,7 +44,7 @@ permalink: /zh_Hans/faq
 | v1.1.x 及更新 | ≥ 91 | ≥ 91 | ≥ 91 | ≥ 15.4 |
 | v0.3.x ~ v1.0.x | ≥ 87 | ≥ 88 | ≥ 78 | ≥ 14.0 |
 
-## ezBookkeeping 需要使用多少系统资源？
+## ezBookkeeping 需要使用多少系统资源
 
 ezBookkeeping 是基于 Golang 编写的轻量软件，需要资源非常少。ezBookkeeping 的二进制文件及依赖的静态文件大约占用 40MB 左右的磁盘空间，在 Linux/amd64 平台运行时只需要使用约 30MB 左右内存。
 

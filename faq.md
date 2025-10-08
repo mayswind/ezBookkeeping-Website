@@ -43,7 +43,7 @@ If you've already deployed the ezBookkeeping server program, you can access ezBo
 | v1.1.x and later | ≥ 91 | ≥ 91 | ≥ 91 | ≥ 15.4 |
 | v0.3.x ~ v1.0.x | ≥ 87 | ≥ 88 | ≥ 78 | ≥ 14.0 |
 
-## How much system resources does ezBookkeeping use?
+## How much system resources does ezBookkeeping use
 
 ezBookkeeping is a lightweight software written in Golang that needs very few resources. The ezBookkeeping binary file and its dependent static files take up about 40 MB of disk space, and it only requires about 30MB of memory when running on Linux/amd64 platform.
 
@@ -53,7 +53,7 @@ ezBookkeeping is not a desktop application, and its's a self-hosted server progr
 
 Of course, if you prefer, you can also run the ezBookkeeping server program on your personal computer and access it locally through your web browser.
 
-## What configuration settings are required for ezBookkeeping?
+## What configuration settings are required for ezBookkeeping
 
 ezBookkeeping is ready to use out of the box, so it can run without any additional configuration. However, for production use, you should properly configure the following key settings:
 
