@@ -37,7 +37,7 @@ permalink: /zh_Hans/faq
 
 上述 Linux 版本仅表示 amd64、arm64 和 armv6/v7 架构下的版本，其他架构下支持的版本请参考 Golang 官方文档。更多 Golang 支持的操作系统的信息，请访问 Golang 官方文档：[https://go.dev/wiki/MinimumRequirements](https://go.dev/wiki/MinimumRequirements)。
 
-你可以直接使用你的浏览器访问 ezBookkeeping，下表列出了 ezBookkeeping 各个版本支持的浏览器的最低版本。
+如果你已经部署了 ezBookkeeping 的服务端程序，你可以直接使用你的浏览器访问 ezBookkeeping，下表列出了 ezBookkeeping 各个版本支持的浏览器的最低版本。
 
 | ezBookkeeping 版本 | Chrome 最低版本 | Edge 最低版本 | Firefox 最低版本 | Safari 最低版本 |
 | --- | --- | --- | --- |
@@ -185,8 +185,16 @@ ezBookkeeping 计算不同货币的总金额时依赖汇率数据，你需要确
 
 ## 如何修改验证邮件或密码重置邮件中的内容
 
-你可以直接修改 ezBookkeeping 目录中 `templates/email/` 目录下的 `.tmpl` 文件。如果使用 Docker 部署 ezBookkeeping，也可以直接将修改后的文件挂载到该目录下。需要保证该文件有权限被 ezBookkeeping 的进程启动用户读取。
+你可以直接修改 ezBookkeeping 目录中 `templates/email/` 目录下的 `.tmpl` 文件。如果使用 Docker 部署 ezBookkeeping，也可以直接将修改后的文件挂载到该目录下。需要保证该文件有权限被 ezBookkeeping 的进程启动用户读取。修改后需要重新启动 ezBookkeeping 服务端程序生效。
 
 ## 如何修改AI识图等请求大语言模型（LLM）的提示词
 
-你可以直接修改 ezBookkeeping 目录中 `templates/prompt/` 目录下的 `.tmpl` 文件。如果使用 Docker 部署 ezBookkeeping，也可以直接将修改后的文件挂载到该目录下。需要保证该文件有权限被 ezBookkeeping 的进程启动用户读取。
+你可以直接修改 ezBookkeeping 目录中 `templates/prompt/` 目录下的 `.tmpl` 文件。如果使用 Docker 部署 ezBookkeeping，也可以直接将修改后的文件挂载到该目录下。需要保证该文件有权限被 ezBookkeeping 的进程启动用户读取。修改后需要重新启动 ezBookkeeping 服务端程序生效。
+
+## ezBookkeeping 使用了哪些第三方服务，以及是否会使用我的个人数据
+
+ezBookkeeping 中的汇率数据、地图以及大语言模型（LLM）分别会使用第三方服务，具体如下
+
+1. 汇率数据：当用户使用 ezBookkeeping 的汇率数据时，会通过 ezBookkeeping 的服务端程序获取你指定的汇率数据源数据，获取过程不包含当前用户或用户使用 ezBookkeeping 的设备和浏览器的任何信息
+2. 地图：当用户使用 ezBookkeeping 中的地图功能查看交易位置时，用户的浏览器或 ezBookkeeping 的服务端程序会获取第三方的地图数据，获取过程中包含用户浏览器的 User-Agent，即会包含用户的设备和浏览器信息，但不包含你的具体的位置及 ezBookkeeping 用户信息。如果你的地图提供者设置为 Google 地图、百度地图或高德地图，ezBookkeeping 使用地图提供者的官方 JavaScript SDK，虽然 ezBookkeeping 本身不会与这些服务共享任何用户信息，但地图提供者可能会收集你的浏览器、设备及位置数据，详情请参考地图提供方的隐私策略
+3. 大语言模型-AI识图：当用户使用 ezBookkeeping 的AI识图功能时，ezBookkeeping 会将上传的收据图片以及用户所有的交易分类名称、账户名称和交易标签名称数据发送给大语言模型提供者。ezBookkeeping 默认不启用AI识图功能，同时 ezBookkeeping 建议使用自托管的大语言模型服务。如果你使用第三方的大语言模型服务，请注意潜在的隐私风险，并采取措施减少数据的泄露（例如，将上传收据图片前去除敏感信息，以及避免在交易分类名、账户名、交易标签名中存储敏感信息等）

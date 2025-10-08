@@ -36,7 +36,7 @@ The operating systems that can run the ezBookkeeping server are the same as thos
 
 The Linux versions listed above apply only to the amd64, arm64, and armv6/v7 architectures. For other architectures, please refer to the official Golang documentation. For more details on supported operating systems, please visit the official Golang documentation: [https://go.dev/wiki/MinimumRequirements](https://go.dev/wiki/MinimumRequirements).
 
-You can access ezBookkeeping directly through your web browser. The table below lists the minimum browser versions required for each ezBookkeeping release.
+If you've already deployed the ezBookkeeping server program, you can access ezBookkeeping directly through your web browser. The table below lists the minimum browser versions required for each ezBookkeeping release.
 
 | ezBookkeeping Version | Minimum Chrome Version | Minimum Edge Version | Minimum Firefox Version | Minimum Safari Version |
 | --- | --- | --- | --- |
@@ -184,8 +184,16 @@ To make it easier to recover from accidental deletions, ezBookkeeping uses logic
 
 ## How to modify the content of verification or password reset emails
 
-You can directly edit the `.tmpl` files located in the `templates/email/` directory of the ezBookkeeping. If you're deploying ezBookkeeping with Docker, you can mount your modified files to this directory instead. Make sure the files are readable by the user running the ezBookkeeping process.
+You can directly edit the `.tmpl` files located in the `templates/email/` directory of the ezBookkeeping. If you're deploying ezBookkeeping with Docker, you can mount your modified files to this directory instead. Make sure the files are readable by the user running the ezBookkeeping process. Changes will take effect after restarting ezBookkeeping server program.
 
 ## How to modify prompts of AI image recognition and other LLM (Large Language Model) requests
 
-You can directly edit the `.tmpl` files located in the `templates/prompt/` directory of the ezBookkeeping. If you're deploying ezBookkeeping with Docker, you can mount your modified files to this directory instead. Make sure the files are readable by the user running the ezBookkeeping process.
+You can directly edit the `.tmpl` files located in the `templates/prompt/` directory of the ezBookkeeping. If you're deploying ezBookkeeping with Docker, you can mount your modified files to this directory instead. Make sure the files are readable by the user running the ezBookkeeping process. Changes will take effect after restarting ezBookkeeping server program.
+
+## What third-party services does ezBookkeeping use, and does it access my personal data?
+
+ezBookkeeping relies on third-party services for features such as exchange rates, maps, and LLM (Large Language Model). Details are as follows:
+
+1. Exchange rate data: When user uses exchange rate data in ezBookkeeping, the ezBookkeeping server program retrieves data from the exchange rate data provider you've configured. This process does not include any information about the current user, user's device or user's browser
+2. Maps: When user uses the map feature in ezBookkeeping to view transaction locations, user's browser or ezBookkeeping server program will retrieves map data from the third-party provider. During this process, your browser's User-Agent is included, which contains information about your device and browser, but does not include your specific location or any ezBookkeeping user data. If your map provider is set to Google Map, Baidu Map or Amap, ezBookkeeping uses the provider's official JavaScript SDK. While ezBookkeeping itself does not share any user information with these services, the map providers may collect data about your browser, device and location. For details, please refer to the map provider's privacy policy
+3. Large Language Model - AI Image Recognition: When user uses AI image recognition feature in ezBookkeeping, ezBookkeeping sends the uploaded receipt image along with all the user's transaction category names, account names and transaction tag names to the LLM provider. By default, the AI image recognition feature is disabled, and ezBookkeeping recommends using a self-hosted LLM service. If you choose to use a third-party LLM provider, please be aware of potential privacy risks and take steps to minimize data exposure (e.g. by removing sensitive information from receipt images before uploading and avoiding storing sensitive data in transaction category names, account names or transaction tag names)
