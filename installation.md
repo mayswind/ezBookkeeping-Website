@@ -124,46 +124,34 @@ If you're interested, you can take a look at the [docker-compose file](demo/dock
 
 ### Installing with 1Panel
 
-First, install **1Panel** on your server.
-
-Run the following **one-click installation script** as the **root user** to automatically download and install 1Panel:
-
-```bash
-bash -c "$(curl -sSL https://resource.fit2cloud.com/1panel/package/v2/quick_start.sh)"
-```
-
-> 📖 **Detailed installation instructions**: Please refer to the [official 1Panel installation documentation](https://1panel.cn/docs/v2/installation/online_installation/).
-
-After the installation is complete, log in to 1Panel using the **access address** and **initial username and password** provided in the terminal output.
+> For 1Panel installation instructions, see [https://1panel.cn/docs/v2/installation/online_installation/](https://1panel.cn/docs/v2/installation/online_installation/).
 
 #### Installing ezBookkeeping
 
-Log in to 1Panel, go to the **App Store**, search for **ezBookkeeping**, and click **Install**.
+Log in to 1Panel, go to the "App Store:", search for "ezBookkeeping", and click "Install".
 
-![](images/how_to_install_ezBookkeeping_in_1Panel.png)
+![How to install ezBookkeeping in 1Panel](images/how_to_install_ezBookkeeping_in_1Panel.png)
 
 > During installation, configure the following parameters according to your needs:
 >
-> * **Version**: Choose the latest stable version
-> * **HTTP Port**: Default is `8080`, can be changed if needed
-> * **Advanced Settings**: Optionally enable **External Port Access**
+> * "Version": Choose the latest stable version
+> * "HTTP Port": Default is `8080`, can be changed if needed
+> * "Advanced Settings": Optionally enable "External Port Access"
+>
+> You can complete the installation using the "default configuration", or adjust it as required.
 
-> You can complete the installation using the **default configuration**, or adjust it as required.
-
-![](images/how_to_fill_in_parameters_when_installing_ezBookkeeping_in_1Panel.png)
+![How to fill in parameters when installing ezBookkeeping in 1Panel](images/how_to_fill_in_parameters_when_installing_ezBookkeeping_in_1Panel.png)
 
 The ezBookkeeping instance installed via 1Panel uses `sqlite3` as its database and is fully configured through the `ezbookkeeping.ini` configuration file.
 
 The configuration file is located in the `conf` folder within the application’s installation directory.
-For more information, please visit the [Configuration](/zh_Hans/configuration) page.
+For more information, please visit the [Configuration](/configuration) page.
 
 #### Using ezBookkeeping
 
-After installation, go to the **Installed Apps** page and click **Open** to access the ezBookkeeping **WebUI**.
+After installation, go to the "Installed Apps" page and click "Open" to access the ezBookkeeping "WebUI".
 
-> Before using, it is recommended to set the **default access address** in the **Panel Settings** page.
->
-> If you configure a **reverse proxy** later, you can modify the **EBK_SERVER_DOMAIN** value in the configuration file.
+> Before using, it is recommended to set the "default access address" in the "Panel Settings" page.
 
 ## Install from binary
 Latest release: 
