@@ -21,9 +21,11 @@ The default configuration file path is `%WORKING_DIR%/conf/ezbookkeeping.ini`.
 You can use `--conf-path` parameter to specify a custom configuration path when use ezBookkeeping command line.
 
 In addition, ezBookkeeping also supports setting configuration via environment variables.
-All options in the configuration file can be overridden using environment variables with the following name (environment variable name should be uppercase): `EBK_{SECTION_NAME}_{OPTION_NAME}`.  
 
-For example, if you want to set database type to `mysql`, you can set environment variable `EBK_DATABASE_TYPE=mysql`.
+1. If you want to set configuration options directly through environment variables and override the values in the configuration file, use the following format (environment variable names must be in uppercase): `EBK_{SECTION_NAME}_{OPTION_NAME}`. For example, to set the database type to `mysql`, you can define the environment variable `EBK_DATABASE_TYPE=mysql`
+2. If you want to load a configuration option value from a specific file via environment variables and override the value in the configuration file, use the following format (environment variable names must be in uppercase): `EBKCFP_{SECTION_NAME}_{OPTION_NAME}`. For example, to load the database password from a file, you can define the environment variable: `EBKCFP_DATABASE_PASSWD=/run/secrets/database_password` and place the database password inside the `/run/secrets/database_password` file
+
+Note that if both above methods are configured for the same configuration option, the value from the file will take priority.
 
 ## Available Options
 

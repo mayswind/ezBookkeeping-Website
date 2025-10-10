@@ -82,8 +82,7 @@ permalink: /zh_Hans/installation
 如果你想替换配置文件，你可以挂载自定义的配置文件到 `/ezbookkeeping/conf/ezbookkeeping.ini`，或通过环境变量 `EBK_CONF_PATH` 修改配置文件的路径。
 
 如果你只是想修改部分选项，你只要使用环境变量就可以设置这些值。
-配置文件中所有的选项都可以通过如下的环境变量名被覆盖：
-`EBK_{SECTION_NAME}_{OPTION_NAME}`。
+配置文件中所有的选项都可以通过如下的环境变量名被覆盖：`EBK_{SECTION_NAME}_{OPTION_NAME}`。除此之外，ezBookkeeping 还支持通过环境变量从指定文件中加载指定配置项的值，具体参考 [配置](/zh_Hans/configuration)。
 
 **注意**：
 在部署到生产环境之前，您必须生成一个随机值并将其设置到 `secret_key` 配置中以保证您数据的安全。你可以通过执行 `ezbookkeeping security gen-secret-key` 获取一个随机密钥。

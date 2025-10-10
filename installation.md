@@ -81,8 +81,7 @@ The user id (UID) and group id (GID) used for running ezBookkeeping is both `100
 If you want to replace the configuration file, you can mount the custom configuration file to `/ezbookkeeping/conf/ezbookkeeping.ini`, or change the configuration path by environment variable `EBK_CONF_PATH`.
 
 If you just want to modify some options, you can just use environment variable to set these value.
-All options in the configuration file can be overridden using environment variables with the following name:
-`EBK_{SECTION_NAME}_{OPTION_NAME}`.
+All options in the configuration file can be overridden using environment variables with the following name: `EBK_{SECTION_NAME}_{OPTION_NAME}`. In addition, ezBookkeeping supports loading specific configuration values from designated files via environment variables. For more details, see [Configuration](/configuration).
 
 **ATTENTION**:  
 Before you deploy to production, you must generate a random string and set it to `secret_key` to keep your user data safe. You can get a random secret key by executing `ezbookkeeping security gen-secret-key`.
