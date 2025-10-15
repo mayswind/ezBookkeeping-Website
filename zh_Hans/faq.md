@@ -117,6 +117,10 @@ ezBookkeeping 支持 PWA（Progressive Web Apps），你可以使用系统浏览
 
 详细步骤，参考[教程](https://raw.githubusercontent.com/wiki/mayswind/ezbookkeeping/img/mobile/add_to_home_screen.gif)。
 
+## ezBookkeeping 的默认用户是什么
+
+在你第一次启动 ezBookkeeping 服务端后，ezBookkeeping 的数据库是空的，你需要新注册一个账号。ezBookkeeping 没有默认账号。
+
 ## 为什么无法添加交易
 
 ezBookkeeping 中的每一笔交易都需要包含账户和交易分类，并且交易分类是按交易类型分为支出分类、收入分类和转账分类，每一笔交易都需要设置一个分类的二级分类。如果你还没有创建账户和对应交易类型的二级分类，则无法创建新的交易。
@@ -197,4 +201,4 @@ ezBookkeeping 中的汇率数据、地图以及大语言模型（LLM）服务依
 
 1. 汇率数据：当用户使用 ezBookkeeping 的汇率数据时，会通过 ezBookkeeping 的服务端程序获取你指定的汇率数据源数据，获取过程不包含当前用户或用户使用 ezBookkeeping 的设备和浏览器的任何信息
 2. 地图：当用户使用 ezBookkeeping 中的地图功能查看交易位置时，用户的浏览器或 ezBookkeeping 的服务端程序会获取第三方的地图数据，获取过程中包含用户浏览器的 User-Agent，即会包含用户的设备和浏览器信息，但不包含具体的位置及 ezBookkeeping 用户信息。如果你的地图提供者设置为 Google 地图、百度地图或高德地图，ezBookkeeping 使用地图提供者的官方 JavaScript SDK，虽然 ezBookkeeping 本身不会与这些服务共享任何用户信息，但地图提供者可能会收集用户的浏览器、设备及位置数据，详情请参考地图提供方的隐私策略
-3. 大语言模型-AI识图：当用户使用 ezBookkeeping 的AI识图功能时，ezBookkeeping 会将上传的收据图片以及用户所有的交易分类名称、账户名称和交易标签名称数据发送给大语言模型提供者。ezBookkeeping 默认不启用AI识图功能，同时 ezBookkeeping 建议使用自托管的大语言模型服务。如果你使用第三方的大语言模型服务，请注意潜在的隐私风险，并采取措施减少数据的泄露（例如，将上传收据图片前去除敏感信息，以及避免在交易分类名、账户名、交易标签名中存储敏感信息等）
+3. 大语言模型-AI识图：当用户使用 ezBookkeeping 的AI识图功能时，ezBookkeeping 会将上传的收据图片以及用户所有的交易分类名称、账户名称和交易标签名称数据发送给大语言模型提供者。ezBookkeeping 默认不启用AI识图功能，同时 ezBookkeeping 建议使用自托管的大语言模型服务。如果你使用第三方的大语言模型服务，请注意潜在的隐私风险，并采取措施减少数据的泄露（例如，上传收据图片前去除敏感信息，以及避免在交易分类名、账户名、交易标签名中存储敏感信息等）

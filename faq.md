@@ -116,6 +116,10 @@ ezBookkeeping supports PWA (Progressive Web Apps). You can add it to your phone'
 
 For detailed steps, see the [guide](https://raw.githubusercontent.com/wiki/mayswind/ezbookkeeping/img/mobile/add_to_home_screen.gif).
 
+## What is the default user in ezBookkeeping
+
+When you launch ezBookkeeping server for the first time, the database of ezBookkeeping is empty, and you'll need to register a new user. ezBookkeeping does not have a default user.
+
 ## Why can't add a transaction
 
 In ezBookkeeping, every transaction must set an account and a transaction category. Transaction categories are organized by transaction type, including expense category, income category and transfer category, and each transaction must be assigned a secondary category under one of these types. If you haven't yet created any accounts or secondary categories for the relevant transaction type, you won't be able to create a new transaction.

@@ -23,6 +23,8 @@ permalink: /zh_Hans/mcp
 
 通过 MCP 协议，您可以使用您喜爱的 AI 工具添加交易（例如，使用自然语言创建交易、批量导入不同格式的交易）、查询交易数据（例如，使用您的AI工具对历史交易数据进行分析）等。
 
+> 请注意：如果你使用第三方的大语言模型服务，请谨慎使用 MCP 功能，因为你的隐私数据会发送给第三方大模型服务。
+
 ## 配置
 
 ezBookkeeping 默认没有启用 MCP 服务器，你可以修改配置文件中的 `enable_mcp` 或修改环境变量开启 MCP 功能，具体可以参考 [配置](/zh_Hans/configuration#mcp-model-context-protocol)，开启后在桌面版的 “用户设置” -> “安全” 页面中会出现 “生成 MCP 令牌” 按钮。
@@ -97,6 +99,16 @@ ezBookkeeping 的 MCP 服务需要通过特殊的令牌进行访问，您可以�
 **MCP Tool 名称**
 
 `query_all_accounts`
+
+**请求参数**
+
+无
+
+### 查询所有账户余额
+
+**MCP Tool 名称**
+
+`query_all_accounts_balance`
 
 **请求参数**
 
