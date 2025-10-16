@@ -1,5 +1,6 @@
 ---
 layout: default
+locale: zh-Hans
 title: HTTP API
 nav_order: 7
 parent: 中文 (简体)

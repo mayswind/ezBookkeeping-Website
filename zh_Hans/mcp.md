@@ -1,5 +1,6 @@
 ---
 layout: default
+locale: zh-Hans
 title: MCP (Model Context Protocol)
 nav_order: 8
 parent: 中文 (简体)

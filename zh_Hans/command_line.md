@@ -1,5 +1,6 @@
 ---
 layout: default
+locale: zh-Hans
 title: 命令行
 nav_order: 6
 parent: 中文 (简体)

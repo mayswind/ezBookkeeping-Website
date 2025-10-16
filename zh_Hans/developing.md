@@ -1,5 +1,6 @@
 ---
 layout: default
+locale: zh-Hans
 title: 开发
 nav_order: 9
 parent: 中文 (简体)

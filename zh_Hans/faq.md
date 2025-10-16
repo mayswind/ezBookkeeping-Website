@@ -1,5 +1,6 @@
 ---
 layout: default
+locale: zh-Hans
 title: 常见问题
 nav_order: 11
 parent: 中文 (简体)

@@ -1,5 +1,6 @@
 ---
 layout: default
+locale: zh-Hans
 title: 汇率
 nav_order: 4
 parent: 中文 (简体)

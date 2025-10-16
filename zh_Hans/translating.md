@@ -1,5 +1,6 @@
 ---
 layout: default
+locale: zh-Hans
 title: 翻译
 nav_order: 10
 parent: 中文 (简体)

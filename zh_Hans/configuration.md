@@ -1,5 +1,6 @@
 ---
 layout: default
+locale: zh-Hans
 title: 配置
 nav_order: 3
 parent: 中文 (简体)

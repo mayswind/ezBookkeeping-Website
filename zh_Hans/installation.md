@@ -1,5 +1,6 @@
 ---
 layout: default
+locale: zh-Hans
 title: 安装
 nav_order: 2
 parent: 中文 (简体)

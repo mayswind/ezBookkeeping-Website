@@ -1,10 +1,12 @@
 ---
 layout: default
+locale: zh-Hans
 title: 中文 (简体)
 nav_order: 100
 has_children: true
 has_toc: false
 permalink: /zh_Hans
+homepage: true
 ---
 
 # ezBookkeeping
