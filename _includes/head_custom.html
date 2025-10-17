@@ -29,7 +29,9 @@
 <meta property="og:locale" content="{{ final_og_locale }}" />
 <meta property="og:site_name" content="{{ site.title }}" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta property="twitter:title" content="{{ final_title }}" />
+<meta name="twitter:title" content="{{ final_title }}" />
+<meta name="twitter:description" content="{{ final_description }}" />
+<meta name="twitter:image" content="{{ '/images/og-image.png' | absolute_url }}" />
 <link rel="canonical" href="{{ page.url | absolute_url }}" />
 {% if site.baidu_site_verification != nil %}
 <meta name="baidu-site-verification" content="{{ site.baidu_site_verification }}" />
