@@ -93,7 +93,7 @@ ezBookkeeping 为移动端和桌面端提供了各自原生的界面设计。借
 默认 ezBookkeeping 将会监听 8080 端口。您可以访问 `http://{YOUR_HOST_ADDRESS}:8080/` 。
 
 ### 从源代码构建
-请确保您已经安装 [Golang](https://golang.org/), [GCC](http://gcc.gnu.org/), [Node.js](https://nodejs.org/) 和 [NPM](https://www.npmjs.com/)。然后下载源代码并执行以下步骤：
+请确保您已经安装 [Golang](https://golang.org/), [GCC](https://gcc.gnu.org/), [Node.js](https://nodejs.org/) 和 [NPM](https://www.npmjs.com/)。然后下载源代码并执行以下步骤：
 
 **Linux / macOS**
 

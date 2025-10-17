@@ -18,7 +18,7 @@ permalink: /developing
 
 ## Preparation
 
-ezBookkeeping is written in Golang and TypeScript. You should install [Git](https://git-scm.com/), [Golang](https://golang.org/), [GCC](http://gcc.gnu.org/), [Node.js](https://nodejs.org/) and [NPM](https://www.npmjs.com/) before you start to develop. The release package and docker image of ezBookkeeping is compiled in Golang 1.24 and Node.js 22.x.
+ezBookkeeping is written in Golang and TypeScript. You should install [Git](https://git-scm.com/), [Golang](https://golang.org/), [GCC](https://gcc.gnu.org/), [Node.js](https://nodejs.org/) and [NPM](https://www.npmjs.com/) before you start to develop. The release package and docker image of ezBookkeeping is compiled in Golang 1.24 and Node.js 22.x.
 
 ## Download the source code
 
