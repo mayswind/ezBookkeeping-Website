@@ -158,6 +158,8 @@ Go to the User Profile page, where you can change the color of expense and incom
 
 In the mobile version of ezBookkeeping, you can swipe left on any item in the transaction or account list page to reveal the "Edit" and "Delete" buttons. Tap "Edit" to open the editing page.
 
+[![How to edit transaction](images/how_to_edit_transaction.png)](images/how_to_edit_transaction.png)
+
 ## How to create a transaction using a template
 
 1. Mobile version: Long-press the create transaction button on the bottom navigation bar in the main page. A list of your saved transaction templates will appear, and you can tap a template to create a transaction based on it.
