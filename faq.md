@@ -150,6 +150,14 @@ In ezBookkeeping, currency is associated with accounts, not with individual tran
 
 Go to the User Profile page, where you can update the default account used when creating new transactions.
 
+## How to change the color of amounts
+
+Go to the User Profile page, where you can change the color of expense and income amounts.
+
+## How to edit or delete transactions and accounts on mobile version
+
+In the mobile version of ezBookkeeping, you can swipe left on any item in the transaction or account list page to reveal the "Edit" and "Delete" buttons. Tap "Edit" to open the editing page.
+
 ## How to create a transaction using a template
 
 1. Mobile version: Long-press the create transaction button on the bottom navigation bar in the main page. A list of your saved transaction templates will appear, and you can tap a template to create a transaction based on it.
