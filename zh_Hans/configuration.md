@@ -228,12 +228,13 @@ ezBookkeeping 使用 ini 文件作为配置文件。
 | `oauth2_client_secret` |  | 使用 `oauth2` 身份验证时，OAuth 2.0 客户端密钥。 |
 | `oauth2_user_identifier` | `email` | 使用 `oauth2` 身份验证时，用于将 OAuth 2.0 返回的用户与 ezBookkeeping 中现有用户进行匹配的字段，支持 `email` 和 `username`。 |
 | `oauth2_auto_register` | `true` | 使用 `oauth2` 身份验证时，当 OAuth 2.0 返回的用户没有注册时自动创建新用户。（需要 `enable_register` 设置为 `true`） |
-| `oauth2_provider` |  | 使用 `oauth2` 身份验证时，OAuth 2.0 提供者，支持 `nextcloud` 和 `github`。 |
+| `oauth2_provider` |  | 使用 `oauth2` 身份验证时，OAuth 2.0 提供者，支持 `nextcloud`、`gitea` 和 `github`。 |
 | `oauth2_state_expired_time` | `300` | 使用 `oauth2` 身份验证时，OAuth 2.0 认证过程的超时时间（60 - 4294967295 秒）。 |
 | `oauth2_request_timeout` | `10000` | 请求 OAuth 2.0 API 的超时时间（0 - 4294967295 毫秒）。设置为 `0` 时禁用请求 OAuth 2.0 API 超时。 |
 | `oauth2_proxy` | `system` | 请求 OAuth 2.0 API 使用的代理，支持 `system`（使用系统代理） `none`（不使用代理），或以 `http://`、`https://` 或 `socks5://` 开头的代理服务器地址。 |
 | `oauth2_skip_tls_verify` | `false` | 请求 OAuth 2.0 API 时是否跳过服务器证书链和主机名称的校验。 |
 | `nextcloud_base_url` |  | 使用 `oauth2` 身份验证和 `nextcloud` OAuth 2.0 提供者时，Nextcloud 的基础地址，例如 `https://cloud.example.org/` 或 `https://cloud.example.org/index.php`。更多信息见 [Nextcloud Administration Manual](https://docs.nextcloud.com/server/stable/admin_manual/configuration_server/oauth2.html)。 |
+| `gitea_base_url` |  | 使用 `oauth2` 身份验证和 `gitea` OAuth 2.0 提供者时，Gitea 的基础地址，例如 `https://git.example.com/`。更多信息见 [Gitea 文档](https://docs.gitea.com/zh-cn/development/oauth2-provider)。 |
 
 ### 用户
 
