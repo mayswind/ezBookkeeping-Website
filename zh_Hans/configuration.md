@@ -224,11 +224,11 @@ ezBookkeeping 使用 ini 文件作为配置文件。
 | `enable_two_factor` | `true` | 使用 `internal` 身份验证时，是否开启两步验证。 |
 | `enable_forget_password` | `true` | 使用 `internal` 身份验证时，是否启用用户密码重置。（SMTP 服务器必须配置） |
 | `forget_password_require_email_verify` | `false` | 使用 `internal` 身份验证时，用户使用密码重置时是否要求邮箱必须验证。 |
+| `oauth2_provider` |  | 使用 `oauth2` 身份验证时，OAuth 2.0 提供者，支持 `nextcloud`、`gitea` 和 `github`。 |
 | `oauth2_client_id` |  | 使用 `oauth2` 身份验证时，OAuth 2.0 客户端 ID。 |
 | `oauth2_client_secret` |  | 使用 `oauth2` 身份验证时，OAuth 2.0 客户端密钥。 |
 | `oauth2_user_identifier` | `email` | 使用 `oauth2` 身份验证时，用于将 OAuth 2.0 返回的用户与 ezBookkeeping 中现有用户进行匹配的字段，支持 `email` 和 `username`。 |
 | `oauth2_auto_register` | `true` | 使用 `oauth2` 身份验证时，当 OAuth 2.0 返回的用户没有注册时自动创建新用户。（需要 `enable_register` 设置为 `true`） |
-| `oauth2_provider` |  | 使用 `oauth2` 身份验证时，OAuth 2.0 提供者，支持 `nextcloud`、`gitea` 和 `github`。 |
 | `oauth2_state_expired_time` | `300` | 使用 `oauth2` 身份验证时，OAuth 2.0 认证过程的超时时间（60 - 4294967295 秒）。 |
 | `oauth2_request_timeout` | `10000` | 请求 OAuth 2.0 API 的超时时间（0 - 4294967295 毫秒）。设置为 `0` 时禁用请求 OAuth 2.0 API 超时。 |
 | `oauth2_proxy` | `system` | 请求 OAuth 2.0 API 使用的代理，支持 `system`（使用系统代理） `none`（不使用代理），或以 `http://`、`https://` 或 `socks5://` 开头的代理服务器地址。 |
