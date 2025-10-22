@@ -165,7 +165,7 @@ Note that if both above methods are configured for the same configuration option
 | `google_ai_api_key` |  | Google AI API Key for `google_ai` LLM provider, please visit [https://aistudio.google.com/apikey](https://aistudio.google.com/apikey) for more information. |
 | `google_ai_model_id` |  | Model ID for the `google_ai` LLM provider, used for receipt image recognition and transaction creation. |
 | `request_timeout` | `60000` | Request timeout for LLM API (0 - 4294967295 milliseconds). Set to `0` to disable timeout for requesting LLM API. |
-| `proxy` | `system` | Proxy for ezbookkeeping server requesting LLM API, supports `system` (use system proxy), `none` (do not use proxy), or proxy URL which starts with `http://`, `https://` or `socks5://`. |
+| `proxy` | `system` | Proxy for requesting LLM API, supports `system` (use system proxy), `none` (do not use proxy), or proxy URL which starts with `http://`, `https://` or `socks5://`. |
 | `skip_tls_verify` | `false` | Whether to skip the server's certificate chain and host name verification when request LLM API. |
 
 ### Uuid
@@ -217,9 +217,21 @@ Note that if both above methods are configured for the same configuration option
 
 | Option Name | Default Value | Description |
 | --- | --- | --- |
-| `enable_two_factor` | `true` | Whether to enable two factor authorization. |
-| `enable_forget_password` | `true` | Whether to enable user password reset. (SMTP server must be configured) |
-| `forget_password_require_email_verify` | `false` | Whether to require user email must be verified when use forget password.  |
+| `enable_internal_auth` | `true` | Whether to enable internal username and password login. |
+| `enable_oauth2_auth` | `false` | Whether to enable external OAuth 2.0 login. |
+| `enable_two_factor` | `true` | Whether to enable two factor authorization for `internal` authentication. |
+| `enable_forget_password` | `true` | Whether to enable user password reset for `internal` authentication. (SMTP server must be configured) |
+| `forget_password_require_email_verify` | `false` | Whether to require user email must be verified when use forget password for `internal` authentication. |
+| `oauth2_client_id` |  | OAuth 2.0 client ID for `oauth2` authentication. |
+| `oauth2_client_secret` |  | OAuth 2.0 client secret for `oauth2` authentication. |
+| `oauth2_user_identifier` | `email` | For `oauth2` authentication, the field used to match the user returned by OAuth 2.0 with an existing user in ezBookkeeping, supports `email` and `username`. |
+| `oauth2_auto_register` | `true` | For `oauth2` authentication, automatically create a new user if the user returned by OAuth 2.0 is not registered. (requires `enable_register` to be set to `true`) |
+| `oauth2_provider` |  | OAuth 2.0 provider for `oauth2` authentication, supports `nextcloud` and `github`. |
+| `oauth2_state_expired_time` | `300` | For `oauth2` authentication, Timeout duration for the OAuth 2.0 authentication process (60 - 4294967295 seconds). |
+| `oauth2_request_timeout` | `10000` | Request timeout for OAuth 2.0 API (0 - 4294967295 milliseconds). Set to `0` to disable timeout for requesting OAuth 2.0 API. |
+| `oauth2_proxy` | `system` | Proxy for requesting OAuth 2.0 API, supports `system` (use system proxy), `none` (do not use proxy), or proxy URL which starts with `http://`, `https://` or `socks5://`. |
+| `oauth2_skip_tls_verify` | `false` | For `oauth2` authentication, whether to skip the server's certificate chain and host name verification when request OAuth 2.0 API. |
+| `nextcloud_base_url` |  | For `oauth2` authentication and `nextcloud` OAuth 2.0 provider, Nextcloud base url, e.g. `https://cloud.example.org/`. For more details, see [Nextcloud Administration Manual](https://docs.nextcloud.com/server/stable/admin_manual/configuration_server/oauth2.html). |
 
 ### User
 

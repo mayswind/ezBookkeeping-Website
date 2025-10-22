@@ -167,7 +167,7 @@ ezBookkeeping 使用 ini 文件作为配置文件。
 | `google_ai_api_key` |  | 使用 `google_ai` 大语言模型提供方时，Google AI 的 API Key，请访问 [https://aistudio.google.com/apikey](https://aistudio.google.com/apikey) 获取更多信息。 |
 | `google_ai_model_id` |  | 使用 `google_ai` 大语言模型提供方时，用于识别收据图片并创建交易的模型ID。 |
 | `request_timeout` | `60000` | 请求大语言模型 API 的超时时间（0 - 4294967295 毫秒）。设置为 `0` 时禁用请求大语言模型 API 超时。 |
-| `proxy` | `system` | ezbookkeeping 服务端请求大语言模型 API 使用的代理，支持 `system`（使用系统代理） `none`（不使用代理），或以 `http://`、`https://` 或 `socks5://` 开头的代理服务器地址。 |
+| `proxy` | `system` | 请求大语言模型 API 使用的代理，支持 `system`（使用系统代理） `none`（不使用代理），或以 `http://`、`https://` 或 `socks5://` 开头的代理服务器地址。 |
 | `skip_tls_verify` | `false` | 请求大语言模型 API 时是否跳过服务器证书链和主机名称的校验。 |
 
 ### Uuid
@@ -219,9 +219,21 @@ ezBookkeeping 使用 ini 文件作为配置文件。
 
 | 选项名 | 默认值 | 描述 |
 | --- | --- | --- |
-| `enable_two_factor` | `true` | 是否开启两步验证。 |
-| `enable_forget_password` | `true` | 是否启用用户密码重置。（SMTP 服务器必须配置） |
-| `forget_password_require_email_verify` | `false` | 用户使用密码重置时是否要求邮箱必须验证。 |
+| `enable_internal_auth` | `true` | 是否开启用户名、密码登录（`internal`）。 |
+| `enable_oauth2_auth` | `false` | 是否开启使用外部 OAuth 2.0 登录。 |
+| `enable_two_factor` | `true` | 使用 `internal` 身份验证时，是否开启两步验证。 |
+| `enable_forget_password` | `true` | 使用 `internal` 身份验证时，是否启用用户密码重置。（SMTP 服务器必须配置） |
+| `forget_password_require_email_verify` | `false` | 使用 `internal` 身份验证时，用户使用密码重置时是否要求邮箱必须验证。 |
+| `oauth2_client_id` |  | 使用 `oauth2` 身份验证时，OAuth 2.0 客户端 ID。 |
+| `oauth2_client_secret` |  | 使用 `oauth2` 身份验证时，OAuth 2.0 客户端密钥。 |
+| `oauth2_user_identifier` | `email` | 使用 `oauth2` 身份验证时，用于将 OAuth 2.0 返回的用户与 ezBookkeeping 中现有用户进行匹配的字段，支持 `email` 和 `username`。 |
+| `oauth2_auto_register` | `true` | 使用 `oauth2` 身份验证时，当 OAuth 2.0 返回的用户没有注册时自动创建新用户。（需要 `enable_register` 设置为 `true`） |
+| `oauth2_provider` |  | 使用 `oauth2` 身份验证时，OAuth 2.0 提供者，支持 `nextcloud` 和 `github`。 |
+| `oauth2_state_expired_time` | 300 | 使用 `oauth2` 身份验证时，OAuth 2.0 认证过程的超时时间（60 - 4294967295 秒）。 |
+| `oauth2_request_timeout` | `10000` | 请求 OAuth 2.0 API 的超时时间（0 - 4294967295 毫秒）。设置为 `0` 时禁用请求 OAuth 2.0 API 超时。 |
+| `oauth2_proxy` | `system` | 请求 OAuth 2.0 API 使用的代理，支持 `system`（使用系统代理） `none`（不使用代理），或以 `http://`、`https://` 或 `socks5://` 开头的代理服务器地址。 |
+| `oauth2_skip_tls_verify` | `false` | 请求 OAuth 2.0 API 时是否跳过服务器证书链和主机名称的校验。 |
+| `nextcloud_base_url` |  | 使用 `oauth2` 身份验证和 `nextcloud` OAuth 2.0 提供者时，Nextcloud 的基础地址，例如 `https://cloud.example.org/`。更多信息见 [Nextcloud Administration Manual](https://docs.nextcloud.com/server/stable/admin_manual/configuration_server/oauth2.html). |
 
 ### 用户
 
