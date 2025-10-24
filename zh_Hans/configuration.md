@@ -220,21 +220,25 @@ ezBookkeeping 使用 ini 文件作为配置文件。
 | 选项名 | 默认值 | 描述 |
 | --- | --- | --- |
 | `enable_internal_auth` | `true` | 是否开启用户名、密码登录（`internal`）。 |
-| `enable_oauth2_auth` | `false` | 是否开启使用外部 OAuth 2.0 登录。 |
+| `enable_oauth2_auth` | `false` | 是否开启使用外部 OAuth 2.0 登录。ezBookkeeping 的 OAuth 2.0 回调路径为 `/oauth/callback`，例如你的 ezBookkeeping 地址为 [`https://ezbookkeeping-demo.mayswind.net/`](https://ezbookkeeping-demo.mayswind.net/)，则回调地址为 [`https://ezbookkeeping-demo.mayswind.net/oauth2/callback`](https://ezbookkeeping-demo.mayswind.net/oauth2/callback)。 |
 | `enable_two_factor` | `true` | 使用 `internal` 身份验证时，是否开启两步验证。 |
 | `enable_forget_password` | `true` | 使用 `internal` 身份验证时，是否启用用户密码重置。（SMTP 服务器必须配置） |
 | `forget_password_require_email_verify` | `false` | 使用 `internal` 身份验证时，用户使用密码重置时是否要求邮箱必须验证。 |
-| `oauth2_provider` |  | 使用 `oauth2` 身份验证时，OAuth 2.0 提供者，支持 `nextcloud`、`gitea` 和 `github`。 |
+| `oauth2_provider` |  | 使用 `oauth2` 身份验证时，OAuth 2.0 提供方，支持 `oidc`、`nextcloud`、`gitea` 和 `github`。 |
 | `oauth2_client_id` |  | 使用 `oauth2` 身份验证时，OAuth 2.0 客户端 ID。 |
 | `oauth2_client_secret` |  | 使用 `oauth2` 身份验证时，OAuth 2.0 客户端密钥。 |
 | `oauth2_user_identifier` | `email` | 使用 `oauth2` 身份验证时，用于将 OAuth 2.0 返回的用户与 ezBookkeeping 中现有用户进行匹配的字段，支持 `email` 和 `username`。 |
+| `oauth2_use_pkce` | `false` | 使用 `oauth2` 身份验证时，是否启用 PKCE。 |
 | `oauth2_auto_register` | `true` | 使用 `oauth2` 身份验证时，当 OAuth 2.0 返回的用户没有注册时自动创建新用户。（需要 `enable_register` 设置为 `true`） |
 | `oauth2_state_expired_time` | `300` | 使用 `oauth2` 身份验证时，OAuth 2.0 认证过程的超时时间（60 - 4294967295 秒）。 |
 | `oauth2_request_timeout` | `10000` | 请求 OAuth 2.0 API 的超时时间（0 - 4294967295 毫秒）。设置为 `0` 时禁用请求 OAuth 2.0 API 超时。 |
 | `oauth2_proxy` | `system` | 请求 OAuth 2.0 API 使用的代理，支持 `system`（使用系统代理） `none`（不使用代理），或以 `http://`、`https://` 或 `socks5://` 开头的代理服务器地址。 |
 | `oauth2_skip_tls_verify` | `false` | 请求 OAuth 2.0 API 时是否跳过服务器证书链和主机名称的校验。 |
-| `nextcloud_base_url` |  | 使用 `oauth2` 身份验证和 `nextcloud` OAuth 2.0 提供者时，Nextcloud 的基础地址，例如 `https://cloud.example.org/` 或 `https://cloud.example.org/index.php`。更多信息见 [Nextcloud Administration Manual](https://docs.nextcloud.com/server/stable/admin_manual/configuration_server/oauth2.html)。 |
-| `gitea_base_url` |  | 使用 `oauth2` 身份验证和 `gitea` OAuth 2.0 提供者时，Gitea 的基础地址，例如 `https://git.example.com/`。更多信息见 [Gitea 文档](https://docs.gitea.com/zh-cn/development/oauth2-provider)。 |
+| `oidc_provider_base_url` |  | 使用 `oauth2` 身份验证和 `oidc` OAuth 2.0 提供方时，OIDC 提供方的基础地址。请确保 `.well-known` 目录在这个地址下。例如，如果设置为 `https://auth.example.com/`，发现地址应该是 `https://auth.example.com/.well-known/openid-configuration`。 |
+| `enable_oidc_display_name` | `false` | 使用 `oauth2` 身份验证和 `oidc` OAuth 2.0 提供方时，是否使用下列自定义提供者名称替换 `使用 Connect ID 登录` 按钮中的 `Connect ID` 文字。 |
+| `oidc_custom_display_name` |  | 使用 `oauth2` 身份验证和 `oidc` OAuth 2.0 提供方时，用于替换 `使用 Connect ID 登录` 按钮中的文字的自定义提供方名称，支持多语言。在设置项后增加下划线和语言标签，可配置在那个语言下的文字。例如, `oidc_custom_display_name_zh_hans` 表示在中文（简体）下的显示名称。 |
+| `nextcloud_base_url` |  | 使用 `oauth2` 身份验证和 `nextcloud` OAuth 2.0 提供方时，Nextcloud 的基础地址，例如 `https://cloud.example.org/` 或 `https://cloud.example.org/index.php`。更多信息见 [Nextcloud Administration Manual](https://docs.nextcloud.com/server/stable/admin_manual/configuration_server/oauth2.html)。 |
+| `gitea_base_url` |  | 使用 `oauth2` 身份验证和 `gitea` OAuth 2.0 提供方时，Gitea 的基础地址，例如 `https://git.example.com/`。更多信息见 [Gitea 文档](https://docs.gitea.com/zh-cn/development/oauth2-provider)。 |
 
 ### 用户
 

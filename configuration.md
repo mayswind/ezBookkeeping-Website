@@ -218,19 +218,23 @@ Note that if both above methods are configured for the same configuration option
 | Option Name | Default Value | Description |
 | --- | --- | --- |
 | `enable_internal_auth` | `true` | Whether to enable internal username and password login. |
-| `enable_oauth2_auth` | `false` | Whether to enable external OAuth 2.0 login. |
+| `enable_oauth2_auth` | `false` | Whether to enable external OAuth 2.0 login. The OAuth 2.0 callback path for ezBookkeeping is `/oauth2/callback`. For example, if your ezBookkeeping instance is hosted at [`https://ezbookkeeping-demo.mayswind.net/`](https://ezbookkeeping-demo.mayswind.net/), the callback URL would be [`https://ezbookkeeping-demo.mayswind.net/oauth2/callback`](https://ezbookkeeping-demo.mayswind.net/oauth2/callback). |
 | `enable_two_factor` | `true` | Whether to enable two factor authorization for `internal` authentication. |
 | `enable_forget_password` | `true` | Whether to enable user password reset for `internal` authentication. (SMTP server must be configured) |
 | `forget_password_require_email_verify` | `false` | Whether to require user email must be verified when use forget password for `internal` authentication. |
-| `oauth2_provider` |  | OAuth 2.0 provider for `oauth2` authentication, supports `nextcloud`, `gitea` and `github`. |
+| `oauth2_provider` |  | OAuth 2.0 provider for `oauth2` authentication, supports `oidc`, `nextcloud`, `gitea` and `github`. |
 | `oauth2_client_id` |  | OAuth 2.0 client ID for `oauth2` authentication. |
 | `oauth2_client_secret` |  | OAuth 2.0 client secret for `oauth2` authentication. |
 | `oauth2_user_identifier` | `email` | For `oauth2` authentication, the field used to match the user returned by OAuth 2.0 with an existing user in ezBookkeeping, supports `email` and `username`. |
+| `oauth2_use_pkce` | `false` | For `oauth2` authentication, whether to use PKCE. |
 | `oauth2_auto_register` | `true` | For `oauth2` authentication, automatically create a new user if the user returned by OAuth 2.0 is not registered. (requires `enable_register` to be set to `true`) |
 | `oauth2_state_expired_time` | `300` | For `oauth2` authentication, Timeout duration for the OAuth 2.0 authentication process (60 - 4294967295 seconds). |
 | `oauth2_request_timeout` | `10000` | Request timeout for OAuth 2.0 API (0 - 4294967295 milliseconds). Set to `0` to disable timeout for requesting OAuth 2.0 API. |
 | `oauth2_proxy` | `system` | Proxy for requesting OAuth 2.0 API, supports `system` (use system proxy), `none` (do not use proxy), or proxy URL which starts with `http://`, `https://` or `socks5://`. |
 | `oauth2_skip_tls_verify` | `false` | Whether to skip the server's certificate chain and host name verification when request OAuth 2.0 API. |
+| `oidc_provider_base_url` |  | For `oauth2` authentication and `oidc` OAuth 2.0 provider, OIDC provider base url. Make sure the `.well-known` directory is available under this path. For example, if it's set to `https://auth.example.com/`, the discovery URL should be `https://auth.example.com/.well-known/openid-configuration`. |
+| `enable_oidc_display_name` | `false` | For `oauth2` authentication and `oidc` OAuth 2.0 provider, whether to replace the text `Connect ID` in the `Log in with Connect ID` button with the below custom provider name. |
+| `oidc_custom_display_name` |  | For `oauth2` authentication and `oidc` OAuth 2.0 provider, the custom provider name to replace the text in the `Log in with Connect ID` button, it supports multi-language configuration. Add an underscore and a language tag after the setting key to configure the display name in that language. For example, `oidc_custom_display_name_zh_hans` means the display name in Chinese (Simplified). |
 | `nextcloud_base_url` |  | For `oauth2` authentication and `nextcloud` OAuth 2.0 provider, Nextcloud base url, e.g. `https://cloud.example.org/` or `https://cloud.example.org/index.php`. For more details, see [Nextcloud Administration Manual](https://docs.nextcloud.com/server/stable/admin_manual/configuration_server/oauth2.html). |
 | `gitea_base_url` |  | For `oauth2` authentication and `gitea` OAuth 2.0 provider, Gitea base url, e.g. `https://git.example.com/`. For more details, see [Gitea Documentation](https://docs.gitea.com/development/oauth2-provider). |
 
