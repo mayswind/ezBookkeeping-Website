@@ -234,7 +234,8 @@ ezBookkeeping 使用 ini 文件作为配置文件。
 | `oauth2_request_timeout` | `10000` | 请求 OAuth 2.0 API 的超时时间（0 - 4294967295 毫秒）。设置为 `0` 时禁用请求 OAuth 2.0 API 超时。 |
 | `oauth2_proxy` | `system` | 请求 OAuth 2.0 API 使用的代理，支持 `system`（使用系统代理） `none`（不使用代理），或以 `http://`、`https://` 或 `socks5://` 开头的代理服务器地址。 |
 | `oauth2_skip_tls_verify` | `false` | 请求 OAuth 2.0 API 时是否跳过服务器证书链和主机名称的校验。 |
-| `oidc_provider_base_url` |  | 使用 `oauth2` 身份验证和 `oidc` OAuth 2.0 提供方时，OIDC 提供方的基础地址。请确保 `.well-known` 目录在这个地址下。例如，如果设置为 `https://auth.example.com/`，发现地址应该是 `https://auth.example.com/.well-known/openid-configuration`。 |
+| `oidc_provider_base_url` |  | 使用 `oauth2` 身份验证和 `oidc` OAuth 2.0 提供方时，OIDC 提供方的 Issuer URL。请确保 `.well-known` 目录在这个地址下。例如，如果设置为 `https://auth.example.com`，发现地址应该是 `https://auth.example.com/.well-known/openid-configuration`。 |
+| `oidc_provider_check_issuer_url`| `true` | 使用 `oauth2` 身份验证和 `oidc` OAuth 2.0 提供方时，是否检查发现结果中的 Issuer URL 与上述 `oidc_provider_base_url` 一致。 |
 | `enable_oidc_display_name` | `false` | 使用 `oauth2` 身份验证和 `oidc` OAuth 2.0 提供方时，是否使用下列自定义提供者名称替换 `使用 Connect ID 登录` 按钮中的 `Connect ID` 文字。 |
 | `oidc_custom_display_name` |  | 使用 `oauth2` 身份验证和 `oidc` OAuth 2.0 提供方时，用于替换 `使用 Connect ID 登录` 按钮中的文字的自定义提供方名称，支持多语言。在设置项后增加下划线和语言标签，可配置在那个语言下的文字。例如, `oidc_custom_display_name_zh_hans` 表示在中文（简体）下的显示名称。 |
 | `nextcloud_base_url` |  | 使用 `oauth2` 身份验证和 `nextcloud` OAuth 2.0 提供方时，Nextcloud 的基础地址，例如 `https://cloud.example.org/` 或 `https://cloud.example.org/index.php`。更多信息见 [Nextcloud Administration Manual](https://docs.nextcloud.com/server/stable/admin_manual/configuration_server/oauth2.html)。 |
