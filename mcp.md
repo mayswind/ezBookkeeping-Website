@@ -26,7 +26,7 @@ With the MCP protocol, you can use your preferred AI tools to add transactions (
 
 ## Configuration
 
-By default, ezBookkeeping does not enable the MCP server. You can enable it by updating the `enable_mcp` setting in the configuration file or by setting the environment variable. For details, see the [Configuration](/configuration#mcp-model-context-protocol). After enabled, the “Generate Token” button will appear on "User Settings" -> "Security" page in the desktop version.
+By default, ezBookkeeping does not enable the MCP server. You can enable it by updating the `enable_mcp` setting in the configuration file or by setting the environment variable. For details, see the [Configuration](/configuration#mcp-model-context-protocol). After enabled, the "Generate Token" button will appear on "User Settings" -> "Security" page in the desktop version.
 
 ## Integration with AI Tools
 
