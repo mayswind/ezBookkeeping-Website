@@ -28,11 +28,11 @@ permalink: /zh_Hans/mcp
 
 ## 配置
 
-ezBookkeeping 默认没有启用 MCP 服务器，你可以修改配置文件中的 `enable_mcp` 或修改环境变量开启 MCP 功能，具体可以参考 [配置](/zh_Hans/configuration#mcp-model-context-protocol)，开启后在桌面版的 “用户设置” -> “安全” 页面中会出现 “生成 MCP 令牌” 按钮。
+ezBookkeeping 默认没有启用 MCP 服务器，你可以修改配置文件中的 `enable_mcp` 或修改环境变量开启 MCP 功能，具体可以参考 [配置](/zh_Hans/configuration#mcp-model-context-protocol)，开启后在桌面版的 “用户设置” -> “安全” 页面中会出现 “生成令牌” 按钮。
 
 ## 与 AI 工具集成
 
-ezBookkeeping 的 MCP 服务需要通过特殊的令牌进行访问，您可以在 ezBookkeeping 桌面版的 “用户设置” -> “安全” 页面中点击 “生成 MCP 令牌” 按钮，输入当前用户密码即可。也可以通过 ezBookkeeping 的命令行工具 `user-session-new` 进行生成，具体可以参考 [命令行](/zh_Hans/command_line#userdata)。
+ezBookkeeping 的 MCP 服务需要通过特殊的令牌进行访问，您可以在 ezBookkeeping 桌面版的 “用户设置” -> “安全” 页面中点击 “生成令牌” 按钮，输入当前用户密码即可。也可以通过 ezBookkeeping 的命令行工具 `user-session-new` 进行生成，具体可以参考 [命令行](/zh_Hans/command_line#userdata)。
 
 > 请注意，ezBookkeeping 的 MCP 令牌与其他类型的令牌不同，MCP 令牌没有过期时间，如果访问 MCP 服务器的 IP 地址固定（例如家庭内部网络），可以设置允许请求 MCP 服务器的 IP 地址，具体可以参考 [配置](/zh_Hans/configuration#mcp-model-context-protocol)。
 

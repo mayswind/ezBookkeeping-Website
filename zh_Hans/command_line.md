@@ -99,7 +99,8 @@ ezBookkeeping 用户数据维护操作。
 * `user-session-new`：为用户创建新会话。
     * 选项：
     * `--username value`, `-n value`：用户名。必填。
-    * `--type value`, `-t value`: 令牌类型，支持 `normal` 和 `mcp`，默认为 `normal`。
+    * `--type value`, `-t value`: 令牌类型，支持 `api` 和 `mcp`，默认为 `api`。
+    * `--expiresInSeconds value`, `-e value`: 令牌过期时间（0 - 4294967295 秒，`0` 表示永不过期）。必填。
 * `user-session-revoke`：注销指定用户会话。
     * 选项：
     * `--token value`, `-t value`: 令牌内容。必填。

@@ -210,6 +210,7 @@ ezBookkeeping 使用 ini 文件作为配置文件。
 | `temporary_token_expired_time` | `300` | 临时令牌过期时间（60 - 4294967295 秒）。 |
 | `email_verify_token_expired_time` | `3600` | 邮箱验证令牌过期时间（60 - 4294967295 秒）。 |
 | `password_reset_token_expired_time` | `3600` | 密码重置令牌过期时间（60 - 4294967295 秒）。 |
+| `enable_generate_api_token`| `false` | 是否开启生成 API 令牌。 |
 | `max_failures_per_ip_per_minute` | `5` | 每分钟每个 IP 密码/令牌检查失败的最大次数（0 - 4294967295）（使用上述重复检查器），默认为 `5`，设置为 `0` 时禁用。 |
 | `max_failures_per_user_per_minute` | `5` | 每分钟每个用户密码/令牌检查失败的最大次数（0 - 4294967295）（使用上述重复检查器），默认为 `5`，设置为 `0` 时禁用。 |
 
@@ -255,7 +256,7 @@ ezBookkeeping 使用 ini 文件作为配置文件。
 | `enable_scheduled_transaction` | `true` | 是否启用定时交易。 |
 | `avatar_provider` | `internal` | 用户头像提供方，支持 [`internal`](#对象存储)（使用内部对象存储保存用户头像，支持用户自行更新头像） 和 [`gravatar`](https://gravatar.com)（在该提供方网站上传头像，根据用户邮箱地址匹配）。如果您想禁用用户头像，留空即可。 |
 | `max_user_avatar_size` | `1048576` | 使用 `internal` 用户头像提供方时，最大允许的用户头像文件大小（1 - 4294967295 字节）。 |
-| `default_feature_restrictions` |  | 用户注册后默认的功能限制（功能类型使用逗号分隔），留空表示无限制。<br/>支持以下功能类型：<br/>`1`: 更新密码<br/>`2`: 更新邮箱<br/>`3`: 更新个人基本信息<br/>`4`: 更新头像<br/>`5`: 退出登录其他会话<br/>`6`: 启用两步验证<br/>`7`: 禁用两步验证<br/>`8`: 忘记密码<br/>`9`: 导入交易<br/>`10`: 导出交易<br/>`11`: 清除所有数据<br/>`12`: 同步应用设置<br/>`13`: MCP (Model Context Protocol) 访问<br/>`14`: AI 识图创建交易<br/>`15`：OAuth 2.0 登录<br/>`16`：取消关联第三方登录 |
+| `default_feature_restrictions` |  | 用户注册后默认的功能限制（功能类型使用逗号分隔），留空表示无限制。<br/>支持以下功能类型：<br/>`1`: 更新密码<br/>`2`: 更新邮箱<br/>`3`: 更新个人基本信息<br/>`4`: 更新头像<br/>`5`: 退出登录其他会话<br/>`6`: 启用两步验证<br/>`7`: 禁用两步验证<br/>`8`: 忘记密码<br/>`9`: 导入交易<br/>`10`: 导出交易<br/>`11`: 清除所有数据<br/>`12`: 同步应用设置<br/>`13`: MCP (Model Context Protocol) 访问<br/>`14`: AI 识图创建交易<br/>`15`：OAuth 2.0 登录<br/>`16`：取消关联第三方登录<br/>`17`：生成 API 令牌 |
 
 ### 数据
 

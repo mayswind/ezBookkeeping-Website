@@ -208,6 +208,7 @@ Note that if both above methods are configured for the same configuration option
 | `temporary_token_expired_time` | `300` | Temporary token expired time (60 - 4294967295 seconds). |
 | `email_verify_token_expired_time` | `3600` | Email verify token expired time (60 - 4294967295 seconds). |
 | `password_reset_token_expired_time` | `3600` | Password reset token expired time (60 - 4294967295 seconds). |
+| `enable_generate_api_token`| `false` | Whether to enable API token generation. |
 | `max_failures_per_ip_per_minute` | `5` | Maximum count of password / token check failures (0 - 4294967295) per IP per minute (use the above duplicate checker), default is `5`, set to `0` to disable. |
 | `max_failures_per_user_per_minute` | `5` | Maximum count of password / token check failures (0 - 4294967295) per user per minute (use the above duplicate checker), default is `5`, set to `0` to disable. |
 
@@ -253,7 +254,7 @@ Note that if both above methods are configured for the same configuration option
 | `enable_scheduled_transaction` | `true` | Whether to enable scheduled transaction. |
 | `avatar_provider` | `internal` | User avatar provider, supports [`internal`](#object-storage) (Use the internal object storage to store user avatar, supports updating avatar by user self) and [`gravatar`](https://gravatar.com) (updating avatar on the provider's website and match it by user's email address). Leave blank if you want to disable user avatar. |
 | `max_user_avatar_size` | `1048576` | Maximum allowed user avatar file size (1 - 4294967295 bytes) for `internal` avatar provider. |
-| `default_feature_restrictions` |  | The default feature restrictions after user registration (feature types separated by commas), leave blank for no restrictions.<br/>Supports the following feature types:<br/>`1`: Update Password<br/>`2`: Update Email<br/>`3`: Update Profile Basic Info<br/>`4`: Update Avatar<br/>`5`: Logout Other Session<br/>`6`: Enable Two-Factor Authentication<br/>`7`: Disable Enable Two-Factor Authentication<br/>`8`: Forget Password<br/>`9`: Import Transactions<br/>`10`: Export Transactions<br/>`11`: Clear All Data<br/>`12`: Sync Application Settings<br/>`13`: MCP (Model Context Protocol) Access<br/>`14`:  Create Transaction by AI Image Recognition<br/>`15`: OAuth 2.0 Login<br/>`16`: Unlink Third-party Login |
+| `default_feature_restrictions` |  | The default feature restrictions after user registration (feature types separated by commas), leave blank for no restrictions.<br/>Supports the following feature types:<br/>`1`: Update Password<br/>`2`: Update Email<br/>`3`: Update Profile Basic Info<br/>`4`: Update Avatar<br/>`5`: Logout Other Session<br/>`6`: Enable Two-Factor Authentication<br/>`7`: Disable Enable Two-Factor Authentication<br/>`8`: Forget Password<br/>`9`: Import Transactions<br/>`10`: Export Transactions<br/>`11`: Clear All Data<br/>`12`: Sync Application Settings<br/>`13`: MCP (Model Context Protocol) Access<br/>`14`:  Create Transaction by AI Image Recognition<br/>`15`: OAuth 2.0 Login<br/>`16`: Unlink Third-party Login<br/>`17`: Generate API Token |
 
 ### Data
 
