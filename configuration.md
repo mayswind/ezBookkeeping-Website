@@ -208,7 +208,7 @@ Note that if both above methods are configured for the same configuration option
 | `temporary_token_expired_time` | `300` | Temporary token expired time (60 - 4294967295 seconds). |
 | `email_verify_token_expired_time` | `3600` | Email verify token expired time (60 - 4294967295 seconds). |
 | `password_reset_token_expired_time` | `3600` | Password reset token expired time (60 - 4294967295 seconds). |
-| `enable_generate_api_token`| `false` | Whether to enable API token generation. |
+| `enable_api_token` | `false` | Whether to enable API token. |
 | `max_failures_per_ip_per_minute` | `5` | Maximum count of password / token check failures (0 - 4294967295) per IP per minute (use the above duplicate checker), default is `5`, set to `0` to disable. |
 | `max_failures_per_user_per_minute` | `5` | Maximum count of password / token check failures (0 - 4294967295) per user per minute (use the above duplicate checker), default is `5`, set to `0` to disable. |
 

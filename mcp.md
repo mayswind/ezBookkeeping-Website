@@ -32,7 +32,7 @@ By default, ezBookkeeping does not enable the MCP server. You can enable it by u
 
 The MCP service of ezBookkeeping requires a special token to access. You can go to "User Settings" -> "Security" and click the "Generate Token" button in desktop version, and then enter your password. Alternatively, you can generate the token by the `user-session-new` command in ezBookkeeping's CLI, for more details, see the [Command Line](/command_line#userdata).
 
-> Note that the MCP token in ezBookkeeping is different from other types of tokens, that is MCP token does not have expiry time. If the IP address used to access the MCP server is fixed (e.g., within a home network), you can restrict specific IP addresses that can access the MCP server. For details, see the [Configuration](/configuration#mcp-model-context-protocol).
+> If the IP address used to access the MCP server is fixed (e.g., within a home network), you can restrict specific IP addresses that can access the MCP server. For details, see the [Configuration](/configuration#mcp-model-context-protocol).
 
 Then, copy the following code into your AI tool's MCP server configuration to enable it to access and interact with ezBookkeeping data.
 
