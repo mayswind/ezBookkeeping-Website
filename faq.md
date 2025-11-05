@@ -150,6 +150,10 @@ In ezBookkeeping, currency is associated with accounts, not with individual tran
 
 Go to the User Profile page, where you can update the default account used when creating new transactions.
 
+## How assets and liabilities are calculated in ezBookkeeping
+
+In ezBookkeeping, asset and liability accounts are categorized based on their account categories. Cash, Checking Account, Savings Account, Virtual Account, Receivables, Certificate of Deposit, and Investment Account are treated as asset accounts, with their balances counted as assets. Credit Card and Debt Account are treated as liability accounts, with their outstanding balances counted as liabilities.
+
 ## How to change the color of amounts
 
 Go to the User Profile page, where you can change the color of expense and income amounts.
