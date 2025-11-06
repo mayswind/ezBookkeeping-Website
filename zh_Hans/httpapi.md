@@ -73,7 +73,7 @@ API 接口的返回结果是 JSON 对象，如下：
 | 字段 | 类型 | 描述 |
 | --- | --- | --- |
 | `tokenId` | `string` | 令牌 ID |
-| `tokenType` | `integer` | 令牌类型（`1`：普通令牌，`2`：待两步验证的令牌，`3`：邮箱验证令牌，`4`：重置密码令牌） |
+| `tokenType` | `integer` | 令牌类型（`1`：普通令牌，`5`：MCP 令牌，`8`：API 令牌） |
 | `userAgent` | `string` | 创建会话时的 User Agent |
 | `lastSeen` | `integer` | 会话的最后刷新时间 |
 | `isCurrent` | `boolean` | 是否是当前会话 |

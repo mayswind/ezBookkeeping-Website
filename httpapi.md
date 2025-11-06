@@ -71,7 +71,7 @@ None
 | Field | Type | Description |
 | --- | --- | --- |
 | `tokenId` | `string` | Token ID |
-| `tokenType` | `integer` | Token type (`1`: Normal Token, `2`: Token for two-step verification, `3`: Token to verify the email address, `4`: Token to reset password) |
+| `tokenType` | `integer` | Token type (`1`: Normal Token, `5`: MCP Token, `8`: API Token) |
 | `userAgent` | `string` | The User Agent when the session created |
 | `lastSeen` | `integer` | Last refresh time of the session |
 | `isCurrent` | `boolean` | Whether the session is current |
