@@ -45,7 +45,7 @@ If you've already deployed the ezBookkeeping server program, you can access ezBo
 
 ## How much system resources does ezBookkeeping use
 
-ezBookkeeping is a lightweight software written in Golang that needs very few resources. The ezBookkeeping binary file and its dependent static files take up about 40 MB of disk space, and it only requires about 30MB of memory when running on Linux/amd64 platform.
+ezBookkeeping is a lightweight software written in Golang that needs very few resources. The ezBookkeeping binary file and its dependent static files take up about 50 MB of disk space, and it only requires about 30MB of memory when running on Linux/amd64 platform.
 
 ## Why double-clicking `ezbookkeeping.exe` on Windows doesn't launch the application
 
@@ -120,6 +120,24 @@ For detailed steps, see the [guide](https://raw.githubusercontent.com/wiki/maysw
 
 When you launch ezBookkeeping server for the first time, the database of ezBookkeeping is empty, and you'll need to register a new user. ezBookkeeping does not have a default user.
 
+## How assets and liabilities are calculated in ezBookkeeping
+
+In ezBookkeeping, asset and liability accounts are categorized based on their account categories. Cash, Checking Account, Savings Account, Virtual Account, Receivables, Certificate of Deposit, and Investment Account are treated as asset accounts, with their balances counted as assets. Credit Card and Debt Account are treated as liability accounts, with their outstanding balances counted as liabilities.
+
+## What do "Balance" and "Outstanding Balance" mean when creating an account?
+
+When creating an asset account, you can set its balance, which represents the amount of assets available in that account (a positive number indicates funds you own).
+
+When creating a liability account, you can set its outstanding balance, which represents the amount of debt associated with that account (a positive number indicates money you owe).
+
+## What is the purpose of the "Balance Time" when creating an account?
+
+In ezBookkeeping, every transaction must have a transaction time. If you set an balance or outstanding balance when creating an account, you also need to specify the time of that balance modification transaction. Any future transactions added to the account cannot have a transaction time earlier than this time.
+
+## What is the purpose of the "Statement Date" when creating a credit card account?
+
+If a statement date is set for a credit card account, you can filter transactions for that account by selecting either the current billing cycle or previous billing cycle date range in the transaction list.
+
 ## Why can't add a transaction
 
 In ezBookkeeping, every transaction must set an account and a transaction category. Transaction categories are organized by transaction type, including expense category, income category and transfer category, and each transaction must be assigned a secondary category under one of these types. If you haven't yet created any accounts or secondary categories for the relevant transaction type, you won't be able to create a new transaction.
@@ -150,19 +168,31 @@ In ezBookkeeping, currency is associated with accounts, not with individual tran
 
 Go to the User Profile page, where you can update the default account used when creating new transactions.
 
-## How assets and liabilities are calculated in ezBookkeeping
-
-In ezBookkeeping, asset and liability accounts are categorized based on their account categories. Cash, Checking Account, Savings Account, Virtual Account, Receivables, Certificate of Deposit, and Investment Account are treated as asset accounts, with their balances counted as assets. Credit Card and Debt Account are treated as liability accounts, with their outstanding balances counted as liabilities.
-
 ## How to change the color of amounts
 
 Go to the User Profile page, where you can change the color of expense and income amounts.
+
+## What does the "+" sign after the monthly expense and income amounts mean in the mobile transaction list?
+
+In the mobile version, the transaction list loads data on demand by default. The monthly expense and income amounts displayed after each month are calculated based on the transactions that have been loaded so far. When the data for that month hasn't been fully loaded, a "+" sign appears to indicate that the displayed totals are incomplete. If you want to view the full monthly total expense and income amounts, you can select a full month in the date filter. When filter a full month in transaction list, ezBookkeeping always loads all transactions data for that month.
+
+## How to view transaction time in the default time zone
+
+In ezBookkeeping, both the transaction list and the transaction detail page display transaction times in the transaction's time zone by default.
+
+In the mobile version, you can tap the transaction time on the transaction detail page to switch between the transaction's time zone and the default time zone.
+
+In the desktop version, you can hover over the transaction time on the transaction list page to view it in the default time zone.
 
 ## How to edit or delete transactions and accounts on mobile version
 
 In the mobile version of ezBookkeeping, you can swipe left on any item in the transaction or account list page to reveal the "Edit" and "Delete" buttons. Tap "Edit" to open the editing page.
 
 [![How to edit transaction](images/how_to_edit_transaction.png)](images/how_to_edit_transaction.png)
+
+## How to quickly hide accounts, categories, or tags on mobile version
+
+In the mobile version of ezBookkeeping, you can long-press on any item in the account, category or tag list page, and swipe right on this item to quickly toggle the hidden status.
 
 ## How to create a transaction using a template
 
@@ -177,6 +207,16 @@ After setting up the large language model configuration:
 
 1. Mobile version: Long-press the create transaction button on the bottom navigation bar in the main page, then tap "AI Image Recognition" from the list that appears.
 2. Desktop version: Hover over the "Add" transaction button on the transaction list page, then click "AI Image Recognition" from the dropdown menu.
+
+## How "Outflows By Account", "Expense By Account", "Inflows By Account", "Income By Account", "Net Cash Flow", "Net Income" and "Net Income" are calculated in statistics & analysis
+
+1. Outflows By Account (in categorical analysis and trend analysis): Includes expense and transfers out transactions from the selected accounts
+2. Expense By Account (in categorical analysis and trend analysis): Includes expense transactions from the selected accounts
+3. Inflows By Account (in categorical analysis and trend analysis): Includes income and transfers in transactions from the selected accounts
+4. Income By Account (in categorical analysis and trend analysis): Includes income transactions from the selected accounts
+5. Net Cash Flow (in trend analysis): Includes expenses, transfers out, income and transfers in transactions for the selected accounts
+6. Net Income (in trend analysis): Includes income and expense transactions from the selected accounts
+7. Net Worth (in asset trends): The balance of the selected asset accounts minus the outstanding balance of the liability accounts
 
 ## Scheduled transaction does not create transaction automatically
 

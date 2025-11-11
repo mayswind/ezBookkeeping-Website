@@ -34,6 +34,8 @@ See [transaction-export](/command_line#userdata)
 1. Tap "Data Management" in "Settings" page
 2. Tap the "Export Data" button and select the file type to export all transactions into the chosen file format
 
+If you want to export filtered transactions, go to the transaction list page, hover over the "Import" button, and click "Export" from the dropdown menu.
+
 ## Import Transactions
 
 ezBookkeeping supports importing files exported by ezBookkeeping via the command line, as well as importing various types of transaction data files from the desktop user interface. The transaction data import tool in the desktop version allows you to preview the imported data and perform batch modifications.
