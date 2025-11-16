@@ -235,6 +235,10 @@ server {
         return 301 /ezbookkeeping/;
     }
 
+    location ~ ^/ezbookkeeping/(desktop|mobile)/$ {
+        return 301 /ezbookkeeping/$1;
+    }
+
     location /ezbookkeeping/ {
         rewrite ^/ezbookkeeping/(.*) /$1 break;
         proxy_pass http://ezbookkeeping-upstream;
