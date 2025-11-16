@@ -230,7 +230,11 @@ server {
     listen [::]:443 ssl;
     server_name yourdomain;
 
-    location /ezbookkeeping {
+    location = /ezbookkeeping {
+        return 301 /ezbookkeeping/;
+    }
+
+    location /ezbookkeeping/ {
         rewrite ^/ezbookkeeping/(.*) /$1 break;
         proxy_pass http://ezbookkeeping-upstream;
 
