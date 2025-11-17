@@ -216,6 +216,7 @@ Note that if both above methods are configured for the same configuration option
 
 > Section name is `auth`
 
+> If you want to set up `Authelia` as the OAuth 2.0 provider for ezBookkeeping, you can refer to the document at [https://www.authelia.com/integration/openid-connect/clients/ezbookkeeping/](https://www.authelia.com/integration/openid-connect/clients/ezbookkeeping/)  
 > If you want to set up `authentik` as the OAuth 2.0 provider for ezBookkeeping, you can refer to the document at [https://integrations.goauthentik.io/miscellaneous/ezbookkeeping/](https://integrations.goauthentik.io/miscellaneous/ezbookkeeping/)
 
 | Option Name | Default Value | Description |
