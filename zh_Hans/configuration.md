@@ -218,8 +218,9 @@ ezBookkeeping 使用 ini 文件作为配置文件。
 
 > 配置节名称为 `auth`
 
-> 如果你想将 `Authelia` 设置为 ezBookkeeping 的 OAuth 2.0 提供者，你可以参考文档 [https://www.authelia.com/integration/openid-connect/clients/ezbookkeeping/](https://www.authelia.com/integration/openid-connect/clients/ezbookkeeping/)  
-> 如果你想将 `authentik` 设置为 ezBookkeeping 的 OAuth 2.0 提供者，你可以参考文档 [https://integrations.goauthentik.io/miscellaneous/ezbookkeeping/](https://integrations.goauthentik.io/miscellaneous/ezbookkeeping/)
+> 使用第三方 OIDC 提供者时，可以参考如下文档：
+> - Authelia：[https://www.authelia.com/integration/openid-connect/clients/ezbookkeeping/](https://www.authelia.com/integration/openid-connect/clients/ezbookkeeping/)  
+> - authentik：[https://integrations.goauthentik.io/miscellaneous/ezbookkeeping/](https://integrations.goauthentik.io/miscellaneous/ezbookkeeping/)
 
 | 选项名 | 默认值 | 描述 |
 | --- | --- | --- |
