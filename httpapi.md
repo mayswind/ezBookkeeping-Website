@@ -20,7 +20,7 @@ ezBookkeeping provides HTTP API for the frontend interface, and these API can al
 
 ## Usage
 
-The API of ezBookkeeping verifies user identity by tokens. You can enable the option to generate API tokens by updating `enable_generate_api_token` in the configuration file or by setting the environment variable. For details, see [Configuration](/configuration#security). After enabled, the "Generate Token" button will appear on "User Settings" -> "Security" page in the desktop version, and you can also generate the token by the `user-session-new` command in ezBookkeeping's CLI, for more details, see the [Command Line](/command_line#userdata).
+The API of ezBookkeeping verifies user identity by tokens. You can enable the option to generate API tokens by updating `enable_api_token` in the configuration file or by setting the environment variable. For details, see [Configuration](/configuration#security). After enabled, the "Generate Token" button will appear on "User Settings" -> "Security" page in the desktop version, and you can also generate the token by the `user-session-new` command in ezBookkeeping's CLI, for more details, see the [Command Line](/command_line#userdata).
 
 Then you can use the token to access the API.
 
