@@ -164,6 +164,12 @@ Alternatively, you can update the ending balance in the Reconciliation Statement
 
 In ezBookkeeping, currency is associated with accounts, not with individual transactions. Each account has exactly one currency. If your account in the real-world supports multiple currencies, you can set its account type to "Multiple Sub-accounts", and create a separate sub-account for each currency.
 
+## How to paste the transaction amount from the clipboard when editing a transaction on mobile version
+
+In iOS, the "Paste" action must be triggered by the system control. When you tap the amount on the amount number pad in ezBookkeeping, the system's "Paste" button (as shown below) will appear, just tap it to paste. In other operating systems, you can open the menu in the transaction edit page to tap the paste option.
+
+[![How to paste an amount](images/number_pad_paste.png)](images/number_pad_paste.png)
+
 ## How to change the default account when adding a transaction
 
 Go to the User Profile page, where you can update the default account used when creating new transactions.
