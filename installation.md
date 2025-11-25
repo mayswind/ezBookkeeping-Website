@@ -154,9 +154,21 @@ After installation, go to the "Installed Apps" page and click "Open" to access t
 
 ## Kubernetes Deployment
 
+For production deployments in Kubernetes, ezBookkeeping can be deployed using the following manifests. This example demonstrates a complete setup with PostgreSQL as the database backend, persistent storage for user uploads and logs, and an Ingress configuration with TLS support.
 
+Before applying these manifests, make sure to:
+- Create or choose a namespace and replace `my-namespace` in the apply commands below
+- Replace `my-server-hostname` with your actual node hostname
+- Update `/mnt/pg-data`, `/mnt/ebk-storage`, and `/mnt/ebk-logs` paths to your desired storage locations
+- Generate secure values for secrets in `secret.yaml` (use `echo -n "secret-value" | base64`)
+- Update `ebk.my-domain.com` with your actual domain name
+- Ensure you have NGINX Ingress Controller installed in your cluster
+- Ensure you have cert-manager installed with a configured ClusterIssuer named `letsencrypt-cluster` for automatic TLS certificate provisioning
+- The manifests use `local-storage` StorageClass. Either create this StorageClass or update `storageClassName` in all manifests to use your cluster's storage solution (e.g., `longhorn`, `nfs-client`, `ceph-rbd`, or your cloud provider's default storage class)
 
-secret.yaml:
+### secret.yaml
+
+Contains sensitive data including the PostgreSQL database password and ezBookkeeping's secret key for session encryption.
 
 ```yaml
 apiVersion: v1
@@ -170,7 +182,9 @@ data:
   EBK_SECURITY_SECRET_KEY: XXX
 ```
 
-pg.yaml:
+### pg.yaml
+
+PostgreSQL database deployment with StatefulSet, headless Service, and PersistentVolume for data storage.
 
 ```yaml
 apiVersion: v1
@@ -258,9 +272,9 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: "pg" 
+  name: "pg"
 spec:
-  clusterIP: None    
+  clusterIP: None
   selector:
     app: "pg"
   ports:
@@ -269,7 +283,9 @@ spec:
 
 ```
 
-ebk.yaml:
+### ebk.yaml
+
+ezBookkeeping application Deployment.
 
 ```yaml
 apiVersion: v1
@@ -401,7 +417,7 @@ spec:
         - name: EBK_DATABASE_TYPE
           value: "postgres"
         - name: EBK_DATABASE_HOST
-          value: "ebk-pg:5432"
+          value: "pg:5432"
         - name: EBK_DATABASE_NAME
           value: "ezbookkeeping"
         - name: EBK_DATABASE_USER
@@ -448,7 +464,9 @@ spec:
     tier: frontend
 ```
 
-ingress.yaml:
+### ingress.yaml
+
+Ingress configuration for external HTTPS access with automatic TLS certificate provisioning via cert-manager.
 
 ```yaml
 ---
