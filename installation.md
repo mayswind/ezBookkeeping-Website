@@ -434,6 +434,13 @@ spec:
         ports:
         - containerPort: 8080
           name: ezbookkeeping
+        resources:
+          requests:
+            memory: "128Mi"
+            cpu: "100m"
+          limits:
+            memory: "1Gi"
+            cpu: "2"
         volumeMounts:
         - mountPath: "/ezbookkeeping/storage"
           name: "ebk-storage"
