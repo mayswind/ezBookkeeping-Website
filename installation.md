@@ -152,6 +152,343 @@ After installation, go to the "Installed Apps" page and click "Open" to access t
 
 > Before using, it is recommended to set the "default access address" in the "Panel Settings" page.
 
+## Kubernetes Deployment
+
+
+
+secret.yaml:
+
+```yaml
+apiVersion: v1
+kind: Secret
+metadata:
+  name: ebk-secret
+type: Opaque
+data:
+  # echo -n "secret-value" | base64
+  POSTGRES_PASSWORD: XXX
+  EBK_SECURITY_SECRET_KEY: XXX
+```
+
+pg.yaml:
+
+```yaml
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: "pg-data-pv"
+  labels:
+    pv-for: "pg-data"
+spec:
+  nodeAffinity:
+    required:
+      nodeSelectorTerms:
+      - matchExpressions:
+        - key: kubernetes.io/hostname
+          operator: In
+          values:
+          - "my-server-hostname"
+  capacity:
+    storage: 10Gi
+  accessModes:
+    - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Retain
+  storageClassName: local-storage
+  local:
+    path: "/mnt/pg-data"  # change to your actual path
+
+---
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: "pg"
+spec:
+  serviceName: "pg"
+  replicas: 1
+  selector:
+    matchLabels:
+      app: "pg"
+  template:
+    metadata:
+      labels:
+        app: "pg"
+    spec:
+      nodeSelector:
+        kubernetes.io/hostname: "my-server-hostname"
+      containers:
+        - name: postgres
+          image: postgres:18
+          env:
+          - name: POSTGRES_USER
+            value: "ezbookkeeping"
+          - name: POSTGRES_DB
+            value: "ezbookkeeping"
+          - name: POSTGRES_PASSWORD
+            valueFrom:
+              secretKeyRef:
+                name: "ebk-secret"
+                key: POSTGRES_PASSWORD
+          ports:
+          - containerPort: 5432
+          volumeMounts:
+          - mountPath: /var/lib/postgresql
+            name: "pg-data"
+          resources:
+            requests:
+              memory: "250Mi"
+              cpu: "100m"
+            limits:
+              memory: "2Gi"
+              cpu: "2"
+  volumeClaimTemplates:
+    - metadata:
+        name: "pg-data"
+      spec:
+        storageClassName: local-storage
+        selector:
+          matchLabels:
+            pv-for: "pg-data"
+        accessModes:
+          - ReadWriteOnce
+        resources:
+          requests:
+            storage: 10Gi
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: "pg" 
+spec:
+  clusterIP: None    
+  selector:
+    app: "pg"
+  ports:
+    - port: 5432
+      targetPort: 5432
+
+```
+
+ebk.yaml:
+
+```yaml
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: "ebk-storage-pv"
+  labels:
+    pv-for: "ebk-storage"
+spec:
+  nodeAffinity:
+    required:
+      nodeSelectorTerms:
+        - matchExpressions:
+            - key: kubernetes.io/hostname
+              operator: In
+              values:
+                - "my-server-hostname"
+  capacity:
+    storage: 9Gi
+  accessModes:
+    - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Retain
+  storageClassName: local-storage
+  local:
+    path: "/mnt/ebk-storage"  # change to your actual path
+
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: "ebk-logs-pv"
+  labels:
+    pv-for: "ebk-logs"
+spec:
+  nodeAffinity:
+    required:
+      nodeSelectorTerms:
+        - matchExpressions:
+            - key: kubernetes.io/hostname
+              operator: In
+              values:
+                - "my-server-hostname"
+  capacity:
+    storage: 9Gi
+  accessModes:
+    - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Retain
+  storageClassName: local-storage
+  local:
+    path: "/mnt/ebk-logs"  # change to your actual path
+
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: "ebk-storage-pvc"
+  labels:
+    app: "ebk"
+spec:
+  storageClassName: local-storage
+  selector:
+    matchLabels:
+      pv-for: "ebk-storage"
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 9Gi
+
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: "ebk-logs-pvc"
+  labels:
+    app: "ebk"
+spec:
+  storageClassName: local-storage
+  selector:
+    matchLabels:
+      pv-for: "ebk-logs"
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 9Gi
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: "ebk"
+  labels:
+    app: "ebk"
+spec:
+  selector:
+    matchLabels:
+      app: "ebk"
+      tier: frontend
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: "ebk"
+        tier: frontend
+    spec:
+      nodeSelector:
+        kubernetes.io/hostname: "my-server-hostname"
+      securityContext:
+        runAsUser: 1000
+        runAsGroup: 1000
+        fsGroup: 1000
+      containers:
+      - image: "mayswind/ezbookkeeping:1.2.0" # perform updates manually by changing the image tag
+        name: "ebk"
+        env:
+        - name: EBK_SECURITY_SECRET_KEY
+          valueFrom:
+            secretKeyRef:
+              name: "ebk-secret"
+              key: EBK_SECURITY_SECRET_KEY
+        - name: EBK_SERVER_PROTOCOL
+          value: "http"
+        - name: EBK_SERVER_DOMAIN
+          value: "ebk.my-domain.com"
+        - name: EBK_SERVER_ENABLE_GZIP
+          value: "true"
+        - name: EBK_DATABASE_TYPE
+          value: "postgres"
+        - name: EBK_DATABASE_HOST
+          value: "ebk-pg:5432"
+        - name: EBK_DATABASE_NAME
+          value: "ezbookkeeping"
+        - name: EBK_DATABASE_USER
+          value: "ezbookkeeping"
+        - name: EBK_DATABASE_PASSWD
+          valueFrom:
+            secretKeyRef:
+              name: "ebk-secret"
+              key: POSTGRES_PASSWORD
+        - name: EBK_LOG_MODE
+          value: "file"
+        - name: EBK_USER_ENABLE_REGISTER
+          value: "true"  # or "false" to disable user registration after first admin user created
+        ports:
+        - containerPort: 8080
+          name: ezbookkeeping
+        volumeMounts:
+        - mountPath: "/ezbookkeeping/storage"
+          name: "ebk-storage"
+        - mountPath: "/ezbookkeeping/log"
+          name: "ebk-logs"
+      volumes:
+        - name: "ebk-storage"
+          persistentVolumeClaim:
+            claimName: "ebk-storage-pvc"
+        - name: "ebk-logs"
+          persistentVolumeClaim:
+            claimName: "ebk-logs-pvc"
+
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: "ebk"
+  labels:
+    app: "ebk"
+spec:
+  clusterIP: None
+  ports:
+    - port: 8080
+  selector:
+    app: "ebk"
+    tier: frontend
+```
+
+ingress.yaml:
+
+```yaml
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: "ebk-ingress"
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt-cluster
+    nginx.ingress.kubernetes.io/limit-rps: "25"
+    nginx.ingress.kubernetes.io/proxy-buffer-size: "16k"
+spec:
+  ingressClassName: nginx
+  rules:
+  - host: "ebk.my-domain.com"
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: "ebk"
+            port:
+              number: 8080
+  tls:
+  - hosts:
+    - "ebk.my-domain.com"
+    secretName: "ebk-tls-secret"
+```
+
+### Apply manifests
+
+```bash
+kubectl apply -f secret.yaml -n "my-namespace"
+kubectl apply -f pg.yaml -n "my-namespace"
+kubectl apply -f ebk.yaml -n "my-namespace"
+kubectl apply -f ingress.yaml -n "my-namespace"
+```
+
+
 ## Install from binary
 Latest release: 
 
