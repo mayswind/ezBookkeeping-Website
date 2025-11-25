@@ -423,8 +423,7 @@ None
 | `type` | `integer` | Optional | Filter transaction by transaction type (`1`: Balance modification, `2`: Income, `3`: Expense, `4`: Transafer) |
 | `category_ids` | `string` | Optional | Filter transaction by transaction category IDs (separated by `,`) |
 | `account_ids` | `string` | Optional | Filter transaction by account IDs (separated by `,`) |
-| `tag_ids` | `string` | Optional | Filter transaction by tag IDs (separated by `,`) |
-| `tag_filter_type` | `integer` | Optional | Transaction tag filter type (`0`: Transaction has all specified tags, `1`: Transaction has any specified tags, `2`: Transaction does not have all specified tags, `3`: Transaction does not have any specified tags) |
+| `tag_filter` | `string` | Optional | Filter transactions by tags (multiple tag groups are supported, separate groups with `;`. Each tag group uses the format `type:tag_id1,tag_id2,...` where `type` defines the filter mode, `0`: transaction contains all tags in the group, `1`: transaction contains any tag in the group, `2`: transaction does not contain all tags in the group, `3`: transaction does not contain any tag in the group) |
 | `amount_filter` | `string` | Optional | Filter transaction by amount (Greater than amount: `gt:{amount}`, Less than amount: `lt:{amount}`, Equal amount: `eq:{amount}`, Not equal amount: `ne:{amount}`, Between two amounts: `bt:{min_amount}:{max_amount}`, Not between two amounts: `ne:{min_amount}:{max_amount}`) |
 | `keyword` | `string` | Optional | Filter transaction by keyword |
 | `max_time` | `integer` | Optional | The maximum time sequence ID (Set to `0` if you want to get the latest transactions) |
