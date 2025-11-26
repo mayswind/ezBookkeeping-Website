@@ -158,197 +158,44 @@ For production deployments in Kubernetes, ezBookkeeping can be deployed using th
 
 Before applying these manifests, make sure to:
 - Create or choose a namespace and replace `my-namespace` in the apply commands below
-- Replace `my-server-hostname` with your actual node hostname
-- Update `/mnt/pg-data`, `/mnt/ebk-storage`, and `/mnt/ebk-logs` paths to your desired storage locations
+- Replace `my-server-hostname` with your actual node hostname if using node affinity
 - Generate secure values for secrets in `secret.yaml` (use `echo -n "secret-value" | base64`)
-- Update `ebk.my-domain.com` with your actual domain name
+- Update `ezbookkeeping.yourdomain` with your actual domain name
 - Ensure you have NGINX Ingress Controller installed in your cluster
 - Ensure you have cert-manager installed with a configured ClusterIssuer named `letsencrypt-cluster` for automatic TLS certificate provisioning
 - The manifests use `local-storage` StorageClass. Either create this StorageClass or update `storageClassName` in all manifests to use your cluster's storage solution (e.g., `longhorn`, `nfs-client`, `ceph-rbd`, or your cloud provider's default storage class)
 
 ### secret.yaml
 
-Contains sensitive data including the PostgreSQL database password and ezBookkeeping's secret key for session encryption.
+Contains sensitive data including ezBookkeeping's secret key for session encryption.
 
 ```yaml
 apiVersion: v1
 kind: Secret
 metadata:
-  name: ebk-secret
+  name: ezbookkeeping-secret
 type: Opaque
 data:
   # echo -n "secret-value" | base64
-  POSTGRES_PASSWORD: XXX
   EBK_SECURITY_SECRET_KEY: XXX
 ```
 
-### pg.yaml
-
-PostgreSQL database deployment with StatefulSet, headless Service, and PersistentVolume for data storage.
-
-```yaml
-apiVersion: v1
-kind: PersistentVolume
-metadata:
-  name: "pg-data-pv"
-  labels:
-    pv-for: "pg-data"
-spec:
-  nodeAffinity:
-    required:
-      nodeSelectorTerms:
-      - matchExpressions:
-        - key: kubernetes.io/hostname
-          operator: In
-          values:
-          - "my-server-hostname"
-  capacity:
-    storage: 10Gi
-  accessModes:
-    - ReadWriteOnce
-  persistentVolumeReclaimPolicy: Retain
-  storageClassName: local-storage
-  local:
-    path: "/mnt/pg-data"  # change to your actual path
-
----
-apiVersion: apps/v1
-kind: StatefulSet
-metadata:
-  name: "pg"
-spec:
-  serviceName: "pg"
-  replicas: 1
-  selector:
-    matchLabels:
-      app: "pg"
-  template:
-    metadata:
-      labels:
-        app: "pg"
-    spec:
-      nodeSelector:
-        kubernetes.io/hostname: "my-server-hostname"
-      containers:
-        - name: postgres
-          image: postgres:18
-          env:
-          - name: POSTGRES_USER
-            value: "ezbookkeeping"
-          - name: POSTGRES_DB
-            value: "ezbookkeeping"
-          - name: POSTGRES_PASSWORD
-            valueFrom:
-              secretKeyRef:
-                name: "ebk-secret"
-                key: POSTGRES_PASSWORD
-          ports:
-          - containerPort: 5432
-          volumeMounts:
-          - mountPath: /var/lib/postgresql
-            name: "pg-data"
-          resources:
-            requests:
-              memory: "250Mi"
-              cpu: "100m"
-            limits:
-              memory: "2Gi"
-              cpu: "2"
-  volumeClaimTemplates:
-    - metadata:
-        name: "pg-data"
-      spec:
-        storageClassName: local-storage
-        selector:
-          matchLabels:
-            pv-for: "pg-data"
-        accessModes:
-          - ReadWriteOnce
-        resources:
-          requests:
-            storage: 10Gi
-
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: "pg"
-spec:
-  clusterIP: None
-  selector:
-    app: "pg"
-  ports:
-    - port: 5432
-      targetPort: 5432
-
-```
-
-### ebk.yaml
+### ezbookkeeping.yaml
 
 ezBookkeeping application Deployment.
 
 ```yaml
 apiVersion: v1
-kind: PersistentVolume
-metadata:
-  name: "ebk-storage-pv"
-  labels:
-    pv-for: "ebk-storage"
-spec:
-  nodeAffinity:
-    required:
-      nodeSelectorTerms:
-        - matchExpressions:
-            - key: kubernetes.io/hostname
-              operator: In
-              values:
-                - "my-server-hostname"
-  capacity:
-    storage: 9Gi
-  accessModes:
-    - ReadWriteOnce
-  persistentVolumeReclaimPolicy: Retain
-  storageClassName: local-storage
-  local:
-    path: "/mnt/ebk-storage"  # change to your actual path
-
----
-apiVersion: v1
-kind: PersistentVolume
-metadata:
-  name: "ebk-logs-pv"
-  labels:
-    pv-for: "ebk-logs"
-spec:
-  nodeAffinity:
-    required:
-      nodeSelectorTerms:
-        - matchExpressions:
-            - key: kubernetes.io/hostname
-              operator: In
-              values:
-                - "my-server-hostname"
-  capacity:
-    storage: 9Gi
-  accessModes:
-    - ReadWriteOnce
-  persistentVolumeReclaimPolicy: Retain
-  storageClassName: local-storage
-  local:
-    path: "/mnt/ebk-logs"  # change to your actual path
-
----
-apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: "ebk-storage-pvc"
+  name: "ezbookkeeping-storage-pvc"
   labels:
-    app: "ebk"
+    app: "ezbookkeeping"
 spec:
   storageClassName: local-storage
   selector:
     matchLabels:
-      pv-for: "ebk-storage"
+      pv-for: "ezbookkeeping-storage"
   accessModes:
     - ReadWriteOnce
   resources:
@@ -359,14 +206,14 @@ spec:
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: "ebk-logs-pvc"
+  name: "ezbookkeeping-logs-pvc"
   labels:
-    app: "ebk"
+    app: "ezbookkeeping"
 spec:
   storageClassName: local-storage
   selector:
     matchLabels:
-      pv-for: "ebk-logs"
+      pv-for: "ezbookkeeping-logs"
   accessModes:
     - ReadWriteOnce
   resources:
@@ -377,21 +224,19 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: "ebk"
+  name: "ezbookkeeping"
   labels:
-    app: "ebk"
+    app: "ezbookkeeping"
 spec:
   selector:
     matchLabels:
-      app: "ebk"
-      tier: frontend
+      app: "ezbookkeeping"
   strategy:
     type: Recreate
   template:
     metadata:
       labels:
-        app: "ebk"
-        tier: frontend
+        app: "ezbookkeeping"
     spec:
       nodeSelector:
         kubernetes.io/hostname: "my-server-hostname"
@@ -401,32 +246,19 @@ spec:
         fsGroup: 1000
       containers:
       - image: "mayswind/ezbookkeeping:1.2.0" # perform updates manually by changing the image tag
-        name: "ebk"
+        name: "ezbookkeeping"
         env:
         - name: EBK_SECURITY_SECRET_KEY
           valueFrom:
             secretKeyRef:
-              name: "ebk-secret"
+              name: "ezbookkeeping-secret"
               key: EBK_SECURITY_SECRET_KEY
         - name: EBK_SERVER_PROTOCOL
           value: "http"
         - name: EBK_SERVER_DOMAIN
-          value: "ebk.my-domain.com"
+          value: "ezbookkeeping.yourdomain"
         - name: EBK_SERVER_ENABLE_GZIP
           value: "true"
-        - name: EBK_DATABASE_TYPE
-          value: "postgres"
-        - name: EBK_DATABASE_HOST
-          value: "pg:5432"
-        - name: EBK_DATABASE_NAME
-          value: "ezbookkeeping"
-        - name: EBK_DATABASE_USER
-          value: "ezbookkeeping"
-        - name: EBK_DATABASE_PASSWD
-          valueFrom:
-            secretKeyRef:
-              name: "ebk-secret"
-              key: POSTGRES_PASSWORD
         - name: EBK_LOG_MODE
           value: "file"
         - name: EBK_USER_ENABLE_REGISTER
@@ -449,26 +281,25 @@ spec:
       volumes:
         - name: "ebk-storage"
           persistentVolumeClaim:
-            claimName: "ebk-storage-pvc"
+            claimName: "ezbookkeeping-storage-pvc"
         - name: "ebk-logs"
           persistentVolumeClaim:
-            claimName: "ebk-logs-pvc"
+            claimName: "ezbookkeeping-logs-pvc"
 
 
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: "ebk"
+  name: "ezbookkeeping"
   labels:
-    app: "ebk"
+    app: "ezbookkeeping"
 spec:
   clusterIP: None
   ports:
     - port: 8080
   selector:
-    app: "ebk"
-    tier: frontend
+    app: "ezbookkeeping"
 ```
 
 ### ingress.yaml
@@ -480,7 +311,7 @@ Ingress configuration for external HTTPS access with automatic TLS certificate p
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: "ebk-ingress"
+  name: "ezbookkeeping-ingress"
   annotations:
     cert-manager.io/cluster-issuer: letsencrypt-cluster
     nginx.ingress.kubernetes.io/limit-rps: "25"
@@ -488,28 +319,27 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-  - host: "ebk.my-domain.com"
+  - host: "ezbookkeeping.yourdomain"
     http:
       paths:
       - path: /
         pathType: Prefix
         backend:
           service:
-            name: "ebk"
+            name: "ezbookkeeping"
             port:
               number: 8080
   tls:
   - hosts:
-    - "ebk.my-domain.com"
-    secretName: "ebk-tls-secret"
+    - "ezbookkeeping.yourdomain"
+    secretName: "ezbookkeeping-tls-secret"
 ```
 
 ### Apply manifests
 
 ```bash
 kubectl apply -f secret.yaml -n "my-namespace"
-kubectl apply -f pg.yaml -n "my-namespace"
-kubectl apply -f ebk.yaml -n "my-namespace"
+kubectl apply -f ezbookkeeping.yaml -n "my-namespace"
 kubectl apply -f ingress.yaml -n "my-namespace"
 ```
 
