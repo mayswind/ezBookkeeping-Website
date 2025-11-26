@@ -245,7 +245,8 @@ spec:
         runAsGroup: 1000
         fsGroup: 1000
       containers:
-      - image: "mayswind/ezbookkeeping:1.2.0" # perform updates manually by changing the image tag
+      - image: "mayswind/ezbookkeeping:latest" # you can set specific version here (:1.2.0) for manual update control
+        imagePullPolicy: Always  # Required for :latest tag to ensure fresh image pulls. Use IfNotPresent for specific versions
         name: "ezbookkeeping"
         env:
         - name: EBK_SECURITY_SECRET_KEY
@@ -254,15 +255,13 @@ spec:
               name: "ezbookkeeping-secret"
               key: EBK_SECURITY_SECRET_KEY
         - name: EBK_SERVER_PROTOCOL
-          value: "http"
+          value: "http"  # Ingress will handle HTTPS termination
         - name: EBK_SERVER_DOMAIN
           value: "ezbookkeeping.yourdomain"
         - name: EBK_SERVER_ENABLE_GZIP
           value: "true"
         - name: EBK_LOG_MODE
-          value: "file"
-        - name: EBK_USER_ENABLE_REGISTER
-          value: "true"  # or "false" to disable user registration after first admin user created
+          value: "console"  # Logs are collected from stdout/stderr in Kubernetes and can be accessed via `kubectl logs`
         ports:
         - containerPort: 8080
           name: ezbookkeeping
@@ -275,14 +274,14 @@ spec:
             cpu: "2"
         volumeMounts:
         - mountPath: "/ezbookkeeping/storage"
-          name: "ebk-storage"
+          name: "ezbookkeeping-storage"
         - mountPath: "/ezbookkeeping/log"
-          name: "ebk-logs"
+          name: "ezbookkeeping-logs"
       volumes:
-        - name: "ebk-storage"
+        - name: "ezbookkeeping-storage"
           persistentVolumeClaim:
             claimName: "ezbookkeeping-storage-pvc"
-        - name: "ebk-logs"
+        - name: "ezbookkeeping-logs"
           persistentVolumeClaim:
             claimName: "ezbookkeeping-logs-pvc"
 
