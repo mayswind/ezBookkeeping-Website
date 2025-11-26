@@ -160,7 +160,6 @@ For production deployments in Kubernetes, ezBookkeeping can be deployed referrin
 
 Before applying these manifests, make sure to:
 - Create a namespace `ezbookkeeping`
-- Replace `my-server-hostname` with your actual node hostname if using node affinity
 - Generate secure values for secrets in `secret.yaml` (use `echo -n "secret-value" | base64`)
 - Update `ezbookkeeping.yourdomain` with your actual domain name
 - Ensure you have Nginx Ingress Controller installed in your cluster
@@ -241,8 +240,6 @@ spec:
       labels:
         app: "ezbookkeeping"
     spec:
-      nodeSelector:
-        kubernetes.io/hostname: "my-server-hostname"
       securityContext:
         runAsUser: 1000
         runAsGroup: 1000
