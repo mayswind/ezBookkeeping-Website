@@ -154,16 +154,16 @@ After installation, go to the "Installed Apps" page and click "Open" to access t
 
 ## Kubernetes Deployment
 
-For production deployments in Kubernetes, ezBookkeeping can be deployed using the following manifests. This example demonstrates a complete setup with PostgreSQL as the database backend, persistent storage for user uploads and logs, and an Ingress configuration with TLS support.
+For production deployments in Kubernetes, ezBookkeeping can be deployed using the following manifests. This example demonstrates a complete setup with persistent storage for SQLite database, user uploads and logs, and an Ingress configuration with TLS support.
 
 Before applying these manifests, make sure to:
-- Create or choose a namespace and replace `my-namespace` in the apply commands below
+- Create a namespace `ezbookkeeping`
 - Replace `my-server-hostname` with your actual node hostname if using node affinity
 - Generate secure values for secrets in `secret.yaml` (use `echo -n "secret-value" | base64`)
 - Update `ezbookkeeping.yourdomain` with your actual domain name
-- Ensure you have NGINX Ingress Controller installed in your cluster
-- Ensure you have cert-manager installed with a configured ClusterIssuer named `letsencrypt-cluster` for automatic TLS certificate provisioning
-- The manifests use `local-storage` StorageClass. Either create this StorageClass or update `storageClassName` in all manifests to use your cluster's storage solution (e.g., `longhorn`, `nfs-client`, `ceph-rbd`, or your cloud provider's default storage class)
+- Ensure you have Nginx Ingress Controller installed in your cluster
+- Ensure you have cert-manager installed with a configured ClusterIssuer (`letsencrypt-cluster` in this example) for automatic TLS certificate provisioning
+- Replace `my-storage-class` with the StorageClass name you use in your cluster (e.g., `longhorn`, `nfs-client`, `ceph-rbd`, `local-storage`, or your cloud provider's default storage class)
 
 ### secret.yaml
 
@@ -192,7 +192,7 @@ metadata:
   labels:
     app: "ezbookkeeping"
 spec:
-  storageClassName: local-storage
+  storageClassName: my-storage-class
   selector:
     matchLabels:
       pv-for: "ezbookkeeping-storage"
@@ -210,7 +210,7 @@ metadata:
   labels:
     app: "ezbookkeeping"
 spec:
-  storageClassName: local-storage
+  storageClassName: my-storage-class
   selector:
     matchLabels:
       pv-for: "ezbookkeeping-logs"
@@ -338,9 +338,9 @@ spec:
 ### Apply manifests
 
 ```bash
-kubectl apply -f secret.yaml -n "my-namespace"
-kubectl apply -f ezbookkeeping.yaml -n "my-namespace"
-kubectl apply -f ingress.yaml -n "my-namespace"
+kubectl apply -f secret.yaml -n "ezbookkeeping"
+kubectl apply -f ezbookkeeping.yaml -n "ezbookkeeping"
+kubectl apply -f ingress.yaml -n "ezbookkeeping"
 ```
 
 
