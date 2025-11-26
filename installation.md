@@ -154,7 +154,7 @@ After installation, go to the "Installed Apps" page and click "Open" to access t
 
 ## Kubernetes Deployment
 
-For production deployments in Kubernetes, ezBookkeeping can be deployed using the following manifests. This example demonstrates a complete setup with persistent storage for SQLite database, user uploads and logs, and an Ingress configuration with TLS support.
+For production deployments in Kubernetes, ezBookkeeping can be deployed using the following manifests. This example demonstrates a complete setup with persistent storage for SQLite database and user uploads, and an Ingress configuration with TLS support.
 
 Before applying these manifests, make sure to:
 - Create a namespace `ezbookkeeping`
@@ -185,6 +185,25 @@ data:
 ezBookkeeping application Deployment.
 
 ```yaml
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: "ezbookkeeping-data-pvc"
+  labels:
+    app: "ezbookkeeping"
+spec:
+  storageClassName: my-storage-class
+  selector:
+    matchLabels:
+      pv-for: "ezbookkeeping-data"
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 9Gi
+
+---
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
@@ -196,24 +215,6 @@ spec:
   selector:
     matchLabels:
       pv-for: "ezbookkeeping-storage"
-  accessModes:
-    - ReadWriteOnce
-  resources:
-    requests:
-      storage: 9Gi
-
----
-apiVersion: v1
-kind: PersistentVolumeClaim
-metadata:
-  name: "ezbookkeeping-logs-pvc"
-  labels:
-    app: "ezbookkeeping"
-spec:
-  storageClassName: my-storage-class
-  selector:
-    matchLabels:
-      pv-for: "ezbookkeeping-logs"
   accessModes:
     - ReadWriteOnce
   resources:
@@ -273,19 +274,18 @@ spec:
             memory: "1Gi"
             cpu: "2"
         volumeMounts:
-        - mountPath: "/ezbookkeeping/storage"
+        - mountPath: "/ezbookkeeping/data"  # SQLite database storage
+          name: "ezbookkeeping-data"
+        - mountPath: "/ezbookkeeping/storage"  # User uploads storage
           name: "ezbookkeeping-storage"
-        - mountPath: "/ezbookkeeping/log"
-          name: "ezbookkeeping-logs"
       volumes:
+        - name: "ezbookkeeping-data"
+          persistentVolumeClaim:
+            claimName: "ezbookkeeping-data-pvc"
         - name: "ezbookkeeping-storage"
           persistentVolumeClaim:
             claimName: "ezbookkeeping-storage-pvc"
-        - name: "ezbookkeeping-logs"
-          persistentVolumeClaim:
-            claimName: "ezbookkeeping-logs-pvc"
-
-
+        
 ---
 apiVersion: v1
 kind: Service
