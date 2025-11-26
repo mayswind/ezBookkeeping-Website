@@ -154,7 +154,9 @@ After installation, go to the "Installed Apps" page and click "Open" to access t
 
 ## Kubernetes Deployment
 
-For production deployments in Kubernetes, ezBookkeeping can be deployed using the following manifests. This example demonstrates a complete setup with persistent storage for SQLite database and user uploads, and an Ingress configuration with TLS support.
+For production deployments in Kubernetes, ezBookkeeping can be deployed referring to the following manifests. This example demonstrates a production-ready setup with:
+- ezBookkeeping deployment with persistent storages for SQLite database and user uploads
+- Ingress configuration with TLS/HTTPS support
 
 Before applying these manifests, make sure to:
 - Create a namespace `ezbookkeeping`
