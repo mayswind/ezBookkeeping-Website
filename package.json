@@ -1,0 +1,22 @@
+{
+  "name": "ezbookkeeping-documentation",
+  "version": "1.3.0",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mayswind/ezBookkeeping-Website.git"
+  },
+  "author": "MaysWind <i@mayswind.net>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mayswind/ezbookkeeping-Website/issues"
+  },
+  "scripts": {
+    "docs:dev": "vitepress dev",
+    "docs:build": "vitepress build",
+    "docs:preview": "vitepress preview"
+  },
+  "devDependencies": {
+    "vitepress": "^2.0.0-alpha.15"
+  }
+}
