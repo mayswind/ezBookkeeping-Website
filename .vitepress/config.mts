@@ -77,7 +77,7 @@ export default defineConfig({
             copyright: 'Copyright © 2020-2025 MaysWind.'
         },
         editLink: {
-            pattern: 'https://github.com/mayswind/ezBookkeeping-Website/edit/main/:path'
+            pattern: 'https://github.com/mayswind/ezBookkeeping-Website/edit/main/docs/:path'
         },
         search: {
             provider: 'local',
