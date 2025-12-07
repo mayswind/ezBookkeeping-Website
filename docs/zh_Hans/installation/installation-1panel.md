@@ -10,7 +10,7 @@ title: "使用 1Panel 安装"
 
 登录 1Panel，进入“应用商店”，搜索“ezBookkeeping”，点击“安装”即可。
 
-![如何在 1Panel 中安装 ezBookkeeping](/images/zh_Hans/how_to_install_ezBookkeeping_in_1Panel.png){target=_blank}
+[![如何在 1Panel 中安装 ezBookkeeping](/images/zh_Hans/how_to_install_ezBookkeeping_in_1Panel.png)](/images/zh_Hans/how_to_install_ezBookkeeping_in_1Panel.png){target=_blank}
 
 > 安装时请根据实际需求配置以下参数：
 >
@@ -20,7 +20,7 @@ title: "使用 1Panel 安装"
 >
 > 保持“默认配置”也可以完成安装，可根据实际需求调整。
 
-![如何填写安装 ezBookkeeping 在 1Panel 中的参数](/images/zh_Hans/how_to_fill_in_parameters_when_installing_ezBookkeeping_in_1Panel.png){target=_blank}
+[![如何填写安装 ezBookkeeping 在 1Panel 中的参数](/images/zh_Hans/how_to_fill_in_parameters_when_installing_ezBookkeeping_in_1Panel.png)](/images/zh_Hans/how_to_fill_in_parameters_when_installing_ezBookkeeping_in_1Panel.png){target=_blank}
 
 1Panel 安装的 ezBookkeeping 使用 `sqlite3` 作为数据库，并完全使用 `ezbookkeeping.ini` 配置文件进行配置。
 
