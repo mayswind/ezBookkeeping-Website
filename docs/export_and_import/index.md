@@ -4,7 +4,7 @@ title: Export & Import
 
 # Export & Import
 
-## Export Transactions
+## Export Transactions {#export-transactions}
 
 ezBookkeeping supports exporting transaction data as CSV (Comma-Separated Values) or TSV (Tab-Separated Values) files, via the command line or from the user interface.
 
@@ -66,7 +66,7 @@ The following table lists all supported file types and the data contents that ca
 * "×" means that the original file contains this data, but it cannot be imported
 * \*1: Split transactions will be converted into separate transactions
 
-### How to import Delimiter-separated Values (DSV) File or Data
+### How to import Delimiter-separated Values (DSV) File or Data {#how-to-import-delimiter-separated-values-dsv-file-or-data}
 
 ezBookkeeping supports importing custom data formatted with delimiters. You can separate your data using commas or tabs, then save it as a CSV or TSV file, or paste it directly into the text box.
 
@@ -88,14 +88,14 @@ If "Custom Script" is selected as the hanlding method, the next page allows you 
 
 At last, you should check if the imported transactions are mapped to existing transaction categories, accounts, and tags. Invalid data will be highlighted in red. You can click the pen icon on the left side of each record to modify the transaction category, account or tag of this transaction. You can also click the menu in the upper right corner to batch replace transaction categories, accounts or tags. Finally, select the transactions you want to import by checking the box on the left side, then click the "Import" button
 
-### How to get GnuCash XML Database File
+### How to get GnuCash XML Database File {#how-to-get-gnucash-xml-database-file}
 
 [![](/images/en/how_to_export_gnucash.png)](/images/en/how_to_export_gnucash.png){target=_blank}
 
 1. Click the "File" menu and select "Save As"
 2. Select "xml" in "Data Format", and save to export the GnuCash database in XML format
 
-### How to get Firefly III Data Export File
+### How to get Firefly III Data Export File {#how-to-get-firefly-iii-data-export-file}
 
 [![](/images/en/how_to_export_firefly_iii.png)](/images/en/how_to_export_firefly_iii.png){target=_blank}
 

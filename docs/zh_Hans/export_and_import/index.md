@@ -4,7 +4,7 @@ title: 导出 & 导入
 
 # 导出 & 导入
 
-## 导出交易
+## 导出交易 {#导出交易}
 
 ezbookkeeping 支持使用命令行或从用户界面中导出交易数据为 CSV（Comma-separated values）或 TSV（Tab-separated values）格式的文件。
 
@@ -66,7 +66,7 @@ ezbookkeeping 支持使用命令行导入 ezbookkeeping 导出的文件，或从
 * “×” 表示原始文件包含该数据，但该数据不支持被导入
 * \*1: 拆分交易将转换为独立的交易
 
-### 如何导入分隔符分隔值 (DSV) 文件、数据
+### 如何导入分隔符分隔值 (DSV) 文件、数据 {#如何导入分隔符分隔值-dsv-文件数据}
 
 ezBookkeeping 支持导入使用分隔符分隔的自定义格式数据，您可以将您要导入的数据使用逗号或制表符分隔，然后将其保存为 CSV 或 TSV 格式的文件，或者直接将其粘贴到文本框中。
 
@@ -88,21 +88,21 @@ ezBookkeeping 支持导入使用分隔符分隔的自定义格式数据，您可
 
 最后你需要检查导入的交易是否映射到已经创建的分类、账户和标签，无效的数据将会标红显示。您可以点击每条记录左侧的笔形状的图标修改这条交易的分类、账户或标签。您还可以点击右上角的菜单，批量替换分类、账户或标签。最后点击交易左侧的复选框，选择最终要导入的交易，然后点击 “导入” 按钮即可
 
-### 如何获取 GnuCash XML 数据库文件
+### 如何获取 GnuCash XML 数据库文件 {#如何获取-gnucash-xml-数据库文件}
 
 [![](/images/zh_Hans/how_to_export_gnucash.png)](/images/zh_Hans/how_to_export_gnucash.png){target=_blank}
 
 1. 点击 “文件” 菜单，选择 “另存为”
 2. 选择 “数据格式” 中的 “xml”，保存即可导出 XML 格式的 GnuCash 数据库
 
-### 如何获取 Firefly III 数据导出文件
+### 如何获取 Firefly III 数据导出文件 {#如何获取-firefly-iii-数据导出文件}
 
 [![](/images/zh_Hans/how_to_export_firefly_iii.png)](/images/zh_Hans/how_to_export_firefly_iii.png){target=_blank}
 
 1. 在 Firefly III 左侧导航栏中点击 “导出数据”
 2. 点击 “导出所有交易” 即可导出为 csv 格式的文件
 
-### 如何获取随手记（App）数据导出文件
+### 如何获取随手记（App）数据导出文件 {#如何获取随手记app数据导出文件}
 
 [![](/images/zh_Hans/how_to_export_feidee_mymoney_app.png)](/images/zh_Hans/how_to_export_feidee_mymoney_app.png){target=_blank}
 
@@ -114,7 +114,7 @@ ezBookkeeping 支持导入使用分隔符分隔的自定义格式数据，您可
 
 > 注意：随手记 iPhone App 导出的交易数据中没有正确处理交易备注中的换行符，如果交易备注中包含换行符，导入 ezbookkeeping 将会失败。如果存在该问题，可以使用随手记 Android App 导出交易数据，然后再导入到 ezbookkeeping。
 
-### 如何获取随手记（Web版）数据导出文件
+### 如何获取随手记（Web版）数据导出文件 {#如何获取随手记web版数据导出文件}
 
 [![](/images/zh_Hans/how_to_export_feidee_mymoney_web.png)](/images/zh_Hans/how_to_export_feidee_mymoney_web.png){target=_blank}
 
@@ -124,7 +124,7 @@ ezBookkeeping 支持导入使用分隔符分隔的自定义格式数据，您可
 
 > 注意：随手记（Web版）导出的转账交易数据中没有正确处理跨币种的转账交易数据，跨币种的转账交易只有一个金额。如果您要导入的数据中包含跨币种的转账交易，请使用随手记手机App导出交易数据，然后再导入到 ezbookkeeping。
 
-### 如何获取随手记（神象云账本）数据导出文件
+### 如何获取随手记（神象云账本）数据导出文件 {#如何获取随手记神象云账本数据导出文件}
 
 **从随手记（App）导出神象云账本**
 
@@ -145,7 +145,7 @@ ezBookkeeping 支持导入使用分隔符分隔的自定义格式数据，您可
 3. 设置导出数据的时间范围等
 4. 点击 “确认导出” 即可导出为 Excel（.xlsx）格式的文件
 
-### 如何获取支付宝（App）交易流水文件
+### 如何获取支付宝（App）交易流水文件 {#如何获取支付宝app交易流水文件}
 
 [![](/images/zh_Hans/how_to_export_alipay_app.png)](/images/zh_Hans/how_to_export_alipay_app.png){target=_blank}
 
@@ -157,7 +157,7 @@ ezBookkeeping 支持导入使用分隔符分隔的自定义格式数据，您可
 6. 若上一步提交成功，会在新的页面提示申请已提交，然后点击 “完成”
 7. 打开第5步填写的邮箱，下载由支付宝发送的导出数据 zip 压缩文件。然后返回支付宝App首页，选择 “消息”，在 “服务消息” 中可以查看该压缩文件的密码，使用该密码解压缩后即为导出的 csv 格式文件
 
-### 如何获取支付宝（网页版）交易流水文件
+### 如何获取支付宝（网页版）交易流水文件 {#如何获取支付宝网页版交易流水文件}
 
 [![](/images/zh_Hans/how_to_export_alipay_web_1.png)](/images/zh_Hans/how_to_export_alipay_web_1.png){target=_blank}
 
@@ -167,7 +167,7 @@ ezBookkeeping 支持导入使用分隔符分隔的自定义格式数据，您可
 2. 选择要导出的时间范围
 3. 点击 “下载查询结果” 即可导出 zip 格式的压缩文件，解压缩后即为 csv 格式的文件
 
-### 如何获取微信支付账单文件
+### 如何获取微信支付账单文件 {#如何获取微信支付账单文件}
 
 [![](/images/zh_Hans/how_to_export_wechat_pay_app.png)](/images/zh_Hans/how_to_export_wechat_pay_app.png){target=_blank}
 
@@ -182,7 +182,7 @@ ezBookkeeping 支持导入使用分隔符分隔的自定义格式数据，您可
 9. 若上一步提交成功，会在新的页面提示申请已提交，然后点击 “完成”
 10. 打开第8步填写的邮箱，下载由微信支付发送的导出数据 zip 压缩文件。然后返回微信App首页，找到 “微信支付” 发送的消息，即可查看该压缩文件的密码，使用该密码解压缩后即为导出的 xlsx 或 csv 格式文件
 
-### 如何获取京东金融账单文件
+### 如何获取京东金融账单文件 {#如何获取京东金融账单文件}
 
 [![](/images/zh_Hans/how_to_export_jdcom_finance_app.png)](/images/zh_Hans/how_to_export_jdcom_finance_app.png){target=_blank}
 
