@@ -90,11 +90,14 @@ export default defineConfig({
                                 buttonAriaLabel: '搜索文档'
                             },
                             modal: {
-                                noResultsText: '无法找到相关结果',
+                                displayDetails: '显示详情',
                                 resetButtonTitle: '清除查询条件',
+                                backButtonTitle: '返回',
+                                noResultsText: '无法找到相关结果',
                                 footer: {
                                     selectText: '选择',
-                                    navigateText: '切换'
+                                    navigateText: '切换',
+                                    closeText: '关闭'
                                 }
                             }
                         }
