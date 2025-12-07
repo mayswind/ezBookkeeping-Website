@@ -16,7 +16,7 @@ Visit [Docker Hub](https://hub.docker.com/r/mayswind/ezbookkeeping) to see all i
 
 `mayswind/ezbookkeeping:{version}`
 
-**Latest snapshot image**
+**Latest daily build (snapshot) image**
 
 `mayswind/ezbookkeeping:latest-snapshot`
 
@@ -87,7 +87,7 @@ For more information, please visit [Configuration](/configuration/).
 
 A full production deployment example (using `mysql` as database):
 
-```yaml
+```yaml:line-numbers
 version: "2"
 services:
   ezbookkeeping:
@@ -112,4 +112,4 @@ services:
       - "/var/log/ezbookkeeping:/ezbookkeeping/log" # make sure the UID:GID is 1000:1000
 ```
 
-If you're interested, you can take a look at the [docker-compose file](/configurations/demo/docker-compose.yml) and [nginx configuration file](/configurations/demo/ezbookkeeping.demo.conf) behind [https://ezbookkeeping-demo.mayswind.net](https://ezbookkeeping-demo.mayswind.net).
+If you're interested, you can take a look at the [docker-compose file](/configurations/demo/docker-compose.yml){target=_blank} and [nginx configuration file](/configurations/demo/ezbookkeeping.demo.conf){target=_blank} behind [https://ezbookkeeping-demo.mayswind.net](https://ezbookkeeping-demo.mayswind.net).

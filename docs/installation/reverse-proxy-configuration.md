@@ -8,7 +8,7 @@ If you want to use Nginx as the reverse proxy, you can refer to the following co
 
 ## ezBookkeeping in the ROOT path of domain
 
-```
+```text:line-numbers
 upstream ezbookkeeping-upstream {
     server 127.0.0.1:8080;
 }
@@ -40,7 +40,7 @@ server {
 
 ## ezBookkeeping in the sub path of domain (e.g. `/ezbookkeeping`)
 
-```
+```text:line-numbers
 upstream ezbookkeeping-upstream {
     server 127.0.0.1:8080;
 }

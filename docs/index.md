@@ -15,6 +15,12 @@ hero:
           text: Live Demo
           link: https://ezbookkeeping-demo.mayswind.net
 
+screenshots:
+    - src: https://raw.githubusercontent.com/wiki/mayswind/ezbookkeeping/img/desktop/en.png
+      alt: Desktop Version
+    - src: https://raw.githubusercontent.com/wiki/mayswind/ezbookkeeping/img/mobile/en.png
+      alt: Mobile Version
+
 features:
     - title: Open Source & Self-Hosted
       icon: 🛠️
@@ -59,11 +65,3 @@ features:
       icon: 📑
       details: Supports CSV, OFX, QFX, QIF, IIF, Camt.053, MT940, GnuCash, Firefly III, Beancount, and more
 ---
-
-<br/>
-
-<h1>Screenshots</h1>
-
-[![Desktop Version](https://raw.githubusercontent.com/wiki/mayswind/ezbookkeeping/img/desktop/en.png)](https://raw.githubusercontent.com/wiki/mayswind/ezbookkeeping/img/desktop/en.png)
-
-[![Mobile Version](https://raw.githubusercontent.com/wiki/mayswind/ezbookkeeping/img/mobile/en.png)](https://raw.githubusercontent.com/wiki/mayswind/ezbookkeeping/img/mobile/en.png)

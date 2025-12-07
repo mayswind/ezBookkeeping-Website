@@ -20,7 +20,7 @@ Before applying these manifests, make sure to:
 
 Contains sensitive data including ezBookkeeping's secret key for session encryption.
 
-```yaml
+```yaml:line-numbers
 apiVersion: v1
 kind: Secret
 metadata:
@@ -35,7 +35,7 @@ data:
 
 ezBookkeeping application Deployment.
 
-```yaml
+```yaml:line-numbers
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
@@ -154,7 +154,7 @@ spec:
 
 Ingress configuration for external HTTPS access with automatic TLS certificate provisioning via cert-manager.
 
-```yaml
+```yaml:line-numbers
 ---
 apiVersion: networking.k8s.io/v1
 kind: Ingress

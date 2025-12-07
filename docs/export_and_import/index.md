@@ -90,14 +90,14 @@ At last, you should check if the imported transactions are mapped to existing tr
 
 ### How to get GnuCash XML Database File
 
-[![](/images/en/how_to_export_gnucash.png)](/images/en/how_to_export_gnucash.png)
+[![](/images/en/how_to_export_gnucash.png)](/images/en/how_to_export_gnucash.png){target=_blank}
 
 1. Click the "File" menu and select "Save As"
 2. Select "xml" in "Data Format", and save to export the GnuCash database in XML format
 
 ### How to get Firefly III Data Export File
 
-[![](/images/en/how_to_export_firefly_iii.png)](/images/en/how_to_export_firefly_iii.png)
+[![](/images/en/how_to_export_firefly_iii.png)](/images/en/how_to_export_firefly_iii.png){target=_blank}
 
 1. Click "Export data" in the left navigation bar of Firefly III
 2. Click "Export all transactions" to export to a csv file

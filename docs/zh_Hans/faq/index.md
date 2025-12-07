@@ -156,7 +156,7 @@ ezBookkeeping 的货币信息不与每笔交易所关联，而是与账户所关
 
 iOS 系统中由于 “粘贴” 操作必须由系统控件触发，所以 ezBookkeeping 的金额输入框中轻触金额，会出现的系统 “粘贴” 按钮（如下图），点击即可粘贴。在其他操作系统中，在交易编辑页面打开菜单然后轻触粘贴选项。
 
-[![如何粘贴金额](/images/zh_Hans/number_pad_paste.png)](/images/zh_Hans/number_pad_paste.png)
+[![如何粘贴金额](/images/zh_Hans/number_pad_paste.png)](/images/zh_Hans/number_pad_paste.png){target=_blank}
 
 ## 如何修改添加交易时默认的账户
 
@@ -182,7 +182,7 @@ ezBookkeeping 的交易列表和交易详情页默认都是按交易时区显示
 
 在 ezBookkeeping 移动版中，你可以在交易、账户的列表页面的每项内容左滑，即会出现 “编辑”、“删除” 按钮，轻触 “编辑” 即可进入编辑页面。
 
-[![如何修改交易](/images/zh_Hans/how_to_edit_transaction.png)](/images/zh_Hans/how_to_edit_transaction.png)
+[![如何修改交易](/images/zh_Hans/how_to_edit_transaction.png)](/images/zh_Hans/how_to_edit_transaction.png){target=_blank}
 
 ## 移动版如何快速隐藏账户、分类、标签
 

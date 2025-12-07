@@ -6,7 +6,7 @@ hero:
     tagline: "开源、轻量、自托管 (self-hosted) 的个人记账应用"
     actions:
         - theme: brand
-          text: 快速上手
+          text: 快速开始
           link: /zh_Hans/installation
         - theme: alt
           text: 在 GitHub 上查看
@@ -14,6 +14,12 @@ hero:
         - theme: alt
           text: 在线演示
           link: https://ezbookkeeping-demo.mayswind.net
+
+screenshots:
+    - src: https://raw.githubusercontent.com/wiki/mayswind/ezbookkeeping/img/desktop/zh_Hans.png
+      alt: 桌面版
+    - src: https://raw.githubusercontent.com/wiki/mayswind/ezbookkeeping/img/mobile/zh_Hans.png
+      alt: 移动版
 
 features:
     - title: 开源 & 自托管
@@ -33,7 +39,7 @@ features:
       details: 针对手机与桌面优化的 UI <br/>
           支持 PWA，带来接近原生 App 的使用体验 <br/>
           深色模式
-    - title: AI驱动的功能
+    - title: AI 驱动的功能
       icon: 🤖
       details: 收据图片识别 <br/>
           支持 MCP (Model Context Protocol) 用于 AI 集成
@@ -59,11 +65,3 @@ features:
       icon: 📑
       details: 支持 CSV、OFX、QFX、QIF、IIF、Camt.053、MT940、GnuCash、FireFly III、Beancount、随手记，以及支付宝、微信支付及京东金融的对账单 等多种格式
 ---
-
-<br/>
-
-<h1>截图</h1>
-
-[![桌面版](https://raw.githubusercontent.com/wiki/mayswind/ezbookkeeping/img/desktop/zh_Hans.png)](https://raw.githubusercontent.com/wiki/mayswind/ezbookkeeping/img/desktop/zh_Hans.png)
-
-[![移动版](https://raw.githubusercontent.com/wiki/mayswind/ezbookkeeping/img/mobile/zh_Hans.png)](https://raw.githubusercontent.com/wiki/mayswind/ezbookkeeping/img/mobile/zh_Hans.png)

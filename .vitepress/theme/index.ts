@@ -1,4 +1,16 @@
+import { h } from 'vue';
+import type { Theme } from 'vitepress';
 import DefaultTheme from 'vitepress/theme';
+
 import './custom.css';
 
-export default DefaultTheme;
+import HomeHeroScreenshots from './components/HomeHeroScreenshots.vue';
+
+export default {
+    extends: DefaultTheme,
+    Layout: () => {
+        return h(DefaultTheme.Layout, null, {
+            "home-hero-actions-after": () => h(HomeHeroScreenshots)
+        });
+    }
+} satisfies Theme;

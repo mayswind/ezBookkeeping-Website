@@ -90,21 +90,21 @@ ezBookkeeping 支持导入使用分隔符分隔的自定义格式数据，您可
 
 ### 如何获取 GnuCash XML 数据库文件
 
-[![](/images/zh_Hans/how_to_export_gnucash.png)](/images/zh_Hans/how_to_export_gnucash.png)
+[![](/images/zh_Hans/how_to_export_gnucash.png)](/images/zh_Hans/how_to_export_gnucash.png){target=_blank}
 
 1. 点击 “文件” 菜单，选择 “另存为”
 2. 选择 “数据格式” 中的 “xml”，保存即可导出 XML 格式的 GnuCash 数据库
 
 ### 如何获取 Firefly III 数据导出文件
 
-[![](/images/zh_Hans/how_to_export_firefly_iii.png)](/images/zh_Hans/how_to_export_firefly_iii.png)
+[![](/images/zh_Hans/how_to_export_firefly_iii.png)](/images/zh_Hans/how_to_export_firefly_iii.png){target=_blank}
 
 1. 在 Firefly III 左侧导航栏中点击 “导出数据”
 2. 点击 “导出所有交易” 即可导出为 csv 格式的文件
 
 ### 如何获取随手记（App）数据导出文件
 
-[![](/images/zh_Hans/how_to_export_feidee_mymoney_app.png)](/images/zh_Hans/how_to_export_feidee_mymoney_app.png)
+[![](/images/zh_Hans/how_to_export_feidee_mymoney_app.png)](/images/zh_Hans/how_to_export_feidee_mymoney_app.png){target=_blank}
 
 1. 在随手记App选择账本后点击 “设置”，然后点击 “高级功能”
 2. 在新的页面中点击 “备份与同步”
@@ -116,7 +116,7 @@ ezBookkeeping 支持导入使用分隔符分隔的自定义格式数据，您可
 
 ### 如何获取随手记（Web版）数据导出文件
 
-[![](/images/zh_Hans/how_to_export_feidee_mymoney_web.png)](/images/zh_Hans/how_to_export_feidee_mymoney_web.png)
+[![](/images/zh_Hans/how_to_export_feidee_mymoney_web.png)](/images/zh_Hans/how_to_export_feidee_mymoney_web.png){target=_blank}
 
 1. 在随手记网页版点击 “新功能” 菜单
 2. 在弹出的菜单中点击 “导入导出”
@@ -128,7 +128,7 @@ ezBookkeeping 支持导入使用分隔符分隔的自定义格式数据，您可
 
 **从随手记（App）导出神象云账本**
 
-[![](/images/zh_Hans/how_to_export_feidee_mymoney_elecloud_app.png)](/images/zh_Hans/how_to_export_feidee_mymoney_elecloud_app.png)
+[![](/images/zh_Hans/how_to_export_feidee_mymoney_elecloud_app.png)](/images/zh_Hans/how_to_export_feidee_mymoney_elecloud_app.png){target=_blank}
 
 1. 在随手记App选择账本后点击 “设置”，然后点击 “数据导出”
 2. 设置导出数据的时间范围等
@@ -136,9 +136,9 @@ ezBookkeeping 支持导入使用分隔符分隔的自定义格式数据，您可
 
 **从随手记（Web版）导出神象云账本**
 
-[![](/images/zh_Hans/how_to_export_feidee_mymoney_elecloud_web_1.png)](/images/zh_Hans/how_to_export_feidee_mymoney_elecloud_web_1.png)
+[![](/images/zh_Hans/how_to_export_feidee_mymoney_elecloud_web_1.png)](/images/zh_Hans/how_to_export_feidee_mymoney_elecloud_web_1.png){target=_blank}
 
-[![](/images/zh_Hans/how_to_export_feidee_mymoney_elecloud_web_2.png)](/images/zh_Hans/how_to_export_feidee_mymoney_elecloud_web_2.png)
+[![](/images/zh_Hans/how_to_export_feidee_mymoney_elecloud_web_2.png)](/images/zh_Hans/how_to_export_feidee_mymoney_elecloud_web_2.png){target=_blank}
 
 1. 在随手记网页版的神象云账本菜单中点击 “设置”
 2. 在设置页面中点击 “数据导出”
@@ -147,7 +147,7 @@ ezBookkeeping 支持导入使用分隔符分隔的自定义格式数据，您可
 
 ### 如何获取支付宝（App）交易流水文件
 
-[![](/images/zh_Hans/how_to_export_alipay_app.png)](/images/zh_Hans/how_to_export_alipay_app.png)
+[![](/images/zh_Hans/how_to_export_alipay_app.png)](/images/zh_Hans/how_to_export_alipay_app.png){target=_blank}
 
 1. 在支付宝App选择 “我的”，然后点击 “账单”
 2. 在新的页面中点击右上角打开菜单，然后选择 “开具交易流水证明”
@@ -159,9 +159,9 @@ ezBookkeeping 支持导入使用分隔符分隔的自定义格式数据，您可
 
 ### 如何获取支付宝（网页版）交易流水文件
 
-[![](/images/zh_Hans/how_to_export_alipay_web_1.png)](/images/zh_Hans/how_to_export_alipay_web_1.png)
+[![](/images/zh_Hans/how_to_export_alipay_web_1.png)](/images/zh_Hans/how_to_export_alipay_web_1.png){target=_blank}
 
-[![](/images/zh_Hans/how_to_export_alipay_web_2.png)](/images/zh_Hans/how_to_export_alipay_web_2.png)
+[![](/images/zh_Hans/how_to_export_alipay_web_2.png)](/images/zh_Hans/how_to_export_alipay_web_2.png){target=_blank}
 
 1. 登录网页版支付宝后，点击 “查看所有交易记录”
 2. 选择要导出的时间范围
@@ -169,7 +169,7 @@ ezBookkeeping 支持导入使用分隔符分隔的自定义格式数据，您可
 
 ### 如何获取微信支付账单文件
 
-[![](/images/zh_Hans/how_to_export_wechat_pay_app.png)](/images/zh_Hans/how_to_export_wechat_pay_app.png)
+[![](/images/zh_Hans/how_to_export_wechat_pay_app.png)](/images/zh_Hans/how_to_export_wechat_pay_app.png){target=_blank}
 
 1. 在微信App选择 “我”，然后点击 “服务”
 2. 在新的页面中点击“钱包”
@@ -184,7 +184,7 @@ ezBookkeeping 支持导入使用分隔符分隔的自定义格式数据，您可
 
 ### 如何获取京东金融账单文件
 
-[![](/images/zh_Hans/how_to_export_jdcom_finance_app.png)](/images/zh_Hans/how_to_export_jdcom_finance_app.png)
+[![](/images/zh_Hans/how_to_export_jdcom_finance_app.png)](/images/zh_Hans/how_to_export_jdcom_finance_app.png){target=_blank}
 
 1. 在京东金融App选择 “我”，然后点击 “我的账单”
 2. 在新的页面中点击右上角的三个点打开菜单

@@ -10,7 +10,7 @@ title: "Installing with 1Panel"
 
 Log in to 1Panel, go to the "App Store:", search for "ezBookkeeping", and click "Install".
 
-![How to install ezBookkeeping in 1Panel](/images/en/how_to_install_ezBookkeeping_in_1Panel.png)
+![How to install ezBookkeeping in 1Panel](/images/en/how_to_install_ezBookkeeping_in_1Panel.png){target=_blank}
 
 > During installation, configure the following parameters according to your needs:
 >
@@ -20,7 +20,7 @@ Log in to 1Panel, go to the "App Store:", search for "ezBookkeeping", and click 
 >
 > You can complete the installation using the "default configuration", or adjust it as required.
 
-![How to fill in parameters when installing ezBookkeeping in 1Panel](/images/en/how_to_fill_in_parameters_when_installing_ezBookkeeping_in_1Panel.png)
+![How to fill in parameters when installing ezBookkeeping in 1Panel](/images/en/how_to_fill_in_parameters_when_installing_ezBookkeeping_in_1Panel.png){target=_blank}
 
 The ezBookkeeping instance installed via 1Panel uses `sqlite3` as its database and is fully configured through the `ezbookkeeping.ini` configuration file.
 

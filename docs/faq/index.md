@@ -156,7 +156,7 @@ In ezBookkeeping, currency is associated with accounts, not with individual tran
 
 In iOS, the "Paste" action must be triggered by the system control. When you tap the amount on the amount number pad in ezBookkeeping, the system's "Paste" button (as shown below) will appear, just tap it to paste. In other operating systems, you can open the menu in the transaction edit page to tap the paste option.
 
-[![How to paste an amount](/images/en/number_pad_paste.png)](/images/en/number_pad_paste.png)
+[![How to paste an amount](/images/en/number_pad_paste.png)](/images/en/number_pad_paste.png){target=_blank}
 
 ## How to change the default account when adding a transaction
 
@@ -182,7 +182,7 @@ In the desktop version, you can hover over the transaction time on the transacti
 
 In the mobile version of ezBookkeeping, you can swipe left on any item in the transaction or account list page to reveal the "Edit" and "Delete" buttons. Tap "Edit" to open the editing page.
 
-[![How to edit transaction](/images/en/how_to_edit_transaction.png)](/images/en/how_to_edit_transaction.png)
+[![How to edit transaction](/images/en/how_to_edit_transaction.png)](/images/en/how_to_edit_transaction.png){target=_blank}
 
 ## How to quickly hide accounts, categories, or tags on mobile version
 

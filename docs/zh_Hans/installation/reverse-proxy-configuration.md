@@ -8,7 +8,7 @@ title: "反向代理的配置"
 
 ## ezBookkeeping 在域名的根路径
 
-```
+```text:line-numbers
 upstream ezbookkeeping-upstream {
     server 127.0.0.1:8080;
 }
@@ -40,7 +40,7 @@ server {
 
 ## ezBookkeeping 在域名的子路径（例如 `/ezbookkeeping`）
 
-```
+```text:line-numbers
 upstream ezbookkeeping-upstream {
     server 127.0.0.1:8080;
 }

@@ -1,5 +1,6 @@
-import { defineConfig } from 'vitepress';
+import { defineConfig, resolveSiteDataByRoute } from 'vitepress';
 
+const websiteName: string = 'ezBookkeeping';
 const websiteUrlRootUrl: string = 'https://ezbookkeeping.mayswind.net';
 const demoWebsiteRootUrl: string = 'https://ezbookkeeping-demo.mayswind.net/';
 const titleEn: string = 'ezBookkeeping - a open source, lightweight, self-hosted personal finance app';
@@ -16,31 +17,10 @@ export default defineConfig({
     metaChunk: true,
     lastUpdated: true,
     head: [
-        ['meta', { property: 'og:url', content: websiteUrlRootUrl }],
-        ['meta', { property: 'og:title', content: titleEn }],
-        ['meta', { property: 'og:description', content: descriptionEn }],
-        ['meta', { property: 'og:image', content: websiteUrlRootUrl + '/images/og-image.png' }],
-        ['meta', { property: 'og:type', content: 'website' }],
-        ['meta', { property: 'og:locale', content: 'en_US' }],
-        ['meta', { property: 'og:site_name', content: 'ezBookkeeping' }],
-        ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
-        ['meta', { name: 'twitter:title', content: titleEn }],
-        ['meta', { name: 'twitter:description', content: descriptionEn }],
-        ['meta', { name: 'twitter:image', content: websiteUrlRootUrl + '/images/og-image.png' }],
-        ['meta', { name: 'canonical', content: websiteUrlRootUrl }],
         ['meta', { name: 'baidu-site-verification', content: 'codeva-4I959p5AcD' }],
-        // alternate links
-        ['link', { rel: 'alternate', hreflang: 'x-default', href: websiteUrlRootUrl }],
-        ['link', { rel: 'alternate', hreflang: 'en-US', href: websiteUrlRootUrl }],
-        ['link', { rel: 'alternate', hreflang: 'zh-CN', href: websiteUrlRootUrl + '/zh_Hans' }],
         [
             'script',
             { async: '', src: 'https://www.googletagmanager.com/gtag/js?id=G-742M0QP5YJ' }
-        ],
-        [
-            'script',
-            { type: 'application/ld+json' },
-            `{ "@context": "https://schema.org", "@type": "WebSite", "name": "ezBookkeeping", "headline": "${titleEn}", "description": "${descriptionEn}", "url": "${websiteUrlRootUrl}" }`
         ],
         [
             'script',
@@ -67,7 +47,7 @@ export default defineConfig({
     },
     themeConfig: {
         // https://vitepress.dev/reference/default-theme-config
-        siteTitle: 'ezBookkeeping',
+        siteTitle: websiteName,
         logo: '/images/logo.png',
         socialLinks: [
             { icon: 'github', link: 'https://github.com/mayswind/ezbookkeeping' }
@@ -124,6 +104,7 @@ export default defineConfig({
                         text: 'Installation',
                         collapsed: false,
                         items: [
+                            { text: 'Get Started', link: '/installation/' },
                             { text: 'Run with Docker', link: '/installation/installation-docker' },
                             { text: 'Run on Kubernetes', link: '/installation/installation-kubernetes' },
                             { text: 'Install from binary', link: '/installation/installation-binary' },
@@ -152,6 +133,7 @@ export default defineConfig({
                         text: 'API',
                         collapsed: false,
                         items: [
+                            { text: 'Introduction', link: '/httpapi/' },
                             { text: 'Token API', link: '/httpapi/token_api' },
                             { text: 'Account API', link: '/httpapi/account_api' },
                             { text: 'Transaction Category API', link: '/httpapi/transaction_category_api' },
@@ -174,7 +156,10 @@ export default defineConfig({
                             { text: 'FAQ', link: '/faq/' }
                         ]
                     }
-                ]
+                ],
+                outline: {
+                    level: [2, 3]
+                }
             }
         },
         zh_Hans: {
@@ -197,6 +182,7 @@ export default defineConfig({
                         text: '安装',
                         collapsed: false,
                         items: [
+                            { text: '快速开始', link: '/zh_Hans/installation/' },
                             { text: '通过 Docker 运行', link: '/zh_Hans/installation/installation-docker' },
                             { text: '在 Kubernetes 上运行', link: '/zh_Hans/installation/installation-kubernetes' },
                             { text: '从二进制包安装', link: '/zh_Hans/installation/installation-binary' },
@@ -225,6 +211,7 @@ export default defineConfig({
                         text: 'API',
                         collapsed: false,
                         items: [
+                            { text: '介绍', link: '/zh_Hans/httpapi/' },
                             { text: '令牌 API', link: '/zh_Hans/httpapi/token_api' },
                             { text: '账户 API', link: '/zh_Hans/httpapi/account_api' },
                             { text: '交易分类 API', link: '/zh_Hans/httpapi/transaction_category_api' },
@@ -249,7 +236,8 @@ export default defineConfig({
                     }
                 ],
                 outline: {
-                    label: '页面导航'
+                    label: '页面导航',
+                    level: [2, 3]
                 },
                 editLink: {
                     text: '在 GitHub 上编辑此页面'
@@ -269,5 +257,38 @@ export default defineConfig({
                 langMenuLabel: '选择语言'
             }
         }
+    },
+    transformPageData: (pageData, ctx) => {
+        const site = resolveSiteDataByRoute(
+            ctx.siteConfig.site,
+            pageData.relativePath
+        );
+
+        const title: string = pageData.title ? `${pageData.title} | ${site.title}` : `${site.title}`;
+        const description: string = `${pageData.description || site.description}`;
+        const url: string = `${websiteUrlRootUrl}/${pageData.relativePath}`
+            .replace(/index\.md$/, '')
+            .replace(/\.md$/, '')
+        const image: string = websiteUrlRootUrl + '/images/og-image.png';
+
+        ((pageData.frontmatter.head ??= []) as HeadConfig[]).push(
+            ['link', { rel: 'canonical', href: url }],
+            ['meta', { property: 'og:url', content: url }],
+            ['meta', { property: 'og:title', content: title }],
+            ['meta', { property: 'og:description', content: description }],
+            ['meta', { property: 'og:image', content: image }],
+            ['meta', { property: 'og:type', content: 'website' }],
+            ['meta', { property: 'og:locale', content: site.lang }],
+            ['meta', { property: 'og:site_name', content: websiteName }],
+            ['meta', { property: 'twitter:card', content: 'summary_large_image' }],
+            ['meta', { property: 'twitter:title', content: title }],
+            ['meta', { property: 'twitter:site_name', content: description }],
+            ['meta', { property: 'twitter:image', content: image }],
+            [
+                'script',
+                { type: 'application/ld+json' },
+                `{ "@context": "https://schema.org", "@type": "WebSite", "name": "${websiteName}", "headline": "${title}", "description": "${description}", "url": "${url}" }`
+            ]
+        );
     }
 });
