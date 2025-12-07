@@ -122,6 +122,7 @@ export default defineConfig({
                 sidebar: [
                     {
                         text: 'Installation',
+                        collapsed: false,
                         items: [
                             { text: 'Run with Docker', link: '/installation/installation-docker' },
                             { text: 'Run on Kubernetes', link: '/installation/installation-kubernetes' },
@@ -132,6 +133,7 @@ export default defineConfig({
                     },
                     {
                         text: 'Administration',
+                        collapsed: false,
                         items: [
                             { text: 'Configuration', link: '/configuration/' },
                             { text: 'Exchange Rates', link: '/exchange_rates/' }
@@ -139,6 +141,7 @@ export default defineConfig({
                     },
                     {
                         text: 'Usage',
+                        collapsed: false,
                         items: [
                             { text: 'Export & Import', link: '/export_and_import/' },
                             { text: 'MCP', link: '/mcp/' },
@@ -147,6 +150,7 @@ export default defineConfig({
                     },
                     {
                         text: 'API',
+                        collapsed: false,
                         items: [
                             { text: 'Token API', link: '/httpapi/token_api' },
                             { text: 'Account API', link: '/httpapi/account_api' },
@@ -157,6 +161,7 @@ export default defineConfig({
                     },
                     {
                         text: 'Contributing',
+                        collapsed: false,
                         items: [
                             { text: 'Developing', link: '/developing/' },
                             { text: 'Translating', link: '/translating/' }
@@ -164,6 +169,7 @@ export default defineConfig({
                     },
                     {
                         text: 'Help',
+                        collapsed: false,
                         items: [
                             { text: 'FAQ', link: '/faq/' }
                         ]
@@ -189,6 +195,7 @@ export default defineConfig({
                 sidebar: [
                     {
                         text: '安装',
+                        collapsed: false,
                         items: [
                             { text: '通过 Docker 运行', link: '/zh_Hans/installation/installation-docker' },
                             { text: '在 Kubernetes 上运行', link: '/zh_Hans/installation/installation-kubernetes' },
@@ -199,6 +206,7 @@ export default defineConfig({
                     },
                     {
                         text: '管理',
+                        collapsed: false,
                         items: [
                             { text: '配置', link: '/zh_Hans/configuration/' },
                             { text: '汇率', link: '/zh_Hans/exchange_rates/' }
@@ -206,6 +214,7 @@ export default defineConfig({
                     },
                     {
                         text: '使用',
+                        collapsed: false,
                         items: [
                             { text: '导出 & 导入', link: '/zh_Hans/export_and_import/' },
                             { text: 'MCP', link: '/zh_Hans/mcp/' },
@@ -214,6 +223,7 @@ export default defineConfig({
                     },
                     {
                         text: 'API',
+                        collapsed: false,
                         items: [
                             { text: '令牌 API', link: '/zh_Hans/httpapi/token_api' },
                             { text: '账户 API', link: '/zh_Hans/httpapi/account_api' },
@@ -224,6 +234,7 @@ export default defineConfig({
                     },
                     {
                         text: '贡献',
+                        collapsed: false,
                         items: [
                             { text: '开发', link: '/zh_Hans/developing/' },
                             { text: '翻译', link: '/zh_Hans/translating/' }
@@ -231,6 +242,7 @@ export default defineConfig({
                     },
                     {
                         text: '帮助',
+                        collapsed: false,
                         items: [
                             { text: '常见问题', link: '/zh_Hans/faq/' }
                         ]
