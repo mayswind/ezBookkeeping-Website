@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ezbookkeeping.mayswind.net/sitemap.xml
