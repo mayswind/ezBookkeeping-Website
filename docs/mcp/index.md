@@ -22,7 +22,7 @@ The MCP service of ezBookkeeping requires a special token to access. You can go 
 
 Then, copy the following code into your AI tool's MCP server configuration to enable it to access and interact with ezBookkeeping data.
 
-```
+```json
 {
     "mcpServers": {
         "ezbookkeeping-mcp": {

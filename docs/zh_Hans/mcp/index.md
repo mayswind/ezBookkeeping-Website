@@ -22,7 +22,7 @@ ezBookkeeping 的 MCP 服务需要通过特殊的令牌进行访问，您可以�
 
 然后，您可以将以下代码复制到您的 AI 工具的 MCP 服务器配置中，即可让您的 AI 工具访问与操作 ezBookkeeping 的数据。
 
-```
+```json
 {
     "mcpServers": {
         "ezbookkeeping-mcp": {
