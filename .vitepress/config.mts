@@ -266,14 +266,24 @@ export default defineConfig({
 
         const title: string = pageData.title ? `${pageData.title} | ${site.title}` : `${site.title}`;
         const description: string = `${pageData.description || site.description}`;
-        const url: string = `${websiteUrlRootUrl}/${pageData.relativePath}`
+        const relativePath: string = pageData.relativePath
             .replace(/index\.md$/, '')
-            .replace(/\.md$/, '')
+            .replace(/\.md$/, '');
+        const pureDocumentRelativePath: string = relativePath
+            .replace(/^zh_Hans\//i, '');
+
+        const currentUrl: string = `${websiteUrlRootUrl}/${relativePath}`;
+        const alternateEnglishUrl: string = `${websiteUrlRootUrl}/${pureDocumentRelativePath}`;
+        const alternateChineseSimplifiedUrl: string = `${websiteUrlRootUrl}/zh_Hans/${pureDocumentRelativePath}`;
+
         const image: string = websiteUrlRootUrl + '/images/og-image.png';
 
         ((pageData.frontmatter.head ??= []) as HeadConfig[]).push(
-            ['link', { rel: 'canonical', href: url }],
-            ['meta', { property: 'og:url', content: url }],
+            ['link', { rel: 'canonical', href: currentUrl }],
+            ['link', { rel: 'alternate', hreflang: 'x-default', href: alternateEnglishUrl }],
+            ['link', { rel: 'alternate', hreflang: 'en', href: alternateEnglishUrl }],
+            ['link', { rel: 'alternate', hreflang: 'zh-Hans', href: alternateChineseSimplifiedUrl }],
+            ['meta', { property: 'og:url', content: currentUrl }],
             ['meta', { property: 'og:title', content: title }],
             ['meta', { property: 'og:description', content: description }],
             ['meta', { property: 'og:image', content: image }],
@@ -287,7 +297,7 @@ export default defineConfig({
             [
                 'script',
                 { type: 'application/ld+json' },
-                `{ "@context": "https://schema.org", "@type": "WebSite", "name": "${websiteName}", "headline": "${title}", "description": "${description}", "url": "${url}" }`
+                `{ "@context": "https://schema.org", "@type": "WebSite", "name": "${websiteName}", "headline": "${title}", "description": "${description}", "url": "${currentUrl}" }`
             ]
         );
     }
