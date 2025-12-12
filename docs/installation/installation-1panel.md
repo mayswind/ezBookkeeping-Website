@@ -1,8 +1,8 @@
 ---
-title: "Installing with 1Panel"
+title: "Installing with 1Panel (Community Supported)"
 ---
 
-# Installing with 1Panel
+# Installing with 1Panel (Community Supported)
 
 > For 1Panel installation instructions, see [https://1panel.cn/docs/v2/installation/online_installation/](https://1panel.cn/docs/v2/installation/online_installation/).
 

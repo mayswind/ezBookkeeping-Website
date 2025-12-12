@@ -1,8 +1,8 @@
 ---
-title: "使用 1Panel 安装"
+title: "使用 1Panel 安装（社区支持）"
 ---
 
-# 使用 1Panel 安装
+# 使用 1Panel 安装（社区支持）
 
 > 对于 1Panel 的安装说明，请参阅 [https://1panel.cn/docs/v2/installation/online_installation/](https://1panel.cn/docs/v2/installation/online_installation/)。
 
