@@ -1,4 +1,4 @@
-import { defineConfig, resolveSiteDataByRoute } from 'vitepress';
+import { type HeadConfig, defineConfig, resolveSiteDataByRoute } from 'vitepress';
 
 const websiteName: string = 'ezBookkeeping';
 const websiteUrlRootUrl: string = 'https://ezbookkeeping.mayswind.net';
@@ -97,6 +97,13 @@ export default defineConfig({
                     { text: 'API', link: '/httpapi/' },
                     { text: 'MCP', link: '/mcp/' },
                     { text: 'Demo', link: demoWebsiteRootUrl },
+                    {
+                        text: 'Download',
+                        items: [
+                            { text: 'Packaged Files', link: 'https://github.com/mayswind/ezbookkeeping/releases' },
+                            { text: 'Docker Images', link: 'https://hub.docker.com/r/mayswind/ezbookkeeping' }
+                        ]
+                    },
                     { text: 'FAQ', link: '/faq/' }
                 ],
                 sidebar: [
@@ -175,6 +182,13 @@ export default defineConfig({
                     { text: 'API', link: '/zh_Hans/httpapi/' },
                     { text: 'MCP', link: '/zh_Hans/mcp/' },
                     { text: '演示', link: demoWebsiteRootUrl },
+                    {
+                        text: '下载',
+                        items: [
+                            { text: '打包文件', link: 'https://github.com/mayswind/ezbookkeeping/releases' },
+                            { text: 'Docker 镜像', link: 'https://hub.docker.com/r/mayswind/ezbookkeeping' }
+                        ]
+                    },
                     { text: '常见问题', link: '/zh_Hans/faq/' }
                 ],
                 sidebar: [
