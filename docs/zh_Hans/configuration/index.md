@@ -21,7 +21,6 @@ ezBookkeeping 使用 ini 文件作为配置文件。
 
 | 选项名 | 默认值 | 描述 |
 | --- | --- | --- |
-| `app_name` | `ezBookkeeping` | 应用实例名称，在两步验证中使用。 |
 | `mode` | `production` | 应用运行模式，影响服务器调试及日志记录。该值可以设置为 `production` 或 `development`。 |
 
 ## Web 服务器

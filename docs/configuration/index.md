@@ -21,7 +21,6 @@ Note that if both above methods are configured for the same configuration option
 
 | Option Name | Default Value | Description |
 | --- | --- | --- |
-| `app_name` | `ezBookkeeping` | Application instance name, used in the two factor authentication. |
 | `mode` | `production` | Application run mode, affects web server debugging and logging. The value can be set to `production` or `development`. |
 
 ## Web Server
