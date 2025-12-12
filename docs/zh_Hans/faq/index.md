@@ -54,7 +54,7 @@ ezBookkeeping 是开箱即用的，无需设置任何额外的设置项即可启
 
 如果你想使用 PostgreSQL 作为数据库，需要设置 `database` 节中的 `type`（环境变量 `EBK_DATABASE_TYPE`） 为 `postgres`，同时设置数据库主机 `host`（例如 `pg.domain:5432`，或 `/var/run/postgresql`）、数据库名 `name`、数据库访问用户 `user`、数据库访问密码 `passwd`。
 
-如果你想存储用户头像或交易图片，请检查或设置 [配置-对象存储](/zh_Hans/configuration/#对象存储) 中的设置。此外，ezBookkeeping 的汇率数据源、地图提供者、大语言模型（LLM）提供者等都可以自定义，具体请参考 [配置](/zh_Hans/configuration/)。
+如果你想存储用户头像或交易图片，请检查或设置 [配置 - 对象存储](/zh_Hans/configuration/#对象存储) 中的设置。此外，ezBookkeeping 的汇率数据源、地图提供者、大语言模型（LLM）提供者等都可以自定义，具体请参考 [配置](/zh_Hans/configuration/)。
 
 ## ezBookkeeping 启动时提示没有权限（“permission denied”）
 
@@ -68,13 +68,13 @@ ezBookkeeping 大部分数据都存储在数据库中，用户的头像、交易
 
 ### 数据库文件
 
-如果你使用 SQLite 作为数据库，则数据库文件的默认位置为 ezBookkeeping 可执行文件目录下的 `data/ezbookkeeping.db`，如果你使用 Docker 镜像部署，则数据库文件的默认路径为容器内的 `/ezbookkeeping/data/ezbookkeeping.db`。你可以通过配置文件修改这个路径，更多信息见 [配置-数据库](/zh_Hans/configuration/#数据库) 中的 `db_path`。
+如果你使用 SQLite 作为数据库，则数据库文件的默认位置为 ezBookkeeping 可执行文件目录下的 `data/ezbookkeeping.db`，如果你使用 Docker 镜像部署，则数据库文件的默认路径为容器内的 `/ezbookkeeping/data/ezbookkeeping.db`。你可以通过配置文件修改这个路径，更多信息见 [配置 - 数据库](/zh_Hans/configuration/#数据库) 中的 `db_path`。
 
 如果你使用 MySQL 或 PostgreSQL，数据库文件通过数据库系统进行管理。
 
 ### 对象存储文件
 
-如果你使用 `local_filesystem` 对象存储类型，则对象存储文件的默认位置为 ezBookkeeping 可执行文件目录下的 `storage` 目录，如果你使用 Docker 镜像部署，则数据库文件的默认路径为容器内的 `/ezbookkeeping/storage/`。你可以通过配置文件修改这个路径，更多信息见 [配置-对象存储](/zh_Hans/configuration/#对象存储) 中的 `local_filesystem_path`。
+如果你使用 `local_filesystem` 对象存储类型，则对象存储文件的默认位置为 ezBookkeeping 可执行文件目录下的 `storage` 目录，如果你使用 Docker 镜像部署，则数据库文件的默认路径为容器内的 `/ezbookkeeping/storage/`。你可以通过配置文件修改这个路径，更多信息见 [配置 - 对象存储](/zh_Hans/configuration/#对象存储) 中的 `local_filesystem_path`。
 
 如果你使用 `minio` 或 `webdav` 对象存储类型，对象存储的文件通过对象存储系统进行管理。
 
@@ -195,7 +195,7 @@ ezBookkeeping 的交易列表和交易详情页默认都是按交易时区显示
 
 ## 如何使用AI识图创建交易
 
-首先，需要设置大语言模型（LLM）设置。在 `llm` 节中启用 `transaction_from_ai_image_recognition` 以允许AI识图创建交易。然后在 `llm_image_recognition` 节中设置 `llm_provider` 以及对应大语言模型提供者的 API Key、模型ID等设置。请确保指定的模型支持图片识别。更多信息见 [配置-大语言模型 (LLM)](/zh_Hans/configuration/#大语言模型-llm)。
+首先，需要设置大语言模型（LLM）设置。在 `llm` 节中启用 `transaction_from_ai_image_recognition` 以允许AI识图创建交易。然后在 `llm_image_recognition` 节中设置 `llm_provider` 以及对应大语言模型提供者的 API Key、模型ID等设置。请确保指定的模型支持图片识别。更多信息见 [配置 - 大语言模型 (LLM)](/zh_Hans/configuration/#大语言模型-llm)。
 
 在完成设置大语言模型的配置后，
 
@@ -218,7 +218,7 @@ ezBookkeeping 的定时交易当到达预定日期时会自动创建一笔交易
 
 ## 为什么上传的用户头像和交易图片无法显示
 
-请确保配置中的 `domain` 设置正确，如果你使用了 Nginx 等反向代理，并且访问协议或端口号与 ezBookkeeping 服务端提供的不同，还需要修改 `root_url`，具体请参考 [配置-Web 服务器](/zh_Hans/configuration/#web-服务器)。ezBookkeeping 中用户上传的用户头像、交易图片的地址均依赖上述地址。
+请确保配置中的 `domain` 设置正确，如果你使用了 Nginx 等反向代理，并且访问协议或端口号与 ezBookkeeping 服务端提供的不同，还需要修改 `root_url`，具体请参考 [配置 - Web 服务器](/zh_Hans/configuration/#web-服务器)。ezBookkeeping 中用户上传的用户头像、交易图片的地址均依赖上述地址。
 
 如果完成了上述设置，但图片依然无法显示，你可以通过浏览器的开发者工具检查图片的地址是否与设置的地址相同。如果不同请检查 ezBookkeeping 启动时输出的配置文件的内容是否与预期的一致，如果不同请检查设置或重新启动 ezBookkeeping。
 
