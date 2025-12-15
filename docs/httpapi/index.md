@@ -4,7 +4,7 @@ title: API
 
 # API
 
-ezBookkeeping provides HTTP API for the frontend interface, and these API can also be used directly by users to implement more automation functions. Please note that the ezBookkeeping HTTP API is not intended for regular users, and the information in this document may not be comprehensive. For more information, please refer to the source code.
+ezBookkeeping provides HTTP API for the frontend interface, and these API can also be used directly by users to implement more automation functions.
 
 ## Usage
 
