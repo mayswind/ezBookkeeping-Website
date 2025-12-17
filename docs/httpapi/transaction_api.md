@@ -99,13 +99,50 @@ title: Transaction API
 
 **Response Data Structure**
 
-`TransactionInfoPageWrapperResponse[]`
+`TransactionInfoPageWrapperResponse`
 
 | Field | Type | Description |
 | --- | --- | --- |
 | `items` | `TransactionInfoResponse[]` | The transaction list |
 | `nextTimeSequenceId` | `integer` | The next cursor (`max_time` parameter) when requesting older data |
 | `totalCount` | `integer` | The total count of transactions |
+
+## Get all transactions list
+
+**API Path**
+
+`transactions/list/all.json`
+
+**HTTP Method**
+
+`GET`
+
+**Request Header**
+
+| Header | Description |
+| --- | --- |
+| `X-Timezone-Offset` | Time zone offset (minutes) |
+
+**Request Parameters**
+
+| Field | Type | Required | Description |
+| --- | --- | --- | --- |
+| `type` | `integer` | Optional | Filter transaction by transaction type (`1`: Balance modification, `2`: Income, `3`: Expense, `4`: Transafer) |
+| `category_ids` | `string` | Optional | Filter transaction by transaction category IDs (separated by `,`) |
+| `account_ids` | `string` | Optional | Filter transaction by account IDs (separated by `,`) |
+| `tag_filter` | `string` | Optional | Filter transactions by tags (multiple tag groups are supported, separate groups with `;`. Each tag group uses the format `type:tag_id1,tag_id2,...` where `type` defines the filter mode, `0`: transaction contains all tags in the group, `1`: transaction contains any tag in the group, `2`: transaction does not contain all tags in the group, `3`: transaction does not contain any tag in the group) |
+| `amount_filter` | `string` | Optional | Filter transaction by amount (Greater than amount: `gt:{amount}`, Less than amount: `lt:{amount}`, Equal amount: `eq:{amount}`, Not equal amount: `ne:{amount}`, Between two amounts: `bt:{min_amount}:{max_amount}`, Not between two amounts: `ne:{min_amount}:{max_amount}`) |
+| `keyword` | `string` | Optional | Filter transaction by keyword |
+| `start_time` | `integer` | Optional | Transaction list start time (unix time) |
+| `end_time` | `integer` | Optional | Transaction list end time (unix time) |
+| `with_pictures` | `boolean` | Optional | Whether to get the picture IDs |
+| `trim_account` | `boolean` | Optional | Whether to get the account ID instead of account object |
+| `trim_category` | `boolean` | Optional | Whether to get the transaction category ID instead of category object |
+| `trim_tag` | `boolean` | Optional | Whether to get the tag IDs instead of tag object |
+
+**Response Data Structure**
+
+`TransactionInfoResponse[]`
 
 ## Add transaction
 
