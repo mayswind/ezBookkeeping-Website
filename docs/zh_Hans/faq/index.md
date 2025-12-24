@@ -89,6 +89,12 @@ ezBookkeeping 大部分数据都存储在数据库中，用户的头像、交易
 
 ezBookkeeping 建议仅测试时使用 SQLite 数据库。如果您确定使用 ezBookkeeping，最好使用 MySQL 或 PostgreSQL 数据库，以避免后续迁移的成本。
 
+> 示例：如何使用 DBeaver 迁移 SQLite 数据库到 MySQL
+>
+> 1. 首先使用 ezBookkeeping 配置新的 MySQL 数据库，并启动一次 ezBookkeeping 以便对 MySQL 数据库进行初始化
+> 2. 在 DBeaver 里创建两个连接，分别连接之前的 SQLite 数据库和新的 MySQL 数据库
+> 3. 在 DBeaver 中展开 SQLite 数据库，全选所有表，右键单击并在上下文菜单中选择 “导出数据”。在 “数据传送” 对话框中，设置 “导出目标” 为 “数据库”。点击 “下一步” 后，在 “目标容器” 选择 MySQL 数据库，继续点击 “下一步” 直到导入完成
+
 ### 迁移对象存储
 
 1.  `local_filesystem` → `local_filesystem`：只需要复制对象存储目录下（默认为 `storage`）下所有文件即可

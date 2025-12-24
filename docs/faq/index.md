@@ -89,6 +89,12 @@ If you're using MySQL or PostgreSQL as database along with either the `minio` or
 
 ezBookkeeping recommends using the SQLite database only for testing purposes. If you decide to use ezBookkeeping, it's best to use a MySQL or PostgreSQL database to avoid potential migration costs later.
 
+> Example: Migrating a SQLite database to MySQL using DBeaver
+>
+> 1. First, configure ezBookkeeping with a new MySQL database, then start ezBookkeeping once to initialize the MySQL database
+> 2. In DBeaver, create two connections, one to the existing SQLite database and one to the new MySQL database
+> 3. In DBeaver, expand the SQLite database, select all tables, right-click and choose "Export Data" in the context menu. In the "Data Transfer" dialog, set "Export target" to "Database". Click "Next", select the MySQL database as the "Target container", and continue clicking "Next" until the migrating completes
+
 ### Migrating Object Storage
 
 1. `local_filesystem` → `local_filesystem`: Simply copy all files from the object storage directory (default: `storage`) to the new location.
