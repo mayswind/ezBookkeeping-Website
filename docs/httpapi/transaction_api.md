@@ -76,6 +76,7 @@ title: Transaction API
 | Header | Description |
 | --- | --- |
 | `X-Timezone-Offset` | Time zone offset (minutes) |
+| `X-Timezone-Name` | IANA time zone name |
 
 **Request Parameters**
 
@@ -122,6 +123,7 @@ title: Transaction API
 | Header | Description |
 | --- | --- |
 | `X-Timezone-Offset` | Time zone offset (minutes) |
+| `X-Timezone-Name` | IANA time zone name |
 
 **Request Parameters**
 
