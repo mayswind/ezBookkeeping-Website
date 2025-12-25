@@ -40,4 +40,9 @@ The response of API is JSON object like the following:
 
 ## Timezone
 
-Some APIs require `X-Timezone-Offset` or `X-Timezone-Name` request headers to specify timezone information. The value of `X-Timezone-Offset` is the offset in minutes of the current timezone from UTC. For example, for Beijing Time which is UTC+8, the value is `480`; the value of `X-Timezone-Name` is the IANA timezone name, for example, for Beijing Time it is `Asia/Shanghai`. If both headers are provided, `X-Timezone-Name` takes precedence.
+Some APIs require `X-Timezone-Name` or `X-Timezone-Offset` request headers to specify timezone information.
+
+- The value of `X-Timezone-Name` is the IANA timezone name, for example, for Beijing Time it is `Asia/Shanghai`.
+- The value of `X-Timezone-Offset` is the offset in minutes of the current timezone from UTC. For example, for Beijing Time which is UTC+8, the value is `480`.
+
+If both headers are provided, `X-Timezone-Name` takes precedence.

@@ -40,4 +40,9 @@ API 接口的返回结果是 JSON 对象，如下：
 
 ## 时区
 
-部分接口需要 `X-Timezone-Offset` 或 `X-Timezone-Name` 请求头来指定时区信息，`X-Timezone-Offset` 的值为当前时区相对于 UTC 的偏移分钟数，例如北京时间为 UTC+8，则该值为 `480`；`X-Timezone-Name` 的值为 IANA 时区名称，例如北京时间为 `Asia/Shanghai`。如果同时提供了这两个请求头，则以 `X-Timezone-Name` 为准。
+部分接口需要 `X-Timezone-Name` 或 `X-Timezone-Offset` 请求头来指定时区信息。
+
+- `X-Timezone-Name` 的值为 IANA 时区名称，例如北京时间为 `Asia/Shanghai`。
+- `X-Timezone-Offset` 的值为当前时区相对于 UTC 的偏移分钟数，例如北京时间为 UTC+8，则该值为 `480`。
+
+如果同时提供了这两个请求头，则以 `X-Timezone-Name` 为准。
