@@ -80,8 +80,8 @@ None
 
 | Header | Description |
 | --- | --- |
-| `X-Timezone-Offset` | Time zone offset (minutes) |
 | `X-Timezone-Name` | IANA time zone name |
+| `X-Timezone-Offset` | Time zone offset (minutes) |
 
 **Request Body Content-Type**
 

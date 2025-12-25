@@ -80,8 +80,8 @@ title: 账户 API
 
 | Header | 描述 |
 | --- | --- |
-| `X-Timezone-Offset` | 时区偏移（分钟） |
 | `X-Timezone-Name` | IANA 时区名称 |
+| `X-Timezone-Offset` | 时区偏移（分钟） |
 
 **请求体 Content-Type**
 
