@@ -156,6 +156,13 @@ title: 交易 API
 
 `POST`
 
+**请求 Header**
+
+| Header | 描述 |
+| --- | --- |
+| `X-Timezone-Offset` | 时区偏移（分钟） |
+| `X-Timezone-Name` | IANA 时区名称 |
+
 **请求体 Content-Type**
 
 `application/json`

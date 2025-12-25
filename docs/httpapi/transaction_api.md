@@ -156,6 +156,13 @@ title: Transaction API
 
 `POST`
 
+**Request Header**
+
+| Header | Description |
+| --- | --- |
+| `X-Timezone-Offset` | Time zone offset (minutes) |
+| `X-Timezone-Name` | IANA time zone name |
+
 **Request Body Content-Type**
 
 `application/json`
