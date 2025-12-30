@@ -148,6 +148,10 @@ You can create a separate expense transaction with the amount equal to the trans
 
 You can create an account which account category is "Receivables", then create a transfer transaction from your expense account to this receivables account. If you've created the default transaction categories in ezBookkeeping, you can select the transaction type "Loan & Debt > Lending Money".
 
+## Why you see "You cannot add transaction before the balance modification transaction" when adding new transaction
+
+For clarity and consistency, ezBookkeeping allows only one "Modify Balance" transaction per account, and this transaction must be the first transaction for that account. Therefore, transactions cannot be created with a date earlier than the "Modify Balance" transaction.
+
 ## How to modify an account balance
 
 ezBookkeeping only allows users to set an initial balance when creating a new account. Once the account is created, users cannot directly modify its balance. To adjust an account's balance, you need to record an expense or income transaction.
