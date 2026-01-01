@@ -332,7 +332,7 @@ Configuration option `data_source` value is `euro_central_bank`
 
 The base currency is Georgian lari (`GEL`). The daily exchange rates are usually updated no later than 17:00 GET (Georgia Standard Time) on every working day.
 
-This data source supports 43 currencies, and all currencies are as follows:
+This data source supports 42 currencies, and all currencies are as follows:
 
 | Currency | Currency Code | Update Frequency |
 | --- | --- | --- |
@@ -340,7 +340,6 @@ This data source supports 43 currencies, and all currencies are as follows:
 | Armenian Dram | AMD | Daily |
 | Australian Dollar | AUD | Daily |
 | Azerbaijan Manat | AZN | Daily |
-| Bulgarian Lev | BGN | Daily |
 | Brazilian Real | BRL | Daily |
 | Belarusian Ruble | BYN | Daily |
 | Canadian Dollar | CAD | Daily |
@@ -855,7 +854,7 @@ Configuration option `data_source` value is `swiss_national_bank`
 
 The base currency is Ukrainian hryvnia (`UAH`).
 
-This data source supports 41 currencies, and all currencies are as follows:
+This data source supports 40 currencies, and all currencies are as follows:
 
 | Currency | Currency Code | Update Frequency |
 | --- | --- | --- |
@@ -863,7 +862,6 @@ This data source supports 41 currencies, and all currencies are as follows:
 | Australian Dollar | AUD | Daily |
 | Azerbaijan Manat | AZN | Daily |
 | Bangladeshi Taka | BDT | Daily |
-| Bulgarian Lev | BGN | Daily |
 | Canadian Dollar | CAD | Daily |
 | Swiss Franc | CHF | Daily |
 | Chinese Yuan | CNY | Daily |
