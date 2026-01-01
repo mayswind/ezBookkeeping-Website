@@ -54,7 +54,7 @@ export default defineConfig({
         ],
         footer: {
             message: 'Released under the <a href="https://github.com/mayswind/ezBookkeeping/blob/main/LICENSE">MIT License</a>.',
-            copyright: 'Copyright © 2020-2025 MaysWind.'
+            copyright: 'Copyright © 2020-2026 MaysWind.'
         },
         editLink: {
             pattern: 'https://github.com/mayswind/ezBookkeeping-Website/edit/main/docs/:path'
