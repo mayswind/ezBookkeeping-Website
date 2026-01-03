@@ -82,7 +82,7 @@ Configuration option `data_source` value is `bank_of_canada`
 
 The base currency is Czech koruna (`CZK`). The daily exchange rates are usually updated after 14:30 CET (Central European Time) on every working day. The monthly exchange rates are usually updated on the last working day of the month.
 
-This data source supports 151 currencies, and all currencies are as follows:
+This data source supports 150 currencies, and all currencies are as follows:
 
 | Currency | Currency Code | Update Frequency |
 | --- | --- | --- |
@@ -98,7 +98,6 @@ This data source supports 151 currencies, and all currencies are as follows:
 | Bosnia and Herzegovina Convertible Mark | BAM | Monthly |
 | Barbadian Dollar | BBD | Monthly |
 | Bangladeshi Taka | BDT | Monthly |
-| Bulgarian Lev | BGN | Daily |
 | Bahraini Dinar | BHD | Monthly |
 | Burundian Franc | BIF | Monthly |
 | Bermudian Dollar | BMD | Monthly |
@@ -246,12 +245,11 @@ Configuration option `data_source` value is `czech_national_bank`
 
 The base currency is Danish krone (`DKK`). The daily exchange rates are usually updated shortly after 16:00 CET (Central European Time) on every working day.
 
-This data source supports 30 currencies, and all currencies are as follows:
+This data source supports 29 currencies, and all currencies are as follows:
 
 | Currency | Currency Code | Update Frequency |
 | --- | --- | --- |
 | Australian Dollar | AUD | Daily |
-| Bulgarian Lev | BGN | Daily |
 | Brazilian Real | BRL | Daily |
 | Canadian Dollar | CAD | Daily |
 | Swiss Franc | CHF | Daily |
@@ -289,12 +287,11 @@ Configuration option `data_source` value is `danmarks_national_bank`
 
 The base currency is European euro (`EUR`). The daily exchange rates are usually updated around 16:00 CET (Central European Time) on every working day.
 
-This data source supports 30 currencies, and all currencies are as follows:
+This data source supports 29 currencies, and all currencies are as follows:
 
 | Currency | Currency Code | Update Frequency |
 | --- | --- | --- |
 | Australian Dollar | AUD | Daily |
-| Bulgarian Lev | BGN | Daily |
 | Brazilian Real | BRL | Daily |
 | Canadian Dollar | CAD | Daily |
 | Swiss Franc | CHF | Daily |
@@ -561,7 +558,7 @@ Configuration option `data_source` value is `norges_bank`
 
 The base currency is Polish złoty (`PLN`). The daily exchange rates are usually updated between 11:45 CET (Central European Time) and 12:15 CET on every working day. The weekly exchange rates are usually updated on Wednesdays.
 
-This data source supports 147 currencies, and all currencies are as follows:
+This data source supports 146 currencies, and all currencies are as follows:
 
 | Currency | Currency Code | Update Frequency |
 | --- | --- | --- |
@@ -577,7 +574,6 @@ This data source supports 147 currencies, and all currencies are as follows:
 | Bosnia and Herzegovina Convertible Mark | BAM | Weekly |
 | Barbadian Dollar | BBD | Weekly |
 | Bangladeshi Taka | BDT | Weekly |
-| Bulgarian Lev | BGN | Daily |
 | Bahraini Dinar | BHD | Weekly |
 | Burundian Franc | BIF | Weekly |
 | Brunei Dollar | BND | Weekly |
