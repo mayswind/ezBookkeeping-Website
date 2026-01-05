@@ -384,12 +384,11 @@ Configuration option `data_source` value is `national_bank_of_georgia`
 
 The base currency is Hungarian forint (`HUF`). The daily exchange rates are usually updated around 11:00 CET (Central European Time) on every working day.
 
-This data source supports 33 currencies, and all currencies are as follows:
+This data source supports 32 currencies, and all currencies are as follows:
 
 | Currency | Currency Code | Update Frequency |
 | --- | --- | --- |
 | Australian Dollar | AUD | Daily |
-| Bulgarian Lev | BGN | Daily |
 | Brazilian Real | BRL | Daily |
 | Canadian Dollar | CAD | Daily |
 | Swiss Franc | CHF | Daily |
@@ -717,13 +716,12 @@ Configuration option `data_source` value is `national_bank_of_poland`
 
 The base currency is Romanian leu (`RON`). The daily exchange rates are usually updated shortly after 13:00 EET (Eastern European Time) on every working day.
 
-This data source supports 36 currencies, and all currencies are as follows:
+This data source supports 35 currencies, and all currencies are as follows:
 
 | Currency | Currency Code | Update Frequency |
 | --- | --- | --- |
 | United Arab Emirates Dirham | AED | Daily |
 | Australian Dollar | AUD | Daily |
-| Bulgarian Lev | BGN | Daily |
 | Brazilian Real | BRL | Daily |
 | Canadian Dollar | CAD | Daily |
 | Swiss Franc | CHF | Daily |
