@@ -59,6 +59,15 @@ ezBookkeeping 的 MCP 服务需要通过特殊的令牌进行访问，您可以�
 | `comment` | `string` | 可选 | 交易备注 |
 | `dry_run` | `boolean` | 可选 | 如果设置为 `true`，交易不会被保存，仅进行验证 |
 
+**返回参数**
+
+| 字段 | 类型 | 必选 | 描述 |
+| --- | --- | --- | --- |
+| `success` | `boolean` | 必选 | 本次处理是否成功 |
+| `dry_run` | `boolean` | 可选 | 本次处理是否仅为验证（交易未实际添加） |
+| `account_balance` | `number` | 可选 | 交易添加后的账户余额（对于负债账户为未清余额） |
+| `destination_account_balance` | `number` | 可选 | 交易（仅转账交易）添加后的目标账户余额（对于负债账户为未清余额） |
+
 ### 查询交易
 
 **MCP Tool 名称**
@@ -77,7 +86,31 @@ ezBookkeeping 的 MCP 服务需要通过特殊的令牌进行访问，您可以�
 | `comment` | `string` | 可选 | 在交易描述中搜索的关键词 |
 | `count` | `number` | 可选 | 返回结果最大的数量（默认：100） |
 | `page` | `number` | 可选 | 用于分页的页码（默认：1） |
-| `response_fields` | `string` | 可选 | 结果中包含的字段列表，使用逗号分隔（留空表示所有字段，可选字段：time, currency, category_name, account_name, comment） |
+| `response_fields` | `string` | 可选 | 结果中包含的可选字段列表，使用逗号分隔（留空表示所有字段，可选字段：time, currency, category_name, account_name, comment） |
+
+**返回参数**
+
+| 字段 | 类型 | 必选 | 描述 |
+| --- | --- | --- | --- |
+| `total_count` | `number` | 必选 | 符合查询的所有交易数量 |
+| `current_page` | `number` | 必选 | 结果当前页码 |
+| `total_page` | `number` | 必选 | 查询所有可用的页码数，根据 total_count 和 count 计算 |
+| `transactions` | `MCPTransactionInfo[]` | 必选 | 符合查询的交易列表 |
+
+**MCPTransactionInfo**
+
+| 字段 | 类型 | 必选 | 描述 |
+| --- | --- | --- | --- |
+| `time` | `string` | 可选 | RFC 3339 格式的交易时间（例如 2023-01-01T12:00:00Z） |
+| `type` | `string` | 必选 | 交易类型（income、expense、transfer） |
+| `amount` | `string` | 必选 | 指定货币下的交易金额 |
+| `currency` | `string` | 可选 | 交易的货币代码（例如 USD、EUR） |
+| `category_name` | `string` | 可选 | 交易的二级分类名 |
+| `account_name` | `string` | 可选 | 交易的账户名 |
+| `destination_amount` | `string` | 可选 | 转账交易的目标金额 |
+| `destination_currency` | `string` | 可选 | 转账交易目标金额的货币代码 |
+| `destination_account_name` | `string` | 可选 | 转账交易的目标账户名 |
+| `comment` | `string` | 可选 | 交易备注 |
 
 ### 查询所有账户名
 
@@ -89,6 +122,20 @@ ezBookkeeping 的 MCP 服务需要通过特殊的令牌进行访问，您可以�
 
 无
 
+**返回参数**
+
+| 字段 | 类型 | 必选 | 描述 |
+| --- | --- | --- | --- |
+| `cashAccounts` | `string[]` | 可选 | 现金账户名称列表 |
+| `checkingAccounts` | `string[]` | 可选 | 借记账户名称列表 |
+| `savingsAccounts` | `string[]` | 可选 | 储蓄账户名称列表 |
+| `creditCardAccounts` | `string[]` | 可选 | 信用卡账户名称列表 |
+| `virtualAccounts` | `string[]` | 可选 | 虚拟账户名称列表 |
+| `debtAccounts` | `string[]` | 可选 | 负债账户名称列表 |
+| `receivableAccounts` | `string[]` | 可选 | 应收款项账户名称列表 |
+| `certificateOfDepositAccounts` | `string[]` | 可选 | 定期存款账户名称列表 |
+| `investmentAccounts` | `string[]` | 可选 | 投资账户名称列表 |
+
 ### 查询所有账户余额
 
 **MCP Tool 名称**
@@ -98,6 +145,30 @@ ezBookkeeping 的 MCP 服务需要通过特殊的令牌进行访问，您可以�
 **请求参数**
 
 无
+
+**返回参数**
+
+| 字段 | 类型 | 必选 | 描述 |
+| --- | --- | --- | --- |
+| `cashAccounts` | `MCPAccountBalanceInfo[]` | 可选 | 现金账户余额列表 |
+| `checkingAccounts` | `MCPAccountBalanceInfo[]` | 可选 | 借记账户余额列表 |
+| `savingsAccounts` | `MCPAccountBalanceInfo[]` | 可选 | 储蓄账户余额列表 |
+| `creditCardAccounts` | `MCPAccountBalanceInfo[]` | 可选 | 信用卡账户未清余额列表 |
+| `virtualAccounts` | `MCPAccountBalanceInfo[]` | 可选 | 虚拟账户余额列表 |
+| `debtAccounts` | `MCPAccountBalanceInfo[]` | 可选 | 负债账户未清余额列表 |
+| `receivableAccounts` | `MCPAccountBalanceInfo[]` | 可选 | 应收款项账户余额列表 |
+| `certificateOfDepositAccounts` | `MCPAccountBalanceInfo[]` | 可选 | 定期存款账户余额列表 |
+| `investmentAccounts` | `MCPAccountBalanceInfo[]` | 可选 | 投资账户余额列表 |
+
+**MCPAccountBalanceInfo**
+
+| 字段 | 类型 | 必选 | 描述 |
+| --- | --- | --- | --- |
+| `name` | `string` | 必选 | 账户名称 |
+| `type` | `string` | 必选 | 账户类型（asset、liability） |
+| `balance` | `string` | 可选 | 账户当前余额 |
+| `outstandingBalance` | `string` | 可选 | 账户当前未清余额（正数表示欠款金额） |
+| `currency` | `string` | 必选 | 账户货币代码（例如 USD、EUR） |
 
 ### 查询所有交易分类名
 
@@ -109,6 +180,14 @@ ezBookkeeping 的 MCP 服务需要通过特殊的令牌进行访问，您可以�
 
 无
 
+**返回参数**
+
+| 字段 | 类型 | 必选 | 描述 |
+| --- | --- | --- | --- |
+| `incomeCategories` | `Map<string, string[]>` | 必选 | 收入分类列表，字段名为一级分类名，字段值为二级字段名列表 |
+| `expenseCategories` | `Map<string, string[]>` | 必选 | 支出分类列表，字段名为一级分类名，字段值为二级字段名列表 |
+| `transferCategories` | `Map<string, string[]>` | 必选 | 转账分类列表，字段名为一级分类名，字段值为二级字段名列表 |
+
 ### 查询所有交易标签名
 
 **MCP Tool 名称**
@@ -118,6 +197,12 @@ ezBookkeeping 的 MCP 服务需要通过特殊的令牌进行访问，您可以�
 **请求参数**
 
 无
+
+**返回参数**
+
+| 字段 | 类型 | 必选 | 描述 |
+| --- | --- | --- | --- |
+| `tags` | `string[]` | 必选 | 交易标签列表 |
 
 ### 查询最新的汇率
 
@@ -130,3 +215,18 @@ ezBookkeeping 的 MCP 服务需要通过特殊的令牌进行访问，您可以�
 | 字段 | 类型 | 必选 | 描述 |
 | --- | --- | --- | --- |
 | `currencies` | `string` | 必选 | 用于查询汇率的货币列表，使用逗号分隔（例如 USD,CNY,EUR） |
+
+**返回参数**
+
+| 字段 | 类型 | 必选 | 描述 |
+| --- | --- | --- | --- |
+| `base_currency` | `string` | 必选 | 基准货币代码（例如 USD） |
+| `update_time` | `string` | 必选 | 汇率的最后更新时间（RFC 3339 格式，例如 "2023-01-01T12:00:00Z"） |
+| `rates` | `MCPQueryExchangeRateInfo[]` | 必选 | 指定货币的汇率 |
+
+**MCPQueryExchangeRateInfo**
+
+| 字段 | 类型 | 必选 | 描述 |
+| --- | --- | --- | --- |
+| `currency` | `string` | 必选 | 货币代码（例如 USD） |
+| `rate_to_base` | `string` | 必选 | 该货币1元可兑换的基础货币数量 |

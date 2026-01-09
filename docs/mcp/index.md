@@ -59,6 +59,15 @@ Then, copy the following code into your AI tool's MCP server configuration to en
 | `comment` | `string` | Optional | Transaction description |
 | `dry_run` | `boolean` | Optional | If `true`, the transaction will not be saved, only validated |
 
+**Response Parameters**
+
+| Field | Type | Required | Description |
+| --- | --- | --- | --- |
+| `success` | `boolean` | Required | Indicates whether this operation is successful |
+| `dry_run` | `boolean` | Optional | Indicates whether this operation is a dry run (transaction not added actually) |
+| `account_balance` | `number` | Optional | Account balance (or outstanding balance for debt accounts) after the transaction |
+| `destination_account_balance` | `number` | Optional | Destination account balance (or outstanding balance for debt accounts) after the transaction (only for transfer transactions) |
+
 ### Query transactions
 
 **MCP Tool Name**
@@ -77,7 +86,31 @@ Then, copy the following code into your AI tool's MCP server configuration to en
 | `comment` | `string` | Optional | Keyword to search in transaction description |
 | `count` | `number` | Optional | Maximum number of results to return (default: 100) |
 | `page` | `number` | Optional | Page number for pagination (default: 1) |
-| `response_fields` | `string` | Optional | Comma-separated list of fields to include in the response (leave empty for all fields, available fields: time, currency, category_name, account_name, comment) |
+| `response_fields` | `string` | Optional | Comma-separated list of optional fields to include in the response (leave empty for all fields, available fields: time, currency, category_name, account_name, comment) |
+
+**Response Parameters**
+
+| Field | Type | Required | Description |
+| --- | --- | --- | --- |
+| `total_count` | `number` | Required | Total number of transactions matching the query |
+| `current_page` | `number` | Required | Current page number of the results |
+| `total_page` | `number` | Required | Total number of pages available for the query, calculated based on total_count and count |
+| `transactions` | `MCPTransactionInfo[]` | Required | List of transactions matching the query |
+
+**MCPTransactionInfo**
+
+| Field | Type | Required | Description |
+| --- | --- | --- | --- |
+| `time` | `string` | Optional | Time of the transaction in RFC 3339 format (e.g. 2023-01-01T12:00:00Z) |
+| `type` | `string` | Required | Transaction type (income, expense, transfer) |
+| `amount` | `string` | Required | Amount of the transaction in the specified currency |
+| `currency` | `string` | Optional | Currency code of the transaction (e.g. USD, EUR) |
+| `category_name` | `string` | Optional | Secondary category name for the transaction |
+| `account_name` | `string` | Optional | Account name for the transaction |
+| `destination_amount` | `string` | Optional | Destination amount for transfer transactions |
+| `destination_currency` | `string` | Optional | Currency code of the destination amount for transfer transactions |
+| `destination_account_name` | `string` | Optional | Destination account name for transfer transactions |
+| `comment` | `string` | Optional | Description of the transaction |
 
 ### Query all account names
 
@@ -89,6 +122,20 @@ Then, copy the following code into your AI tool's MCP server configuration to en
 
 None
 
+**Response Parameters**
+
+| Field | Type | Required | Description |
+| --- | --- | --- | --- |
+| `cashAccounts` | `string[]` | Optional | List of cash account names |
+| `checkingAccounts` | `string[]` | Optional | List of checking account names |
+| `savingsAccounts` | `string[]` | Optional | List of savings account names |
+| `creditCardAccounts` | `string[]` | Optional | List of credit card account names |
+| `virtualAccounts` | `string[]` | Optional | List of virtual account names |
+| `debtAccounts` | `string[]` | Optional | List of debt account names |
+| `receivableAccounts` | `string[]` | Optional | List of receivable account names |
+| `certificateOfDepositAccounts` | `string[]` | Optional | List of certificate of deposit account names |
+| `investmentAccounts` | `string[]` | Optional | List of investment account names |
+
 ### Query all account balances
 
 **MCP Tool Name**
@@ -98,6 +145,30 @@ None
 **Request Parameters**
 
 None
+
+**Response Parameters**
+
+| Field | Type | Required | Description |
+| --- | --- | --- | --- |
+| `cashAccounts` | `MCPAccountBalanceInfo[]` | Optional | List of cash account balances |
+| `checkingAccounts` | `MCPAccountBalanceInfo[]` | Optional | List of checking account balances |
+| `savingsAccounts` | `MCPAccountBalanceInfo[]` | Optional | List of savings account balances |
+| `creditCardAccounts` | `MCPAccountBalanceInfo[]` | Optional | List of credit card account outstanding balances |
+| `virtualAccounts` | `MCPAccountBalanceInfo[]` | Optional | List of virtual account balances |
+| `debtAccounts` | `MCPAccountBalanceInfo[]` | Optional | List of debt account outstanding balances |
+| `receivableAccounts` | `MCPAccountBalanceInfo[]` | Optional | List of receivable account balances |
+| `certificateOfDepositAccounts` | `MCPAccountBalanceInfo[]` | Optional | List of certificate of deposit account balances |
+| `investmentAccounts` | `MCPAccountBalanceInfo[]` | Optional | List of investment account balances |
+
+**MCPAccountBalanceInfo**
+
+| Field | Type | Required | Description |
+| --- | --- | --- | --- |
+| `name` | `string` | Required | Account name |
+| `type` | `string` | Required | Account type (asset or liability) |
+| `balance` | `string` | Optional | Current balance of the account |
+| `outstandingBalance` | `string` | Optional | Current outstanding balance of the account (positive value indicates amount owed) |
+| `currency` | `string` | Required | Currency code of the account (e.g. USD, EUR) |
 
 ### Query all transaction category names
 
@@ -109,6 +180,14 @@ None
 
 None
 
+**Response Parameters**
+
+| Field | Type | Required | Description |
+| --- | --- | --- | --- |
+| `incomeCategories` | `Map<string, string[]>` | Required | List of income categories, field key is the primary category name, field value is the list of secondary category names |
+| `expenseCategories` | `Map<string, string[]>` | Required | List of expense categories, field key is the primary category name, field value is the list of secondary category names |
+| `transferCategories` | `Map<string, string[]>` | Required | List of transfer categories, field key is the primary category name, field value is the list of secondary category names |
+
 ### Query all transaction tag names
 
 **MCP Tool Name**
@@ -118,6 +197,12 @@ None
 **Request Parameters**
 
 None
+
+**Response Parameters**
+
+| Field | Type | Required | Description |
+| --- | --- | --- | --- |
+| `tags` | `string[]` | Required | List of transaction tags |
 
 ### Query latest exchange rates
 
@@ -130,3 +215,18 @@ None
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
 | `currencies` | `string` | Required | Comma-separated list of currencies to query exchange rates for (e.g. USD,CNY,EUR) |
+
+**Response Parameters**
+
+| Field | Type | Required | Description |
+| --- | --- | --- | --- |
+| `base_currency` | `string` | Required | Base currency code (e.g. USD) |
+| `update_time` | `string` | Required | Last update time of the exchange rates in RFC 3339 format (e.g. "2023-01-01T12:00:00Z") |
+| `rates` | `MCPQueryExchangeRateInfo[]` | Required | Exchange rates for the specified currencies |
+
+**MCPQueryExchangeRateInfo**
+
+| Field | Type | Required | Description |
+| --- | --- | --- | --- |
+| `currency` | `string` | Required | Currency code (e.g. USD) |
+| `rate_to_base` | `string` | Required | The amount of the base currency that can be obtained for 1 unit of this currency |
