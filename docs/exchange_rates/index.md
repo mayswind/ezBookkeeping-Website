@@ -765,7 +765,7 @@ Configuration option `data_source` value is `national_bank_of_romania`
 
 The base currency is Russian ruble (`RUB`). The daily exchange rates are usually updated around 15:30 MCK (Moscow Time) on every working day.
 
-This data source supports 54 currencies, and all currencies are as follows:
+This data source supports 53 currencies, and all currencies are as follows:
 
 | Currency | Currency Code | Update Frequency |
 | --- | --- | --- |
@@ -774,7 +774,6 @@ This data source supports 54 currencies, and all currencies are as follows:
 | Australian Dollar | AUD | Daily |
 | Azerbaijan Manat | AZN | Daily |
 | Bangladeshi Taka | BDT | Daily |
-| Bulgarian Lev | BGN | Daily |
 | Bahraini Dinar | BHD | Daily |
 | Bolivian Boliviano | BOB | Daily |
 | Brazilian Real | BRL | Daily |
