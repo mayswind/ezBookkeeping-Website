@@ -12,6 +12,7 @@ title: 交易标签 API
 | --- | --- | --- |
 | `id` | `string` | 交易标签 ID |
 | `name` | `string` | 交易标签名 |
+| `groupId` | `string` | 交易标签分组 ID |
 | `displayOrder` | `integer` | 交易标签显示顺序 |
 | `hidden` | `boolean` | 交易标签是否隐藏 |
 
@@ -53,6 +54,7 @@ title: 交易标签 API
 
 | 字段 | 类型 | 必选 | 描述 |
 | --- | --- | --- | --- |
+| `groupId` | `string` | 可选 | 交易标签分组 ID（`0` 表示默认分组） |
 | `name` | `string` | 必选 | 交易标签名 |
 
 **返回数据结构**

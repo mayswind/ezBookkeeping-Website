@@ -12,6 +12,7 @@ title: Transaction Tag API
 | --- | --- | --- |
 | `id` | `string` | Transaction tag ID |
 | `name` | `string` | Transaction tag name |
+| `groupId` | `string` | Transaction tag group ID |
 | `displayOrder` | `integer` | The display order of the transaction tag |
 | `hidden` | `boolean` | Whether the transaction tag is hidden |
 
@@ -53,6 +54,7 @@ None
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
+| `groupId` | `string` | Optional | Transaction tag group ID (`0` means default group) |
 | `name` | `string` | Required | Transaction tag name |
 
 **Response Data Structure**
