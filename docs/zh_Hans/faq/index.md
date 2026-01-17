@@ -164,7 +164,7 @@ ezBookkeeping 的货币信息不与每笔交易所关联，而是与账户所关
 
 ## 移动版编辑交易时如何从剪贴板中粘贴交易金额
 
-iOS 系统中由于 “粘贴” 操作必须由系统控件触发，所以 ezBookkeeping 的金额输入框中轻触金额，会出现的系统 “粘贴” 按钮（如下图），点击即可粘贴。在其他操作系统中，在交易编辑页面打开菜单然后轻触粘贴选项。
+在 ezBookkeeping 的金额输入框中轻触金额，即可弹出粘贴按钮（如下图），点击即可粘贴。此外，非 iOS 系统在交易编辑页面的菜单中也可以轻触粘贴项进行粘贴。
 
 [![如何粘贴金额](/images/zh_Hans/number_pad_paste.png)](/images/zh_Hans/number_pad_paste.png){target=_blank}
 
