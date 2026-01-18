@@ -94,6 +94,7 @@ export default defineConfig({
                 nav: [
                     { text: 'Installation', link: '/installation/' },
                     { text: 'Configuration', link: '/configuration/' },
+                    { text: 'Usage', link: '/basic_usage/' },
                     { text: 'API', link: '/httpapi/' },
                     { text: 'MCP', link: '/mcp/' },
                     { text: 'Demo', link: demoWebsiteRootUrl },
@@ -180,6 +181,7 @@ export default defineConfig({
                 nav: [
                     { text: '安装', link: '/zh_Hans/installation/' },
                     { text: '配置', link: '/zh_Hans/configuration/' },
+                    { text: '使用', link: '/zh_Hans/basic_usage/' },
                     { text: 'API', link: '/zh_Hans/httpapi/' },
                     { text: 'MCP', link: '/zh_Hans/mcp/' },
                     { text: '演示', link: demoWebsiteRootUrl },
