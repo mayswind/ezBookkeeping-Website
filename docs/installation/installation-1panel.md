@@ -1,12 +1,12 @@
 ---
-title: "Installing with 1Panel (Community Supported)"
+title: "Install with 1Panel (Community Supported)"
 ---
 
-# Installing with 1Panel (Community Supported)
+# Install with 1Panel (Community Supported)
 
 > For 1Panel installation instructions, see [https://1panel.cn/docs/v2/installation/online_installation/](https://1panel.cn/docs/v2/installation/online_installation/).
 
-## Installing ezBookkeeping
+## Install ezBookkeeping
 
 Log in to 1Panel, go to the "App Store:", search for "ezBookkeeping", and click "Install".
 

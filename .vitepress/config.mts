@@ -115,7 +115,7 @@ export default defineConfig({
                             { text: 'Run with Docker', link: '/installation/installation-docker' },
                             { text: 'Run on Kubernetes', link: '/installation/installation-kubernetes' },
                             { text: 'Install from binary', link: '/installation/installation-binary' },
-                            { text: 'Installing with 1Panel', link: '/installation/installation-1panel' },
+                            { text: 'Install with 1Panel (Community)', link: '/installation/installation-1panel' },
                             { text: 'Reverse proxy configuration', link: '/installation/reverse-proxy-configuration' }
                         ]
                     },
@@ -132,7 +132,7 @@ export default defineConfig({
                         collapsed: false,
                         items: [
                             { text: 'Export & Import', link: '/export_and_import/' },
-                            { text: 'MCP', link: '/mcp/' },
+                            { text: 'Model Context Protocol', link: '/mcp/' },
                             { text: 'Command Line', link: '/command_line/' }
                         ]
                     },
@@ -200,7 +200,7 @@ export default defineConfig({
                             { text: '通过 Docker 运行', link: '/zh_Hans/installation/installation-docker' },
                             { text: '在 Kubernetes 上运行', link: '/zh_Hans/installation/installation-kubernetes' },
                             { text: '从二进制包安装', link: '/zh_Hans/installation/installation-binary' },
-                            { text: '使用 1Panel 安装', link: '/zh_Hans/installation/installation-1panel' },
+                            { text: '使用 1Panel 安装（社区）', link: '/zh_Hans/installation/installation-1panel' },
                             { text: '反向代理的配置', link: '/zh_Hans/installation/reverse-proxy-configuration' }
                         ]
                     },
@@ -217,7 +217,7 @@ export default defineConfig({
                         collapsed: false,
                         items: [
                             { text: '导出 & 导入', link: '/zh_Hans/export_and_import/' },
-                            { text: 'MCP', link: '/zh_Hans/mcp/' },
+                            { text: 'Model Context Protocol', link: '/zh_Hans/mcp/' },
                             { text: '命令行', link: '/zh_Hans/command_line/' }
                         ]
                     },
