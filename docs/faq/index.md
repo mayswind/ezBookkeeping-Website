@@ -228,6 +228,10 @@ After setting up the large language model configuration:
 6. Net Income (in trend analysis): Includes income and expense transactions from the selected accounts
 7. Net Worth (in asset trends): The balance of the selected asset accounts minus the outstanding balance of the liability accounts
 
+## How to display charts grouped by tags
+
+Because each transaction can have zero or multiple tags, tags themselves do not have inherent statistical meaning. ezBookkeeping provides the Insights Explorer feature, which allows users to freely build queries with different conditions and use them to create visual charts. You can create a new explorer, define multiple queries with different tags, and then build charts by using "Query" as the "Axis / Category".
+
 ## Scheduled transaction does not create transaction automatically
 
 In ezBookkeeping, a scheduled transaction will automatically create a new transaction when its scheduled date arrives. The generated transaction is identical to the one created by the user. No transaction is created before the scheduled date. To ensure this works properly, make sure the ezBookkeeping server is running continuously.
