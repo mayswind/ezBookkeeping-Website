@@ -10,7 +10,7 @@ If you don't find what you're looking for here, you can check out [GitHub Discus
 
 ## Is ezBookkeeping Free
 
-ezBookkeeping is a free, open-source, self-hosted personal finance application released under the [MIT License](https://github.com/mayswind/ezbookkeeping/blob/main/LICENSE). You are free to use, modify, and distribute ezBookkeeping, and you may even use it for commercial purposes. The source code is hosted on [GitHub](https://github.com/mayswind/ezbookkeeping), where it is publicly accessible to anyone.
+ezBookkeeping is a free, open-source, self-hosted personal finance application released under the [MIT License](https://github.com/mayswind/ezbookkeeping/blob/main/LICENSE). You are free to use, modify and distribute ezBookkeeping, and you may even use it for commercial purposes. The source code is hosted on [GitHub](https://github.com/mayswind/ezbookkeeping), where it is publicly accessible to anyone.
 
 ezBookkeeping does not provide an official hosted service. You need to deploy the ezBookkeeping server on your own server or personal computer. You can refer to the [Installation](/installation/) documentation for deployment instructions. The ezBookkeeping project does not accept user donations or sponsorships and does not offer any paid features.
 
@@ -30,7 +30,7 @@ The operating systems that can run the ezBookkeeping server are the same as thos
 | v0.2.x ~ v0.4.x | 1.20 | ≥ Linux Kernel 2.6.32 <br/> ≥ Windows 7 / Windows Server 2008 R2 <br/> ≥ macOS 10.13 High Sierra |
 | v0.1.x | 1.16 | ≥ Linux Kernel 2.6.32 <br/> ≥ Windows 7 / Windows Server 2008 R2 <br/> ≥ macOS 10.12 Sierra |
 
-The Linux versions listed above apply only to the amd64, arm64, and armv6/v7 architectures. For other architectures, please refer to the official Golang documentation. For more details on supported operating systems, please visit the official Golang documentation: [https://go.dev/wiki/MinimumRequirements](https://go.dev/wiki/MinimumRequirements).
+The Linux versions listed above apply only to the amd64, arm64 and armv6/v7 architectures. For other architectures, please refer to the official Golang documentation. For more details on supported operating systems, please visit the official Golang documentation: [https://go.dev/wiki/MinimumRequirements](https://go.dev/wiki/MinimumRequirements).
 
 If you've already deployed the ezBookkeeping server program, you can access ezBookkeeping directly through your web browser. The table below lists the minimum browser versions required for each ezBookkeeping release.
 
