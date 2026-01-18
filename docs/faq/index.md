@@ -8,6 +8,14 @@ This page lists some frequently asked questions and their answers.
 
 If you don't find what you're looking for here, you can check out [GitHub Discussions](https://github.com/mayswind/ezbookkeeping/discussions) or [GitHub Issues](https://github.com/mayswind/ezbookkeeping/issues) for more information.
 
+## Is ezBookkeeping Free
+
+ezBookkeeping is a free, open-source, self-hosted personal finance application released under the [MIT License](https://github.com/mayswind/ezbookkeeping/blob/main/LICENSE). You are free to use, modify, and distribute ezBookkeeping, and you may even use it for commercial purposes. The source code is hosted on [GitHub](https://github.com/mayswind/ezbookkeeping), where it is publicly accessible to anyone.
+
+ezBookkeeping does not provide an official hosted service. You need to deploy the ezBookkeeping server on your own server or personal computer. You can refer to the [Installation](/installation/) documentation for deployment instructions. The ezBookkeeping project does not accept user donations or sponsorships and does not offer any paid features.
+
+The ezBookkeeping project does not collect any user information. All user data is stored entirely on the server or personal computer that you deploy yourself. Your self-hosted ezBookkeeping server does not send any data to the ezBookkeeping project. However, some features provided by ezBookkeeping may rely on third-party services. ezBookkeeping has no commercial partnerships with these services, and they may collect user data. For details, please refer to [What third-party services does ezBookkeeping use, and does it access my personal data](#what-third-party-services-does-ezbookkeeping-use-and-does-it-access-my-personal-data). You can freely choose whether to enable these features provided by third-party in the configuration file.
+
 ## Which operating systems does ezBookkeeping support
 
 The operating systems that can run the ezBookkeeping server are the same as those supported by Golang. The table below lists the Golang versions required by each ezBookkeeping release, along with the minimum supported OS versions.
@@ -118,17 +126,17 @@ When you launch ezBookkeeping server for the first time, the database of ezBookk
 
 In ezBookkeeping, asset and liability accounts are categorized based on their account categories. Cash, Checking Account, Savings Account, Virtual Account, Receivables, Certificate of Deposit, and Investment Account are treated as asset accounts, with their balances counted as assets. Credit Card and Debt Account are treated as liability accounts, with their outstanding balances counted as liabilities.
 
-## What do "Balance" and "Outstanding Balance" mean when creating an account?
+## What do "Balance" and "Outstanding Balance" mean when creating an account
 
 When creating an asset account, you can set its balance, which represents the amount of assets available in that account (a positive number indicates funds you own).
 
 When creating a liability account, you can set its outstanding balance, which represents the amount of debt associated with that account (a positive number indicates money you owe).
 
-## What is the purpose of the "Balance Time" when creating an account?
+## What is the purpose of the "Balance Time" when creating an account
 
 In ezBookkeeping, every transaction must have a transaction time. If you set an balance or outstanding balance when creating an account, you also need to specify the time of that balance modification transaction. Any future transactions added to the account cannot have a transaction time earlier than this time.
 
-## What is the purpose of the "Statement Date" when creating a credit card account?
+## What is the purpose of the "Statement Date" when creating a credit card account
 
 If a statement date is set for a credit card account, you can filter transactions for that account by selecting either the current billing cycle or previous billing cycle date range in the transaction list.
 
@@ -180,7 +188,7 @@ Go to the User Profile page, where you can update the default account used when 
 
 Go to the User Profile page, where you can change the color of expense and income amounts.
 
-## What does the "+" sign after the monthly expense and income amounts mean in the mobile transaction list?
+## What does the "+" sign after the monthly expense and income amounts mean in the mobile transaction list
 
 In the mobile version, the transaction list loads data on demand by default. The monthly expense and income amounts displayed after each month are calculated based on the transactions that have been loaded so far. When the data for that month hasn't been fully loaded, a "+" sign appears to indicate that the displayed totals are incomplete. If you want to view the full monthly total expense and income amounts, you can select a full month in the date filter. When filter a full month in transaction list, ezBookkeeping always loads all transactions data for that month.
 

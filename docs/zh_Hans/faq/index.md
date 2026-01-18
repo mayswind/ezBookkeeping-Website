@@ -8,6 +8,14 @@ title: 常见问题
 
 如果页面中没有您要找的问题，您可以访问 [GitHub Discussions](https://github.com/mayswind/ezbookkeeping/discussions) 或 [GitHub Issues](https://github.com/mayswind/ezbookkeeping/issues) 查找更多内容。
 
+## ezBookkeeping 是免费的么
+
+ezBookkeeping 是一个基于 [MIT 许可证](https://github.com/mayswind/ezbookkeeping/blob/main/LICENSE) 的免费、开源、自托管的个人记账软件，你可以免费使用、修改和分发 ezBookkeeping，甚至可以将其用于商业用途。ezBookkeeping 的源代码托管在 [GitHub](https://github.com/mayswind/ezbookkeeping) 上，任何人都可以访问和下载。
+
+ezBookkeeping 不提供官方的托管服务，你需要在你自己的服务器或个人电脑上部署 ezBookkeeping 的服务端程序。你可以参考 [安装](/zh_Hans/installation/) 文档了解如何部署 ezBookkeeping。同时，ezBookkeeping 项目不接受用户的捐赠或赞助，也不提供任何付费功能。
+
+ezBookkeeping 项目不会收集用户的任何信息，用户的数据完全存储在用户自己部署的服务器或个人电脑上。你自托管的 ezBookkeeping 服务端程序不会将任何数据发送给 ezBookkeeping 项目。不过，ezBookkeeping 提供的部分功能会依赖第三方服务，ezBookkeeping 与这些第三方服务没有任何商业合作关系，这些服务可能会收集用户的信息，详情请参考 [ezBookkeeping 使用了哪些第三方服务，以及是否会使用我的个人数据](#ezbookkeeping-使用了哪些第三方服务-以及是否会使用我的个人数据)，你可以在配置文件中自由选择是否使用这些第三方提供的功能。
+
 ## ezBookkeeping 支持哪些操作系统
 
 运行 ezBookkeeping 服务端的操作系统与 Golang 支持的操作系统相同，下表列出了 ezBookkeeping 各个版本依赖的 Golang 的版本以及支持操作系统的最低版本。
