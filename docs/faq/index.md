@@ -148,6 +148,10 @@ You can create a separate expense transaction with the amount equal to the trans
 
 You can create an account which account category is "Receivables", then create a transfer transaction from your expense account to this receivables account. If you've created the default transaction categories in ezBookkeeping, you can select the transaction type "Loan & Debt > Lending Money".
 
+## How to record merchants, payers and payees
+
+ezBookkeeping uses transaction tags to record information such as merchants, payers and payees. You can add one or more tags to each transaction to capture this information. In addition, ezBookkeeping supports tag groups, allowing you to create different groups to distinguish between different types of tags.
+
 ## Why you see "You cannot add transaction before the balance modification transaction" when adding new transaction
 
 For clarity and consistency, ezBookkeeping allows only one "Modify Balance" transaction per account, and this transaction must be the first transaction for that account. Therefore, transactions cannot be created with a date earlier than the "Modify Balance" transaction.
@@ -179,6 +183,8 @@ Go to the User Profile page, where you can change the color of expense and incom
 ## What does the "+" sign after the monthly expense and income amounts mean in the mobile transaction list?
 
 In the mobile version, the transaction list loads data on demand by default. The monthly expense and income amounts displayed after each month are calculated based on the transactions that have been loaded so far. When the data for that month hasn't been fully loaded, a "+" sign appears to indicate that the displayed totals are incomplete. If you want to view the full monthly total expense and income amounts, you can select a full month in the date filter. When filter a full month in transaction list, ezBookkeeping always loads all transactions data for that month.
+
+In addition, on both the desktop and mobile versions, if the exchange rate data does not include a rate between an account's currency and your default currency, the amount for that account cannot be aggregated into the total and will be displayed with a "+" sign.
 
 ## How to view transaction time in the default time zone
 
