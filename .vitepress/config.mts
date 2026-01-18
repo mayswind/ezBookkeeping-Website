@@ -131,6 +131,7 @@ export default defineConfig({
                         text: 'Usage',
                         collapsed: false,
                         items: [
+                            { text: 'Basic Usage', link: '/basic_usage/' },
                             { text: 'Export & Import', link: '/export_and_import/' },
                             { text: 'Model Context Protocol', link: '/mcp/' },
                             { text: 'Command Line', link: '/command_line/' }
@@ -216,6 +217,7 @@ export default defineConfig({
                         text: '使用',
                         collapsed: false,
                         items: [
+                            { text: '基础使用', link: '/zh_Hans/basic_usage/' },
                             { text: '导出 & 导入', link: '/zh_Hans/export_and_import/' },
                             { text: 'Model Context Protocol', link: '/zh_Hans/mcp/' },
                             { text: '命令行', link: '/zh_Hans/command_line/' }
