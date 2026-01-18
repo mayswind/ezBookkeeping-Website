@@ -1,10 +1,16 @@
 <template>
     <div class="home-hero-screenshots" v-if="frontmatter['screenshots'] && frontmatter['screenshots'].length">
-        <a class="home-hero-screenshot" target="_blank"
-           :key="screenshot['src']"
-           :href="screenshot['src']"
+        <a class="home-hero-screenshot light" target="_blank"
+           :key="screenshot['light']"
+           :href="screenshot['light']"
            v-for="screenshot in frontmatter['screenshots']">
-            <img :src="screenshot['src']" :alt="screenshot['alt']" />
+            <img :src="screenshot['light']" :alt="screenshot['alt']" />
+        </a>
+        <a class="home-hero-screenshot dark" target="_blank"
+           :key="screenshot['dark']"
+           :href="screenshot['dark']"
+           v-for="screenshot in frontmatter['screenshots']">
+            <img :src="screenshot['dark']" :alt="screenshot['alt']" />
         </a>
     </div>
 </template>
@@ -16,6 +22,18 @@ const { frontmatter } = useData();
 </script>
 
 <style>
+html:not(.dark) .home-hero-screenshots {
+    > .home-hero-screenshot.dark {
+        display: none;
+    }
+}
+
+html.dark .home-hero-screenshots {
+    > .home-hero-screenshot.light {
+        display: none;
+    }
+}
+
 .home-hero-screenshots {
     margin-top: 40px;
 
