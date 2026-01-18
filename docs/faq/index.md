@@ -188,6 +188,10 @@ Go to the User Profile page, where you can update the default account used when 
 
 Go to the User Profile page, where you can change the color of expense and income amounts.
 
+## How to filter tags in the mobile transaction list
+
+In the mobile version, tap the three-dot icon in the bottom-right corner on the transaction list page. You can then filter by tags from the menu that appears.
+
 ## What does the "+" sign after the monthly expense and income amounts mean in the mobile transaction list
 
 In the mobile version, the transaction list loads data on demand by default. The monthly expense and income amounts displayed after each month are calculated based on the transactions that have been loaded so far. When the data for that month hasn't been fully loaded, a "+" sign appears to indicate that the displayed totals are incomplete. If you want to view the full monthly total expense and income amounts, you can select a full month in the date filter. When filter a full month in transaction list, ezBookkeeping always loads all transactions data for that month.
@@ -202,13 +206,13 @@ In the mobile version, you can tap the transaction time on the transaction detai
 
 In the desktop version, you can hover over the transaction time on the transaction list page to view it in the default time zone.
 
-## How to edit or delete transactions and accounts on mobile version
+## How to edit or delete transactions and accounts in mobile version
 
 In the mobile version of ezBookkeeping, you can swipe left on any item in the transaction or account list page to reveal the "Edit" and "Delete" buttons. Tap "Edit" to open the editing page.
 
 [![How to edit transaction](/images/en/how_to_edit_transaction.png)](/images/en/how_to_edit_transaction.png){target=_blank}
 
-## How to quickly hide accounts, categories, or tags on mobile version
+## How to quickly hide accounts, categories, or tags in mobile version
 
 In the mobile version of ezBookkeeping, you can long-press on any item in the account, category or tag list page, and swipe right on this item to quickly toggle the hidden status.
 
