@@ -115,7 +115,7 @@ export default defineConfig({
                             { text: 'Run with Docker', link: '/installation/installation-docker' },
                             { text: 'Run on Kubernetes', link: '/installation/installation-kubernetes' },
                             { text: 'Install from binary', link: '/installation/installation-binary' },
-                            { text: 'Install with 1Panel (Community)', link: '/installation/installation-1panel' },
+                            { text: 'Install with 1Panel (Community Supported)', link: '/installation/installation-1panel' },
                             { text: 'Reverse proxy configuration', link: '/installation/reverse-proxy-configuration' }
                         ]
                     },
@@ -201,7 +201,7 @@ export default defineConfig({
                             { text: '通过 Docker 运行', link: '/zh_Hans/installation/installation-docker' },
                             { text: '在 Kubernetes 上运行', link: '/zh_Hans/installation/installation-kubernetes' },
                             { text: '从二进制包安装', link: '/zh_Hans/installation/installation-binary' },
-                            { text: '使用 1Panel 安装（社区）', link: '/zh_Hans/installation/installation-1panel' },
+                            { text: '使用 1Panel 安装（社区支持）', link: '/zh_Hans/installation/installation-1panel' },
                             { text: '反向代理的配置', link: '/zh_Hans/installation/reverse-proxy-configuration' }
                         ]
                     },
