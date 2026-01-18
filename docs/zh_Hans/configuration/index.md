@@ -33,7 +33,7 @@ ezBookkeeping 使用 ini 文件作为配置文件。
 | `http_addr` | `0.0.0.0` | `http` 或 `https` 协议下绑定的 IP 地址。 `0.0.0.0` 表示绑定到所有网卡设备。 |
 | `http_port` | `8080` | `http` 或 `https` 协议下绑定的 Http 端口。 |
 | `domain` | `localhost` | 访问 ezBookkeeping 使用的域名（例如 `ezbookkeeping-demo.mayswind.net`）。 |
-| `root_url` | `%(protocol)s://%(domain)s:%(http_port)s/` | 在浏览器中访问 ezBookkeeping 的完整路径（例如 `https://ezbookkeeping-demo.mayswind.net/`）。如果用户在浏览器访问时的协议和端口号与上述设置（`protocol` 和 `http_port`）相同，该项可以使用默认值。 |
+| `root_url` | `%(protocol)s://%(domain)s:%(http_port)s/` | 在浏览器中访问 ezBookkeeping 的完整路径（例如 `https://ezbookkeeping-demo.mayswind.net/`），支持占位符：`%(protocol)s`, `%(domain)s` 和 `%(http_port)s`。如果用户在浏览器访问时的协议和端口号与上述设置（`protocol` 和 `http_port`）相同，该项可以使用默认值。 |
 | `cert_file` |  | `https` 协议使用的证书文件路径。 |
 | `cert_key_file` |  | `https` 协议使用的证书私钥文件路径。 |
 | `unix_socket` |  | `unix` 协议使用的 Unix Socket 路径。 |
