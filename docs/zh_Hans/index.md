@@ -16,11 +16,11 @@ hero:
           link: https://ezbookkeeping-demo.mayswind.net
 
 screenshots:
-    - light: https://raw.githubusercontent.com/wiki/mayswind/ezbookkeeping/img/desktop/zh_Hans.png
-      dark: https://raw.githubusercontent.com/wiki/mayswind/ezbookkeeping/img/desktop/zh_Hans-dark.png
+    - light: /images/zh_Hans/desktop_screenshot_light.png
+      dark: /images/zh_Hans/desktop_screenshot_dark.png
       alt: 桌面版
-    - light: https://raw.githubusercontent.com/wiki/mayswind/ezbookkeeping/img/mobile/zh_Hans.png
-      dark: https://raw.githubusercontent.com/wiki/mayswind/ezbookkeeping/img/mobile/zh_Hans-dark.png
+    - light: /images/zh_Hans/mobile_screenshot_light.png
+      dark: /images/zh_Hans/mobile_screenshot_dark.png
       alt: 移动版
 
 features:
