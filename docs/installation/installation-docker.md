@@ -40,7 +40,11 @@ The default paths in container:
 ## Store data persistently
 
 The default database type is `sqlite3`, and the database file is stored in `/ezbookkeeping/data/ezbookkeeping.db` in container.
-If you want to continue to use `sqlite3` as database and store these data persistently, you can use Docker persistent volume or mount a host path to container.
+
+If you want to continue to use `sqlite3` as database and store these data persistently, you must use Docker persistent volume or mount a host path to container, otherwise all data will be lost when the container is recreated or removed.
+
+> ezBookkeeping recommends using the SQLite database only for testing purposes. If you decide to use ezBookkeeping, it's best to use a MySQL or PostgreSQL database to avoid potential migration costs later.
+
 In addition, the default object storage uses the local file system, and the default path is `/ezbookkeeping/storage/`. If you use the local file system to store object data (e.g. pictures uploaded by users), you also need to use Docker persistent volume or mount a host path to container.
 
 ### Run container with persistent volume
