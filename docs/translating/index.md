@@ -46,7 +46,7 @@ Here are all the settings that require default values and their descriptions:
 | `numeralSystem` | `NumeralSystem` in [`/src/core/numeral.ts`](https://github.com/mayswind/ezbookkeeping/blob/main/src/core/numeral.ts) | The default numeral system, supports `WesternArabicNumerals`, `EasternArabicNumerals`, `PersianDigits`, `BurmeseNumerals` and `DevanagariNumerals` |
 | `decimalSeparator` | `DecimalSeparator` in [`/src/core/numeral.ts`](https://github.com/mayswind/ezbookkeeping/blob/main/src/core/numeral.ts) | The default decimal separator, supports `Dot` and `Comma` |
 | `digitGroupingSymbol` | `DigitGroupingSymbol` in [`/src/core/numeral.ts`](https://github.com/mayswind/ezbookkeeping/blob/main/src/core/numeral.ts) | The default digit grouping symbol, supports `Dot`, `Comma`, `Space` and `Apostrophe` |
-| `digitGrouping` | `DigitGroupingType` in [`/src/core/numeral.ts`](https://github.com/mayswind/ezbookkeeping/blob/main/src/core/numeral.ts) | The default digit grouping type, supports `None` and `ThousandsSeparator` |
+| `digitGrouping` | `DigitGroupingType` in [`/src/core/numeral.ts`](https://github.com/mayswind/ezbookkeeping/blob/main/src/core/numeral.ts) | The default digit grouping type, supports `None`, `ThousandsSeparator` and `IndianNumberGrouping` |
 
 In addition, the `format` object in the language files defines date formats (Year–Month–Day, Month–Day–Year and Day–Month–Year) and time formats (24-hour clock, 12-hour clock with AM/PM before the time and 12-hour clock with AM/PM after the time) of various lengths. The following placeholders are supported:
 

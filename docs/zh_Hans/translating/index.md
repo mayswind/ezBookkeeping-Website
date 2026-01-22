@@ -46,7 +46,7 @@ ezBookkeeping 允许用户更改多项区域设置，如日期、时间、数字
 | `numeralSystem` | [`/src/core/numeral.ts`](https://github.com/mayswind/ezbookkeeping/blob/main/src/core/numeral.ts) 中的 `NumeralSystem` | 默认数字系统，支持 `WesternArabicNumerals`、`EasternArabicNumerals`、`PersianDigits`、`BurmeseNumerals` 和 `DevanagariNumerals` |
 | `decimalSeparator` | [`/src/core/numeral.ts`](https://github.com/mayswind/ezbookkeeping/blob/main/src/core/numeral.ts) 中的 `DecimalSeparator` | 默认小数点，支持 `Dot` 和 `Comma` |
 | `digitGroupingSymbol` | [`/src/core/numeral.ts`](https://github.com/mayswind/ezbookkeeping/blob/main/src/core/numeral.ts) 中的 `DigitGroupingSymbol` | 默认数字分组符号，支持 `Dot`、`Comma`、`Space` 和 `Apostrophe` |
-| `digitGrouping` | [`/src/core/numeral.ts`](https://github.com/mayswind/ezbookkeeping/blob/main/src/core/numeral.ts) 中的 `DigitGroupingType` | 默认数字分组类型，支持 `None` 和 `ThousandsSeparator` |
+| `digitGrouping` | [`/src/core/numeral.ts`](https://github.com/mayswind/ezbookkeeping/blob/main/src/core/numeral.ts) 中的 `DigitGroupingType` | 默认数字分组类型，支持 `None`、`ThousandsSeparator` 和 `IndianNumberGrouping` |
 
 另外，各语言文件的 `format` 对象中定义了各种长度的日期格式（年月日、月日年 及 日月年）和时间格式（24小时制、上午/下午标识在前的12小时制 及 上午/下午标识在后的12小时制），这些格式支持如下的占位符：
 
