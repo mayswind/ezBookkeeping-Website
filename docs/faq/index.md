@@ -108,6 +108,14 @@ ezBookkeeping recommends using the SQLite database only for testing purposes. If
 1. `local_filesystem` → `local_filesystem`: Simply copy all files from the object storage directory (default: `storage`) to the new location.
 2. Other combinations (e.g. `local_filesystem` → `minio` / `webdav` or vice versa): After initializing the new object storage with ezBookkeeping, use third-party tools to synchronize the stored files.
 
+## How to upgrade ezBookkeeping
+
+ezBookkeeping's database design is forward-compatible. When you upgrade the ezBookkeeping server application, the database schema will not undergo any breaking changes. Likewise, the database schema updated by a newer version of the ezBookkeeping server remains backward-compatible, so you can roll back to a previous version at any time.
+
+To upgrade ezBookkeeping, simply download the new binary and replace the old one, then restart the ezBookkeeping server application. If you deploy ezBookkeeping using Docker images, just pull the latest Docker image and recreate the container.
+
+> If possible, it is always recommended to backup the database data using database tools before performing an upgrade.
+
 ## Does ezBookkeeping provide a desktop or mobile app
 
 ezBookkeeping is a self-hosted software, accessed entirely through your browser. It doesn't offer a standalone desktop or mobile app. ezBookkeeping offers tailored user interfaces for mobile and desktop devices. On your phone, you can add ezBookkeeping to your home screen, and it works and feels just like a native mobile app.

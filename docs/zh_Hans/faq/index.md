@@ -108,6 +108,14 @@ ezBookkeeping 建议仅测试时使用 SQLite 数据库。如果您确定使用 
 1.  `local_filesystem` → `local_filesystem`：只需要复制对象存储目录下（默认为 `storage`）下所有文件即可
 2. 其他组合（例如 `local_filesystem` → `minio` / `webdav`，或相反），请在使用 ezBookkeeping 初始化新的对象存储目录后，使用第三方工具将存储的文件进行同步
 
+## ezBookkeeping 如何升级
+
+ezBookkeeping 的数据库设计是向前兼容的，当你升级 ezBookkeeping 的服务端程序时，数据库结构并不会产生破坏性的变化。同样的，新版本的 ezBookkeeping 服务端程序更新后的数据库结构也是向后兼容的，你可以随时回滚到之前的版本。
+
+如果你需要升级 ezBookkeeping，只需要下载新的二进制文件替换旧的二进制文件，然后重新启动 ezBookkeeping 服务端程序即可。如果你使用 Docker 镜像部署 ezBookkeeping，只需要拉取新的 Docker 镜像并重新创建容器即可。
+
+> 如果可能，始终建议在升级前使用数据库工具备份数据库中的数据。
+
 ## ezBookkeeping 是否提供电脑桌面应用或手机 App
 
 ezBookkeeping 是一个自托管的软件，通过你的浏览器进行访问，并不提供独立的桌面应用或手机 App。ezBookkeeping 为移动设备和电脑桌面提供了两套原生的用户界面，在手机上你可以将 ezBookkeeping 添加到主屏幕，使用体验如同手机原生应用。
