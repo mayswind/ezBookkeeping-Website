@@ -204,6 +204,7 @@ Note that if both above methods are configured for the same configuration option
 > You can refer to the following documentation when using a third-party OIDC provider:
 > - Authelia: [https://www.authelia.com/integration/openid-connect/clients/ezbookkeeping/](https://www.authelia.com/integration/openid-connect/clients/ezbookkeeping/)
 > - authentik: [https://integrations.goauthentik.io/miscellaneous/ezbookkeeping/](https://integrations.goauthentik.io/miscellaneous/ezbookkeeping/)
+> - Pocket ID: [https://pocket-id.org/docs/client-examples/ezbookkeeping](https://pocket-id.org/docs/client-examples/ezbookkeeping)
 
 | Option Name | Default Value | Description |
 | --- | --- | --- |

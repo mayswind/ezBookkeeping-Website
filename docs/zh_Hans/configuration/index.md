@@ -204,6 +204,7 @@ ezBookkeeping 使用 ini 文件作为配置文件。
 > 使用第三方 OIDC 提供者时，可以参考如下文档：
 > - Authelia：[https://www.authelia.com/integration/openid-connect/clients/ezbookkeeping/](https://www.authelia.com/integration/openid-connect/clients/ezbookkeeping/)
 > - authentik：[https://integrations.goauthentik.io/miscellaneous/ezbookkeeping/](https://integrations.goauthentik.io/miscellaneous/ezbookkeeping/)
+> - Pocket ID：[https://pocket-id.org/docs/client-examples/ezbookkeeping](https://pocket-id.org/docs/client-examples/ezbookkeeping)
 
 | 选项名 | 默认值 | 描述 |
 | --- | --- | --- |
