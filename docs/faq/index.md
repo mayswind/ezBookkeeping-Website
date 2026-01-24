@@ -86,6 +86,14 @@ If you're using `local_filesystem` object storage type, object storage files are
 
 If you're using `minio` or `webdav` object storage type, files are managed by the object storage system.
 
+> How to backup the database and object storage files?
+>
+> Since the database systems and object storage services used by ezBookkeeping are mature and well-supported, with convenient official and third-party tools available, ezBookkeeping recommends using these database and object storage utilities for backups. For example:
+> 1. Use `mysqldump` to dump a MySQL database
+> 2. Use `mariadb-dump` to dump a MariaDB database
+> 3. Use `pg_dump` to dump a PostgreSQL database
+> 4. Use `mc` to copy files from MinIO object storage
+
 ## How to migrate ezBookkeeping data
 
 If you're using MySQL or PostgreSQL as database along with either the `minio` or `webdav` object storage type (or if you're not storing user avatars or transaction pictures), then ezBookkeeping itself is stateless and requires no data migration.

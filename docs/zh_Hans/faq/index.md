@@ -86,6 +86,14 @@ ezBookkeeping 大部分数据都存储在数据库中，用户的头像、交易
 
 如果你使用 `minio` 或 `webdav` 对象存储类型，对象存储的文件通过对象存储系统进行管理。
 
+> 如何备份数据库和对象存储文件？
+>
+> 由于 ezBookkeeping 使用的数据库系统和对象存储服务已经非常成熟，各系统官方及第三方也提供了非常方便的实用工具，因此 ezBookkeeping 建议使用这些数据库实用工具及对象存储工具进行备份。例如，
+> 1. 使用 `mysqldump` Dump MySQL 数据库
+> 2. 使用 `mariadb-dump` Dump MariaDB 数据库
+> 3. 使用 `pg_dump` Dump PostgreSQL 数据库
+> 4. 使用 `mc` 复制 MinIO 对象存储中的文件
+
 ## 如何迁移 ezBookkeeping 的数据
 
 若您使用 MySQL 或 PostgreSQL 作为数据库，同时使用 `minio` 或 `webdav` 对象存储类型（或不存储用户头像或交易图片文件），则 ezBookkeeping 本身是无状态的，不需要迁移任何数据。
