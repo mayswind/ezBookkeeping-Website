@@ -53,7 +53,7 @@ ezBookkeeping 并不是一个桌面应用，而是一个自托管的服务端程
 
 ezBookkeeping 是开箱即用的，无需设置任何额外的设置项即可启动运行。但是如果你正式使用它，还需要正确配置以下几个配置项：
 
-1. `security` 节中的 `secret_key`（环境变量 `EBK_SECURITY_SECRET_KEY`）：需要设置为一个随机字符串，随机字符串也可以使用 ezBookkeeping 命令行工具生成 `ezbookkeeping security gen-secret-key`
+1. `security` 节中的 `secret_key`（环境变量 `EBK_SECURITY_SECRET_KEY`）：需要设置为一个随机字符串，随机字符串可以使用 ezBookkeeping 命令行工具 `ezbookkeeping security gen-secret-key` 或 `openssl rand -base64 32` 生成
 2. `server` 节中的 `domain`（环境变量 `EBK_SERVER_DOMAIN`）：需要设置为用户访问的域名或者 IP 地址（例如 `ezbookkeeping-demo.mayswind.net` 或 `192.168.1.2`）。如果设置错误将会导致用户头像或交易图片无法显示，以及 ezBookkeeping 发送的邮件中的链接地址错误
 
 如果你想使用 Nginx 等反向代理，并且暴露给用户的协议、端口号与 ezBookkeeping 的 Web 服务器设置不同，还需要设置 `server` 节中的 `root_url`（环境变量 `EBK_SERVER_ROOT_URL`），例如 `https://ezbookkeeping-demo.mayswind.net/`。
@@ -122,6 +122,7 @@ ezBookkeeping 的数据库设计是向前兼容的，当你升级 ezBookkeeping 
 
 如果你需要升级 ezBookkeeping，只需要下载新的二进制文件替换旧的二进制文件，然后重新启动 ezBookkeeping 服务端程序即可。如果你使用 Docker 镜像部署 ezBookkeeping，只需要拉取新的 Docker 镜像并重新创建容器即可。
 
+> [!WARNING] 注意
 > 如果可能，始终建议在升级前使用数据库工具备份数据库中的数据。
 
 ## ezBookkeeping 是否提供电脑桌面应用或手机 App

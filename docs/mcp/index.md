@@ -8,7 +8,8 @@ title: MCP (Model Context Protocol)
 
 With the MCP protocol, you can use your preferred AI tools to add transactions (e.g. create transactions using natural language or import multiple transactions from different formats), query transaction data (e.g. use your AI  tools to analyze historical transaction records), and more.
 
-> Note: When using a third-party large language model service, be cautious with the MCP feature, because your private data may be sent to the third-party provider.
+> [!CAUTION] CAUTION
+> When using a third-party large language model service, be cautious with the MCP feature, because your private data may be sent to the third-party provider.
 
 ## Configuration
 
@@ -18,6 +19,7 @@ By default, ezBookkeeping does not enable the MCP server. You can enable it by u
 
 The MCP service of ezBookkeeping requires a special token to access. You can go to "User Settings" -> "Security" and click the "Generate Token" button in desktop version, and then enter your password. Alternatively, you can generate the token by the `user-session-new` command in ezBookkeeping's CLI, for more details, see the [Command Line](/command_line/#userdata).
 
+> [!NOTE] TIP
 > If the IP address used to access the MCP server is fixed (e.g., within a home network), you can restrict specific IP addresses that can access the MCP server. For details, see the [Configuration - MCP](/configuration/#mcp-model-context-protocol).
 
 Then, copy the following code into your AI tool's MCP server configuration to enable it to access and interact with ezBookkeeping data.

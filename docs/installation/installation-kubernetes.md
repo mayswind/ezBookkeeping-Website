@@ -29,7 +29,7 @@ metadata:
   name: ezbookkeeping-secret
 type: Opaque
 data:
-  # Set this to a random string. You can generate one using the ezBookkeeping CLI command "ezbookkeeping security gen-secret-key"
+  # Set this to a random string. You can generate one using the ezBookkeeping CLI command "ezbookkeeping security gen-secret-key" or "openssl rand -base64 32"
   EBK_SECURITY_SECRET_KEY: XXX
 ```
 

@@ -187,7 +187,7 @@ ezBookkeeping 使用 ini 文件作为配置文件。
 
 | 选项名 | 默认值 | 描述 |
 | --- | --- | --- |
-| `secret_key` |  | 作为密钥使用，**为了保证您的数据安全，请在第一次运行 ezBookkeeping 前修改该值**。你可以通过执行 `ezbookkeeping security gen-secret-key` 获取一个随机密钥。 |
+| `secret_key` |  | 作为密钥使用，**为了保证您的数据安全，请在第一次运行 ezBookkeeping 前修改该值**。你可以通过执行 `ezbookkeeping security gen-secret-key` 或 `openssl rand -base64 32` 获取一个随机密钥。 |
 | `token_expired_time` | `2592000` | 令牌过期时间（60 - 4294967295 秒）。 |
 | `token_min_refresh_interval` | `86400` | 令牌最小刷新间隔（0 - 4294967295 秒)，该值应当小于令牌过期时间。设置为 `0` 时则每次刷新前端时都会刷新令牌。 |
 | `temporary_token_expired_time` | `300` | 临时令牌过期时间（60 - 4294967295 秒）。 |

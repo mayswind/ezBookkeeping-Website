@@ -29,7 +29,7 @@ metadata:
   name: ezbookkeeping-secret
 type: Opaque
 data:
-  # 需要设置为一个随机字符串，随机字符串也可以使用 ezBookkeeping 命令行工具生成 "ezbookkeeping security gen-secret-key"
+  # 需要设置为一个随机字符串，随机字符串可以使用 ezBookkeeping 命令行工具 "ezbookkeeping security gen-secret-key" 或 "openssl rand -base64 32" 生成
   EBK_SECURITY_SECRET_KEY: XXX
 ```
 

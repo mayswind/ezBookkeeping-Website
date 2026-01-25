@@ -53,7 +53,7 @@ Of course, if you prefer, you can also run the ezBookkeeping server program on y
 
 ezBookkeeping is ready to use out of the box, so it can run without any additional configuration. However, for production use, you should properly configure the following key settings:
 
-1. `secret_key` in `security` section (environment variable `EBK_SECURITY_SECRET_KEY`): Set this to a random string. You can generate one using the ezBookkeeping CLI command `ezbookkeeping security gen-secret-key`
+1. `secret_key` in `security` section (environment variable `EBK_SECURITY_SECRET_KEY`): Set this to a random string. You can generate one using the ezBookkeeping CLI command `ezbookkeeping security gen-secret-key` or `openssl rand -base64 32`
 2. `domain` in `server` section (environment variable `EBK_SERVER_DOMAIN`): Set this to the domain name or IP address users will use to access (e.g. `ezbookkeeping-demo.mayswind.net` or `192.168.1.2`). If this setting is incorrect, user avatars and transaction pictures may fail to display, and links in ezBookkeeping's outgoing emails may be incorrect
 
 If you plan to use a reverse proxy such as Nginx, and the protocol or port exposed to users differs from the ezBookkeeping web server's settings, also configure `root_url` in `server` section (environment variable `EBK_SERVER_ROOT_URL`), e.g. `https://ezbookkeeping-demo.mayswind.net/`.
@@ -122,6 +122,7 @@ ezBookkeeping's database design is forward-compatible. When you upgrade the ezBo
 
 To upgrade ezBookkeeping, simply download the new binary and replace the old one, then restart the ezBookkeeping server application. If you deploy ezBookkeeping using Docker images, just pull the latest Docker image and recreate the container.
 
+> [!WARNING] ATTENTION
 > If possible, it is always recommended to backup the database data using database tools before performing an upgrade.
 
 ## Does ezBookkeeping provide a desktop or mobile app

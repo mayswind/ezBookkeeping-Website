@@ -187,7 +187,7 @@ Note that if the same configuration option is set using all three methods above,
 
 | Option Name | Default Value | Description |
 | --- | --- | --- |
-| `secret_key` |  | Used for encryption key, **you must change it to keep your user data safe before you first run ezBookkeeping**. You can get a random secret key by executing `ezbookkeeping security gen-secret-key`. |
+| `secret_key` |  | Used for encryption key, **you must change it to keep your user data safe before you first run ezBookkeeping**. You can get a random secret key by executing `ezbookkeeping security gen-secret-key` or `openssl rand -base64 32`. |
 | `token_expired_time` | `2592000` | Token expired time (60 - 4294967295 seconds). |
 | `token_min_refresh_interval` | `86400` | Token minimum refresh interval (0 - 4294967295 seconds), the value should be less than token expired time. Set to `0` to refresh the token every time when refreshing the front end. |
 | `temporary_token_expired_time` | `300` | Temporary token expired time (60 - 4294967295 seconds). |

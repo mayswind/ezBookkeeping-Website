@@ -43,7 +43,8 @@ The default database type is `sqlite3`, and the database file is stored in `/ezb
 
 If you want to continue to use `sqlite3` as database and store these data persistently, you must use Docker persistent volume or mount a host path to container, otherwise all data will be lost when the container is recreated or removed.
 
-> ezBookkeeping recommends using the SQLite database only for testing purposes. If you decide to use ezBookkeeping, it's best to use a MySQL or PostgreSQL database to avoid potential migration costs later.
+> [!NOTE] TIP
+> ezBookkeeping recommends using the SQLite database only for testing purposes. If you decide to use ezBookkeeping, it is recommended to use MySQL or PostgreSQL to achieve better performance and stability.
 
 In addition, the default object storage uses the local file system, and the default path is `/ezbookkeeping/storage/`. If you use the local file system to store object data (e.g. pictures uploaded by users), you also need to use Docker persistent volume or mount a host path to container.
 
@@ -80,8 +81,8 @@ If you want to replace the configuration file, you can mount the custom configur
 If you just want to modify some options, you can just use environment variable to set these value.
 All options in the configuration file can be overridden using environment variables with the following name: `EBK_{SECTION_NAME}_{OPTION_NAME}`. In addition, ezBookkeeping supports loading specific configuration values from designated files via environment variables. For more details, see [Configuration](/configuration/).
 
-**ATTENTION**:
-Before you deploy to production, you must generate a random string and set it to `secret_key` to keep your user data safe. You can get a random secret key by executing `ezbookkeeping security gen-secret-key`.
+> [!IMPORTANT] ATTENTION
+> Before you deploy to production, you must generate a random string and set it to `secret_key` to keep your user data safe. You can get a random secret key by executing `ezbookkeeping security gen-secret-key` or `openssl rand -base64 32`.
 
 In addition, you also need to set the `domain` in the settings to the domain name you actually access, otherwise the url in the email, as well as the user avatar, transaction picture and other url will be incorrect. If the protocol or port you actually access is different from the ezBookkeping configuration, you also need to modify `root_url` to the actual access address (for example, using Nginx as the reverse proxy).
 

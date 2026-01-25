@@ -43,7 +43,8 @@ $ docker run -d -p8080:8080 --name ezbookkeeping mayswind/ezbookkeeping
 
 如果你想继续使用 `sqlite3` 作为数据库，并持久化保存这些数据，你必须使用 Docker 持久化数据卷或挂载宿主机的路径到容器内，否则当容器被重建或删除时，所有数据将会丢失。
 
-> ezBookkeeping 建议仅测试时使用 SQLite 数据库。如果您确定使用 ezBookkeeping，最好使用 MySQL 或 PostgreSQL 数据库，以避免后续迁移的成本。
+> [!NOTE] 提示
+> ezBookkeeping 建议仅测试时使用 SQLite 数据库。如果您确定使用 ezBookkeeping，建议使用 MySQL 或 PostgreSQL 数据库，以提供更好的性能和稳定性。
 
 此外，默认对象存储使用本地文件系统，默认路径是 `/ezbookkeeping/storage/`，如果你使用本地文件系统存储对象数据（例如用户上传的图片），你也需要使用 Docker 持久化数据卷或挂载宿主机的路径到容器内。
 
@@ -80,8 +81,8 @@ $ docker run -d -p8080:8080 --name ezbookkeeping -v /var/lib/ezbookkeeping/data:
 如果你只是想修改部分选项，你只要使用环境变量就可以设置这些值。
 配置文件中所有的选项都可以通过如下的环境变量名被覆盖：`EBK_{SECTION_NAME}_{OPTION_NAME}`。除此之外，ezBookkeeping 还支持通过环境变量从指定文件中加载指定配置项的值，具体参考 [配置](/zh_Hans/configuration/)。
 
-**注意**：
-在部署到生产环境之前，您必须生成一个随机值并将其设置到 `secret_key` 配置中以保证您数据的安全。你可以通过执行 `ezbookkeeping security gen-secret-key` 获取一个随机密钥。
+> [!IMPORTANT] 注意
+> 在部署到生产环境之前，您必须生成一个随机值并将其设置到 `secret_key` 配置中以保证您数据的安全。你可以通过执行 `ezbookkeeping security gen-secret-key` 或 `openssl rand -base64 32` 获取一个随机密钥。
 
 除此之外，您还需要将设置中的 `domain` 设置为实际访问的域名，否则邮件中的链接地址，以及用户头像、交易图片等地址将会不正确。如果你实际访问的协议或端口与 ezBookkeping 配置的不同，还需要将 `root_url` 修改为实际的访问地址（例如使用 Nginx 作为反向代理）。
 
