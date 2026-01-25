@@ -66,4 +66,31 @@ features:
     - title: Data Import/Export
       icon: 📑
       details: Supports CSV, OFX, QFX, QIF, IIF, Camt.053, MT940, GnuCash, Firefly III, Beancount, and more
+
+sitemap:
+    - name: Docs
+      links:
+        - name: Installation
+          url: /installation/
+        - name: Basic Usage
+          url: /basic_usage/
+        - name: Export & Import
+          url: /export_and_import/
+        - name: Command Line
+          url: /command_line/
+    - name: Resources
+      links:
+        - name: Release Notes
+          url: https://github.com/mayswind/ezbookkeeping/releases
+          external: true
+        - name: Docker Repository
+          url: https://hub.docker.com/r/mayswind/ezbookkeeping
+          external: true
+    - name: Help
+      links:
+        - name: FAQ
+          url: /faq/
+        - name: GitHub Discussions
+          url: https://github.com/mayswind/ezbookkeeping/discussions
+          external: true
 ---

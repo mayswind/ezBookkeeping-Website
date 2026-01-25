@@ -5,4 +5,22 @@
     --vp-c-indigo-1: #c67e48;
     --vp-c-indigo-2: #b67443;
     --vp-c-indigo-3: #a86a3f;
+    --ebk-docs-footer-background-color: #f9f9f9;
+}
+
+.dark:root {
+    --vp-c-bg: #1c1b1a;
+    --vp-c-bg-soft: #202020;
+    --vp-sidebar-bg-color: #161514;
+    --ebk-docs-footer-background-color: #1e1e1e;
+}
+
+/* replace vite press styles */
+.VPHome {
+    margin-bottom: 0 !important;
+}
+
+.VPFooter {
+    border-top: 0 !important;
+    background-color: var(--ebk-docs-footer-background-color) !important;
 }

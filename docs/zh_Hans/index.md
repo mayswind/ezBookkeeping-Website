@@ -66,4 +66,31 @@ features:
     - title: 数据导入/导出
       icon: 📑
       details: 支持 CSV、OFX、QFX、QIF、IIF、Camt.053、MT940、GnuCash、FireFly III、Beancount、随手记，以及支付宝、微信支付及京东金融的对账单 等多种格式
+
+sitemap:
+    - name: 文档
+      links:
+        - name: 安装指南
+          url: /zh_Hans/installation/
+        - name: 基础使用
+          url: /zh_Hans/basic_usage/
+        - name: 导出 & 导入
+          url: /zh_Hans/export_and_import/
+        - name: 命令行
+          url: /zh_Hans/command_line/
+    - name: 资源
+      links:
+        - name: 更新日志
+          url: https://github.com/mayswind/ezbookkeeping/releases
+          external: true
+        - name: Docker 仓库
+          url: https://hub.docker.com/r/mayswind/ezbookkeeping
+          external: true
+    - name: 帮助
+      links:
+        - name: 常见问题
+          url: /zh_Hans/faq/
+        - name: GitHub 讨论区
+          url: https://github.com/mayswind/ezbookkeeping/discussions
+          external: true
 ---
