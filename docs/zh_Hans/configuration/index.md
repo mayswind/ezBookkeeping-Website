@@ -13,7 +13,7 @@ ezBookkeeping 使用 ini 文件作为配置文件。
 1. 如果你想直接通过环境变量设置配置项并覆盖配置文件中的配置项，你可以使用如下的环境变量名（环境变量名需要为大写）：`EBK_{SECTION_NAME}_{OPTION_NAME}`。例如，将数据库类型设置为 `mysql`，你可以定义环境变量 `EBK_DATABASE_TYPE=mysql`
 2. 如果你想通过环境变量设置从指定文件中加载配置项的内容并覆盖配置文件中的配置项，你可以使用如下的环境变量名（环境变量名需要为大写）：`EBKCFP_{SECTION_NAME}_{OPTION_NAME}`。例如，将数据库密码从指定文件中加载，你可以定义环境变量 `EBKCFP_DATABASE_PASSWD=/run/secrets/database_password`，然后将数据库密码放在 `/run/secrets/database_password` 文件中
 
-注意，如果同一个配置项同时配置了上述两种方式，优先使用文件中的内容。
+注意，如果同一个配置项同时配置了上述三种方式，优先级依次为：环境变量（从文件加载配置项） > 环境变量（直接设置配置项） > 配置文件。
 
 ## 全局
 

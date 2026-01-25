@@ -13,7 +13,7 @@ In addition, ezBookkeeping also supports setting configuration via environment v
 1. If you want to set configuration options directly through environment variables and override the values in the configuration file, use the following format (environment variable names must be in uppercase): `EBK_{SECTION_NAME}_{OPTION_NAME}`. For example, to set the database type to `mysql`, you can define the environment variable `EBK_DATABASE_TYPE=mysql`
 2. If you want to load a configuration option value from a specific file via environment variables and override the value in the configuration file, use the following format (environment variable names must be in uppercase): `EBKCFP_{SECTION_NAME}_{OPTION_NAME}`. For example, to load the database password from a file, you can define the environment variable: `EBKCFP_DATABASE_PASSWD=/run/secrets/database_password` and place the database password inside the `/run/secrets/database_password` file
 
-Note that if both above methods are configured for the same configuration option, the value from the file will take priority.
+Note that if the same configuration option is set using all three methods above, the precedence order is: Environment Variables (Loaded from file) > Environment Variables (Set directly) > Configuration File.
 
 ## Global
 
