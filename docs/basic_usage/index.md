@@ -14,7 +14,7 @@ When registering a new user, ezBookkeeping only requires setting the user's lang
 
 After your first login, you need to create an account to start recording your financial data. On the "Accounts" page, click the "Add" button to open the Add Account page / dialog, where you can set the account category, name, initial balance and other details to complete the setup. ezBookkeeping recommends mapping each account to a real-world account (for example, a bank account with its own account number).
 
-ezBookkeeping supports multiple account categories, including cash, checking, credit cards and more. Credit card and debt accounts track outstanding balances (positive values indicate amounts owed), while other account categories track balances.
+ezBookkeeping supports multiple account categories, including cash, checking, credit cards and more. Credit card and debt accounts track outstanding balances (positive values indicate amounts owed, and are recorded as liabilities), while other account categories track balances (positive values indicate owned funds and are recorded as assets).
 
 In addition, credit card accounts support setting a statement date. If a statement date is configured, you can directly filter transactions for the current billing cycle and the previous billing cycle from the transaction list page after selecting that account.
 
