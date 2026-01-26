@@ -90,6 +90,8 @@ sitemap:
       links:
         - name: FAQ
           url: /faq/
+        - name: Comparison
+          url: /comparison/
         - name: GitHub Discussions
           url: https://github.com/mayswind/ezbookkeeping/discussions
           external: true

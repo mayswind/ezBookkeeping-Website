@@ -90,6 +90,8 @@ sitemap:
       links:
         - name: 常见问题
           url: /zh_Hans/faq/
+        - name: 横向对比
+          url: /zh_Hans/comparison/
         - name: GitHub 讨论区
           url: https://github.com/mayswind/ezbookkeeping/discussions
           external: true
