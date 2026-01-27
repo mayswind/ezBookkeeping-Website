@@ -16,6 +16,10 @@ ezBookkeeping 不提供官方的托管服务，你需要在你自己的服务器
 
 ezBookkeeping 项目不会收集用户的任何信息，用户的数据完全存储在用户自己部署的服务器或个人电脑上。你自托管的 ezBookkeeping 服务端程序不会将任何数据发送给 ezBookkeeping 项目。不过，ezBookkeeping 提供的部分功能会依赖第三方服务，ezBookkeeping 与这些第三方服务没有任何商业合作关系，这些服务可能会收集用户的信息，详情请参考 [ezBookkeeping 使用了哪些第三方服务，以及是否会使用我的个人数据](#ezbookkeeping-使用了哪些第三方服务-以及是否会使用我的个人数据)，你可以在配置文件中自由选择是否使用这些第三方提供的功能。
 
+## ezBookkeeping 是否适合我
+
+ezBookkeeping 并不是万能的，你可以访问 [功能对比](/zh_Hans/comparison/) 查看 ezBookkeeping 与其他类似软件的功能对比说明，并选择适合你的软件。
+
 ## ezBookkeeping 支持哪些操作系统
 
 运行 ezBookkeeping 服务端的操作系统与 Golang 支持的操作系统相同，下表列出了 ezBookkeeping 各个版本依赖的 Golang 的版本以及支持操作系统的最低版本。
@@ -41,7 +45,7 @@ ezBookkeeping 项目不会收集用户的任何信息，用户的数据完全存
 
 ## ezBookkeeping 需要使用多少系统资源
 
-ezBookkeeping 是基于 Golang 编写的轻量软件，需要资源非常少。ezBookkeeping 的二进制文件及依赖的静态文件大约占用 50MB 左右的磁盘空间，在 Linux/amd64 平台运行时只需要使用约 30MB 左右内存。
+ezBookkeeping 是基于 Golang 编写的轻量软件，需要资源非常少。ezBookkeeping 的二进制文件及依赖的静态文件大约占用 50 MiB 左右的磁盘空间，在 Linux/amd64 平台运行时只需要使用约 30 MiB 左右内存。
 
 ## 为什么在 Windows 系统上双击 `ezbookkeeping.exe` 无法打开应用程序
 

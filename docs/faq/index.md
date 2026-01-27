@@ -16,6 +16,10 @@ ezBookkeeping does not provide an official hosted service. You need to deploy th
 
 The ezBookkeeping project does not collect any user information. All user data is stored entirely on the server or personal computer that you deploy yourself. Your self-hosted ezBookkeeping server does not send any data to the ezBookkeeping project. However, some features provided by ezBookkeeping may rely on third-party services. ezBookkeeping has no commercial partnerships with these services, and they may collect user data. For details, please refer to [What third-party services does ezBookkeeping use, and does it access my personal data](#what-third-party-services-does-ezbookkeeping-use-and-does-it-access-my-personal-data). You can freely choose whether to enable these features provided by third-party in the configuration file.
 
+## Is ezBookkeeping right for me
+
+ezBookkeeping is not a one-size-fits-all solution. You can visit the [Feature Comparison](/comparison/) page to review how ezBookkeeping compares with other similar software and choose the one that best fits your needs.
+
 ## Which operating systems does ezBookkeeping support
 
 The operating systems that can run the ezBookkeeping server are the same as those supported by Golang. The table below lists the Golang versions required by each ezBookkeeping release, along with the minimum supported OS versions.
@@ -41,7 +45,7 @@ If you've already deployed the ezBookkeeping server program, you can access ezBo
 
 ## How much system resources does ezBookkeeping use
 
-ezBookkeeping is a lightweight software written in Golang that needs very few resources. The ezBookkeeping binary file and its dependent static files take up about 50 MB of disk space, and it only requires about 30MB of memory when running on Linux/amd64 platform.
+ezBookkeeping is a lightweight software written in Golang that needs very few resources. The ezBookkeeping binary file and its dependent static files take up about 50 MiB of disk space, and it only requires about 30 MiB of memory when running on Linux/amd64 platform.
 
 ## Why double-clicking `ezbookkeeping.exe` on Windows doesn't launch the application
 
