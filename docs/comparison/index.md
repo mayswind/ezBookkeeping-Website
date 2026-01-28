@@ -77,7 +77,7 @@ Below is a feature comparison of ezBookkeeping with the open-source, self-hosted
 | Income categories | ✅ Supported | ⚠️ Not distinguished | ⚠️ Not distinguished |
 | Transfer categories | ✅ Supported | ⚠️ Not distinguished | ⚠️ Not distinguished |
 | Category name | ✅ Supported | ✅ Supported | ✅ Supported |
-| Category icon | ✅ Supported | ❌ Not supported | ❌ Not supported |
+| Category icon | ✅ Built-in icons supported | ❌ Not supported | ❌ Not supported |
 | Category color | ✅ Supported | ❌ Not supported | ❌ Not supported |
 | Category notes / description | ✅ Supported | ✅ Supported | ❌ Not supported |
 
@@ -127,7 +127,7 @@ Below is a feature comparison of ezBookkeeping with the open-source, self-hosted
 | Category income / expense trend charts | ✅ Supported | ✅ Supported | ✅ Supported |
 | Account income / expense trend charts | ✅ Supported | ❌ Not supported | ✅ Supported |
 | Asset trend charts | ✅ Supported | ✅ Supported | ✅ Supported |
-| Trend aggregation by time range | ✅ Supported (month, quarter, year, fiscal year, and daily in Insights Explorer) | ⚠️ No customization | ✅ Supported (day, week, month, year) |
+| Trend aggregation by time range | ✅ Supported (month, quarter, year, fiscal year, and day in Insights Explorer) | ⚠️ No customization | ✅ Supported (day, week, month, year) |
 | Tag charts | ✅ Supported in Insights Explorer | ✅ Supported | ❌ Not supported |
 | Custom charts | ✅ Supported | ❌ Not supported | ✅ Supported |
 | Export chart data | ✅ Export CSV / TSV / Markdown | ❌ Not supported | ❌ Not supported |
@@ -139,7 +139,7 @@ Below is a feature comparison of ezBookkeeping with the open-source, self-hosted
 | Trend charts (Bar / Column) | ✅ Supported | ✅ Supported | ✅ Supported |
 | Trend charts (Bubble) | ✅ Supported | ❌ Not supported | ❌ Not supported |
 | Account reconciliation statements | ✅ Supported | ❌ Not supported | ✅ Supported |
-| Export account reconciliation statements | ✅ CSV / TSV supported | ❌ Not supported | ❌ Not supported |
+| Export account reconciliation statements | ✅ Export CSV / TSV | ❌ Not supported | ❌ Not supported |
 | Account balance trend (Bar) | ✅ Supported | ❌ Not supported | ❌ Not supported |
 | Account balance trend (Area / Line) | ✅ Supported | ✅ Supported | ⚠️ Monthly only |
 | Account balance trend (Candlestick) | ✅ Supported | ❌ Not supported | ❌ Not supported |
