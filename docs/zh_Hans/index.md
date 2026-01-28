@@ -65,7 +65,7 @@ features:
           应用锁 (PIN 码 / WebAuthn)
     - title: 数据导入/导出
       icon: 📑
-      details: 支持 CSV、OFX、QFX、QIF、IIF、Camt.053、MT940、GnuCash、FireFly III、Beancount、随手记，以及支付宝、微信支付及京东金融的对账单 等多种格式
+      details: 支持 CSV、OFX、QFX、QIF、IIF、Camt.053、MT940、GnuCash、Firefly III、Beancount、随手记，以及支付宝、微信支付及京东金融的对账单 等多种格式
 
 sitemap:
     - name: 文档

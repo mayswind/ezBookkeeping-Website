@@ -1,10 +1,12 @@
 ---
-title: Feature Comparison
+title: Feature Comparison (ezBookkeeping vs. Firefly III vs. Actual Budget)
 ---
 
 # Feature Comparison
 
-Below is a feature comparison of ezBookkeeping with the open-source, self-hosted personal finance software Firefly III and Actual Budget, as of January 2026.
+Below is a feature comparison between ezBookkeeping and the open-source, self-hosted personal finance software Firefly III and Actual Budget, based on information as of January 2026.
+
+ezBookkeeping does not cover every possible need, so you can choose the software that best aligns with your top priorities.
 
 ## Basic Information
 
@@ -14,9 +16,13 @@ Below is a feature comparison of ezBookkeeping with the open-source, self-hosted
 | Development Period | 2020–present | 2014–present | 2022–present |
 | License | MIT License | GNU Affero General Public License v3.0 | MIT License |
 | Programming Languages | Go + TypeScript | PHP + JavaScript | TypeScript |
+| Frontend UI frameworks | Vuetify v3.11.3 (released Dec 2025) <br/> Framework7 v9.0.2 (released Dec 2025) | Bootstrap v3.3.7 (released Jul 2016) | React Aria v1.14.0 (released Dec 2025) |
 | Official Docker Image Platforms | `linux/amd64` <br/> `linux/arm64` <br/> `linux/armv6` <br/> `linux/armv7` | `linux/amd64` <br/> `linux/arm64` | `linux/amd64` <br/> `linux/arm64` <br/> `linux/armv6` <br/> `linux/armv7` |
 | Supported Databases | SQLite, MySQL, PostgreSQL | MySQL, PostgreSQL | SQLite |
 | Supported Object Storage | Local filesystem, MinIO (S3-compatible), WebDAV | Local filesystem | – |
+| Supported LLM providers | OpenAI, OpenAI-compatible APIs, OpenRouter, Ollama, Google AI | - | - |
+| Supported map providers | OpenStreetMap, CartoDB, TomTom, Google Maps, Baidu Map, Amap, and 11 other providers plus custom tile providers | - | - |
+| Supported exchange rate sources | 17 central banks or international financial institutions, or user-defined | Firefly III official site or user-defined | - |
 
 ## Performance
 
@@ -57,7 +63,7 @@ Below is a feature comparison of ezBookkeeping with the open-source, self-hosted
 | Categories | ✅ Two-level categories | ⚠️ Single-level categories | ⚠️ Single-level categories |
 | Payee | ✅ Via tags | ✅ Via tags | ✅ Supported |
 | Tags | ✅ Up to 10 tags | ✅ Supported | ✅ Supported |
-| Geographic Location | ✅ Supported | ❌ Not supported | ❌ Not supported |
+| Geographic location | ✅ Supported | ❌ Not supported | ❌ Not supported |
 | Images | ✅ Up to 9 images | ❌ Not supported | ❌ Not supported |
 | Attachments | ❌ Not supported | ✅ Supported | ❌ Not supported |
 | Cleared status | ✅ Via tags | ✅ Via tags | ✅ Supported |
@@ -140,17 +146,18 @@ Below is a feature comparison of ezBookkeeping with the open-source, self-hosted
 | Trend charts (Bubble) | ✅ Supported | ❌ Not supported | ❌ Not supported |
 | Account reconciliation statements | ✅ Supported | ❌ Not supported | ✅ Supported |
 | Export account reconciliation statements | ✅ Export CSV / TSV | ❌ Not supported | ❌ Not supported |
-| Account balance trend (Bar) | ✅ Supported | ❌ Not supported | ❌ Not supported |
-| Account balance trend (Area / Line) | ✅ Supported | ✅ Supported | ⚠️ Monthly only |
-| Account balance trend (Candlestick) | ✅ Supported | ❌ Not supported | ❌ Not supported |
+| Account balance trend charts (Area / Line) | ✅ Supported | ✅ Supported | ⚠️ Monthly only |
+| Account balance trend charts (Bar) | ✅ Supported | ❌ Not supported | ❌ Not supported |
+| Account balance trend charts (Candlestick) | ✅ Supported | ❌ Not supported | ❌ Not supported |
 
 ## Import Features
 
 | Item | ezBookkeeping | Firefly III | Actual Budget |
 | --- | --- | --- | --- |
 | CSV | ✅ Built-in support | ✅ Via Data Importer | ✅ Built-in support |
-| CSV column-mapping import | ✅ Supports import / export rules, shareable via community | ✅ Data Importer has built-in preset rules | ✅ Supported |
+| CSV column-mapping import | ✅ Supports import / export rules, shareable via community | ✅ Data Importer has built-in preset rules | ⚠️ Mapping rules must be set each time |
 | CSV custom script import | ✅ Supports custom JavaScript scripts | ❌ Not supported | ❌ Not supported |
+| CSV file encoding | ✅ Supports 52 encodings (24 with auto-detection) | ⚠️ UTF-8 only | ⚠️ UTF-8 only |
 | OFX | ✅ Built-in support | ❌ Not supported | ✅ Built-in support |
 | QFX | ✅ Built-in support | ❌ Not supported | ✅ Built-in support |
 | QIF | ✅ Built-in support | ❌ Not supported | ✅ Built-in support |
@@ -229,6 +236,7 @@ Below is a feature comparison of ezBookkeeping with the open-source, self-hosted
 | --- | --- | --- | --- |
 | Multi-language support | ✅ Supported | ✅ Supported | ✅ Supported |
 | Number of supported languages | ✅ 19 languages | ✅ 34 languages | ✅ 15 languages |
+| Number of languages with translation progress ≥ 70% | ✅ 19 languages | ✅ 22 languages | ✅ 8 languages |
 | Localized date formats | ✅ Customizable | ⚠️ Controlled by the system | ✅ Customizable |
 | Localized time formats | ✅ Customizable | ⚠️ Controlled by the system | ❌ Not supported |
 | Custom time zone | ✅ Supported | ❌ Not supported | ❌ Not supported |

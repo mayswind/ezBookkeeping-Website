@@ -1,10 +1,12 @@
 ---
-title: 功能对比
+title: 功能对比（ezBookkeeping vs. Firefly III vs. Actual Budget）
 ---
 
 # 功能对比
 
-以下为 ezBookkeeping 与开源、自托管的记账软件 FireFly III 和 Actual Budget 的功能对比情况，对比时间为 2026年1月。
+以下为 ezBookkeeping 与其他的开源、自托管的个人记账软件 Firefly III 和 Actual Budget 的功能对比情况，对比时间为 2026年1月。
+
+ezBookkeeping 并不是万能的，你可以根据自己最强烈的需求选择最适合自己的软件。
 
 ## 基本信息
 
@@ -14,9 +16,13 @@ title: 功能对比
 | 开发时间 | 2020年至今 | 2014年至今 | 2022年至今 |
 | 开源协议 | MIT License | GNU Affero General Public License v3.0 | MIT License |
 | 开发语言 | Go + TypeScript | PHP + JavaScript | TypeScript |
+| 前端 UI 框架 | Vuetify v3.11.3（2025年12月发布） <br/> Framework7 v9.0.2（2025年12月发布） | Bootstrap v3.3.7（2016年7月发布） | React Aria v1.14.0（2025年12月发布） |
 | 官方 Docker 镜像支持平台 | `linux/amd64` <br/> `linux/arm64` <br/> `linux/armv6` <br/> `linux/armv7` | `linux/amd64` <br/> `linux/arm64` | `linux/amd64` <br/> `linux/arm64` <br/> `linux/armv6` <br/> `linux/armv7` |
 | 支持的数据库 | SQLite、MySQL、PostgreSQL | MySQL、PostgreSQL | SQLite |
 | 支持的对象存储 | 本地文件系统、MinIO（S3 兼容）、WebDAV | 本地文件系统 | - |
+| 支持的 LLM 提供方 | OpenAI、OpenAI 兼容接口、OpenRouter、Ollama、Google AI | - | - |
+| 支持的地图提供方 | OpenStreetMap、CartoDB、TomTom、Google 地图、百度地图、高德地图等 11 个提供方以及自定义瓦片提供方 | - | - |
+| 支持的汇率数据源 | 17 家央行或国际金融机构或用户自定义 | Firefly III 官方网站或用户自定义 | - |
 
 ## 性能
 
@@ -140,8 +146,8 @@ title: 功能对比
 | 趋势图表（气泡图） | ✅ 支持 | ❌ 不支持 | ❌ 不支持 |
 | 账户对账单 | ✅ 支持 | ❌ 不支持 | ✅ 支持 |
 | 账户对账单导出 | ✅ 支持导出 CSV / TSV | ❌ 不支持 | ❌ 不支持 |
+| 账户余额趋势图（面积图 / 折线图） | ✅ 支持 | ✅ 支持 | ⚠️ 仅支持按月 |
 | 账户余额趋势图（柱状图） | ✅ 支持 | ❌ 不支持 | ❌ 不支持 |
-| 账户余额趋势图（面积图 / 折线图） | ✅ 支持 | ✅ 支持 | ⚠️ 仅支持按月显示 |
 | 账户余额趋势图（K线图） | ✅ 支持 | ❌ 不支持 | ❌ 不支持 |
 
 ## 导入功能
@@ -149,8 +155,9 @@ title: 功能对比
 | 项目 | ezBookkeeping | Firefly III | Actual Budget |
 | --- | --- | --- | --- |
 | CSV | ✅ 内置支持 | ✅ 通过 Data Importer 支持 | ✅ 内置支持 |
-| CSV 列映射导入 | ✅ 支持导入与导出规则，可以通过社区分享 | ✅ Data Importer 内置预设规则 | ✅ 支持 |
+| CSV 列映射导入 | ✅ 支持导入与导出规则，可以通过社区分享 | ✅ Data Importer 内置预设规则 | ⚠️ 需要每次设置映射规则 |
 | CSV 自定义脚本导入 | ✅ 支持自定义 JavaScript 脚本 | ❌ 不支持 | ❌ 不支持 |
+| CSV 文件编码 | ✅ 支持 52 种编码（24 种支持自动检测） | ⚠️ 仅支持 UTF-8 | ⚠️ 仅支持 UTF-8 |
 | OFX | ✅ 内置支持 | ❌ 不支持 | ✅ 内置支持 |
 | QFX | ✅ 内置支持 | ❌ 不支持 | ✅ 内置支持 |
 | QIF | ✅ 内置支持 | ❌ 不支持 | ✅ 内置支持 |
@@ -228,7 +235,8 @@ title: 功能对比
 | 项目 | ezBookkeeping | Firefly III | Actual Budget |
 | --- | --- | --- | --- |
 | 多语言支持 | ✅ 支持 | ✅ 支持 | ✅ 支持 |
-| 支持的语言数量 | ✅ 支持19种语言 | ✅ 支持34种语言 | ✅ 支持15种语言 |
+| 支持的语言数量 | ✅ 19 种语言 | ✅ 34 种语言 | ✅ 15 种语言 |
+| 翻译进度 ≥ 70% 的语言数量 | ✅ 19 种语言 | ✅ 22 种语言 | ✅ 8 种语言 |
 | 本地化日期格式 | ✅ 支持自定义 | ⚠️ 通过系统控制 | ✅ 支持自定义 |
 | 本地化时间格式 | ✅ 支持自定义 | ⚠️ 通过系统控制 | ❌ 不支持 |
 | 自定义时区 | ✅ 支持 | ❌ 不支持 | ❌ 不支持 |
