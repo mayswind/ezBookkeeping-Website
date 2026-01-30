@@ -12,7 +12,7 @@ ezBookkeeping does not cover every possible need, so you can choose the software
 
 | Item | ezBookkeeping | Firefly III | Actual Budget |
 | --- | --- | --- | --- |
-| Compared Version | v1.3.1 | v6.4.16 | v26.1.0 |
+| Compared Version | v1.3.2 | v6.4.16 | v26.1.0 |
 | Development Period | 2020–present | 2014–present | 2022–present |
 | License | MIT License | GNU Affero General Public License v3.0 | MIT License |
 | Programming Languages | Go + TypeScript | PHP + JavaScript | TypeScript |
@@ -22,19 +22,19 @@ ezBookkeeping does not cover every possible need, so you can choose the software
 | Supported Object Storage | Local filesystem, MinIO (S3-compatible), WebDAV | Local filesystem | – |
 | Supported LLM providers | OpenAI, OpenAI-compatible APIs, OpenRouter, Ollama, Google AI | - | - |
 | Supported map providers | OpenStreetMap, CartoDB, TomTom, Google Maps, Baidu Map, Amap, and 11 other providers plus custom tile providers | - | - |
-| Supported exchange rate sources | 17 central banks or international financial institutions, or user-defined | Firefly III official site or user-defined | - |
+| Supported exchange rate sources | 16 central banks or user-defined | Firefly III official site or user-defined | - |
 
 ## Performance
 
 | Item | ezBookkeeping | Firefly III | Actual Budget |
 | --- | --- | --- | --- |
-| Docker Image Tag | `1.3.1` | `version-6.4.16` | `26.1.0-alpine` |
+| Docker Image Tag | `1.3.2` | `version-6.4.16` | `26.1.0-alpine` |
 | Docker Image Size (`linux/amd64`) | 57.7 MiB | 795 MiB | 188 MiB |
 | Docker Image Size (`linux/arm64`) | 55.5 MiB | 805 MiB | 184 MiB |
-| Time to Accept Requests on First Start | 1.53 s | 44.48 s | 8.73 s |
-| Time to Accept Requests on Second Start | 1.06 s | 35.46 s | 8.69 s |
-| Idle Memory Usage After First Start | 23.92 MiB | 71.43 MiB | 117.36 MiB |
-| Memory Usage After First Login | 27.66 MiB | 164.66 MiB | 117.13 MiB |
+| Time to Accept Requests on First Start | 1.36 s | 44.48 s | 8.73 s |
+| Time to Accept Requests on Second Start | 0.93 s | 35.46 s | 8.69 s |
+| Idle Memory Usage After First Start | 25.17 MiB | 71.43 MiB | 117.36 MiB |
+| Memory Usage After First Login | 28.78 MiB | 164.66 MiB | 117.13 MiB |
 
 > The above time and memory usage were measured on a Raspberry Pi 4 (4 GiB RAM, system running on a Samsung SSD 980 connected via USB) with Debian 11 (Linux kernel 6.1.21-v8+). All images used were official minimal images that support the `linux/arm64` platform, and all configurations were set to their default values.
 >
@@ -162,7 +162,7 @@ ezBookkeeping does not cover every possible need, so you can choose the software
 | QFX | ✅ Built-in support | ❌ Not supported | ✅ Built-in support |
 | QIF | ✅ Built-in support | ❌ Not supported | ✅ Built-in support |
 | IIF | ✅ Built-in support | ❌ Not supported | ❌ Not supported |
-| Camt.052 | ❌ Not supported | ✅ Via Data Importer | ❌ Not supported |
+| Camt.052 | ✅ Built-in support | ✅ Via Data Importer | ❌ Not supported |
 | Camt.053 | ✅ Built-in support | ✅ Via Data Importer | ✅ Built-in support |
 | MT940 | ✅ Built-in support | ❌ Not supported | ❌ Not supported |
 | GnuCash | ✅ Built-in support | ❌ Not supported | ❌ Not supported |
@@ -219,7 +219,7 @@ ezBookkeeping does not cover every possible need, so you can choose the software
 
 | Item | ezBookkeeping | Firefly III | Actual Budget |
 | --- | --- | --- | --- |
-| Built-in exchange rate sources | ✅ Synced from official services of 17 central banks or international financial institutions (up to 150 currencies) | ⚠️ Synced from Firefly III website (30 currencies) | ❌ Not supported |
+| Built-in exchange rate sources | ✅ Synced from official services of 16 central banks (up to 150 currencies) | ⚠️ Synced from Firefly III website (30 currencies) | ❌ Not supported |
 | Manual exchange rate input | ✅ Supported | ✅ Supported | ❌ Not supported |
 
 ## Personalization

@@ -12,7 +12,7 @@ ezBookkeeping 并不是万能的，你可以根据自己最强烈的需求选择
 
 | 项目 | ezBookkeeping | Firefly III | Actual Budget |
 | --- | --- | --- | --- |
-| 对比版本号 | v1.3.1 | v6.4.16 | v26.1.0 |
+| 对比版本号 | v1.3.2 | v6.4.16 | v26.1.0 |
 | 开发时间 | 2020年至今 | 2014年至今 | 2022年至今 |
 | 开源协议 | MIT License | GNU Affero General Public License v3.0 | MIT License |
 | 开发语言 | Go + TypeScript | PHP + JavaScript | TypeScript |
@@ -22,19 +22,19 @@ ezBookkeeping 并不是万能的，你可以根据自己最强烈的需求选择
 | 支持的对象存储 | 本地文件系统、MinIO（S3 兼容）、WebDAV | 本地文件系统 | - |
 | 支持的 LLM 提供方 | OpenAI、OpenAI 兼容接口、OpenRouter、Ollama、Google AI | - | - |
 | 支持的地图提供方 | OpenStreetMap、CartoDB、TomTom、Google 地图、百度地图、高德地图等 11 个提供方以及自定义瓦片提供方 | - | - |
-| 支持的汇率数据源 | 17 家央行或国际金融机构或用户自定义 | Firefly III 官方网站或用户自定义 | - |
+| 支持的汇率数据源 | 16 家央行或用户自定义 | Firefly III 官方网站或用户自定义 | - |
 
 ## 性能
 
 | 项目 | ezBookkeeping | Firefly III | Actual Budget |
 | --- | --- | --- | --- |
-| Docker 镜像 Tag | `1.3.1` | `version-6.4.16` | `26.1.0-alpine` |
+| Docker 镜像 Tag | `1.3.2` | `version-6.4.16` | `26.1.0-alpine` |
 | Docker 镜像容量（`linux/amd64`） | 57.7 MiB | 795 MiB | 188 MiB |
 | Docker 镜像容量（`linux/arm64`） | 55.5 MiB | 805 MiB | 184 MiB |
-| 第一次启动到可接受请求的时间 | 1.53 s | 44.48 s | 8.73 s |
-| 第二次启动到可接受请求的时间 | 1.06 s | 35.46 s | 8.69 s |
-| 第一次启动后空闲内存占用 | 23.92 MiB | 71.43 MiB | 117.36 MiB |
-| 第一次登录后内存占用 | 27.66 MiB | 164.66 MiB | 117.13 MiB |
+| 第一次启动到可接受请求的时间 | 1.36 s | 44.48 s | 8.73 s |
+| 第二次启动到可接受请求的时间 | 0.93 s | 35.46 s | 8.69 s |
+| 第一次启动后空闲内存占用 | 25.17 MiB | 71.43 MiB | 117.36 MiB |
+| 第一次登录后内存占用 | 28.78 MiB | 164.66 MiB | 117.13 MiB |
 
 > 上述时间和内存占用均在 Raspberry 4（4 GiB 内存，系统运行在通过 USB 连接的 Samsung SSD 980 磁盘上）上的 Debian 11（Linux kernel 6.1.21-v8+）进行测试，镜像均选择支持 `linux/arm64` 平台的官方最小镜像，配置均为默认配置。
 >
@@ -162,7 +162,7 @@ ezBookkeeping 并不是万能的，你可以根据自己最强烈的需求选择
 | QFX | ✅ 内置支持 | ❌ 不支持 | ✅ 内置支持 |
 | QIF | ✅ 内置支持 | ❌ 不支持 | ✅ 内置支持 |
 | IIF | ✅ 内置支持 | ❌ 不支持 | ❌ 不支持 |
-| Camt.052 | ❌ 不支持 | ✅ 通过 Data Importer 支持 | ❌ 不支持 |
+| Camt.052 | ✅ 内置支持 | ✅ 通过 Data Importer 支持 | ❌ 不支持 |
 | Camt.053 | ✅ 内置支持 | ✅ 通过 Data Importer 支持 | ✅ 内置支持 |
 | MT940 | ✅ 内置支持 | ❌ 不支持 | ❌ 不支持 |
 | GnuCash | ✅ 内置支持 | ❌ 不支持 | ❌ 不支持 |
@@ -219,7 +219,7 @@ ezBookkeeping 并不是万能的，你可以根据自己最强烈的需求选择
 
 | 项目 | ezBookkeeping | Firefly III | Actual Budget |
 | --- | --- | --- | --- |
-| 内置汇率数据源 | ✅ 从 17 家央行或国际金融机构官方服务同步（最多 150 种货币） | ⚠️ 从 Firefly III 网站同步（30 种货币） | ❌ 不支持 |
+| 内置汇率数据源 | ✅ 从 16 家央行官方服务同步（最多 150 种货币） | ⚠️ 从 Firefly III 网站同步（30 种货币） | ❌ 不支持 |
 | 手动设置汇率 | ✅ 支持 | ✅ 支持 | ❌ 不支持 |
 
 ## 个性化
