@@ -181,6 +181,10 @@ You can create an account which account category is "Receivables", then create a
 
 ezBookkeeping uses transaction tags to record information such as merchants, payers and payees. You can add one or more tags to each transaction to capture this information. In addition, ezBookkeeping supports tag groups, allowing you to create different groups to distinguish between different types of tags.
 
+## Why you see "You cannot add transaction with this transaction time" when adding new transaction
+
+If you have configured the "Editable Transaction Range" in your user profile, you will not be able to add, import, edit or delete transactions that fall outside this range. You can modify this setting at any time on the "User Profile" page.
+
 ## Why you see "You cannot add transaction before the balance modification transaction" when adding new transaction
 
 For clarity and consistency, ezBookkeeping allows only one "Modify Balance" transaction per account, and this transaction must be the first transaction for that account. Therefore, transactions cannot be created with a date earlier than the "Modify Balance" transaction.
