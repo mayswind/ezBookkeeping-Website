@@ -65,7 +65,7 @@ features:
           Application lock (PIN code / WebAuthn)
     - title: Data Import/Export
       icon: 📑
-      details: Supports CSV, OFX, QFX, QIF, IIF, Camt.053, MT940, GnuCash, Firefly III, Beancount, and more
+      details: Supports CSV, OFX, QFX, QIF, IIF, Camt.052, Camt.053, MT940, GnuCash, Firefly III, Beancount, and more
 
 sitemap:
     - name: Docs

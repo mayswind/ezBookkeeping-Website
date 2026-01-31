@@ -48,6 +48,7 @@ The following table lists all supported file types and the data contents that ca
 | Quicken Financial Exchange (QFX) File | √ | √ | √ | - | - | - | - | - | √ | - | √ |
 | Quicken Interchange Format (QIF) File | √ | √ | √ | - | × | √ | √ | - | - | - | √ |
 | Intuit Interchange Format (IIF) File | √ | √ | √ | - | √ (*1) | √ | √ | - | - | - | √ |
+| Camt.052 Bank to Customer Statement File | √ | √ | - | - | - | - | √ | - | √ | - | √ |
 | Camt.053 Bank to Customer Statement File | √ | √ | - | - | - | - | √ | - | √ | - | √ |
 | MT940 Consumer Statement Message File | √ | √ | - | - | - | - | √ | - | - | - | √ |
 | GnuCash XML Database File | √ | √ | √ | √ | × | √ | √ | - | √ | - | √ |
