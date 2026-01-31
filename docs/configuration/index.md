@@ -145,7 +145,7 @@ Note that if the same configuration option is set using all three methods above,
 | `openai_compatible_model_id` |  | Model ID for the `openai_compatible` LLM provider, used for receipt image recognition and transaction creation. |
 | `openrouter_api_key` |  | OpenAI API secret key for `openrouter` LLM provider, please visit [https://openrouter.ai/settings/keys](https://openrouter.ai/settings/keys) for more information. |
 | `openrouter_model_id` |  | Model ID for the `openrouter` LLM provider, used for receipt image recognition and transaction creation. |
-| `ollama_server_url` |  | Ollama server url for `openai_compatible` LLM provider, e.g. `http://127.0.0.1:11434/`. |
+| `ollama_server_url` |  | Ollama server url for `ollama` LLM provider, e.g. `http://127.0.0.1:11434/`. |
 | `ollama_model_id` |  | Model ID for the `ollama` LLM provider, used for receipt image recognition and transaction creation. |
 | `google_ai_api_key` |  | Google AI API Key for `google_ai` LLM provider, please visit [https://aistudio.google.com/apikey](https://aistudio.google.com/apikey) for more information. |
 | `google_ai_model_id` |  | Model ID for the `google_ai` LLM provider, used for receipt image recognition and transaction creation. |
