@@ -30,8 +30,8 @@ title: Transaction API
 | `sourceAccount` | `AccountInfoResponse` | Source account object |
 | `destinationAccountId` | `string` | Destination account ID |
 | `destinationAccount` | `AccountInfoResponse` | Destination account object |
-| `sourceAmount` | `integer` | Source amount |
-| `destinationAmount` | `integer` | Destination amount |
+| `sourceAmount` | `integer` | Source amount (Supports up to two decimals. For example, a value of `1234` represents an amount of `12.34`) |
+| `destinationAmount` | `integer` | Destination amount (Supports up to two decimals. For example, a value of `1234` represents an amount of `12.34`) |
 | `hideAmount` | `boolean` | Whether to hide the amount |
 | `tagIds` | `string[]` | Transaction tag IDs |
 | `tags` | `TransactionTagInfoResponse[]` | Transaction tag objects |
@@ -86,7 +86,7 @@ title: Transaction API
 | `category_ids` | `string` | Optional | Filter transaction by transaction category IDs (separated by `,`) |
 | `account_ids` | `string` | Optional | Filter transaction by account IDs (separated by `,`) |
 | `tag_filter` | `string` | Optional | Filter transactions by tags (multiple tag groups are supported, separate groups with `;`. Each tag group uses the format `type:tag_id1,tag_id2,...` where `type` defines the filter mode, `0`: transaction contains all tags in the group, `1`: transaction contains any tag in the group, `2`: transaction does not contain all tags in the group, `3`: transaction does not contain any tag in the group) |
-| `amount_filter` | `string` | Optional | Filter transaction by amount (Greater than amount: `gt:{amount}`, Less than amount: `lt:{amount}`, Equal amount: `eq:{amount}`, Not equal amount: `ne:{amount}`, Between two amounts: `bt:{min_amount}:{max_amount}`, Not between two amounts: `ne:{min_amount}:{max_amount}`) |
+| `amount_filter` | `string` | Optional | Filter transaction by amount (Supports up to two decimals. For example, a value of `1234` represents an amount of `12.34`. Greater than amount: `gt:{amount}`, Less than amount: `lt:{amount}`, Equal amount: `eq:{amount}`, Not equal amount: `ne:{amount}`, Between two amounts: `bt:{min_amount}:{max_amount}`, Not between two amounts: `ne:{min_amount}:{max_amount}`) |
 | `keyword` | `string` | Optional | Filter transaction by keyword |
 | `max_time` | `integer` | Optional | The maximum time sequence ID (Set to `0` if you want to get the latest transactions) |
 | `min_time` | `integer` | Optional | The minimum time sequence ID |
@@ -133,7 +133,7 @@ title: Transaction API
 | `category_ids` | `string` | Optional | Filter transaction by transaction category IDs (separated by `,`) |
 | `account_ids` | `string` | Optional | Filter transaction by account IDs (separated by `,`) |
 | `tag_filter` | `string` | Optional | Filter transactions by tags (multiple tag groups are supported, separate groups with `;`. Each tag group uses the format `type:tag_id1,tag_id2,...` where `type` defines the filter mode, `0`: transaction contains all tags in the group, `1`: transaction contains any tag in the group, `2`: transaction does not contain all tags in the group, `3`: transaction does not contain any tag in the group) |
-| `amount_filter` | `string` | Optional | Filter transaction by amount (Greater than amount: `gt:{amount}`, Less than amount: `lt:{amount}`, Equal amount: `eq:{amount}`, Not equal amount: `ne:{amount}`, Between two amounts: `bt:{min_amount}:{max_amount}`, Not between two amounts: `ne:{min_amount}:{max_amount}`) |
+| `amount_filter` | `string` | Optional | Filter transaction by amount (Supports up to two decimals. For example, a value of `1234` represents an amount of `12.34`. Greater than amount: `gt:{amount}`, Less than amount: `lt:{amount}`, Equal amount: `eq:{amount}`, Not equal amount: `ne:{amount}`, Between two amounts: `bt:{min_amount}:{max_amount}`, Not between two amounts: `ne:{min_amount}:{max_amount}`) |
 | `keyword` | `string` | Optional | Filter transaction by keyword |
 | `start_time` | `integer` | Optional | Transaction list start time (unix time) |
 | `end_time` | `integer` | Optional | Transaction list end time (unix time) |
@@ -179,8 +179,8 @@ title: Transaction API
 | `utcOffset` | `integer` | Required | Transaction time zone offset (minutes) |
 | `sourceAccountId` | `string` | Required | Source account ID |
 | `destinationAccountId` | `string` | Optional | Destination account ID |
-| `sourceAmount` | `integer` | Required | Source amount |
-| `destinationAmount` | `integer` | Optional | Destination amount |
+| `sourceAmount` | `integer` | Required | Source amount (Supports up to two decimals. For example, a value of `1234` represents an amount of `12.34`) |
+| `destinationAmount` | `integer` | Optional | Destination amount (Supports up to two decimals. For example, a value of `1234` represents an amount of `12.34`) |
 | `hideAmount` | `boolean` | Optional | Whether to hide the amount |
 | `tagIds` | `string[]` | Optional | Transaction tag IDs |
 | `pictureIds` | `string[]` | Optional | Transaction picture IDs |

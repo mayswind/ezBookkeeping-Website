@@ -39,7 +39,7 @@ title: Account API
 | `icon` | `string` | Account icon ID |
 | `color` | `string` | Account icon color (Hex color code `RRGGBB`) |
 | `currency` | `string` | Account currency code |
-| `balance` | `integer` | Account balance |
+| `balance` | `integer` | Account balance (Supports up to two decimals. For example, a value of `1234` represents an amount of `12.34`) |
 | `comment` | `string` | Account description |
 | `creditCardStatementDate` | `integer` | The statement date of the credit card account |
 | `displayOrder` | `integer` | The display order of the account |
@@ -99,7 +99,7 @@ None
 | `icon` | `string` | Required | Account icon ID |
 | `color` | `string` | Required | Account icon color (Hex color code `RRGGBB`) |
 | `currency` | `string` | Required | Account currency code (ISO 4217 code, `"---"` for the parent account) |
-| `balance` | `integer` | Optional | Account balance (Liability account should set to negative amount) |
+| `balance` | `integer` | Optional | Account balance (Supports up to two decimals. For example, a value of `1234` represents an amount of `12.34`. Liability account should set to negative amount) |
 | `balanceTime` | `integer` | Optional | The date time when the account balance is the set value (This field is required when balance is set) |
 | `comment` | `string` | Optional | Account description |
 | `creditCardStatementDate` | `integer` | Optional | The statement date of the credit card account |

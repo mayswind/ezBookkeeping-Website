@@ -27,7 +27,7 @@ None
 | `tokenId` | `string` | Token ID |
 | `tokenType` | `integer` | Token type (`1`: Normal Token, `5`: MCP Token, `8`: API Token) |
 | `userAgent` | `string` | The User Agent when the session created |
-| `lastSeen` | `integer` | Last refresh time of the session |
+| `lastSeen` | `integer` | Last refresh unix time of the session |
 | `isCurrent` | `boolean` | Whether the session is current |
 
 ## Revoke token

@@ -27,7 +27,7 @@ title: 令牌 API
 | `tokenId` | `string` | 令牌 ID |
 | `tokenType` | `integer` | 令牌类型（`1`：普通令牌，`5`：MCP 令牌，`8`：API 令牌） |
 | `userAgent` | `string` | 创建会话时的 User Agent |
-| `lastSeen` | `integer` | 会话的最后刷新时间 |
+| `lastSeen` | `integer` | 会话的最后刷新时间（Unix Time） |
 | `isCurrent` | `boolean` | 是否是当前会话 |
 
 ## 注销令牌

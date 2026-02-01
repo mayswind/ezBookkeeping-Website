@@ -39,7 +39,7 @@ title: 账户 API
 | `icon` | `string` | 账户图标 ID |
 | `color` | `string` | 账户图标颜色（十六进制颜色代码 `RRGGBB`） |
 | `currency` | `string` | 账户货币 |
-| `balance` | `integer` | 账户余额 |
+| `balance` | `integer` | 账户余额（最多支持两位小数，例如该字段为 `1234` 时表示金额为 `12.34`） |
 | `comment` | `string` | 账户描述 |
 | `creditCardStatementDate` | `integer` | 信用卡账单日 |
 | `displayOrder` | `integer` | 账户显示顺序 |
@@ -99,7 +99,7 @@ title: 账户 API
 | `icon` | `string` | 必选 | 账户图标 ID |
 | `color` | `string` | 必选 | 账户图标颜色（十六进制颜色代码 `RRGGBB`） |
 | `currency` | `string` | 必选 | 账户货币代码（ISO 4217 代码，父账户设置为 `"---"`） |
-| `balance` | `integer` | 可选 | 账户余额（负债账户设置为负数） |
+| `balance` | `integer` | 可选 | 账户余额（最多支持两位小数，例如该字段为 `1234` 时表示金额为 `12.34`。负债账户设置为负数） |
 | `balanceTime` | `integer` | 可选 | 账户余额为设定值的时间（若设置了余额则该字段为必选） |
 | `comment` | `string` | 可选 | 账户描述 |
 | `creditCardStatementDate` | `integer` | 可选 | 信用卡账单日 |
