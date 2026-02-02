@@ -50,7 +50,7 @@ ezBookkeeping does not cover every possible need, so you can choose the software
 | Multi-user support | ✅ Supported | ✅ Supported | ✅ Supported |
 | HTTP API support | ✅ Supported | ✅ Supported | ❌ Not supported |
 | CLI support | ✅ Supported | ✅ Supported | ✅ Supported |
-| Offline usage | ❌ Not supported | ❌ Not supported | ✅ Supported |
+| Serverless Mode | ❌ Not supported | ❌ Not supported | ✅ Supported |
 
 ## Transaction Capabilities
 

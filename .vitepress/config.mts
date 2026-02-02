@@ -147,7 +147,8 @@ export default defineConfig({
                             { text: 'Account API', link: '/httpapi/account_api' },
                             { text: 'Transaction Category API', link: '/httpapi/transaction_category_api' },
                             { text: 'Transaction Tag API', link: '/httpapi/transaction_tag_api' },
-                            { text: 'Transaction API', link: '/httpapi/transaction_api' }
+                            { text: 'Transaction API', link: '/httpapi/transaction_api' },
+                            { text: 'Exchange Rates API', link: '/httpapi/exchange_rate_api' }
                         ]
                     },
                     {
@@ -234,7 +235,8 @@ export default defineConfig({
                             { text: '账户 API', link: '/zh_Hans/httpapi/account_api' },
                             { text: '交易分类 API', link: '/zh_Hans/httpapi/transaction_category_api' },
                             { text: '交易标签 API', link: '/zh_Hans/httpapi/transaction_tag_api' },
-                            { text: '交易 API', link: '/zh_Hans/httpapi/transaction_api' }
+                            { text: '交易 API', link: '/zh_Hans/httpapi/transaction_api' },
+                            { text: '汇率 API', link: '/zh_Hans/httpapi/exchange_rate_api' }
                         ]
                     },
                     {

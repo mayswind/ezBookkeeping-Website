@@ -46,3 +46,50 @@ Some APIs require `X-Timezone-Name` or `X-Timezone-Offset` request headers to sp
 - The value of `X-Timezone-Offset` is the offset in minutes of the current timezone from UTC. For example, for Beijing Time which is UTC+8, the value is `480`.
 
 If both headers are provided, `X-Timezone-Name` takes precedence.
+
+## API Tool Script
+
+ezBookkeeping provides a tool script called **ezBookkeeping API Tools** that allows users or AI agents to conveniently call the API endpoints from the command line using **sh** or **PowerShell**. You only need to configure two environment variables: the ezBookkeeping server address and the API token.
+
+**Linux / macOS**
+
+Make sure the following command-line tools are installed on your system: `grep`, `sed`, `awk`, `date`, `curl`, and `jq`. Then download the script with the following commands:
+
+```shell
+$ curl https://raw.githubusercontent.com/mayswind/ezbookkeeping/refs/heads/main/scripts/ebktools.sh -o ebktools.sh
+$ chmod +x ebktools.sh
+```
+
+Configure the environment variables as shown below:
+
+```shell
+$ export EBKTOOL_SERVER_BASEURL="https://{YOUR_HOST_ADDRESS}"
+$ export EBKTOOL_TOKEN="{YOUR-API-TOKEN}"
+```
+
+Then run the script:
+
+```shell
+$ ./ebktools.sh
+```
+
+**Windows**
+
+Download the script using the following PowerShell command:
+
+```powershell
+PS > Invoke-WebRequest -Uri https://raw.githubusercontent.com/mayswind/ezbookkeeping/refs/heads/main/scripts/ebktools.ps1 -OutFile .\ebktools.ps1
+```
+
+Configure the environment variables as shown below:
+
+```powershell
+PS > $env:EBKTOOL_SERVER_BASEURL="https://{YOUR_HOST_ADDRESS}"
+PS > $env:EBKTOOL_TOKEN="{YOUR-API-TOKEN}"
+```
+
+Then run the script:
+
+```powershell
+PS > .\ebktools.ps1
+```
