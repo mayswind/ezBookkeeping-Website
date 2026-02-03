@@ -61,7 +61,7 @@ title: 交易 API
 | `latitude` | `float` | 纬度 |
 | `longitude` | `float` | 经度 |
 
-## 获取交易列表
+## 获取交易列表（支持分页）
 
 **API 路径**
 

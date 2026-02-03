@@ -61,7 +61,7 @@ title: Transaction API
 | `latitude` | `float` | Latitude |
 | `longitude` | `float` | Longitude |
 
-## Get transactions list
+## Get transactions list with pagination
 
 **API Path**
 

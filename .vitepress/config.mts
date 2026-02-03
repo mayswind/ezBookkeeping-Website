@@ -135,6 +135,7 @@ export default defineConfig({
                             { text: 'Basic Usage', link: '/basic_usage/' },
                             { text: 'Export & Import', link: '/export_and_import/' },
                             { text: 'Model Context Protocol', link: '/mcp/' },
+                            { text: 'OpenClaw', link: '/agent/openclaw' },
                             { text: 'Command Line', link: '/command_line/' }
                         ]
                     },
@@ -223,6 +224,7 @@ export default defineConfig({
                             { text: '基础使用', link: '/zh_Hans/basic_usage/' },
                             { text: '导出 & 导入', link: '/zh_Hans/export_and_import/' },
                             { text: 'Model Context Protocol', link: '/zh_Hans/mcp/' },
+                            { text: 'OpenClaw', link: '/zh_Hans/agent/openclaw' },
                             { text: '命令行', link: '/zh_Hans/command_line/' }
                         ]
                     },
