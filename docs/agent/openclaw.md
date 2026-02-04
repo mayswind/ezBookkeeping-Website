@@ -1,8 +1,8 @@
 ---
-title: OpenClaw
+title: Integration with OpenClaw
 ---
 
-# OpenClaw
+# Integration with OpenClaw
 
 [OpenClaw](https://openclaw.ai/) is a personal AI assistant you run on your own devices. It supports integration with multiple common channels (such as WhatsApp, Telegram, Slack, etc.) and major large language model providers (such as OpenAI, Anthropic, Google AI, etc.), allowing users to use natural language to have AI agents perform various tasks locally.
 

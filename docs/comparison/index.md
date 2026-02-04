@@ -17,7 +17,7 @@ ezBookkeeping does not cover every possible need, so you can choose the software
 | License | MIT License | GNU Affero General Public License v3.0 | MIT License |
 | Programming Languages | Go + TypeScript | PHP + JavaScript | TypeScript |
 | Frontend UI frameworks | Vuetify v3.11.3 (released Dec 2025) <br/> Framework7 v9.0.2 (released Dec 2025) | Bootstrap v3.3.7 (released Jul 2016) | React Aria v1.14.0 (released Dec 2025) |
-| Official Docker Image Platforms | `linux/amd64` <br/> `linux/arm64` <br/> `linux/armv6` <br/> `linux/armv7` | `linux/amd64` <br/> `linux/arm64` | `linux/amd64` <br/> `linux/arm64` <br/> `linux/armv6` <br/> `linux/armv7` |
+| Official Docker Image Platforms | `linux/amd64` <br/> `linux/arm64` <br/> `linux/arm/v6` <br/> `linux/arm/v7` | `linux/amd64` <br/> `linux/arm64` | `linux/amd64` <br/> `linux/arm64` <br/> `linux/arm/v6` <br/> `linux/arm/v7` |
 | Supported Databases | SQLite, MySQL, PostgreSQL | MySQL, PostgreSQL | SQLite |
 | Supported Object Storage | Local filesystem, MinIO (S3-compatible), WebDAV | Local filesystem | – |
 | Supported LLM providers | OpenAI, OpenAI-compatible APIs, OpenRouter, Ollama, Google AI | - | - |

@@ -1,8 +1,8 @@
 ---
-title: OpenClaw
+title: 与 OpenClaw 集成
 ---
 
-# OpenClaw
+# 与 OpenClaw 集成
 
 [OpenClaw](https://openclaw.ai/) 是一个在你自己设备上运行的个人 AI 助手，其支持对接多种常见的通道（如 WhatsApp、Telegram、Slack 等）以及对接常见的大语言模型提供方（如 OpenAI、Anthropic、Google AI 等），实现用户通过自然语言让 AI Agent 在自己的设备上完成各项任务。
 

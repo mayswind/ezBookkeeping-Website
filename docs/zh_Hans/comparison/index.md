@@ -17,7 +17,7 @@ ezBookkeeping 并不是万能的，你可以根据自己最强烈的需求选择
 | 开源协议 | MIT License | GNU Affero General Public License v3.0 | MIT License |
 | 开发语言 | Go + TypeScript | PHP + JavaScript | TypeScript |
 | 前端 UI 框架 | Vuetify v3.11.3（2025年12月发布） <br/> Framework7 v9.0.2（2025年12月发布） | Bootstrap v3.3.7（2016年7月发布） | React Aria v1.14.0（2025年12月发布） |
-| 官方 Docker 镜像支持平台 | `linux/amd64` <br/> `linux/arm64` <br/> `linux/armv6` <br/> `linux/armv7` | `linux/amd64` <br/> `linux/arm64` | `linux/amd64` <br/> `linux/arm64` <br/> `linux/armv6` <br/> `linux/armv7` |
+| 官方 Docker 镜像支持平台 | `linux/amd64` <br/> `linux/arm64` <br/> `linux/arm/v6` <br/> `linux/arm/v7` | `linux/amd64` <br/> `linux/arm64` | `linux/amd64` <br/> `linux/arm64` <br/> `linux/arm/v6` <br/> `linux/arm/v7` |
 | 支持的数据库 | SQLite、MySQL、PostgreSQL | MySQL、PostgreSQL | SQLite |
 | 支持的对象存储 | 本地文件系统、MinIO（S3 兼容）、WebDAV | 本地文件系统 | - |
 | 支持的 LLM 提供方 | OpenAI、OpenAI 兼容接口、OpenRouter、Ollama、Google AI | - | - |
