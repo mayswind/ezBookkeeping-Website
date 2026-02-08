@@ -101,6 +101,7 @@ export default defineConfig({
                     {
                         text: 'Download',
                         items: [
+                            { text: 'Release Notes', link: 'https://github.com/mayswind/ezbookkeeping/releases' },
                             { text: 'Packaged Files', link: 'https://github.com/mayswind/ezbookkeeping/releases' },
                             { text: 'Docker Images', link: 'https://hub.docker.com/r/mayswind/ezbookkeeping' }
                         ]
@@ -113,6 +114,7 @@ export default defineConfig({
                         collapsed: false,
                         items: [
                             { text: 'Get Started', link: '/installation/' },
+                            { text: 'System Requirements', link: '/installation/system_requirements' },
                             { text: 'Run with Docker', link: '/installation/installation-docker' },
                             { text: 'Run on Kubernetes', link: '/installation/installation-kubernetes' },
                             { text: 'Install from binary', link: '/installation/installation-binary' },
@@ -190,6 +192,7 @@ export default defineConfig({
                     {
                         text: '下载',
                         items: [
+                            { text: '更新日志', link: 'https://github.com/mayswind/ezbookkeeping/releases' },
                             { text: '打包文件', link: 'https://github.com/mayswind/ezbookkeeping/releases' },
                             { text: 'Docker 镜像', link: 'https://hub.docker.com/r/mayswind/ezbookkeeping' }
                         ]
@@ -202,6 +205,7 @@ export default defineConfig({
                         collapsed: false,
                         items: [
                             { text: '快速开始', link: '/zh_Hans/installation/' },
+                            { text: '系统要求', link: '/zh_Hans/installation/system_requirements' },
                             { text: '通过 Docker 运行', link: '/zh_Hans/installation/installation-docker' },
                             { text: '在 Kubernetes 上运行', link: '/zh_Hans/installation/installation-kubernetes' },
                             { text: '从二进制包安装', link: '/zh_Hans/installation/installation-binary' },

@@ -21,7 +21,7 @@ The OpenClaw-compatible **SKILL.md** for ezBookkeeping is available on [ClawHub]
 
 1. You can install it directly using the ClawHub CLI:
 
-```bash
+```shell
 npx clawhub@latest install ezbookkeeping
 ```
 

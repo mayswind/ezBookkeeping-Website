@@ -22,26 +22,7 @@ ezBookkeeping 并不是万能的，你可以访问 [功能对比](/zh_Hans/compa
 
 ## ezBookkeeping 支持哪些操作系统
 
-运行 ezBookkeeping 服务端的操作系统与 Golang 支持的操作系统相同，下表列出了 ezBookkeeping 各个版本依赖的 Golang 的版本以及支持操作系统的最低版本。
-
-| ezBookkeeping 版本 | Golang 版本 | 最低支持的操作系统 |
-| --- | --- | --- |
-| v1.1.x 及更新 | 1.25 | ≥ Linux Kernel 3.2 <br/> ≥ Windows 10 / Windows Server 2016 <br/> ≥ macOS 11 Big Sur |
-| v0.8.x ~ v1.0.x | 1.24 | ≥ Linux Kernel 3.2 <br/> ≥ Windows 10 / Windows Server 2016 <br/> ≥ macOS 11 Big Sur |
-| v0.7.x | 1.23 | ≥ Linux Kernel 2.6.32 <br/> ≥ Windows 10 / Windows Server 2016 <br/> ≥ macOS 11 Big Sur |
-| v0.6.x | 1.22 | ≥ Linux Kernel 2.6.32 <br/> ≥ Windows 10 / Windows Server 2016 <br/> ≥ macOS 10.15 Catalina |
-| v0.5.x | 1.21 | ≥ Linux Kernel 2.6.32 <br/> ≥ Windows 10 / Windows Server 2016 <br/> ≥ macOS 10.15 Catalina |
-| v0.2.x ~ v0.4.x | 1.20 | ≥ Linux Kernel 2.6.32 <br/> ≥ Windows 7 / Windows Server 2008 R2 <br/> ≥ macOS 10.13 High Sierra |
-| v0.1.x | 1.16 | ≥ Linux Kernel 2.6.32 <br/> ≥ Windows 7 / Windows Server 2008 R2 <br/> ≥ macOS 10.12 Sierra |
-
-上述 Linux 版本仅表示 amd64、arm64 和 armv6/v7 架构下的版本，其他架构下支持的版本请参考 Golang 官方文档。更多 Golang 支持的操作系统的信息，请访问 Golang 官方文档：[https://go.dev/wiki/MinimumRequirements](https://go.dev/wiki/MinimumRequirements)。
-
-如果你已经部署了 ezBookkeeping 的服务端程序，你可以直接使用你的浏览器访问 ezBookkeeping，下表列出了 ezBookkeeping 各个版本支持的浏览器的最低版本。
-
-| ezBookkeeping 版本 | Chrome 最低版本 | Edge 最低版本 | Firefox 最低版本 | Safari 最低版本 |
-| --- | --- | --- | --- | --- |
-| v1.1.x 及更新 | ≥ 91 | ≥ 91 | ≥ 91 | ≥ 15.4 |
-| v0.3.x ~ v1.0.x | ≥ 87 | ≥ 88 | ≥ 78 | ≥ 14.0 |
+ezBookkeeping 服务端程序支持的操作系统，以及可以打开 ezBookkeeping 界面的浏览器，请参考 [系统要求](/zh_Hans/installation/system_requirements)。
 
 ## ezBookkeeping 需要使用多少系统资源
 

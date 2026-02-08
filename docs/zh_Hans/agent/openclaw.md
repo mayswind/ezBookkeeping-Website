@@ -21,7 +21,7 @@ ezBookkeeping 适配 OpenClaw 的 SKILL.md 已经发布在 [ClawHub](https://www
 
 1. 您可以直接通过 ClawHub 的命令行工具安装：
 
-```bash
+```shell
 npx clawhub@latest install ezbookkeeping
 ```
 

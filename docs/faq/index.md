@@ -22,26 +22,7 @@ ezBookkeeping does not cover every possible need. You can visit the [Feature Com
 
 ## Which operating systems does ezBookkeeping support
 
-The operating systems that can run the ezBookkeeping server are the same as those supported by Golang. The table below lists the Golang versions required by each ezBookkeeping release, along with the minimum supported OS versions.
-
-| ezBookkeeping Version | Golang Version | Minimum Supported OS |
-| --- | --- | --- |
-| v1.1.x and later | 1.25 | ≥ Linux Kernel 3.2 <br/> ≥ Windows 10 / Windows Server 2016 <br/> ≥ macOS 11 Big Sur |
-| v0.8.x ~ v1.0.x | 1.24 | ≥ Linux Kernel 3.2 <br/> ≥ Windows 10 / Windows Server 2016 <br/> ≥ macOS 11 Big Sur |
-| v0.7.x | 1.23 | ≥ Linux Kernel 2.6.32 <br/> ≥ Windows 10 / Windows Server 2016 <br/> ≥ macOS 11 Big Sur |
-| v0.6.x | 1.22 | ≥ Linux Kernel 2.6.32 <br/> ≥ Windows 10 / Windows Server 2016 <br/> ≥ macOS 10.15 Catalina |
-| v0.5.x | 1.21 | ≥ Linux Kernel 2.6.32 <br/> ≥ Windows 10 / Windows Server 2016 <br/> ≥ macOS 10.15 Catalina |
-| v0.2.x ~ v0.4.x | 1.20 | ≥ Linux Kernel 2.6.32 <br/> ≥ Windows 7 / Windows Server 2008 R2 <br/> ≥ macOS 10.13 High Sierra |
-| v0.1.x | 1.16 | ≥ Linux Kernel 2.6.32 <br/> ≥ Windows 7 / Windows Server 2008 R2 <br/> ≥ macOS 10.12 Sierra |
-
-The Linux versions listed above apply only to the amd64, arm64 and armv6/v7 architectures. For other architectures, please refer to the official Golang documentation. For more details on supported operating systems, please visit the official Golang documentation: [https://go.dev/wiki/MinimumRequirements](https://go.dev/wiki/MinimumRequirements).
-
-If you've already deployed the ezBookkeeping server program, you can access ezBookkeeping directly through your web browser. The table below lists the minimum browser versions required for each ezBookkeeping release.
-
-| ezBookkeeping Version | Minimum Chrome Version | Minimum Edge Version | Minimum Firefox Version | Minimum Safari Version |
-| --- | --- | --- | --- | --- |
-| v1.1.x and later | ≥ 91 | ≥ 91 | ≥ 91 | ≥ 15.4 |
-| v0.3.x ~ v1.0.x | ≥ 87 | ≥ 88 | ≥ 78 | ≥ 14.0 |
+For the operating systems supported by the ezBookkeeping server and the browsers that can be used to access the ezBookkeeping interface, please refer to [System Requirements](/installation/system_requirements).
 
 ## How much system resources does ezBookkeeping use
 
@@ -193,7 +174,7 @@ For clarity and consistency, ezBookkeeping allows only one "Modify Balance" tran
 
 ezBookkeeping only allows users to set an initial balance when creating a new account. Once the account is created, users cannot directly modify its balance. To adjust an account's balance, you need to record an expense or income transaction.
 
-Alternatively, you can update the ending balance in the Reconciliation Statement page. The system will automatically calculate the difference between the expected ending balance and the actual balance, then populate the amount for you on the new transaction page.
+Alternatively, you can update the closing balance in the Reconciliation Statement page. The system will automatically calculate the difference between the expected ending balance and the actual balance, then populate the amount for you on the new transaction page.
 
 ## Unable to set currency when adding a transaction
 
