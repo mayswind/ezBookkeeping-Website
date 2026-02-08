@@ -26,46 +26,57 @@ screenshots:
 features:
     - title: Open Source & Self-Hosted
       icon: 🛠️
-      details: Built for privacy and control
+      details:
+          Built for privacy and control
     - title: Lightweight & Fast
       icon: ⚡
-      details: Optimized for performance, runs smoothly even on low-resource environments
+      details:
+          Minimal resource usage, runs smoothly even on low-resource devices
     - title: Easy Installation
       icon: 📦
-      details: Docker-ready <br/>
+      details:
+          Docker support <br/>
           Supports SQLite, MySQL, PostgreSQL <br/>
           Cross-platform (Windows, macOS, Linux) <br/>
           Works on x86, amd64, ARM architectures
     - title: User-Friendly Interface
       icon: 🎨
-      details: UI optimized for both mobile and desktop <br/>
+      details:
+          UI optimized for both mobile and desktop <br/>
           PWA support for native-like mobile experience <br/>
           Dark mode
     - title: AI-Powered Features
       icon: 🤖
-      details: Receipt image recognition <br/>
-          Supports MCP (Model Context Protocol) for AI integration
+      details:
+          Receipt image recognition <br/>
+          MCP (Model Context Protocol) support for AI integration <br/>
+          API command-line script tools for AI integration
     - title: Powerful Bookkeeping
       icon: 📘
-      details: Two-level accounts and categories <br/>
-          Attach images to transactions <br/>
+      details:
+          Two-level accounts and categories <br/>
+          Image attachments for transactions <br/>
           Location tracking with maps <br/>
-          Recurring transactions <br/>
-          Advanced filtering, search, visualization, and analysis
-    - title: Localization & Globalization
+          Scheduled transactions <br/>
+          Advanced filtering, search, visualization and analysis
+    - title: Localization & Internationalization
       icon: 🌍
-      details: Multi-language and multi-currency support <br/>
-          Automatic exchange rates <br/>
-          Multi-timezone awareness <br/>
-          Custom formats for dates, numbers, and currencies
+      details:
+          Multi-language and multi-currency support <br/>
+          Multiple exchange rate sources with automatic updates <br/>
+          Multi-timezone support <br/>
+          Custom formats for dates, numbers and currencies
     - title: Security
       icon: 🔐
-      details: Two-factor authentication (2FA) <br/>
+      details:
+          Two-factor authentication (2FA) <br/>
+          OIDC external authentication <br/>
           Login rate limiting <br/>
           Application lock (PIN code / WebAuthn)
-    - title: Data Import/Export
+    - title: Data Import & Export
       icon: 📑
-      details: Supports CSV, OFX, QFX, QIF, IIF, Camt.052, Camt.053, MT940, GnuCash, Firefly III, Beancount, and more
+      details:
+          Supports CSV, OFX, QFX, QIF, IIF, Camt.052, Camt.053, MT940, GnuCash, Firefly III, Beancount and more
 
 sitemap:
     - name: Docs
@@ -76,8 +87,8 @@ sitemap:
           url: /basic_usage/
         - name: Export & Import
           url: /export_and_import/
-        - name: Command Line
-          url: /command_line/
+        - name: API
+          url: /httpapi/
     - name: Resources
       links:
         - name: Release Notes
