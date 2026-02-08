@@ -158,9 +158,9 @@ You can create a separate expense transaction with the amount equal to the trans
 
 You can create an account which account category is "Receivables", then create a transfer transaction from your expense account to this receivables account. If you've created the default transaction categories in ezBookkeeping, you can select the transaction type "Loan & Debt > Lending Money".
 
-## How to record merchants, payers and payees
+## How to record merchants, payers, payees and projects
 
-ezBookkeeping uses transaction tags to record information such as merchants, payers and payees. You can add one or more tags to each transaction to capture this information. In addition, ezBookkeeping supports tag groups, allowing you to create different groups to distinguish between different types of tags.
+ezBookkeeping uses transaction tags to record information such as merchants, payers, payees and projects. You can add one or more tags to each transaction to capture this information. In addition, ezBookkeeping supports tag groups, allowing you to create different groups to distinguish between different types of tags.
 
 ## Why you see "You cannot add transaction with this transaction time" when adding new transaction
 

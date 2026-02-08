@@ -33,7 +33,7 @@ ezBookkeeping supports a two-level category structure. You must first create a p
 
 After creating accounts and transaction categories, you can start recording transactions. From the main screen or the "Transaction Details" page, click the "Add" button to open the Add Transaction page / dialog. There, you can set the transaction type (expense, income or transfer), amount, category, account, transaction time to create transaction. In addition to these required fields, ezBookkeeping also supports recording the transaction's geographic location, images, tags and descriptions.
 
-ezBookkeeping allows you to assign multiple tags to each transaction. If you need to record information such as merchants, payers or payees, you can do so using tags. Tags support grouping, allowing you to organize different types of tags into separate tag groups.
+ezBookkeeping allows you to assign multiple tags to each transaction. If you need to record information such as merchants, payers, payees or project, you can do so using tags. Tags support grouping, allowing you to organize different types of tags into separate tag groups.
 
 ## View Transactions
 
