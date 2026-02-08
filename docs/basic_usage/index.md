@@ -52,3 +52,7 @@ ezBookkeeping provides two features to view charts: "Statistics & Analysis" and 
 
 > [!NOTE] TIP
 > On the Statistics & Analytics and Insights Explorer page, ezBookkeeping converts all amounts into your default currency for calculation. If an account's currency is not included in your current exchange rate data, ezBookkeeping cannot convert those transactions and therefore excludes them from the result. You can choose an exchange rate data source that includes all the currencies used by your accounts, and refer to [Exchange Rates](/exchange_rates/) for details on configuring exchange rate sources.
+
+## Frequently Asked Questions
+
+If you encounter any issues while using ezBookkeeping, you can refer to the [FAQ](/faq/) page, which collects common questions and their solutions.
