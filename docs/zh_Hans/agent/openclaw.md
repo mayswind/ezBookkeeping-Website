@@ -17,7 +17,7 @@ ezBookkeeping 通过 HTTP API 提供了对数据的操作，并提供了 **ezBoo
 
 ## 安装 ezBookkeeping SKILL
 
-ezBookkeeping 适配 OpenClaw 的 SKILL.md 已经发布在 [ClawHub](https://www.clawhub.ai/)。
+ezBookkeeping 适配 OpenClaw 的 SKILL.md 已经发布在 [ClawHub](https://clawhub.ai)。
 
 1. 您可以直接通过 ClawHub 的命令行工具安装：
 
@@ -27,7 +27,7 @@ npx clawhub@latest install ezbookkeeping
 
 2. 或者可以访问如下地址下载：
 
-[https://www.clawhub.ai/mayswind/ezbookkeeping](https://www.clawhub.ai/mayswind/ezbookkeeping)
+[https://clawhub.ai/mayswind/ezbookkeeping](https://clawhub.ai/mayswind/ezbookkeeping)
 
 ## 配置 ezBookkeeping API Tools
 

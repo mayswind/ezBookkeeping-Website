@@ -17,7 +17,7 @@ Please refer to [Install - OpenClaw](https://docs.openclaw.ai/install) for insta
 
 ## Install ezBookkeeping SKILL
 
-The OpenClaw-compatible **SKILL.md** for ezBookkeeping is available on [ClawHub](https://www.clawhub.ai/).
+The OpenClaw-compatible **SKILL.md** for ezBookkeeping is available on [ClawHub](https://clawhub.ai).
 
 1. You can install it directly using the ClawHub CLI:
 
@@ -27,7 +27,7 @@ npx clawhub@latest install ezbookkeeping
 
 2. Or download it from the following page:
 
-[https://www.clawhub.ai/mayswind/ezbookkeeping](https://www.clawhub.ai/mayswind/ezbookkeeping)
+[https://clawhub.ai/mayswind/ezbookkeeping](https://clawhub.ai/mayswind/ezbookkeeping)
 
 ## Configure ezBookkeeping API Tools
 
