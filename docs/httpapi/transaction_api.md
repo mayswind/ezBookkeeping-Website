@@ -174,11 +174,11 @@ title: Transaction API
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
 | `type` | `TransactionType` | Required | Transaction type |
-| `categoryId` | `string` | Required | Transaction category ID |
+| `categoryId` | `string` | Required | Transaction category (secondary category) ID |
 | `time` | `integer` | Required | Transaction unix time |
 | `utcOffset` | `integer` | Required | Transaction time zone offset (minutes) |
-| `sourceAccountId` | `string` | Required | Source account ID |
-| `destinationAccountId` | `string` | Optional | Destination account ID |
+| `sourceAccountId` | `string` | Required | Source account (an account without sub-accounts or a sub-account) ID |
+| `destinationAccountId` | `string` | Optional | Destination account (an account without sub-accounts or a sub-account) ID |
 | `sourceAmount` | `integer` | Required | Source amount (Supports up to two decimals. For example, a value of `1234` represents an amount of `12.34`) |
 | `destinationAmount` | `integer` | Optional | Destination amount (Supports up to two decimals. For example, a value of `1234` represents an amount of `12.34`) |
 | `hideAmount` | `boolean` | Optional | Whether to hide the amount |

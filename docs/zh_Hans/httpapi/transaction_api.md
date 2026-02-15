@@ -174,11 +174,11 @@ title: 交易 API
 | 字段 | 类型 | 必选 | 描述 |
 | --- | --- | --- | --- |
 | `type` | `TransactionType` | 必选 | 交易类型 |
-| `categoryId` | `string` | 必选 | 交易分类 ID |
+| `categoryId` | `string` | 必选 | 交易分类（二级分类） ID |
 | `time` | `integer` | 必选 | 交易时间（Unix Time） |
 | `utcOffset` | `integer` | 必选 | 交易时区偏移（分钟） |
-| `sourceAccountId` | `string` | 必选 | 来源账户 ID |
-| `destinationAccountId` | `string` | 可选 | 目标账户 ID |
+| `sourceAccountId` | `string` | 必选 | 来源账户（没有子账户的账户，或者子账户） ID |
+| `destinationAccountId` | `string` | 可选 | 目标账户（没有子账户的账户，或者子账户） ID |
 | `sourceAmount` | `integer` | 必选 | 来源金额（最多支持两位小数，例如该字段为 `1234` 时表示金额为 `12.34`） |
 | `destinationAmount` | `integer` | 可选 | 目标金额（最多支持两位小数，例如该字段为 `1234` 时表示金额为 `12.34`） |
 | `hideAmount` | `boolean` | 可选 | 是否隐藏金额 |
