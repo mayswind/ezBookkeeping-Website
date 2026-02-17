@@ -67,6 +67,13 @@ $ export EBKTOOL_SERVER_BASEURL="https://{YOUR_HOST_ADDRESS}"
 $ export EBKTOOL_TOKEN="{YOUR-API-TOKEN}"
 ````
 
+或者你也可以将环境变量配置到 `.env` 文件中，可以将该文件放到与脚本同一目录下、父目录下或者用户主目录下，例如可以编写如下的 `.env` 文件：
+
+```
+EBKTOOL_SERVER_BASEURL="https://{YOUR_HOST_ADDRESS}"
+EBKTOOL_TOKEN="{YOUR-API-TOKEN}"
+```
+
 然后就可以运行脚本：
 
 ```shell
@@ -86,6 +93,13 @@ PS > Invoke-WebRequest -Uri https://raw.githubusercontent.com/mayswind/ezbookkee
 ```powershell
 PS > $env:EBKTOOL_SERVER_BASEURL="https://{YOUR_HOST_ADDRESS}"
 PS > $env:EBKTOOL_TOKEN="{YOUR-API-TOKEN}"
+```
+
+或者你也可以将环境变量配置到 `.env` 文件中，可以将该文件放到与脚本同一目录下、父目录下或者用户主目录下，例如可以编写如下的 `.env` 文件：
+
+```
+EBKTOOL_SERVER_BASEURL="https://{YOUR_HOST_ADDRESS}"
+EBKTOOL_TOKEN="{YOUR-API-TOKEN}"
 ```
 
 然后就可以运行脚本：

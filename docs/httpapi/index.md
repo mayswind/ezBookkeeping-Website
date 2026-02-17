@@ -67,6 +67,13 @@ $ export EBKTOOL_SERVER_BASEURL="https://{YOUR_HOST_ADDRESS}"
 $ export EBKTOOL_TOKEN="{YOUR-API-TOKEN}"
 ```
 
+Alternatively, you may place the environment variables in a `.env` file. The file can be located in the same directory as the script, in its parent directory or in the user home directory. For example, the `.env` file may contain the following entries:
+
+```
+EBKTOOL_SERVER_BASEURL="https://{YOUR_HOST_ADDRESS}"
+EBKTOOL_TOKEN="{YOUR-API-TOKEN}"
+```
+
 Then run the script:
 
 ```shell
@@ -86,6 +93,13 @@ Configure the environment variables as shown below:
 ```powershell
 PS > $env:EBKTOOL_SERVER_BASEURL="https://{YOUR_HOST_ADDRESS}"
 PS > $env:EBKTOOL_TOKEN="{YOUR-API-TOKEN}"
+```
+
+Alternatively, you may place the environment variables in a `.env` file. The file can be located in the same directory as the script, in its parent directory or in the user home directory. For example, the `.env` file may contain the following entries:
+
+```
+EBKTOOL_SERVER_BASEURL="https://{YOUR_HOST_ADDRESS}"
+EBKTOOL_TOKEN="{YOUR-API-TOKEN}"
 ```
 
 Then run the script:
