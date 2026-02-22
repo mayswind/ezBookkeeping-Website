@@ -33,4 +33,11 @@ npx clawhub@latest install ezbookkeeping
 
 与 MCP (Model Context Protocol) 不同，ezBookkeeping API Tools 使用的是 API 令牌，您需要先在 ezBookkeeping 中创建一个 API 令牌，具体请参考 [API - 使用](/zh_Hans/httpapi/#使用)。
 
-然后建议您主动配置 ezBookkeeping API Tools 需要的环境变量，包括 ezBookkeeping 的服务器地址和 API 令牌，具体请参考 [API - API 工具脚本](/zh_Hans/httpapi/#api-工具脚本)。如果您没有主动配置这些环境变量，与 OpenClaw 对话时，OpenClaw 也会提示您输入这些信息。
+然后您可以在您的用户主目录下创建一个 `.env` 文件，包含 `EBKTOOL_SERVER_BASEURL` ezBookkeeping 服务器地址和 `EBKTOOL_TOKEN` API 令牌两个环境变量，例如：
+
+```
+EBKTOOL_SERVER_BASEURL="https://{YOUR_HOST_ADDRESS}"
+EBKTOOL_TOKEN="{YOUR-API-TOKEN}"
+```
+
+如果您没有主动配置这些环境变量，与 OpenClaw 对话时，OpenClaw 也会提示您输入这些信息。ezBookkeeping API Tools 使用的更多说明，请参考 [API - API 工具脚本](/zh_Hans/httpapi/#api-工具脚本) 文档。

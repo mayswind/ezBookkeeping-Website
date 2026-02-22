@@ -33,4 +33,11 @@ npx clawhub@latest install ezbookkeeping
 
 Unlike MCP (Model Context Protocol), ezBookkeeping API Tools use an API token. You must first create an API token in ezBookkeeping. For details, see [API - Usage](/httpapi/#usage).
 
-It is recommended that you proactively configure the environment variables required by ezBookkeeping API Tools, including the ezBookkeeping server base URL and API token. For details, see [API - API Tool Script](/httpapi/#api-tool-script). If you do not configure these environment variables in advance, OpenClaw will prompt you to enter them during conversation.
+You can create a `.env` file in your home directory that defines the two environment variables `EBKTOOL_SERVER_BASEURL` for the ezBookkeeping server address and `EBKTOOL_TOKEN` for the API token, for example:
+
+```
+EBKTOOL_SERVER_BASEURL="https://{YOUR_HOST_ADDRESS}"
+EBKTOOL_TOKEN="{YOUR-API-TOKEN}"
+```
+
+If you do not configure these environment variables in advance, OpenClaw will prompt you to enter them during the conversation. For more details on using the ezBookkeeping API Tools, refer to the [API - API Tool Script](/httpapi/#api-tool-script) documentation.
