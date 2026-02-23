@@ -72,11 +72,12 @@ The following table lists all supported file types and the data contents that ca
 ezBookkeeping supports importing custom data formatted with delimiters. You can separate your data using commas or tabs, then save it as a CSV or TSV file, or paste it directly into the text box.
 
 1. Click "Import" in "Transaction Details" page
-2. Select "Delimiter-separated Values (DSV) File" or "Delimiter-separated Values (DSV) Data" as the file type
+2. Select "Delimiter-separated Values (DSV) File", "Delimiter-separated Values (DSV) Data" or "Excel Workbook File" as the file type
     1. For "Delimiter-separated Values (DSV) File", select the file encoding and select the file to import
     2. For "Delimiter-separated Values (DSV) Data", paste the file content into the text box below
-    3. Then, select the format: "CSV (Comma-Separated Values) File" or "TSV (Tab-Separated Values) File"
-    4. Then, choose either "Column Mapping" or "Custom Script" as the hanlding method, and click the "Next" button
+    3. For "Excel Workbook File", select the file to import
+    4. Then, for "Delimiter-separated Values (DSV) File" and "Delimiter-separated Values (DSV) Data, select the format: "CSV (Comma-Separated Values) File", "TSV (Tab-Separated Values) File" or "SSV (Semicolon-separated values) File". For "Excel Workbook File", select the format: "Excel Workbook File (.xlsx)" or "Excel 97-2003 Workbook File (.xls)".
+    5. Then, choose either "Column Mapping" or "Custom Script" as the hanlding method, and click the "Next" button
 
 If "Column Mapping" is selected as the hanlding method, ezBookkeeping will display the data in a table. You can click the header of each column to set the corresponding mapping. The imported data must include at least three columns: "Transaction Time", "Transaction Type" and "Amount"
 1. After setting the "Transaction Type" column, click "Transaction Type Mapping" to match each type with the corresponding transaction type in ezBookkeeping
