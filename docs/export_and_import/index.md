@@ -69,7 +69,7 @@ The following table lists all supported file types and the data contents that ca
 
 ### How to import Delimiter-separated Values (DSV) File or Data {#how-to-import-delimiter-separated-values-dsv-file-or-data}
 
-ezBookkeeping supports importing custom data formatted with delimiters. You can separate your data using commas or tabs, then save it as a CSV or TSV file, or paste it directly into the text box.
+ezBookkeeping supports importing custom data formatted with delimiters. You can separate your data using commas, tabs or semicolons, then save it as a CSV, TSV or SSV file, or paste it directly into the text box, or save it as an Excel workbook file.
 
 1. Click "Import" in "Transaction Details" page
 2. Select "Delimiter-separated Values (DSV) File", "Delimiter-separated Values (DSV) Data" or "Excel Workbook File" as the file type
