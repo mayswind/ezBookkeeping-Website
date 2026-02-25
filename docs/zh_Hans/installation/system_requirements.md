@@ -12,7 +12,7 @@ ezBookkeeping 支持在主流的操作系统上部署，同时支持在现代浏
 
 | ezBookkeeping 版本 | Golang 版本 | Linux Kernel 最低版本 | Windows 最低版本 | macOS 最低版本 |
 | --- | --- | --- | --- | --- |
-| v1.1.x 及更新 | 1.25 | ≥ 3.2 | ≥ Windows 10 / Windows Server 2016 | ≥ macOS 11 Big Sur |
+| v1.1.x 及更新 | 1.25 | ≥ 3.2 | ≥ Windows 10 / Windows Server 2016 | ≥ macOS 12 Monterey |
 | v0.8.x ~ v1.0.x | 1.24 | ≥ 3.2 | ≥ Windows 10 / Windows Server 2016 | ≥ macOS 11 Big Sur |
 | v0.7.x | 1.23 | ≥ 2.6.32 | ≥ Windows 10 / Windows Server 2016 | ≥ macOS 11 Big Sur |
 | v0.6.x | 1.22 | ≥ 2.6.32 | ≥ Windows 10 / Windows Server 2016 | ≥ macOS 10.15 Catalina |
