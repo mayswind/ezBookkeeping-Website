@@ -264,9 +264,9 @@ If the images still don't appear after verifying these settings, you can use the
 
 When calculating the total amount across different currencies, ezBookkeeping relies on exchange rate data. Make sure that the user's default currency and all currencies involved in the calculation are included in the current exchange rate data. For details on configuring exchange rate sources, see [Exchange Rates](/exchange_rates/).
 
-## Why amounts in certain currencies are missing from Statistics & Analytics
+## Why amounts in certain currencies are missing from Statistics & Analysis
 
-On the Statistics & Analytics page, ezBookkeeping converts all amounts into your default currency for calculation. If an account's currency is not included in your current exchange rate data, ezBookkeeping cannot convert those transactions and therefore excludes them from the result. You can choose an exchange rate data source that includes all the currencies used by your accounts, and refer to [Exchange Rates](/exchange_rates/) for details on configuring exchange rate sources.
+On the Statistics & Analysis page, ezBookkeeping converts all amounts into your default currency for calculation. If an account's currency is not included in your current exchange rate data, ezBookkeeping cannot convert those transactions and therefore excludes them from the result. You can choose an exchange rate data source that includes all the currencies used by your accounts, and refer to [Exchange Rates](/exchange_rates/) for details on configuring exchange rate sources.
 
 ## Why isn't the record removed from the database after deleting a transaction
 

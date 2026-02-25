@@ -51,7 +51,7 @@ On the "Accounts" page, select an account and choose the "Reconciliation Stateme
 ezBookkeeping provides two features to view charts: "Statistics & Analysis" and "Insights Explorer". The former offers a variety of preset charts for quickly viewing commonly used financial data, while the latter allows you to customize chart types, data dimensions and filtering complex conditions to meet more advanced analysis needs.
 
 > [!NOTE] TIP
-> On the Statistics & Analytics and Insights Explorer page, ezBookkeeping converts all amounts into your default currency for calculation. If an account's currency is not included in your current exchange rate data, ezBookkeeping cannot convert those transactions and therefore excludes them from the result. You can choose an exchange rate data source that includes all the currencies used by your accounts, and refer to [Exchange Rates](/exchange_rates/) for details on configuring exchange rate sources.
+> On the Statistics & Analysis and Insights Explorer page, ezBookkeeping converts all amounts into your default currency for calculation. If an account's currency is not included in your current exchange rate data, ezBookkeeping cannot convert those transactions and therefore excludes them from the result. You can choose an exchange rate data source that includes all the currencies used by your accounts, and refer to [Exchange Rates](/exchange_rates/) for details on configuring exchange rate sources.
 
 ## Frequently Asked Questions
 
