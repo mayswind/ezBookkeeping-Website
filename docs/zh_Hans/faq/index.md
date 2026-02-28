@@ -26,7 +26,7 @@ ezBookkeeping 服务端程序支持的操作系统，以及可以打开 ezBookke
 
 ## ezBookkeeping 需要使用多少系统资源
 
-ezBookkeeping 是基于 Golang 编写的轻量软件，需要资源非常少。ezBookkeeping 的二进制文件及依赖的静态文件大约占用 50 MiB 左右的磁盘空间，在 Linux/amd64 平台运行时只需要使用约 30 MiB 左右内存。
+ezBookkeeping 是基于 Golang 编写的轻量软件，需要资源非常少。ezBookkeeping 的二进制文件及依赖的静态文件大约占用 50 MiB 左右的磁盘空间。在 Linux/amd64 平台运行且只有一个用户使用时，通常只需要使用约 30 MiB 左右内存。
 
 ## 为什么在 Windows 系统上双击 `ezbookkeeping.exe` 无法打开应用程序
 

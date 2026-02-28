@@ -26,7 +26,7 @@ For the operating systems supported by the ezBookkeeping server and the browsers
 
 ## How much system resources does ezBookkeeping use
 
-ezBookkeeping is a lightweight software written in Golang that needs very few resources. The ezBookkeeping binary file and its dependent static files take up about 50 MiB of disk space, and it only requires about 30 MiB of memory when running on Linux/amd64 platform.
+ezBookkeeping is a lightweight software written in Golang that needs very few resources. The ezBookkeeping binary file and its dependent static files take up about 50 MiB of disk space. When running on the Linux/amd64 platform with a single user, typically only around 30 MiB of memory is required.
 
 ## Why double-clicking `ezbookkeeping.exe` on Windows doesn't launch the application
 
