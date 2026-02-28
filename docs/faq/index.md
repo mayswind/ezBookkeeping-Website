@@ -284,6 +284,12 @@ You can directly edit the `.tmpl` files located in the `templates/email/` direct
 
 You can directly edit the `.tmpl` files located in the `templates/prompt/` directory of the ezBookkeeping. If you're deploying ezBookkeeping with Docker, you can mount your modified files to this directory instead. Make sure the files are readable by the user running the ezBookkeeping process. Changes will take effect after restarting ezBookkeeping server program.
 
+## Why map data caching cannot be enabled
+
+The map data caching feature in ezBookkeeping is implemented using the browser's Service Worker. Due to browser security restrictions, Service Workers can only be used over HTTPS or on localhost. If you are accessing ezBookkeeping over HTTP in a non-localhost environment, the map data caching feature cannot be enabled.
+
+In addition, due to browser security restrictions, ezBookkeeping can only cache map data when server-side forwarding map data requests is enabled (`map_data_fetch_proxy` set to `true`). See [Configuration - Map](/configuration/#map) for details.
+
 ## What third-party services does ezBookkeeping use, and does it access my personal data
 
 ezBookkeeping relies on third-party services for features such as exchange rates, avatar, maps and LLM (Large Language Model) service. Details are as follows:

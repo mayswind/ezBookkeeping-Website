@@ -284,6 +284,12 @@ ezBookkeeping 计算不同货币的总金额时依赖汇率数据，你需要确
 
 你可以直接修改 ezBookkeeping 目录中 `templates/prompt/` 目录下的 `.tmpl` 文件。如果使用 Docker 部署 ezBookkeeping，也可以直接将修改后的文件挂载到该目录下。需要保证该文件有权限被 ezBookkeeping 的进程启动用户读取。修改后需要重新启动 ezBookkeeping 服务端程序生效。
 
+## 为什么不能设置缓存地图数据
+
+ezBookkeeping 的地图缓存功能使用浏览器的 Service Worker 实现，受限于浏览器的安全策略，Service Worker 只能在 HTTPS 协议下使用，或者在 localhost 上使用。如果你在非 localhost 的环境下使用 HTTP 协议访问 ezBookkeeping，则无法启用地图缓存功能。
+
+此外，受限于浏览器的安全策略，ezBookkeeping 只能缓存开启了服务端转发地图数据请求（`map_data_fetch_proxy` 设置为 `true`）的地图数据，详情见 [配置 - 地图](/zh_Hans/configuration/#地图)。
+
 ## ezBookkeeping 使用了哪些第三方服务，以及是否会使用我的个人数据
 
 ezBookkeeping 中的汇率数据、头像、地图以及大语言模型（LLM）服务依赖第三方服务，具体如下：

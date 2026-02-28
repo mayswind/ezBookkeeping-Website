@@ -4,6 +4,8 @@ title: Command Line
 
 # Command Line
 
+The ezBookkeeping server program is also a command line tool, providing various commands for database maintenance, user management, scheduled task management, and other utilities.
+
 ## Usage
 
 ```shell
