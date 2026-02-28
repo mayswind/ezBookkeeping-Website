@@ -87,8 +87,8 @@ sitemap:
           url: /zh_Hans/basic_usage/
         - name: 导出 & 导入
           url: /zh_Hans/export_and_import/
-        - name: API
-          url: /zh_Hans/httpapi/
+        - name: 与 OpenClaw 集成
+          url: /zh_Hans/agent/openclaw
     - name: 资源
       links:
         - name: 更新日志

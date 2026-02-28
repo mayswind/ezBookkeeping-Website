@@ -87,8 +87,8 @@ sitemap:
           url: /basic_usage/
         - name: Export & Import
           url: /export_and_import/
-        - name: API
-          url: /httpapi/
+        - name: Integration with OpenClaw
+          url: /agent/openclaw
     - name: Resources
       links:
         - name: Release Notes
