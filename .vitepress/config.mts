@@ -127,7 +127,8 @@ export default defineConfig({
                         collapsed: false,
                         items: [
                             { text: 'Configuration', link: '/configuration/' },
-                            { text: 'Exchange Rates', link: '/exchange_rates/' }
+                            { text: 'Exchange Rates', link: '/exchange_rates/' },
+                            { text: 'Troubleshooting', link: '/troubleshooting/'}
                         ]
                     },
                     {
@@ -218,7 +219,8 @@ export default defineConfig({
                         collapsed: false,
                         items: [
                             { text: '配置', link: '/zh_Hans/configuration/' },
-                            { text: '汇率', link: '/zh_Hans/exchange_rates/' }
+                            { text: '汇率', link: '/zh_Hans/exchange_rates/' },
+                            { text: '问题排查', link: '/zh_Hans/troubleshooting/'}
                         ]
                     },
                     {
