@@ -52,7 +52,7 @@ ezBookkeeping loads configuration from the configuration file or environment var
 
 At startup, ezBookkeeping outputs the current effective configuration values. You can review these values in the startup log to confirm whether the updated configuration has been loaded correctly.
 
-In addition, some features in the frontend interface also depend on server-side configuration. ezBookkeeping passes server-side configuration to the frontend via `http://{YOUR_HOST_ADDRESS}/server_settings.js`. Please verify that your browser has loaded this URL correctly. If the browser has cached this file, try clearing the browser cache and reloading the page.
+In addition, some features in the frontend interface also depend on server-side configuration. ezBookkeeping passes server-side configuration to the frontend via `http://{YOUR_HOST_ADDRESS}/server_settings.js`. Please verify that your browser has loaded this URL correctly. If the browser has cached this file, try clearing the browser cache and reloading the page. The configuration parameter names in `server_settings.js` differ from those in the server-side configuration. You can refer to the source code [server_settings.go](https://github.com/mayswind/ezbookkeeping/blob/main/pkg/api/server_settings.go) for more details.
 
 ### Content display issues
 

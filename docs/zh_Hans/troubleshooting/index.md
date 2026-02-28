@@ -52,7 +52,7 @@ ezBookkeeping 在启动时会加载配置文件或环境变量中的配置，如
 
 ezBookkeeping 在启动时会输出当前生效的配置项的值，您可以通过查看启动日志中的配置项值来确认是否正确加载了新的配置。
 
-另外，前端界面中有些功能也依赖服务端的配置，ezBookkeeping 通过 `http://{YOUR_HOST_ADDRESS}/server_settings.js` 将服务端的配置传递给前端界面，请检查你的浏览器是否正确加载了该地址，如果浏览器缓存了该文件，请尝试清除浏览器缓存后重新加载页面。
+另外，前端界面中有些功能也依赖服务端的配置，ezBookkeeping 通过 `http://{YOUR_HOST_ADDRESS}/server_settings.js` 将服务端的配置传递给前端界面，请检查你的浏览器是否正确加载了该地址，如果浏览器缓存了该文件，请尝试清除浏览器缓存后重新加载页面。`server_settings.js` 中配置项名称与服务端配置项名称不同，可以参考源代码 [server_settings.go](https://github.com/mayswind/ezbookkeeping/blob/main/pkg/api/server_settings.go) 获取详细信息。
 
 ### 内容显示异常
 
