@@ -128,6 +128,7 @@ export default defineConfig({
                         items: [
                             { text: 'Configuration', link: '/configuration/' },
                             { text: 'Exchange Rates', link: '/exchange_rates/' },
+                            { text: 'Command Line', link: '/command_line/' },
                             { text: 'Troubleshooting', link: '/troubleshooting/'}
                         ]
                     },
@@ -138,8 +139,7 @@ export default defineConfig({
                             { text: 'Basic Usage', link: '/basic_usage/' },
                             { text: 'Export & Import', link: '/export_and_import/' },
                             { text: 'Model Context Protocol', link: '/mcp/' },
-                            { text: 'Integration with OpenClaw', link: '/agent/openclaw' },
-                            { text: 'Command Line', link: '/command_line/' }
+                            { text: 'Integration with OpenClaw', link: '/agent/openclaw' }
                         ]
                     },
                     {
@@ -220,6 +220,7 @@ export default defineConfig({
                         items: [
                             { text: '配置', link: '/zh_Hans/configuration/' },
                             { text: '汇率', link: '/zh_Hans/exchange_rates/' },
+                            { text: '命令行', link: '/zh_Hans/command_line/' },
                             { text: '问题排查', link: '/zh_Hans/troubleshooting/'}
                         ]
                     },
@@ -230,8 +231,7 @@ export default defineConfig({
                             { text: '基础使用', link: '/zh_Hans/basic_usage/' },
                             { text: '导出 & 导入', link: '/zh_Hans/export_and_import/' },
                             { text: 'Model Context Protocol', link: '/zh_Hans/mcp/' },
-                            { text: '与 OpenClaw 集成', link: '/zh_Hans/agent/openclaw' },
-                            { text: '命令行', link: '/zh_Hans/command_line/' }
+                            { text: '与 OpenClaw 集成', link: '/zh_Hans/agent/openclaw' }
                         ]
                     },
                     {
