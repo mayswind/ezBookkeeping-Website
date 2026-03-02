@@ -205,7 +205,7 @@ ezBookkeeping does not cover every possible need, so you can choose the software
 | Password recovery via email | ✅ Supported | ✅ Supported | ❌ Not supported |
 | Session management | ✅ Supported (web access, API, CLI, MCP) | ⚠️ Only supports personal access token management and logging out from all devices | ❌ Not supported |
 | Login rate limiting | ✅ Supported | ❌ Not supported | ❌ Not supported |
-| End-to-end encryption | ❌ Not supported | ❌ Not supported | ✅ Supported |
+| End-to-end encryption | Do not store sensitive data on the client | Do not store sensitive data on the client | ✅ Supported |
 
 ## Artificial Intelligence
 
