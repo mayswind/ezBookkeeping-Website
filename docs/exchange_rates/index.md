@@ -6,38 +6,6 @@ title: Exchange Rates
 
 ezBookkeeping supports updating exchange rates automatically, and supports multiple data sources. You can choose a data source according to your needs. The information on this page may not be the latest, please refer to the reference link or the actual data.
 
-## The Reserve Bank of Australia
-
-> Reference: [https://www.rba.gov.au/statistics/frequency/exchange-rates.html](https://www.rba.gov.au/statistics/frequency/exchange-rates.html)
-
-The base currency is Australian dollar (`AUD`). The daily exchange rates are usually updated around 16:00 AEST (Australian Eastern Standard Time) on every working day.
-
-This data source supports 19 currencies, and all currencies are as follows:
-
-| Currency | Currency Code | Update Frequency |
-| --- | --- | --- |
-| Canadian Dollar | CAD | Daily |
-| Swiss Franc | CHF | Daily |
-| Chinese Yuan | CNY | Daily |
-| Euro | EUR | Daily |
-| British Pound | GBP | Daily |
-| Hong Kong Dollar | HKD | Daily |
-| Indonesian Rupiah | IDR | Daily |
-| Indian Rupee | INR | Daily |
-| Japanese Yen | JPY | Daily |
-| South Korean Won | KRW | Daily |
-| Malaysian Ringgit | MYR | Daily |
-| New Zealand Dollar | NZD | Daily |
-| Papua New Guinean Kina | PGK | Daily |
-| Philippine Peso | PHP | Daily |
-| Singapore Dollar | SGD | Daily |
-| Thai Baht | THB | Daily |
-| New Taiwan Dollar | TWD | Daily |
-| United States Dollar | USD | Daily |
-| Vietnamese Dong | VND | Daily |
-
-Configuration option `data_source` value is `reserve_bank_of_australia`
-
 ## Bank of Canada
 
 > Reference: [https://www.bankofcanada.ca/rates/exchange/daily-exchange-rates/](https://www.bankofcanada.ca/rates/exchange/daily-exchange-rates/)

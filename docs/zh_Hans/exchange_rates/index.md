@@ -6,38 +6,6 @@ title: 汇率
 
 ezBookkeeping 支持自动更新汇率以及支持多个不同数据源。您可以根据需要选择数据源。本页中的信息可能不是最新的，请以参考链接或实际数据为准。
 
-## 澳大利亚储备银行
-
-> 参考：[https://www.rba.gov.au/statistics/frequency/exchange-rates.html](https://www.rba.gov.au/statistics/frequency/exchange-rates.html)
-
-基准货币是澳大利亚元（`AUD`）。每日汇率通常在工作日的 16:00（澳大利亚东部标准时间 AEST）左右更新。
-
-该数据源支持 19 种货币，所有货币如下：
-
-| 货币 | 货币代码 | 更新频率 |
-| --- | --- | --- |
-| 加拿大元 | CAD | 每日 |
-| 瑞士法郎 | CHF | 每日 |
-| 人民币 | CNY | 每日 |
-| 欧元 | EUR | 每日 |
-| 英镑 | GBP | 每日 |
-| 港元 | HKD | 每日 |
-| 印度尼西亚卢比 | IDR | 每日 |
-| 印度卢比 | INR | 每日 |
-| 日元 | JPY | 每日 |
-| 韩元 | KRW | 每日 |
-| 马来西亚林吉特 | MYR | 每日 |
-| 新西兰元 | NZD | 每日 |
-| 巴布亚新几内亚基那 | PGK | 每日 |
-| 菲律宾比索 | PHP | 每日 |
-| 新加坡元 | SGD | 每日 |
-| 泰铢 | THB | 每日 |
-| 新台币 | TWD | 每日 |
-| 美元 | USD | 每日 |
-| 越南盾 | VND | 每日 |
-
-配置选项 `data_source` 的值是 `reserve_bank_of_australia`
-
 ## 加拿大中央银行
 
 > 参考：[https://www.bankofcanada.ca/rates/exchange/daily-exchange-rates/](https://www.bankofcanada.ca/rates/exchange/daily-exchange-rates/)
