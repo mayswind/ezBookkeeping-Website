@@ -137,7 +137,7 @@ Note that if the same configuration option is set using all three methods above,
 
 | Option Name | Default Value | Description |
 | --- | --- | --- |
-| `llm_provider` |  | Large Language Model (LLM) provider for receipt image recognition, supports `openai`, `openai_compatible`, `anthropic`, `anthropic_compatible`, `openrouter`, `ollama`, `lm_studio` and `google_ai`. When using a third-party LLM provider, please be aware of potential privacy risks. For more details, see [FAQ - What third-party services does ezBookkeeping use, and does it access my personal data](/faq/#what-third-party-services-does-ezbookkeeping-use-and-does-it-access-my-personal-data). |
+| `llm_provider` |  | Large Language Model (LLM) provider for receipt image recognition, supports `openai`, `openai_compatible`, `anthropic`, `anthropic_compatible`, `openrouter`, `ollama`, `lm_studio` and `google_ai`. The used LLM provider and model must support vision language model (VLM) capabilities. When using a third-party LLM provider, please be aware of potential privacy risks. For more details, see [FAQ - What third-party services does ezBookkeeping use, and does it access my personal data](/faq/#what-third-party-services-does-ezbookkeeping-use-and-does-it-access-my-personal-data). |
 | `openai_api_key` |  | OpenAI API Secret Key for `openai` LLM provider, please visit [https://platform.openai.com/api-keys](https://platform.openai.com/api-keys) for more information. |
 | `openai_model_id` |  | Model ID for the `openai` LLM provider, used for receipt image recognition and transaction creation. |
 | `openai_compatible_base_url` |  | OpenAI compatible API base url for `openai_compatible` LLM provider, e.g. `https://api.openai.com/v1/`. |
