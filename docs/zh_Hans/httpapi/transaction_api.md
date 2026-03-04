@@ -61,7 +61,7 @@ title: 交易 API
 | `latitude` | `float` | 纬度 |
 | `longitude` | `float` | 经度 |
 
-## 获取交易列表（支持分页）
+## 获取指定查询条件的交易数据（支持分页）
 
 **API 路径**
 
@@ -108,7 +108,7 @@ title: 交易 API
 | `nextTimeSequenceId` | `integer` | 请求更旧数据时的下一个游标（`max_time` 参数） |
 | `totalCount` | `integer` | 交易总数量 |
 
-## 获取全部交易列表
+## 获取指定查询条件的全部交易数据
 
 **API 路径**
 
@@ -146,7 +146,7 @@ title: 交易 API
 
 `TransactionInfoResponse[]`
 
-## 添加交易
+## 添加新交易
 
 **API 路径**
 

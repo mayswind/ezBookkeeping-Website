@@ -48,7 +48,7 @@ title: 账户 API
 | `hidden` | `boolean` | 是否隐藏 |
 | `subAccounts` | `AccountInfoResponse[]` | 子账户列表 |
 
-## 获取所有账户列表
+## 获取所有账户信息
 
 **API 路径**
 
@@ -66,7 +66,7 @@ title: 账户 API
 
 `AccountInfoResponse[]`
 
-## 添加账户
+## 添加新账户
 
 **API 路径**
 

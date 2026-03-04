@@ -4,7 +4,7 @@ title: 令牌 API
 
 # 令牌 API
 
-## 获取可用会话信息
+## 获取所有可用会话信息
 
 **API 路径**
 
@@ -30,7 +30,7 @@ title: 令牌 API
 | `lastSeen` | `integer` | 会话的最后刷新时间（Unix Time） |
 | `isCurrent` | `boolean` | 是否是当前会话 |
 
-## 注销令牌
+## 注销指定令牌
 
 **API 路径**
 

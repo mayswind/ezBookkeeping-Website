@@ -61,7 +61,7 @@ title: Transaction API
 | `latitude` | `float` | Latitude |
 | `longitude` | `float` | Longitude |
 
-## Get transactions list with pagination
+## Retrieve transaction data based on specified query criteria (with pagination support)
 
 **API Path**
 
@@ -108,7 +108,7 @@ title: Transaction API
 | `nextTimeSequenceId` | `integer` | The next cursor (`max_time` parameter) when requesting older data |
 | `totalCount` | `integer` | The total count of transactions |
 
-## Get all transactions list
+## Retrieve all transaction data matching the specified query criteria
 
 **API Path**
 
@@ -146,7 +146,7 @@ title: Transaction API
 
 `TransactionInfoResponse[]`
 
-## Add transaction
+## Add a new transaction
 
 **API Path**
 

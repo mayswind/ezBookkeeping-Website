@@ -13,7 +13,7 @@ title: Exchange Rates API
 | `currency` | `string` | Currency code |
 | `rate` | `string` | Exchange rate, 1 unit of base currency equals to how many units of this currency |
 
-## Get latest exchange rates
+## Retrieve the latest exchange rate data
 
 **API Path**
 

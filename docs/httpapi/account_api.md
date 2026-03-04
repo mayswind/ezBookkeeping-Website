@@ -48,7 +48,7 @@ title: Account API
 | `hidden` | `boolean` | Whether the account is hidden |
 | `subAccounts` | `AccountInfoResponse[]` | The sub accounts list |
 
-## Get all accounts list
+## Retrieve all account information
 
 **API Path**
 
@@ -66,7 +66,7 @@ None
 
 `AccountInfoResponse[]`
 
-## Add account
+## Add a new account
 
 **API Path**
 

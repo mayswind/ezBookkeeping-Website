@@ -29,7 +29,7 @@ title: Transaction Category API
 | `hidden` | `boolean` | Whether the transaction category is hidden |
 | `subCategories` | `TransactionCategoryInfoResponse[]` | The sub transaction categories list |
 
-## Get all transaction categories
+## Retrieve all available transaction categories
 
 **API Path**
 
@@ -47,7 +47,7 @@ None
 
 `Map<TransactionCategoryType, TransactionCategoryInfoResponse[]>`
 
-## Add transaction category
+## Add a new transaction category
 
 **API Path**
 

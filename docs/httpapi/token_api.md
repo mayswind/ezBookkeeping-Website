@@ -4,7 +4,7 @@ title: Token API
 
 # Token API
 
-## Get available sessions information
+## Retrieve all available session information
 
 **API Path**
 
@@ -30,7 +30,7 @@ None
 | `lastSeen` | `integer` | Last refresh unix time of the session |
 | `isCurrent` | `boolean` | Whether the session is current |
 
-## Revoke token
+## Revoke a specified token
 
 **API Path**
 

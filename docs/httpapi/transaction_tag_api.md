@@ -16,7 +16,7 @@ title: Transaction Tag API
 | `displayOrder` | `integer` | The display order of the transaction tag |
 | `hidden` | `boolean` | Whether the transaction tag is hidden |
 
-## Get all transaction tags list
+## Retrieve all available transaction tags
 
 **API Path**
 
@@ -34,7 +34,7 @@ None
 
 `TransactionTagInfoResponse[]`
 
-## Add transaction tag
+## Add a new transaction tag
 
 **API Path**
 

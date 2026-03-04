@@ -16,7 +16,7 @@ title: 交易标签 API
 | `displayOrder` | `integer` | 交易标签显示顺序 |
 | `hidden` | `boolean` | 交易标签是否隐藏 |
 
-## 获取所有交易标签列表
+## 获取所有交易可用标签
 
 **API 路径**
 
@@ -34,7 +34,7 @@ title: 交易标签 API
 
 `TransactionTagInfoResponse[]`
 
-## 添加交易标签
+## 添加新交易标签
 
 **API 路径**
 

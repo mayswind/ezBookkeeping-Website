@@ -29,7 +29,7 @@ title: 交易分类 API
 | `hidden` | `boolean` | 交易分类是否隐藏 |
 | `subCategories` | `TransactionCategoryInfoResponse[]` | 子交易分类列表 |
 
-## 获取所有交易分类列表
+## 获取所有交易可用分类
 
 **API 路径**
 
@@ -47,7 +47,7 @@ title: 交易分类 API
 
 `Map<TransactionCategoryType, TransactionCategoryInfoResponse[]>`
 
-## 添加交易分类
+## 添加新交易分类
 
 **API 路径**
 
