@@ -205,6 +205,7 @@ Note that if the same configuration option is set using all three methods above,
 | `email_verify_token_expired_time` | `3600` | Email verify token expired time (60 - 4294967295 seconds). |
 | `password_reset_token_expired_time` | `3600` | Password reset token expired time (60 - 4294967295 seconds). |
 | `enable_api_token` | `false` | Whether to enable API token. |
+| `api_token_allowed_remote_ips` |  | Allowed remote IPs for using the API token, a comma-separated list of allowed remote IPs (asterisk * for any addresses, e.g. 192.168.1.* means any IPs in the 192.168.1.x subnet), leave blank to allow all remote IPs. |
 | `max_failures_per_ip_per_minute` | `5` | Maximum count of password / token check failures (0 - 4294967295) per IP per minute (use the above duplicate checker), default is `5`, set to `0` to disable. |
 | `max_failures_per_user_per_minute` | `5` | Maximum count of password / token check failures (0 - 4294967295) per user per minute (use the above duplicate checker), default is `5`, set to `0` to disable. |
 

@@ -205,6 +205,7 @@ ezBookkeeping 使用 ini 文件作为配置文件。
 | `email_verify_token_expired_time` | `3600` | 邮箱验证令牌过期时间（60 - 4294967295 秒）。 |
 | `password_reset_token_expired_time` | `3600` | 密码重置令牌过期时间（60 - 4294967295 秒）。 |
 | `enable_api_token` | `false` | 是否开启 API 令牌。 |
+| `api_token_allowed_remote_ips` |  | 允许使用 API 令牌的远程 IP，使用逗号分隔的允许远程 IP 列表（星号 * 表示任何地址，例如 192.168.1.* 表示 192.168.1.x 子网中的任何 IP），留空则允许所有远程 IP。 |
 | `max_failures_per_ip_per_minute` | `5` | 每分钟每个 IP 密码/令牌检查失败的最大次数（0 - 4294967295）（使用上述重复检查器），默认为 `5`，设置为 `0` 时禁用。 |
 | `max_failures_per_user_per_minute` | `5` | 每分钟每个用户密码/令牌检查失败的最大次数（0 - 4294967295）（使用上述重复检查器），默认为 `5`，设置为 `0` 时禁用。 |
 
