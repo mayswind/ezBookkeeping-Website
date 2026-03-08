@@ -6,7 +6,7 @@ title: Integration with OpenClaw
 
 [OpenClaw](https://openclaw.ai/) is a personal AI assistant you run on your own devices. It supports integration with multiple common channels (such as WhatsApp, Telegram, Slack, etc.) and major large language model providers (such as OpenAI, Anthropic, Google AI, etc.), allowing users to use natural language to have AI agents perform various tasks locally.
 
-ezBookkeeping provides data operations through an HTTP API, and also offers **ezBookkeeping API Tools** to simplify API calls by AI agents. These operations are further packaged into skills via **SKILL.md**, which OpenClaw can invoke to perform tasks such as bookkeeping and data queries.
+ezBookkeeping provides an [Agent Skill](/agent/skill) that allows AI agents to operate ezBookkeeping through the HTTP API. This skill is also compatible with OpenClaw, which can invoke to perform tasks such as recording transactions and querying data in ezBookkeeping.
 
 ## Install OpenClaw
 

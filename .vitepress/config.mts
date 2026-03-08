@@ -139,6 +139,7 @@ export default defineConfig({
                             { text: 'Basic Usage', link: '/basic_usage/' },
                             { text: 'Export & Import', link: '/export_and_import/' },
                             { text: 'Model Context Protocol', link: '/mcp/' },
+                            { text: 'Agent Skill', link: '/agent/skill' },
                             { text: 'Integration with OpenClaw', link: '/agent/openclaw' }
                         ]
                     },
@@ -231,6 +232,7 @@ export default defineConfig({
                             { text: '基础使用', link: '/zh_Hans/basic_usage/' },
                             { text: '导出 & 导入', link: '/zh_Hans/export_and_import/' },
                             { text: 'Model Context Protocol', link: '/zh_Hans/mcp/' },
+                            { text: 'Agent 技能', link: '/zh_Hans/agent/skill' },
                             { text: '与 OpenClaw 集成', link: '/zh_Hans/agent/openclaw' }
                         ]
                     },
