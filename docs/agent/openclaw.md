@@ -15,9 +15,9 @@ Please refer to [Install - OpenClaw](https://docs.openclaw.ai/install) for insta
 > [!CAUTION] Warning
 > Use third-party large language model services with caution, as your private data will be sent to external model providers.
 
-## Install ezBookkeeping SKILL
+## Install ezBookkeeping Skill
 
-The OpenClaw-compatible **SKILL.md** for ezBookkeeping is available on [ClawHub](https://clawhub.ai).
+The OpenClaw-compatible skill for ezBookkeeping is available on [ClawHub](https://clawhub.ai).
 
 1. You can install it directly using the ClawHub CLI:
 
@@ -43,4 +43,4 @@ EBKTOOL_TOKEN="{YOUR-API-TOKEN}"
 If you do not configure these environment variables in advance, OpenClaw will prompt you to enter them during the conversation. For more details on using the ezBookkeeping API Tools, refer to the [API - API Tool Script](/httpapi/#api-tool-script) documentation.
 
 > [!NOTE] TIP
-> Since ClawHub does not currently support packaging PowerShell scripts as part of a SKILL, when using OpenClaw on Windows, you need to manually download the [ebktools.ps1](https://raw.githubusercontent.com/mayswind/ezbookkeeping/refs/heads/main/scripts/ebktools.ps1) script and place it in the scripts directory of the ezBookkeeping SKILL (e.g., `C:\Users\{YOUR_USERNAME}\.openclaw\skills\ezbookkeeping\scripts\`).
+> Since ClawHub does not currently support packaging PowerShell scripts as part of a skill, when using OpenClaw on Windows, you need to manually download the [ebktools.ps1](https://raw.githubusercontent.com/mayswind/ezbookkeeping/refs/heads/main/scripts/ebktools.ps1) script and place it in the scripts directory of the ezBookkeeping skill (e.g., `C:\Users\{YOUR_USERNAME}\.openclaw\skills\ezbookkeeping\scripts\`).

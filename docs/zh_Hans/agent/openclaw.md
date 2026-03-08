@@ -15,9 +15,9 @@ ezBookkeeping 为 AI Agent 提供了通过 HTTP API 操作 ezBookkeeping 的 [Ag
 > [!CAUTION] 警告
 > 请谨慎使用第三方的大语言模型服务，因为你的隐私数据会发送给第三方大模型提供方。
 
-## 安装 ezBookkeeping SKILL
+## 安装 ezBookkeeping 技能
 
-ezBookkeeping 适配 OpenClaw 的 SKILL.md 已经发布在 [ClawHub](https://clawhub.ai)。
+ezBookkeeping 适配 OpenClaw 的技能已经发布在 [ClawHub](https://clawhub.ai)。
 
 1. 您可以直接通过 ClawHub 的命令行工具安装：
 
@@ -43,4 +43,4 @@ EBKTOOL_TOKEN="{YOUR-API-TOKEN}"
 如果您没有主动配置这些环境变量，与 OpenClaw 对话时，OpenClaw 也会提示您输入这些信息。ezBookkeeping API Tools 使用的更多说明，请参考 [API - API 工具脚本](/zh_Hans/httpapi/#api-工具脚本) 文档。
 
 > [!NOTE] 提示
-> 由于当前 ClawHub 不支持将 Powershell 脚本打包为 SKILL 的一部分，因此在 Windows 上使用 OpenClaw 时，您需要手动下载 [ebktools.ps1](https://raw.githubusercontent.com/mayswind/ezbookkeeping/refs/heads/main/scripts/ebktools.ps1) 脚本并放置在 ezBookkeeping SKILL 的 `scripts` 目录下（例如 `C:\Users\{YOUR_USERNAME}\.openclaw\skills\ezbookkeeping\scripts\`）。
+> 由于当前 ClawHub 不支持将 Powershell 脚本打包为技能的一部分，因此在 Windows 上使用 OpenClaw 时，您需要手动下载 [ebktools.ps1](https://raw.githubusercontent.com/mayswind/ezbookkeeping/refs/heads/main/scripts/ebktools.ps1) 脚本并放置在 ezBookkeeping 技能的 `scripts` 目录下（例如 `C:\Users\{YOUR_USERNAME}\.openclaw\skills\ezbookkeeping\scripts\`）。
