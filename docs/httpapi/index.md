@@ -56,7 +56,7 @@ ezBookkeeping provides a tool script called **ezBookkeeping API Tools** that all
 Make sure the following command-line tools are installed on your system: `grep`, `sed`, `awk`, `date`, `curl`, and `jq`. Then download the script with the following commands:
 
 ```shell
-$ curl https://raw.githubusercontent.com/mayswind/ezbookkeeping/refs/heads/main/scripts/ebktools.sh -o ebktools.sh
+$ curl https://raw.githubusercontent.com/mayswind/ezbookkeeping/refs/heads/main/skills/ezbookkeeping/scripts/ebktools.sh -o ebktools.sh
 $ chmod +x ebktools.sh
 ```
 
@@ -85,7 +85,7 @@ $ ./ebktools.sh
 Download the script using the following PowerShell command:
 
 ```powershell
-PS > Invoke-WebRequest -Uri https://raw.githubusercontent.com/mayswind/ezbookkeeping/refs/heads/main/scripts/ebktools.ps1 -OutFile .\ebktools.ps1
+PS > Invoke-WebRequest -Uri https://raw.githubusercontent.com/mayswind/ezbookkeeping/refs/heads/main/skills/ezbookkeeping/scripts/ebktools.ps1 -OutFile .\ebktools.ps1
 ```
 
 Configure the environment variables as shown below:

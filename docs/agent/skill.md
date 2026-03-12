@@ -8,27 +8,34 @@ title: Agent Skill
 
 Since AI agents are well suited to using command line tools, ezBookkeeping provides **ezBookkeeping API Tools**, which wrap the HTTP API as a command line interface to simplify how AI agents interact with ezBookkeeping APIs. The default output of ezBookkeeping API Tools is designed to be as compact as possible while preserving semantics, in order to reduce token consumption when used with large language models.
 
-In addition, ezBookkeeping provides a [SKILL.md](https://github.com/mayswind/ezbookkeeping/blob/main/SKILL.md) file for using ezBookkeeping API Tools. AI agents can directly use this skill to perform tasks such as recording transactions and querying data.
+In addition, ezBookkeeping provides a [Agent Skill](https://github.com/mayswind/ezbookkeeping/tree/main/skills/ezbookkeeping) for using ezBookkeeping API Tools. AI agents can directly use this skill to perform tasks such as recording transactions and querying data.
 
 ## Install Skill
 
-The ezBookkeeping skill consists of two parts: the [SKILL.md](https://github.com/mayswind/ezbookkeeping/blob/main/SKILL.md) file and the corresponding ezBookkeeping API Tools command line utility. You can download both components directly from the GitHub repository.
+1. You can install it directly using the [Skills](https://skills.sh/) CLI:
 
-1. SKILL.md: https://github.com/mayswind/ezbookkeeping/blob/main/SKILL.md
-2. ezBookkeeping API Tools: https://github.com/mayswind/ezbookkeeping/tree/main/scripts
+```shell
+npx skills add mayswind/ezbookkeeping@ezbookkeeping
+```
+
+2. Or download it from the following page:
+
+The ezBookkeeping skill consists of two parts: the SKILL.md file and the corresponding ezBookkeeping API Tools command line utility. You can download both components directly from the GitHub repository.
+
+[https://github.com/mayswind/ezbookkeeping/blob/main/skills/ezbookkeeping](https://github.com/mayswind/ezbookkeeping/blob/main/skills/ezbookkeeping)
 
 The directory structure after downloading is as follows:
 
 ```
 .
-├── ezbookkeeping-skill
+├── ezbookkeeping
 │   ├── SKILL.md
 │   └── scripts
 │       ├── ebktools.ps1
 │       └── ebktools.sh
 ```
 
-You can then install the `ezbookkeeping-skill` directory into the appropriate skills directory of the platform where your AI agent.
+You can then install the `ezbookkeeping` directory into the appropriate skills directory of the platform where your AI agent.
 
 > [!CAUTION] Warning
 > Use third-party large language model services with caution, as your private data will be sent to external model providers.

@@ -8,27 +8,34 @@ title: Agent 技能
 
 由于 AI Agent 非常擅长使用命令行工具，ezBookkeeping 将 HTTP API 封装成命令行工具 **ezBookkeeping API Tools**，从而简化 AI Agent 对 ezBookkeeping API 接口的调用。ezBookkeeping API Tools 在设计时，让默认输出的结果在保证语义的情况下尽可能压缩，以减少大语言模型的 Token 消耗。
 
-同时，ezBookkeeping 也提供了使用 ezBookkeeping API Tools 的 [SKILL.md](https://github.com/mayswind/ezbookkeeping/blob/main/SKILL.md) 文件，AI Agent 可以直接通过该技能来完成记账、查询等任务。
+同时，ezBookkeeping 也提供了使用 ezBookkeeping API Tools 的 [Agent 技能](https://github.com/mayswind/ezbookkeeping/tree/main/skills/ezbookkeeping)，AI Agent 可以直接通过该技能来完成记账、查询等任务。
 
 ## 安装技能
 
-ezBookkeeping 的技能包括两部分，分别是 [SKILL.md](https://github.com/mayswind/ezbookkeeping/blob/main/SKILL.md) 和对应的 ezBookkeeping API Tools 命令行工具，您可以直接从 GitHub 仓库下载这两部分内容。
+1. 您可以直接通过 [Skills](https://skills.sh/) 命令行工具安装：
 
-1. SKILL.md：https://github.com/mayswind/ezbookkeeping/blob/main/SKILL.md
-2. ezBookkeeping API Tools：https://github.com/mayswind/ezbookkeeping/tree/main/scripts
+```shell
+npx skills add mayswind/ezbookkeeping@ezbookkeeping
+```
+
+2. 或者可以访问如下地址下载：
+
+ezBookkeeping 的技能包括两部分，分别是 SKILL.md 和对应的 ezBookkeeping API Tools 命令行工具，您可以直接从 GitHub 仓库下载这两部分内容。
+
+[https://github.com/mayswind/ezbookkeeping/blob/main/skills/ezbookkeeping](https://github.com/mayswind/ezbookkeeping/blob/main/skills/ezbookkeeping)
 
 下载完成后的目录结构如下：
 
 ```
 .
-├── ezbookkeeping-skill
+├── ezbookkeeping
 │   ├── SKILL.md
 │   └── scripts
 │       ├── ebktools.ps1
 │       └── ebktools.sh
 ```
 
-然后你就可以将 `ezbookkeeping-skill` 目录安装到你的 AI Agent 所在平台对应的技能目录下。
+然后你就可以将 `ezbookkeeping` 目录安装到你的 AI Agent 所在平台对应的技能目录下。
 
 > [!CAUTION] 警告
 > 请谨慎使用第三方的大语言模型服务，因为你的隐私数据会发送给第三方大模型提供方。

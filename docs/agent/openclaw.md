@@ -43,4 +43,4 @@ EBKTOOL_TOKEN="{YOUR-API-TOKEN}"
 If you do not configure these environment variables in advance, OpenClaw will prompt you to enter them during the conversation. For more details on using the ezBookkeeping API Tools, refer to the [API - API Tool Script](/httpapi/#api-tool-script) documentation.
 
 > [!NOTE] TIP
-> Since ClawHub does not currently support packaging PowerShell scripts as part of a skill, when using OpenClaw on Windows, you need to manually download the [ebktools.ps1](https://raw.githubusercontent.com/mayswind/ezbookkeeping/refs/heads/main/scripts/ebktools.ps1) script and place it in the scripts directory of the ezBookkeeping skill (e.g., `C:\Users\{YOUR_USERNAME}\.openclaw\skills\ezbookkeeping\scripts\`).
+> Since ClawHub does not currently support packaging PowerShell scripts as part of a skill, when using OpenClaw on Windows, you need to manually download the [ebktools.ps1](https://raw.githubusercontent.com/mayswind/ezbookkeeping/refs/heads/main/skills/ezbookkeeping/scripts/ebktools.ps1) script and place it in the scripts directory of the ezBookkeeping skill (e.g., `C:\Users\{YOUR_USERNAME}\.openclaw\skills\ezbookkeeping\scripts\`).
