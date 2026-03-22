@@ -50,7 +50,7 @@ features:
       details:
           Receipt image recognition <br/>
           MCP (Model Context Protocol) support for AI integration <br/>
-          API command-line script tools for AI integration
+          Agent Skill and API command-line script tools support for AI integration
     - title: Powerful Bookkeeping
       icon: 📘
       details:

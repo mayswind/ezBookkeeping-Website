@@ -50,7 +50,7 @@ features:
       details:
           收据图片识别 <br/>
           支持 MCP (Model Context Protocol) 用于 AI 集成 <br/>
-          支持 API 命令行脚本工具用于 AI 集成
+          支持 Agent Skill 和 API 命令行脚本工具用于 AI 集成
     - title: 强大的记账功能
       icon: 📘
       details:
