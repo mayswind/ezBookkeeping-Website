@@ -188,11 +188,11 @@ Tap the amount on the amount input pad of ezBookkeeping, then a paste button wil
 
 ## How to change the default account when adding a transaction
 
-Go to the User Profile page, where you can update the default account used when creating new transactions.
+Go to the User Profile page to update the default account used when creating new transactions.
 
 ## How to change the color of amounts
 
-Go to the User Profile page, where you can change the color of expense and income amounts.
+Go to the User Profile page to change the colors for expense and income amounts.
 
 ## How to filter tags in the mobile transaction list
 
