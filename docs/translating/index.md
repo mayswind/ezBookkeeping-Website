@@ -25,6 +25,12 @@ For more information about language tags, please refer to [RFC5646](https://www.
 2. Add a key-value pair to the `AllLanguages` map in `/pkg/locales/all_locales.go`. The key should be the language tag, and the `Content` field in the value object should be the new language object
 3. Translate each text item
 
+## Check untranslated entries
+
+The ezBookkeeping repository automatically calculates translation progress and identifies untranslated entries for each language whenever text entries are updated. This information is recorded in the [ezBookkeeping-i18n-badge](https://github.com/mayswind/ezBookkeeping-i18n-badge) repository.
+
+You can open the [untranslated](https://github.com/mayswind/ezBookkeeping-i18n-badge/tree/main/untranslated) folder in that repository and locate the JSON file for your target language. It lists all untranslated entries, including the source file, key path, and original English text, which you can use to complete the translations.
+
 ## Internationalization
 
 ezBookkeeping allows users to change multiple regional settings, such as date, time, numeral, and currency formats. If the user does not change these settings, the default values configured in the language files will be used. These default values are in the `default` object of the language file.

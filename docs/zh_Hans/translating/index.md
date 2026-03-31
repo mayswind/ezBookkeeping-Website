@@ -25,6 +25,12 @@ ezBookkeeping 支持多语言和本地化设置，前端和后端分别有自己
 2. 在 `/pkg/locales/all_locales.go` 中的 `AllLanguages` map 中添加键值对，其中键名应当为语言标签，值对象里的 `Content` 字段应当为新的语言对象
 3. 翻译每个文字条目
 
+## 检查未翻译的条目
+
+ezBookkeeping 的仓库在每次更新词条时都会自动计算各个语言的翻译完成度及未翻译的条目，并将这些信息记录在 [ezBookkeeping-i18n-badge](https://github.com/mayswind/ezBookkeeping-i18n-badge) 仓库中。
+
+你可以打开这个仓库中的 [untranslated](https://github.com/mayswind/ezBookkeeping-i18n-badge/tree/main/untranslated) 文件夹，找到对应语言的 JSON 文件，里面列出了所有未翻译的条目，包括所在文件、词条路径以及原始的英文文本，你可以根据这些信息来进行完善翻译内容。
+
 ## 国际化
 
 ezBookkeeping 允许用户更改多项区域设置，如日期、时间、数字和货币格式。当用户没有修改时，这些区域设置将使用语言文件中配置的默认值。这些默认值都在语言文件的 `default` 对象中。
