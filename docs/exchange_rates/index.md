@@ -880,7 +880,6 @@ This data source supports 74 currencies, and all currencies are as follows:
 | Australian Dollar | AUD | Daily |
 | Azerbaijan Manat | AZN | Daily |
 | Bangladeshi Taka | BDT | Daily |
-| Bulgarian Lev | BGN | Daily |
 | Bahraini Dinar | BHD | Daily |
 | Brunei Dollar | BND | Daily |
 | Brazilian Real | BRL | Daily |
