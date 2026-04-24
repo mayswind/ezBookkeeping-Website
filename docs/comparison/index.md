@@ -6,7 +6,7 @@ title: Feature Comparison (ezBookkeeping vs. Firefly III vs. Actual Budget)
 
 Below is a feature comparison between ezBookkeeping and the open-source, self-hosted personal finance software Firefly III and Actual Budget, based on information as of January 2026.
 
-ezBookkeeping does not cover every possible need, so you can choose the software that best aligns with your top priorities.
+ezBookkeeping does not cover every possible need, so you can choose the software that best aligns with your top priorities. The latest feature list of ezBookkeeping is available in [Feature List](/features/).
 
 ## Basic Information
 

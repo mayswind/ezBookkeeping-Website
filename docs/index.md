@@ -91,6 +91,9 @@ sitemap:
           url: /agent/openclaw
     - name: Resources
       links:
+        - name: Feature List
+          url: /features/
+          external: false
         - name: Release Notes
           url: https://github.com/mayswind/ezbookkeeping/releases
           external: true

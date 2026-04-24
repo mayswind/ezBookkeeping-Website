@@ -18,7 +18,7 @@ The ezBookkeeping project does not collect any user information. All user data i
 
 ## Is ezBookkeeping right for me
 
-ezBookkeeping does not cover every possible need. You can visit the [Feature Comparison](/comparison/) page to review how ezBookkeeping compares with other similar software and choose the one that best fits your needs.
+ezBookkeeping does not cover every possible need. You can visit the [Feature List](/features/) to review all available features, or check [Feature Comparison](/comparison/) to see how ezBookkeeping compares with other similar software and choose the one that best fits your needs.
 
 ## Which operating systems does ezBookkeeping support
 

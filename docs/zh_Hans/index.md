@@ -91,6 +91,9 @@ sitemap:
           url: /zh_Hans/agent/openclaw
     - name: 资源
       links:
+        - name: 功能列表
+          url: /zh_Hans/features/
+          external: false
         - name: 更新日志
           url: https://github.com/mayswind/ezbookkeeping/releases
           external: true
