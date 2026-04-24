@@ -12,7 +12,8 @@ The operating systems that can run the ezBookkeeping server are the same as thos
 
 | ezBookkeeping Version | Golang Version | Minimum Linux Kernel Version | Minimum Windows Version | Minimum macOS Version |
 | --- | --- | --- | --- | --- |
-| v1.1.x and later | 1.25 | ≥ 3.2 | ≥ Windows 10 / Windows Server 2016 | ≥ macOS 12 Monterey |
+| v1.5.x and later | 1.26 | ≥ 3.2 | ≥ Windows 10 / Windows Server 2016 | ≥ macOS 12 Monterey |
+| v1.1.x ~ v1.4.x | 1.25 | ≥ 3.2 | ≥ Windows 10 / Windows Server 2016 | ≥ macOS 12 Monterey |
 | v0.8.x ~ v1.0.x | 1.24 | ≥ 3.2 | ≥ Windows 10 / Windows Server 2016 | ≥ macOS 11 Big Sur |
 | v0.7.x | 1.23 | ≥ 2.6.32 | ≥ Windows 10 / Windows Server 2016 | ≥ macOS 11 Big Sur |
 | v0.6.x | 1.22 | ≥ 2.6.32 | ≥ Windows 10 / Windows Server 2016 | ≥ macOS 10.15 Catalina |
