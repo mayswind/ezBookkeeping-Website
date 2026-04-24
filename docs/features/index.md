@@ -124,6 +124,8 @@ Below is the complete list of features in ezBookkeeping.
 
 ## Insights Explorer
 
+> Insights Explorer is an advanced query and analysis tool that allows users to combine multiple conditions with logical operators. It supports displaying results as tables or various charts, with customizable axis, categories, and values across multiple dimensions, and allows exporting results to CSV, TSV, or Markdown files.
+
 | Item | Supported Version |
 | --- | --- |
 | Use AND or OR to combine multiple filter conditions | ≥ 1.3.0 |
