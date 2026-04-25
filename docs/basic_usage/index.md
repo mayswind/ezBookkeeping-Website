@@ -35,6 +35,9 @@ After creating accounts and transaction categories, you can start recording tran
 
 ezBookkeeping allows you to assign multiple tags to each transaction. If you need to record information such as merchants, payers, payees or project, you can do so using tags. Tags support grouping, allowing you to organize different types of tags into separate tag groups.
 
+> [!NOTE] TIP
+> If you need to modify a transaction later, you can click a transaction on the Transaction Details page in the desktop version and click the Edit button in the dialog to update it. Alternatively, in the Data Table tab of Insights Explorer, open the menu from the three dots in the top right and select Enter Edit Mode to batch update transactions. On mobile version, go to the Transaction Details page, swipe left on the transaction you want to edit, then tap Edit to enter the edit page.
+
 ## View Transactions
 
 On the "Transaction Details" page, you can view transactions by timeline or calendar. You can filter transactions by date range, category, account, amount, tags, and descriptions to find specific records.
