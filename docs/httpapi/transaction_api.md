@@ -186,3 +186,73 @@ title: Transaction API
 | `pictureIds` | `string[]` | Optional | Transaction picture IDs |
 | `comment` | `string` | Optional | Transaction description |
 | `geoLocation` | `TransactionGeoLocationRequest` | Optional | Transaction geographic location |
+
+## Modify transaction
+
+**API Path**
+
+`transactions/modify.json`
+
+**HTTP Method**
+
+`POST`
+
+**Request Header**
+
+| Header | Description |
+| --- | --- |
+| `X-Timezone-Name` | IANA time zone name |
+| `X-Timezone-Offset` | Time zone offset (minutes) |
+
+**Request Body Content-Type**
+
+`application/json`
+
+**Request Data Structure**
+
+`TransactionModifyRequest`
+
+| Field | Type | Required | Description |
+| --- | --- | --- | --- |
+| `id` | `string` | Required | Transaction ID |
+| `categoryId` | `string` | Optional | Transaction category (secondary category) ID. This field is not required only when updating a "Balance Modification" transaction, and it is required for all other transaction types |
+| `time` | `integer` | Required | Transaction unix time |
+| `utcOffset` | `integer` | Required | Transaction time zone offset (minutes) |
+| `sourceAccountId` | `string` | Required | Source account (an account without sub-accounts or a sub-account) ID |
+| `destinationAccountId` | `string` | Optional | Destination account (an account without sub-accounts or a sub-account) ID |
+| `sourceAmount` | `integer` | Required | Source amount (Supports up to two decimals. For example, a value of `1234` represents an amount of `12.34`) |
+| `destinationAmount` | `integer` | Optional | Destination amount (Supports up to two decimals. For example, a value of `1234` represents an amount of `12.34`) |
+| `hideAmount` | `boolean` | Optional | Whether to hide the amount |
+| `tagIds` | `string[]` | Optional | Transaction tag IDs |
+| `pictureIds` | `string[]` | Optional | Transaction picture IDs |
+| `comment` | `string` | Optional | Transaction description |
+| `geoLocation` | `TransactionGeoLocationRequest` | Optional | Transaction geographic location |
+
+## Delete transaction
+
+**API Path**
+
+`transactions/delete.json`
+
+**HTTP Method**
+
+`POST`
+
+**Request Header**
+
+| Header | Description |
+| --- | --- |
+| `X-Timezone-Name` | IANA time zone name |
+| `X-Timezone-Offset` | Time zone offset (minutes) |
+
+**Request Body Content-Type**
+
+`application/json`
+
+**Request Data Structure**
+
+`TransactionDeleteRequest`
+
+| Field | Type | Required | Description |
+| --- | --- | --- | --- |
+| `id` | `string` | Required | Transaction ID |

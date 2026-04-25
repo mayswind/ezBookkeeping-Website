@@ -186,3 +186,73 @@ title: 交易 API
 | `pictureIds` | `string[]` | 可选 | 交易图片 IDs |
 | `comment` | `string` | 可选 | 交易描述 |
 | `geoLocation` | `TransactionGeoLocationRequest` | 可选 | 交易地理位置 |
+
+## 修改交易
+
+**API 路径**
+
+`transactions/modify.json`
+
+**HTTP 方法**
+
+`POST`
+
+**请求 Header**
+
+| Header | 描述 |
+| --- | --- |
+| `X-Timezone-Name` | IANA 时区名称 |
+| `X-Timezone-Offset` | 时区偏移（分钟） |
+
+**请求体 Content-Type**
+
+`application/json`
+
+**请求数据结构**
+
+`TransactionModifyRequest`
+
+| 字段 | 类型 | 必选 | 描述 |
+| --- | --- | --- | --- |
+| `id` | `string` | 必选 | 交易 ID |
+| `categoryId` | `string` | 可选 | 交易分类（二级分类） ID。只有修改 “修改余额” 交易时不需要该字段，其他类型的交易都需要该字段 |
+| `time` | `integer` | 必选 | 交易时间（Unix Time） |
+| `utcOffset` | `integer` | 必选 | 交易时区偏移（分钟） |
+| `sourceAccountId` | `string` | 必选 | 来源账户（没有子账户的账户，或者子账户） ID |
+| `destinationAccountId` | `string` | 可选 | 目标账户（没有子账户的账户，或者子账户） ID |
+| `sourceAmount` | `integer` | 必选 | 来源金额（最多支持两位小数，例如该字段为 `1234` 时表示金额为 `12.34`） |
+| `destinationAmount` | `integer` | 可选 | 目标金额（最多支持两位小数，例如该字段为 `1234` 时表示金额为 `12.34`） |
+| `hideAmount` | `boolean` | 可选 | 是否隐藏金额 |
+| `tagIds` | `string[]` | 可选 | 交易标签 IDs |
+| `pictureIds` | `string[]` | 可选 | 交易图片 IDs |
+| `comment` | `string` | 可选 | 交易描述 |
+| `geoLocation` | `TransactionGeoLocationRequest` | 可选 | 交易地理位置 |
+
+## 删除交易
+
+**API 路径**
+
+`transactions/delete.json`
+
+**HTTP 方法**
+
+`POST`
+
+**请求 Header**
+
+| Header | 描述 |
+| --- | --- |
+| `X-Timezone-Name` | IANA 时区名称 |
+| `X-Timezone-Offset` | 时区偏移（分钟） |
+
+**请求体 Content-Type**
+
+`application/json`
+
+**请求数据结构**
+
+`TransactionDeleteRequest`
+
+| 字段 | 类型 | 必选 | 描述 |
+| --- | --- | --- | --- |
+| `id` | `string` | 必选 | 交易 ID |
