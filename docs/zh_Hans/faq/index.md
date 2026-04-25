@@ -18,7 +18,7 @@ ezBookkeeping 项目不会收集用户的任何信息，用户的数据完全存
 
 ## ezBookkeeping 是否适合我
 
-ezBookkeeping 并不是万能的，你可以访问 [功能列表](/zh_Hans/features/) 查看 ezBookkeeping 的功能列表，或 [功能对比](/zh_Hans/comparison/) 查看 ezBookkeeping 与其他类似软件的功能对比说明，并选择适合你的软件。
+ezBookkeeping 并不是万能的，你可以访问 [功能列表](/zh_Hans/features/) 查看 ezBookkeeping 的功能列表，也可以从 [功能对比](/zh_Hans/comparison/) 查看 ezBookkeeping 与其他类似软件的功能对比说明，并选择适合你的软件。
 
 ## ezBookkeeping 支持哪些操作系统
 
