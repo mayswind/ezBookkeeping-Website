@@ -4,7 +4,9 @@ title: 功能列表
 
 # 功能列表
 
-以下为 ezBookkeeping 所有功能列表。
+ezBookkeeping 是一款基于 Golang 和 Vue.js 开发的开源、轻量的个人记账软件，服务端程序可以运行在 Windows、macOS、Linux 等多个操作系统上，支持 x86、amd64、ARM 等多种硬件架构。它资源占用非常少，只需要占用几十兆的磁盘空间和内存即可流畅运行，即使在 Raspberry 4 上也能在1秒完成启动，ezBookkeeping 与常见软件的对比可以参考 [功能对比](/zh_Hans/comparison/)。
+
+ezBookkeeping 通过使用了更轻量的技术栈和更高效的架构设计，使得软件本身非常轻量，但同时提供了非常强大的功能，以下是 ezBookkeeping 的所有功能列表。
 
 ## 用户界面
 

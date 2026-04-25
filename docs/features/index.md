@@ -4,7 +4,9 @@ title: Feature List
 
 # Feature List
 
-Below is the complete list of features in ezBookkeeping.
+ezBookkeeping is an open source, lightweight personal finance app built with Golang and Vue.js. The server program can run on multiple operating systems including Windows, macOS, and Linux, and supports various hardware architectures such as x86, amd64, and ARM. It has minimal resource usage, requiring only tens of megabytes of disk space and memory for smooth operation, and can start in about one second even on a Raspberry Pi 4. For a comparison with similar software, see [Feature Comparison](/comparison/).
+
+ezBookkeeping uses a lightweight tech stack and an efficient architecture to keep the application minimal, while still providing powerful features. Below is the complete list of features in ezBookkeeping.
 
 ## User Interface
 

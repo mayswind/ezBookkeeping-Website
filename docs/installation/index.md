@@ -8,7 +8,7 @@ ezBookkeeping is a lightweight, self-hosted personal finance app with a user-fri
 
 ezBookkeeping offers tailored interfaces for both mobile and desktop devices. With support for PWA (Progressive Web Apps), you can even [add it to your mobile home screen](https://raw.githubusercontent.com/wiki/mayswind/ezbookkeeping/img/mobile/add_to_home_screen.gif) and use it like a native app.
 
-Although ezBookkeeping is a lightweight personal finance app, it offers powerful features. You can view all supported features in [Feature List](/features/).
+ezBookkeeping uses a lightweight tech stack and an efficient architecture to keep the application minimal, while still providing powerful features. You can explore all supported features in [Feature List](/features/).
 
 ## Run with Docker
 Visit [Docker Hub](https://hub.docker.com/r/mayswind/ezbookkeeping) to see all images and tags.
