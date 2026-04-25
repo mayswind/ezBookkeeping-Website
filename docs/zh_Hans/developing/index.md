@@ -6,7 +6,7 @@ title: 开发
 
 ## 准备
 
-ezBookkeeping 使用 Golang 和 TypeScript 编写。在您开始开发前，你需要安装 [Git](https://git-scm.com/)、[Golang](https://golang.org/)、[GCC](https://gcc.gnu.org/)、[Node.js](https://nodejs.org/) 和 [NPM](https://www.npmjs.com/)。ezBookkeeping 的发布包和 Docker 镜像使用 Golang 1.26 和 Node.js 24.x 进行编译。
+ezBookkeeping 使用 Golang 和 TypeScript 编写。在您开始开发前，你需要安装 [Git](https://git-scm.com/)、[Golang](https://golang.org/)、[GCC](https://gcc.gnu.org/)、[Node.js](https://nodejs.org/) 和 [NPM](https://www.npmjs.com/)。ezBookkeeping 的发布包和 Docker 镜像使用 Golang 1.26 和 Node.js 24.x 进行编译。ezBookkeeping 之前版本依赖的 Golang 版本可以在 [系统要求](/zh_Hans/installation/system_requirements) 中找到。
 
 ## 下载源代码
 
