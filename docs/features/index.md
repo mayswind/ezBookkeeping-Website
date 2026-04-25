@@ -289,7 +289,7 @@ Below is the complete list of features in ezBookkeeping.
 
 ## Artificial Intelligence
 
-> For more information about MCP, see [MCP (Model Context Protocol)](/mcp/).
+> For more information about MCP, please refer to [MCP (Model Context Protocol)](/mcp/).
 
 | Item | Supported Version |
 | --- | --- |
@@ -345,6 +345,8 @@ Below is the complete list of features in ezBookkeeping.
 | User custom tile data sources | ≥ 0.5.0 |
 
 ## Exchange Rates Data Source
+
+> For more information about exchange rate data sources, please refer to [Exchange Rates](/exchange_rates/).
 
 | Item | Supported Version |
 | --- | --- |
