@@ -242,6 +242,8 @@ ezBookkeeping uses a lightweight tech stack and an efficient architecture to kee
 | CSV / Excel column-mapping import | ≥ 0.8.0 |
 | CSV / Excel custom script import | ≥ 1.1.0 |
 | Automatic CSV file encoding detection | ≥ 1.3.0 |
+| Automatically detect common column names and transaction types in CSV files | ≥ 1.4.0 |
+| Map imported data using custom rules | ≥ 1.0.0 |
 | OFX | ≥ 0.6.0 |
 | QFX | ≥ 0.6.0 |
 | QIF | ≥ 0.6.0 |
