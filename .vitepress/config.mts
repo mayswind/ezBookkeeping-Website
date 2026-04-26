@@ -168,6 +168,7 @@ export default defineConfig({
                         text: 'Help',
                         collapsed: false,
                         items: [
+                            { text: 'Feature List', link: '/features/' },
                             { text: 'FAQ', link: '/faq/' }
                         ]
                     }
@@ -261,6 +262,7 @@ export default defineConfig({
                         text: '帮助',
                         collapsed: false,
                         items: [
+                            { text: '功能列表', link: '/zh_Hans/features/' },
                             { text: '常见问题', link: '/zh_Hans/faq/' }
                         ]
                     }
