@@ -419,6 +419,55 @@ This data source supports 15 currencies, and all currencies are as follows:
 
 Configuration option `data_source` value is `bank_of_israel`
 
+## National Bank of Kazakhstan
+
+> Reference: [https://nationalbank.kz/en/exchangerates/ezhednevnye-oficialnye-rynochnye-kursy-valyut](https://nationalbank.kz/en/exchangerates/ezhednevnye-oficialnye-rynochnye-kursy-valyut)
+
+The base currency is Kazakhstani tenge (`KZT`). The daily exchange rates are usually updated about 16:00 KZT (Kazakhstan Time) on every working day.
+
+This data source supports 38 currencies, and all currencies are as follows:
+
+| Currency | Currency Code | Update Frequency |
+| --- | --- | --- |
+| United Arab Emirates Dirham | AED | Daily |
+| Armenian Dram | AMD | Daily |
+| Australian Dollar | AUD | Daily |
+| Azerbaijan Manat | AZN | Daily |
+| Brazilian Real | BRL | Daily |
+| Belarusian Ruble | BYN | Daily |
+| Canadian Dollar | CAD | Daily |
+| Swiss Franc | CHF | Daily |
+| Chinese Yuan | CNY | Daily |
+| Czech Koruna | CZK | Daily |
+| Danish Krone | DKK | Daily |
+| Euro | EUR | Daily |
+| British Pound | GBP | Daily |
+| Georgian Lari | GEL | Daily |
+| Hong Kong Dollar | HKD | Daily |
+| Hungarian Forint | HUF | Daily |
+| Indian Rupee | INR | Daily |
+| Iranian Rial | IRR | Daily |
+| Japanese Yen | JPY | Daily |
+| Kyrgyzstani Som | KGS | Daily |
+| South Korean Won | KRW | Daily |
+| Kuwaiti Dinar | KWD | Daily |
+| Moldovan Leu | MDL | Daily |
+| Mexican Peso | MXN | Daily |
+| Malaysian Ringgit | MYR | Daily |
+| Norwegian Krone | NOK | Daily |
+| Polish Zloty | PLN | Daily |
+| Russian Ruble | RUB | Daily |
+| Saudi Riyal | SAR | Daily |
+| Swedish Krona | SEK | Daily |
+| Singapore Dollar | SGD | Daily |
+| Thai Baht | THB | Daily |
+| Tajikistani Somoni | TJS | Daily |
+| Turkish Lira | TRY | Daily |
+| Ukrainian Hryvnia | UAH | Daily |
+| United States Dollar | USD | Daily |
+| Uzbekistani Sum | UZS | Daily |
+| South African Rand | ZAR | Daily |
+
 ## Central Bank of Myanmar
 
 > Reference: [https://forex.cbm.gov.mm/index.php/fxrate](https://forex.cbm.gov.mm/index.php/fxrate)

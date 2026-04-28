@@ -361,6 +361,7 @@ ezBookkeeping uses a lightweight tech stack and an efficient architecture to kee
 | National Bank of Georgia | ≥ 0.7.0 |
 | Central Bank of Hungary | ≥ 0.7.0 |
 | Bank of Israel | ≥ 0.7.0 |
+| National bank of Kazakhstan | ≥ 1.5.0 |
 | Central Bank of Myanmar | ≥ 0.7.0 |
 | Norges Bank | ≥ 0.7.0 |
 | National Bank of Poland | ≥ 0.1.0 |
