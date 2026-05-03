@@ -28,15 +28,16 @@ This data source supports 26 currencies, and all currencies are as follows:
 | Japanese Yen | JPY | Daily |
 | South Korean Won | KRW | Daily |
 | Mexican Peso | MXN | Daily |
-| Malaysian Ringgit | MYR | Not Daily |
+| Malaysian Ringgit | MYR | Daily |
 | Norwegian Krone | NOK | Daily |
 | New Zealand Dollar | NZD | Daily |
 | Peruvian Sol | PEN | Daily |
-| Russian Ruble | RUB | Daily |
-| Saudi Riyal | SAR | Daily |
+| Polish Zloty | PLN | Daily |
+| Russian Ruble | RUB | Not Daily |
+| Saudi Riyal | SAR | Not Daily |
 | Swedish Krona | SEK | Daily |
 | Singapore Dollar | SGD | Daily |
-| Thai Baht | THB | Not Daily |
+| Thai Baht | THB | Daily |
 | Turkish Lira | TRY | Daily |
 | New Taiwan Dollar | TWD | Daily |
 | United States Dollar | USD | Daily |
