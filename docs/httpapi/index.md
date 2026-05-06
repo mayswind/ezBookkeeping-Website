@@ -22,7 +22,7 @@ The response of API is JSON object like the following:
 
 ```json
 {
-    "result": ..., // The acutal data
+    "result": ..., // The actual data
     "success": true
 }
 ```
