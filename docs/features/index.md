@@ -77,6 +77,7 @@ ezBookkeeping uses a lightweight tech stack and an efficient architecture to kee
 | Account archiving (hidden accounts) | ≥ 0.1.0 |
 | Account display order | ≥ 0.1.0 |
 | Account notes / description | ≥ 0.1.0 |
+| Last reconciled time | ≥ 1.5.0 |
 
 ## Transaction Query Features
 

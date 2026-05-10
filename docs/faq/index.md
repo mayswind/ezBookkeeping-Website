@@ -162,6 +162,12 @@ You can create an account which account category is "Receivables", then create a
 
 ezBookkeeping uses transaction tags to record information such as merchants, payers, payees and projects. You can add one or more tags to each transaction to capture this information. In addition, ezBookkeeping supports tag groups, allowing you to create different groups to distinguish between different types of tags.
 
+## How to use the last reconciled time
+
+ezBookkeeping allows users to enable the "Use Last Reconciled Time" feature in user profile settings. After enabling it, you can update or clear the last reconciled time on the account edit page. You can also update the account's last reconciled time to the statement end date on the reconciliation statement page, or update it to the current time from the account list page.
+
+You can combine this feature with the "Editable Transaction Range" setting. For example, if you set the editable transaction range to "Last reconciled time or later", transactions before the last reconciled time cannot be modified.
+
 ## Why you see "You cannot add transaction with this transaction time" when adding new transaction
 
 If you have configured the "Editable Transaction Range" in your user profile, you will not be able to add, import, edit or delete transactions that fall outside this range. You can modify this setting at any time on the "User Profile" page.
