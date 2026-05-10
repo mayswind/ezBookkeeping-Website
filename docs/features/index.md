@@ -85,6 +85,7 @@ ezBookkeeping uses a lightweight tech stack and an efficient architecture to kee
 | --- | --- |
 | Transaction list view | ≥ 0.1.0 |
 | Transaction calendar view | ≥ 0.9.0 |
+| Transaction gallery view | ≥ 1.5.0 |
 | Filter by category | ≥ 0.1.0 |
 | Filter by account | ≥ 0.1.0 |
 | Filter by tags | ≥ 0.5.0 |

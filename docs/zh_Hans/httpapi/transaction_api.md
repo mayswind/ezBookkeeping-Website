@@ -88,6 +88,7 @@ title: 交易 API
 | `tag_filter` | `string` | 可选 | 根据交易标签过滤交易（支持多个标签组，每组间使用 `;` 分隔。每个标签组格式为 `type:tag_id1,tag_id2,...`，其中 `type` 表示 交易标签过滤模式，`0`：交易包含本组所有标签，`1`：交易包含本组任意标签，`2`：交易不包含本组所有标签，`3`：交易不包含本组任意标签） |
 | `amount_filter` | `string` | 可选 | 根据余额过滤交易（最多支持两位小数，例如该字段为 `1234` 时表示金额为 `12.34`。大于金额：`gt:{amount}`，小于金额：`lt:{amount}`，等于金额：`eq:{amount}`，不等于金额：`ne:{amount}`，在两个金额之间：`bt:{min_amount}:{max_amount}`，不在两个金额之间：`ne:{min_amount}:{max_amount}`） |
 | `keyword` | `string` | 可选 | 根据关键词过滤交易 |
+| `must_have_pictures` | `boolean` | 可选 | 是否仅获取包含图片的交易 |
 | `max_time` | `integer` | 可选 | 最大时间序列Id（若获取最新内容设置为 `0`） |
 | `min_time` | `integer` | 可选 | 最小时间序列Id |
 | `page` | `integer` | 可选 | 指定页码 |
@@ -135,6 +136,7 @@ title: 交易 API
 | `tag_filter` | `string` | 可选 | 根据交易标签过滤交易（支持多个标签组，每组间使用 `;` 分隔。每个标签组格式为 `type:tag_id1,tag_id2,...`，其中 `type` 表示 交易标签过滤模式，`0`：交易包含本组所有标签，`1`：交易包含本组任意标签，`2`：交易不包含本组所有标签，`3`：交易不包含本组任意标签） |
 | `amount_filter` | `string` | 可选 | 根据余额过滤交易（最多支持两位小数，例如该字段为 `1234` 时表示金额为 `12.34`。大于金额：`gt:{amount}`，小于金额：`lt:{amount}`，等于金额：`eq:{amount}`，不等于金额：`ne:{amount}`，在两个金额之间：`bt:{min_amount}:{max_amount}`，不在两个金额之间：`ne:{min_amount}:{max_amount}`） |
 | `keyword` | `string` | 可选 | 根据关键词过滤交易 |
+| `must_have_pictures` | `boolean` | 可选 | 是否仅获取包含图片的交易 |
 | `start_time` | `integer` | 可选 | 交易列表开始时间（Unix Time） |
 | `end_time` | `integer` | 可选 | 交易列表结束时间（Unix Time） |
 | `with_pictures` | `boolean` | 可选 | 是否获取图片IDs |
