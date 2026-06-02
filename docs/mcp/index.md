@@ -82,7 +82,7 @@ Then, copy the following code into your AI tool's MCP server configuration to en
 | --- | --- | --- | --- |
 | `start_time` | `string` | Required | Start time for the query in RFC 3339 format (e.g. 2023-01-01T12:00:00Z) |
 | `end_time` | `string` | Required | End time for the query in RFC 3339 format or (e.g. 2023-01-01T12:00:00Z) |
-| `type` | `string` | Optional | Transaction type to filter by (income, expense, transfer) |
+| `type` | `string` | Optional | Transaction type to filter by (income, expense, transfer, balance_modification) |
 | `category_name` | `string` | Optional | Primary or secondary category name to filter transactions by |
 | `account_name` | `string` | Optional | Account name to filter transactions by |
 | `comment` | `string` | Optional | Keyword to search in transaction description |
@@ -104,7 +104,7 @@ Then, copy the following code into your AI tool's MCP server configuration to en
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
 | `time` | `string` | Optional | Time of the transaction in RFC 3339 format (e.g. 2023-01-01T12:00:00Z) |
-| `type` | `string` | Required | Transaction type (income, expense, transfer) |
+| `type` | `string` | Required | Transaction type (income, expense, transfer, balance_modification) |
 | `amount` | `string` | Required | Amount of the transaction in the specified currency |
 | `currency` | `string` | Optional | Currency code of the transaction (e.g. USD, EUR) |
 | `category_name` | `string` | Optional | Secondary category name for the transaction |
