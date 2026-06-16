@@ -199,6 +199,7 @@ ezBookkeeping 使用 ini 文件作为配置文件。
 | 选项名 | 默认值 | 描述 |
 | --- | --- | --- |
 | `secret_key` |  | 作为密钥使用，**为了保证您的数据安全，请在第一次运行 ezBookkeeping 前修改该值**。你可以通过执行 `ezbookkeeping security gen-secret-key` 或 `openssl rand -base64 32` 获取一个随机密钥。 |
+| `trusted_proxy_ips` | `10.0.0.0/8, 169.254.0.0/16, 127.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16` | 使用逗号分隔的可信代理的 IP 地址（CIDR 格式）列表。只有当远程地址在这个列表中时，才能从诸如 `X-Forwarded-For`、`X-Real-IP` 或 `X-Real-Port` 等请求头中获取用户真实的 IP 地址或端口。 |
 | `token_expired_time` | `2592000` | 令牌过期时间（60 - 4294967295 秒）。 |
 | `token_min_refresh_interval` | `86400` | 令牌最小刷新间隔（0 - 4294967295 秒)，该值应当小于令牌过期时间。设置为 `0` 时则每次刷新前端时都会刷新令牌。 |
 | `temporary_token_expired_time` | `300` | 临时令牌过期时间（60 - 4294967295 秒）。 |

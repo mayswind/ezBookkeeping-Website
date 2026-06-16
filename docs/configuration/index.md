@@ -199,6 +199,7 @@ Note that if the same configuration option is set using all three methods above,
 | Option Name | Default Value | Description |
 | --- | --- | --- |
 | `secret_key` |  | Used for encryption key, **you must change it to keep your user data safe before you first run ezBookkeeping**. You can get a random secret key by executing `ezbookkeeping security gen-secret-key` or `openssl rand -base64 32`. |
+| `trusted_proxy_ips` | `10.0.0.0/8, 169.254.0.0/16, 127.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16` | Trusted proxy IPs (CIDR format), a comma-separated list of trusted proxy IPs. The user's real IP address or port will only be obtained from headers such as `X-Forwarded-For`, `X-Real-IP` or `X-Real-Port` when the remote address is included in this list. |
 | `token_expired_time` | `2592000` | Token expired time (60 - 4294967295 seconds). |
 | `token_min_refresh_interval` | `86400` | Token minimum refresh interval (0 - 4294967295 seconds), the value should be less than token expired time. Set to `0` to refresh the token every time when refreshing the front end. |
 | `temporary_token_expired_time` | `300` | Temporary token expired time (60 - 4294967295 seconds). |
