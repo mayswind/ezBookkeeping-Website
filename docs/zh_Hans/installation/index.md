@@ -25,6 +25,9 @@ $ docker run -p8080:8080 mayswind/ezbookkeeping
 $ docker run -p8080:8080 mayswind/ezbookkeeping:latest-snapshot
 ```
 
+> [!NOTE] 提示
+> 上述命令仅适用于测试和评估目的。对于生产环境，建议使用特定版本的镜像，并使用持久化数据卷来存储数据，以避免数据丢失。
+
 ## 从二进制包安装
 下载最新发布版本：[https://github.com/mayswind/ezbookkeeping/releases](https://github.com/mayswind/ezbookkeeping/releases)
 

@@ -25,6 +25,9 @@ $ docker run -p8080:8080 mayswind/ezbookkeeping
 $ docker run -p8080:8080 mayswind/ezbookkeeping:latest-snapshot
 ```
 
+> [!NOTE] Note
+> The above commands are intended for testing and evaluation purposes only. For production environments, it is recommended to use a specific version of the image and to use a persistent data volume to store data to avoid data loss.
+
 ## Install from Binary
 Download the latest release: [https://github.com/mayswind/ezbookkeeping/releases](https://github.com/mayswind/ezbookkeeping/releases)
 
