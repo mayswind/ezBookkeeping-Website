@@ -308,6 +308,7 @@ ezBookkeeping uses a lightweight tech stack and an efficient architecture to kee
 | Query all transaction tag names via MCP | ≥ 0.10.0 |
 | Query latest exchange rates via MCP | ≥ 0.10.0 |
 | MCP access IP whitelist | ≥ 0.10.0 |
+| AI clipboard text recognition | ≥ 1.6.0 |
 | AI image recognition | ≥ 1.1.0 |
 | AI image recognition via Web Share Target API Level 2 | ≥ 1.4.0 |
 | Agent Skill | ≥ 1.4.0 |
