@@ -239,8 +239,8 @@ First, you need to configure the large language model (LLM) settings. In the `ll
 
 After setting up the large language model configuration:
 
-1. Mobile version: open the Add Transaction page, tap the "More" button in the upper right corner, and select "AI Clipboard Text Recognition" from the menu
-2. Desktop version: open the Add Transaction dialog and click the "AI Clipboard Text Recognition" button in the upper right corner
+1. Mobile version: Long-press the create transaction button on the bottom navigation bar in the main page, then tap "AI Clipboard Text Recognition" from the list that appears. Or open the Add Transaction page, tap the "More" button in the upper right corner, and select "AI Clipboard Text Recognition" from the menu.
+2. Desktop version: Hover over the "Add" transaction button on the transaction list page, then click "AI Clipboard Text Recognition" from the dropdown menu. Or open the Add Transaction dialog and click the "AI Clipboard Text Recognition" button in the upper right corner.
 
 ## How to create a transaction using AI image recognition
 
