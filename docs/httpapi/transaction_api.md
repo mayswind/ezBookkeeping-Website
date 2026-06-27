@@ -88,6 +88,7 @@ title: Transaction API
 | `tag_filter` | `string` | Optional | Filter transactions by tags (multiple tag groups are supported, separate groups with `;`. Each tag group uses the format `type:tag_id1,tag_id2,...` where `type` defines the filter mode, `0`: transaction contains all tags in the group, `1`: transaction contains any tag in the group, `2`: transaction does not contain all tags in the group, `3`: transaction does not contain any tag in the group) |
 | `amount_filter` | `string` | Optional | Filter transaction by amount (Supports up to two decimals. For example, a value of `1234` represents an amount of `12.34`. Greater than amount: `gt:{amount}`, Less than amount: `lt:{amount}`, Equal amount: `eq:{amount}`, Not equal amount: `ne:{amount}`, Between two amounts: `bt:{min_amount}:{max_amount}`, Not between two amounts: `ne:{min_amount}:{max_amount}`) |
 | `keyword` | `string` | Optional | Filter transaction by keyword |
+| `match_mode` | `integer` | Optional | Match mode for keyword search (`0`: Database default setting, `1`: Ignore case) |
 | `must_have_pictures` | `boolean` | Optional | Whether to only get transactions with pictures |
 | `max_time` | `integer` | Optional | The maximum time sequence ID (Set to `0` if you want to get the latest transactions) |
 | `min_time` | `integer` | Optional | The minimum time sequence ID |
@@ -136,6 +137,7 @@ title: Transaction API
 | `tag_filter` | `string` | Optional | Filter transactions by tags (multiple tag groups are supported, separate groups with `;`. Each tag group uses the format `type:tag_id1,tag_id2,...` where `type` defines the filter mode, `0`: transaction contains all tags in the group, `1`: transaction contains any tag in the group, `2`: transaction does not contain all tags in the group, `3`: transaction does not contain any tag in the group) |
 | `amount_filter` | `string` | Optional | Filter transaction by amount (Supports up to two decimals. For example, a value of `1234` represents an amount of `12.34`. Greater than amount: `gt:{amount}`, Less than amount: `lt:{amount}`, Equal amount: `eq:{amount}`, Not equal amount: `ne:{amount}`, Between two amounts: `bt:{min_amount}:{max_amount}`, Not between two amounts: `ne:{min_amount}:{max_amount}`) |
 | `keyword` | `string` | Optional | Filter transaction by keyword |
+| `match_mode` | `integer` | Optional | Match mode for keyword search (`0`: Database default setting, `1`: Ignore case) |
 | `must_have_pictures` | `boolean` | Optional | Whether to only get transactions with pictures |
 | `start_time` | `integer` | Optional | Transaction list start time (unix time) |
 | `end_time` | `integer` | Optional | Transaction list end time (unix time) |

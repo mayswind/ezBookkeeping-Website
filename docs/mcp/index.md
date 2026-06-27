@@ -85,7 +85,8 @@ Then, copy the following code into your AI tool's MCP server configuration to en
 | `type` | `string` | Optional | Transaction type to filter by (income, expense, transfer, balance_modification) |
 | `category_name` | `string` | Optional | Primary or secondary category name to filter transactions by |
 | `account_name` | `string` | Optional | Account name to filter transactions by |
-| `comment` | `string` | Optional | Keyword to search in transaction description |
+| `keyword` | `string` | Optional | Keyword to search in transaction description |
+| `match_mode` | `string` | Optional | Match mode for keyword search (leave empty for database default setting, ignore_case for case-insensitive search) |
 | `count` | `number` | Optional | Maximum number of results to return (default: 100) |
 | `page` | `number` | Optional | Page number for pagination (default: 1) |
 | `response_fields` | `string` | Optional | Comma-separated list of optional fields to include in the response (leave empty for all fields, available fields: time, currency, category_name, account_name, comment) |
