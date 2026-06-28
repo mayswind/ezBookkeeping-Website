@@ -137,6 +137,7 @@ export default defineConfig({
                         collapsed: false,
                         items: [
                             { text: 'Basic Usage', link: '/basic_usage/' },
+                            { text: 'Insights Explorer', link: '/insights_explorer/' },
                             { text: 'Export & Import', link: '/export_and_import/' },
                             { text: 'Model Context Protocol', link: '/mcp/' },
                             { text: 'Agent Skill', link: '/agent/skill' },
@@ -231,6 +232,7 @@ export default defineConfig({
                         collapsed: false,
                         items: [
                             { text: '基础使用', link: '/zh_Hans/basic_usage/' },
+                            { text: '洞察探索', link: '/zh_Hans/insights_explorer/' },
                             { text: '导出 & 导入', link: '/zh_Hans/export_and_import/' },
                             { text: 'Model Context Protocol', link: '/zh_Hans/mcp/' },
                             { text: 'Agent 技能', link: '/zh_Hans/agent/skill' },

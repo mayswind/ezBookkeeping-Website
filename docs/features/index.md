@@ -128,7 +128,7 @@ ezBookkeeping uses a lightweight tech stack and an efficient architecture to kee
 
 ## Insights Explorer
 
-> Insights Explorer is an advanced query and analysis tool that allows users to combine multiple conditions with logical operators. It supports displaying results as tables or various charts, with customizable axis, categories, and values across multiple dimensions, and allows exporting results to CSV, TSV, or Markdown files.
+> Insights Explorer is an advanced query and analysis tool that allows users to combine multiple conditions with logical operators. It supports displaying results as tables or various charts, with customizable axis, categories, and values across multiple dimensions, and allows exporting results to CSV, TSV, or Markdown files. For more information about Insights Explorer, please refer to [Insights Explorer](/insights_explorer/).
 
 | Item | Supported Version |
 | --- | --- |
@@ -138,6 +138,7 @@ ezBookkeeping uses a lightweight tech stack and an efficient architecture to kee
 | Charts with a date based horizontal axis display year-over-year and period-over-period comparisons | ≥ 1.5.0 |
 | Export filtered results | ≥ 1.3.0 |
 | Export chart data | ≥ 1.3.0 |
+| Import and export querys | ≥ 1.6.0 |
 
 ### Supported Charts in Insights Explorer
 
