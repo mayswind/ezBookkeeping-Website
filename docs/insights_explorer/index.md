@@ -8,7 +8,7 @@ Insights Explorer is an advanced query and analysis tool that allows users to co
 
 ## Query
 
-After opening the Insights Explorer page, click "New Explorer" to create a new empty explorer. On the "Query" tab, you can add one or more queries. Each query can be used as a data source on the "Data Table" tab to display all transactions that match its criteria, or on the "Chart" tab as either the chart's horizontal axis or a grouping category. Each query can contain multiple conditions. For every condition, you can specify the field, matching method, and matching value. Conditions can be combined using "AND" or "OR" logic. You can also switch from "Editor" mode to "Expression" mode, which displays the query as a SQL like expression.
+After opening the Insights Explorer page, click "New Exploration" to create a new empty exploration. On the "Query" tab, you can add one or more queries. Each query can be used as a data source on the "Data Table" tab to display all transactions that match its criteria, or on the "Chart" tab as either the chart's horizontal axis or a grouping category. Each query can contain multiple conditions. For every condition, you can specify the field, matching method, and matching value. Conditions can be combined using "AND" or "OR" logic. You can also switch from "Editor" mode to "Expression" mode, which displays the query as a SQL like expression.
 
 > For the transaction description field, three matching methods are available: Exact, Ignore Case and Normalized.
 > 1. Exact compares the original text exactly as entered.
