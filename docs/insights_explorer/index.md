@@ -206,7 +206,7 @@ ezBookkeeping supports various chart types. You can use different fields from yo
 
 The following value metrics and their calculation formulas are supported by ezBookkeeping:
 
-> In the formulas below, let `n` be the number of transactions and `d` be the number of active days (days with at least one transaction). Let `I` denote the total income and `E` denote the total expense. Let `x₁, x₂, …, xₙ` denote the individual transaction amounts (all converted to the default currency). Let `x₍₁₎ ≤ x₍₂₎ ≤ … ≤ x₍ₙ₎` denote the amounts in ascending order.
+> In the formulas below, let `n` be the number of transactions and `d` be the number of active days (days with at least one transaction). Let `I` denote the total income and `E` denote the total expense. Let `x₁, x₂, …, xₙ` denote the individual transaction amounts (all converted to the default currency). Let `x₍₁₎ ≤ x₍₂₎ ≤ … ≤ x₍ₙ₎` denote the amounts in ascending order. Let `Q1` and `Q3` denote the first and third quartiles, and `IQR = Q3 − Q1`.
 
 | Value Metric | Calculation Formula |
 | --- | --- |
@@ -233,15 +233,20 @@ The following value metrics and their calculation formulas are supported by ezBo
 | Interquartile Range (Q3 - Q1) | `Q3 − Q1` |
 | Mean Absolute Deviation | `∑\|xᵢ − x̄\| / n` |
 | Median Absolute Deviation | `median(\|xᵢ − median(x)\|)` |
+| Median-to-Mean Ratio | `median(x) / x̄` |
 | Maximum Amount Share | `100% × max(x₁, …, xₙ) / ∑xᵢ` |
 | Top 5 Amount Sum | `sum of the 5 largest values` |
 | Top 5 Amount Share | `100% × (sum of 5 largest) / ∑xᵢ` |
 | Transactions for 80% of Amount | see [Cumulative Percentage](#cumulative-percentage), `threshold = 80%` |
+| Outlier Count | see [Outlier Detection](#outlier-detection) |
+| Outlier Ratio | `100% × (outlier count) / n` |
 | Variance | `∑(xᵢ − x̄)² / n` |
 | Standard Deviation | `√(∑(xᵢ − x̄)² / n)` |
 | Coefficient of Variation | `σ / x̄` |
 | Skewness | `∑(xᵢ − x̄)³ / (n · σ³)` |
 | Kurtosis | `∑(xᵢ − x̄)⁴ / (n · σ⁴)` |
+| Gini Coefficient | see [Gini Coefficient](#gini-coefficient) |
+| Herfindahl-Hirschman Index | `∑(xᵢ / ∑xⱼ)²` |
 
 #### Median
 
@@ -257,3 +262,15 @@ The `p`-th percentile is computed using linear interpolation. Let `k = (n − 1)
 #### Cumulative Percentage
 
 Sort amounts in descending order and accumulate from the largest. The result is `100 × k / n`, where `k` is the smallest number of top transactions whose cumulative sum reaches or exceeds 80% of the total amount.
+
+#### Outlier Detection
+
+Outliers are identified using the IQR (Interquartile Range) method. A transaction amount `xᵢ` is considered an outlier if it falls below `Q1 − 1.5 × IQR` or above `Q3 + 1.5 × IQR`. The outlier count is the number of such transactions, and the outlier ratio is `100% × (outlier count) / n`.
+
+#### Gini Coefficient
+
+The Gini coefficient measures the inequality of the amount distribution. With amounts sorted in ascending order `x₍₁₎ ≤ x₍₂₎ ≤ … ≤ x₍ₙ₎`:
+
+`G = (2 × ∑ᵢ₌₁ⁿ i · x₍ᵢ₎) / (n × ∑xⱼ) − (n + 1) / n`
+
+A value of 0 indicates perfect equality (all amounts are identical), while a value approaching 1 indicates maximum concentration (one transaction dominates the total).
