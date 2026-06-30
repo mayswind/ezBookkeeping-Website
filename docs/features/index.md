@@ -224,15 +224,20 @@ ezBookkeeping uses a lightweight tech stack and an efficient architecture to kee
 | Interquartile Range (Q3 - Q1) | ≥ 1.4.0 |
 | Mean Absolute Deviation | ≥ 1.5.0 |
 | Median Absolute Deviation | ≥ 1.5.0 |
+| Median-to-Mean Ratio | ≥ 1.6.0 |
 | Maximum Amount Share | ≥ 1.5.0 |
 | Top 5 Amount Sum | ≥ 1.5.0 |
 | Top 5 Amount Share | ≥ 1.5.0 |
 | Transactions for 80% of Amount | ≥ 1.5.0 |
+| Outlier Count | ≥ 1.6.0 |
+| Outlier Ratio | ≥ 1.6.0 |
 | Variance | ≥ 1.4.0 |
 | Standard Deviation | ≥ 1.4.0 |
 | Coefficient of Variation | ≥ 1.4.0 |
 | Skewness | ≥ 1.5.0 |
 | Kurtosis | ≥ 1.5.0 |
+| Gini Coefficient | ≥ 1.6.0 |
+| Herfindahl-Hirschman Index | ≥ 1.6.0 |
 
 ## Import Features
 
