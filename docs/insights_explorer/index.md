@@ -157,9 +157,9 @@ Different query fields support different match types and `value` formats. The fo
 - Description: Transaction location
 - Supported Match Types: Is empty (`isEmpty`), Is not empty (`isNotEmpty`), Latitude is between (`latitudeBetween`), Latitude is not between (`latitudeNotBetween`), Longitude is between (`longitudeBetween`), Longitude is not between (`longitudeNotBetween`)
 - `value` Format And Content:
-    - `isEmpty` / `isNotEmpty`: Always an empty array `[]`.
-    - `latitudeBetween` / `latitudeNotBetween`: A two element numeric array in degrees (`-90.0` to `90.0`), for example `[30.0, 40.0]`.
-    - `longitudeBetween` / `longitudeNotBetween`: A two element numeric array in degrees (`-180.0` to `180.0`), for example `[100.0, 120.0]`.
+    - `isEmpty` / `isNotEmpty`: A four element numeric array `[0, 0, 0, 0]`.
+    - `latitudeBetween` / `latitudeNotBetween`: An array of four numeric elements in degrees (`-90.0` to `90.0`). The first two represent the min latitude and max latitude, and the last two can be set to `0`, for example `[30.0, 40.0, 0, 0]`.
+    - `longitudeBetween` / `longitudeNotBetween`: An array of four numeric elements in degrees (`-180.0` to `180.0`). The last two represent the min longitude and max longitude, and the first two can be set to `0`, for example `[0, 0, 100.0, 120.0]`.
 
 #### Transaction Tags `transactionTag`
 
@@ -184,7 +184,7 @@ Different query fields support different match types and `value` formats. The fo
 - Description: Transaction description (Exact Match / Case Insensitive / Normalized Match)
 - Supported Match Types: Is empty (`isEmpty`), Is not empty (`isNotEmpty`), Equal to (`equals`), Not equal to (`notEquals`), Contains (`contains`), Does not contain (`notContains`), Starts with (`startsWith`), Does not start with (`notStartsWith`), Ends with (`endsWith`), Does not end with (`notEndsWith`), Matches regex (`regexMatch`), Does not match regex (`notRegexMatch`)
 - `value` Format And Content:
-    - `isEmpty` / `isNotEmpty`: Always an empty array `[]`.
+    - `isEmpty` / `isNotEmpty`: Always an empty string `""`.
     - `equals` / `notEquals` / `contains` / `notContains` / `startsWith` / `notStartsWith` / `endsWith` / `notEndsWith`: A string containing the text to match.
     - `regexMatch` / `notRegexMatch`: A string containing the regular expression pattern.
 

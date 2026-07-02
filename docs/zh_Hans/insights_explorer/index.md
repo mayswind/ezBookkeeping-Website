@@ -157,9 +157,9 @@ ezBookkeeping 也支持括号来控制运算符的优先级，括号分组内的
 - 字段说明：交易地理位置
 - 支持的匹配类型：为空（`isEmpty`）、不为空（`isNotEmpty`）、纬度介于（`latitudeBetween`）、纬度不介于（`latitudeNotBetween`）、经度介于（`longitudeBetween`）、经度不介于（`longitudeNotBetween`）
 - `value` 格式及内容：
-  - `isEmpty` / `isNotEmpty`：固定为空数组 `[]`。
-  - `latitudeBetween` / `latitudeNotBetween`：两个元素的数字数组，单位为度（范围：-90.0~90.0），如 `[30.0, 40.0]` 表示纬度介于 30.0° 和 40.0° 之间。
-  - `longitudeBetween` / `longitudeNotBetween`：两个元素的数字数组，单位为度（范围：-180.0~180.0），如 `[100.0, 120.0]` 表示经度介于 100.0° 和 120.0° 之间
+  - `isEmpty` / `isNotEmpty`：四个元素的整数数组 `[0, 0, 0, 0]`。
+  - `latitudeBetween` / `latitudeNotBetween`：四个元素的数字数组，单位为度（范围：`-90.0` ~ `90.0`），其中前两个表示最小纬度和最大纬度，后两个可以设置为 `0`，如 `[30.0, 40.0, 0, 0]`。
+  - `longitudeBetween` / `longitudeNotBetween`：四个元素的数字数组，单位为度（范围：`-180.0` ~ `180.0`），其中后两个表示最小经度和最大经度，前两个可以设置为 `0`，如 `[0, 0, 100.0, 120.0]`。
 
 #### 交易标签 `transactionTag`
 
@@ -184,7 +184,7 @@ ezBookkeeping 也支持括号来控制运算符的优先级，括号分组内的
 - 字段说明：交易描述（精确匹配 / 忽略大小写 / 规范化匹配）
 - 支持的匹配类型：为空（`isEmpty`)、不为空（`isNotEmpty`）、等于（`equals`）、不等于（`notEquals`）、包含（`contains`）、不包含（`notContains`）、开头是（`startsWith`）、开头不是（`notStartsWith`）、结尾是（`endsWith`）、结尾不是（`notEndsWith`）、正则匹配（`regexMatch`）、不匹配正则（`notRegexMatch`）
 - `value` 格式及内容：
-  - `isEmpty` / `isNotEmpty`：固定为空数组 `[]`。
+  - `isEmpty` / `isNotEmpty`：固定为空字符串 `""`。
   - `equals` / `notEquals` / `contains` / `notContains` / `startsWith` / `notStartsWith` / `endsWith` / `notEndsWith`：字符串，表示交易描述的匹配内容。
   - `regexMatch` / `notRegexMatch`：字符串，表示正则表达式模式。
 
