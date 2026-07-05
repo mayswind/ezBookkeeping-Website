@@ -219,6 +219,7 @@ title: 交易 API
 | 字段 | 类型 | 必选 | 描述 |
 | --- | --- | --- | --- |
 | `id` | `string` | 必选 | 交易 ID |
+| `type` | `TransactionType` | 必选 | 交易类型 |
 | `categoryId` | `string` | 可选 | 交易分类（二级分类） ID。只有修改 “修改余额” 交易时不需要该字段，其他类型的交易都需要该字段 |
 | `time` | `integer` | 必选 | 交易时间（Unix Time） |
 | `utcOffset` | `integer` | 必选 | 交易时区偏移（分钟） |

@@ -219,6 +219,7 @@ title: Transaction API
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
 | `id` | `string` | Required | Transaction ID |
+| `type` | `TransactionType` | Required | Transaction type |
 | `categoryId` | `string` | Optional | Transaction category (secondary category) ID. This field is not required only when updating a "Balance Modification" transaction, and it is required for all other transaction types |
 | `time` | `integer` | Required | Transaction unix time |
 | `utcOffset` | `integer` | Required | Transaction time zone offset (minutes) |
