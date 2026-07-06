@@ -253,6 +253,7 @@ ezBookkeeping uses a lightweight tech stack and an efficient architecture to kee
 | Automatically detect common column names and transaction types in CSV files | ≥ 1.4.0 |
 | Map imported data using custom rules | ≥ 1.0.0 |
 | AI Text Content Recognition | ≥ 1.6.0 |
+| AI Batch Image Recognition | ≥ 1.6.0 |
 | OFX | ≥ 0.6.0 |
 | QFX | ≥ 0.6.0 |
 | QIF | ≥ 0.6.0 |

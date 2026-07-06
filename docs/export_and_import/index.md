@@ -45,6 +45,7 @@ The following table lists all supported file types and the data contents that ca
 | ezbookkeeping Data Export File | √ | √ | √ | √ | - | √ | √ | √ | √ | √ | √ |
 | Delimiter-separated Values (DSV) File / Data | √ | √ | √ | √ | - | √ | √ | √ | √ | √ | √ |
 | AI Text Content Recognition | √ | √ | √ | √ | - | √ | √ | √ | - | - | √ |
+| AI Batch Image Recognition | √ | √ | √ | √ | - | √ | √ | √ | - | - | √ |
 | Open Financial Exchange (OFX) File | √ | √ | √ | - | - | - | - | - | √ | - | √ |
 | Quicken Financial Exchange (QFX) File | √ | √ | √ | - | - | - | - | - | √ | - | √ |
 | Quicken Interchange Format (QIF) File | √ | √ | √ | - | × | √ | √ | - | - | - | √ |
