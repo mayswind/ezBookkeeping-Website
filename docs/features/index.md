@@ -138,7 +138,7 @@ ezBookkeeping uses a lightweight tech stack and an efficient architecture to kee
 | Charts with a date based horizontal axis display year-over-year and period-over-period comparisons | ≥ 1.5.0 |
 | Export filtered results | ≥ 1.3.0 |
 | Export chart data | ≥ 1.3.0 |
-| Import and export querys | ≥ 1.6.0 |
+| Import and export queries | ≥ 1.6.0 |
 
 ### Supported Charts in Insights Explorer
 
