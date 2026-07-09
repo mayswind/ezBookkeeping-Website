@@ -426,7 +426,7 @@ Configuration option `data_source` value is `bank_of_israel`
 
 The base currency is Kazakhstani tenge (`KZT`). The daily exchange rates are usually updated about 16:00 KZT (Kazakhstan Time) on every working day.
 
-This data source supports 38 currencies, and all currencies are as follows:
+This data source supports 47 currencies, and all currencies are as follows:
 
 | Currency | Currency Code | Update Frequency |
 | --- | --- | --- |
@@ -441,11 +441,14 @@ This data source supports 38 currencies, and all currencies are as follows:
 | Chinese Yuan | CNY | Daily |
 | Czech Koruna | CZK | Daily |
 | Danish Krone | DKK | Daily |
+| Egyptian Pound | EGP | Daily |
 | Euro | EUR | Daily |
 | British Pound | GBP | Daily |
 | Georgian Lari | GEL | Daily |
 | Hong Kong Dollar | HKD | Daily |
 | Hungarian Forint | HUF | Daily |
+| Indonesian Rupiah | IDR | Daily |
+| Israeli New Shekel | ILS | Daily |
 | Indian Rupee | INR | Daily |
 | Iranian Rial | IRR | Daily |
 | Japanese Yen | JPY | Daily |
@@ -453,10 +456,15 @@ This data source supports 38 currencies, and all currencies are as follows:
 | South Korean Won | KRW | Daily |
 | Kuwaiti Dinar | KWD | Daily |
 | Moldovan Leu | MDL | Daily |
+| Mongolian Tugrik | MNT | Daily |
 | Mexican Peso | MXN | Daily |
 | Malaysian Ringgit | MYR | Daily |
 | Norwegian Krone | NOK | Daily |
+| Omani Rial | OMR | Daily |
+| Pakistani Rupee | PKR | Daily |
 | Polish Zloty | PLN | Daily |
+| Qatari Riyal | QAR | Daily |
+| Romanian Leu | RON | Daily |
 | Russian Ruble | RUB | Daily |
 | Saudi Riyal | SAR | Daily |
 | Swedish Krona | SEK | Daily |
@@ -467,6 +475,7 @@ This data source supports 38 currencies, and all currencies are as follows:
 | Ukrainian Hryvnia | UAH | Daily |
 | United States Dollar | USD | Daily |
 | Uzbekistani Sum | UZS | Daily |
+| Vietnamese Dong | VND | Daily |
 | South African Rand | ZAR | Daily |
 
 ## Central Bank of Myanmar
