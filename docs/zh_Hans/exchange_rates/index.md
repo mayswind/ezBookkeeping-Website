@@ -6,6 +6,50 @@ title: 汇率
 
 ezBookkeeping 支持自动更新汇率以及支持多个不同数据源。您可以根据需要选择数据源。本页中的信息可能不是最新的，请以参考链接或实际数据为准。
 
+## 阿根廷中央银行
+
+> 参考：[https://www.bcra.gob.ar/en/central-bank-api-catalog/](https://www.bcra.gob.ar/en/central-bank-api-catalog/)
+
+基准货币是阿根廷比索（`ARS`）。
+
+该数据源支持 31 种货币，所有货币如下：
+
+| 货币 | 货币代码 | 更新频率 |
+| --- | --- | --- |
+| 澳大利亚元 | AUD | 每日 |
+| 阿鲁巴弗罗林 | AWG | 每日 |
+| 玻利维亚诺 | BOB | 每日 |
+| 巴西雷亚尔 | BRL | 每日 |
+| 加拿大元 | CAD | 每日 |
+| 瑞士法郎 | CHF | 每日 |
+| 智利比索 | CLP | 每日 |
+| 人民币 | CNY | 每日 |
+| 哥伦比亚比索 | COP | 每日 |
+| 捷克克朗 | CZK | 每日 |
+| 丹麦克朗 | DKK | 每日 |
+| 欧元 | EUR | 每日 |
+| 英镑 | GBP | 每日 |
+| 港元 | HKD | 每日 |
+| 以色列新谢克尔 | ILS | 每日 |
+| 印度卢比 | INR | 每日 |
+| 日元 | JPY | 每日 |
+| 尼加拉瓜科多巴 | NIO | 每日 |
+| 挪威克朗 | NOK | 每日 |
+| 新西兰元 | NZD | 每日 |
+| 秘鲁新索尔 | PEN | 每日 |
+| 巴拉圭瓜拉尼 | PYG | 每日 |
+| 塞尔维亚第纳尔 | RSD | 每日 |
+| 俄罗斯卢布 | RUB | 每日 |
+| 瑞典克朗 | SEK | 每日 |
+| 新加坡元 | SGD | 每日 |
+| 土耳其里拉 | TRY | 每日 |
+| 美元 | USD | 每日 |
+| 乌拉圭比索 | UYU | 每日 |
+| 越南盾 | VND | 每日 |
+| 南非兰特 | ZAR | 每日 |
+
+配置选项 `data_source` 的值是 `central_bank_of_argentina`
+
 ## 加拿大中央银行
 
 > 参考：[https://www.bankofcanada.ca/rates/exchange/daily-exchange-rates/](https://www.bankofcanada.ca/rates/exchange/daily-exchange-rates/)

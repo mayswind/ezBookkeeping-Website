@@ -365,6 +365,7 @@ ezBookkeeping uses a lightweight tech stack and an efficient architecture to kee
 
 | Item | Supported Version |
 | --- | --- |
+| Central Bank of Argentina | ≥ 1.6.0 |
 | Bank of Canada | ≥ 0.1.0 |
 | Czech National Bank | ≥ 0.1.0 |
 | Danmarks Nationalbank | ≥ 0.7.0 |

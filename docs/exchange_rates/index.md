@@ -6,6 +6,50 @@ title: Exchange Rates
 
 ezBookkeeping supports updating exchange rates automatically, and supports multiple data sources. You can choose a data source according to your needs. The information on this page may not be the latest, please refer to the reference link or the actual data.
 
+## Central Bank of Argentina
+
+> Reference: [https://www.bcra.gob.ar/en/central-bank-api-catalog/](https://www.bcra.gob.ar/en/central-bank-api-catalog/)
+
+The base currency is Argentine peso (`ARS`).
+
+This data source supports 31 currencies, and all currencies are as follows:
+
+| Currency | Currency Code | Update Frequency |
+| --- | --- | --- |
+| Australian Dollar | AUD | Daily |
+| Aruban Florin | AWG | Daily |
+| Bolivian Boliviano | BOB | Daily |
+| Brazilian Real | BRL | Daily |
+| Canadian Dollar | CAD | Daily |
+| Swiss Franc | CHF | Daily |
+| Chilean Peso | CLP | Daily |
+| Chinese Yuan | CNY | Daily |
+| Colombian Peso | COP | Daily |
+| Czech Koruna | CZK | Daily |
+| Danish Krone | DKK | Daily |
+| Euro | EUR | Daily |
+| British Pound | GBP | Daily |
+| Hong Kong Dollar | HKD | Daily |
+| Israeli New Shekel | ILS | Daily |
+| Indian Rupee | INR | Daily |
+| Japanese Yen | JPY | Daily |
+| Nicaraguan Cordoba | NIO | Daily |
+| Norwegian Krone | NOK | Daily |
+| New Zealand Dollar | NZD | Daily |
+| Peruvian Sol | PEN | Daily |
+| Paraguayan Guarani | PYG | Daily |
+| Serbian Dinar | RSD | Daily |
+| Russian Ruble | RUB | Daily |
+| Swedish Krona | SEK | Daily |
+| Singapore Dollar | SGD | Daily |
+| Turkish Lira | TRY | Daily |
+| United States Dollar | USD | Daily |
+| Uruguayan Peso | UYU | Daily |
+| Vietnamese Dong | VND | Daily |
+| South African Rand | ZAR | Daily |
+
+Configuration option `data_source` value is `central_bank_of_argentina`
+
 ## Bank of Canada
 
 > Reference: [https://www.bankofcanada.ca/rates/exchange/daily-exchange-rates/](https://www.bankofcanada.ca/rates/exchange/daily-exchange-rates/)
