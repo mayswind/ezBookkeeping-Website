@@ -67,8 +67,8 @@ ezBookkeeping 的 MCP 服务需要通过特殊的令牌进行访问，您可以�
 | --- | --- | --- | --- |
 | `success` | `boolean` | 必选 | 本次处理是否成功 |
 | `dry_run` | `boolean` | 可选 | 本次处理是否仅为验证（交易未实际添加） |
-| `account_balance` | `number` | 可选 | 交易添加后的账户余额（对于负债账户为未清余额） |
-| `destination_account_balance` | `number` | 可选 | 交易（仅转账交易）添加后的目标账户余额（对于负债账户为未清余额） |
+| `account_balance` | `string` | 可选 | 交易添加后的账户余额（对于负债账户为未清余额） |
+| `destination_account_balance` | `string` | 可选 | 交易（仅转账交易）添加后的目标账户余额（对于负债账户为未清余额） |
 
 ### 查询交易
 

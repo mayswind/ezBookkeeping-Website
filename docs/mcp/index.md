@@ -67,8 +67,8 @@ Then, copy the following code into your AI tool's MCP server configuration to en
 | --- | --- | --- | --- |
 | `success` | `boolean` | Required | Indicates whether this operation is successful |
 | `dry_run` | `boolean` | Optional | Indicates whether this operation is a dry run (transaction not added actually) |
-| `account_balance` | `number` | Optional | Account balance (or outstanding balance for debt accounts) after the transaction |
-| `destination_account_balance` | `number` | Optional | Destination account balance (or outstanding balance for debt accounts) after the transaction (only for transfer transactions) |
+| `account_balance` | `string` | Optional | Account balance (or outstanding balance for debt accounts) after the transaction |
+| `destination_account_balance` | `string` | Optional | Destination account balance (or outstanding balance for debt accounts) after the transaction (only for transfer transactions) |
 
 ### Query transactions
 
