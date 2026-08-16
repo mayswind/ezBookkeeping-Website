@@ -292,6 +292,8 @@ ezBookkeeping 使用 ini 文件作为配置文件。
 | `enable_register` | `true` | 是否启用用户注册。 |
 | `enable_email_verify` | `false` | 是否启用用户邮箱验证。 |
 | `enable_force_email_verify` | `false` | 用户登录时是否要求邮箱必须验证。 |
+| `enable_custom_icon` | `true` | 是否启用用户自定义图标。 |
+| `max_user_custom_icon_size` | `1048576` | 最大允许的用户自定义图标文件大小（1 - 4294967295 字节）。 |
 | `enable_transaction_picture` | `true` | 是否启用交易图片。 |
 | `max_transaction_picture_size` | `10485760` | 最大允许的交易图片文件大小（1 - 4294967295 字节）。 |
 | `enable_scheduled_transaction` | `true` | 是否启用定时交易。 |

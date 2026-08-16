@@ -51,6 +51,7 @@ ezBookkeeping uses a lightweight tech stack and an efficient architecture to kee
 | Transfer categories | ≥ 0.1.0 |
 | Category name | ≥ 0.1.0 |
 | Category icon (built in) | ≥ 0.1.0 |
+| Category icon (user custom) | ≥ 2.0.0 |
 | Category color | ≥ 0.1.0 |
 | Category display order | ≥ 0.1.0 |
 | Category notes / description | ≥ 0.1.0 |
@@ -72,6 +73,7 @@ ezBookkeeping uses a lightweight tech stack and an efficient architecture to kee
 | Sub-accounts | ≥ 0.1.0 |
 | Preset global currencies | ≥ 0.1.0 |
 | Account icon (built in) | ≥ 0.1.0 |
+| Account icon (user custom) | ≥ 2.0.0 |
 | Account color | ≥ 0.1.0 |
 | Credit card statement date | ≥ 0.7.0 |
 | Account archiving (hidden accounts) | ≥ 0.1.0 |

@@ -23,6 +23,7 @@ title: Transaction Category API
 | `parentId` | `string` | Parent transaction category ID |
 | `type` | `TransactionCategoryType` | Transaction category type |
 | `icon` | `string` | Transaction category icon ID |
+| `iconType` | `integer` | Transaction category icon type (`0`: system icon, `1`: custom icon) |
 | `color` | `string` | Transaction category icon color (Hex color code `RRGGBB`) |
 | `comment` | `string` | Transaction category description |
 | `displayOrder` | `integer` | The display order of the transaction category |
@@ -71,6 +72,7 @@ None
 | `type` | `TransactionCategoryType` | Required | Transaction category type |
 | `parentId` | `string` | Optional | Parent transaction category ID (`"0"` for the primary transaction category) |
 | `icon` | `string` | Required | Transaction category icon ID |
+| `iconType` | `integer` | Optional | Transaction category icon type (`0`: system icon, `1`: custom icon, default is `0`) |
 | `color` | `string` | Required | Transaction category icon color (Hex color code `RRGGBB`) |
 | `comment` | `string` | Optional | Transaction category description |
 

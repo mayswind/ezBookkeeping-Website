@@ -23,6 +23,7 @@ title: 交易分类 API
 | `parentId` | `string` | 父交易分类 ID |
 | `type` | `TransactionCategoryType` | 交易分类类型 |
 | `icon` | `string` | 交易分类图标 ID |
+| `iconType` | `integer` | 交易分类图标类型（`0`：系统图标，`1`：自定义图标） |
 | `color` | `string` | 交易分类图标颜色（十六进制颜色代码 `RRGGBB`） |
 | `comment` | `string` | 交易分类描述 |
 | `displayOrder` | `integer` | 交易分类显示顺序 |
@@ -71,6 +72,7 @@ title: 交易分类 API
 | `type` | `TransactionCategoryType` | 必选 | 交易分类类型 |
 | `parentId` | `string` | 可选 | 父交易分类 ID（一级交易分类为 `"0"`） |
 | `icon` | `string` | 必选 | 交易分类图标 ID |
+| `iconType` | `integer` | 可选 | 交易分类图标类型（`0`：系统图标，`1`：自定义图标，默认为 `0`） |
 | `color` | `string` | 必选 | 交易分类图标颜色（十六进制颜色代码 `RRGGBB`） |
 | `comment` | `string` | 可选 | 交易分类描述 |
 

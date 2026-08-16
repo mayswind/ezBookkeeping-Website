@@ -292,6 +292,8 @@ Note that if the same configuration option is set using all three methods above,
 | `enable_register` | `true` | Whether to enable user registration. |
 | `enable_email_verify` | `false` | Whether to enable user email validation. |
 | `enable_force_email_verify` | `false` | Whether to require user email must be verified when login. |
+| `enable_custom_icon` | `true` | Whether to enable user custom icon. |
+| `max_user_custom_icon_size` | `1048576` | Maximum allowed user custom icon file size (1 - 4294967295 bytes). |
 | `enable_transaction_picture` | `true` | Whether to enable transaction picture. |
 | `max_transaction_picture_size` | `10485760` | Maximum allowed transaction picture file size (1 - 4294967295 bytes). |
 | `enable_scheduled_transaction` | `true` | Whether to enable scheduled transaction. |

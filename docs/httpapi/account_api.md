@@ -37,6 +37,7 @@ title: Account API
 | `category` | `AccountCategory` | Account category |
 | `type` | `AccountType` | Account type |
 | `icon` | `string` | Account icon ID |
+| `iconType` | `integer` | Account icon type (`0`: system icon, `1`: custom icon) |
 | `color` | `string` | Account icon color (Hex color code `RRGGBB`) |
 | `currency` | `string` | Account currency code |
 | `balance` | `string` | Account balance (Supports up to two decimals. For example, a value of `1234` represents an amount of `12.34`) |
@@ -97,6 +98,7 @@ None
 | `category` | `AccountCategory` | Required | Account category |
 | `type` | `AccountType` | Required | Account type |
 | `icon` | `string` | Required | Account icon ID |
+| `iconType` | `integer` | Optional | Account icon type (`0`: system icon, `1`: custom icon, default is `0`) |
 | `color` | `string` | Required | Account icon color (Hex color code `RRGGBB`) |
 | `currency` | `string` | Required | Account currency code (ISO 4217 code, `"---"` for the parent account) |
 | `balance` | `string` | Optional | Account balance (Supports up to two decimals. For example, a value of `1234` represents an amount of `12.34`. Liability account should set to negative amount) |
