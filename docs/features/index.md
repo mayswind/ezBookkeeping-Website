@@ -392,6 +392,7 @@ ezBookkeeping uses a lightweight tech stack and an efficient architecture to kee
 | --- | --- |
 | Font size settings | ≥ 0.4.0 |
 | User avatars | ≥ 0.5.0 |
+| Customizable overview page layout | ≥ 2.0.0 |
 | Multi-device settings sync | ≥ 0.10.0 |
 
 ## Supported languages
