@@ -400,6 +400,7 @@ ezBookkeeping uses a lightweight tech stack and an efficient architecture to kee
 | Item | Supported Version |
 | --- | --- |
 | German | ≥ 0.8.0 |
+| Greek | ≥ 2.0.0 |
 | English | ≥ 0.1.0 |
 | Spanish | ≥ 0.8.0 |
 | French | ≥ 1.1.0 |
