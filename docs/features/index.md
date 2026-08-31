@@ -147,6 +147,8 @@ ezBookkeeping uses a lightweight tech stack and an efficient architecture to kee
 | Item | Supported Version |
 | --- | --- |
 | Pie Chart | ≥ 1.3.0 |
+| Donut Chart | ≥ 2.0.0 |
+| Nightingale Rose Chart | ≥ 2.0.0 |
 | Radar Chart | ≥ 1.3.0 |
 | Column Chart (Stacked) | ≥ 1.3.0 |
 | Column Chart (100% Stacked) | ≥ 1.3.0 |
