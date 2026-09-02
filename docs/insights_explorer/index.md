@@ -93,28 +93,28 @@ Different query fields support different match types and `value` formats. The fo
 - Field Name: `transactionTimeDayOfWeek`
 - Description: Transaction day of the week
 - Supported Match Types: In (`in`), Not in (`notIn`)
-- `value` Format And Content: An array of one or more integers representing the days of the week (`1` ~ `7` for Monday ~ Sunday). For example, `[1, 2, 3]` matches transactions that occurred on Monday, Tuesday, or Wednesday.
+- `value` Format And Content: An array of one or more integers representing the days of the week (`1` – `7` for Monday – Sunday). For example, `[1, 2, 3]` matches transactions that occurred on Monday, Tuesday, or Wednesday.
 
 #### Transaction Day of Month `transactionTimeDayOfMonth`
 
 - Field Name: `transactionTimeDayOfMonth`
 - Description: Transaction day of the month
 - Supported Match Types: In (`in`), Not in (`notIn`)
-- `value` Format And Content: An array of one or more integers representing the day of the month (`1` ~ `31`), or negative values counting backward from the end of the month. For example, `[1, 15, -1]` matches transactions on the 1st, 15th, and last day of each month.
+- `value` Format And Content: An array of one or more integers representing the day of the month (`1` – `31`), or negative values counting backward from the end of the month. For example, `[1, 15, -1]` matches transactions on the 1st, 15th, and last day of each month.
 
 #### Transaction Month `transactionTimeMonthOfYear`
 
 - Field Name: `transactionTimeMonthOfYear`
 - Description: Transaction month
 - Supported Match Types: In (`in`), Not in (`notIn`)
-- `value` Format And Content: An array of one or more integers representing months (`1` ~ `12` for January ~ December). For example, `[1, 6, 12]` matches transactions in January, June, and December.
+- `value` Format And Content: An array of one or more integers representing months (`1` – `12` for January – December). For example, `[1, 6, 12]` matches transactions in January, June, and December.
 
 #### Transaction Hour `transactionTimeHourOfDay`
 
 - Field Name: `transactionTimeHourOfDay`
 - Description: Transaction hour
 - Supported Match Types: In (`in`), Not in (`notIn`)
-- `value` Format And Content: An array of one or more integers representing hours (`0` ~ `23`). For example, `[9, 12, 18]` matches transactions at 09:00, 12:00, and 18:00.
+- `value` Format And Content: An array of one or more integers representing hours (`0` – `23`). For example, `[9, 12, 18]` matches transactions at 09:00, 12:00, and 18:00.
 
 #### Transaction Time Zone `transactionTimezone`
 

@@ -90,7 +90,7 @@ ezBookkeeping user data maintenance operation.
     * Options:
     * `--username value`, `-n value`: User name. Required.
     * `--type value`, `-t value`: Specific token type, supports `api` and `mcp`, default is `api`.
-    * `--expiresInSeconds value`, `-e value`: Token expiration time (0 - 4294967295 seconds, `0` means no expiration). Required.
+    * `--expiresInSeconds value`, `-e value`: Token expiration time (0 – 4294967295 seconds, `0` means no expiration). Required.
 * `user-session-revoke`: Revoke the specified user session.
     * Options:
     * `--token value`, `-t value`: Specific token content. Required.

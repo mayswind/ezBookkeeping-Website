@@ -64,9 +64,9 @@ ezBookkeeping 使用 ini 文件作为配置文件。
 | `passwd` |  | 数据库用户密码。 |
 | `ssl_mode` | `disable` | 连接 `postgres` 数据库使用的 SSL/TLS 加密模式，支持 `disable`、`require` 或 `verify-full`。 |
 | `db_path` | `data/ezbookkeeping.db` | `sqlite3` 数据库的文件路径。该值可以设置为相对或绝对路径。 |
-| `max_idle_conn` | `2` | 连接池最大空闲连接数（0 - 65535）。如果该值设置为小于等于 `0`，不会保留空闲连接。 |
-| `max_open_conn` | `0` | 数据库可以打开的最大连接数（0 - 65535）。设置为 `0` 表示不限制。 |
-| `conn_max_lifetime` | `1440` | 空闲连接最大存活时长（0 - 4294967295 秒）。如果该值设置为小于等于 `0`，连接不会因为时长而关闭。 |
+| `max_idle_conn` | `2` | 连接池最大空闲连接数（0 – 65535）。如果该值设置为小于等于 `0`，不会保留空闲连接。 |
+| `max_open_conn` | `0` | 数据库可以打开的最大连接数（0 – 65535）。设置为 `0` 表示不限制。 |
+| `conn_max_lifetime` | `1440` | 空闲连接最大存活时长（0 – 4294967295 秒）。如果该值设置为小于等于 `0`，连接不会因为时长而关闭。 |
 | `log_query` | `false` | 是否开启日志记录每条 SQL 语句及执行时间。 |
 | `auto_update_database` | `true` | 是否开启当启动 Web 服务器时自动更新数据库结构。 |
 
@@ -95,7 +95,7 @@ ezBookkeeping 使用 ini 文件作为配置文件。
 | `request_log_path` |  | 请求日志文件路径。该值可以设置为相对或绝对路径。如果您想将请求日志记录到默认日志文件中，留空即可。 |
 | `query_log_path` |  | 数据库查询日志文件路径。该值可以设置为相对或绝对路径。如果您想将查询日志记录到默认日志文件中，留空即可。 |
 | `log_file_rotate` | `false` | 是否启用轮转日志文件。 |
-| `log_file_max_size` | `104857600` | 日志文件轮转之前最大的大小（1 - 4294967295 字节）。 |
+| `log_file_max_size` | `104857600` | 日志文件轮转之前最大的大小（1 – 4294967295 字节）。 |
 | `log_file_max_days` | `7` | 保留最早旧日志文件的天数。设置为 `0` 则保留所有日志。 |
 
 ## 对象存储
@@ -118,7 +118,7 @@ ezBookkeeping 使用 ini 文件作为配置文件。
 | `webdav_username` |  | 使用 `webdav` 对象存储时，WebDAV 用户名。 |
 | `webdav_password` |  | 使用 `webdav` 对象存储时，WebDAV 密码。 |
 | `webdav_root_path` | `/` | 使用 `webdav` 对象存储时，对象文件的根目录。 |
-| `webdav_request_timeout` | `10000` | 请求 WebDAV 地址的超时时间（0 - 4294967295 毫秒）。设置为 `0` 时禁用请求 WebDAV 地址超时。 |
+| `webdav_request_timeout` | `10000` | 请求 WebDAV 地址的超时时间（0 – 4294967295 毫秒）。设置为 `0` 时禁用请求 WebDAV 地址超时。 |
 | `webdav_proxy` | `system` | 请求 WebDAV 地址使用的代理，支持 `system`（使用系统代理） `none`（不使用代理），或以 `http://`、`https://` 或 `socks5://` 开头的代理服务器地址。 |
 | `webdav_skip_tls_verify` | `false` | 请求 WebDAV 地址时是否跳过服务器证书链和主机名称的校验。 |
 
@@ -130,7 +130,7 @@ ezBookkeeping 使用 ini 文件作为配置文件。
 | --- | --- | --- |
 | `transaction_from_ai_text_recognition` | `false` | 是否启用 AI 文本识别创建交易，需要在 `llm_text_recognition` 配置节中正确配置 `llm_provider` 及其相关的模型ID。 |
 | `transaction_from_ai_image_recognition` | `false` | 是否启用 AI 识图创建交易，需要在 `llm_image_recognition` 配置节中正确配置 `llm_provider` 及其相关的模型ID。 |
-| `max_ai_recognition_picture_size` | `10485760` | 最大允许的 AI 识图的文件大小（1 - 4294967295 字节）。 |
+| `max_ai_recognition_picture_size` | `10485760` | 最大允许的 AI 识图的文件大小（1 – 4294967295 字节）。 |
 
 ## 文本识别的大语言模型 (LLM)
 
@@ -147,14 +147,14 @@ ezBookkeeping 使用 ini 文件作为配置文件。
 | `openai_compatible_model_id` |  | 使用 `openai_compatible`（使用 Chat Completions API） 和 `openai_responses_compatible`（使用 Responses API） 大语言模型提供方时，用于识别交易文本并创建交易的模型ID。 |
 | `anthropic_api_key` |  | 使用 `anthropic` 大语言模型提供方时，Anthropic 的 API Key，请访问 [https://platform.claude.com/settings/keys](https://platform.claude.com/settings/keys) 获取更多信息。 |
 | `anthropic_model_id` |  | 使用 `anthropic` 大语言模型提供方时，用于识别交易文本并创建交易的模型ID。 |
-| `anthropic_max_tokens` | `1024` | 使用 `anthropic` 大语言模型提供方时，用于识别交易文本并创建交易时最大允许生成的 token 数量（1 - 4294967295）。 |
-| `anthropic_thinking_budget_tokens` | `1024` | 使用 `anthropic` 大语言模型提供方同时开启 `enable_thinking` 时，用于识别交易文本并创建交易时最大允许思考使用的 token 数量（1 - 4294967295）。 |
+| `anthropic_max_tokens` | `1024` | 使用 `anthropic` 大语言模型提供方时，用于识别交易文本并创建交易时最大允许生成的 token 数量（1 – 4294967295）。 |
+| `anthropic_thinking_budget_tokens` | `1024` | 使用 `anthropic` 大语言模型提供方同时开启 `enable_thinking` 时，用于识别交易文本并创建交易时最大允许思考使用的 token 数量（1 – 4294967295）。 |
 | `anthropic_compatible_base_url` |  | 使用 `anthropic_compatible` 大语言模型提供方时，Anthropic 兼容 API 的基础地址，例如 `https://api.anthropic.com/v1/`。 |
 | `anthropic_compatible_api_version` |  | 使用 `anthropic_compatible` 大语言模型提供方时，Anthropic 兼容 API 的 API 版本号，例如 `2023-06-01`，如果提供方不要求指定版本号，留空即可。 |
 | `anthropic_compatible_api_key` |  | 使用 `anthropic_compatible` 大语言模型提供方时，Anthropic 兼容 API 的 API Key。 |
 | `anthropic_compatible_model_id` |  | 使用 `anthropic_compatible` 大语言模型提供方时，用于识别交易文本并创建交易的模型ID。 |
-| `anthropic_compatible_max_tokens` | `1024` | 使用 `anthropic_compatible` 大语言模型提供方时，用于识别交易文本并创建交易时最大允许生成的 token 数量（1 - 4294967295）。 |
-| `anthropic_compatible_thinking_budget_tokens` | `1024` | 使用 `anthropic_compatible` 大语言模型提供方同时开启 `enable_thinking` 时，用于识别交易文本并创建交易时最大允许思考使用的 token 数量（1 - 4294967295）。 |
+| `anthropic_compatible_max_tokens` | `1024` | 使用 `anthropic_compatible` 大语言模型提供方时，用于识别交易文本并创建交易时最大允许生成的 token 数量（1 – 4294967295）。 |
+| `anthropic_compatible_thinking_budget_tokens` | `1024` | 使用 `anthropic_compatible` 大语言模型提供方同时开启 `enable_thinking` 时，用于识别交易文本并创建交易时最大允许思考使用的 token 数量（1 – 4294967295）。 |
 | `openrouter_api_key` |  | 使用 `openrouter` 大语言模型提供方时，OpenRouter 的 API Key，请访问 [https://openrouter.ai/settings/keys](https://openrouter.ai/settings/keys) 获取更多信息。 |
 | `openrouter_model_id` |  | 使用 `openrouter` 大语言模型提供方时，用于识别交易文本并创建交易的模型ID。 |
 | `ollama_server_url` |  | 使用 `ollama` 大语言模型提供方时，Ollama 的服务器地址，例如 `http://127.0.0.1:11434/`。 |
@@ -164,7 +164,7 @@ ezBookkeeping 使用 ini 文件作为配置文件。
 | `lm_studio_model_id` |  | 使用 `lm_studio` 大语言模型提供方时，用于识别交易文本并创建交易的模型ID。 |
 | `google_ai_api_key` |  | 使用 `google_ai` 大语言模型提供方时，Google AI 的 API Key，请访问 [https://aistudio.google.com/apikey](https://aistudio.google.com/apikey) 获取更多信息。 |
 | `google_ai_model_id` |  | 使用 `google_ai` 大语言模型提供方时，用于识别交易文本并创建交易的模型ID。 |
-| `request_timeout` | `60000` | 请求大语言模型 API 的超时时间（0 - 4294967295 毫秒）。设置为 `0` 时禁用请求大语言模型 API 超时。 |
+| `request_timeout` | `60000` | 请求大语言模型 API 的超时时间（0 – 4294967295 毫秒）。设置为 `0` 时禁用请求大语言模型 API 超时。 |
 | `proxy` | `system` | 请求大语言模型 API 使用的代理，支持 `system`（使用系统代理） `none`（不使用代理），或以 `http://`、`https://` 或 `socks5://` 开头的代理服务器地址。 |
 | `skip_tls_verify` | `false` | 请求大语言模型 API 时是否跳过服务器证书链和主机名称的校验。 |
 
@@ -183,14 +183,14 @@ ezBookkeeping 使用 ini 文件作为配置文件。
 | `openai_compatible_model_id` |  | 使用 `openai_compatible`（使用 Chat Completions API） 和 `openai_responses_compatible`（使用 Responses API） 大语言模型提供方时，用于识别收据图片并创建交易的模型ID。 |
 | `anthropic_api_key` |  | 使用 `anthropic` 大语言模型提供方时，Anthropic 的 API Key，请访问 [https://platform.claude.com/settings/keys](https://platform.claude.com/settings/keys) 获取更多信息。 |
 | `anthropic_model_id` |  | 使用 `anthropic` 大语言模型提供方时，用于识别收据图片并创建交易的模型ID。 |
-| `anthropic_max_tokens` | `1024` | 使用 `anthropic` 大语言模型提供方时，用于识别收据图片并创建交易时最大允许生成的 token 数量（1 - 4294967295）。 |
-| `anthropic_thinking_budget_tokens` | `1024` | 使用 `anthropic` 大语言模型提供方同时开启 `enable_thinking` 时，用于识别收据图片并创建交易时最大允许思考使用的 token 数量（1 - 4294967295）。 |
+| `anthropic_max_tokens` | `1024` | 使用 `anthropic` 大语言模型提供方时，用于识别收据图片并创建交易时最大允许生成的 token 数量（1 – 4294967295）。 |
+| `anthropic_thinking_budget_tokens` | `1024` | 使用 `anthropic` 大语言模型提供方同时开启 `enable_thinking` 时，用于识别收据图片并创建交易时最大允许思考使用的 token 数量（1 – 4294967295）。 |
 | `anthropic_compatible_base_url` |  | 使用 `anthropic_compatible` 大语言模型提供方时，Anthropic 兼容 API 的基础地址，例如 `https://api.anthropic.com/v1/`。 |
 | `anthropic_compatible_api_version` |  | 使用 `anthropic_compatible` 大语言模型提供方时，Anthropic 兼容 API 的 API 版本号，例如 `2023-06-01`，如果提供方不要求指定版本号，留空即可。 |
 | `anthropic_compatible_api_key` |  | 使用 `anthropic_compatible` 大语言模型提供方时，Anthropic 兼容 API 的 API Key。 |
 | `anthropic_compatible_model_id` |  | 使用 `anthropic_compatible` 大语言模型提供方时，用于识别收据图片并创建交易的模型ID。 |
-| `anthropic_compatible_max_tokens` | `1024` | 使用 `anthropic_compatible` 大语言模型提供方时，用于识别收据图片并创建交易时最大允许生成的 token 数量（1 - 4294967295）。 |
-| `anthropic_compatible_thinking_budget_tokens` | `1024` | 使用 `anthropic_compatible` 大语言模型提供方同时开启 `enable_thinking` 时，用于识别收据图片并创建交易时最大允许思考使用的 token 数量（1 - 4294967295）。 |
+| `anthropic_compatible_max_tokens` | `1024` | 使用 `anthropic_compatible` 大语言模型提供方时，用于识别收据图片并创建交易时最大允许生成的 token 数量（1 – 4294967295）。 |
+| `anthropic_compatible_thinking_budget_tokens` | `1024` | 使用 `anthropic_compatible` 大语言模型提供方同时开启 `enable_thinking` 时，用于识别收据图片并创建交易时最大允许思考使用的 token 数量（1 – 4294967295）。 |
 | `openrouter_api_key` |  | 使用 `openrouter` 大语言模型提供方时，OpenRouter 的 API Key，请访问 [https://openrouter.ai/settings/keys](https://openrouter.ai/settings/keys) 获取更多信息。 |
 | `openrouter_model_id` |  | 使用 `openrouter` 大语言模型提供方时，用于识别收据图片并创建交易的模型ID。 |
 | `ollama_server_url` |  | 使用 `ollama` 大语言模型提供方时，Ollama 的服务器地址，例如 `http://127.0.0.1:11434/`。 |
@@ -200,7 +200,7 @@ ezBookkeeping 使用 ini 文件作为配置文件。
 | `lm_studio_model_id` |  | 使用 `lm_studio` 大语言模型提供方时，用于识别收据图片并创建交易的模型ID。 |
 | `google_ai_api_key` |  | 使用 `google_ai` 大语言模型提供方时，Google AI 的 API Key，请访问 [https://aistudio.google.com/apikey](https://aistudio.google.com/apikey) 获取更多信息。 |
 | `google_ai_model_id` |  | 使用 `google_ai` 大语言模型提供方时，用于识别收据图片并创建交易的模型ID。 |
-| `request_timeout` | `60000` | 请求大语言模型 API 的超时时间（0 - 4294967295 毫秒）。设置为 `0` 时禁用请求大语言模型 API 超时。 |
+| `request_timeout` | `60000` | 请求大语言模型 API 的超时时间（0 – 4294967295 毫秒）。设置为 `0` 时禁用请求大语言模型 API 超时。 |
 | `proxy` | `system` | 请求大语言模型 API 使用的代理，支持 `system`（使用系统代理） `none`（不使用代理），或以 `http://`、`https://` 或 `socks5://` 开头的代理服务器地址。 |
 | `skip_tls_verify` | `false` | 请求大语言模型 API 时是否跳过服务器证书链和主机名称的校验。 |
 
@@ -220,8 +220,8 @@ ezBookkeeping 使用 ini 文件作为配置文件。
 | 选项名 | 默认值 | 描述 |
 | --- | --- | --- |
 | `checker_type` | `in_memory` | 重复检查器类型，当前支持 `in_memory`。 |
-| `cleanup_interval` | `60` | 使用 `in_memory` 重复检查器时，清除过期数据的间隔时间（1 - 4294967295 秒）。 |
-| `duplicate_submissions_interval` | `300` | 同一个页面上重复提交的最小间隔时间（0 - 4294967295 秒）（退出并重新进入编辑页面/对话框时被视为一次新的会话）。设置为 `0` 时禁用新数据提交的重复检查器。 |
+| `cleanup_interval` | `60` | 使用 `in_memory` 重复检查器时，清除过期数据的间隔时间（1 – 4294967295 秒）。 |
+| `duplicate_submissions_interval` | `300` | 同一个页面上重复提交的最小间隔时间（0 – 4294967295 秒）（退出并重新进入编辑页面/对话框时被视为一次新的会话）。设置为 `0` 时禁用新数据提交的重复检查器。 |
 
 ## 定时任务
 
@@ -240,15 +240,15 @@ ezBookkeeping 使用 ini 文件作为配置文件。
 | --- | --- | --- |
 | `secret_key` |  | 作为密钥使用，**为了保证您的数据安全，请在第一次运行 ezBookkeeping 前修改该值**。你可以通过执行 `ezbookkeeping security gen-secret-key` 或 `openssl rand -base64 32` 获取一个随机密钥。 |
 | `trusted_proxy_ips` | `10.0.0.0/8, 169.254.0.0/16, 127.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16` | 使用逗号分隔的可信代理的 IP 地址（CIDR 格式）列表。只有当远程地址在这个列表中时，才能从诸如 `X-Forwarded-For`、`X-Real-IP` 或 `X-Real-Port` 等请求头中获取用户真实的 IP 地址或端口。 |
-| `token_expired_time` | `2592000` | 令牌过期时间（60 - 4294967295 秒）。 |
-| `token_min_refresh_interval` | `86400` | 令牌最小刷新间隔（0 - 4294967295 秒)，该值应当小于令牌过期时间。设置为 `0` 时则每次刷新前端时都会刷新令牌。 |
-| `temporary_token_expired_time` | `300` | 临时令牌过期时间（60 - 4294967295 秒）。 |
-| `email_verify_token_expired_time` | `3600` | 邮箱验证令牌过期时间（60 - 4294967295 秒）。 |
-| `password_reset_token_expired_time` | `3600` | 密码重置令牌过期时间（60 - 4294967295 秒）。 |
+| `token_expired_time` | `2592000` | 令牌过期时间（60 – 4294967295 秒）。 |
+| `token_min_refresh_interval` | `86400` | 令牌最小刷新间隔（0 – 4294967295 秒)，该值应当小于令牌过期时间。设置为 `0` 时则每次刷新前端时都会刷新令牌。 |
+| `temporary_token_expired_time` | `300` | 临时令牌过期时间（60 – 4294967295 秒）。 |
+| `email_verify_token_expired_time` | `3600` | 邮箱验证令牌过期时间（60 – 4294967295 秒）。 |
+| `password_reset_token_expired_time` | `3600` | 密码重置令牌过期时间（60 – 4294967295 秒）。 |
 | `enable_api_token` | `false` | 是否开启 API 令牌。 |
 | `api_token_allowed_remote_ips` |  | 允许使用 API 令牌的远程 IP，使用逗号分隔的允许远程 IP 列表（星号 * 表示任何地址，例如 192.168.1.* 表示 192.168.1.x 子网中的任何 IP），留空则允许所有远程 IP。 |
-| `max_failures_per_ip_per_minute` | `5` | 每分钟每个 IP 密码/令牌检查失败的最大次数（0 - 4294967295）（使用上述重复检查器），默认为 `5`，设置为 `0` 时禁用。 |
-| `max_failures_per_user_per_minute` | `5` | 每分钟每个用户密码/令牌检查失败的最大次数（0 - 4294967295）（使用上述重复检查器），默认为 `5`，设置为 `0` 时禁用。 |
+| `max_failures_per_ip_per_minute` | `5` | 每分钟每个 IP 密码/令牌检查失败的最大次数（0 – 4294967295）（使用上述重复检查器），默认为 `5`，设置为 `0` 时禁用。 |
+| `max_failures_per_user_per_minute` | `5` | 每分钟每个用户密码/令牌检查失败的最大次数（0 – 4294967295）（使用上述重复检查器），默认为 `5`，设置为 `0` 时禁用。 |
 
 ## 身份验证
 
@@ -272,8 +272,8 @@ ezBookkeeping 使用 ini 文件作为配置文件。
 | `oauth2_user_identifier` | `email` | 使用 `oauth2` 身份验证时，用于将 OAuth 2.0 返回的用户与 ezBookkeeping 中现有用户进行匹配的字段，支持 `email` 和 `username`。 |
 | `oauth2_use_pkce` | `false` | 使用 `oauth2` 身份验证时，是否启用 PKCE。 |
 | `oauth2_auto_register` | `true` | 使用 `oauth2` 身份验证时，当 OAuth 2.0 返回的用户没有注册时自动创建新用户。（需要 `enable_register` 设置为 `true`） |
-| `oauth2_state_expired_time` | `300` | 使用 `oauth2` 身份验证时，OAuth 2.0 认证过程的超时时间（60 - 4294967295 秒）。 |
-| `oauth2_request_timeout` | `10000` | 请求 OAuth 2.0 API 的超时时间（0 - 4294967295 毫秒）。设置为 `0` 时禁用请求 OAuth 2.0 API 超时。 |
+| `oauth2_state_expired_time` | `300` | 使用 `oauth2` 身份验证时，OAuth 2.0 认证过程的超时时间（60 – 4294967295 秒）。 |
+| `oauth2_request_timeout` | `10000` | 请求 OAuth 2.0 API 的超时时间（0 – 4294967295 毫秒）。设置为 `0` 时禁用请求 OAuth 2.0 API 超时。 |
 | `oauth2_proxy` | `system` | 请求 OAuth 2.0 API 使用的代理，支持 `system`（使用系统代理） `none`（不使用代理），或以 `http://`、`https://` 或 `socks5://` 开头的代理服务器地址。 |
 | `oauth2_skip_tls_verify` | `false` | 请求 OAuth 2.0 API 时是否跳过服务器证书链和主机名称的校验。 |
 | `oidc_provider_base_url` |  | 使用 `oauth2` 身份验证和 `oidc` OAuth 2.0 提供方时，OIDC 提供方的 Issuer URL。请确保 `.well-known` 目录在这个地址下。例如，如果设置为 `https://auth.example.com`，发现地址应该是 `https://auth.example.com/.well-known/openid-configuration`。 |
@@ -293,12 +293,12 @@ ezBookkeeping 使用 ini 文件作为配置文件。
 | `enable_email_verify` | `false` | 是否启用用户邮箱验证。 |
 | `enable_force_email_verify` | `false` | 用户登录时是否要求邮箱必须验证。 |
 | `enable_custom_icon` | `true` | 是否启用用户自定义图标。 |
-| `max_user_custom_icon_size` | `1048576` | 最大允许的用户自定义图标文件大小（1 - 4294967295 字节）。 |
+| `max_user_custom_icon_size` | `1048576` | 最大允许的用户自定义图标文件大小（1 – 4294967295 字节）。 |
 | `enable_transaction_picture` | `true` | 是否启用交易图片。 |
-| `max_transaction_picture_size` | `10485760` | 最大允许的交易图片文件大小（1 - 4294967295 字节）。 |
+| `max_transaction_picture_size` | `10485760` | 最大允许的交易图片文件大小（1 – 4294967295 字节）。 |
 | `enable_scheduled_transaction` | `true` | 是否启用定时交易。 |
 | `avatar_provider` | `internal` | 用户头像提供方，支持 [`internal`](#对象存储)（使用内部对象存储保存用户头像，支持用户自行更新头像） 和 [`gravatar`](https://gravatar.com)（在该提供方网站上传头像，根据用户邮箱地址匹配）。如果您想禁用用户头像，留空即可。 |
-| `max_user_avatar_size` | `1048576` | 使用 `internal` 用户头像提供方时，最大允许的用户头像文件大小（1 - 4294967295 字节）。 |
+| `max_user_avatar_size` | `1048576` | 使用 `internal` 用户头像提供方时，最大允许的用户头像文件大小（1 – 4294967295 字节）。 |
 | `default_feature_restrictions` |  | 用户注册后默认的功能限制（功能类型使用逗号分隔），留空表示无限制。<br/>支持以下功能类型：<br/>`1`: 更新密码<br/>`2`: 更新邮箱<br/>`3`: 更新个人基本信息<br/>`4`: 更新头像<br/>`5`: 退出登录其他会话<br/>`6`: 启用两步验证<br/>`7`: 禁用两步验证<br/>`8`: 忘记密码<br/>`9`: 导入交易<br/>`10`: 导出交易<br/>`11`: 清除所有数据<br/>`12`: 同步应用设置<br/>`13`: MCP (Model Context Protocol) 访问<br/>`14`: AI 识图创建交易<br/>`15`：OAuth 2.0 登录<br/>`16`：取消关联第三方登录<br/>`17`：生成 API 令牌<br/>`18`：AI 文本识别创建交易<br/>`19`：上传自定义图标 |
 
 ## 数据
@@ -309,7 +309,7 @@ ezBookkeeping 使用 ini 文件作为配置文件。
 | --- | --- | --- |
 | `enable_export` | `true` | 是否启用用户数据导出。 |
 | `enable_import` | `true` | 是否启用用户数据导入。 |
-| `max_import_file_size` | `10485760` | 最大允许的导入文件大小（1 - 4294967295 字节）。 |
+| `max_import_file_size` | `10485760` | 最大允许的导入文件大小（1 – 4294967295 字节）。 |
 
 ## 提示
 
@@ -358,9 +358,9 @@ ezBookkeeping 使用 ini 文件作为配置文件。
 | `amap_api_external_proxy_url` |  | 使用 `amap` 地图提供方时，高德地图的 JavaScript API 外部代理地址，`amap_security_verification_method` 设置为 `external_proxy` 时该选项必须设置。 |
 | `custom_map_tile_server_url` |  | 自定义地图瓦片服务器的瓦片图层 Url，支持 {x}、{y}（坐标）、{z}（缩放等级）占位符，例如 `https://tile.openstreetmap.org/{z}/{x}/{y}.png`。 |
 | `custom_map_tile_server_annotation_url` |  | 自定义地图瓦片服务器的标注图层 Url（可选），支持 {x}、{y}（坐标）、{z}（缩放等级）占位符。 |
-| `custom_map_tile_server_min_zoom_level` | `1` | 自定义地图贴图服务器最小缩放等级（0 - 255）。 |
-| `custom_map_tile_server_max_zoom_level` | `18` | 自定义地图贴图服务器最大缩放等级（0 - 255）。 |
-| `custom_map_tile_server_default_zoom_level` | `14` | 自定义地图贴图服务器默认缩放等级（0 - 255）。 |
+| `custom_map_tile_server_min_zoom_level` | `1` | 自定义地图贴图服务器最小缩放等级（0 – 255）。 |
+| `custom_map_tile_server_max_zoom_level` | `18` | 自定义地图贴图服务器最大缩放等级（0 – 255）。 |
+| `custom_map_tile_server_default_zoom_level` | `14` | 自定义地图贴图服务器默认缩放等级（0 – 255）。 |
 
 ## 汇率
 
@@ -369,6 +369,6 @@ ezBookkeeping 使用 ini 文件作为配置文件。
 | 选项名 | 默认值 | 描述 |
 | --- | --- | --- |
 | `data_source` | `euro_central_bank` | 汇率数据源，支持 `central_bank_of_argentina`、`bank_of_canada`、`czech_national_bank`、`danmarks_national_bank`、`euro_central_bank`、`national_bank_of_georgia`、`central_bank_of_hungary`、`bank_of_israel`、`national_bank_of_kazakhstan`、`central_bank_of_myanmar`、`norges_bank`、`national_bank_of_poland`、`national_bank_of_romania`、`bank_of_russia`、`swiss_national_bank`、`national_bank_of_ukraine`、`central_bank_of_uzbekistan` 或 `user_custom`。如果设置为 `user_custom`，每个用户的汇率数据需要自行设置。更多信息，请访问 [汇率](/zh_Hans/exchange_rates/)。 |
-| `request_timeout` | `10000` | 请求汇率数据的超时时间（0 - 4294967295 毫秒）。设置为 `0` 时禁用请求汇率数据超时。 |
+| `request_timeout` | `10000` | 请求汇率数据的超时时间（0 – 4294967295 毫秒）。设置为 `0` 时禁用请求汇率数据超时。 |
 | `proxy` | `system` | ezbookkeeping 服务端请求汇率数据使用的代理，支持 `system`（使用系统代理） `none`（不使用代理），或以 `http://`、`https://` 或 `socks5://` 开头的代理服务器地址。 |
 | `skip_tls_verify` | `false` | 请求汇率数据时是否跳过服务器证书链和主机名称的校验。 |

@@ -64,9 +64,9 @@ Note that if the same configuration option is set using all three methods above,
 | `passwd` |  | Database user password. |
 | `ssl_mode` | `disable` | SSL/TLS encryption mode for connecting to the `postgres` database, supports `disable`, `require` or `verify-full`. |
 | `db_path` | `data/ezbookkeeping.db` | Database file path for `sqlite3`. The value can be relative or absolute path. |
-| `max_idle_conn` | `2` | Maximum number of connections in the idle connection pool (0 - 65535). If value is below than or equals to `0`, no idle connections are retained. |
-| `max_open_conn` | `0` | Maximum number of open connections to the database (0 - 65535). The value `0` means unlimited. |
-| `conn_max_lifetime` | `1440` | Maximum amount of time a connection may be reused (0 - 4294967295 seconds). If value is below than or equals to `0`, connections are not closed due to a connection's age. |
+| `max_idle_conn` | `2` | Maximum number of connections in the idle connection pool (0 – 65535). If value is below than or equals to `0`, no idle connections are retained. |
+| `max_open_conn` | `0` | Maximum number of open connections to the database (0 – 65535). The value `0` means unlimited. |
+| `conn_max_lifetime` | `1440` | Maximum amount of time a connection may be reused (0 – 4294967295 seconds). If value is below than or equals to `0`, connections are not closed due to a connection's age. |
 | `log_query` | `false` | Whether to enable logging each sql statement and execution time. |
 | `auto_update_database` | `true` | Whether to enable updating database structure automatically when starting web server. |
 
@@ -95,7 +95,7 @@ Note that if the same configuration option is set using all three methods above,
 | `request_log_path` |  | Request log file path. The value can be relative or absolute path. Leave blank if you want to write request log in default log file. |
 | `query_log_path` |  | Database query log file path. The value can be relative or absolute path. Leave blank if you want to write query log in default log file. |
 | `log_file_rotate` | `false` | Whether to enable rotating log files. |
-| `log_file_max_size` | `104857600` | The maximum size (1 - 4294967295 bytes) of the log file before it gets rotated. |
+| `log_file_max_size` | `104857600` | The maximum size (1 – 4294967295 bytes) of the log file before it gets rotated. |
 | `log_file_max_days` | `7` | The maximum number of days to retain old log files. Set to `0` to retain all logs. |
 
 ## Object Storage
@@ -118,7 +118,7 @@ Note that if the same configuration option is set using all three methods above,
 | `webdav_username` |  | WebDAV user name, for `webdav` object storage. |
 | `webdav_password` |  | WebDAV password, for `webdav` object storage. |
 | `webdav_root_path` | `/` | The root path of the object files, for `webdav` object storage. |
-| `webdav_request_timeout` | `10000` | Request timeout for WebDAV url (0 - 4294967295 milliseconds). Set to `0` to disable timeout for requesting WebDAV url. |
+| `webdav_request_timeout` | `10000` | Request timeout for WebDAV url (0 – 4294967295 milliseconds). Set to `0` to disable timeout for requesting WebDAV url. |
 | `webdav_proxy` | `system` | Proxy for requesting WebDAV url, supports `system` (use system proxy), `none` (do not use proxy), or proxy URL which starts with `http://`, `https://` or `socks5://`. |
 | `webdav_skip_tls_verify` | `false` | Whether to skip the server's certificate chain and host name verification when request WebDAV url. |
 
@@ -130,7 +130,7 @@ Note that if the same configuration option is set using all three methods above,
 | --- | --- | --- |
 | `transaction_from_ai_text_recognition` | `false` | Whether to enable creating transactions from AI text recognition results, requires `llm_provider` and its related model id to be configured properly in `llm_text_recognition` section. |
 | `transaction_from_ai_image_recognition` | `false` | Whether to enable creating transactions from AI image recognition results, requires `llm_provider` and its related model id to be configured properly in `llm_image_recognition` section. |
-| `max_ai_recognition_picture_size` | `10485760` | Maximum allowed AI recognition picture file size (1 - 4294967295 bytes). |
+| `max_ai_recognition_picture_size` | `10485760` | Maximum allowed AI recognition picture file size (1 – 4294967295 bytes). |
 
 ## Large Language Model for text recognition
 
@@ -147,14 +147,14 @@ Note that if the same configuration option is set using all three methods above,
 | `openai_compatible_model_id` |  | Model ID for the `openai_compatible` (Use Chat Completions API) and `openai_responses_compatible` (Use Responses API) LLM provider, used for transaction text recognition and transaction creation. |
 | `anthropic_api_key` |  | Anthropic API Key for `anthropic` LLM provider, please visit [https://platform.claude.com/settings/keys](https://platform.claude.com/settings/keys) for more information. |
 | `anthropic_model_id` |  | Model ID for the `anthropic` LLM provider, used for transaction text recognition and transaction creation. |
-| `anthropic_max_tokens` | `1024` | Maximum allowed number of generated tokens (1 - 4294967295) for the `anthropic` LLM provider, used for transaction text recognition and transaction creation. |
-| `anthropic_thinking_budget_tokens` | `1024` | Maximum allowed number of thinking budget tokens (1 - 4294967295) when `enable_thinking` is enabled for the `anthropic` LLM provider, used for transaction text recognition and transaction creation. |
+| `anthropic_max_tokens` | `1024` | Maximum allowed number of generated tokens (1 – 4294967295) for the `anthropic` LLM provider, used for transaction text recognition and transaction creation. |
+| `anthropic_thinking_budget_tokens` | `1024` | Maximum allowed number of thinking budget tokens (1 – 4294967295) when `enable_thinking` is enabled for the `anthropic` LLM provider, used for transaction text recognition and transaction creation. |
 | `anthropic_compatible_base_url` |  | Anthropic compatible API base url for `anthropic_compatible` LLM provider, e.g. `https://api.anthropic.com/v1/`. |
 | `anthropic_compatible_api_version` |  | Anthropic compatible API version for `anthropic_compatible` LLM provider, e.g. `2023-06-01`. If the provider does not require API versioning, leave it blank. |
 | `anthropic_compatible_api_key` |  | Anthropic compatible API Key for `anthropic_compatible` LLM provider. |
 | `anthropic_compatible_model_id` |  | Model ID for the `anthropic_compatible` LLM provider, used for transaction text recognition and transaction creation. |
-| `anthropic_compatible_max_tokens` | `1024` | Maximum allowed number of generated tokens (1 - 4294967295) for the `anthropic_compatible` LLM provider, used for transaction text recognition and transaction creation. |
-| `anthropic_compatible_thinking_budget_tokens` | `1024` | Maximum allowed number of thinking budget tokens (1 - 4294967295) when `enable_thinking` is enabled for the `anthropic_compatible` LLM provider, used for transaction text recognition and transaction creation. |
+| `anthropic_compatible_max_tokens` | `1024` | Maximum allowed number of generated tokens (1 – 4294967295) for the `anthropic_compatible` LLM provider, used for transaction text recognition and transaction creation. |
+| `anthropic_compatible_thinking_budget_tokens` | `1024` | Maximum allowed number of thinking budget tokens (1 – 4294967295) when `enable_thinking` is enabled for the `anthropic_compatible` LLM provider, used for transaction text recognition and transaction creation. |
 | `openrouter_api_key` |  | OpenRouter API secret key for `openrouter` LLM provider, please visit [https://openrouter.ai/settings/keys](https://openrouter.ai/settings/keys) for more information. |
 | `openrouter_model_id` |  | Model ID for the `openrouter` LLM provider, used for transaction text recognition and transaction creation. |
 | `ollama_server_url` |  | Ollama server url for `ollama` LLM provider, e.g. `http://127.0.0.1:11434/`. |
@@ -164,7 +164,7 @@ Note that if the same configuration option is set using all three methods above,
 | `lm_studio_model_id` |  | Model ID for the `lm_studio` LLM provider, used for transaction text recognition and transaction creation. |
 | `google_ai_api_key` |  | Google AI API Key for `google_ai` LLM provider, please visit [https://aistudio.google.com/apikey](https://aistudio.google.com/apikey) for more information. |
 | `google_ai_model_id` |  | Model ID for the `google_ai` LLM provider, used for transaction text recognition and transaction creation. |
-| `request_timeout` | `60000` | Request timeout for LLM API (0 - 4294967295 milliseconds). Set to `0` to disable timeout for requesting LLM API. |
+| `request_timeout` | `60000` | Request timeout for LLM API (0 – 4294967295 milliseconds). Set to `0` to disable timeout for requesting LLM API. |
 | `proxy` | `system` | Proxy for requesting LLM API, supports `system` (use system proxy), `none` (do not use proxy), or proxy URL which starts with `http://`, `https://` or `socks5://`. |
 | `skip_tls_verify` | `false` | Whether to skip the server's certificate chain and host name verification when request LLM API. |
 
@@ -183,14 +183,14 @@ Note that if the same configuration option is set using all three methods above,
 | `openai_compatible_model_id` |  | Model ID for the `openai_compatible` (Use Chat Completions API) and `openai_responses_compatible` (Use Responses API) LLM provider, used for receipt image recognition and transaction creation. |
 | `anthropic_api_key` |  | Anthropic API Key for `anthropic` LLM provider, please visit [https://platform.claude.com/settings/keys](https://platform.claude.com/settings/keys) for more information. |
 | `anthropic_model_id` |  | Model ID for the `anthropic` LLM provider, used for receipt image recognition and transaction creation. |
-| `anthropic_max_tokens` | `1024` | Maximum allowed number of generated tokens (1 - 4294967295) for the `anthropic` LLM provider, used for receipt image recognition and transaction creation. |
-| `anthropic_thinking_budget_tokens` | `1024` | Maximum allowed number of thinking budget tokens (1 - 4294967295) when `enable_thinking` is enabled for the `anthropic` LLM provider, used for receipt image recognition and transaction creation. |
+| `anthropic_max_tokens` | `1024` | Maximum allowed number of generated tokens (1 – 4294967295) for the `anthropic` LLM provider, used for receipt image recognition and transaction creation. |
+| `anthropic_thinking_budget_tokens` | `1024` | Maximum allowed number of thinking budget tokens (1 – 4294967295) when `enable_thinking` is enabled for the `anthropic` LLM provider, used for receipt image recognition and transaction creation. |
 | `anthropic_compatible_base_url` |  | Anthropic compatible API base url for `anthropic_compatible` LLM provider, e.g. `https://api.anthropic.com/v1/`. |
 | `anthropic_compatible_api_version` |  | Anthropic compatible API version for `anthropic_compatible` LLM provider, e.g. `2023-06-01`. If the provider does not require API versioning, leave it blank. |
 | `anthropic_compatible_api_key` |  | Anthropic compatible API Key for `anthropic_compatible` LLM provider. |
 | `anthropic_compatible_model_id` |  | Model ID for the `anthropic_compatible` LLM provider, used for receipt image recognition and transaction creation. |
-| `anthropic_compatible_max_tokens` | `1024` | Maximum allowed number of generated tokens (1 - 4294967295) for the `anthropic_compatible` LLM provider, used for receipt image recognition and transaction creation. |
-| `anthropic_compatible_thinking_budget_tokens` | `1024` | Maximum allowed number of thinking budget tokens (1 - 4294967295) when `enable_thinking` is enabled for the `anthropic_compatible` LLM provider, used for receipt image recognition and transaction creation. |
+| `anthropic_compatible_max_tokens` | `1024` | Maximum allowed number of generated tokens (1 – 4294967295) for the `anthropic_compatible` LLM provider, used for receipt image recognition and transaction creation. |
+| `anthropic_compatible_thinking_budget_tokens` | `1024` | Maximum allowed number of thinking budget tokens (1 – 4294967295) when `enable_thinking` is enabled for the `anthropic_compatible` LLM provider, used for receipt image recognition and transaction creation. |
 | `openrouter_api_key` |  | OpenRouter API secret key for `openrouter` LLM provider, please visit [https://openrouter.ai/settings/keys](https://openrouter.ai/settings/keys) for more information. |
 | `openrouter_model_id` |  | Model ID for the `openrouter` LLM provider, used for receipt image recognition and transaction creation. |
 | `ollama_server_url` |  | Ollama server url for `ollama` LLM provider, e.g. `http://127.0.0.1:11434/`. |
@@ -200,7 +200,7 @@ Note that if the same configuration option is set using all three methods above,
 | `lm_studio_model_id` |  | Model ID for the `lm_studio` LLM provider, used for receipt image recognition and transaction creation. |
 | `google_ai_api_key` |  | Google AI API Key for `google_ai` LLM provider, please visit [https://aistudio.google.com/apikey](https://aistudio.google.com/apikey) for more information. |
 | `google_ai_model_id` |  | Model ID for the `google_ai` LLM provider, used for receipt image recognition and transaction creation. |
-| `request_timeout` | `60000` | Request timeout for LLM API (0 - 4294967295 milliseconds). Set to `0` to disable timeout for requesting LLM API. |
+| `request_timeout` | `60000` | Request timeout for LLM API (0 – 4294967295 milliseconds). Set to `0` to disable timeout for requesting LLM API. |
 | `proxy` | `system` | Proxy for requesting LLM API, supports `system` (use system proxy), `none` (do not use proxy), or proxy URL which starts with `http://`, `https://` or `socks5://`. |
 | `skip_tls_verify` | `false` | Whether to skip the server's certificate chain and host name verification when request LLM API. |
 
@@ -220,8 +220,8 @@ Note that if the same configuration option is set using all three methods above,
 | Option Name | Default Value | Description |
 | --- | --- | --- |
 | `checker_type` | `in_memory` | Duplicate checker type, supports `in_memory` currently. |
-| `cleanup_interval` | `60` | Cleanup expired data interval (1 - 4294967295 seconds), for `in_memory` duplicate checker. |
-| `duplicate_submissions_interval` | `300` | The minimum interval (0 - 4294967295 seconds) between duplicate submissions on the same page (exiting and re-entering the edit page / edit dialog is considered as a new session). Set to `0` to disable duplicate checker for new data submissions. |
+| `cleanup_interval` | `60` | Cleanup expired data interval (1 – 4294967295 seconds), for `in_memory` duplicate checker. |
+| `duplicate_submissions_interval` | `300` | The minimum interval (0 – 4294967295 seconds) between duplicate submissions on the same page (exiting and re-entering the edit page / edit dialog is considered as a new session). Set to `0` to disable duplicate checker for new data submissions. |
 
 ## Cron Job
 
@@ -240,15 +240,15 @@ Note that if the same configuration option is set using all three methods above,
 | --- | --- | --- |
 | `secret_key` |  | Used for encryption key, **you must change it to keep your user data safe before you first run ezBookkeeping**. You can get a random secret key by executing `ezbookkeeping security gen-secret-key` or `openssl rand -base64 32`. |
 | `trusted_proxy_ips` | `10.0.0.0/8, 169.254.0.0/16, 127.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16` | Trusted proxy IPs (CIDR format), a comma-separated list of trusted proxy IPs. The user's real IP address or port will only be obtained from headers such as `X-Forwarded-For`, `X-Real-IP` or `X-Real-Port` when the remote address is included in this list. |
-| `token_expired_time` | `2592000` | Token expired time (60 - 4294967295 seconds). |
-| `token_min_refresh_interval` | `86400` | Token minimum refresh interval (0 - 4294967295 seconds), the value should be less than token expired time. Set to `0` to refresh the token every time when refreshing the front end. |
-| `temporary_token_expired_time` | `300` | Temporary token expired time (60 - 4294967295 seconds). |
-| `email_verify_token_expired_time` | `3600` | Email verify token expired time (60 - 4294967295 seconds). |
-| `password_reset_token_expired_time` | `3600` | Password reset token expired time (60 - 4294967295 seconds). |
+| `token_expired_time` | `2592000` | Token expired time (60 – 4294967295 seconds). |
+| `token_min_refresh_interval` | `86400` | Token minimum refresh interval (0 – 4294967295 seconds), the value should be less than token expired time. Set to `0` to refresh the token every time when refreshing the front end. |
+| `temporary_token_expired_time` | `300` | Temporary token expired time (60 – 4294967295 seconds). |
+| `email_verify_token_expired_time` | `3600` | Email verify token expired time (60 – 4294967295 seconds). |
+| `password_reset_token_expired_time` | `3600` | Password reset token expired time (60 – 4294967295 seconds). |
 | `enable_api_token` | `false` | Whether to enable API token. |
 | `api_token_allowed_remote_ips` |  | Allowed remote IPs for using the API token, a comma-separated list of allowed remote IPs (asterisk * for any addresses, e.g. 192.168.1.* means any IPs in the 192.168.1.x subnet), leave blank to allow all remote IPs. |
-| `max_failures_per_ip_per_minute` | `5` | Maximum count of password / token check failures (0 - 4294967295) per IP per minute (use the above duplicate checker), default is `5`, set to `0` to disable. |
-| `max_failures_per_user_per_minute` | `5` | Maximum count of password / token check failures (0 - 4294967295) per user per minute (use the above duplicate checker), default is `5`, set to `0` to disable. |
+| `max_failures_per_ip_per_minute` | `5` | Maximum count of password / token check failures (0 – 4294967295) per IP per minute (use the above duplicate checker), default is `5`, set to `0` to disable. |
+| `max_failures_per_user_per_minute` | `5` | Maximum count of password / token check failures (0 – 4294967295) per user per minute (use the above duplicate checker), default is `5`, set to `0` to disable. |
 
 ## Authentication
 
@@ -272,8 +272,8 @@ Note that if the same configuration option is set using all three methods above,
 | `oauth2_user_identifier` | `email` | For `oauth2` authentication, the field used to match the user returned by OAuth 2.0 with an existing user in ezBookkeeping, supports `email` and `username`. |
 | `oauth2_use_pkce` | `false` | For `oauth2` authentication, whether to use PKCE. |
 | `oauth2_auto_register` | `true` | For `oauth2` authentication, automatically create a new user if the user returned by OAuth 2.0 is not registered. (requires `enable_register` to be set to `true`) |
-| `oauth2_state_expired_time` | `300` | For `oauth2` authentication, Timeout duration for the OAuth 2.0 authentication process (60 - 4294967295 seconds). |
-| `oauth2_request_timeout` | `10000` | Request timeout for OAuth 2.0 API (0 - 4294967295 milliseconds). Set to `0` to disable timeout for requesting OAuth 2.0 API. |
+| `oauth2_state_expired_time` | `300` | For `oauth2` authentication, Timeout duration for the OAuth 2.0 authentication process (60 – 4294967295 seconds). |
+| `oauth2_request_timeout` | `10000` | Request timeout for OAuth 2.0 API (0 – 4294967295 milliseconds). Set to `0` to disable timeout for requesting OAuth 2.0 API. |
 | `oauth2_proxy` | `system` | Proxy for requesting OAuth 2.0 API, supports `system` (use system proxy), `none` (do not use proxy), or proxy URL which starts with `http://`, `https://` or `socks5://`. |
 | `oauth2_skip_tls_verify` | `false` | Whether to skip the server's certificate chain and host name verification when request OAuth 2.0 API. |
 | `oidc_provider_base_url` |  | For `oauth2` authentication and `oidc` OAuth 2.0 provider, OIDC provider issuer url. Make sure the `.well-known` directory is available under this path. For example, if it's set to `https://auth.example.com`, the discovery URL should be `https://auth.example.com/.well-known/openid-configuration`. |
@@ -293,12 +293,12 @@ Note that if the same configuration option is set using all three methods above,
 | `enable_email_verify` | `false` | Whether to enable user email validation. |
 | `enable_force_email_verify` | `false` | Whether to require user email must be verified when login. |
 | `enable_custom_icon` | `true` | Whether to enable user custom icon. |
-| `max_user_custom_icon_size` | `1048576` | Maximum allowed user custom icon file size (1 - 4294967295 bytes). |
+| `max_user_custom_icon_size` | `1048576` | Maximum allowed user custom icon file size (1 – 4294967295 bytes). |
 | `enable_transaction_picture` | `true` | Whether to enable transaction picture. |
-| `max_transaction_picture_size` | `10485760` | Maximum allowed transaction picture file size (1 - 4294967295 bytes). |
+| `max_transaction_picture_size` | `10485760` | Maximum allowed transaction picture file size (1 – 4294967295 bytes). |
 | `enable_scheduled_transaction` | `true` | Whether to enable scheduled transaction. |
 | `avatar_provider` | `internal` | User avatar provider, supports [`internal`](#object-storage) (Use the internal object storage to store user avatar, supports updating avatar by user self) and [`gravatar`](https://gravatar.com) (updating avatar on the provider's website and match it by user's email address). Leave blank if you want to disable user avatar. |
-| `max_user_avatar_size` | `1048576` | Maximum allowed user avatar file size (1 - 4294967295 bytes) for `internal` avatar provider. |
+| `max_user_avatar_size` | `1048576` | Maximum allowed user avatar file size (1 – 4294967295 bytes) for `internal` avatar provider. |
 | `default_feature_restrictions` |  | The default feature restrictions after user registration (feature types separated by commas), leave blank for no restrictions.<br/>Supports the following feature types:<br/>`1`: Update Password<br/>`2`: Update Email<br/>`3`: Update Profile Basic Info<br/>`4`: Update Avatar<br/>`5`: Logout Other Session<br/>`6`: Enable Two-Factor Authentication<br/>`7`: Disable Two-Factor Authentication<br/>`8`: Forget Password<br/>`9`: Import Transactions<br/>`10`: Export Transactions<br/>`11`: Clear All Data<br/>`12`: Sync Application Settings<br/>`13`: MCP (Model Context Protocol) Access<br/>`14`: Create Transaction by AI Image Recognition<br/>`15`: OAuth 2.0 Login<br/>`16`: Unlink Third-party Login<br/>`17`: Generate API Token<br/>`18`: Create Transaction by AI Text Recognition<br/>`19`: Upload Custom Icon |
 
 ## Data
@@ -309,7 +309,7 @@ Note that if the same configuration option is set using all three methods above,
 | --- | --- | --- |
 | `enable_export` | `true` | Whether to enable exporting user data. |
 | `enable_import` | `true` | Whether to enable importing user data. |
-| `max_import_file_size` | `10485760` | Maximum allowed import file size (1 - 4294967295 bytes). |
+| `max_import_file_size` | `10485760` | Maximum allowed import file size (1 – 4294967295 bytes). |
 
 ## Tip
 
@@ -358,9 +358,9 @@ Note that if the same configuration option is set using all three methods above,
 | `amap_api_external_proxy_url` |  | Amap JavaScript API external proxy url for `amap` map provider, this setting must be provided when `amap_security_verification_method` is set to `external_proxy`. |
 | `custom_map_tile_server_url` |  | Tile layer url of custom map tile server, supports {x}, {y} (coordinates) and {z} (zoom level) placeholders, like `https://tile.openstreetmap.org/{z}/{x}/{y}.png`. |
 | `custom_map_tile_server_annotation_url` |  | Annotation layer url of custom map tile server (optional), supports {x}, {y} (coordinates) and {z} (zoom level) placeholders. |
-| `custom_map_tile_server_min_zoom_level` | `1` | Custom map tile server min zoom level (0 - 255). |
-| `custom_map_tile_server_max_zoom_level` | `18` | Custom map tile server max zoom level (0 - 255). |
-| `custom_map_tile_server_default_zoom_level` | `14` | Custom map tile server default zoom level (0 - 255). |
+| `custom_map_tile_server_min_zoom_level` | `1` | Custom map tile server min zoom level (0 – 255). |
+| `custom_map_tile_server_max_zoom_level` | `18` | Custom map tile server max zoom level (0 – 255). |
+| `custom_map_tile_server_default_zoom_level` | `14` | Custom map tile server default zoom level (0 – 255). |
 
 ## Exchange Rates
 
@@ -369,6 +369,6 @@ Note that if the same configuration option is set using all three methods above,
 | Option Name | Default Value | Description |
 | --- | --- | --- |
 | `data_source` | `euro_central_bank` | Exchange rates data source, supports `central_bank_of_argentina`, `bank_of_canada`, `czech_national_bank`, `danmarks_national_bank`, `euro_central_bank`, `national_bank_of_georgia`, `central_bank_of_hungary`, `bank_of_israel`, `national_bank_of_kazakhstan`, `central_bank_of_myanmar`, `norges_bank`, `national_bank_of_poland`, `national_bank_of_romania`, `bank_of_russia`, `swiss_national_bank`, `national_bank_of_ukraine`, `central_bank_of_uzbekistan` and `user_custom`. If set to `user_custom`, each user's exchange rate data should be set by themselves. For more information, please visit [Exchange Rates](/exchange_rates/). |
-| `request_timeout` | `10000` | Request timeout for exchange rates data (0 - 4294967295 milliseconds). Set to `0` to disable timeout for requesting exchange rates data. |
+| `request_timeout` | `10000` | Request timeout for exchange rates data (0 – 4294967295 milliseconds). Set to `0` to disable timeout for requesting exchange rates data. |
 | `proxy` | `system` | Proxy for ezbookkeeping server requesting exchange rates data, supports `system` (use system proxy), `none` (do not use proxy), or proxy URL which starts with `http://`, `https://` or `socks5://`. |
 | `skip_tls_verify` | `false` | Whether to skip the server's certificate chain and host name verification when request exchange rates data. |
