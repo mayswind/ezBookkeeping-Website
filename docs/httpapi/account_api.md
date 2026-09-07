@@ -43,6 +43,7 @@ title: Account API
 | `balance` | `string` | Account balance (Supports up to two decimals. For example, a value of `1234` represents an amount of `12.34`) |
 | `comment` | `string` | Account description |
 | `creditCardStatementDate` | `integer` | The statement date of the credit card account |
+| `creditCardLimit` | `string` | The credit limit of the credit card account (Supports up to two decimals. For example, a value of `1234` represents an amount of `12.34`) |
 | `displayOrder` | `integer` | The display order of the account |
 | `isAsset` | `boolean` | Whether the account is an asset account |
 | `isLiability` | `boolean` | Whether the account is a liability account |
@@ -105,6 +106,7 @@ None
 | `balanceTime` | `integer` | Optional | The unix time when the account balance is the set value (This field is required when balance is set) |
 | `comment` | `string` | Optional | Account description |
 | `creditCardStatementDate` | `integer` | Optional | The statement date of the credit card account |
+| `creditCardLimit` | `string` | Optional | The credit limit of the credit card account (Supports up to two decimals. For example, a value of `1234` represents an amount of `12.34`) |
 | `subAccounts` | `AccountCreateRequest[]` | Optional | The sub accounts list |
 
 **Response Data Structure**

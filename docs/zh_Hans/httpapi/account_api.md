@@ -43,6 +43,7 @@ title: 账户 API
 | `balance` | `string` | 账户余额（最多支持两位小数，例如该字段为 `1234` 时表示金额为 `12.34`） |
 | `comment` | `string` | 账户描述 |
 | `creditCardStatementDate` | `integer` | 信用卡账单日 |
+| `creditCardLimit` | `string` | 信用卡信用额度（最多支持两位小数，例如该字段为 `1234` 时表示金额为 `12.34`） |
 | `displayOrder` | `integer` | 账户显示顺序 |
 | `isAsset` | `boolean` | 是否是资产账户 |
 | `isLiability` | `boolean` | 是否是负债账户 |
@@ -105,6 +106,7 @@ title: 账户 API
 | `balanceTime` | `integer` | 可选 | 账户余额为设定值的时间（Unix Time，若设置了余额则该字段为必选） |
 | `comment` | `string` | 可选 | 账户描述 |
 | `creditCardStatementDate` | `integer` | 可选 | 信用卡账单日 |
+| `creditCardLimit` | `string` | 可选 | 信用卡信用额度（最多支持两位小数，例如该字段为 `1234` 时表示金额为 `12.34`） |
 | `subAccounts` | `AccountCreateRequest[]` | 可选 | 子账户列表 |
 
 **返回数据结构**
