@@ -3,7 +3,7 @@ layout: home
 
 hero:
     name: "ezBookkeeping"
-    tagline: "开源、轻量、自托管 (self-hosted) 的个人记账应用"
+    tagline: "功能强大、轻量易用的自托管 (self-hosted) 个人记账应用"
     actions:
         - theme: brand
           text: 快速开始
@@ -31,7 +31,7 @@ features:
     - title: 轻量 & 快速
       icon: ⚡
       details:
-          资源占用极少，即便在资源有限的设备上也运行流畅
+          资源占用极少，适合家庭服务器、NAS 以及树莓派 (Raspberry Pi)
     - title: 安装简单
       icon: 📦
       details:
@@ -44,13 +44,14 @@ features:
       details:
           针对手机与桌面优化的 UI <br/>
           支持 PWA，带来接近原生 App 的使用体验 <br/>
+          自定义首页布局 <br/>
           深色模式
     - title: AI 驱动的功能
       icon: 🤖
       details:
-          收据图片识别 <br/>
-          支持 MCP (Model Context Protocol) 用于 AI 集成 <br/>
-          支持 Agent Skill 和 API 命令行脚本工具用于 AI 集成
+          文字、收据图片识别 <br/>
+          MCP (Model Context Protocol) 用于 AI 集成 <br/>
+          Agent Skill 和 API 命令行脚本工具用于 AI 集成
     - title: 强大的记账功能
       icon: 📘
       details:
@@ -59,7 +60,7 @@ features:
           记录交易地理位置并在地图上展示 <br/>
           支持定时交易 <br/>
           高级筛选、搜索、数据可视化与分析功能
-    - title: 本地化与国际化支持
+    - title: 本地化与国际化
       icon: 🌍
       details:
           多语言与多币种支持 <br/>
@@ -76,7 +77,8 @@ features:
     - title: 数据导入 & 导出
       icon: 📑
       details:
-          支持 CSV、OFX、QFX、QIF、IIF、Camt.052、Camt.053、MT940、GnuCash、Firefly III、Beancount、随手记，以及支付宝、微信支付及京东金融的对账单 等多种格式
+          导入 CSV、Excel、OFX、QFX、QIF、IIF、Camt.052、Camt.053、MT940、GnuCash、Firefly III、Beancount、随手记，以及支付宝、微信支付及京东金融的对账单 等多种格式 <br/>
+          CSV、Excel 导入支持自定义列映射、规则以及脚本代码
 
 sitemap:
     - name: 文档

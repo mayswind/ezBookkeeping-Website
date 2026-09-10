@@ -3,7 +3,7 @@ layout: home
 
 hero:
     name: "ezBookkeeping"
-    tagline: "A open source, lightweight, self-hosted personal finance app"
+    tagline: "A powerful, lightweight, self-hosted personal finance app that is easy to use"
     actions:
         - theme: brand
           text: Get Started
@@ -31,7 +31,7 @@ features:
     - title: Lightweight & Fast
       icon: ⚡
       details:
-          Minimal resource usage, runs smoothly even on low-resource devices
+          Minimal resource usage, suitable for home servers, NAS and Raspberry Pi
     - title: Easy Installation
       icon: 📦
       details:
@@ -44,13 +44,14 @@ features:
       details:
           UI optimized for both mobile and desktop <br/>
           PWA support for native-like mobile experience <br/>
+          Customizable overview layouts <br/>
           Dark mode
     - title: AI-Powered Features
       icon: 🤖
       details:
-          Receipt image recognition <br/>
-          MCP (Model Context Protocol) support for AI integration <br/>
-          Agent Skill and API command-line script tools support for AI integration
+          Text and receipt image recognition <br/>
+          MCP (Model Context Protocol) for AI integration <br/>
+          Agent Skill and API command-line script tools for AI integration
     - title: Powerful Bookkeeping
       icon: 📘
       details:
@@ -76,7 +77,8 @@ features:
     - title: Data Import & Export
       icon: 📑
       details:
-          Supports CSV, OFX, QFX, QIF, IIF, Camt.052, Camt.053, MT940, GnuCash, Firefly III, Beancount and more
+          Import CSV, Excel, OFX, QFX, QIF, IIF, Camt.052, Camt.053, MT940, GnuCash, Firefly III, Beancount and more <br/>
+          Custom column mapping, rules and scripts for CSV / Excel imports
 
 sitemap:
     - name: Docs
