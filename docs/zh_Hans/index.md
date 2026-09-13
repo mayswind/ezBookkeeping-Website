@@ -3,7 +3,7 @@ layout: home
 
 hero:
     name: "ezBookkeeping"
-    tagline: "功能强大、轻量易用的自托管 (self-hosted) 个人记账应用"
+    tagline: "开源、强大、易用的自托管 (self-hosted) 个人记账应用"
     actions:
         - theme: brand
           text: 快速开始

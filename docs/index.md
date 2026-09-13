@@ -3,7 +3,7 @@ layout: home
 
 hero:
     name: "ezBookkeeping"
-    tagline: "A powerful, lightweight, self-hosted personal finance app that is easy to use"
+    tagline: "Open source, powerful, self-hosted personal finance app that is easy to use"
     actions:
         - theme: brand
           text: Get Started

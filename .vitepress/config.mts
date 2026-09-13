@@ -3,10 +3,10 @@ import { type HeadConfig, defineConfig, resolveSiteDataByRoute } from 'vitepress
 const websiteName: string = 'ezBookkeeping';
 const websiteUrlRootUrl: string = 'https://ezbookkeeping.mayswind.net';
 const demoWebsiteRootUrl: string = 'https://ezbookkeeping-demo.mayswind.net/';
-const titleEn: string = 'ezBookkeeping - a open source, lightweight, self-hosted personal finance app';
-const titleZhHans: string = 'ezBookkeeping - 开源、轻量、自托管 (self-hosted) 的个人记账应用';
-const descriptionEn: string = 'ezBookkeeping is a open source, lightweight, self-hosted personal finance app with a user-friendly interface and powerful bookkeeping features.';
-const descriptionZhHans: string = 'ezBookkeeping 是一款开源、轻量、自托管 (self-hosted) 的个人记账应用，拥有用户友好的界面和强大的记账功能。';
+const titleEn: string = 'ezBookkeeping - open source, powerful, self-hosted personal finance app that is easy to use';
+const titleZhHans: string = 'ezBookkeeping - 开源、强大、易用的自托管 (self-hosted) 个人记账应用';
+const descriptionEn: string = 'ezBookkeeping is an open source, powerful, self-hosted personal finance app that is easy to use.';
+const descriptionZhHans: string = 'ezBookkeeping 是一款开源、强大、易用的自托管 (self-hosted) 个人记账应用。';
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
