@@ -161,6 +161,7 @@ ezBookkeeping uses a lightweight tech stack and an efficient architecture to kee
 | Sunburst Chart | ≥ 1.5.0 |
 | Heatmap Chart | ≥ 1.5.0 |
 | Calendar Heatmap Chart | ≥ 1.5.0 |
+| Custom Chart (custom script) | ≥ 2.0.0 |
 
 ### Supported Axis / Category / Series in Insights Explorer
 
