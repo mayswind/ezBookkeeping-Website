@@ -344,7 +344,8 @@ ezBookkeeping uses a lightweight tech stack and an efficient architecture to kee
 | Item | Supported Version |
 | --- | --- |
 | Local File System | ≥ 0.5.0 |
-| S3 Compatible / MinIO | ≥ 0.5.0 |
+| S3 | ≥ 2.0.0 |
+| MinIO (S3-compatible) | ≥ 0.5.0 |
 | WebDAV | ≥ 1.0.0 |
 
 ## Map Provider

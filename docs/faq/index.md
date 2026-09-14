@@ -69,7 +69,7 @@ If you're using MySQL or PostgreSQL, database files are managed by the database 
 
 If you're using `local_filesystem` object storage type, object storage files are stored by default in the `storage` directory next to the ezBookkeeping executable file. When running via a Docker image, the default path inside the container is `/ezbookkeeping/storage/`. You can change this path in the configuration file. For details, see `local_filesystem_path` in [Configuration - Object Storage](/configuration/#object-storage).
 
-If you're using `minio` or `webdav` object storage type, files are managed by the object storage system.
+If you're using `s3`, `minio` or `webdav` object storage type, files are managed by the object storage system.
 
 > How to backup the database and object storage files?
 >
@@ -77,11 +77,12 @@ If you're using `minio` or `webdav` object storage type, files are managed by th
 > 1. Use `mysqldump` to dump a MySQL database
 > 2. Use `mariadb-dump` to dump a MariaDB database
 > 3. Use `pg_dump` to dump a PostgreSQL database
-> 4. Use `mc` to copy files from MinIO object storage
+> 4. Use `rc` to copy files from RustFS object storage
+> 5. Use `mc` to copy files from MinIO object storage
 
 ## How to migrate ezBookkeeping data
 
-If you're using MySQL or PostgreSQL as database along with either the `minio` or `webdav` object storage type (or if you're not storing user avatars or transaction pictures), then ezBookkeeping itself is stateless and requires no data migration.
+If you're using MySQL or PostgreSQL as database along with either the `s3`, `minio` or `webdav` object storage type (or if you're not storing user avatars or transaction pictures), then ezBookkeeping itself is stateless and requires no data migration.
 
 ### Migrating the Database
 
@@ -99,7 +100,7 @@ ezBookkeeping recommends using the SQLite database only for testing purposes. If
 ### Migrating Object Storage
 
 1. `local_filesystem` → `local_filesystem`: Simply copy all files from the object storage directory (default: `storage`) to the new location.
-2. Other combinations (e.g. `local_filesystem` → `minio` / `webdav` or vice versa): After initializing the new object storage with ezBookkeeping, use third-party tools to synchronize the stored files.
+2. Other combinations (e.g. `local_filesystem` → `s3` / `minio` / `webdav` or vice versa): After initializing the new object storage with ezBookkeeping, use third-party tools to synchronize the stored files.
 
 ## How to upgrade ezBookkeeping
 

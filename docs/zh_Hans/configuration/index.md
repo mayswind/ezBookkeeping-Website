@@ -104,8 +104,18 @@ ezBookkeeping 使用 ini 文件作为配置文件。
 
 | 选项名 | 默认值 | 描述 |
 | --- | --- | --- |
-| `type` | `local_filesystem` | 对象存储类型，当前支持 `local_filesystem`、`minio` 和 `webdav`。 |
+| `type` | `local_filesystem` | 对象存储类型，当前支持 `local_filesystem`、`s3`、`minio` 和 `webdav`。 |
 | `local_filesystem_path` | `storage/` | 使用 `local_filesystem` 对象存储时，对象文件的根目录。该值可以设置为相对或绝对路径。 |
+| `s3_endpoint` | `127.0.0.1:9000` | 使用 `s3` 对象存储时，S3 兼容服务的端点地址。 |
+| `s3_region` | `us-east-1` | 使用 `s3` 对象存储时，S3 兼容服务的区域，该选项必须设置，若自建服务无区域信息，可任意设置，如 `us-east-1`。 |
+| `s3_access_key_id` |  | 使用 `s3` 对象存储时，S3 兼容服务的 Access Key ID。 |
+| `s3_secret_access_key` |  | 使用 `s3` 对象存储时，S3 兼容服务的 Secret Access Key。 |
+| `s3_session_token` |  | 使用 `s3` 对象存储时，S3 兼容服务的会话令牌。 |
+| `s3_use_ssl` | `false` | 使用 `s3` 对象存储时，连接是否启用 SSL。 |
+| `s3_skip_tls_verify` | `false` | 使用 `s3` 对象存储时，是否校验 S3 兼容服务器的证书链和主机名称。 |
+| `s3_use_path_style` | `false` | 使用 `s3` 对象存储时，是否使用路径样式寻址。 |
+| `s3_bucket` | `ezbookkeeping` | 使用 `s3` 对象存储时，S3 兼容服务的 Bucket 名称。 |
+| `s3_root_path` | `/` | 使用 `s3` 对象存储时，Bucket 中存储对象文件的根目录。 |
 | `minio_endpoint` | `127.0.0.1:9000` | 使用 `minio` 对象存储时，MinIO 端点地址。 |
 | `minio_location` |  | 使用 `minio` 对象存储时，MinIO 区域。 |
 | `minio_access_key_id` |  | 使用 `minio` 对象存储时，MinIO Access Key ID。 |

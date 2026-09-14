@@ -69,7 +69,7 @@ ezBookkeeping 大部分数据都存储在数据库中，用户的头像、交易
 
 如果你使用 `local_filesystem` 对象存储类型，则对象存储文件的默认位置为 ezBookkeeping 可执行文件目录下的 `storage` 目录，如果你使用 Docker 镜像部署，则数据库文件的默认路径为容器内的 `/ezbookkeeping/storage/`。你可以通过配置文件修改这个路径，更多信息见 [配置 - 对象存储](/zh_Hans/configuration/#对象存储) 中的 `local_filesystem_path`。
 
-如果你使用 `minio` 或 `webdav` 对象存储类型，对象存储的文件通过对象存储系统进行管理。
+如果你使用 `s3`、`minio` 或 `webdav` 对象存储类型，对象存储的文件通过对象存储系统进行管理。
 
 > 如何备份数据库和对象存储文件？
 >
@@ -77,11 +77,12 @@ ezBookkeeping 大部分数据都存储在数据库中，用户的头像、交易
 > 1. 使用 `mysqldump` Dump MySQL 数据库
 > 2. 使用 `mariadb-dump` Dump MariaDB 数据库
 > 3. 使用 `pg_dump` Dump PostgreSQL 数据库
-> 4. 使用 `mc` 复制 MinIO 对象存储中的文件
+> 4. 使用 `rc` 复制 RustFS 对象存储中的文件
+> 5. 使用 `mc` 复制 MinIO 对象存储中的文件
 
 ## 如何迁移 ezBookkeeping 的数据
 
-若您使用 MySQL 或 PostgreSQL 作为数据库，同时使用 `minio` 或 `webdav` 对象存储类型（或不存储用户头像或交易图片文件），则 ezBookkeeping 本身是无状态的，不需要迁移任何数据。
+若您使用 MySQL 或 PostgreSQL 作为数据库，同时使用 `s3`、`minio` 或 `webdav` 对象存储类型（或不存储用户头像或交易图片文件），则 ezBookkeeping 本身是无状态的，不需要迁移任何数据。
 
 ### 迁移数据库
 
@@ -99,7 +100,7 @@ ezBookkeeping 建议仅测试时使用 SQLite 数据库。如果您确定使用 
 ### 迁移对象存储
 
 1.  `local_filesystem` → `local_filesystem`：只需要复制对象存储目录下（默认为 `storage`）下所有文件即可
-2. 其他组合（例如 `local_filesystem` → `minio` / `webdav`，或相反），请在使用 ezBookkeeping 初始化新的对象存储目录后，使用第三方工具将存储的文件进行同步
+2. 其他组合（例如 `local_filesystem` → `s3` / `minio` / `webdav`，或相反），请在使用 ezBookkeeping 初始化新的对象存储目录后，使用第三方工具将存储的文件进行同步
 
 ## ezBookkeeping 如何升级
 

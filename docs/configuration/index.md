@@ -104,8 +104,18 @@ Note that if the same configuration option is set using all three methods above,
 
 | Option Name | Default Value | Description |
 | --- | --- | --- |
-| `type` | `local_filesystem` | Object storage type, supports `local_filesystem`, `minio` and `webdav` currently. |
+| `type` | `local_filesystem` | Object storage type, supports `local_filesystem`, `s3`, `minio` and `webdav` currently. |
 | `local_filesystem_path` | `storage/` | The root path of the object files, for `local_filesystem` object storage. The value can be relative or absolute path. |
+| `s3_endpoint` | `127.0.0.1:9000` | S3-compatible service endpoint address, for `s3` object storage. |
+| `s3_region` | `us-east-1` | S3-compatible service region, for `s3` object storage. This option must be set, if the self-hosted service has no region information, you can set it arbitrarily, such as `us-east-1`. |
+| `s3_access_key_id` |  | S3-compatible service Access Key ID, for `s3` object storage. |
+| `s3_secret_access_key` |  | S3-compatible service Secret Access Key, for `s3` object storage. |
+| `s3_session_token` |  | S3-compatible service session token, for `s3` object storage. |
+| `s3_use_ssl` | `false` | Whether to enable SSL for connection, for `s3` object storage. |
+| `s3_skip_tls_verify` | `false` | Whether to verify the S3-compatible server's certificate chain and host name, for `s3` object storage. |
+| `s3_use_path_style` | `false` | Whether to use path-style addressing, for `s3` object storage. |
+| `s3_bucket` | `ezbookkeeping` | S3-compatible service bucket name, for `s3` object storage. |
+| `s3_root_path` | `/` | The root path of the object files in bucket, for `s3` object storage. |
 | `minio_endpoint` | `127.0.0.1:9000` | MinIO endpoint address, for `minio` object storage. |
 | `minio_location` |  | MinIO location, for `minio` object storage. |
 | `minio_access_key_id` |  | MinIO Access Key ID, for `minio` object storage. |
