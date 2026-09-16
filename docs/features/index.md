@@ -76,6 +76,7 @@ ezBookkeeping uses a lightweight tech stack and an efficient architecture to kee
 | Account icon (user custom) | ≥ 2.0.0 |
 | Account color | ≥ 0.1.0 |
 | Credit card statement date | ≥ 0.7.0 |
+| Credit card credit limit | ≥ 2.0.0 |
 | Account archiving (hidden accounts) | ≥ 0.1.0 |
 | Account display order | ≥ 0.1.0 |
 | Account notes / description | ≥ 0.1.0 |
@@ -104,6 +105,7 @@ ezBookkeeping uses a lightweight tech stack and an efficient architecture to kee
 | Category income / expense proportion charts | ≥ 0.1.0 |
 | Account income / expense proportion charts | ≥ 0.1.0 |
 | Asset proportion charts | ≥ 0.1.0 |
+| Asset proportion charts (by currency) | ≥ 2.0.0 |
 | Category income / expense trend charts | ≥ 0.5.0 |
 | Account income / expense trend charts | ≥ 0.5.0 |
 | Asset trend charts | ≥ 1.2.0 |
@@ -154,8 +156,11 @@ ezBookkeeping uses a lightweight tech stack and an efficient architecture to kee
 | Column Chart (100% Stacked) | ≥ 1.3.0 |
 | Column Chart (Grouped) | ≥ 1.3.0 |
 | Line Chart (Grouped) | ≥ 1.3.0 |
+| Smooth Line Chart (Grouped) | ≥ 2.0.0 |
 | Area Chart (Stacked) | ≥ 1.3.0 |
 | Area Chart (100% Stacked) | ≥ 1.3.0 |
+| Smooth Area Chart (Stacked) | ≥ 2.0.0 |
+| Smooth Area Chart (100% Stacked) | ≥ 2.0.0 |
 | Bubble Chart (Grouped) | ≥ 1.3.0 |
 | Treemap Chart | ≥ 1.5.0 |
 | Sunburst Chart | ≥ 1.5.0 |
@@ -209,6 +214,7 @@ ezBookkeeping uses a lightweight tech stack and an efficient architecture to kee
 | Transaction Count | ≥ 1.3.0 |
 | Active Transaction Days | ≥ 1.5.0 |
 | Transactions per Active Day | ≥ 1.5.0 |
+| Average Amount per Active Day | ≥ 2.0.0 |
 | Total Amount | ≥ 1.3.0 |
 | Total Income | ≥ 1.5.0 |
 | Total Expense | ≥ 1.5.0 |
@@ -332,6 +338,7 @@ ezBookkeeping uses a lightweight tech stack and an efficient architecture to kee
 | --- | --- |
 | OpenAI | ≥ 1.1.0 |
 | OpenAI Compatible API | ≥ 1.1.0 |
+| OpenAI Responses Compatible API | ≥ 2.0.0 |
 | OpenRouter | ≥ 1.1.0 |
 | Anthropic | ≥ 1.4.0 |
 | Anthropic Compatible API | ≥ 1.4.0 |
