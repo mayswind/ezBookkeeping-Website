@@ -421,6 +421,7 @@ ezBookkeeping uses a lightweight tech stack and an efficient architecture to kee
 | Kannada | ≥ 1.3.0 |
 | Korean | ≥ 1.2.0 |
 | Dutch | ≥ 1.0.0 |
+| Polish | ≥ 2.1.0 |
 | Portuguese (Brazil) | ≥ 0.10.0 |
 | Romanian | ≥ 1.6.0 |
 | Russian | ≥ 0.8.0 |
