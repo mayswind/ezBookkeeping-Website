@@ -330,6 +330,7 @@ ezBookkeeping 通过使用了更轻量的技术栈和更高效的架构设计，
 | AI 剪贴板文本识别 | ≥ 1.6.0 |
 | AI 识图 | ≥ 1.1.0 |
 | 通过 Web Share Target API Level 2 进行 AI 识图 | ≥ 1.4.0 |
+| AI 自定义图表代码生成 | ≥ 2.1.0 |
 | Agent Skill | ≥ 1.4.0 |
 
 ## 大语言模型提供方

@@ -140,6 +140,7 @@ ezBookkeeping 使用 ini 文件作为配置文件。
 | --- | --- | --- |
 | `transaction_from_ai_text_recognition` | `false` | 是否启用 AI 文本识别创建交易，需要在 `llm_text_recognition` 配置节中正确配置 `llm_provider` 及其相关的模型ID。 |
 | `transaction_from_ai_image_recognition` | `false` | 是否启用 AI 识图创建交易，需要在 `llm_image_recognition` 配置节中正确配置 `llm_provider` 及其相关的模型ID。 |
+| `insights_explorer_coding_assistant` | `false` | 是否启用洞察探索的 AI 自定义图表代码生成，需要在 `llm_coding_assistant` 配置节中正确配置 `llm_provider` 及其相关的模型ID。 |
 | `max_ai_recognition_picture_size` | `10485760` | 最大允许的 AI 识图的文件大小（1 – 4294967295 字节）。 |
 
 ## 文本识别的大语言模型 (LLM)
@@ -210,6 +211,42 @@ ezBookkeeping 使用 ini 文件作为配置文件。
 | `lm_studio_model_id` |  | 使用 `lm_studio` 大语言模型提供方时，用于识别收据图片并创建交易的模型ID。 |
 | `google_ai_api_key` |  | 使用 `google_ai` 大语言模型提供方时，Google AI 的 API Key，请访问 [https://aistudio.google.com/apikey](https://aistudio.google.com/apikey) 获取更多信息。 |
 | `google_ai_model_id` |  | 使用 `google_ai` 大语言模型提供方时，用于识别收据图片并创建交易的模型ID。 |
+| `request_timeout` | `60000` | 请求大语言模型 API 的超时时间（0 – 4294967295 毫秒）。设置为 `0` 时禁用请求大语言模型 API 超时。 |
+| `proxy` | `system` | 请求大语言模型 API 使用的代理，支持 `system`（使用系统代理） `none`（不使用代理），或以 `http://`、`https://` 或 `socks5://` 开头的代理服务器地址。 |
+| `skip_tls_verify` | `false` | 请求大语言模型 API 时是否跳过服务器证书链和主机名称的校验。 |
+
+## 代码生成的大语言模型 (LLM)
+
+> 配置节名称为 `llm_coding_assistant`
+
+| 选项名 | 默认值 | 描述 |
+| --- | --- | --- |
+| `llm_provider` |  | 用于代码生成的大语言模型 (LLM) 提供方，支持 `openai`、`openai_compatible`、`openai_responses_compatible`、`anthropic`、`anthropic_compatible`、`openrouter`、`ollama`、`lm_studio` 和 `google_ai`。使用第三方大语言模型提供方时，请注意潜在的隐私风险，具体参考 [常见问题 - ezBookkeeping 使用了哪些第三方服务，以及是否会使用我的个人数据](/zh_Hans/faq/#ezbookkeeping-使用了哪些第三方服务-以及是否会使用我的个人数据)。 |
+| `enable_thinking` |  | 是否启用大语言模型的思考功能，支持如下级别<br/>`off`：禁用思考（支持所有提供方）。<br/>`low` / `medium` / `high` / `xhigh`：启用相应思考级别（支持`openai`、`openai_compatible`、`openai_responses_compatible`、`openrouter`、`ollama`、`lm_studio` 和 `google_ai` 提供方）。<br/>`on`：启用默认思考级别（支持 `anthropic`、`anthropic_compatible`、`ollama` 和 `lm_studio` 提供方）。<br/>留空使用大语言模型提供方默认设置。 |
+| `openai_api_key` |  | 使用 `openai` 大语言模型提供方时，OpenAI 的 API Secret Key，请访问 [https://platform.openai.com/api-keys](https://platform.openai.com/api-keys) 获取更多信息。 |
+| `openai_model_id` |  | 使用 `openai` 大语言模型提供方时，用于代码生成的模型ID。 |
+| `openai_compatible_base_url` |  | 使用 `openai_compatible`（使用 Chat Completions API） 和 `openai_responses_compatible`（使用 Responses API） 大语言模型提供方时，OpenAI 兼容 API 的基础地址，例如 `https://api.openai.com/v1/`。 |
+| `openai_compatible_api_key` |  | 使用 `openai_compatible`（使用 Chat Completions API） 和 `openai_responses_compatible`（使用 Responses API） 大语言模型提供方时，OpenAI 兼容 API 的 API Key。 |
+| `openai_compatible_model_id` |  | 使用 `openai_compatible`（使用 Chat Completions API） 和 `openai_responses_compatible`（使用 Responses API） 大语言模型提供方时，用于代码生成的模型ID。 |
+| `anthropic_api_key` |  | 使用 `anthropic` 大语言模型提供方时，Anthropic 的 API Key，请访问 [https://platform.claude.com/settings/keys](https://platform.claude.com/settings/keys) 获取更多信息。 |
+| `anthropic_model_id` |  | 使用 `anthropic` 大语言模型提供方时，用于代码生成的模型ID。 |
+| `anthropic_max_tokens` | `1024` | 使用 `anthropic` 大语言模型提供方时，用于代码生成时最大允许生成的 token 数量（1 – 4294967295）。 |
+| `anthropic_thinking_budget_tokens` | `1024` | 使用 `anthropic` 大语言模型提供方同时开启 `enable_thinking` 时，用于代码生成时最大允许思考使用的 token 数量（1 – 4294967295）。 |
+| `anthropic_compatible_base_url` |  | 使用 `anthropic_compatible` 大语言模型提供方时，Anthropic 兼容 API 的基础地址，例如 `https://api.anthropic.com/v1/`。 |
+| `anthropic_compatible_api_version` |  | 使用 `anthropic_compatible` 大语言模型提供方时，Anthropic 兼容 API 的 API 版本号，例如 `2023-06-01`，如果提供方不要求指定版本号，留空即可。 |
+| `anthropic_compatible_api_key` |  | 使用 `anthropic_compatible` 大语言模型提供方时，Anthropic 兼容 API 的 API Key。 |
+| `anthropic_compatible_model_id` |  | 使用 `anthropic_compatible` 大语言模型提供方时，用于代码生成的模型ID。 |
+| `anthropic_compatible_max_tokens` | `1024` | 使用 `anthropic_compatible` 大语言模型提供方时，用于代码生成时最大允许生成的 token 数量（1 – 4294967295）。 |
+| `anthropic_compatible_thinking_budget_tokens` | `1024` | 使用 `anthropic_compatible` 大语言模型提供方同时开启 `enable_thinking` 时，用于代码生成时最大允许思考使用的 token 数量（1 – 4294967295）。 |
+| `openrouter_api_key` |  | 使用 `openrouter` 大语言模型提供方时，OpenRouter 的 API Key，请访问 [https://openrouter.ai/settings/keys](https://openrouter.ai/settings/keys) 获取更多信息。 |
+| `openrouter_model_id` |  | 使用 `openrouter` 大语言模型提供方时，用于代码生成的模型ID。 |
+| `ollama_server_url` |  | 使用 `ollama` 大语言模型提供方时，Ollama 的服务器地址，例如 `http://127.0.0.1:11434/`。 |
+| `ollama_model_id` |  | 使用 `ollama` 大语言模型提供方时，用于代码生成的模型ID。 |
+| `lm_studio_server_url` |  | 使用 `lm_studio` 大语言模型提供方时，LM Studio 的服务器地址，例如 `http://127.0.0.1:1234/`。 |
+| `lm_studio_token` |  | 使用 `lm_studio` 大语言模型提供方时，LM Studio 的 API Token。如果 LM Studio 没有启用认证，留空即可。 |
+| `lm_studio_model_id` |  | 使用 `lm_studio` 大语言模型提供方时，用于代码生成的模型ID。 |
+| `google_ai_api_key` |  | 使用 `google_ai` 大语言模型提供方时，Google AI 的 API Key，请访问 [https://aistudio.google.com/apikey](https://aistudio.google.com/apikey) 获取更多信息。 |
+| `google_ai_model_id` |  | 使用 `google_ai` 大语言模型提供方时，用于代码生成的模型ID。 |
 | `request_timeout` | `60000` | 请求大语言模型 API 的超时时间（0 – 4294967295 毫秒）。设置为 `0` 时禁用请求大语言模型 API 超时。 |
 | `proxy` | `system` | 请求大语言模型 API 使用的代理，支持 `system`（使用系统代理） `none`（不使用代理），或以 `http://`、`https://` 或 `socks5://` 开头的代理服务器地址。 |
 | `skip_tls_verify` | `false` | 请求大语言模型 API 时是否跳过服务器证书链和主机名称的校验。 |

@@ -140,6 +140,7 @@ Note that if the same configuration option is set using all three methods above,
 | --- | --- | --- |
 | `transaction_from_ai_text_recognition` | `false` | Whether to enable creating transactions from AI text recognition results, requires `llm_provider` and its related model id to be configured properly in `llm_text_recognition` section. |
 | `transaction_from_ai_image_recognition` | `false` | Whether to enable creating transactions from AI image recognition results, requires `llm_provider` and its related model id to be configured properly in `llm_image_recognition` section. |
+| `insights_explorer_coding_assistant` | `false` | Whether to enable AI custom chart code generation for Insights Explorer, requires `llm_provider` and its related model id to be configured properly in `llm_coding_assistant` section. |
 | `max_ai_recognition_picture_size` | `10485760` | Maximum allowed AI recognition picture file size (1 – 4294967295 bytes). |
 
 ## Large Language Model for text recognition
@@ -210,6 +211,42 @@ Note that if the same configuration option is set using all three methods above,
 | `lm_studio_model_id` |  | Model ID for the `lm_studio` LLM provider, used for receipt image recognition and transaction creation. |
 | `google_ai_api_key` |  | Google AI API Key for `google_ai` LLM provider, please visit [https://aistudio.google.com/apikey](https://aistudio.google.com/apikey) for more information. |
 | `google_ai_model_id` |  | Model ID for the `google_ai` LLM provider, used for receipt image recognition and transaction creation. |
+| `request_timeout` | `60000` | Request timeout for LLM API (0 – 4294967295 milliseconds). Set to `0` to disable timeout for requesting LLM API. |
+| `proxy` | `system` | Proxy for requesting LLM API, supports `system` (use system proxy), `none` (do not use proxy), or proxy URL which starts with `http://`, `https://` or `socks5://`. |
+| `skip_tls_verify` | `false` | Whether to skip the server's certificate chain and host name verification when request LLM API. |
+
+## Large Language Model for code generation
+
+> Section name is `llm_coding_assistant`
+
+| Option Name | Default Value | Description |
+| --- | --- | --- |
+| `llm_provider` |  | Large Language Model (LLM) provider for code generation, supports `openai`, `openai_compatible`, `openai_responses_compatible`, `anthropic`, `anthropic_compatible`, `openrouter`, `ollama`, `lm_studio` and `google_ai`. When using a third-party LLM provider, please be aware of potential privacy risks. For more details, see [FAQ - What third-party services does ezBookkeeping use, and does it access my personal data](/faq/#what-third-party-services-does-ezbookkeeping-use-and-does-it-access-my-personal-data). |
+| `enable_thinking` |  | Whether to enable thinking for the large language model, supports the following levels:<br/>`off`: disable thinking (supports all providers).<br/>`low` / `medium` / `high` / `xhigh`: enable thinking with the corresponding reasoning effort (supports `openai`, `openai_compatible`, `openai_responses_compatible`, `openrouter`, `ollama`, `lm_studio` and `google_ai` providers).<br/>`on`: enable thinking with the default reasoning effort (supports `anthropic`, `anthropic_compatible`, `ollama` and `lm_studio` providers).<br/>Leave blank to use the default setting of the LLM provider |
+| `openai_api_key` |  | OpenAI API Secret Key for `openai` LLM provider, please visit [https://platform.openai.com/api-keys](https://platform.openai.com/api-keys) for more information. |
+| `openai_model_id` |  | Model ID for the `openai` LLM provider, used for code generation. |
+| `openai_compatible_base_url` |  | OpenAI compatible API base url for `openai_compatible` (Use Chat Completions API) and `openai_responses_compatible` (Use Responses API) LLM provider, e.g. `https://api.openai.com/v1/`. |
+| `openai_compatible_api_key` |  | OpenAI compatible API Key for `openai_compatible` (Use Chat Completions API) and `openai_responses_compatible` (Use Responses API) LLM provider. |
+| `openai_compatible_model_id` |  | Model ID for the `openai_compatible` (Use Chat Completions API) and `openai_responses_compatible` (Use Responses API) LLM provider, used for code generation. |
+| `anthropic_api_key` |  | Anthropic API Key for `anthropic` LLM provider, please visit [https://platform.claude.com/settings/keys](https://platform.claude.com/settings/keys) for more information. |
+| `anthropic_model_id` |  | Model ID for the `anthropic` LLM provider, used for code generation. |
+| `anthropic_max_tokens` | `1024` | Maximum allowed number of generated tokens (1 – 4294967295) for the `anthropic` LLM provider, used for code generation. |
+| `anthropic_thinking_budget_tokens` | `1024` | Maximum allowed number of thinking budget tokens (1 – 4294967295) when `enable_thinking` is enabled for the `anthropic` LLM provider, used for code generation. |
+| `anthropic_compatible_base_url` |  | Anthropic compatible API base url for `anthropic_compatible` LLM provider, e.g. `https://api.anthropic.com/v1/`. |
+| `anthropic_compatible_api_version` |  | Anthropic compatible API version for `anthropic_compatible` LLM provider, e.g. `2023-06-01`. If the provider does not require API versioning, leave it blank. |
+| `anthropic_compatible_api_key` |  | Anthropic compatible API Key for `anthropic_compatible` LLM provider. |
+| `anthropic_compatible_model_id` |  | Model ID for the `anthropic_compatible` LLM provider, used for code generation. |
+| `anthropic_compatible_max_tokens` | `1024` | Maximum allowed number of generated tokens (1 – 4294967295) for the `anthropic_compatible` LLM provider, used for code generation. |
+| `anthropic_compatible_thinking_budget_tokens` | `1024` | Maximum allowed number of thinking budget tokens (1 – 4294967295) when `enable_thinking` is enabled for the `anthropic_compatible` LLM provider, used for code generation. |
+| `openrouter_api_key` |  | OpenRouter API secret key for `openrouter` LLM provider, please visit [https://openrouter.ai/settings/keys](https://openrouter.ai/settings/keys) for more information. |
+| `openrouter_model_id` |  | Model ID for the `openrouter` LLM provider, used for code generation. |
+| `ollama_server_url` |  | Ollama server url for `ollama` LLM provider, e.g. `http://127.0.0.1:11434/`. |
+| `ollama_model_id` |  | Model ID for the `ollama` LLM provider, used for code generation. |
+| `lm_studio_server_url` |  | LM Studio server url for `lm_studio` LLM provider, e.g. `http://127.0.0.1:1234/`. |
+| `lm_studio_token` |  | LM Studio API token for `lm_studio` LLM provider, if "require authentication" is not enabled in LM Studio, leave it blank. |
+| `lm_studio_model_id` |  | Model ID for the `lm_studio` LLM provider, used for code generation. |
+| `google_ai_api_key` |  | Google AI API Key for `google_ai` LLM provider, please visit [https://aistudio.google.com/apikey](https://aistudio.google.com/apikey) for more information. |
+| `google_ai_model_id` |  | Model ID for the `google_ai` LLM provider, used for code generation. |
 | `request_timeout` | `60000` | Request timeout for LLM API (0 – 4294967295 milliseconds). Set to `0` to disable timeout for requesting LLM API. |
 | `proxy` | `system` | Proxy for requesting LLM API, supports `system` (use system proxy), `none` (do not use proxy), or proxy URL which starts with `http://`, `https://` or `socks5://`. |
 | `skip_tls_verify` | `false` | Whether to skip the server's certificate chain and host name verification when request LLM API. |

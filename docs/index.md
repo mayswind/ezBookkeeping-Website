@@ -50,6 +50,7 @@ features:
       icon: 🤖
       details:
           Text and receipt image recognition <br/>
+          AI custom chart generation <br/>
           MCP (Model Context Protocol) for AI integration <br/>
           Agent Skill and API command-line script tools for AI integration
     - title: Powerful Bookkeeping
