@@ -132,9 +132,9 @@ Note that if the same configuration option is set using all three methods above,
 | `webdav_proxy` | `system` | Proxy for requesting WebDAV url, supports `system` (use system proxy), `none` (do not use proxy), or proxy URL which starts with `http://`, `https://` or `socks5://`. |
 | `webdav_skip_tls_verify` | `false` | Whether to skip the server's certificate chain and host name verification when request WebDAV url. |
 
-## Large Language Model
+## Artificial Intelligence
 
-> Section name is `llm`
+> Section name is `ai`
 
 | Option Name | Default Value | Description |
 | --- | --- | --- |

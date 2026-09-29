@@ -132,9 +132,9 @@ ezBookkeeping 使用 ini 文件作为配置文件。
 | `webdav_proxy` | `system` | 请求 WebDAV 地址使用的代理，支持 `system`（使用系统代理） `none`（不使用代理），或以 `http://`、`https://` 或 `socks5://` 开头的代理服务器地址。 |
 | `webdav_skip_tls_verify` | `false` | 请求 WebDAV 地址时是否跳过服务器证书链和主机名称的校验。 |
 
-## 大语言模型 (LLM)
+## 人工智能
 
-> 配置节名称为 `llm`
+> 配置节名称为 `ai`
 
 | 选项名 | 默认值 | 描述 |
 | --- | --- | --- |

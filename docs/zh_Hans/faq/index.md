@@ -236,7 +236,7 @@ ezBookkeeping 的交易列表和交易详情页默认都是按交易时区显示
 
 ## 如何使用AI剪贴板文本识别创建交易
 
-首先，需要设置大语言模型（LLM）设置。在 `llm` 节中启用 `transaction_from_ai_text_recognition` 以允许AI剪贴板文本识别创建交易。然后在 `llm_text_recognition` 节中设置 `llm_provider` 以及对应大语言模型提供者的 API Key、模型ID等设置。请确保指定的模型支持文本识别。更多信息见 [配置 - 大语言模型 (LLM)](/zh_Hans/configuration/#大语言模型-llm)。
+首先，需要设置人工智能和大语言模型（LLM）设置。在 `ai` 节中启用 `transaction_from_ai_text_recognition` 以允许AI剪贴板文本识别创建交易。然后在 `llm_text_recognition` 节中设置 `llm_provider` 以及对应大语言模型提供者的 API Key、模型ID等设置。请确保指定的模型支持文本识别。更多信息见 [配置 - 人工智能](/zh_Hans/configuration/#人工智能)。
 
 在完成设置大语言模型的配置后，
 
@@ -245,7 +245,7 @@ ezBookkeeping 的交易列表和交易详情页默认都是按交易时区显示
 
 ## 如何使用AI识图创建交易
 
-首先，需要设置大语言模型（LLM）设置。在 `llm` 节中启用 `transaction_from_ai_image_recognition` 以允许AI识图创建交易。然后在 `llm_image_recognition` 节中设置 `llm_provider` 以及对应大语言模型提供者的 API Key、模型ID等设置。请确保指定的模型支持图片识别。更多信息见 [配置 - 大语言模型 (LLM)](/zh_Hans/configuration/#大语言模型-llm)。
+首先，需要设置人工智能和大语言模型（LLM）设置。在 `ai` 节中启用 `transaction_from_ai_image_recognition` 以允许AI识图创建交易。然后在 `llm_image_recognition` 节中设置 `llm_provider` 以及对应大语言模型提供者的 API Key、模型ID等设置。请确保指定的模型支持图片识别。更多信息见 [配置 - 人工智能](/zh_Hans/configuration/#人工智能)。
 
 在完成设置大语言模型的配置后，
 
@@ -296,7 +296,7 @@ ezBookkeeping 计算不同货币的总金额时依赖汇率数据，你需要确
 
 你可以直接修改 ezBookkeeping 目录中 `templates/email/` 目录下的 `.tmpl` 文件。如果使用 Docker 部署 ezBookkeeping，也可以直接将修改后的文件挂载到该目录下。需要保证该文件有权限被 ezBookkeeping 的进程启动用户读取。修改后需要重新启动 ezBookkeeping 服务端程序生效。
 
-## 如何修改 AI文本识别 / AI识图等请求大语言模型（LLM）的提示词
+## 如何修改 AI文本识别 / AI识图 / AI代码生成 等请求大语言模型（LLM）的提示词
 
 你可以直接修改 ezBookkeeping 目录中 `templates/prompt/` 目录下的 `.tmpl` 文件。如果使用 Docker 部署 ezBookkeeping，也可以直接将修改后的文件挂载到该目录下。需要保证该文件有权限被 ezBookkeeping 的进程启动用户读取。修改后需要重新启动 ezBookkeeping 服务端程序生效。
 
@@ -314,4 +314,4 @@ ezBookkeeping 中的汇率数据、头像、地图以及大语言模型（LLM）
 2. 头像：当用户使用 `gravatar` 类型的头像提供方时，用户的浏览器会将用户的邮箱地址的 MD5 哈希值发送给 Gravatar 服务端以获取用户头像，获取过程中包含用户浏览器的 User-Agent，即会包含用户的设备和浏览器信息，详情请参考 Gravatar 的隐私策略。使用 `internal` 类型的头像提供方或禁用用户头像时，不会依赖第三方服务
 3. 地图：当用户使用 ezBookkeeping 中的地图功能查看交易位置时，用户的浏览器或 ezBookkeeping 的服务端程序会获取第三方的地图数据，获取过程中包含用户浏览器的 User-Agent，即会包含用户的设备和浏览器信息，但不包含具体的位置及 ezBookkeeping 用户信息。如果你的地图提供者设置为 Google 地图、百度地图或高德地图，ezBookkeeping 使用地图提供者的官方 JavaScript SDK，虽然 ezBookkeeping 本身不会与这些服务共享任何用户信息，但地图提供者可能会收集用户的浏览器、设备及位置数据，详情请参考地图提供方的隐私策略
 4. 大语言模型-AI剪贴板文本识别 / AI识图 / 导入 AI 文本内容识别结果 / 导入 AI 图片内容识别结果：当用户使用 ezBookkeeping 的这些功能时，ezBookkeeping 会将用户粘贴的文本或上传的收据图片以及用户所有的交易分类名称、账户名称和交易标签名称数据发送给大语言模型提供者。ezBookkeeping 默认不启用这些功能，同时 ezBookkeeping 建议使用自托管的大语言模型服务。如果你使用第三方的大语言模型服务，请注意潜在的隐私风险，并采取措施减少数据的泄露（例如，粘贴前去除文本中的敏感信息、上传收据图片前去除敏感信息，以及避免在交易分类名、账户名、交易标签名中存储敏感信息等）
-5. 大语言模型-AI自定义图表代码生成：ezBookkeeping 仅会将用户输入的提示词和当前图表代码发送给大语言模型提供者，不会发送当前用户任何交易数据、账户数据等。大模型生成的代码仅在用户的浏览器中运行，但执行大语言模型生成的代码前请检查代码是否安全，避免潜在的安全风险
+5. 大语言模型-AI自定义图表代码生成：ezBookkeeping 仅会将用户输入的提示词和当前图表代码发送给大语言模型提供者，不会发送当前用户任何交易数据、账户数据等敏感信息。大模型生成的代码仅在用户浏览器的沙箱中运行，但请检查代码是否安全，避免潜在的安全风险
