@@ -522,6 +522,45 @@ This data source supports 47 currencies, and all currencies are as follows:
 | Vietnamese Dong | VND | Daily |
 | South African Rand | ZAR | Daily |
 
+## Central Bank of Malaysia
+
+> Reference: [https://www.bnm.gov.my/rates-statistics](https://www.bnm.gov.my/rates-statistics)
+
+The base currency is Malaysian ringgit (`MYR`). The daily exchange rates are usually updated at 09:00, 12:00 and 17:00 MYT (Malaysia Time) on every working day.
+
+This data source supports 26 currencies, and all currencies are as follows:
+
+| Currency | Currency Code | Update Frequency |
+| --- | --- | --- |
+| United Arab Emirates Dirham | AED | Daily |
+| Australian Dollar | AUD | Daily |
+| Brunei Dollar | BND | Daily |
+| Canadian Dollar | CAD | Daily |
+| Swiss Franc | CHF | Daily |
+| Chinese Yuan | CNY | Daily |
+| Egyptian Pound | EGP | Daily |
+| Euro | EUR | Daily |
+| British Pound | GBP | Daily |
+| Hong Kong Dollar | HKD | Daily |
+| Indonesian Rupiah | IDR | Daily |
+| Indian Rupee | INR | Daily |
+| Japanese Yen | JPY | Daily |
+| Cambodian Riel | KHR | Daily |
+| South Korean Won | KRW | Daily |
+| Myanmar Kyat | MMK | Daily |
+| Nepalese Rupee | NPR | Daily |
+| New Zealand Dollar | NZD | Daily |
+| Philippine Peso | PHP | Daily |
+| Pakistani Rupee | PKR | Daily |
+| Saudi Riyal | SAR | Daily |
+| Singapore Dollar | SGD | Daily |
+| Thai Baht | THB | Daily |
+| New Taiwan Dollar | TWD | Daily |
+| United States Dollar | USD | Daily |
+| Vietnamese Dong | VND | Daily |
+
+Configuration option `data_source` value is `central_bank_of_malaysia`
+
 ## Central Bank of Myanmar
 
 > Reference: [https://forex.cbm.gov.mm/index.php/fxrate](https://forex.cbm.gov.mm/index.php/fxrate)

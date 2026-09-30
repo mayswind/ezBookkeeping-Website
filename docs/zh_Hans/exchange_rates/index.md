@@ -522,6 +522,45 @@ ezBookkeeping 支持自动更新汇率以及支持多个不同数据源。您可
 | 越南盾 | VND | 每日 |
 | 南非兰特 | ZAR | 每日 |
 
+## 马来西亚国家银行
+
+> 参考：[https://www.bnm.gov.my/rates-statistics](https://www.bnm.gov.my/rates-statistics)
+
+基准货币是马来西亚林吉特（`MYR`）。每日汇率通常在工作日的 09:00、12:00 和 17:00（马来西亚时间 MYT）更新。
+
+该数据源支持 26 种货币，所有货币如下：
+
+| 货币 | 货币代码 | 更新频率 |
+| --- | --- | --- |
+| 阿联酋迪拉姆 | AED | 每日 |
+| 澳大利亚元 | AUD | 每日 |
+| 文莱元 | BND | 每日 |
+| 加拿大元 | CAD | 每日 |
+| 瑞士法郎 | CHF | 每日 |
+| 人民币 | CNY | 每日 |
+| 埃及镑 | EGP | 每日 |
+| 欧元 | EUR | 每日 |
+| 英镑 | GBP | 每日 |
+| 港元 | HKD | 每日 |
+| 印度尼西亚卢比 | IDR | 每日 |
+| 印度卢比 | INR | 每日 |
+| 日元 | JPY | 每日 |
+| 柬埔寨瑞尔 | KHR | 每日 |
+| 韩元 | KRW | 每日 |
+| 缅甸元 | MMK | 每日 |
+| 尼泊尔卢比 | NPR | 每日 |
+| 新西兰元 | NZD | 每日 |
+| 菲律宾比索 | PHP | 每日 |
+| 巴基斯坦卢比 | PKR | 每日 |
+| 沙特里亚尔 | SAR | 每日 |
+| 新加坡元 | SGD | 每日 |
+| 泰铢 | THB | 每日 |
+| 新台币 | TWD | 每日 |
+| 美元 | USD | 每日 |
+| 越南盾 | VND | 每日 |
+
+配置选项 `data_source` 的值是 `central_bank_of_malaysia`
+
 ## 缅甸中央银行
 
 > 参考：[https://forex.cbm.gov.mm/index.php/fxrate](https://forex.cbm.gov.mm/index.php/fxrate)
