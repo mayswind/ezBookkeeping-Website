@@ -96,7 +96,7 @@ Configuration option `data_source` value is `bank_of_canada`
 
 The base currency is Czech koruna (`CZK`). The daily exchange rates are usually updated after 14:30 CET (Central European Time) on every working day. The monthly exchange rates are usually updated on the last working day of the month.
 
-This data source supports 150 currencies, and all currencies are as follows:
+This data source supports 151 currencies, and all currencies are as follows:
 
 | Currency | Currency Code | Update Frequency |
 | --- | --- | --- |
@@ -245,6 +245,7 @@ This data source supports 150 currencies, and all currencies are as follows:
 | Samoan Tala | WST | Monthly |
 | Central African CFA Franc | XAF | Monthly |
 | East Caribbean Dollar | XCD | Monthly |
+| Caribbean Guilder | XCG | Monthly |
 | West African CFA Franc | XOF | Monthly |
 | CFP Franc | XPF | Monthly |
 | Yemeni Rial | YER | Monthly |
@@ -668,7 +669,7 @@ Configuration option `data_source` value is `norges_bank`
 
 The base currency is Polish złoty (`PLN`). The daily exchange rates are usually updated between 11:45 CET (Central European Time) and 12:15 CET on every working day. The weekly exchange rates are usually updated on Wednesdays.
 
-This data source supports 146 currencies, and all currencies are as follows:
+This data source supports 147 currencies, and all currencies are as follows:
 
 | Currency | Currency Code | Update Frequency |
 | --- | --- | --- |
@@ -812,6 +813,7 @@ This data source supports 146 currencies, and all currencies are as follows:
 | Samoan Tala | WST | Weekly |
 | Central African CFA Franc | XAF | Weekly |
 | East Caribbean Dollar | XCD | Weekly |
+| Caribbean Guilder | XCG | Weekly |
 | West African CFA Franc | XOF | Weekly |
 | CFP Franc | XPF | Weekly |
 | Yemeni Rial | YER | Weekly |
