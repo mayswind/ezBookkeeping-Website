@@ -419,3 +419,11 @@ ezBookkeeping 使用 ini 文件作为配置文件。
 | `request_timeout` | `10000` | 请求汇率数据的超时时间（0 – 4294967295 毫秒）。设置为 `0` 时禁用请求汇率数据超时。 |
 | `proxy` | `system` | ezbookkeeping 服务端请求汇率数据使用的代理，支持 `system`（使用系统代理） `none`（不使用代理），或以 `http://`、`https://` 或 `socks5://` 开头的代理服务器地址。 |
 | `skip_tls_verify` | `false` | 请求汇率数据时是否跳过服务器证书链和主机名称的校验。 |
+
+## 开发者工具
+
+> 配置节名称为 `developer`
+
+| 选项名 | 默认值 | 描述 |
+| --- | --- | --- |
+| `enable_language_preview` | `false` | 是否启用桌面版开发者工具中的语言配置预览。更多信息，请访问 [翻译 - 预览前端翻译](/zh_Hans/translating/#预览前端翻译)。 |

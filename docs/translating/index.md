@@ -97,3 +97,15 @@ These date and time formats are used in the following scenarios:
 | `shortTime` | Multiple scenarios |
 
 In addition, the timezone data is sourced from [nodatime](https://github.com/nodatime/nodatime/tree/main/data/cldr), and the localized timezone names are taken from [TimeZoneNames](https://github.com/mattjohnsonpint/TimeZoneNames/blob/main/src/TimeZoneNames.DataBuilder/data/windows-displaynames.json)
+
+## Preview frontend translations
+
+You can preview frontend language files directly in the desktop version without rebuilding the application. This feature is disabled by default. You can enable it by following [Configuration -  Developer Tools](/configuration/#developer-tools), or use it in the [Live Demo](https://ezbookkeeping-demo.mayswind.net).
+
+Open "Settings" -> "Developer Tools" -> "Preview Language Configuration" in the desktop version:
+
+1. Select the text direction: left-to-right (`ltr`) or right-to-left (`rtl`).
+2. Paste the complete language JSON into the text box, or click "Load Language Configuration File" to load a local JSON file.
+3. Click "Apply Preview". The current language configuration is replaced immediately, and you can navigate to other pages to check the result. After editing the local file, load it again and apply the preview to test your changes.
+
+The preview only affects the current page session and is discarded when the page is refreshed. It does not save changes to the language files. Click "Restore Built-in Language" to restore the original configuration without refreshing the page.

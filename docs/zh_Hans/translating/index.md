@@ -97,3 +97,15 @@ ezBookkeeping 允许用户更改多项区域设置，如日期、时间、数字
 | `shortTime` | 多个场景 |
 
 此外，时区的数据来自 [nodatime](https://github.com/nodatime/nodatime/tree/main/data/cldr) ，时区本地化的名称来自 [TimeZoneNames](https://github.com/mattjohnsonpint/TimeZoneNames/blob/main/src/TimeZoneNames.DataBuilder/data/windows-displaynames.json)
+
+## 预览前端翻译
+
+您可以在桌面版中直接预览前端语言文件，无需重新编译应用。该功能默认关闭，你可以参照 [配置 - 开发者工具](/zh_Hans/configuration/#开发者工具) 启用，或者可以在[在线演示](https://ezbookkeeping-demo.mayswind.net)的服务中使用。
+
+在桌面版中打开 “设置” -> “开发者工具” -> “预览语言配置”：
+
+1. 选择文字方向：从左到右（`ltr`）或从右到左（`rtl`）。
+2. 将完整的语言 JSON 粘贴到文本框中，或点击 “加载语言配置文件”，加载本地 JSON 文件。
+3. 点击 “应用预览”，当前语言配置会立即被替换，您可以切换到其他页面查看效果。修改本地文件后，重新加载文件并应用预览，即可测试更新后的内容。
+
+预览仅影响当前页面会话，刷新页面后即失效，不会将更改保存到语言文件中。您也可以点击 “恢复内置语言”，在不刷新页面的情况下恢复原始配置。

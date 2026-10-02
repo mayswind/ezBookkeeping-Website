@@ -117,6 +117,7 @@ services:
       - "EBK_NOTIFICATION_AFTER_OPEN_NOTIFICATION_CONTENT=This is the online demo of ezBookkeeping. All the data in this environment will be cleared at 0:00 UTC every day. Please do not store your important data here."
       - "EBK_NOTIFICATION_AFTER_OPEN_NOTIFICATION_CONTENT_ZH_HANS=这是 ezBookkeeping 用于演示的环境，该环境每天UTC 0时都会清空数据，请不要在这里存储您的重要数据。"
       - "EBK_NOTIFICATION_AFTER_OPEN_NOTIFICATION_CONTENT_ZH_HANT=這是 ezBookkeeping 用於示範的環境，該環境每天UTC 0時會清除資料，請不要在這裡儲存您的重要資料。"
+      - "EBK_DEVELOPER_ENABLE_LANGUAGE_PREVIEW=true"
     volumes:
       - "/etc/localtime:/etc/localtime:ro"
       - "/var/lib/lxcfs/proc/cpuinfo:/proc/cpuinfo"

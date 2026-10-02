@@ -419,3 +419,11 @@ Note that if the same configuration option is set using all three methods above,
 | `request_timeout` | `10000` | Request timeout for exchange rates data (0 – 4294967295 milliseconds). Set to `0` to disable timeout for requesting exchange rates data. |
 | `proxy` | `system` | Proxy for ezbookkeeping server requesting exchange rates data, supports `system` (use system proxy), `none` (do not use proxy), or proxy URL which starts with `http://`, `https://` or `socks5://`. |
 | `skip_tls_verify` | `false` | Whether to skip the server's certificate chain and host name verification when request exchange rates data. |
+
+## Developer Tools
+
+> Section name is `developer`
+
+| Option Name | Default Value | Description |
+| --- | --- | --- |
+| `enable_language_preview` | `false` | Whether to enable language configuration preview in desktop Developer Tools. For more information, please visit [Translating - Preview frontend translations](/translating/#preview-frontend-translations). |
