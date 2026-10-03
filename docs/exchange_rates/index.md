@@ -50,6 +50,48 @@ This data source supports 31 currencies, and all currencies are as follows:
 
 Configuration option `data_source` value is `central_bank_of_argentina`
 
+## National Bank of the Republic of Belarus
+
+> Reference: [https://www.nbrb.by/engl/statistics/rates/ratesdaily](https://www.nbrb.by/engl/statistics/rates/ratesdaily)
+
+The base currency is Belarusian ruble (`BYN`). The official exchange rates are updated daily.
+
+This data source supports 29 currencies, and all currencies are as follows:
+
+| Currency | Currency Code | Update Frequency |
+| --- | --- | --- |
+| United Arab Emirates Dirham | AED | Daily |
+| Armenian Dram | AMD | Daily |
+| Australian Dollar | AUD | Daily |
+| Brazilian Real | BRL | Daily |
+| Canadian Dollar | CAD | Daily |
+| Swiss Franc | CHF | Daily |
+| Chinese Yuan | CNY | Daily |
+| Czech Koruna | CZK | Daily |
+| Danish Krone | DKK | Daily |
+| Euro | EUR | Daily |
+| British Pound | GBP | Daily |
+| Indian Rupee | INR | Daily |
+| Iranian Rial | IRR | Daily |
+| Icelandic Krona | ISK | Daily |
+| Japanese Yen | JPY | Daily |
+| Kyrgyzstani Som | KGS | Daily |
+| Kuwaiti Dinar | KWD | Daily |
+| Kazakhstani Tenge | KZT | Daily |
+| Moldovan Leu | MDL | Daily |
+| Norwegian Krone | NOK | Daily |
+| New Zealand Dollar | NZD | Daily |
+| Polish Zloty | PLN | Daily |
+| Russian Ruble | RUB | Daily |
+| Swedish Krona | SEK | Daily |
+| Singapore Dollar | SGD | Daily |
+| Turkish Lira | TRY | Daily |
+| Ukrainian Hryvnia | UAH | Daily |
+| United States Dollar | USD | Daily |
+| Vietnamese Dong | VND | Daily |
+
+Configuration option `data_source` value is `national_bank_of_belarus`
+
 ## Bank of Canada
 
 > Reference: [https://www.bankofcanada.ca/rates/exchange/daily-exchange-rates/](https://www.bankofcanada.ca/rates/exchange/daily-exchange-rates/)
@@ -464,6 +506,168 @@ This data source supports 15 currencies, and all currencies are as follows:
 | South African Rand | ZAR | Daily |
 
 Configuration option `data_source` value is `bank_of_israel`
+
+## Bank of Italy
+
+> Reference: [https://tassidicambio.bancaditalia.it/terzevalute-wf-ui-web/latestRates](https://tassidicambio.bancaditalia.it/terzevalute-wf-ui-web/latestRates)
+
+The base currency is euro (`EUR`). The daily exchange rates are usually updated shortly after 16:00 CET (Central European Time) on every working day.
+
+This data source supports 149 currencies, and all currencies are as follows:
+
+| Currency | Currency Code | Update Frequency |
+| --- | --- | --- |
+| United Arab Emirates Dirham | AED | Daily |
+| Afghan Afghani | AFN | Daily |
+| Albanian Lek | ALL | Daily |
+| Armenian Dram | AMD | Daily |
+| Angolan Kwanza | AOA | Daily |
+| Argentine Peso | ARS | Daily |
+| Australian Dollar | AUD | Daily |
+| Aruban Florin | AWG | Daily |
+| Azerbaijan Manat | AZN | Daily |
+| Bosnia and Herzegovina Convertible Mark | BAM | Daily |
+| Barbadian Dollar | BBD | Daily |
+| Bangladeshi Taka | BDT | Daily |
+| Bahraini Dinar | BHD | Daily |
+| Burundian Franc | BIF | Daily |
+| Bermudian Dollar | BMD | Daily |
+| Brunei Dollar | BND | Daily |
+| Bolivian Boliviano | BOB | Daily |
+| Brazilian Real | BRL | Daily |
+| Bahamian Dollar | BSD | Daily |
+| Bhutanese Ngultrum | BTN | Daily |
+| Botswana Pula | BWP | Daily |
+| Belize Dollar | BZD | Daily |
+| Canadian Dollar | CAD | Daily |
+| Congolese Franc | CDF | Daily |
+| Swiss Franc | CHF | Daily |
+| Chilean Peso | CLP | Daily |
+| Chinese Yuan | CNY | Daily |
+| Colombian Peso | COP | Daily |
+| Costa Rican Colon | CRC | Daily |
+| Cuban Peso | CUP | Daily |
+| Cape Verdean Escudo | CVE | Daily |
+| Czech Koruna | CZK | Daily |
+| Djiboutian Franc | DJF | Daily |
+| Danish Krone | DKK | Daily |
+| Dominican Peso | DOP | Daily |
+| Algerian Dinar | DZD | Daily |
+| Egyptian Pound | EGP | Daily |
+| Eritrean Nakfa | ERN | Daily |
+| Ethiopian Birr | ETB | Daily |
+| Fijian Dollar | FJD | Daily |
+| Falkland Islands Pound | FKP | Daily |
+| British Pound | GBP | Daily |
+| Georgian Lari | GEL | Daily |
+| Ghanaian Cedi | GHS | Daily |
+| Gibraltar Pound | GIP | Daily |
+| Gambian Dalasi | GMD | Daily |
+| Guinean Franc | GNF | Daily |
+| Guatemalan Quetzal | GTQ | Daily |
+| Guyanese Dollar | GYD | Daily |
+| Hong Kong Dollar | HKD | Daily |
+| Honduran Lempira | HNL | Daily |
+| Haitian Gourde | HTG | Daily |
+| Hungarian Forint | HUF | Daily |
+| Indonesian Rupiah | IDR | Daily |
+| Israeli New Shekel | ILS | Daily |
+| Indian Rupee | INR | Daily |
+| Iraqi Dinar | IQD | Daily |
+| Icelandic Krona | ISK | Daily |
+| Jamaican Dollar | JMD | Daily |
+| Jordanian Dinar | JOD | Daily |
+| Japanese Yen | JPY | Daily |
+| Kenyan Shilling | KES | Daily |
+| Kyrgyzstani Som | KGS | Daily |
+| Cambodian Riel | KHR | Daily |
+| Comorian Franc | KMF | Daily |
+| South Korean Won | KRW | Daily |
+| Kuwaiti Dinar | KWD | Daily |
+| Cayman Islands Dollar | KYD | Daily |
+| Kazakhstani Tenge | KZT | Daily |
+| Lao Kip | LAK | Daily |
+| Lebanese Pound | LBP | Daily |
+| Sri Lankan Rupee | LKR | Daily |
+| Liberian Dollar | LRD | Daily |
+| Lesotho Loti | LSL | Daily |
+| Libyan Dinar | LYD | Daily |
+| Moroccan Dirham | MAD | Daily |
+| Moldovan Leu | MDL | Daily |
+| Malagasy Ariary | MGA | Daily |
+| Macedonian Denar | MKD | Daily |
+| Myanmar Kyat | MMK | Daily |
+| Mongolian Tugrik | MNT | Daily |
+| Macanese Pataca | MOP | Daily |
+| Mauritanian Ouguiya | MRU | Daily |
+| Mauritian Rupee | MUR | Daily |
+| Maldivian Rufiyaa | MVR | Daily |
+| Malawian Kwacha | MWK | Daily |
+| Mexican Peso | MXN | Daily |
+| Malaysian Ringgit | MYR | Daily |
+| Mozambican Metical | MZN | Daily |
+| Namibian Dollar | NAD | Daily |
+| Nigerian Naira | NGN | Daily |
+| Nicaraguan Cordoba | NIO | Daily |
+| Norwegian Krone | NOK | Daily |
+| Nepalese Rupee | NPR | Daily |
+| New Zealand Dollar | NZD | Daily |
+| Omani Rial | OMR | Daily |
+| Panamanian Balboa | PAB | Daily |
+| Peruvian Sol | PEN | Daily |
+| Papua New Guinean Kina | PGK | Daily |
+| Philippine Peso | PHP | Daily |
+| Pakistani Rupee | PKR | Daily |
+| Polish Zloty | PLN | Daily |
+| Paraguayan Guarani | PYG | Daily |
+| Qatari Riyal | QAR | Daily |
+| Romanian Leu | RON | Daily |
+| Serbian Dinar | RSD | Daily |
+| Rwandan Franc | RWF | Daily |
+| Saudi Riyal | SAR | Daily |
+| Solomon Islands Dollar | SBD | Daily |
+| Seychelles Rupee | SCR | Daily |
+| Sudanese Pound | SDG | Daily |
+| Swedish Krona | SEK | Daily |
+| Singapore Dollar | SGD | Daily |
+| Saint Helena Pound | SHP | Daily |
+| Sierra Leonean Leone | SLE | Daily |
+| Somali Shilling | SOS | Daily |
+| Surinamese Dollar | SRD | Daily |
+| South Sudanese Pound | SSP | Daily |
+| Sao Tome Principe Dobra | STN | Daily |
+| Salvadoran Colon | SVC | Daily |
+| Syrian Pound | SYP | Daily |
+| Swazi Lilangeni | SZL | Daily |
+| Thai Baht | THB | Daily |
+| Tajikistani Somoni | TJS | Daily |
+| Turkmenistani Manat | TMT | Daily |
+| Tunisian Dinar | TND | Daily |
+| Tongan Pa'anga | TOP | Daily |
+| Turkish Lira | TRY | Daily |
+| Trinidad and Tobago Dollar | TTD | Daily |
+| New Taiwan Dollar | TWD | Daily |
+| Tanzanian Shilling | TZS | Daily |
+| Ukrainian Hryvnia | UAH | Daily |
+| Ugandan Shilling | UGX | Daily |
+| United States Dollar | USD | Daily |
+| Uruguayan Peso | UYU | Daily |
+| Uzbekistani Sum | UZS | Daily |
+| Venezuelan Bolívar Soberano | VES | Daily |
+| Vietnamese Dong | VND | Daily |
+| Vanuatu Vatu | VUV | Daily |
+| Samoan Tala | WST | Daily |
+| Central African CFA Franc | XAF | Daily |
+| East Caribbean Dollar | XCD | Daily |
+| Caribbean Guilder | XCG | Daily |
+| West African CFA Franc | XOF | Daily |
+| CFP Franc | XPF | Daily |
+| Yemeni Rial | YER | Daily |
+| South African Rand | ZAR | Daily |
+| Zambian Kwacha | ZMW | Daily |
+| Zimbabwe Gold | ZWG | Daily |
+
+Configuration option `data_source` value is `bank_of_italy`
 
 ## National Bank of Kazakhstan
 
