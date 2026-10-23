@@ -14,7 +14,7 @@ networks:
 services:
   # ezbookkeeping-demo.mayswind.net
   nginx:
-    image: nginx:1.27.0-alpine
+    image: nginx:1.31.8-alpine
     container_name: nginx
     hostname: "nginx-server"
     mem_limit: 128m
