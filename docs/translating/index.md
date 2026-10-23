@@ -108,4 +108,4 @@ Open "Settings" -> "Developer Tools" -> "Preview Language Configuration" in the 
 2. Paste the complete language JSON into the text box, or click "Load Language Configuration File" to load a local JSON file.
 3. Click "Apply Preview". The current language configuration is replaced immediately, and you can navigate to other pages to check the result. After editing the local file, load it again and apply the preview to test your changes.
 
-The preview only affects the current page session and is discarded when the page is refreshed. It does not save changes to the language files. Click "Restore Built-in Language" to restore the original configuration without refreshing the page.
+The preview only affects the current tab session and it does not save changes to the language files. Click "Restore Built-in Language" to restore the original configuration without refreshing the page.
