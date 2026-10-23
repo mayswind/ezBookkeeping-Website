@@ -31,7 +31,7 @@ $ docker run -p8080:8080 mayswind/ezbookkeeping:latest-snapshot
 ## 从二进制包安装
 下载最新发布版本：[https://github.com/mayswind/ezbookkeeping/releases](https://github.com/mayswind/ezbookkeeping/releases)
 
-**Linux / macOS**
+**Linux / macOS / FreeBSD**
 
 ```shell
 $ ./ezbookkeeping server run
@@ -48,7 +48,7 @@ $ ./ezbookkeeping server run
 ## 从源代码构建
 请确保您已经安装 [Golang](https://golang.org/), [GCC](https://gcc.gnu.org/), [Node.js](https://nodejs.org/) 和 [NPM](https://www.npmjs.com/)。然后下载源代码并执行以下步骤：
 
-**Linux / macOS**
+**Linux / macOS / FreeBSD**
 
 ```shell
 $ ./build.sh package -o ezbookkeeping.tar.gz

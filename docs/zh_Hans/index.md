@@ -37,7 +37,7 @@ features:
       details:
           支持 Docker <br/>
           支持 SQLite、MySQL、PostgreSQL 多种数据库 <br/>
-          跨平台运行 (Windows, macOS, Linux) <br/>
+          跨平台运行 (Windows, macOS, Linux, FreeBSD) <br/>
           支持 x86, amd64, ARM 架构
     - title: 友好的用户界面
       icon: 🎨

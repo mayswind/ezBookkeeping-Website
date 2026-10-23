@@ -31,7 +31,7 @@ $ docker run -p8080:8080 mayswind/ezbookkeeping:latest-snapshot
 ## Install from Binary
 Download the latest release: [https://github.com/mayswind/ezbookkeeping/releases](https://github.com/mayswind/ezbookkeeping/releases)
 
-**Linux / macOS**
+**Linux / macOS / FreeBSD**
 
 ```shell
 $ ./ezbookkeeping server run
@@ -48,7 +48,7 @@ By default, ezBookkeeping listens on port 8080. You can then visit `http://{YOUR
 ## Build from Source
 Make sure you have [Golang](https://golang.org/), [GCC](https://gcc.gnu.org/), [Node.js](https://nodejs.org/) and [NPM](https://www.npmjs.com/) installed. Then download the source code, and follow these steps:
 
-**Linux / macOS**
+**Linux / macOS / FreeBSD**
 
 ```shell
 $ ./build.sh package -o ezbookkeeping.tar.gz

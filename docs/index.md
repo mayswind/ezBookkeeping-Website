@@ -37,7 +37,7 @@ features:
       details:
           Docker support <br/>
           Supports SQLite, MySQL, PostgreSQL <br/>
-          Cross-platform (Windows, macOS, Linux) <br/>
+          Cross-platform (Windows, macOS, Linux, FreeBSD) <br/>
           Works on x86, amd64, ARM architectures
     - title: User-Friendly Interface
       icon: 🎨
