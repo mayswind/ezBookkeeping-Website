@@ -36,6 +36,7 @@ ezBookkeeping uses a lightweight tech stack and an efficient architecture to kee
 
 | Item | Supported Version |
 | --- | --- |
+| Batch add transactions | ≥ 2.2.0 |
 | Batch modify transactions | ≥ 1.5.0 (Insights Explorer feature) |
 | Scheduled transactions | ≥ 0.6.0 |
 | Transaction templates | ≥ 0.5.0 |
