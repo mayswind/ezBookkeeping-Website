@@ -56,6 +56,7 @@ ezBookkeeping 用户数据维护操作。
 * `user-disable`：禁用指定用户。
     * 选项：
     * `--username value`, `-n value`：用户名。必填。
+    * `--remain-sessions`, `-r`：是否保留用户现有会话。可选。（默认禁用用户后会清除所有会话）
 * `user-set-restrict-features`: 设置用户指定功能限制。
     * 选项：
     * `--username value`, `-n value`：用户名。必填。

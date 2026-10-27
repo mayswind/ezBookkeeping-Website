@@ -56,6 +56,7 @@ ezBookkeeping user data maintenance operation.
 * `user-disable`: Disable specified user.
     * Options:
     * `--username value`, `-n value`: User name. Required.
+    * `--remain-sessions`, `-r`: Whether to keep the user's existing sessions. Optional. (By default, all sessions will be cleared after disabling the user)
 * `user-set-restrict-features`: Set restrictions of user features.
     * Options:
     * `--username value`, `-n value`: User name. Required.
