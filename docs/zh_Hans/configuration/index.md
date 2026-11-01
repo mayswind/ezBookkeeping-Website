@@ -312,7 +312,7 @@ ezBookkeeping 使用 ini 文件作为配置文件。
 | `enable_oauth2_auth` | `false` | 是否开启使用外部 OAuth 2.0 登录。ezBookkeeping 的 OAuth 2.0 回调路径为 `/oauth/callback`，例如你的 ezBookkeeping 地址为 [`https://ezbookkeeping-demo.mayswind.net/`](https://ezbookkeeping-demo.mayswind.net/)，则回调地址为 [`https://ezbookkeeping-demo.mayswind.net/oauth2/callback`](https://ezbookkeeping-demo.mayswind.net/oauth2/callback)。 |
 | `enable_two_factor` | `true` | 使用 `internal` 身份验证时，是否开启两步验证。 |
 | `enable_forget_password` | `true` | 使用 `internal` 身份验证时，是否启用用户密码重置。（SMTP 服务器必须配置） |
-| `forget_password_require_email_verify` | `false` | 使用 `internal` 身份验证时，用户使用密码重置时是否要求邮箱必须验证。 |
+| `forget_password_require_email_verify` | `true` | 使用 `internal` 身份验证时，用户使用密码重置时是否要求邮箱必须验证。 |
 | `oauth2_provider` |  | 使用 `oauth2` 身份验证时，OAuth 2.0 提供方，支持 `oidc`、`nextcloud`、`gitea` 和 `github`。 |
 | `oauth2_client_id` |  | 使用 `oauth2` 身份验证时，OAuth 2.0 客户端 ID。 |
 | `oauth2_client_secret` |  | 使用 `oauth2` 身份验证时，OAuth 2.0 客户端密钥。 |

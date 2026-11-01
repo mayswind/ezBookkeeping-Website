@@ -312,7 +312,7 @@ Note that if the same configuration option is set using all three methods above,
 | `enable_oauth2_auth` | `false` | Whether to enable external OAuth 2.0 login. The OAuth 2.0 callback path for ezBookkeeping is `/oauth2/callback`. For example, if your ezBookkeeping instance is hosted at [`https://ezbookkeeping-demo.mayswind.net/`](https://ezbookkeeping-demo.mayswind.net/), the callback URL would be [`https://ezbookkeeping-demo.mayswind.net/oauth2/callback`](https://ezbookkeeping-demo.mayswind.net/oauth2/callback). |
 | `enable_two_factor` | `true` | Whether to enable two factor authorization for `internal` authentication. |
 | `enable_forget_password` | `true` | Whether to enable user password reset for `internal` authentication. (SMTP server must be configured) |
-| `forget_password_require_email_verify` | `false` | Whether to require user email must be verified when use forget password for `internal` authentication. |
+| `forget_password_require_email_verify` | `true` | Whether to require user email must be verified when use forget password for `internal` authentication. |
 | `oauth2_provider` |  | OAuth 2.0 provider for `oauth2` authentication, supports `oidc`, `nextcloud`, `gitea` and `github`. |
 | `oauth2_client_id` |  | OAuth 2.0 client ID for `oauth2` authentication. |
 | `oauth2_client_secret` |  | OAuth 2.0 client secret for `oauth2` authentication. |
