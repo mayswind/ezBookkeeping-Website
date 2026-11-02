@@ -321,14 +321,15 @@ ezBookkeeping uses a lightweight tech stack and an efficient architecture to kee
 | Item | Supported Version |
 | --- | --- |
 | Model Context Protocol (MCP) | ≥ 0.10.0 |
-| Add transaction via MCP | ≥ 0.10.0 |
-| Query transactions via MCP | ≥ 0.10.0 |
 | Query all account names via MCP | ≥ 0.10.0 |
 | Query all account balances via MCP | ≥ 1.2.0 |
 | Query all transaction category names via MCP | ≥ 0.10.0 |
 | Query all transaction tag names via MCP | ≥ 0.10.0 |
 | Query latest exchange rates via MCP | ≥ 0.10.0 |
+| Query transactions via MCP | ≥ 0.10.0 |
+| Add transaction via MCP | ≥ 0.10.0 |
 | MCP access IP whitelist | ≥ 0.10.0 |
+| MCP token restrictions for allowed Tools | ≥ 2.2.0 |
 | AI clipboard text recognition | ≥ 1.6.0 |
 | AI image recognition | ≥ 1.1.0 |
 | AI image recognition via Web Share Target API Level 2 | ≥ 1.4.0 |
