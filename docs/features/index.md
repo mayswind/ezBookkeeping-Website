@@ -422,6 +422,7 @@ ezBookkeeping uses a lightweight tech stack and an efficient architecture to kee
 | English | ≥ 0.1.0 |
 | Spanish | ≥ 0.8.0 |
 | French | ≥ 1.1.0 |
+| Hindi | ≥ 2.2.0 |
 | Italian | ≥ 0.9.0 |
 | Japanese | ≥ 0.8.0 |
 | Kannada | ≥ 1.3.0 |
