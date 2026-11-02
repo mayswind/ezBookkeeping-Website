@@ -280,6 +280,7 @@ ezBookkeeping uses a lightweight tech stack and an efficient architecture to kee
 | Alipay statement file | ≥ 0.6.0 |
 | WeChat Pay statement file | ≥ 0.6.0 |
 | JD.com Finance statement file | ≥ 1.1.0 |
+| User custom import presets | ≥ 2.2.0 |
 
 ## Export Features
 
