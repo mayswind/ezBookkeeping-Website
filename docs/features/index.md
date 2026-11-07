@@ -432,6 +432,7 @@ ezBookkeeping uses a lightweight tech stack and an efficient architecture to kee
 | Portuguese (Brazil) | ≥ 0.10.0 |
 | Romanian | ≥ 1.6.0 |
 | Russian | ≥ 0.8.0 |
+| Slovak | ≥ 2.2.0 |
 | Slovenian | ≥ 1.3.0 |
 | Tamil | ≥ 1.3.1 |
 | Thai | ≥ 1.1.0 |
