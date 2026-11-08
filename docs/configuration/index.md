@@ -293,6 +293,7 @@ Note that if the same configuration option is set using all three methods above,
 | `email_verify_token_expired_time` | `3600` | Email verify token expired time (60 – 4294967295 seconds). |
 | `password_reset_token_expired_time` | `3600` | Password reset token expired time (60 – 4294967295 seconds). |
 | `user_avatar_token_expired_time` | `3600` | User avatar token expired time (60 – 4294967295 seconds). |
+| `user_custom_icon_token_expired_time` | `3600` | User custom icon token expired time (60 – 4294967295 seconds). |
 | `transaction_picture_token_expired_time` | `3600` | Transaction picture token expired time (60 – 4294967295 seconds). |
 | `enable_api_token` | `false` | Whether to enable API token. |
 | `api_token_allowed_remote_ips` |  | Allowed remote IPs for using the API token, a comma-separated list of allowed remote IPs (asterisk * for any addresses, e.g. 192.168.1.* means any IPs in the 192.168.1.x subnet), leave blank to allow all remote IPs. |
