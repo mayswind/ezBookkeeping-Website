@@ -328,6 +328,7 @@ ezBookkeeping uses a lightweight tech stack and an efficient architecture to kee
 | Query latest exchange rates via MCP | ≥ 0.10.0 |
 | Query transactions via MCP | ≥ 0.10.0 |
 | Add transaction via MCP | ≥ 0.10.0 |
+| Delete transaction via MCP | ≥ 2.2.0 |
 | MCP access IP whitelist | ≥ 0.10.0 |
 | MCP token restrictions for allowed Tools | ≥ 2.2.0 |
 | AI clipboard text recognition | ≥ 1.6.0 |
