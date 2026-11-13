@@ -230,13 +230,13 @@ Note that if the same configuration option is set using all three methods above,
 | `openai_compatible_model_id` |  | Model ID for the `openai_compatible` (Use Chat Completions API) and `openai_responses_compatible` (Use Responses API) LLM provider, used for code generation. |
 | `anthropic_api_key` |  | Anthropic API Key for `anthropic` LLM provider, please visit [https://platform.claude.com/settings/keys](https://platform.claude.com/settings/keys) for more information. |
 | `anthropic_model_id` |  | Model ID for the `anthropic` LLM provider, used for code generation. |
-| `anthropic_max_tokens` | `1024` | Maximum allowed number of generated tokens (1 – 4294967295) for the `anthropic` LLM provider, used for code generation. |
+| `anthropic_max_tokens` | `32768` | Maximum allowed number of generated tokens (1 – 4294967295) for the `anthropic` LLM provider, used for code generation. |
 | `anthropic_thinking_budget_tokens` | `1024` | Maximum allowed number of thinking budget tokens (1 – 4294967295) when `enable_thinking` is enabled for the `anthropic` LLM provider, used for code generation. |
 | `anthropic_compatible_base_url` |  | Anthropic compatible API base url for `anthropic_compatible` LLM provider, e.g. `https://api.anthropic.com/v1/`. |
 | `anthropic_compatible_api_version` |  | Anthropic compatible API version for `anthropic_compatible` LLM provider, e.g. `2023-06-01`. If the provider does not require API versioning, leave it blank. |
 | `anthropic_compatible_api_key` |  | Anthropic compatible API Key for `anthropic_compatible` LLM provider. |
 | `anthropic_compatible_model_id` |  | Model ID for the `anthropic_compatible` LLM provider, used for code generation. |
-| `anthropic_compatible_max_tokens` | `1024` | Maximum allowed number of generated tokens (1 – 4294967295) for the `anthropic_compatible` LLM provider, used for code generation. |
+| `anthropic_compatible_max_tokens` | `32768` | Maximum allowed number of generated tokens (1 – 4294967295) for the `anthropic_compatible` LLM provider, used for code generation. |
 | `anthropic_compatible_thinking_budget_tokens` | `1024` | Maximum allowed number of thinking budget tokens (1 – 4294967295) when `enable_thinking` is enabled for the `anthropic_compatible` LLM provider, used for code generation. |
 | `openrouter_api_key` |  | OpenRouter API secret key for `openrouter` LLM provider, please visit [https://openrouter.ai/settings/keys](https://openrouter.ai/settings/keys) for more information. |
 | `openrouter_model_id` |  | Model ID for the `openrouter` LLM provider, used for code generation. |

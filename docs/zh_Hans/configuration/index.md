@@ -230,13 +230,13 @@ ezBookkeeping 使用 ini 文件作为配置文件。
 | `openai_compatible_model_id` |  | 使用 `openai_compatible`（使用 Chat Completions API） 和 `openai_responses_compatible`（使用 Responses API） 大语言模型提供方时，用于代码生成的模型ID。 |
 | `anthropic_api_key` |  | 使用 `anthropic` 大语言模型提供方时，Anthropic 的 API Key，请访问 [https://platform.claude.com/settings/keys](https://platform.claude.com/settings/keys) 获取更多信息。 |
 | `anthropic_model_id` |  | 使用 `anthropic` 大语言模型提供方时，用于代码生成的模型ID。 |
-| `anthropic_max_tokens` | `1024` | 使用 `anthropic` 大语言模型提供方时，用于代码生成时最大允许生成的 token 数量（1 – 4294967295）。 |
+| `anthropic_max_tokens` | `32768` | 使用 `anthropic` 大语言模型提供方时，用于代码生成时最大允许生成的 token 数量（1 – 4294967295）。 |
 | `anthropic_thinking_budget_tokens` | `1024` | 使用 `anthropic` 大语言模型提供方同时开启 `enable_thinking` 时，用于代码生成时最大允许思考使用的 token 数量（1 – 4294967295）。 |
 | `anthropic_compatible_base_url` |  | 使用 `anthropic_compatible` 大语言模型提供方时，Anthropic 兼容 API 的基础地址，例如 `https://api.anthropic.com/v1/`。 |
 | `anthropic_compatible_api_version` |  | 使用 `anthropic_compatible` 大语言模型提供方时，Anthropic 兼容 API 的 API 版本号，例如 `2023-06-01`，如果提供方不要求指定版本号，留空即可。 |
 | `anthropic_compatible_api_key` |  | 使用 `anthropic_compatible` 大语言模型提供方时，Anthropic 兼容 API 的 API Key。 |
 | `anthropic_compatible_model_id` |  | 使用 `anthropic_compatible` 大语言模型提供方时，用于代码生成的模型ID。 |
-| `anthropic_compatible_max_tokens` | `1024` | 使用 `anthropic_compatible` 大语言模型提供方时，用于代码生成时最大允许生成的 token 数量（1 – 4294967295）。 |
+| `anthropic_compatible_max_tokens` | `32768` | 使用 `anthropic_compatible` 大语言模型提供方时，用于代码生成时最大允许生成的 token 数量（1 – 4294967295）。 |
 | `anthropic_compatible_thinking_budget_tokens` | `1024` | 使用 `anthropic_compatible` 大语言模型提供方同时开启 `enable_thinking` 时，用于代码生成时最大允许思考使用的 token 数量（1 – 4294967295）。 |
 | `openrouter_api_key` |  | 使用 `openrouter` 大语言模型提供方时，OpenRouter 的 API Key，请访问 [https://openrouter.ai/settings/keys](https://openrouter.ai/settings/keys) 获取更多信息。 |
 | `openrouter_model_id` |  | 使用 `openrouter` 大语言模型提供方时，用于代码生成的模型ID。 |
