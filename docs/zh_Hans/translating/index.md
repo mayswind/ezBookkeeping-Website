@@ -15,7 +15,7 @@ ezBookkeeping 支持多语言和本地化设置，前端和后端分别有自己
     1. `name` 为英文的语言名称
     2. `displayName` 为该语言下的语言名称
     3. `alternativeLanguageTag` 为 `language-region` 格式的语言标签（例如 `zh-CN`），为了兼容一些不支持 `language-script` 格式语言标签的第三方服务
-    4. `textDirection` 为文字方向，支持 `ltr`（从左到右）及 `rtl`（从右到左）
+    4. `textDirection` 为文字方向，支持 `TextDirection.LTR`（从左到右）及 `TextDirection.RTL`（从右到左）
     5. `content` 字段为该语言的字典对象
 3. 翻译每个文字条目
 

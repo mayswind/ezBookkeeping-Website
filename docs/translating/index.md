@@ -15,7 +15,7 @@ For more information about language tags, please refer to [RFC5646](https://www.
     1. `name` field is the language name in English
     2. `displayName` field is the language name in its own language
     3. `alternativeLanguageTag` field is the language tag in the `language-region` format (e.g. `zh-CN`), used for compatibility with some third-party services that don't support language tags in the `language-script` format
-    4. `textDirection` field is the text direction, supports `ltr` (left-to-right) or `rtl` (right-to-left)
+    4. `textDirection` field is the text direction, supports `TextDirection.LTR` (left-to-right) or `TextDirection.RTL` (right-to-left)
     5. `content` field is the dictionary object for this language
 3. Translate each text item
 
