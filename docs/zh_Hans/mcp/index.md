@@ -40,81 +40,6 @@ ezBookkeeping 的 MCP 服务需要通过特殊的令牌进行访问，您可以�
 
 ## 支持的 MCP 工具
 
-### 添加交易
-
-**MCP Tool 名称**
-
-`add_transaction`
-
-**请求参数**
-
-| 字段 | 类型 | 必选 | 描述 |
-| --- | --- | --- | --- |
-| `type` | `string` | 必选 | 交易类型（income、expense、transfer） |
-| `time` | `string` | 必选 | RFC 3339 格式的交易时间（例如 2023-01-01T12:00:00Z） |
-| `category_name` | `string` | 必选 | 交易的二级分类名 |
-| `account_name` | `string` | 必选 | 交易的账户名 |
-| `amount` | `string` | 必选 | 交易金额 |
-| `destination_account_name` | `string` | 可选 | 转账交易的目标账户名 |
-| `destination_amount` | `string` | 可选 | 转账交易的目标金额 |
-| `tags` | `string[]` | 可选 | 交易标签的列表（最多允许10个标签） |
-| `comment` | `string` | 可选 | 交易备注 |
-| `dry_run` | `boolean` | 可选 | 如果设置为 `true`，交易不会被保存，仅进行验证 |
-
-**返回参数**
-
-| 字段 | 类型 | 必选 | 描述 |
-| --- | --- | --- | --- |
-| `success` | `boolean` | 必选 | 本次处理是否成功 |
-| `dry_run` | `boolean` | 可选 | 本次处理是否仅为验证（交易未实际添加） |
-| `account_balance` | `string` | 可选 | 交易添加后的账户余额（对于负债账户为未清余额） |
-| `destination_account_balance` | `string` | 可选 | 交易（仅转账交易）添加后的目标账户余额（对于负债账户为未清余额） |
-
-### 查询交易
-
-**MCP Tool 名称**
-
-`query_transactions`
-
-**请求参数**
-
-| 字段 | 类型 | 必选 | 描述 |
-| --- | --- | --- | --- |
-| `start_time` | `string` | 必选 | RFC 3339 格式的查询开始时间（例如 2023-01-01T12:00:00Z） |
-| `end_time` | `string` | 必选 | RFC 3339 格式的查询结束时间（例如 2023-01-01T12:00:00Z） |
-| `type` | `string` | 可选 | 用于筛选的交易类型（income、expense、transfer、balance_modification） |
-| `category_name` | `string` | 可选 | 用于筛选交易的一级或二级分类名称 |
-| `account_name` | `string` | 可选 | 用于筛选交易的账户名 |
-| `keyword` | `string` | 可选 | 在交易描述中搜索的关键词 |
-| `match_mode` | `string` | 可选 | 关键词匹配模式（留空使用数据库默认设置，ignore_case：忽略大小写） |
-| `count` | `number` | 可选 | 返回结果最大的数量（默认：100） |
-| `page` | `number` | 可选 | 用于分页的页码（默认：1） |
-| `response_fields` | `string` | 可选 | 结果中包含的可选字段列表，使用逗号分隔（留空表示所有字段，可选字段：time, currency, category_name, account_name, comment） |
-
-**返回参数**
-
-| 字段 | 类型 | 必选 | 描述 |
-| --- | --- | --- | --- |
-| `total_count` | `number` | 必选 | 符合查询的所有交易数量 |
-| `current_page` | `number` | 必选 | 结果当前页码 |
-| `total_page` | `number` | 必选 | 查询所有可用的页码数，根据 total_count 和 count 计算 |
-| `transactions` | `MCPTransactionInfo[]` | 必选 | 符合查询的交易列表 |
-
-**MCPTransactionInfo**
-
-| 字段 | 类型 | 必选 | 描述 |
-| --- | --- | --- | --- |
-| `time` | `string` | 可选 | RFC 3339 格式的交易时间（例如 2023-01-01T12:00:00Z） |
-| `type` | `string` | 必选 | 交易类型（income、expense、transfer、balance_modification） |
-| `amount` | `string` | 必选 | 指定货币下的交易金额 |
-| `currency` | `string` | 可选 | 交易的货币代码（例如 USD、EUR） |
-| `category_name` | `string` | 可选 | 交易的二级分类名 |
-| `account_name` | `string` | 可选 | 交易的账户名 |
-| `destination_amount` | `string` | 可选 | 转账交易的目标金额 |
-| `destination_currency` | `string` | 可选 | 转账交易目标金额的货币代码 |
-| `destination_account_name` | `string` | 可选 | 转账交易的目标账户名 |
-| `comment` | `string` | 可选 | 交易备注 |
-
 ### 查询所有账户名
 
 **MCP Tool 名称**
@@ -233,3 +158,99 @@ ezBookkeeping 的 MCP 服务需要通过特殊的令牌进行访问，您可以�
 | --- | --- | --- | --- |
 | `currency` | `string` | 必选 | 货币代码（例如 USD） |
 | `rate_to_base` | `string` | 必选 | 该货币1元可兑换的基础货币数量 |
+
+### 查询交易
+
+**MCP Tool 名称**
+
+`query_transactions`
+
+**请求参数**
+
+| 字段 | 类型 | 必选 | 描述 |
+| --- | --- | --- | --- |
+| `start_time` | `string` | 必选 | RFC 3339 格式的查询开始时间（例如 2023-01-01T12:00:00Z） |
+| `end_time` | `string` | 必选 | RFC 3339 格式的查询结束时间（例如 2023-01-01T12:00:00Z） |
+| `type` | `string` | 可选 | 用于筛选的交易类型（income、expense、transfer、balance_modification） |
+| `category_name` | `string` | 可选 | 用于筛选交易的一级或二级分类名称 |
+| `account_name` | `string` | 可选 | 用于筛选交易的账户名 |
+| `keyword` | `string` | 可选 | 在交易描述中搜索的关键词 |
+| `match_mode` | `string` | 可选 | 关键词匹配模式（留空使用数据库默认设置，ignore_case：忽略大小写） |
+| `count` | `number` | 可选 | 返回结果最大的数量（默认：100） |
+| `page` | `number` | 可选 | 用于分页的页码（默认：1） |
+| `response_fields` | `string` | 可选 | 结果中包含的可选字段列表，使用逗号分隔（留空表示除 id 外的所有字段，可选字段：id, time, currency, category_name, account_name, comment） |
+
+**返回参数**
+
+| 字段 | 类型 | 必选 | 描述 |
+| --- | --- | --- | --- |
+| `total_count` | `number` | 必选 | 符合查询的所有交易数量 |
+| `current_page` | `number` | 必选 | 结果当前页码 |
+| `total_page` | `number` | 必选 | 查询所有可用的页码数，根据 total_count 和 count 计算 |
+| `transactions` | `MCPTransactionInfo[]` | 必选 | 符合查询的交易列表 |
+
+**MCPTransactionInfo**
+
+| 字段 | 类型 | 必选 | 描述 |
+| --- | --- | --- | --- |
+| `id` | `string` | 可选 | 交易 ID（仅在 response_fields 中显式指定时返回） |
+| `time` | `string` | 可选 | RFC 3339 格式的交易时间（例如 2023-01-01T12:00:00Z） |
+| `type` | `string` | 必选 | 交易类型（income、expense、transfer、balance_modification） |
+| `amount` | `string` | 必选 | 指定货币下的交易金额 |
+| `currency` | `string` | 可选 | 交易的货币代码（例如 USD、EUR） |
+| `category_name` | `string` | 可选 | 交易的二级分类名 |
+| `account_name` | `string` | 可选 | 交易的账户名 |
+| `destination_amount` | `string` | 可选 | 转账交易的目标金额 |
+| `destination_currency` | `string` | 可选 | 转账交易目标金额的货币代码 |
+| `destination_account_name` | `string` | 可选 | 转账交易的目标账户名 |
+| `comment` | `string` | 可选 | 交易备注 |
+
+### 添加交易
+
+**MCP Tool 名称**
+
+`add_transaction`
+
+**请求参数**
+
+| 字段 | 类型 | 必选 | 描述 |
+| --- | --- | --- | --- |
+| `type` | `string` | 必选 | 交易类型（income、expense、transfer） |
+| `time` | `string` | 必选 | RFC 3339 格式的交易时间（例如 2023-01-01T12:00:00Z） |
+| `category_name` | `string` | 必选 | 交易的二级分类名 |
+| `account_name` | `string` | 必选 | 交易的账户名 |
+| `amount` | `string` | 必选 | 交易金额 |
+| `destination_account_name` | `string` | 可选 | 转账交易的目标账户名 |
+| `destination_amount` | `string` | 可选 | 转账交易的目标金额 |
+| `tags` | `string[]` | 可选 | 交易标签的列表（最多允许10个标签） |
+| `comment` | `string` | 可选 | 交易备注 |
+| `dry_run` | `boolean` | 可选 | 如果设置为 `true`，交易不会被保存，仅进行验证 |
+
+**返回参数**
+
+| 字段 | 类型 | 必选 | 描述 |
+| --- | --- | --- | --- |
+| `success` | `boolean` | 必选 | 本次处理是否成功 |
+| `dry_run` | `boolean` | 可选 | 本次处理是否仅为验证（交易未实际添加） |
+| `account_balance` | `string` | 可选 | 交易添加后的账户余额（对于负债账户为未清余额） |
+| `destination_account_balance` | `string` | 可选 | 交易（仅转账交易）添加后的目标账户余额（对于负债账户为未清余额） |
+
+### 删除交易
+
+**MCP Tool 名称**
+
+`delete_transaction`
+
+**请求参数**
+
+| 字段 | 类型 | 必选 | 描述 |
+| --- | --- | --- | --- |
+| `transaction_id` | `string` | 必选 | 交易 ID |
+
+**返回参数**
+
+| 字段 | 类型 | 必选 | 描述 |
+| --- | --- | --- | --- |
+| `success` | `boolean` | 必选 | 本次处理是否成功 |
+
+您可以调用 `query_transactions`，在 `response_fields` 中显式指定 `id`（例如 `id,time,account_name,comment`）以获取交易 ID。`response_fields` 留空时不会返回 `id` 字段。

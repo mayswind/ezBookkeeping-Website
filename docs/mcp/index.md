@@ -40,81 +40,6 @@ Then, copy the following code into your AI tool's MCP server configuration to en
 
 ## Supported MCP Tool
 
-### Add transaction
-
-**MCP Tool Name**
-
-`add_transaction`
-
-**Request Parameters**
-
-| Field | Type | Required | Description |
-| --- | --- | --- | --- |
-| `type` | `string` | Required | Transaction type (income, expense, transfer) |
-| `time` | `string` | Required | Transaction time in RFC 3339 format (e.g. 2023-01-01T12:00:00Z) |
-| `category_name` | `string` | Required | Secondary category name for the transaction |
-| `account_name` | `string` | Required | Account name for the transaction |
-| `amount` | `string` | Required | Transaction amount |
-| `destination_account_name` | `string` | Optional | Destination account name for transfer transactions |
-| `destination_amount` | `string` | Optional | Destination amount for transfer transactions |
-| `tags` | `string[]` | Optional | List of tags associated with the transaction (maximum 10 tags allowed) |
-| `comment` | `string` | Optional | Transaction description |
-| `dry_run` | `boolean` | Optional | If `true`, the transaction will not be saved, only validated |
-
-**Response Parameters**
-
-| Field | Type | Required | Description |
-| --- | --- | --- | --- |
-| `success` | `boolean` | Required | Indicates whether this operation is successful |
-| `dry_run` | `boolean` | Optional | Indicates whether this operation is a dry run (transaction not added actually) |
-| `account_balance` | `string` | Optional | Account balance (or outstanding balance for debt accounts) after the transaction |
-| `destination_account_balance` | `string` | Optional | Destination account balance (or outstanding balance for debt accounts) after the transaction (only for transfer transactions) |
-
-### Query transactions
-
-**MCP Tool Name**
-
-`query_transactions`
-
-**Request Parameters**
-
-| Field | Type | Required | Description |
-| --- | --- | --- | --- |
-| `start_time` | `string` | Required | Start time for the query in RFC 3339 format (e.g. 2023-01-01T12:00:00Z) |
-| `end_time` | `string` | Required | End time for the query in RFC 3339 format or (e.g. 2023-01-01T12:00:00Z) |
-| `type` | `string` | Optional | Transaction type to filter by (income, expense, transfer, balance_modification) |
-| `category_name` | `string` | Optional | Primary or secondary category name to filter transactions by |
-| `account_name` | `string` | Optional | Account name to filter transactions by |
-| `keyword` | `string` | Optional | Keyword to search in transaction description |
-| `match_mode` | `string` | Optional | Match mode for keyword search (leave empty for database default setting, ignore_case for case-insensitive search) |
-| `count` | `number` | Optional | Maximum number of results to return (default: 100) |
-| `page` | `number` | Optional | Page number for pagination (default: 1) |
-| `response_fields` | `string` | Optional | Comma-separated list of optional fields to include in the response (leave empty for all fields, available fields: time, currency, category_name, account_name, comment) |
-
-**Response Parameters**
-
-| Field | Type | Required | Description |
-| --- | --- | --- | --- |
-| `total_count` | `number` | Required | Total number of transactions matching the query |
-| `current_page` | `number` | Required | Current page number of the results |
-| `total_page` | `number` | Required | Total number of pages available for the query, calculated based on total_count and count |
-| `transactions` | `MCPTransactionInfo[]` | Required | List of transactions matching the query |
-
-**MCPTransactionInfo**
-
-| Field | Type | Required | Description |
-| --- | --- | --- | --- |
-| `time` | `string` | Optional | Time of the transaction in RFC 3339 format (e.g. 2023-01-01T12:00:00Z) |
-| `type` | `string` | Required | Transaction type (income, expense, transfer, balance_modification) |
-| `amount` | `string` | Required | Amount of the transaction in the specified currency |
-| `currency` | `string` | Optional | Currency code of the transaction (e.g. USD, EUR) |
-| `category_name` | `string` | Optional | Secondary category name for the transaction |
-| `account_name` | `string` | Optional | Account name for the transaction |
-| `destination_amount` | `string` | Optional | Destination amount for transfer transactions |
-| `destination_currency` | `string` | Optional | Currency code of the destination amount for transfer transactions |
-| `destination_account_name` | `string` | Optional | Destination account name for transfer transactions |
-| `comment` | `string` | Optional | Description of the transaction |
-
 ### Query all account names
 
 **MCP Tool Name**
@@ -233,3 +158,99 @@ None
 | --- | --- | --- | --- |
 | `currency` | `string` | Required | Currency code (e.g. USD) |
 | `rate_to_base` | `string` | Required | The amount of the base currency that can be obtained for 1 unit of this currency |
+
+### Query transactions
+
+**MCP Tool Name**
+
+`query_transactions`
+
+**Request Parameters**
+
+| Field | Type | Required | Description |
+| --- | --- | --- | --- |
+| `start_time` | `string` | Required | Start time for the query in RFC 3339 format (e.g. 2023-01-01T12:00:00Z) |
+| `end_time` | `string` | Required | End time for the query in RFC 3339 format or (e.g. 2023-01-01T12:00:00Z) |
+| `type` | `string` | Optional | Transaction type to filter by (income, expense, transfer, balance_modification) |
+| `category_name` | `string` | Optional | Primary or secondary category name to filter transactions by |
+| `account_name` | `string` | Optional | Account name to filter transactions by |
+| `keyword` | `string` | Optional | Keyword to search in transaction description |
+| `match_mode` | `string` | Optional | Match mode for keyword search (leave empty for database default setting, ignore_case for case-insensitive search) |
+| `count` | `number` | Optional | Maximum number of results to return (default: 100) |
+| `page` | `number` | Optional | Page number for pagination (default: 1) |
+| `response_fields` | `string` | Optional | Comma-separated list of optional fields to include in the response (leave empty for all fields except id, available fields: id, time, currency, category_name, account_name, comment) |
+
+**Response Parameters**
+
+| Field | Type | Required | Description |
+| --- | --- | --- | --- |
+| `total_count` | `number` | Required | Total number of transactions matching the query |
+| `current_page` | `number` | Required | Current page number of the results |
+| `total_page` | `number` | Required | Total number of pages available for the query, calculated based on total_count and count |
+| `transactions` | `MCPTransactionInfo[]` | Required | List of transactions matching the query |
+
+**MCPTransactionInfo**
+
+| Field | Type | Required | Description |
+| --- | --- | --- | --- |
+| `id` | `string` | Optional | Transaction ID (only returned when explicitly included in response_fields) |
+| `time` | `string` | Optional | Time of the transaction in RFC 3339 format (e.g. 2023-01-01T12:00:00Z) |
+| `type` | `string` | Required | Transaction type (income, expense, transfer, balance_modification) |
+| `amount` | `string` | Required | Amount of the transaction in the specified currency |
+| `currency` | `string` | Optional | Currency code of the transaction (e.g. USD, EUR) |
+| `category_name` | `string` | Optional | Secondary category name for the transaction |
+| `account_name` | `string` | Optional | Account name for the transaction |
+| `destination_amount` | `string` | Optional | Destination amount for transfer transactions |
+| `destination_currency` | `string` | Optional | Currency code of the destination amount for transfer transactions |
+| `destination_account_name` | `string` | Optional | Destination account name for transfer transactions |
+| `comment` | `string` | Optional | Description of the transaction |
+
+### Add transaction
+
+**MCP Tool Name**
+
+`add_transaction`
+
+**Request Parameters**
+
+| Field | Type | Required | Description |
+| --- | --- | --- | --- |
+| `type` | `string` | Required | Transaction type (income, expense, transfer) |
+| `time` | `string` | Required | Transaction time in RFC 3339 format (e.g. 2023-01-01T12:00:00Z) |
+| `category_name` | `string` | Required | Secondary category name for the transaction |
+| `account_name` | `string` | Required | Account name for the transaction |
+| `amount` | `string` | Required | Transaction amount |
+| `destination_account_name` | `string` | Optional | Destination account name for transfer transactions |
+| `destination_amount` | `string` | Optional | Destination amount for transfer transactions |
+| `tags` | `string[]` | Optional | List of tags associated with the transaction (maximum 10 tags allowed) |
+| `comment` | `string` | Optional | Transaction description |
+| `dry_run` | `boolean` | Optional | If `true`, the transaction will not be saved, only validated |
+
+**Response Parameters**
+
+| Field | Type | Required | Description |
+| --- | --- | --- | --- |
+| `success` | `boolean` | Required | Indicates whether this operation is successful |
+| `dry_run` | `boolean` | Optional | Indicates whether this operation is a dry run (transaction not added actually) |
+| `account_balance` | `string` | Optional | Account balance (or outstanding balance for debt accounts) after the transaction |
+| `destination_account_balance` | `string` | Optional | Destination account balance (or outstanding balance for debt accounts) after the transaction (only for transfer transactions) |
+
+### Delete transaction
+
+**MCP Tool Name**
+
+`delete_transaction`
+
+**Request Parameters**
+
+| Field | Type | Required | Description |
+| --- | --- | --- | --- |
+| `transaction_id` | `string` | Required | Transaction ID |
+
+**Response Parameters**
+
+| Field | Type | Required | Description |
+| --- | --- | --- | --- |
+| `success` | `boolean` | Required | Indicates whether this operation is successful |
+
+You can obtain the transaction ID by calling `query_transactions` with `id` explicitly included in `response_fields` (e.g. `id,time,account_name,comment`). The `id` field is not returned when `response_fields` is empty.
