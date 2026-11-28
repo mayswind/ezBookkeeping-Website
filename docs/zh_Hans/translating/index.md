@@ -11,12 +11,12 @@ ezBookkeeping 支持多语言和本地化设置，前端和后端分别有自己
 ## 为前端增加新语言
 
 1. 复制 `/src/locales/en.json` 并创建一个以语言标签命名的新文件
-2. 在 `/src/locales/index.ts` 中的 `allLanguages` 对象中添加键值对，其中键名应当为语言标签，值对象里字段说明如下：
+2. 在 `/src/locales/index.ts` 中的 `ALL_LANGUAGES` 对象中添加键值对，其中键名应当为语言标签，值对象里字段说明如下：
     1. `name` 为英文的语言名称
     2. `displayName` 为该语言下的语言名称
     3. `alternativeLanguageTag` 为 `language-region` 格式的语言标签（例如 `zh-CN`），为了兼容一些不支持 `language-script` 格式语言标签的第三方服务
     4. `textDirection` 为文字方向，支持 `TextDirection.LTR`（从左到右）及 `TextDirection.RTL`（从右到左）
-    5. `content` 字段为该语言的字典对象
+    5. `loadContent` 字段为动态引入语言文件的函数，返回解析为该语言字典对象的 Promise，例如 `() => import('./fr.json').then(module => module.default)`
 3. 翻译每个文字条目
 
 ## 为后端增加新语言

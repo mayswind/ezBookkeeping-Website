@@ -11,12 +11,12 @@ For more information about language tags, please refer to [RFC5646](https://www.
 ## Add new language for frontend
 
 1. Copy `/src/locales/en.json` and create a new file named with the language tag
-2. Add a key-value pair to the `allLanguages` object in `/src/locales/index.ts`. The key should be the language tag, and the value should be an object with the following fields:
+2. Add a key-value pair to the `ALL_LANGUAGES` object in `/src/locales/index.ts`. The key should be the language tag, and the value should be an object with the following fields:
     1. `name` field is the language name in English
     2. `displayName` field is the language name in its own language
     3. `alternativeLanguageTag` field is the language tag in the `language-region` format (e.g. `zh-CN`), used for compatibility with some third-party services that don't support language tags in the `language-script` format
     4. `textDirection` field is the text direction, supports `TextDirection.LTR` (left-to-right) or `TextDirection.RTL` (right-to-left)
-    5. `content` field is the dictionary object for this language
+    5. `loadContent` field is a function that dynamically imports the language file and returns a Promise resolving to its dictionary object, e.g. `() => import('./fr.json').then(module => module.default)`
 3. Translate each text item
 
 ## Add new language for backend
